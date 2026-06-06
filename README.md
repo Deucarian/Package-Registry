@@ -23,6 +23,8 @@ Auto-discovery is intentionally avoided because it creates ambiguity around arch
 - `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development branch.
 - `dependencies`: Package IDs that must also exist in this registry.
 
+The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.
+
 ## Current categories
 
 - `Core`: foundational standalone packages.
