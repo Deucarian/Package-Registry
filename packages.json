@@ -21,6 +21,15 @@
       "dependencies": []
     },
     {
+      "id": "com.deucarian.logging",
+      "displayName": "Deucarian Logging",
+      "category": "Core",
+      "description": "Small dependency-light logging wrapper for Deucarian Unity packages.",
+      "stableUrl": "https://github.com/Deucarian/Logging.git#main",
+      "developmentUrl": "",
+      "dependencies": []
+    },
+    {
       "id": "com.deucarian.object-loading",
       "displayName": "Deucarian Object Loading",
       "category": "Core",
