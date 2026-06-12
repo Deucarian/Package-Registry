@@ -1,10 +1,10 @@
-# JorisHoef Package Registry
+# Deucarian Package Registry
 
-This repository contains the package registry for the JorisHoef Package Installer.
+This repository contains the package registry for the Deucarian Package Installer.
 
 The installer reads `packages.json` from the public raw GitHub URL:
 
-https://raw.githubusercontent.com/JorisHoef/Package-Registry/main/packages.json
+https://raw.githubusercontent.com/Deucarian/Package-Registry/main/packages.json
 
 The registry is intentionally manual and explicit. Adding a new package means adding a new entry to `packages.json`.
 
