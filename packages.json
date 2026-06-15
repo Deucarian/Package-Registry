@@ -36,7 +36,9 @@
       "description": "Small dependency-light logging wrapper for Deucarian Unity packages.",
       "stableUrl": "https://github.com/Deucarian/Logging.git#main",
       "developmentUrl": "",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.editor"
+      ]
     },
     {
       "id": "com.deucarian.object-loading",
@@ -72,7 +74,9 @@
       "description": "Designer-friendly ScriptableObject theming with color role assets, palettes, themes, and Unity component adapters.",
       "stableUrl": "https://github.com/Deucarian/Theming.git#main",
       "developmentUrl": "",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.editor"
+      ]
     },
     {
       "id": "com.deucarian.object-selection",
