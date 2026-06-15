@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-12",
+  "updatedAt": "2026-06-15",
   "packages": [
     {
       "id": "com.deucarian.core-state",
@@ -18,7 +18,9 @@
       "description": "Reusable API client for Unity.",
       "stableUrl": "https://github.com/Deucarian/API.git#main",
       "developmentUrl": "https://github.com/Deucarian/API.git#develop",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.logging",
@@ -36,7 +38,9 @@
       "description": "Reusable runtime loading pipeline for resolved object and scene content sources.",
       "stableUrl": "https://github.com/Deucarian/Object-Loading.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Loading.git#develop",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.session",
@@ -45,7 +49,9 @@
       "description": "Reusable session management for Unity.",
       "stableUrl": "https://github.com/Deucarian/Session.git#main",
       "developmentUrl": "https://github.com/Deucarian/Session.git#develop",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.ui-binding",
@@ -63,7 +69,9 @@
       "description": "Designer-friendly ScriptableObject theming with color role assets, palettes, themes, and Unity component adapters.",
       "stableUrl": "https://github.com/Deucarian/Theming.git#main",
       "developmentUrl": "",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.object-selection",
@@ -72,7 +80,9 @@
       "description": "Keyed world-object selection, raycast input adapters, hover tracking, and highlight hooks for Unity.",
       "stableUrl": "https://github.com/Deucarian/Object-Selection.git#main",
       "developmentUrl": "",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.package-installer",
@@ -81,7 +91,9 @@
       "description": "Editor installer window for installing and composing Deucarian Unity UPM packages.",
       "stableUrl": "https://github.com/Deucarian/Package-Installer.git#main",
       "developmentUrl": "https://github.com/Deucarian/Package-Installer.git#develop",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.logging"
+      ]
     },
     {
       "id": "com.deucarian.session.api-bridge",
@@ -128,7 +140,8 @@
       "developmentUrl": "",
       "dependencies": [
         "com.deucarian.object-selection",
-        "com.deucarian.core-state"
+        "com.deucarian.core-state",
+        "com.deucarian.logging"
       ]
     },
     {
