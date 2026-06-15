@@ -3,6 +3,15 @@
   "updatedAt": "2026-06-15",
   "packages": [
     {
+      "id": "com.deucarian.editor",
+      "displayName": "Deucarian Editor",
+      "category": "Editor",
+      "description": "Shared editor tooling and branded editor UI helpers for Deucarian Unity packages.",
+      "stableUrl": "https://github.com/Deucarian/Editor.git#main",
+      "developmentUrl": "",
+      "dependencies": []
+    },
+    {
       "id": "com.deucarian.core-state",
       "displayName": "Deucarian Core State",
       "category": "Core",
@@ -18,9 +27,7 @@
       "description": "Reusable API client for Unity.",
       "stableUrl": "https://github.com/Deucarian/API.git#main",
       "developmentUrl": "https://github.com/Deucarian/API.git#develop",
-      "dependencies": [
-        "com.deucarian.logging"
-      ]
+      "dependencies": []
     },
     {
       "id": "com.deucarian.logging",
@@ -29,7 +36,9 @@
       "description": "Small dependency-light logging wrapper for Deucarian Unity packages.",
       "stableUrl": "https://github.com/Deucarian/Logging.git#main",
       "developmentUrl": "",
-      "dependencies": []
+      "dependencies": [
+        "com.deucarian.editor"
+      ]
     },
     {
       "id": "com.deucarian.object-loading",
@@ -38,9 +47,7 @@
       "description": "Reusable runtime loading pipeline for resolved object and scene content sources.",
       "stableUrl": "https://github.com/Deucarian/Object-Loading.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Loading.git#develop",
-      "dependencies": [
-        "com.deucarian.logging"
-      ]
+      "dependencies": []
     },
     {
       "id": "com.deucarian.session",
@@ -49,9 +56,7 @@
       "description": "Reusable session management for Unity.",
       "stableUrl": "https://github.com/Deucarian/Session.git#main",
       "developmentUrl": "https://github.com/Deucarian/Session.git#develop",
-      "dependencies": [
-        "com.deucarian.logging"
-      ]
+      "dependencies": []
     },
     {
       "id": "com.deucarian.ui-binding",
@@ -70,7 +75,7 @@
       "stableUrl": "https://github.com/Deucarian/Theming.git#main",
       "developmentUrl": "",
       "dependencies": [
-        "com.deucarian.logging"
+        "com.deucarian.editor"
       ]
     },
     {
@@ -80,9 +85,7 @@
       "description": "Keyed world-object selection, raycast input adapters, hover tracking, and highlight hooks for Unity.",
       "stableUrl": "https://github.com/Deucarian/Object-Selection.git#main",
       "developmentUrl": "",
-      "dependencies": [
-        "com.deucarian.logging"
-      ]
+      "dependencies": []
     },
     {
       "id": "com.deucarian.package-installer",
@@ -92,7 +95,7 @@
       "stableUrl": "https://github.com/Deucarian/Package-Installer.git#main",
       "developmentUrl": "https://github.com/Deucarian/Package-Installer.git#develop",
       "dependencies": [
-        "com.deucarian.logging"
+        "com.deucarian.editor"
       ]
     },
     {
@@ -140,8 +143,7 @@
       "developmentUrl": "",
       "dependencies": [
         "com.deucarian.object-selection",
-        "com.deucarian.core-state",
-        "com.deucarian.logging"
+        "com.deucarian.core-state"
       ]
     },
     {
