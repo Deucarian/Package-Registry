@@ -27,6 +27,7 @@ The `id` value must exactly match the target package's `package.json` `name` val
 
 ## Current categories
 
+- `Editor`: editor-only package tooling, chrome, and infrastructure.
 - `Core`: foundational standalone packages.
 - `UI`: UI presentation packages.
 - `World`: world-object and scene-interaction packages.
