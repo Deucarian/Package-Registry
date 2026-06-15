@@ -2,6 +2,15 @@
 
 This repository contains the package registry for the Deucarian Package Installer.
 
+Install Deucarian Bootstrap first. Bootstrap configures the Deucarian scoped registry and installs Package Installer. Package Installer then uses this JSON registry as catalog metadata for categories, suites, dependency planning, docs, samples, and Git fallback entries.
+
+This JSON file is not a Unity scoped registry. The official scoped registry package source is npmjs:
+
+```text
+https://registry.npmjs.org
+scope: com.deucarian
+```
+
 The installer reads `packages.json` from the public raw GitHub URL:
 
 https://raw.githubusercontent.com/Deucarian/Package-Registry/main/packages.json
