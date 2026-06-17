@@ -136,6 +136,25 @@ jobs:
                     seenDeps.add(dependency);
                   }
                 }
+
+                if (pkg.optionalCompanions !== undefined) {
+                  if (!Array.isArray(pkg.optionalCompanions)) {
+                    fail(`${id}: optionalCompanions must be an array when present.`);
+                  } else {
+                    const seenCompanions = new Set();
+                    for (const companion of pkg.optionalCompanions) {
+                      if (typeof companion !== 'string' || companion.trim() === '') {
+                        fail(`${id}: optionalCompanions must contain non-empty package id strings.`);
+                        continue;
+                      }
+
+                      if (seenCompanions.has(companion)) {
+                        fail(`${id}: duplicate optional companion ${companion}.`);
+                      }
+                      seenCompanions.add(companion);
+                    }
+                  }
+                }
               }
 
               for (const pkg of catalog.packages) {
@@ -146,6 +165,18 @@ jobs:
                 for (const dependency of pkg.dependencies) {
                   if (typeof dependency === 'string' && dependency.trim() !== '' && !ids.has(dependency)) {
                     fail(`${pkg.id}: dependency ${dependency} is not a known package id in the catalog.`);
+                  }
+                }
+              }
+
+              for (const pkg of catalog.packages) {
+                if (!pkg || typeof pkg !== 'object' || !Array.isArray(pkg.optionalCompanions)) {
+                  continue;
+                }
+
+                for (const companion of pkg.optionalCompanions) {
+                  if (typeof companion === 'string' && companion.trim() !== '' && !ids.has(companion)) {
+                    fail(`${pkg.id}: optional companion ${companion} is not a known package id in the catalog.`);
                   }
                 }
               }
