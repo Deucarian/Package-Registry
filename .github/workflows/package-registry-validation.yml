@@ -118,7 +118,7 @@ jobs:
                 }
 
                 validateUrl(pkg, 'stableUrl', 'main', true);
-                validateUrl(pkg, 'developmentUrl', 'develop', false);
+                validateUrl(pkg, 'developmentUrl', 'develop', true);
 
                 if (!Array.isArray(pkg.dependencies)) {
                   fail(`${id}: dependencies must be an array.`);
@@ -219,6 +219,9 @@ jobs:
                 }
                 if (!packageInstaller.stableUrl) {
                   fail('com.deucarian.package-installer must have a stableUrl.');
+                }
+                if (!packageInstaller.developmentUrl) {
+                  fail('com.deucarian.package-installer must have a developmentUrl.');
                 }
                 if (!Array.isArray(packageInstaller.dependencies)) {
                   fail('com.deucarian.package-installer dependencies must be an array.');

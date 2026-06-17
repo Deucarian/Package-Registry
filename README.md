@@ -25,8 +25,8 @@ Update `packages.json` when a package is added, removed, or gains an installer-v
 - `displayName`: Human-readable package name.
 - `category`: Package grouping shown by the installer.
 - `description`: Short explanation of what the package provides.
-- `stableUrl`: GitHub HTTPS Unity Package Manager URL for the stable branch.
-- `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development branch.
+- `stableUrl`: GitHub HTTPS Unity Package Manager URL for the stable `#main` branch.
+- `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development `#develop` branch.
 - `dependencies`: Package IDs that must also exist in this registry and should be installed first by the Package Installer.
 - `optionalCompanions`: Package IDs that are useful optional add-ons but must not be installed automatically as dependencies.
 
