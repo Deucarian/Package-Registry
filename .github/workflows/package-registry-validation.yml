@@ -27,7 +27,7 @@ jobs:
           const fs = require('fs');
 
           const catalogPath = 'packages.json';
-          const allowedCategories = new Set(['Editor', 'Core', 'UI', 'World', 'Tools', 'Bridge', 'Suites']);
+          const allowedCategories = new Set(['Editor', 'Core', 'UI', 'World', 'Tools', 'Integration', 'Suites']);
           const idPattern = /^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$/;
           const gitUrlPattern = /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\.git#([A-Za-z0-9._\/-]+)$/;
           const errors = [];
@@ -154,6 +154,30 @@ jobs:
                     }
                   }
                 }
+
+                for (const relationshipField of ['optionalIntegrations', 'integrationTargets', 'suiteMembers', 'recommendedWith']) {
+                  if (pkg[relationshipField] === undefined) {
+                    continue;
+                  }
+
+                  if (!Array.isArray(pkg[relationshipField])) {
+                    fail(`${id}: ${relationshipField} must be an array when present.`);
+                    continue;
+                  }
+
+                  const seenRelationships = new Set();
+                  for (const relationship of pkg[relationshipField]) {
+                    if (typeof relationship !== 'string' || relationship.trim() === '') {
+                      fail(`${id}: ${relationshipField} must contain non-empty package id strings.`);
+                      continue;
+                    }
+
+                    if (seenRelationships.has(relationship)) {
+                      fail(`${id}: duplicate ${relationshipField} value ${relationship}.`);
+                    }
+                    seenRelationships.add(relationship);
+                  }
+                }
               }
 
               for (const pkg of catalog.packages) {
@@ -176,6 +200,20 @@ jobs:
                 for (const companion of pkg.optionalCompanions) {
                   if (typeof companion === 'string' && companion.trim() !== '' && !ids.has(companion)) {
                     fail(`${pkg.id}: optional companion ${companion} is not a known package id in the catalog.`);
+                  }
+                }
+              }
+
+              for (const relationshipField of ['optionalIntegrations', 'integrationTargets', 'suiteMembers', 'recommendedWith']) {
+                for (const pkg of catalog.packages) {
+                  if (!pkg || typeof pkg !== 'object' || !Array.isArray(pkg[relationshipField])) {
+                    continue;
+                  }
+
+                  for (const relationship of pkg[relationshipField]) {
+                    if (typeof relationship === 'string' && relationship.trim() !== '' && !ids.has(relationship)) {
+                      fail(`${pkg.id}: ${relationshipField} ${relationship} is not a known package id in the catalog.`);
+                    }
                   }
                 }
               }
