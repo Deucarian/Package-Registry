@@ -1,11 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-06-18",
   "packages": [
     {
       "id": "com.deucarian.editor",
       "displayName": "Deucarian Editor",
       "category": "Editor",
+      "type": "Core",
+      "ecosystemGroup": "Foundation",
+      "overviewOrder": 10,
       "description": "Shared editor tooling and branded editor UI helpers for Deucarian Unity packages.",
       "stableUrl": "https://github.com/Deucarian/Editor.git#main",
       "developmentUrl": "https://github.com/Deucarian/Editor.git#develop",
@@ -15,26 +18,46 @@
       "id": "com.deucarian.core-state",
       "displayName": "Deucarian Core State",
       "category": "Core",
+      "type": "Core",
+      "ecosystemGroup": "Foundation",
+      "overviewOrder": 30,
       "description": "Generic repository and selection state services for Unity.",
       "stableUrl": "https://github.com/Deucarian/Core-State.git#main",
       "developmentUrl": "https://github.com/Deucarian/Core-State.git#develop",
-      "dependencies": []
+      "dependencies": [],
+      "optionalIntegrations": [
+        "com.deucarian.ui-binding.core-state-integration",
+        "com.deucarian.object-selection.core-state-integration"
+      ],
+      "recommendedWith": [
+        "com.deucarian.selection-suite"
+      ]
     },
     {
       "id": "com.deucarian.api",
       "displayName": "Deucarian API",
       "category": "Core",
+      "type": "Core",
+      "ecosystemGroup": "ServicesRuntime",
+      "overviewOrder": 10,
       "description": "Reusable API client for Unity.",
       "stableUrl": "https://github.com/Deucarian/API.git#main",
       "developmentUrl": "https://github.com/Deucarian/API.git#develop",
       "dependencies": [
         "com.deucarian.logging"
+      ],
+      "optionalIntegrations": [
+        "com.deucarian.session.api-integration",
+        "com.deucarian.object-loading.api-integration"
       ]
     },
     {
       "id": "com.deucarian.logging",
       "displayName": "Deucarian Logging",
       "category": "Core",
+      "type": "Core",
+      "ecosystemGroup": "Foundation",
+      "overviewOrder": 20,
       "description": "Small dependency-light logging wrapper for Deucarian Unity packages.",
       "stableUrl": "https://github.com/Deucarian/Logging.git#main",
       "developmentUrl": "https://github.com/Deucarian/Logging.git#develop",
@@ -46,6 +69,9 @@
       "id": "com.deucarian.object-loading",
       "displayName": "Deucarian Object Loading",
       "category": "Core",
+      "type": "Core",
+      "ecosystemGroup": "ServicesRuntime",
+      "overviewOrder": 30,
       "description": "Reusable runtime loading pipeline for resolved object and scene content sources.",
       "stableUrl": "https://github.com/Deucarian/Object-Loading.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Loading.git#develop",
@@ -54,32 +80,53 @@
       ],
       "optionalCompanions": [
         "com.deucarian.diagnostics"
+      ],
+      "optionalIntegrations": [
+        "com.deucarian.object-loading.api-integration"
       ]
     },
     {
       "id": "com.deucarian.session",
       "displayName": "Deucarian Session",
       "category": "Core",
+      "type": "Core",
+      "ecosystemGroup": "ServicesRuntime",
+      "overviewOrder": 20,
       "description": "Reusable session management for Unity.",
       "stableUrl": "https://github.com/Deucarian/Session.git#main",
       "developmentUrl": "https://github.com/Deucarian/Session.git#develop",
       "dependencies": [
         "com.deucarian.logging"
+      ],
+      "optionalIntegrations": [
+        "com.deucarian.session.api-integration"
       ]
     },
     {
       "id": "com.deucarian.ui-binding",
       "displayName": "Deucarian UI Binding",
       "category": "UI",
+      "type": "OptionalIntegration",
+      "ecosystemGroup": "ExperienceUiWorld",
+      "overviewOrder": 10,
       "description": "Data-driven UI Binding containers for Unity.",
       "stableUrl": "https://github.com/Deucarian/UI-Binding.git#main",
       "developmentUrl": "https://github.com/Deucarian/UI-Binding.git#develop",
-      "dependencies": []
+      "dependencies": [],
+      "optionalIntegrations": [
+        "com.deucarian.ui-binding.core-state-integration"
+      ],
+      "recommendedWith": [
+        "com.deucarian.selection-suite"
+      ]
     },
     {
       "id": "com.deucarian.theming",
       "displayName": "Deucarian Theming",
       "category": "UI",
+      "type": "OptionalIntegration",
+      "ecosystemGroup": "ExperienceUiWorld",
+      "overviewOrder": 30,
       "description": "Designer-friendly ScriptableObject theming with color role assets, palettes, themes, and Unity component adapters.",
       "stableUrl": "https://github.com/Deucarian/Theming.git#main",
       "developmentUrl": "https://github.com/Deucarian/Theming.git#develop",
@@ -92,17 +139,29 @@
       "id": "com.deucarian.object-selection",
       "displayName": "Deucarian Object Selection",
       "category": "World",
+      "type": "OptionalIntegration",
+      "ecosystemGroup": "ExperienceUiWorld",
+      "overviewOrder": 20,
       "description": "Keyed world-object selection, raycast input adapters, hover tracking, and highlight hooks for Unity.",
       "stableUrl": "https://github.com/Deucarian/Object-Selection.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Selection.git#develop",
       "dependencies": [
         "com.deucarian.logging"
+      ],
+      "optionalIntegrations": [
+        "com.deucarian.object-selection.core-state-integration"
+      ],
+      "recommendedWith": [
+        "com.deucarian.selection-suite"
       ]
     },
     {
       "id": "com.deucarian.package-installer",
       "displayName": "Deucarian Package Installer",
       "category": "Tools",
+      "type": "Tool",
+      "ecosystemGroup": "ToolsQuality",
+      "overviewOrder": 20,
       "description": "Editor installer window for installing and composing Deucarian Unity UPM packages.",
       "stableUrl": "https://github.com/Deucarian/Package-Installer.git#main",
       "developmentUrl": "https://github.com/Deucarian/Package-Installer.git#develop",
@@ -115,6 +174,8 @@
       "id": "com.deucarian.diagnostics",
       "displayName": "Deucarian Diagnostics",
       "category": "Tools",
+      "ecosystemGroup": "ToolsQuality",
+      "overviewOrder": 10,
       "description": "Local diagnostics snapshots, providers, JSON export, and developer-facing runtime/editor views for Deucarian Unity projects.",
       "stableUrl": "https://github.com/Deucarian/Diagnostics.git#main",
       "developmentUrl": "https://github.com/Deucarian/Diagnostics.git#develop",
@@ -127,10 +188,16 @@
       "id": "com.deucarian.session.api-integration",
       "displayName": "Deucarian Session API Integration",
       "category": "Integration",
+      "type": "Integration",
+      "overviewOrder": 10,
       "description": "Integration package connecting Session authentication to API.",
       "stableUrl": "https://github.com/Deucarian/Session-API-Bridge.git#main",
       "developmentUrl": "https://github.com/Deucarian/Session-API-Bridge.git#develop",
       "dependencies": [
+        "com.deucarian.session",
+        "com.deucarian.api"
+      ],
+      "integrationTargets": [
         "com.deucarian.session",
         "com.deucarian.api"
       ]
@@ -139,10 +206,16 @@
       "id": "com.deucarian.object-loading.api-integration",
       "displayName": "Deucarian Object Loading API Integration",
       "category": "Integration",
+      "type": "Integration",
+      "overviewOrder": 20,
       "description": "Optional integration package that lets Object Loading downloads go through API.",
       "stableUrl": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#develop",
       "dependencies": [
+        "com.deucarian.object-loading",
+        "com.deucarian.api"
+      ],
+      "integrationTargets": [
         "com.deucarian.object-loading",
         "com.deucarian.api"
       ]
@@ -151,10 +224,16 @@
       "id": "com.deucarian.ui-binding.core-state-integration",
       "displayName": "Deucarian UI Binding Core State Integration",
       "category": "Integration",
+      "type": "Integration",
+      "overviewOrder": 30,
       "description": "Integration package connecting UI Binding containers to Core State repositories and selection services.",
       "stableUrl": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#main",
       "developmentUrl": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#develop",
       "dependencies": [
+        "com.deucarian.ui-binding",
+        "com.deucarian.core-state"
+      ],
+      "integrationTargets": [
         "com.deucarian.ui-binding",
         "com.deucarian.core-state"
       ]
@@ -163,6 +242,8 @@
       "id": "com.deucarian.object-selection.core-state-integration",
       "displayName": "Deucarian Object Selection Core State Integration",
       "category": "Integration",
+      "type": "Integration",
+      "overviewOrder": 40,
       "description": "Integration package synchronizing Object Selection and Core State selections through shared keys.",
       "stableUrl": "https://github.com/Deucarian/Object-Selection-Bridge.git#main",
       "developmentUrl": "https://github.com/Deucarian/Object-Selection-Bridge.git#develop",
@@ -170,16 +251,29 @@
         "com.deucarian.object-selection",
         "com.deucarian.core-state",
         "com.deucarian.logging"
+      ],
+      "integrationTargets": [
+        "com.deucarian.object-selection",
+        "com.deucarian.core-state"
       ]
     },
     {
       "id": "com.deucarian.selection-suite",
       "displayName": "Deucarian Selection Suite",
       "category": "Suites",
+      "type": "Suite",
+      "overviewOrder": 10,
       "description": "Curated bundle that installs Core State, UI Binding, Object Selection, and both Core State selection integrations.",
       "stableUrl": "https://github.com/Deucarian/Selection-Suite.git#main",
       "developmentUrl": "https://github.com/Deucarian/Selection-Suite.git#develop",
       "dependencies": [
+        "com.deucarian.core-state",
+        "com.deucarian.ui-binding",
+        "com.deucarian.object-selection",
+        "com.deucarian.ui-binding.core-state-integration",
+        "com.deucarian.object-selection.core-state-integration"
+      ],
+      "suiteMembers": [
         "com.deucarian.core-state",
         "com.deucarian.ui-binding",
         "com.deucarian.object-selection",
