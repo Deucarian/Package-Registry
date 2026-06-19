@@ -39,6 +39,24 @@
                        "styleKey":  "experience-interaction"
                    },
                    {
+                       "id":  "ui-presentation",
+                       "displayName":  "UI \u0026 Presentation",
+                       "parentGroupId":  "experience-interaction",
+                       "sortOrder":  41,
+                       "description":  "User interface binding, flow, and presentation systems.",
+                       "iconKey":  "generic-ui-items",
+                       "styleKey":  "ui-presentation"
+                   },
+                   {
+                       "id":  "world-interaction",
+                       "displayName":  "World Interaction",
+                       "parentGroupId":  "experience-interaction",
+                       "sortOrder":  42,
+                       "description":  "World-object interaction, selection, and input-facing systems.",
+                       "iconKey":  "selection",
+                       "styleKey":  "world-interaction"
+                   },
+                   {
                        "id":  "tools-quality",
                        "displayName":  "Tools \u0026 Quality",
                        "parentGroupId":  "",
@@ -197,7 +215,7 @@
                          "recommendedWith":  [
                                                  "com.deucarian.selection-suite"
                                              ],
-                         "groupId":  "experience-interaction"
+                         "groupId":  "ui-presentation"
                      },
                      {
                          "id":  "com.deucarian.ui-flow",
@@ -212,7 +230,7 @@
                          "dependencies":  [
 
                                           ],
-                         "groupId":  "experience-interaction"
+                         "groupId":  "ui-presentation"
                      },
                      {
                          "id":  "com.deucarian.theming",
@@ -228,7 +246,7 @@
                                               "com.deucarian.editor",
                                               "com.deucarian.logging"
                                           ],
-                         "groupId":  "experience-interaction"
+                         "groupId":  "ui-presentation"
                      },
                      {
                          "id":  "com.deucarian.object-selection",
@@ -249,7 +267,7 @@
                          "recommendedWith":  [
                                                  "com.deucarian.selection-suite"
                                              ],
-                         "groupId":  "experience-interaction"
+                         "groupId":  "world-interaction"
                      },
                      {
                          "id":  "com.deucarian.package-installer",
