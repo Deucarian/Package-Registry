@@ -29,7 +29,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Package-Installer | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Package-Installer | Migration documentation | README.md |  |  |  |
 | Package-Registry | Migration documentation | DOCUMENTATION_DRIFT_DECISIONS.md |  |  |  |
-| Selection-Suite | Dependency version drift |  | com.deucarian.ui-binding | 1.1.0 | 1.0.2 |
+| Selection-Suite | Dependency version drift |  | com.deucarian.ui-binding | 1.1.0 | 1.0.3 |
 | Selection-Suite | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |

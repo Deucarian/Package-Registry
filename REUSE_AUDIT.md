@@ -17,26 +17,26 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 
 | Repository | Package ID | Version | Unity | Develop | Audit Clone | package.json dependencies | Asmdefs | Production public API |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| API | com.deucarian.api | 1.1.1 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.unitywebrequest, com.unity.nuget.newtonsoft-json, com.unity.modules.assetbundle, com.unity.modules.unitywebrequestassetbundle, com.unity.modules.unitywebrequesttexture, com.unity.modules.unitywebrequestwww | 4 | 169 |
+| API | com.deucarian.api | 1.1.3 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.unitywebrequest, com.unity.nuget.newtonsoft-json, com.unity.modules.assetbundle, com.unity.modules.unitywebrequestassetbundle, com.unity.modules.unitywebrequesttexture, com.unity.modules.unitywebrequestwww | 4 | 169 |
 | Bootstrap | com.deucarian.bootstrap | 1.0.2 | 2021.3 | yes | clean | (none) | 2 | 1 |
 | Common | com.deucarian.common | 0.1.0 | 2021.3 | yes | clean | (none) | 3 | 2 |
-| Core-State | com.deucarian.core-state | 1.0.0 | 2021.3 | yes | clean | (none) | 3 | 38 |
-| Diagnostics | com.deucarian.diagnostics | 0.1.1 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 62 |
+| Core-State | com.deucarian.core-state | 1.0.1 | 2021.3 | yes | clean | (none) | 3 | 38 |
+| Diagnostics | com.deucarian.diagnostics | 0.1.2 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 62 |
 | Editor | com.deucarian.editor | 1.0.0 | 2021.3 | yes | clean | (none) | 2 | 91 |
 | Logging | com.deucarian.logging | 1.0.1 | 2021.3 | yes | clean | com.deucarian.editor | 4 | 69 |
-| Object-Loading | com.deucarian.object-loading | 1.2.0 | 2021.3 | yes | clean | com.deucarian.common, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 246 |
-| Object-Selection | com.deucarian.object-selection | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 104 |
-| ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.4 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
-| ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 10 |
-| Package-Installer | com.deucarian.package-installer | 1.1.57 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Object-Loading | com.deucarian.object-loading | 1.2.1 | 2021.3 | yes | clean | com.deucarian.common, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 246 |
+| Object-Selection | com.deucarian.object-selection | 1.0.3 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 104 |
+| ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.5 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
+| ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.3 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 10 |
+| Package-Installer | com.deucarian.package-installer | 1.1.58 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
-| Selection-Suite | com.deucarian.selection-suite | 1.0.2 | 2021.3 | yes | clean | com.deucarian.object-selection.core-state-integration, com.deucarian.core-state, com.deucarian.ui-binding.core-state-integration, com.deucarian.ui-binding, com.deucarian.object-selection | 1 | 0 |
-| Session | com.deucarian.session | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 65 |
-| Session-API-Integration | com.deucarian.session.api-integration | 1.0.3 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
+| Selection-Suite | com.deucarian.selection-suite | 1.0.3 | 2021.3 | yes | clean | com.deucarian.object-selection.core-state-integration, com.deucarian.core-state, com.deucarian.ui-binding.core-state-integration, com.deucarian.ui-binding, com.deucarian.object-selection | 1 | 0 |
+| Session | com.deucarian.session | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 65 |
+| Session-API-Integration | com.deucarian.session.api-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
 | Theming | com.deucarian.theming | 1.0.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 4 | 221 |
 | UI-Binding | com.deucarian.ui-binding | 1.1.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui | 3 | 75 |
 | UI-FLow | com.deucarian.ui-flow | 0.4.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging | 6 | 341 |
-| UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.2 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
+| UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.3 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 
 ## Corrected Counts
 

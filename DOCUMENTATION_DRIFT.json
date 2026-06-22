@@ -77,7 +77,7 @@
       "kind": "DependencyVersionDrift",
       "packageId": "com.deucarian.selection-suite",
       "packageJsonVersion": "1.1.0",
-      "readmeVersion": "1.0.2",
+      "readmeVersion": "1.0.3",
       "repository": "Selection-Suite"
     },
     {

@@ -2,7 +2,7 @@
   "findings": [
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -53,7 +53,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.2",
+      "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -80,7 +80,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.6",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -133,7 +133,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.2",
+      "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
       "referencedAssemblies": [
@@ -247,7 +247,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -272,7 +272,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection",
       "referencedAssemblies": [
@@ -309,7 +309,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.1",
+      "declaredVersion": "1.1.3",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -348,7 +348,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.2.1",
       "dependency": "com.deucarian.object-loading",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -387,7 +387,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -438,7 +438,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.6",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -475,7 +475,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -567,7 +567,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.2.6",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -608,7 +608,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -633,7 +633,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -658,7 +658,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.object-selection.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -708,7 +708,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.ui-binding.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -733,7 +733,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.session",
       "referencedAssemblies": [
@@ -770,7 +770,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.1",
+      "declaredVersion": "1.1.3",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -821,7 +821,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -872,7 +872,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.2",
+      "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -899,7 +899,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -1065,7 +1065,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "referencedAssemblies": [
