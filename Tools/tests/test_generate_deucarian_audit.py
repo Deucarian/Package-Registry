@@ -55,12 +55,26 @@ class AuditFixture:
                         "stableUrl": "https://github.com/Deucarian/Logging.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Logging.git#develop",
                     },
+                    {
+                        "id": "com.deucarian.gamma",
+                        "dependencies": [],
+                        "stableUrl": "https://github.com/Deucarian/Gamma.git#main",
+                        "developmentUrl": "https://github.com/Deucarian/Gamma.git#develop",
+                    },
+                    {
+                        "id": "com.deucarian.sample-target",
+                        "dependencies": [],
+                        "stableUrl": "https://github.com/Deucarian/SampleTarget.git#main",
+                        "developmentUrl": "https://github.com/Deucarian/SampleTarget.git#develop",
+                    },
                 ]
             },
         )
         self._alpha()
         self._beta()
         self._logging()
+        self._gamma()
+        self._sample_target()
 
     def build(self) -> dict:
         args = argparse.Namespace(
@@ -87,6 +101,7 @@ class AuditFixture:
                 "displayName": name,
                 "unity": "2022.3",
                 "dependencies": deps or {},
+                "repository": {"type": "git", "url": f"git+https://github.com/Deucarian/{name}.git"},
             },
         )
         write(repo / "CHANGELOG.md", f"# Changelog\n\n## {version}\n- Fixture release.")
@@ -115,8 +130,10 @@ class AuditFixture:
             repo / "Runtime" / "Alpha.asmdef",
             {"name": "Deucarian.Alpha", "references": ["Deucarian.Beta", "Deucarian.Logging"]},
         )
-        write_json(repo / "Editor" / "Alpha.Editor.asmdef", {"name": "Deucarian.Alpha.Editor", "references": []})
-        write_json(repo / "Tests" / "Alpha.Tests.asmdef", {"name": "Deucarian.Alpha.Tests", "references": ["Deucarian.Alpha"]})
+        write_json(repo / "Runtime.UGUI" / "Alpha.UGUI.asmdef", {"name": "Deucarian.Alpha.UGUI", "references": ["Deucarian.Alpha"]})
+        write_json(repo / "Editor.Tools" / "Alpha.Editor.Tools.asmdef", {"name": "Deucarian.Alpha.Editor.Tools", "includePlatforms": ["Editor"], "references": []})
+        write_json(repo / "Tests.EditMode" / "Alpha.Tests.EditMode.asmdef", {"name": "Deucarian.Alpha.Tests.EditMode", "references": ["Deucarian.Alpha"], "optionalUnityReferences": ["TestAssemblies"]})
+        write_json(repo / "Samples~" / "Demo" / "Alpha.Sample.asmdef", {"name": "Deucarian.Alpha.Sample", "references": ["Deucarian.Alpha"]})
         write(
             repo / "Runtime" / "Alpha.cs",
             """
@@ -218,7 +235,7 @@ class AuditFixture:
             """,
         )
         write(
-            repo / "Editor" / "AlphaEditor.cs",
+            repo / "Editor.Tools" / "AlphaEditor.cs",
             """
             using UnityEngine;
 
@@ -232,7 +249,7 @@ class AuditFixture:
             """,
         )
         write(
-            repo / "Tests" / "AlphaTests.cs",
+            repo / "Tests.EditMode" / "AlphaTests.cs",
             """
             using UnityEngine;
 
@@ -241,6 +258,31 @@ class AuditFixture:
                 public void TestOnlyDebug()
                 {
                     Debug.Log("test");
+                }
+            }
+            """,
+        )
+        write(
+            repo / "Runtime.UGUI" / "AlphaButton.cs",
+            """
+            using UnityEngine;
+
+            public class AlphaButton
+            {
+                public void Warn()
+                {
+                    Debug.LogWarning("runtime ugui warning");
+                }
+            }
+            """,
+        )
+        write(
+            repo / "Samples~" / "Demo" / "AlphaSample.cs",
+            """
+            public class AlphaSample
+            {
+                public void Use()
+                {
                 }
             }
             """,
@@ -286,7 +328,7 @@ class AuditFixture:
 
     def _logging(self) -> None:
         repo = self._package("Logging", "com.deucarian.logging", "1.0.0")
-        write(repo / "README.md", "# Logging\n\nCurrent package version: 1.0.0")
+        write(repo / "README.md", "# Logging\n\nCurrent package version: 1.0.0\n\nThis is an adapter bridge for console output.")
         write_json(repo / "Runtime" / "Logging.asmdef", {"name": "Deucarian.Logging", "references": []})
         write(
             repo / "Runtime" / "Logging.cs",
@@ -298,11 +340,53 @@ class AuditFixture:
                     public static void Log()
                     {
                         UnityEngine.Debug.Log("allowed sink");
+                        UnityEngine.Debug.LogWarning("allowed warning sink");
                     }
                 }
             }
             """,
         )
+
+    def _gamma(self) -> None:
+        repo = self._package("Gamma", "com.deucarian.gamma", "1.0.0")
+        package_json = json.loads((repo / "package.json").read_text(encoding="utf-8"))
+        package_json["repository"]["url"] = "git+https://github.com/Deucarian/Gamma-Bridge.git"
+        write_json(repo / "package.json", package_json)
+        write(
+            repo / "README.md",
+            """
+            # Gamma
+
+            Current package version: 1.0.0
+
+            Install with:
+
+            "com.deucarian.gamma": "https://github.com/Deucarian/Gamma-Bridge.git#main"
+            """,
+        )
+        write(repo / "CHANGELOG.md", "# Changelog\n\n## 1.0.0\n- Renamed the Gamma Bridge package to Gamma Integration.")
+        write_json(repo / "Runtime" / "Gamma.asmdef", {"name": "Deucarian.Gamma", "references": ["Deucarian.Beta"]})
+        write_json(
+            repo / "Runtime.Optional" / "Gamma.Optional.asmdef",
+            {
+                "name": "Deucarian.Gamma.Optional",
+                "references": ["Deucarian.Logging"],
+                "defineConstraints": ["DEUCARIAN_LOGGING_INSTALLED"],
+                "versionDefines": [{"name": "com.deucarian.logging", "expression": "1.0.0", "define": "DEUCARIAN_LOGGING_INSTALLED"}],
+            },
+        )
+        write_json(repo / "Tests.EditMode" / "Gamma.Tests.asmdef", {"name": "Deucarian.Gamma.Tests.EditMode", "references": ["Deucarian.Alpha"], "optionalUnityReferences": ["TestAssemblies"]})
+        write_json(repo / "Samples~" / "Demo" / "Gamma.Sample.asmdef", {"name": "Deucarian.Gamma.Sample", "references": ["Deucarian.SampleTarget"]})
+        write(repo / "Runtime" / "Gamma.cs", "public class GammaRuntime { }")
+        write(repo / "Runtime.Optional" / "GammaOptional.cs", "public class GammaOptional { }")
+        write(repo / "Tests.EditMode" / "GammaTests.cs", "public class GammaTests { }")
+        write(repo / "Samples~" / "Demo" / "GammaSample.cs", "public class GammaSample { }")
+
+    def _sample_target(self) -> None:
+        repo = self._package("SampleTarget", "com.deucarian.sample-target", "1.0.0")
+        write(repo / "README.md", "# Sample Target\n\nCurrent package version: 1.0.0")
+        write_json(repo / "Runtime" / "SampleTarget.asmdef", {"name": "Deucarian.SampleTarget", "references": []})
+        write(repo / "Runtime" / "SampleTarget.cs", "public class SampleTarget { }")
 
 
 class GenerateDeucarianAuditTests(unittest.TestCase):
@@ -326,10 +410,17 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         ]
         invocations = {item["invocation"] for item in alpha_runtime}
 
-        self.assertEqual({"Debug.Log", "D.LogWarning", "Debug.LogError"}, invocations)
+        self.assertEqual({"Debug.Log", "D.LogWarning", "Debug.LogError", "Debug.LogWarning"}, invocations)
         self.assertFalse(any("comment only" in item["invocation"] for item in records))
-        self.assertTrue(any(item["repository"] == "Alpha" and item["scope"] == "Test" and item["initialDisposition"] == "allowed" for item in records))
-        self.assertTrue(any(item["repository"] == "Logging" and item["classification"] == "Logging package sink implementation" and item["initialDisposition"] == "allowed" for item in records))
+        warning = next(item for item in records if item["repository"] == "Alpha" and item["invocation"] == "Debug.LogWarning")
+        self.assertEqual("Runtime production", warning["scope"])
+        self.assertEqual("Warning", warning["logLevel"])
+        self.assertEqual("Migrate", warning["policyDisposition"])
+        self.assertEqual("Error", warning["policySeverity"])
+        self.assertTrue(any(item["repository"] == "Alpha" and item["scope"] == "Test" and item["policyDisposition"] == "Allowed" for item in records))
+        sink_warning = next(item for item in records if item["repository"] == "Logging" and item["invocation"] == "UnityEngine.Debug.LogWarning")
+        self.assertEqual("Warning", sink_warning["logLevel"])
+        self.assertEqual("Allowed", sink_warning["policyDisposition"])
 
     def test_public_api_inventory_excludes_tests_and_internal_containing_types(self) -> None:
         report = self.build_fixture_report()
@@ -341,9 +432,12 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertIn("DirectDebug", symbol_names)
         self.assertIn("Expression", symbol_names)
         self.assertNotIn("HiddenPublic", symbol_names)
-        self.assertFalse(any(file.startswith("Tests/") for file in files))
+        self.assertFalse(any(file.startswith("Tests") for file in files))
         self.assertTrue(any(item["symbol"] == "PublicTestFixture" for item in report["publicApi"]["tests"]))
         self.assertTrue(any(item["symbol"] == "HiddenPublic" for item in report["publicApi"]["internalPrivate"]))
+        self.assertTrue(any(item["file"].startswith("Runtime.UGUI/") and item["scope"] == "Runtime production" for item in report["publicApi"]["runtimeProduction"]))
+        self.assertTrue(any(item["file"].startswith("Editor.Tools/") and item["scope"] == "Editor production" for item in report["publicApi"]["editorProduction"]))
+        self.assertTrue(any(item["file"].startswith("Samples~/") and item["scope"] == "Sample" for item in report["publicApi"]["samples"]))
 
     def test_clone_analysis_uses_parsed_method_bodies(self) -> None:
         report = self.build_fixture_report()
@@ -368,12 +462,80 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         doc_findings = report["documentationDrift"]["findings"]
         dep_findings = report["dependencyUsage"]["findings"]
 
-        self.assertFalse(any(item["repository"] == "Alpha" and item["kind"] == "package version drift" for item in doc_findings))
-        self.assertTrue(any(item["repository"] == "Alpha" and item["kind"] == "dependency version drift" and item["dependency"] == "com.deucarian.beta" for item in doc_findings))
+        self.assertFalse(any(item["repository"] == "Alpha" and item["kind"] == "PackageVersionDrift" for item in doc_findings))
+        self.assertTrue(any(item["repository"] == "Alpha" and item["kind"] == "DependencyVersionDrift" and item["dependency"] == "com.deucarian.beta" for item in doc_findings))
         beta_usage = next(item for item in dep_findings if item["repository"] == "Alpha" and item.get("dependency") == "com.deucarian.beta")
-        self.assertEqual("required and used", beta_usage["classification"])
-        self.assertEqual([{"assembly": "Deucarian.Alpha", "asmdef": "Runtime/Alpha.asmdef", "reference": "Deucarian.Beta", "scope": "Runtime production"}], beta_usage["referencedBy"])
+        self.assertEqual("RequiredAndUsed", beta_usage["classification"])
+        self.assertEqual("Deucarian.Alpha", beta_usage["referencedBy"][0]["assembly"])
+        self.assertEqual("Runtime/Alpha.asmdef", beta_usage["referencedBy"][0]["asmdef"])
+        self.assertEqual("Deucarian.Beta", beta_usage["referencedBy"][0]["reference"])
+        self.assertEqual("Runtime production", beta_usage["referencedBy"][0]["scope"])
         self.assertFalse(any(item["repository"] == "Alpha" and item.get("assemblyReference") == "Deucarian.Alpha" for item in dep_findings))
+
+        gamma_beta = next(item for item in dep_findings if item["repository"] == "Gamma" and item.get("requiredPackage") == "com.deucarian.beta")
+        self.assertEqual("MissingHardPackageDependency", gamma_beta["classification"])
+        gamma_optional = next(item for item in dep_findings if item["repository"] == "Gamma" and item.get("requiredPackage") == "com.deucarian.logging")
+        self.assertEqual("OptionalVersionDefinedUse", gamma_optional["classification"])
+        self.assertEqual("VersionDefine", gamma_optional["referencedBy"][0]["guardKind"])
+        gamma_test = next(item for item in dep_findings if item["repository"] == "Gamma" and item.get("requiredPackage") == "com.deucarian.alpha")
+        self.assertEqual("TestOnlyUse", gamma_test["classification"])
+        gamma_sample = next(item for item in dep_findings if item["repository"] == "Gamma" and item.get("requiredPackage") == "com.deucarian.sample-target")
+        self.assertEqual("SampleOnlyUse", gamma_sample["classification"])
+
+        self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "ActiveRepositoryUrlDrift" and item.get("file") == "package.json" for item in doc_findings))
+        self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "ActiveDocumentationDrift" and item.get("file") == "README.md" for item in doc_findings))
+        self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "HistoricalChangelogReference" for item in doc_findings))
+        self.assertTrue(any(item["repository"] == "Logging" and item["kind"] == "LegitimateGenericBridgeTerm" for item in doc_findings))
+
+    def test_lifetime_conclusion_records_common_and_testing_decisions(self) -> None:
+        conclusion = audit.classify_lifetime_conclusion(
+            [
+                {
+                    "repository": "Object-Loading",
+                    "file": "Runtime/Utilities/UnityObjectUtility.cs",
+                    "symbol": "Destroy",
+                    "assemblyPlatform": "Deucarian.ObjectLoading",
+                    "scope": "Runtime production",
+                    "occurrenceKind": "helper definition",
+                    "semantics": {
+                        "acceptedType": "Object",
+                        "handlesNullOrFakeNull": True,
+                        "usesPlayModeCheck": True,
+                        "usesDestroy": True,
+                        "usesDestroyImmediate": True,
+                        "clearsReferences": False,
+                        "handlesCollections": False,
+                        "catchesExceptions": False,
+                    },
+                },
+                {"repository": "Object-Loading", "scope": "Runtime production", "occurrenceKind": "helper call site", "invocation": "UnityObjectUtility.Destroy"},
+                {
+                    "repository": "UI-Binding",
+                    "file": "Runtime/GenericItemManager.cs",
+                    "symbol": "DestroyItem",
+                    "assemblyPlatform": "Deucarian.UIBinding",
+                    "scope": "Runtime production",
+                    "occurrenceKind": "helper definition",
+                    "semantics": {
+                        "acceptedType": "GameObject",
+                        "handlesNullOrFakeNull": True,
+                        "usesPlayModeCheck": True,
+                        "usesDestroy": True,
+                        "usesDestroyImmediate": True,
+                        "clearsReferences": False,
+                        "handlesCollections": False,
+                        "catchesExceptions": False,
+                    },
+                },
+                {"repository": "UI-Binding", "scope": "Runtime production", "occurrenceKind": "helper call site", "invocation": "DestroyItem"},
+                {"repository": "UI-FLow", "scope": "Runtime production", "occurrenceKind": "direct Unity API call", "containingSymbol": "UIFlowPrefabScreenProvider::Release", "file": "Runtime/Providers/UIFlowPrefabScreenProvider.cs", "invocation": "Object.Destroy"},
+                {"repository": "UI-Binding", "scope": "Test", "occurrenceKind": "direct Unity API call", "invocation": "Object.DestroyImmediate"},
+            ]
+        )
+
+        self.assertEqual("Create com.deucarian.common", conclusion["decision"])
+        self.assertIn("UnityObjectUtility.DestroySafely(UnityEngine.Object target)", conclusion["apiProposal"])
+        self.assertEqual("KeepLocal", conclusion["testingPackageDecision"]["decision"])
 
 
 if __name__ == "__main__":

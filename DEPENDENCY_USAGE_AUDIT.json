@@ -1,7 +1,7 @@
 {
   "findings": [
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.api",
@@ -12,27 +12,47 @@
         {
           "asmdef": "Editor/Deucarian.API.Editor.asmdef",
           "assembly": "Deucarian.API.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Logging",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         },
         {
           "asmdef": "Runtime/Deucarian.API.asmdef",
           "assembly": "Deucarian.API",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/ExampleScene/Deucarian.API.Samples.asmdef",
           "assembly": "Deucarian.API.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "API",
       "sourceMentionCount": 0
     },
     {
-      "classification": "editor-only use",
+      "classification": "EditorOnlyUse",
       "declaredVersion": "0.1.2",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
@@ -43,15 +63,23 @@
         {
           "asmdef": "Editor/Deucarian.Diagnostics.Editor.asmdef",
           "assembly": "Deucarian.Diagnostics.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Editor",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         }
       ],
       "repository": "Diagnostics",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.6",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.diagnostics",
@@ -62,21 +90,35 @@
         {
           "asmdef": "Runtime/Deucarian.Diagnostics.asmdef",
           "assembly": "Deucarian.Diagnostics",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.Diagnostics.Tests.asmdef",
           "assembly": "Deucarian.Diagnostics.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Logging",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Diagnostics",
       "sourceMentionCount": 0
     },
     {
-      "classification": "editor-only use",
+      "classification": "EditorOnlyUse",
       "declaredVersion": "0.1.2",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
@@ -87,8 +129,16 @@
         {
           "asmdef": "Editor/Deucarian.Logging.Editor.asmdef",
           "assembly": "Deucarian.Logging.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Editor",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         }
       ],
       "repository": "Logging",
@@ -96,26 +146,68 @@
     },
     {
       "assemblyReference": "Deucarian.Diagnostics",
-      "classification": "missing package dependency",
+      "classification": "OptionalVersionDefinedUse",
       "packageId": "com.deucarian.object-loading",
-      "referencingAsmdef": "Runtime/Diagnostics/Deucarian.ObjectLoading.Diagnostics.asmdef",
-      "referencingAssembly": "Deucarian.ObjectLoading.Diagnostics",
+      "referencedAssemblies": [
+        "Deucarian.Diagnostics"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Diagnostics/Deucarian.ObjectLoading.Diagnostics.asmdef",
+          "assembly": "Deucarian.ObjectLoading.Diagnostics",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_DIAGNOSTICS_INSTALLED"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_DIAGNOSTICS_INSTALLED",
+            "expression": "0.1.0",
+            "name": "com.deucarian.diagnostics"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_DIAGNOSTICS_INSTALLED",
+              "expression": "0.1.0",
+              "name": "com.deucarian.diagnostics"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/Editor/Diagnostics/Deucarian.ObjectLoading.Diagnostics.Tests.asmdef",
+          "assembly": "Deucarian.ObjectLoading.Diagnostics.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_DIAGNOSTICS_INSTALLED"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_DIAGNOSTICS_INSTALLED",
+            "expression": "0.1.0",
+            "name": "com.deucarian.diagnostics"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_DIAGNOSTICS_INSTALLED",
+              "expression": "0.1.0",
+              "name": "com.deucarian.diagnostics"
+            }
+          ]
+        }
+      ],
       "repository": "Object-Loading",
-      "requiredPackage": "com.deucarian.diagnostics",
-      "scope": "Runtime production"
+      "requiredPackage": "com.deucarian.diagnostics"
     },
     {
-      "assemblyReference": "Deucarian.Diagnostics",
-      "classification": "missing package dependency",
-      "packageId": "com.deucarian.object-loading",
-      "referencingAsmdef": "Tests/Editor/Diagnostics/Deucarian.ObjectLoading.Diagnostics.Tests.asmdef",
-      "referencingAssembly": "Deucarian.ObjectLoading.Diagnostics.Tests",
-      "repository": "Object-Loading",
-      "requiredPackage": "com.deucarian.diagnostics",
-      "scope": "Test"
-    },
-    {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-loading",
@@ -126,15 +218,21 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectLoading.asmdef",
           "assembly": "Deucarian.ObjectLoading",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         }
       ],
       "repository": "Object-Loading",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection",
@@ -145,21 +243,33 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectSelection.asmdef",
           "assembly": "Deucarian.ObjectSelection",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/PrimitiveSelection/Deucarian.ObjectSelection.Samples.PrimitiveSelection.asmdef",
           "assembly": "Deucarian.ObjectSelection.Samples.PrimitiveSelection",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Object-Selection",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
@@ -170,21 +280,35 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectLoading.APIIntegration.asmdef",
           "assembly": "Deucarian.ObjectLoading.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.API",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.ObjectLoading.APIIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectLoading.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.API",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectLoading-API-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.object-loading",
       "packageId": "com.deucarian.object-loading.api-integration",
@@ -195,21 +319,35 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectLoading.APIIntegration.asmdef",
           "assembly": "Deucarian.ObjectLoading.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ObjectLoading",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.ObjectLoading.APIIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectLoading.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.ObjectLoading",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectLoading-API-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.object-selection.core-state-integration",
@@ -220,27 +358,47 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectSelection.CoreStateIntegration.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.CoreState",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.CoreState",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.CoreState",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectSelection-CoreState-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.6",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection.core-state-integration",
@@ -251,21 +409,33 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectSelection.CoreStateIntegration.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectSelection-CoreState-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.object-selection.core-state-integration",
@@ -276,27 +446,47 @@
         {
           "asmdef": "Runtime/Deucarian.ObjectSelection.CoreStateIntegration.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ObjectSelection",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ObjectSelection",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.ObjectSelection",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectSelection-CoreState-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "editor-only use",
+      "classification": "EditorOnlyUse",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
@@ -307,21 +497,37 @@
         {
           "asmdef": "Editor/Deucarian.PackageInstaller.Editor.asmdef",
           "assembly": "Deucarian.PackageInstaller.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Editor",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.PackageInstaller.Editor.Tests.asmdef",
           "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Editor",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Package-Installer",
       "sourceMentionCount": 0
     },
     {
-      "classification": "editor-only use",
+      "classification": "EditorOnlyUse",
       "declaredVersion": "0.2.6",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.package-installer",
@@ -332,21 +538,37 @@
         {
           "asmdef": "Editor/Deucarian.PackageInstaller.Editor.asmdef",
           "assembly": "Deucarian.PackageInstaller.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Logging",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.PackageInstaller.Editor.Tests.asmdef",
           "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Logging",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Package-Installer",
       "sourceMentionCount": 0
     },
     {
-      "classification": "sample-only use",
+      "classification": "SampleOnlyUse",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.selection-suite",
@@ -357,15 +579,21 @@
         {
           "asmdef": "Samples~/Selection Demo/Deucarian.SelectionSuite.Samples.SelectionDemo.asmdef",
           "assembly": "Deucarian.SelectionSuite.Samples.SelectionDemo",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.CoreState",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Selection-Suite",
       "sourceMentionCount": 0
     },
     {
-      "classification": "sample-only use",
+      "classification": "SampleOnlyUse",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.selection-suite",
@@ -376,15 +604,21 @@
         {
           "asmdef": "Samples~/Selection Demo/Deucarian.SelectionSuite.Samples.SelectionDemo.asmdef",
           "assembly": "Deucarian.SelectionSuite.Samples.SelectionDemo",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ObjectSelection",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Selection-Suite",
       "sourceMentionCount": 0
     },
     {
-      "classification": "sample-only use",
+      "classification": "SampleOnlyUse",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.object-selection.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
@@ -395,15 +629,21 @@
         {
           "asmdef": "Samples~/Selection Demo/Deucarian.SelectionSuite.Samples.SelectionDemo.asmdef",
           "assembly": "Deucarian.SelectionSuite.Samples.SelectionDemo",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ObjectSelection.CoreStateIntegration",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Selection-Suite",
       "sourceMentionCount": 0
     },
     {
-      "classification": "sample-only use",
+      "classification": "SampleOnlyUse",
       "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.selection-suite",
@@ -414,15 +654,21 @@
         {
           "asmdef": "Samples~/Selection Demo/Deucarian.SelectionSuite.Samples.SelectionDemo.asmdef",
           "assembly": "Deucarian.SelectionSuite.Samples.SelectionDemo",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.UIBinding",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Selection-Suite",
       "sourceMentionCount": 0
     },
     {
-      "classification": "sample-only use",
+      "classification": "SampleOnlyUse",
       "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.ui-binding.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
@@ -433,15 +679,21 @@
         {
           "asmdef": "Samples~/Selection Demo/Deucarian.SelectionSuite.Samples.SelectionDemo.asmdef",
           "assembly": "Deucarian.SelectionSuite.Samples.SelectionDemo",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.UIBinding.CoreStateIntegration",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Selection-Suite",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.session",
@@ -452,21 +704,33 @@
         {
           "asmdef": "Runtime/Deucarian.Session.asmdef",
           "assembly": "Deucarian.Session",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/BasicUsage/Deucarian.Session.Samples.asmdef",
           "assembly": "Deucarian.Session.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Session",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.session.api-integration",
@@ -477,27 +741,47 @@
         {
           "asmdef": "Runtime/Deucarian.Session.APIIntegration.asmdef",
           "assembly": "Deucarian.Session.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.API",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/BasicUsage/Deucarian.Session.APIIntegration.Samples.asmdef",
           "assembly": "Deucarian.Session.APIIntegration.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.API",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.Session.APIIntegration.Tests.asmdef",
           "assembly": "Deucarian.Session.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.API",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Session-API-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.session.api-integration",
@@ -508,27 +792,47 @@
         {
           "asmdef": "Runtime/Deucarian.Session.APIIntegration.asmdef",
           "assembly": "Deucarian.Session.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Session",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/BasicUsage/Deucarian.Session.APIIntegration.Samples.asmdef",
           "assembly": "Deucarian.Session.APIIntegration.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Session",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.Session.APIIntegration.Tests.asmdef",
           "assembly": "Deucarian.Session.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Session",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Session-API-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "editor-only use",
+      "classification": "EditorOnlyUse",
       "declaredVersion": "0.1.2",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
@@ -539,15 +843,23 @@
         {
           "asmdef": "Editor/Deucarian.Theming.Editor.asmdef",
           "assembly": "Deucarian.Theming.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Editor",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         }
       ],
       "repository": "Theming",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.theming",
@@ -558,21 +870,35 @@
         {
           "asmdef": "Editor/Deucarian.Theming.Editor.asmdef",
           "assembly": "Deucarian.Theming.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.Logging",
-          "scope": "Editor production"
+          "scope": "Editor production",
+          "versionDefines": []
         },
         {
           "asmdef": "Runtime/Deucarian.Theming.asmdef",
           "assembly": "Deucarian.Theming",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.Logging",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         }
       ],
       "repository": "Theming",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
@@ -583,27 +909,47 @@
         {
           "asmdef": "Runtime/Deucarian.UIBinding.CoreStateIntegration.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.CoreState",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/BasicUsage/Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.CoreState",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.UIBinding.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.CoreState",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "UIBinding-CoreState-Integration",
       "sourceMentionCount": 0
     },
     {
-      "classification": "required and used",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
@@ -614,20 +960,40 @@
         {
           "asmdef": "Runtime/Deucarian.UIBinding.CoreStateIntegration.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.UIBinding",
-          "scope": "Runtime production"
+          "scope": "Runtime production",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/BasicUsage/Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.UIBinding",
-          "scope": "Sample"
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Tests/Editor/Deucarian.UIBinding.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
           "reference": "Deucarian.UIBinding",
-          "scope": "Test"
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "UIBinding-CoreState-Integration",
@@ -635,9 +1001,9 @@
     }
   ],
   "summary": {
-    "editor-only use": 5,
-    "missing package dependency": 2,
-    "required and used": 15,
-    "sample-only use": 5
+    "EditorOnlyUse": 5,
+    "OptionalVersionDefinedUse": 1,
+    "RequiredAndUsed": 15,
+    "SampleOnlyUse": 5
   }
 }

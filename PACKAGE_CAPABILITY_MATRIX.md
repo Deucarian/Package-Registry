@@ -21,6 +21,6 @@ Schema version: 2
 
 ## Notes
 
-- `unity-object-lifetime` remains governed by the dedicated lifetime audit conclusion: runtime Common package justified.
+- `unity-object-lifetime` remains governed by the dedicated lifetime audit conclusion: Create com.deucarian.common.
 - `Logging -> Editor` remains a review-required dependency exception.
 - Capability ownership does not automatically justify adding dependencies; consumers must use the capability.

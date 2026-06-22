@@ -1,7 +1,13 @@
 {
   "findings": [
     {
-      "kind": "package version drift",
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.api",
+      "repository": "API"
+    },
+    {
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.api",
       "packageJsonVersion": "1.1.0",
       "readmeVersion": "1.0.2",
@@ -9,32 +15,38 @@
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.api",
-      "repository": "API"
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap"
     },
     {
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.bootstrap",
       "packageJsonVersion": "1.0.1",
       "readmeVersion": "0.1.8",
       "repository": "Bootstrap"
     },
     {
-      "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.bootstrap",
-      "repository": "Bootstrap"
-    },
-    {
       "changelogLatestVersion": "0.1.2",
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.editor",
       "packageJsonVersion": "1.0.0",
       "repository": "Editor"
     },
     {
-      "kind": "package version drift",
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.logging",
+      "repository": "Logging"
+    },
+    {
+      "file": "README.md",
+      "kind": "LegitimateGenericBridgeTerm",
+      "packageId": "com.deucarian.logging",
+      "repository": "Logging"
+    },
+    {
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.logging",
       "packageJsonVersion": "1.0.0",
       "readmeVersion": "0.2.6",
@@ -42,26 +54,14 @@
     },
     {
       "changelogLatestVersion": "0.2.6",
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.logging",
       "packageJsonVersion": "1.0.0",
       "repository": "Logging"
     },
     {
-      "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.logging",
-      "repository": "Logging"
-    },
-    {
-      "file": "README.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.logging",
-      "repository": "Logging"
-    },
-    {
       "dependency": "com.deucarian.logging",
-      "kind": "dependency version drift",
+      "kind": "DependencyVersionDrift",
       "packageId": "com.deucarian.object-loading",
       "packageJsonVersion": "0.2.5",
       "readmeVersion": "0.2.2",
@@ -69,20 +69,41 @@
     },
     {
       "changelogLatestVersion": "1.1.0",
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.object-loading",
       "packageJsonVersion": "1.1.1",
       "repository": "Object-Loading"
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-selection",
       "repository": "Object-Selection"
     },
     {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "registryField": "stableUrl",
+      "repository": "ObjectLoading-API-Integration",
+      "url": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#main"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "registryField": "developmentUrl",
+      "repository": "ObjectLoading-API-Integration",
+      "url": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#develop"
+    },
+    {
+      "file": "package.json",
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "repository": "ObjectLoading-API-Integration",
+      "url": "git+https://github.com/Deucarian/Object-Loading-API-Bridge.git"
+    },
+    {
       "dependency": "com.deucarian.api",
-      "kind": "dependency version drift",
+      "kind": "DependencyVersionDrift",
       "packageId": "com.deucarian.object-loading.api-integration",
       "packageJsonVersion": "1.1.0",
       "readmeVersion": "1.0.2",
@@ -90,124 +111,178 @@
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-loading.api-integration",
       "repository": "ObjectLoading-API-Integration"
     },
     {
       "file": "README.md",
-      "kind": "stale Bridge terminology",
+      "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.object-loading.api-integration",
       "repository": "ObjectLoading-API-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "ActiveDocumentationDrift",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "repository": "ObjectSelection-CoreState-Integration"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "registryField": "stableUrl",
+      "repository": "ObjectSelection-CoreState-Integration",
+      "url": "https://github.com/Deucarian/Object-Selection-Bridge.git#main"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "registryField": "developmentUrl",
+      "repository": "ObjectSelection-CoreState-Integration",
+      "url": "https://github.com/Deucarian/Object-Selection-Bridge.git#develop"
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "repository": "ObjectSelection-CoreState-Integration"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer"
     },
     {
       "file": "README.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.object-selection.core-state-integration",
-      "repository": "ObjectSelection-CoreState-Integration"
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer"
     },
     {
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.package-installer",
       "packageJsonVersion": "1.1.55",
       "readmeVersion": "1.1.44",
       "repository": "Package-Installer"
     },
     {
-      "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer"
-    },
-    {
       "file": "README.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer"
-    },
-    {
-      "file": "README.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ReviewRequired",
       "packageId": null,
       "repository": "Package-Registry"
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.selection-suite",
       "repository": "Selection-Suite"
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.session",
       "repository": "Session"
     },
     {
-      "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "file": "README.md",
+      "kind": "ActiveDocumentationDrift",
       "packageId": "com.deucarian.session.api-integration",
       "repository": "Session-API-Integration"
     },
     {
-      "file": "README.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.session.api-integration",
+      "registryField": "stableUrl",
+      "repository": "Session-API-Integration",
+      "url": "https://github.com/Deucarian/Session-API-Bridge.git#main"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.session.api-integration",
+      "registryField": "developmentUrl",
+      "repository": "Session-API-Integration",
+      "url": "https://github.com/Deucarian/Session-API-Bridge.git#develop"
+    },
+    {
+      "file": "package.json",
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration",
+      "url": "git+https://github.com/Deucarian/Session-API-Bridge.git"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.session.api-integration",
       "repository": "Session-API-Integration"
     },
     {
       "changelogLatestVersion": "0.4.2",
-      "kind": "package version drift",
+      "kind": "PackageVersionDrift",
       "packageId": "com.deucarian.theming",
       "packageJsonVersion": "1.0.0",
       "repository": "Theming"
     },
     {
       "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.ui-binding",
       "repository": "UI-Binding"
     },
     {
       "file": "Documentation~/Integrations.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ReviewRequired",
       "packageId": "com.deucarian.ui-flow",
       "repository": "UI-FLow"
     },
     {
       "file": "README.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ReviewRequired",
       "packageId": "com.deucarian.ui-flow",
       "repository": "UI-FLow"
-    },
-    {
-      "file": "CHANGELOG.md",
-      "kind": "stale Bridge terminology",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "repository": "UIBinding-CoreState-Integration"
     },
     {
       "file": "CONTRIBUTING.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ActiveDocumentationDrift",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "repository": "UIBinding-CoreState-Integration"
     },
     {
       "file": "README.md",
-      "kind": "stale Bridge terminology",
+      "kind": "ActiveDocumentationDrift",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "registryField": "stableUrl",
+      "repository": "UIBinding-CoreState-Integration",
+      "url": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#main"
+    },
+    {
+      "kind": "ActiveRepositoryUrlDrift",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "registryField": "developmentUrl",
+      "repository": "UIBinding-CoreState-Integration",
+      "url": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#develop"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "repository": "UIBinding-CoreState-Integration"
     }
   ],
   "summary": {
-    "dependency version drift": 2,
-    "package version drift": 8,
-    "stale Bridge terminology": 22
+    "ActiveDocumentationDrift": 4,
+    "ActiveRepositoryUrlDrift": 10,
+    "DependencyVersionDrift": 2,
+    "HistoricalChangelogReference": 12,
+    "LegitimateGenericBridgeTerm": 1,
+    "MigrationDocumentation": 2,
+    "PackageVersionDrift": 8,
+    "ReviewRequired": 3
   }
 }

@@ -34,24 +34,29 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Session-API-Integration | com.deucarian.session.api-integration | 1.0.1 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
 | Theming | com.deucarian.theming | 1.0.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 4 | 221 |
 | UI-Binding | com.deucarian.ui-binding | 1.0.1 | 2021.3 | yes | clean | com.unity.ugui | 3 | 75 |
-| UI-FLow | com.deucarian.ui-flow | 0.2.0 | 2021.3 | yes | clean | com.unity.ugui | 6 | 311 |
+| UI-FLow | com.deucarian.ui-flow | 0.2.0 | 2021.3 | yes | clean | com.unity.ugui | 6 | 340 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.1 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 
 ## Corrected Counts
 
-- Repositories: 19
-- Parsed methods/bodies analyzed: 3091
-- Exact AST clone groups: 13
-- Normalized structural clone groups: 20
-- Same-symbol semantic candidates: 5
-- Runtime public API symbols: 1290
-- Editor public API symbols: 219
-- Public API symbols missing XML documentation: 862
-- Debug invocation records: 45
-- Unity object lifetime records: 51
-- Documentation drift findings: 32
-- Dependency usage findings: 27
-- Dependency cycles: 0
+| Metric | Count |
+| --- | --- |
+| Repositories | 19 |
+| Parsed methods/bodies analyzed | 3091 |
+| Exact AST clone groups | 13 |
+| Normalized structural clone groups | 20 |
+| Same-symbol semantic candidates | 5 |
+| Runtime public API symbols | 1319 |
+| Editor public API symbols | 219 |
+| Test public symbols excluded from production API | 749 |
+| Sample public symbols excluded from production API | 142 |
+| Internal/private production symbols | 2918 |
+| Public API symbols missing XML documentation | 877 |
+| Debug invocation records | 45 |
+| Unity object lifetime records | 57 |
+| Documentation drift findings | 42 |
+| Dependency usage findings | 26 |
+| Dependency cycles | 0 |
 
 ## Extraction Position
 

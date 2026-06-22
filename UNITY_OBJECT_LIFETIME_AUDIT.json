@@ -1,14 +1,86 @@
 {
   "conclusion": {
-    "decision": "runtime Common package justified",
+    "apiProposal": [
+      "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
+    ],
+    "comparison": [
+      {
+        "acceptedType": "Object",
+        "assembly": "Deucarian.ObjectLoading",
+        "callSiteCount": 1,
+        "collectionBehavior": "called from collection/list cleanup",
+        "editModeBehavior": "Object.DestroyImmediate",
+        "exceptionBehavior": "does not catch exceptions",
+        "expectedExecutionContext": "Runtime object load handle cleanup; safe in Play Mode and Edit Mode",
+        "fakeNullBehavior": "Unity fake-null covered by target == null",
+        "file": "Runtime/Utilities/UnityObjectUtility.cs",
+        "nullBehavior": "returns without destroying",
+        "playModeBehavior": "Object.Destroy",
+        "referenceClearingBehavior": "does not clear references",
+        "repository": "Object-Loading",
+        "symbol": "Destroy"
+      },
+      {
+        "acceptedType": "GameObject",
+        "assembly": "Deucarian.UIBinding",
+        "callSiteCount": 3,
+        "collectionBehavior": "called from collection/list cleanup",
+        "editModeBehavior": "Object.DestroyImmediate",
+        "exceptionBehavior": "does not catch exceptions",
+        "expectedExecutionContext": "Runtime item GameObject cleanup; safe in Play Mode and Edit Mode",
+        "fakeNullBehavior": "Unity fake-null covered by target == null",
+        "file": "Runtime/GenericItemManager.cs",
+        "nullBehavior": "returns without destroying",
+        "playModeBehavior": "Object.Destroy",
+        "referenceClearingBehavior": "does not clear references",
+        "repository": "UI-Binding",
+        "symbol": "DestroyItem"
+      },
+      {
+        "acceptedType": "GameObject",
+        "assembly": "Deucarian.UIFlow",
+        "callSiteCount": 1,
+        "collectionBehavior": "single owned screen GameObject",
+        "editModeBehavior": "not supported by this implementation",
+        "exceptionBehavior": "does not catch exceptions",
+        "expectedExecutionContext": "Runtime screen lease release; Play Mode lifecycle",
+        "fakeNullBehavior": "not explicit",
+        "file": "Runtime/Providers/UIFlowPrefabScreenProvider.cs",
+        "nullBehavior": "caller-owned or not explicit",
+        "playModeBehavior": "Object.Destroy",
+        "referenceClearingBehavior": "does not clear references",
+        "repository": "UI-FLow",
+        "symbol": "UIFlowPrefabScreenProvider::ReleaseAsync"
+      }
+    ],
+    "decision": "Create com.deucarian.common",
+    "dependencyImpact": "Future runtime consumers would add a dependency on com.deucarian.common; this audit wave does not add it.",
     "editorRepositoryCount": 0,
-    "helperDefinitionCount": 0,
+    "helperDefinitionCount": 2,
+    "intendedConsumers": [
+      "Object-Loading",
+      "UI-Binding",
+      "UI-FLow"
+    ],
     "note": "No package is created by this audit wave; this conclusion directs the next design review.",
+    "optionalApiProposal": [],
+    "risks": [
+      "Common must not grow into a generic utility bucket.",
+      "Editor asset destruction and test fixture cleanup should stay out of the initial runtime API.",
+      "Ref-clearing overload is omitted because audited production consumers do not require it."
+    ],
     "runtimeRepositoryCount": 3,
-    "testRepositoryCount": 8
+    "selectedOption": "A",
+    "testRepositoryCount": 8,
+    "testingPackageDecision": {
+      "decision": "KeepLocal",
+      "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
+      "testRepositoryCount": 8
+    }
   },
   "occurrences": [
     {
+      "assembly": "Deucarian.API.Tests",
       "classification": "Test",
       "containingSymbol": "ApiClientTests::ApiClient_ReturnsTextureResponsesAsTextures",
       "file": "Tests/Editor/ApiClientTests.cs",
@@ -20,6 +92,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Bootstrap.Editor.Tests",
       "classification": "Bootstrap exception",
       "containingSymbol": "DeucarianBootstrapTests::HeroPrimaryButtonLabelsFollowSetupState",
       "file": "Tests/Editor/DeucarianBootstrapTests.cs",
@@ -31,6 +104,40 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectLoading",
+      "classification": "Runtime production",
+      "containingSymbol": "ObjectLoadHandle::Unload",
+      "file": "Runtime/Core/ObjectLoadHandle.cs",
+      "invocation": "UnityObjectUtility.Destroy",
+      "line": 70,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.object-loading",
+      "repository": "Object-Loading",
+      "scope": "Runtime production"
+    },
+    {
+      "assemblyPlatform": "Deucarian.ObjectLoading",
+      "file": "Runtime/Utilities/UnityObjectUtility.cs",
+      "line": 7,
+      "occurrenceKind": "helper definition",
+      "packageId": "com.deucarian.object-loading",
+      "repository": "Object-Loading",
+      "scope": "Runtime production",
+      "semantics": {
+        "acceptedType": "Object",
+        "catchesExceptions": false,
+        "clearsReferences": false,
+        "handlesCollections": false,
+        "handlesNullOrFakeNull": true,
+        "usesDestroy": true,
+        "usesDestroyImmediate": true,
+        "usesPlayModeCheck": true
+      },
+      "signature": "public static void Destroy(Object target)",
+      "symbol": "Destroy"
+    },
+    {
+      "assembly": "Deucarian.ObjectLoading",
       "classification": "Runtime production",
       "containingSymbol": "UnityObjectUtility::Destroy",
       "file": "Runtime/Utilities/UnityObjectUtility.cs",
@@ -42,6 +149,7 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.ObjectLoading",
       "classification": "Runtime production",
       "containingSymbol": "UnityObjectUtility::Destroy",
       "file": "Runtime/Utilities/UnityObjectUtility.cs",
@@ -53,6 +161,7 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "HighlighterHookTests::HighlightHooksCanSubscribeToSelectionChanges",
       "file": "Tests/EditMode/HighlighterHookTests.cs",
@@ -64,6 +173,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectHoverServiceTests::HoverStartedAndEndedAreSeparateFromSelection",
       "file": "Tests/EditMode/ObjectHoverServiceTests.cs",
@@ -75,6 +185,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectHoverServiceTests::SameKeyHoverIsIdempotent",
       "file": "Tests/EditMode/ObjectHoverServiceTests.cs",
@@ -86,6 +197,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::RegisterWorks",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -97,6 +209,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::UnregisterWorks",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -108,6 +221,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::ResolvesKeyToObject",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -119,6 +233,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::ResolvesObjectToKey",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -130,6 +245,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::ResolvesComponentToKeyThroughGameObject",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -141,6 +257,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::DestroyedObjectHandlingBehavesSafely",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -152,6 +269,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::DuplicateObjectWithDifferentKeyThrows",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
@@ -163,6 +281,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionServiceTests.SelectionFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionServiceTests.cs",
@@ -174,6 +293,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionServiceTests.SelectionFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionServiceTests.cs",
@@ -185,6 +305,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionVisualControllerTests::DestroyedTargetsAreSafe",
       "file": "Tests/EditMode/ObjectSelectionVisualControllerTests.cs",
@@ -196,6 +317,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionVisualControllerTests.SelectionFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionVisualControllerTests.cs",
@@ -207,6 +329,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionVisualControllerTests.SelectionFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionVisualControllerTests.cs",
@@ -218,6 +341,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "RaycastSelectionControllerTests::RaycastControllerSelectsResolvedKey",
       "file": "Tests/EditMode/RaycastSelectionControllerTests.cs",
@@ -229,6 +353,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "RaycastSelectionControllerTests::RaycastControllerSelectsResolvedKey",
       "file": "Tests/EditMode/RaycastSelectionControllerTests.cs",
@@ -240,6 +365,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "RaycastSelectionControllerTests::RaycastControllerSelectsResolvedKey",
       "file": "Tests/EditMode/RaycastSelectionControllerTests.cs",
@@ -251,6 +377,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
       "containingSymbol": "RaycastSelectionControllerTests::MissingCameraRaycastReturnsFalse",
       "file": "Tests/EditMode/RaycastSelectionControllerTests.cs",
@@ -262,6 +389,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionCoreStateIntegrationTests::GuardPreventsFeedbackLoops",
       "file": "Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs",
@@ -273,6 +401,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionCoreStateIntegrationTests.IntegrationFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs",
@@ -284,6 +413,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionCoreStateIntegrationTests.IntegrationFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs",
@@ -295,6 +425,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "ObjectSelectionCoreStateIntegrationTests.IntegrationFixture::Dispose",
       "file": "Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs",
@@ -306,6 +437,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianDefaultThemeAssetFactoryTests::DuplicateValidationDetectsDuplicateIds",
       "file": "Tests/Editor/DeucarianDefaultThemeAssetFactoryTests.cs",
@@ -317,6 +449,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianDefaultThemeAssetFactoryTests::DuplicateValidationDetectsDuplicateIds",
       "file": "Tests/Editor/DeucarianDefaultThemeAssetFactoryTests.cs",
@@ -328,6 +461,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianDefaultThemeAssetFactoryTests::DuplicateValidationDetectsDuplicateIds",
       "file": "Tests/Editor/DeucarianDefaultThemeAssetFactoryTests.cs",
@@ -339,6 +473,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianThemingMenuToolsTests::ApplyingActiveThemeAssignsItToProviders",
       "file": "Tests/Editor/DeucarianThemingMenuToolsTests.cs",
@@ -350,6 +485,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianUIToolkitThemeUtilityTests::TearDown",
       "file": "Tests/Editor/DeucarianUIToolkitThemeUtilityTests.cs",
@@ -361,6 +497,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianColorPaletteTests::TearDown",
       "file": "Tests/Runtime/DeucarianColorPaletteTests.cs",
@@ -372,6 +509,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianSelectableThemeColorsTests::TearDown",
       "file": "Tests/Runtime/DeucarianSelectableThemeColorsTests.cs",
@@ -383,6 +521,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.Theming.Tests",
       "classification": "Test",
       "containingSymbol": "DeucarianUGUIAndTMPAdapterTests::TearDown",
       "file": "Tests/Runtime/DeucarianUGUIAndTMPAdapterTests.cs",
@@ -394,6 +533,64 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding",
+      "classification": "Runtime production",
+      "containingSymbol": "GenericItemManager::Remove",
+      "file": "Runtime/GenericItemManager.cs",
+      "invocation": "DestroyItem",
+      "line": 175,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UIBinding",
+      "classification": "Runtime production",
+      "containingSymbol": "GenericItemManager::Clear",
+      "file": "Runtime/GenericItemManager.cs",
+      "invocation": "DestroyItem",
+      "line": 183,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UIBinding",
+      "classification": "Runtime production",
+      "containingSymbol": "GenericItemManager::CreateManagedItem",
+      "file": "Runtime/GenericItemManager.cs",
+      "invocation": "DestroyItem",
+      "line": 218,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding",
+      "scope": "Runtime production"
+    },
+    {
+      "assemblyPlatform": "Deucarian.UIBinding",
+      "file": "Runtime/GenericItemManager.cs",
+      "line": 248,
+      "occurrenceKind": "helper definition",
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding",
+      "scope": "Runtime production",
+      "semantics": {
+        "acceptedType": "GameObject",
+        "catchesExceptions": false,
+        "clearsReferences": false,
+        "handlesCollections": false,
+        "handlesNullOrFakeNull": true,
+        "usesDestroy": true,
+        "usesDestroyImmediate": true,
+        "usesPlayModeCheck": true
+      },
+      "signature": "private static void DestroyItem(GameObject itemGameObject)",
+      "symbol": "DestroyItem"
+    },
+    {
+      "assembly": "Deucarian.UIBinding",
       "classification": "Runtime production",
       "containingSymbol": "GenericItemManager::DestroyItem",
       "file": "Runtime/GenericItemManager.cs",
@@ -405,6 +602,7 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.UIBinding",
       "classification": "Runtime production",
       "containingSymbol": "GenericItemManager::DestroyItem",
       "file": "Runtime/GenericItemManager.cs",
@@ -416,6 +614,7 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingContainerTests::TearDown",
       "file": "Tests/Editor/UIBindingContainerTests.cs",
@@ -427,6 +626,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingContainerTests::TearDown",
       "file": "Tests/Editor/UIBindingContainerTests.cs",
@@ -438,6 +638,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingContainerTests::GenericScrollView_UsesScrollRectContent",
       "file": "Tests/Editor/UIBindingContainerTests.cs",
@@ -449,6 +650,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingNestedContainerTests::TearDown",
       "file": "Tests/Editor/UIBindingNestedContainerTests.cs",
@@ -460,6 +662,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingNestedContainerTests::TearDown",
       "file": "Tests/Editor/UIBindingNestedContainerTests.cs",
@@ -471,6 +674,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingNestedContainerTests::TearDown",
       "file": "Tests/Editor/UIBindingNestedContainerTests.cs",
@@ -482,6 +686,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingSelectionVisualTests::TearDown",
       "file": "Tests/Editor/UIBindingSelectionVisualTests.cs",
@@ -493,6 +698,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.Tests",
       "classification": "Test",
       "containingSymbol": "UIBindingSelectionVisualTests::TearDown",
       "file": "Tests/Editor/UIBindingSelectionVisualTests.cs",
@@ -504,6 +710,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIFlow",
       "classification": "Runtime production",
       "containingSymbol": "UIFlowPrefabScreenProvider::ReleaseAsync",
       "file": "Runtime/Providers/UIFlowPrefabScreenProvider.cs",
@@ -515,6 +722,7 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.UIFlow.Tests.PlayMode",
       "classification": "Test",
       "containingSymbol": "UIFlowRuntimeNavigationTests::TearDown",
       "file": "Tests/PlayMode/UIFlowRuntimeNavigationTests.cs",
@@ -526,6 +734,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "RepositoryUIBindingTests::TearDown",
       "file": "Tests/Editor/RepositoryUIBindingTests.cs",
@@ -537,6 +746,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "RepositoryUIBindingTests::TearDown",
       "file": "Tests/Editor/RepositoryUIBindingTests.cs",
@@ -548,6 +758,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "SelectionUIBindingTests::TearDown",
       "file": "Tests/Editor/SelectionUIBindingTests.cs",
@@ -559,6 +770,7 @@
       "scope": "Test"
     },
     {
+      "assembly": "Deucarian.UIBinding.CoreStateIntegration.Tests",
       "classification": "Test",
       "containingSymbol": "SelectionUIBindingTests::TearDown",
       "file": "Tests/Editor/SelectionUIBindingTests.cs",
@@ -571,6 +783,8 @@
     }
   ],
   "summary": {
-    "direct Unity API call": 51
+    "direct Unity API call": 51,
+    "helper call site": 4,
+    "helper definition": 2
   }
 }

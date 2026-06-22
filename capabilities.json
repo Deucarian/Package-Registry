@@ -85,10 +85,13 @@
       "ownerPackageId": null
     },
     {
+      "apiProposal": [
+        "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
+      ],
       "description": "Potential tiny shared UnityEngine.Object lifetime primitives if the dedicated audit justifies a Common package.",
       "id": "unity-object-lifetime",
       "ownerPackageId": null,
-      "status": "runtime Common package justified"
+      "status": "Create com.deucarian.common"
     }
   ],
   "schemaVersion": 2

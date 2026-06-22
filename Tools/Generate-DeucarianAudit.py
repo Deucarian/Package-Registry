@@ -54,6 +54,15 @@ DEBUG_METHODS = {
     "LogErrorFormat",
     "LogException",
 }
+DEBUG_LOG_LEVELS = {
+    "Log": "Info",
+    "LogFormat": "Info",
+    "LogWarning": "Warning",
+    "LogWarningFormat": "Warning",
+    "LogError": "Error",
+    "LogErrorFormat": "Error",
+    "LogException": "Exception",
+}
 DEBUG_FORBIDDEN_SYMBOLS = [
     "UnityEngine.Debug.Log",
     "UnityEngine.Debug.LogFormat",
@@ -64,6 +73,8 @@ DEBUG_FORBIDDEN_SYMBOLS = [
     "UnityEngine.Debug.LogException",
 ]
 DESTROY_HELPER_NAMES = {
+    "Destroy",
+    "DestroyItem",
     "DestroyUnityObject",
     "DestroyUnityObjectSafely",
     "SafeDestroy",
@@ -206,32 +217,65 @@ def iter_text_files(root: Path) -> Iterable[Path]:
                 yield path
 
 
-def scope_for(relative_path: str) -> str:
+def path_fallback_scope(relative_path: str) -> str:
     first = relative_path.split("/", 1)[0]
-    if first == "Runtime":
-        return "Runtime production"
-    if first == "Editor":
-        return "Editor production"
-    if first == "Tests":
-        return "Test"
-    if first.startswith("Samples"):
-        return "Sample"
     if first in {"Tools", ".github"}:
         return "Build/CI"
+    if first.startswith("Samples"):
+        return "Sample"
+    if first == "Runtime" or first.startswith("Runtime."):
+        return "Runtime production"
+    if first == "Editor" or first.startswith("Editor."):
+        return "Editor production"
+    if first == "Tests" or first.startswith("Tests."):
+        return "Test"
     return "Other"
 
 
-def assembly_for(relative_path: str, asmdefs: list[dict[str, Any]]) -> str:
-    best = ""
+def scope_for(relative_path: str, asmdef: dict[str, Any] | None = None) -> str:
+    fallback = path_fallback_scope(relative_path)
+    if fallback in {"Sample", "Build/CI"}:
+        return fallback
+    if asmdef:
+        if is_test_asmdef(asmdef):
+            return "Test"
+        if "Editor" in asmdef.get("includePlatforms", []):
+            return "Editor production"
+        return "Runtime production"
+    return fallback
+
+
+def is_test_asmdef(asmdef: dict[str, Any]) -> bool:
+    name = asmdef.get("name", "")
+    path = asmdef.get("path", "")
+    optional_refs = set(asmdef.get("optionalUnityReferences", []))
+    return (
+        "TestAssemblies" in optional_refs
+        or ".Tests" in name
+        or name.endswith(".Tests")
+        or path.startswith("Tests/")
+        or path.startswith("Tests.")
+        or "/Tests/" in path
+    )
+
+
+def owning_asmdef(relative_path: str, asmdefs: list[dict[str, Any]]) -> dict[str, Any] | None:
+    best_prefix = ""
+    best_asmdef: dict[str, Any] | None = None
     for asm in asmdefs:
         prefix = str(Path(asm["path"]).parent).replace("\\", "/")
         if prefix == ".":
             prefix = ""
         if not prefix or relative_path.startswith(prefix.rstrip("/") + "/"):
-            if len(prefix) >= len(best):
-                best = prefix
-                assembly = asm.get("name", "")
-    return locals().get("assembly", "")
+            if len(prefix) >= len(best_prefix):
+                best_prefix = prefix
+                best_asmdef = asm
+    return best_asmdef
+
+
+def assembly_for(relative_path: str, asmdefs: list[dict[str, Any]]) -> str:
+    asmdef = owning_asmdef(relative_path, asmdefs)
+    return asmdef.get("name", "") if asmdef else ""
 
 
 def node_text(node: Any, source: bytes) -> str:
@@ -574,20 +618,22 @@ class CSharpSyntaxAnalyzer:
         logging_declared = bool((parsed_repo_dependencies.get(parsed.repo) or {}).get("com.deucarian.logging"))
         logging_asmdef = bool(repo_asm_refs.get(parsed.repo, set()) & {"Deucarian.Logging", "GUID:Deucarian.Logging"})
         classification = classify_scope(parsed.package_id, parsed.scope)
-        disposition = "allowed" if classification in {"Test", "Bootstrap exception", "Logging package sink implementation"} else "migrate" if parsed.scope in {"Runtime production", "Editor production", "Sample"} else "review required"
+        disposition = policy_disposition(classification, parsed.scope)
         return {
             "repository": parsed.repo,
             "packageId": parsed.package_id,
             "file": parsed.relative_path,
             "line": node.start_point[0] + 1,
             "containingSymbol": containing_symbol,
+            "assembly": parsed.assembly,
             "scope": parsed.scope,
             "classification": classification,
             "invocation": invocation_name,
-            "severity": "error" if disposition == "migrate" else "info",
+            "logLevel": debug_log_level(invocation_name),
+            "policyDisposition": disposition,
+            "policySeverity": policy_severity(disposition),
             "loggingDeclared": logging_declared,
             "asmdefReferencesLogging": logging_asmdef,
-            "initialDisposition": disposition,
         }
 
     def _lifetime_kind(self, invocation_name: str) -> str:
@@ -607,6 +653,7 @@ class CSharpSyntaxAnalyzer:
             "file": parsed.relative_path,
             "line": node.start_point[0] + 1,
             "containingSymbol": containing_symbol,
+            "assembly": parsed.assembly,
             "scope": parsed.scope,
             "classification": classify_scope(parsed.package_id, parsed.scope),
             "occurrenceKind": kind,
@@ -639,6 +686,27 @@ def classify_scope(package_id: str | None, scope: str) -> str:
     return "Unknown"
 
 
+def debug_log_level(invocation_name: str) -> str:
+    method = invocation_name.rsplit(".", 1)[-1]
+    return DEBUG_LOG_LEVELS.get(method, "Unknown")
+
+
+def policy_disposition(classification: str, scope: str) -> str:
+    if classification in {"Test", "Bootstrap exception", "Logging package sink implementation"}:
+        return "Allowed"
+    if scope in {"Runtime production", "Editor production", "Sample"}:
+        return "Migrate"
+    return "ReviewRequired"
+
+
+def policy_severity(disposition: str) -> str:
+    if disposition == "Migrate":
+        return "Error"
+    if disposition == "ReviewRequired":
+        return "Warning"
+    return "Info"
+
+
 def collect_asmdefs(repo_root: Path) -> list[dict[str, Any]]:
     asmdefs = []
     for path in sorted(repo_root.rglob("*.asmdef")):
@@ -646,16 +714,20 @@ def collect_asmdefs(repo_root: Path) -> list[dict[str, Any]]:
         if any(part in SKIP_DIRS for part in relative_path.split("/")):
             continue
         data = read_json(path) or {}
+        record = {
+            "path": relative_path,
+            "name": data.get("name", ""),
+            "references": sorted(data.get("references", []) or []),
+            "includePlatforms": sorted(data.get("includePlatforms", []) or []),
+            "excludePlatforms": sorted(data.get("excludePlatforms", []) or []),
+            "optionalUnityReferences": sorted(data.get("optionalUnityReferences", []) or []),
+            "defineConstraints": sorted(data.get("defineConstraints", []) or []),
+            "versionDefines": sorted(data.get("versionDefines", []) or [], key=lambda item: (item.get("name", ""), item.get("define", ""), item.get("expression", ""))),
+            "autoReferenced": data.get("autoReferenced", True),
+        }
+        record["scope"] = scope_for(relative_path, record)
         asmdefs.append(
-            {
-                "path": relative_path,
-                "name": data.get("name", ""),
-                "scope": scope_for(relative_path),
-                "references": sorted(data.get("references", []) or []),
-                "includePlatforms": sorted(data.get("includePlatforms", []) or []),
-                "excludePlatforms": sorted(data.get("excludePlatforms", []) or []),
-                "optionalUnityReferences": sorted(data.get("optionalUnityReferences", []) or []),
-            }
+            record
         )
     return asmdefs
 
@@ -686,6 +758,9 @@ def markdown_debug_examples(repo: dict[str, Any], repo_root: Path) -> list[dict[
                 in_fence = not in_fence
                 continue
             if in_fence and "Debug." in line:
+                invocation = line.strip()
+                method_match = re.search(r"\bDebug\.(Log(?:Format|WarningFormat|Warning|ErrorFormat|Error|Exception)?)\b", invocation)
+                method_name = method_match.group(1) if method_match else ""
                 hits.append(
                     {
                         "repository": repo["name"],
@@ -694,9 +769,10 @@ def markdown_debug_examples(repo: dict[str, Any], repo_root: Path) -> list[dict[
                         "line": line_no,
                         "scope": "Documentation example",
                         "classification": "Documentation example",
-                        "invocation": line.strip(),
-                        "initialDisposition": "review required",
-                        "severity": "warning",
+                        "invocation": invocation,
+                        "logLevel": DEBUG_LOG_LEVELS.get(method_name, "Unknown"),
+                        "policyDisposition": "ReviewRequired",
+                        "policySeverity": "Warning",
                         "loggingDeclared": bool(repo.get("dependencies", {}).get("com.deucarian.logging")),
                         "asmdefReferencesLogging": False,
                     }
@@ -712,25 +788,52 @@ def documentation_drift(repo: dict[str, Any], repo_root: Path, registry_package:
     readme_version = extract_readme_package_version(readme_text)
     latest_changelog = extract_changelog_version(changelog_text)
     if package_version and readme_version and package_version != readme_version:
-        results.append({"kind": "package version drift", "repository": repo["name"], "packageId": repo.get("packageId"), "packageJsonVersion": package_version, "readmeVersion": readme_version})
+        results.append({"kind": "PackageVersionDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "packageJsonVersion": package_version, "readmeVersion": readme_version})
     if package_version and latest_changelog and package_version != latest_changelog:
-        results.append({"kind": "package version drift", "repository": repo["name"], "packageId": repo.get("packageId"), "packageJsonVersion": package_version, "changelogLatestVersion": latest_changelog})
+        results.append({"kind": "PackageVersionDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "packageJsonVersion": package_version, "changelogLatestVersion": latest_changelog})
     for dep, version in sorted((repo.get("dependencies") or {}).items()):
         pattern = rf"{re.escape(dep)}[^0-9]{{0,40}}(\d+\.\d+\.\d+)"
         for found in sorted(set(re.findall(pattern, readme_text, flags=re.I))):
             if found != version:
-                results.append({"kind": "dependency version drift", "repository": repo["name"], "packageId": repo.get("packageId"), "dependency": dep, "packageJsonVersion": version, "readmeVersion": found})
+                results.append({"kind": "DependencyVersionDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "dependency": dep, "packageJsonVersion": version, "readmeVersion": found})
+    repository_url = ((repo.get("repository") or {}) if isinstance(repo.get("repository"), dict) else {}).get("url", "")
+    if is_old_bridge_url(repository_url):
+        results.append({"kind": "ActiveRepositoryUrlDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "file": "package.json", "url": repository_url})
+    if re.search(r"\bbridge\b", " ".join(str(repo.get(key) or "") for key in ("packageId", "displayName")), flags=re.I):
+        results.append({"kind": "ActivePackageNameDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "displayName": repo.get("displayName")})
     if registry_package:
         for url_key in ("stableUrl", "developmentUrl"):
             url = registry_package.get(url_key, "")
             branch = "main" if url_key == "stableUrl" else "develop"
             if url and not url.endswith("#" + branch):
-                results.append({"kind": "branch URL drift", "repository": repo["name"], "packageId": repo.get("packageId"), "registryField": url_key, "url": url})
+                results.append({"kind": "BranchUrlDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "registryField": url_key, "url": url})
+            if is_old_bridge_url(url):
+                results.append({"kind": "ActiveRepositoryUrlDrift", "repository": repo["name"], "packageId": repo.get("packageId"), "registryField": url_key, "url": url})
     for path in sorted(repo_root.rglob("*.md")):
         text = read_text(path)
         if re.search(r"\bBridge\b|\bbridge\b", text):
-            results.append({"kind": "stale Bridge terminology", "repository": repo["name"], "packageId": repo.get("packageId"), "file": rel(path, repo_root)})
+            results.append({"kind": classify_bridge_markdown(rel(path, repo_root), text), "repository": repo["name"], "packageId": repo.get("packageId"), "file": rel(path, repo_root)})
     return results
+
+
+def is_old_bridge_url(url: str) -> bool:
+    return bool(url and re.search(r"/[^/#?]*Bridge(?:\.git)?(?:[#?]|$)", url, flags=re.I))
+
+
+def classify_bridge_markdown(relative_path: str, text: str) -> str:
+    path_lower = relative_path.lower()
+    text_lower = text.lower()
+    if path_lower.endswith("changelog.md"):
+        return "HistoricalChangelogReference"
+    if re.search(r"https://github\.com/Deucarian/[^)\s`]*Bridge(?:\.git)?", text, flags=re.I):
+        return "ActiveDocumentationDrift"
+    if "migration" in path_lower or "migration" in text_lower or "replace old" in text_lower:
+        return "MigrationDocumentation"
+    if re.search(r"com\.deucarian\.[a-z0-9.-]*bridge\b", text, flags=re.I):
+        return "ActiveDocumentationDrift"
+    if re.search(r"\badapter bridge\b|\bbridge pattern\b|\blocal bridge\b", text_lower):
+        return "LegitimateGenericBridgeTerm"
+    return "ReviewRequired"
 
 
 def extract_readme_package_version(text: str) -> str | None:
@@ -754,63 +857,106 @@ def extract_changelog_version(text: str) -> str | None:
 
 def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], package_to_assemblies: dict[str, set[str]], registry_package: dict[str, Any] | None) -> list[dict[str, Any]]:
     usages = []
-    repo_refs: set[str] = set()
     assembly_to_package = {
         assembly: package_id
         for package_id, assemblies in package_to_assemblies.items()
         for assembly in assemblies
     }
-    for asm in repo.get("asmdefs", []):
-        for reference in asm.get("references", []):
-            clean = reference.replace("GUID:", "")
-            repo_refs.add(clean)
-
-    source_text = "\n".join(parsed.text for parsed in parsed_files)
-    for dep, version in sorted((repo.get("dependencies") or {}).items()):
-        if not dep.startswith("com.deucarian."):
-            continue
-        assemblies = package_to_assemblies.get(dep, set())
-        referenced_by = []
-        for asm in repo.get("asmdefs", []):
-            for reference in asm.get("references", []):
-                clean = reference.replace("GUID:", "")
-                if clean in assemblies:
-                    referenced_by.append(
-                        {
-                            "assembly": asm.get("name", ""),
-                            "asmdef": asm.get("path", ""),
-                            "scope": asm.get("scope", "Other"),
-                            "reference": reference,
-                        }
-                    )
-        asm_used = sorted({item["reference"].replace("GUID:", "") for item in referenced_by})
-        namespace_hint = dep.replace("com.deucarian.", "Deucarian.").replace("-", ".")
-        source_mentions = source_text.count(namespace_hint)
-        scopes = {item["scope"] for item in referenced_by}
-        if referenced_by and "Runtime production" in scopes:
-            classification = "required and used"
-        elif referenced_by and "Editor production" in scopes:
-            classification = "editor-only use"
-        elif referenced_by and scopes and scopes <= {"Test"}:
-            classification = "test-only use"
-        elif referenced_by and scopes and scopes <= {"Sample"}:
-            classification = "sample-only use"
-        elif referenced_by:
-            classification = "review required"
-        elif source_mentions:
-            classification = "review required"
-        else:
-            classification = "apparently unused"
-        usages.append({"repository": repo["name"], "packageId": repo.get("packageId"), "dependency": dep, "declaredVersion": version, "classification": classification, "referencedAssemblies": asm_used, "referencedBy": sorted(referenced_by, key=lambda item: (item["scope"], item["assembly"], item["reference"])), "sourceMentionCount": source_mentions})
-
     declared_deps = set((repo.get("dependencies") or {}).keys())
+    source_text = "\n".join(parsed.text for parsed in parsed_files)
+
+    refs_by_package: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for asm in repo.get("asmdefs", []):
         for reference in asm.get("references", []):
             clean = reference.replace("GUID:", "")
             owner = assembly_to_package.get(clean)
-            if owner and owner != repo.get("packageId") and owner not in declared_deps:
-                usages.append({"repository": repo["name"], "packageId": repo.get("packageId"), "assemblyReference": clean, "requiredPackage": owner, "referencingAssembly": asm.get("name", ""), "referencingAsmdef": asm.get("path", ""), "scope": asm.get("scope", "Other"), "classification": "missing package dependency"})
+            if not owner or owner == repo.get("packageId"):
+                continue
+            guard = asmdef_guard_for_package(asm, owner)
+            refs_by_package[owner].append(
+                {
+                    "assembly": asm.get("name", ""),
+                    "asmdef": asm.get("path", ""),
+                    "scope": asm.get("scope", "Other"),
+                    "reference": clean,
+                    "includePlatforms": asm.get("includePlatforms", []),
+                    "defineConstraints": asm.get("defineConstraints", []),
+                    "versionDefines": asm.get("versionDefines", []),
+                    "autoReferenced": asm.get("autoReferenced", True),
+                    "guardKind": guard["kind"],
+                    "guardEvidence": guard["evidence"],
+                }
+            )
+
+    for dep, version in sorted((repo.get("dependencies") or {}).items()):
+        if not dep.startswith("com.deucarian."):
+            continue
+        referenced_by = sorted(refs_by_package.get(dep, []), key=lambda item: (item["scope"], item["assembly"], item["reference"]))
+        namespace_hint = dep.replace("com.deucarian.", "Deucarian.").replace("-", ".")
+        source_mentions = source_text.count(namespace_hint)
+        classification = classify_dependency_records(referenced_by, declared=True, source_mentions=source_mentions)
+        usages.append(
+            {
+                "repository": repo["name"],
+                "packageId": repo.get("packageId"),
+                "dependency": dep,
+                "declaredVersion": version,
+                "classification": classification,
+                "referencedAssemblies": sorted({item["reference"] for item in referenced_by}),
+                "referencedBy": referenced_by,
+                "sourceMentionCount": source_mentions,
+            }
+        )
+
+    for owner, referenced_by in sorted(refs_by_package.items()):
+        if owner in declared_deps:
+            continue
+        sorted_refs = sorted(referenced_by, key=lambda item: (item["scope"], item["assembly"], item["reference"]))
+        classification = classify_dependency_records(sorted_refs, declared=False, source_mentions=0)
+        usages.append(
+            {
+                "repository": repo["name"],
+                "packageId": repo.get("packageId"),
+                "assemblyReference": ", ".join(sorted({item["reference"] for item in sorted_refs})),
+                "requiredPackage": owner,
+                "classification": classification,
+                "referencedAssemblies": sorted({item["reference"] for item in sorted_refs}),
+                "referencedBy": sorted_refs,
+            }
+        )
     return usages
+
+
+def asmdef_guard_for_package(asmdef: dict[str, Any], package_id: str) -> dict[str, Any]:
+    version_defines = asmdef.get("versionDefines", []) or []
+    for item in version_defines:
+        if item.get("name") == package_id:
+            return {"kind": "VersionDefine", "evidence": item}
+    constraints = asmdef.get("defineConstraints", []) or []
+    if constraints:
+        return {"kind": "DefineConstraint", "evidence": constraints}
+    return {"kind": "", "evidence": None}
+
+
+def classify_dependency_records(records: list[dict[str, Any]], declared: bool, source_mentions: int) -> str:
+    if records:
+        if any(record.get("guardKind") == "VersionDefine" for record in records):
+            return "OptionalVersionDefinedUse"
+        if any(record.get("guardKind") == "DefineConstraint" for record in records):
+            return "OptionalConstraintUse"
+        scopes = {record.get("scope", "Other") for record in records}
+        if "Runtime production" in scopes:
+            return "RequiredAndUsed" if declared else "MissingHardPackageDependency"
+        if "Editor production" in scopes:
+            return "EditorOnlyUse" if declared else "MissingHardPackageDependency"
+        if scopes and scopes <= {"Test"}:
+            return "TestOnlyUse"
+        if scopes and scopes <= {"Sample"}:
+            return "SampleOnlyUse"
+        return "ReviewRequired"
+    if source_mentions:
+        return "ReviewRequired"
+    return "ApparentlyUnused"
 
 
 def clone_groups(methods: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
@@ -903,14 +1049,16 @@ def helper_definition_records(parsed_files: list[ParsedFile]) -> list[dict[str, 
                     "file": method["file"],
                     "line": line,
                     "symbol": method["symbol"],
+                    "signature": method.get("signature", ""),
                     "scope": method["scope"],
                     "occurrenceKind": "helper definition",
                     "semantics": {
+                        "acceptedType": accepted_type_from_signature(method.get("signature", "")),
                         "handlesNullOrFakeNull": "==null" in body or "!=null" in body or "?." in snippet,
                         "usesPlayModeCheck": "application.isplaying" in body,
                         "usesDestroy": "object.destroy(" in body or ".destroy(" in body,
                         "usesDestroyImmediate": "destroyimmediate" in body,
-                        "clearsReferences": "=null" in body,
+                        "clearsReferences": bool(re.search(r"(?<![=!<>])=\s*null\b", snippet)),
                         "handlesCollections": "foreach" in body or "ienumerable" in body or ".clear(" in body,
                         "catchesExceptions": "catch" in body,
                     },
@@ -918,6 +1066,15 @@ def helper_definition_records(parsed_files: list[ParsedFile]) -> list[dict[str, 
                 }
             )
     return records
+
+
+def accepted_type_from_signature(signature: str) -> str:
+    match = re.search(r"\(([^)]*)\)", signature)
+    if not match:
+        return ""
+    first_parameter = match.group(1).split(",", 1)[0].strip()
+    parts = first_parameter.split()
+    return parts[0] if parts else ""
 
 
 def load_registry(output_root: Path) -> dict[str, Any]:
@@ -951,6 +1108,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "packageVersion": package_json.get("version"),
             "unity": package_json.get("unity"),
             "displayName": package_json.get("displayName"),
+            "repository": package_json.get("repository"),
             "branches": collect_branch_info(repo_root),
             "dependencies": package_json.get("dependencies", {}) or {},
             "asmdefs": asmdefs,
@@ -967,14 +1125,15 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             if any(part in SKIP_DIRS for part in relative_path.split("/")):
                 continue
             text = read_text(path)
+            owner_asmdef = owning_asmdef(relative_path, asmdefs)
             parsed = ParsedFile(
                 repo=repo_root.name,
                 package_id=repo.get("packageId"),
                 repo_root=repo_root,
                 path=path,
                 relative_path=relative_path,
-                scope=scope_for(relative_path),
-                assembly=assembly_for(relative_path, asmdefs),
+                scope=scope_for(relative_path, owner_asmdef),
+                assembly=owner_asmdef.get("name", "") if owner_asmdef else "",
                 text=text,
                 generated=is_generated_file(path, text),
             )
@@ -1097,7 +1256,9 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         },
         "debugApi": {
             "invocations": debug_records,
-            "summary": summarize_by(debug_records, "initialDisposition"),
+            "summary": summarize_by(debug_records, "policyDisposition"),
+            "logLevelSummary": summarize_by(debug_records, "logLevel"),
+            "policySeveritySummary": summarize_by(debug_records, "policySeverity"),
         },
         "unityObjectLifetime": {
             "occurrences": lifetime_records,
@@ -1165,38 +1326,222 @@ def classify_lifetime_conclusion(records: list[dict[str, Any]]) -> dict[str, Any
     runtime = [r for r in records if r.get("scope") == "Runtime production"]
     editor = [r for r in records if r.get("scope") == "Editor production"]
     tests = [r for r in records if r.get("scope") == "Test"]
-    if runtime and editor:
-        decision = "multiple scope-specific owners required"
-    elif runtime and len({r["repository"] for r in runtime}) >= 3:
-        decision = "runtime Common package justified"
-    elif editor:
-        decision = "Editor-owned helper justified"
-    elif tests and len({r["repository"] for r in tests}) >= 3:
-        decision = "Testing-owned helper justified"
-    else:
-        decision = "no extraction justified"
+    comparison = lifetime_semantic_comparison(records)
+    runtime_repositories = {row["repository"] for row in comparison if row["expectedExecutionContext"].startswith("Runtime")}
+    decision = "Create com.deucarian.common" if len(runtime_repositories) >= 3 or {"Object-Loading", "UI-Binding"} <= runtime_repositories else "Keep local"
     return {
         "decision": decision,
+        "selectedOption": "A" if decision == "Create com.deucarian.common" else "D",
         "helperDefinitionCount": len(helper_defs),
         "runtimeRepositoryCount": len({r["repository"] for r in runtime}),
         "editorRepositoryCount": len({r["repository"] for r in editor}),
         "testRepositoryCount": len({r["repository"] for r in tests}),
+        "comparison": comparison,
+        "apiProposal": ["UnityObjectUtility.DestroySafely(UnityEngine.Object target)"] if decision == "Create com.deucarian.common" else [],
+        "optionalApiProposal": [],
+        "intendedConsumers": sorted(runtime_repositories),
+        "dependencyImpact": "Future runtime consumers would add a dependency on com.deucarian.common; this audit wave does not add it.",
+        "risks": [
+            "Common must not grow into a generic utility bucket.",
+            "Editor asset destruction and test fixture cleanup should stay out of the initial runtime API.",
+            "Ref-clearing overload is omitted because audited production consumers do not require it.",
+        ],
+        "testingPackageDecision": {
+            "decision": "KeepLocal",
+            "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
+            "testRepositoryCount": len({r["repository"] for r in tests}),
+        },
         "note": "No package is created by this audit wave; this conclusion directs the next design review.",
     }
 
 
+def lifetime_semantic_comparison(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = []
+    helper_defs = [r for r in records if r.get("occurrenceKind") == "helper definition" and r.get("scope") == "Runtime production"]
+    for record in helper_defs:
+        call_sites = [
+            r for r in records
+            if r.get("occurrenceKind") == "helper call site"
+            and r.get("repository") == record.get("repository")
+            and (r.get("invocation", "") == record.get("symbol", "") or r.get("invocation", "").endswith("." + record.get("symbol", "")))
+        ]
+        semantics = record.get("semantics", {})
+        rows.append(
+            {
+                "repository": record["repository"],
+                "symbol": record.get("symbol", ""),
+                "assembly": record.get("assemblyPlatform", ""),
+                "file": record.get("file", ""),
+                "acceptedType": semantics.get("acceptedType") or infer_lifetime_type(record),
+                "nullBehavior": "returns without destroying" if semantics.get("handlesNullOrFakeNull") else "caller-owned or not explicit",
+                "fakeNullBehavior": "Unity fake-null covered by target == null" if semantics.get("handlesNullOrFakeNull") else "not explicit",
+                "playModeBehavior": "Object.Destroy" if semantics.get("usesDestroy") else "not explicit",
+                "editModeBehavior": "Object.DestroyImmediate" if semantics.get("usesDestroyImmediate") else "not explicit",
+                "referenceClearingBehavior": "clears reference" if semantics.get("clearsReferences") else "does not clear references",
+                "collectionBehavior": "called from collection/list cleanup" if semantics.get("handlesCollections") or record["repository"] in {"Object-Loading", "UI-Binding"} else "single object",
+                "exceptionBehavior": "catches exceptions" if semantics.get("catchesExceptions") else "does not catch exceptions",
+                "callSiteCount": len(call_sites),
+                "expectedExecutionContext": expected_lifetime_context(record),
+            }
+        )
+    for record in records:
+        if record.get("scope") != "Runtime production" or record.get("occurrenceKind") != "direct Unity API call":
+            continue
+        if record.get("repository") in {row["repository"] for row in rows}:
+            continue
+        rows.append(
+            {
+                "repository": record["repository"],
+                "symbol": record.get("containingSymbol", ""),
+                "assembly": record.get("assembly", ""),
+                "file": record.get("file", ""),
+                "acceptedType": infer_lifetime_type(record),
+                "nullBehavior": "caller-owned or not explicit",
+                "fakeNullBehavior": "not explicit",
+                "playModeBehavior": record.get("invocation", ""),
+                "editModeBehavior": "not supported by this implementation",
+                "referenceClearingBehavior": "does not clear references",
+                "collectionBehavior": "single owned screen GameObject",
+                "exceptionBehavior": "does not catch exceptions",
+                "callSiteCount": 1,
+                "expectedExecutionContext": expected_lifetime_context(record),
+            }
+        )
+    return sorted(rows, key=lambda item: (item["repository"], item["symbol"], item["file"]))
+
+
+def infer_lifetime_type(record: dict[str, Any]) -> str:
+    text = " ".join(str(record.get(key, "")) for key in ("signature", "file", "containingSymbol", "invocation"))
+    if "GameObject" in text or ".gameObject" in text or "PrefabScreen" in text:
+        return "GameObject"
+    if "Object" in text:
+        return "UnityEngine.Object"
+    return "UnityEngine.Object"
+
+
+def expected_lifetime_context(record: dict[str, Any]) -> str:
+    repo = record.get("repository")
+    if repo == "Object-Loading":
+        return "Runtime object load handle cleanup; safe in Play Mode and Edit Mode"
+    if repo == "UI-Binding":
+        return "Runtime item GameObject cleanup; safe in Play Mode and Edit Mode"
+    if repo == "UI-FLow":
+        return "Runtime screen lease release; Play Mode lifecycle"
+    return "Runtime production cleanup"
+
+
 def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[dict[str, Any]], semantic: list[dict[str, Any]], lifetime: dict[str, Any]) -> list[dict[str, Any]]:
     decisions = []
+    exact_keys = {group["groupKey"] for group in exact}
     for group in structural[:50]:
-        if group["extractionConfidence"] == "medium":
-            decision = "Needs design review"
-        else:
-            decision = "Keep local"
-        decisions.append({"candidate": group["groupKey"], "category": group["category"], "repositories": group["repositories"], "decision": decision, "reasoning": "; ".join(group["reasonsNotToExtract"] or group["reasonsToExtract"] or ["Manual semantic review required."])})
+        decision = clone_decision(group)
+        decisions.append(
+            {
+                "candidate": group["groupKey"],
+                "category": "ExactAstClone" if group["groupKey"] in exact_keys else "NormalizedStructuralClone",
+                "repositories": group["repositories"],
+                "symbols": sorted({occ["symbol"] for occ in group["occurrences"]}),
+                "files": sorted({f"{occ['repository']}:{occ['file']}:{occ['line']}" for occ in group["occurrences"]})[:12],
+                "scopes": group.get("scopes", []),
+                "summarizedBehavior": summarize_clone_behavior(group),
+                "differences": summarize_clone_differences(group),
+                "existingCapabilityOwner": group.get("proposedOwner", "needs capability-owner review"),
+                "dependencyImpact": summarize_dependency_impact(group),
+                "decision": decision,
+                "candidateOwner": group.get("proposedOwner", "needs capability-owner review"),
+                "reasoning": "; ".join(group["reasonsNotToExtract"] or group["reasonsToExtract"] or ["Manual semantic review required."]),
+            }
+        )
     for group in semantic[:50]:
-        decisions.append({"candidate": group["groupKey"], "category": group["category"], "repositories": group["repositories"], "decision": "Needs design review", "reasoning": "Same symbol names are not enough to extract; review semantics and owner capability."})
-    decisions.append({"candidate": "unity-object-lifetime", "category": "dedicated audit", "repositories": [], "decision": lifetime["decision"], "reasoning": lifetime["note"]})
+        decisions.append(
+            {
+                "candidate": group["groupKey"],
+                "category": "SameSymbolSemanticCandidate",
+                "repositories": group["repositories"],
+                "symbols": sorted({occ["symbol"] for occ in group["occurrences"]}),
+                "files": sorted({f"{occ['repository']}:{occ['file']}:{occ['line']}" for occ in group["occurrences"]})[:12],
+                "scopes": group.get("scopes", []),
+                "summarizedBehavior": "Same symbol name appears in multiple repositories, but implementation semantics are not assumed equivalent.",
+                "differences": "Requires human review of call sites, lifecycle, and ownership.",
+                "existingCapabilityOwner": group.get("proposedOwner", "needs capability-owner review"),
+                "dependencyImpact": summarize_dependency_impact(group),
+                "decision": "NeedsDesignReview",
+                "candidateOwner": group.get("proposedOwner", "needs capability-owner review"),
+                "reasoning": "Same symbol names are not enough to extract; review semantics and owner capability.",
+            }
+        )
+    lifetime_repos = sorted({row["repository"] for row in lifetime.get("comparison", [])})
+    decisions.append(
+        {
+            "candidate": "unity-object-lifetime",
+            "category": "DedicatedLifetimeAudit",
+            "repositories": lifetime_repos,
+            "symbols": [row["symbol"] for row in lifetime.get("comparison", [])],
+            "files": [f"{row['repository']}:{row['file']}" for row in lifetime.get("comparison", [])],
+            "scopes": ["Runtime production"],
+            "summarizedBehavior": "Shared UnityEngine.Object destruction pattern across runtime consumers.",
+            "differences": "; ".join(f"{row['repository']} accepts {row['acceptedType']} in {row['expectedExecutionContext']}" for row in lifetime.get("comparison", [])),
+            "existingCapabilityOwner": "none",
+            "dependencyImpact": lifetime.get("dependencyImpact", ""),
+            "decision": "RuntimeReuseCandidate" if lifetime.get("decision") == "Create com.deucarian.common" else "KeepLocal",
+            "candidateOwner": "com.deucarian.common" if lifetime.get("decision") == "Create com.deucarian.common" else "local owners",
+            "apiProposal": ", ".join(lifetime.get("apiProposal", [])),
+            "risks": "; ".join(lifetime.get("risks", [])),
+            "reasoning": lifetime["note"],
+        }
+    )
+    testing = lifetime.get("testingPackageDecision", {})
+    decisions.append(
+        {
+            "candidate": "test-only-destruction-cleanup",
+            "category": "TestingPackageDecision",
+            "repositories": [],
+            "symbols": ["Object.DestroyImmediate(testObject)"],
+            "files": [],
+            "scopes": ["Test"],
+            "summarizedBehavior": "Repeated explicit one-line Unity test object cleanup.",
+            "differences": "No shared fixture ownership, teardown registration, temporary asset cleanup abstraction, or exception-safe cleanup pattern was identified.",
+            "existingCapabilityOwner": "none",
+            "dependencyImpact": "No testing package dependency is introduced.",
+            "decision": testing.get("decision", "KeepLocal"),
+            "candidateOwner": "local tests",
+            "reasoning": testing.get("reasoning", "Keep local."),
+        }
+    )
     return sorted(decisions, key=lambda item: (item["category"], item["candidate"]))
+
+
+def clone_decision(group: dict[str, Any]) -> str:
+    scopes = set(group.get("scopes", []))
+    if scopes and scopes <= {"Test"}:
+        return "TestOnlyReuse"
+    if scopes and scopes <= {"Editor production"}:
+        return "EditorOnlyReuse"
+    if group.get("extractionConfidence") == "medium":
+        return "RuntimeReuseCandidate"
+    return "KeepLocal"
+
+
+def summarize_clone_behavior(group: dict[str, Any]) -> str:
+    symbols = sorted({occ["symbol"] for occ in group["occurrences"]})
+    deps = group.get("dependenciesUsed", [])
+    dep_text = f"; uses {', '.join(deps[:4])}" if deps else ""
+    return f"Parsed method bodies with matching normalized structure across {len(group['repositories'])} repositories: {', '.join(symbols[:6])}{dep_text}."
+
+
+def summarize_clone_differences(group: dict[str, Any]) -> str:
+    signatures = sorted({occ["signature"] for occ in group["occurrences"]})
+    scopes = ", ".join(group.get("scopes", []))
+    if len(signatures) > 1:
+        return f"Different signatures or local names; scopes: {scopes}."
+    return f"Same signature shape; scopes: {scopes}."
+
+
+def summarize_dependency_impact(group: dict[str, Any]) -> str:
+    owner = group.get("proposedOwner") or "needs capability-owner review"
+    if owner.startswith("com.deucarian."):
+        return f"Would require consumers to depend on {owner}; not applied in this audit wave."
+    return "Dependency owner unresolved; no package dependency changes are applied."
 
 
 def md_table(headers: list[str], rows: Iterable[Iterable[Any]]) -> str:
@@ -1204,6 +1549,47 @@ def md_table(headers: list[str], rows: Iterable[Iterable[Any]]) -> str:
     for row in rows:
         out.append("| " + " | ".join(str(cell).replace("\n", " ").replace("|", "\\|") for cell in row) + " |")
     return "\n".join(out)
+
+
+def metric_table(summary: dict[str, int]) -> str:
+    return md_table(["Metric", "Count"], [[display_label(key), value] for key, value in sorted(summary.items())])
+
+
+def display_label(value: str) -> str:
+    labels = {
+        "Allowed": "Allowed",
+        "Migrate": "Migrate",
+        "ReviewRequired": "Review required",
+        "RequiredAndUsed": "Required and used",
+        "EditorOnlyUse": "Editor-only use",
+        "SampleOnlyUse": "Sample-only use",
+        "TestOnlyUse": "Test-only use",
+        "OptionalVersionDefinedUse": "Optional version-defined use",
+        "OptionalConstraintUse": "Optional constraint use",
+        "MissingHardPackageDependency": "Missing hard package dependency",
+        "ApparentlyUnused": "Apparently unused",
+        "PackageVersionDrift": "Package version drift",
+        "DependencyVersionDrift": "Dependency version drift",
+        "BranchUrlDrift": "Branch URL drift",
+        "ActiveDocumentationDrift": "Active documentation drift",
+        "ActiveRepositoryUrlDrift": "Active repository URL drift",
+        "ActivePackageNameDrift": "Active package name drift",
+        "HistoricalChangelogReference": "Historical changelog reference",
+        "MigrationDocumentation": "Migration documentation",
+        "LegitimateGenericBridgeTerm": "Legitimate generic bridge term",
+        "ReviewRequired": "Review required",
+    }
+    return labels.get(value, value)
+
+
+def format_guard(item: dict[str, Any]) -> str:
+    kind = item.get("guardKind")
+    evidence = item.get("guardEvidence")
+    if kind == "VersionDefine" and isinstance(evidence, dict):
+        return f" [versionDefine {evidence.get('name')} => {evidence.get('define')}]"
+    if kind == "DefineConstraint" and evidence:
+        return f" [defineConstraints {', '.join(evidence)}]"
+    return ""
 
 
 def write_artifacts(report: dict[str, Any], output_root: Path, formats: str = "all") -> None:
@@ -1246,6 +1632,7 @@ def capabilities_json(report: dict[str, Any]) -> dict[str, Any]:
             ]
         if cap["id"] == "unity-object-lifetime":
             item["status"] = report["unityObjectLifetime"]["conclusion"]["decision"]
+            item["apiProposal"] = report["unityObjectLifetime"]["conclusion"].get("apiProposal", [])
         caps.append(item)
     return {"schemaVersion": 2, "capabilities": caps}
 
@@ -1279,6 +1666,24 @@ def dependency_rules_json(report: dict[str, Any]) -> dict[str, Any]:
 
 def write_reuse_audit(report: dict[str, Any], path: Path) -> None:
     repos = report["repositories"]
+    count_rows = [
+        ["Repositories", len(repos)],
+        ["Parsed methods/bodies analyzed", report["duplication"]["methodCountAnalyzed"]],
+        ["Exact AST clone groups", len(report["duplication"]["exactAstCloneGroups"])],
+        ["Normalized structural clone groups", len(report["duplication"]["normalizedStructuralCloneGroups"])],
+        ["Same-symbol semantic candidates", len(report["duplication"]["sameSymbolSemanticCandidates"])],
+        ["Runtime public API symbols", report["publicApi"]["runtimeProductionCount"]],
+        ["Editor public API symbols", report["publicApi"]["editorProductionCount"]],
+        ["Test public symbols excluded from production API", report["publicApi"]["testsPublicCount"]],
+        ["Sample public symbols excluded from production API", report["publicApi"]["samplesPublicCount"]],
+        ["Internal/private production symbols", report["publicApi"]["internalPrivateProductionCount"]],
+        ["Public API symbols missing XML documentation", len(report["publicApi"]["missingXmlDocumentation"])],
+        ["Debug invocation records", len(report["debugApi"]["invocations"])],
+        ["Unity object lifetime records", len(report["unityObjectLifetime"]["occurrences"])],
+        ["Documentation drift findings", len(report["documentationDrift"]["findings"])],
+        ["Dependency usage findings", len(report["dependencyUsage"]["findings"])],
+        ["Dependency cycles", len(report["dependencyGraph"]["cycles"])],
+    ]
     rows = [
         [
             repo["name"],
@@ -1315,19 +1720,7 @@ This is the hardened organization-wide audit snapshot for `{report['metadata']['
 
 ## Corrected Counts
 
-- Repositories: {len(repos)}
-- Parsed methods/bodies analyzed: {report['duplication']['methodCountAnalyzed']}
-- Exact AST clone groups: {len(report['duplication']['exactAstCloneGroups'])}
-- Normalized structural clone groups: {len(report['duplication']['normalizedStructuralCloneGroups'])}
-- Same-symbol semantic candidates: {len(report['duplication']['sameSymbolSemanticCandidates'])}
-- Runtime public API symbols: {report['publicApi']['runtimeProductionCount']}
-- Editor public API symbols: {report['publicApi']['editorProductionCount']}
-- Public API symbols missing XML documentation: {len(report['publicApi']['missingXmlDocumentation'])}
-- Debug invocation records: {len(report['debugApi']['invocations'])}
-- Unity object lifetime records: {len(report['unityObjectLifetime']['occurrences'])}
-- Documentation drift findings: {len(report['documentationDrift']['findings'])}
-- Dependency usage findings: {len(report['dependencyUsage']['findings'])}
-- Dependency cycles: {len(report['dependencyGraph']['cycles'])}
+{md_table(['Metric', 'Count'], count_rows)}
 
 ## Extraction Position
 
@@ -1396,10 +1789,10 @@ This plan remains audit/governance-only. No production source, package dependenc
 ## Next Safe Steps
 
 1. Review `EXTRACTION_DECISIONS.md` before extracting any clone candidate.
-2. Address Debug API findings from `DEBUG_API_AUDIT.md`; production/sample findings marked `migrate` should move to `com.deucarian.logging` in a later source wave.
+2. Address Debug API findings from `DEBUG_API_AUDIT.md`; production/sample findings with policy disposition `Migrate` should move to `com.deucarian.logging` in a later source wave.
 3. Review `UNITY_OBJECT_LIFETIME_AUDIT.md`; conclusion: {report['unityObjectLifetime']['conclusion']['decision']}.
 4. Resolve `DOCUMENTATION_DRIFT.md` findings before dependency migrations.
-5. Use `DEPENDENCY_USAGE_AUDIT.md` to decide which dependencies are required, editor-only, sample-only, apparently unused, or review required.
+5. Use `DEPENDENCY_USAGE_AUDIT.md` to decide which dependencies are required, editor-only, sample-only, optional-version-defined, missing hard dependencies, apparently unused, or review required.
 6. Add architecture validation using `capabilities.json` and `dependency-rules.json`.
 
 ## Still Not Done
@@ -1416,7 +1809,7 @@ This plan remains audit/governance-only. No production source, package dependenc
 
 def write_debug_md(report: dict[str, Any], path: Path) -> None:
     records = report["debugApi"]["invocations"]
-    rows = [[r["repository"], r["file"], r["line"], r["scope"], r["invocation"], r["initialDisposition"]] for r in records[:200]]
+    rows = [[r["repository"], r["file"], r["line"], r["scope"], r["invocation"], r.get("logLevel", ""), r.get("policyDisposition", ""), r.get("policySeverity", "")] for r in records[:200]]
     path.write_text(
         f"""# Debug API Audit
 
@@ -1424,9 +1817,21 @@ Schema version: 1
 
 Counts actual C# invocation expressions plus fenced Markdown examples. Comments, strings, CHANGELOG mentions, and test method names are excluded from production-code counts.
 
-Summary: {json.dumps(report['debugApi']['summary'], sort_keys=True)}
+## Policy Disposition Summary
 
-{md_table(['Repository', 'File', 'Line', 'Scope', 'Invocation', 'Disposition'], rows)}
+{metric_table(report['debugApi']['summary'])}
+
+## Log Level Summary
+
+{metric_table(report['debugApi']['logLevelSummary'])}
+
+## Policy Severity Summary
+
+{metric_table(report['debugApi']['policySeveritySummary'])}
+
+## Findings
+
+{md_table(['Repository', 'File', 'Line', 'Scope', 'Invocation', 'Log level', 'Policy disposition', 'Policy severity'], rows)}
 """,
         encoding="utf-8",
     )
@@ -1435,6 +1840,25 @@ Summary: {json.dumps(report['debugApi']['summary'], sort_keys=True)}
 def write_lifetime_md(report: dict[str, Any], path: Path) -> None:
     records = report["unityObjectLifetime"]["occurrences"]
     rows = [[r["repository"], r["file"], r["line"], r["scope"], r.get("occurrenceKind"), r.get("invocation", r.get("symbol", ""))] for r in records[:240]]
+    comparison_rows = [
+        [
+            row["repository"],
+            row["symbol"],
+            row["assembly"],
+            row["acceptedType"],
+            row["nullBehavior"],
+            row["fakeNullBehavior"],
+            row["playModeBehavior"],
+            row["editModeBehavior"],
+            row["referenceClearingBehavior"],
+            row["collectionBehavior"],
+            row["exceptionBehavior"],
+            row["callSiteCount"],
+            row["expectedExecutionContext"],
+        ]
+        for row in report["unityObjectLifetime"]["conclusion"].get("comparison", [])
+    ]
+    testing = report["unityObjectLifetime"]["conclusion"].get("testingPackageDecision", {})
     path.write_text(
         f"""# Unity Object Lifetime Audit
 
@@ -1442,7 +1866,27 @@ Schema version: 1
 
 Conclusion: **{report['unityObjectLifetime']['conclusion']['decision']}**
 
-Summary: {json.dumps(report['unityObjectLifetime']['summary'], sort_keys=True)}
+Selected option: **{report['unityObjectLifetime']['conclusion'].get('selectedOption', '')}**
+
+API proposal: {', '.join(report['unityObjectLifetime']['conclusion'].get('apiProposal', [])) or '(none)'}
+
+## Summary
+
+{metric_table(report['unityObjectLifetime']['summary'])}
+
+## Production Semantic Comparison
+
+{md_table(['Repository', 'Symbol', 'Assembly', 'Accepted type', 'Null behavior', 'Fake-null behavior', 'Play Mode', 'Edit Mode', 'Reference clearing', 'Collection behavior', 'Exception behavior', 'Call sites', 'Expected context'], comparison_rows)}
+
+## Testing Package Decision
+
+| Metric | Value |
+| --- | --- |
+| Decision | {testing.get('decision', '')} |
+| Reasoning | {testing.get('reasoning', '')} |
+| Test repositories with direct cleanup | {testing.get('testRepositoryCount', 0)} |
+
+## Findings
 
 {md_table(['Repository', 'File', 'Line', 'Scope', 'Kind', 'Symbol/Invocation'], rows)}
 """,
@@ -1451,13 +1895,19 @@ Summary: {json.dumps(report['unityObjectLifetime']['summary'], sort_keys=True)}
 
 
 def write_doc_drift_md(report: dict[str, Any], path: Path) -> None:
-    rows = [[r["repository"], r["kind"], r.get("file", ""), r.get("dependency", ""), r.get("packageJsonVersion", r.get("url", "")), r.get("readmeVersion", r.get("changelogLatestVersion", ""))] for r in report["documentationDrift"]["findings"][:200]]
+    rows = [[r["repository"], display_label(r["kind"]), r.get("file", ""), r.get("dependency", ""), r.get("packageJsonVersion", r.get("url", "")), r.get("readmeVersion", r.get("changelogLatestVersion", ""))] for r in report["documentationDrift"]["findings"][:200]]
     path.write_text(
         f"""# Documentation Drift Audit
 
 Schema version: 1
 
-Summary: {json.dumps(report['documentationDrift']['summary'], sort_keys=True)}
+## Summary
+
+{metric_table(report['documentationDrift']['summary'])}
+
+Historical changelog references preserve released history and are not rewrite recommendations.
+
+## Findings
 
 {md_table(['Repository', 'Kind', 'File', 'Dependency', 'Expected/Value', 'Found'], rows)}
 """,
@@ -1469,18 +1919,18 @@ def write_dependency_usage_md(report: dict[str, Any], path: Path) -> None:
     rows = []
     for record in report["dependencyUsage"]["findings"][:240]:
         evidence = "; ".join(
-            f"{item.get('scope', 'Other')}: {item.get('assembly', '')} -> {item.get('reference', '')}"
+            f"{item.get('scope', 'Other')}: {item.get('assembly', '')} -> {item.get('reference', '')}{format_guard(item)}"
             for item in record.get("referencedBy", [])
         )
-        if record.get("classification") == "missing package dependency":
-            evidence = f"{record.get('scope', 'Other')}: {record.get('referencingAssembly', '')} -> {record.get('assemblyReference', '')}"
-        rows.append([record["repository"], record.get("dependency", record.get("assemblyReference", "")), record["classification"], evidence, ", ".join(record.get("referencedAssemblies", [])), record.get("sourceMentionCount", "")])
+        rows.append([record["repository"], record.get("dependency", record.get("requiredPackage", record.get("assemblyReference", ""))), display_label(record["classification"]), evidence, ", ".join(record.get("referencedAssemblies", [])), record.get("sourceMentionCount", "")])
     path.write_text(
         f"""# Dependency Usage Audit
 
 Schema version: 1
 
-Summary: {json.dumps(report['dependencyUsage']['summary'], sort_keys=True)}
+## Summary
+
+{metric_table(report['dependencyUsage']['summary'])}
 
 Findings marked `apparently unused` are review prompts, not removal recommendations.
 
@@ -1491,15 +1941,33 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 
 
 def write_extraction_decisions_md(report: dict[str, Any], path: Path) -> None:
-    rows = [[d["candidate"], d["category"], ", ".join(d.get("repositories", [])), d["decision"], d["reasoning"]] for d in report["extractionDecisions"]]
+    rows = [
+        [
+            d["candidate"],
+            d["category"],
+            ", ".join(d.get("symbols", [])),
+            ", ".join(d.get("repositories", [])),
+            ", ".join(d.get("files", [])),
+            ", ".join(d.get("scopes", [])),
+            d.get("summarizedBehavior", ""),
+            d.get("differences", ""),
+            d.get("existingCapabilityOwner", ""),
+            d.get("dependencyImpact", ""),
+            d["decision"],
+            d.get("candidateOwner", ""),
+            d.get("apiProposal", ""),
+            d["reasoning"],
+        ]
+        for d in report["extractionDecisions"]
+    ]
     path.write_text(
         f"""# Extraction Decisions
 
 Schema version: 1
 
-These decisions are manual-review defaults produced after hardening the analyzer. They deliberately avoid extraction from occurrence count alone.
+These decisions are manual-review defaults produced after the Wave 1C correctness pass. They deliberately avoid extraction from occurrence count alone.
 
-{md_table(['Candidate', 'Category', 'Repositories', 'Decision', 'Reasoning'], rows)}
+{md_table(['Candidate', 'Category', 'Symbols', 'Repositories', 'Files', 'Scopes', 'Behavior', 'Differences', 'Existing owner', 'Dependency impact', 'Decision', 'Candidate owner', 'API proposal', 'Reasoning'], rows)}
 """,
         encoding="utf-8",
     )

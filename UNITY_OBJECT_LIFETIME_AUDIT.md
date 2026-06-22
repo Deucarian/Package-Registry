@@ -2,14 +2,44 @@
 
 Schema version: 1
 
-Conclusion: **runtime Common package justified**
+Conclusion: **Create com.deucarian.common**
 
-Summary: {"direct Unity API call": 51}
+Selected option: **A**
+
+API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
+
+## Summary
+
+| Metric | Count |
+| --- | --- |
+| direct Unity API call | 51 |
+| helper call site | 4 |
+| helper definition | 2 |
+
+## Production Semantic Comparison
+
+| Repository | Symbol | Assembly | Accepted type | Null behavior | Fake-null behavior | Play Mode | Edit Mode | Reference clearing | Collection behavior | Exception behavior | Call sites | Expected context |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Object-Loading | Destroy | Deucarian.ObjectLoading | Object | returns without destroying | Unity fake-null covered by target == null | Object.Destroy | Object.DestroyImmediate | does not clear references | called from collection/list cleanup | does not catch exceptions | 1 | Runtime object load handle cleanup; safe in Play Mode and Edit Mode |
+| UI-Binding | DestroyItem | Deucarian.UIBinding | GameObject | returns without destroying | Unity fake-null covered by target == null | Object.Destroy | Object.DestroyImmediate | does not clear references | called from collection/list cleanup | does not catch exceptions | 3 | Runtime item GameObject cleanup; safe in Play Mode and Edit Mode |
+| UI-FLow | UIFlowPrefabScreenProvider::ReleaseAsync | Deucarian.UIFlow | GameObject | caller-owned or not explicit | not explicit | Object.Destroy | not supported by this implementation | does not clear references | single owned screen GameObject | does not catch exceptions | 1 | Runtime screen lease release; Play Mode lifecycle |
+
+## Testing Package Decision
+
+| Metric | Value |
+| --- | --- |
+| Decision | KeepLocal |
+| Reasoning | Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction. |
+| Test repositories with direct cleanup | 8 |
+
+## Findings
 
 | Repository | File | Line | Scope | Kind | Symbol/Invocation |
 | --- | --- | --- | --- | --- | --- |
 | API | Tests/Editor/ApiClientTests.cs | 384 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
 | Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 171 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
+| Object-Loading | Runtime/Core/ObjectLoadHandle.cs | 70 | Runtime production | helper call site | UnityObjectUtility.Destroy |
+| Object-Loading | Runtime/Utilities/UnityObjectUtility.cs | 7 | Runtime production | helper definition | Destroy |
 | Object-Loading | Runtime/Utilities/UnityObjectUtility.cs | 16 | Runtime production | direct Unity API call | Object.Destroy |
 | Object-Loading | Runtime/Utilities/UnityObjectUtility.cs | 20 | Runtime production | direct Unity API call | Object.DestroyImmediate |
 | Object-Selection | Tests/EditMode/HighlighterHookTests.cs | 31 | Test | direct Unity API call | Object.DestroyImmediate |
@@ -43,6 +73,10 @@ Summary: {"direct Unity API call": 51}
 | Theming | Tests/Runtime/DeucarianColorPaletteTests.cs | 18 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
 | Theming | Tests/Runtime/DeucarianSelectableThemeColorsTests.cs | 19 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
 | Theming | Tests/Runtime/DeucarianUGUIAndTMPAdapterTests.cs | 20 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
+| UI-Binding | Runtime/GenericItemManager.cs | 175 | Runtime production | helper call site | DestroyItem |
+| UI-Binding | Runtime/GenericItemManager.cs | 183 | Runtime production | helper call site | DestroyItem |
+| UI-Binding | Runtime/GenericItemManager.cs | 218 | Runtime production | helper call site | DestroyItem |
+| UI-Binding | Runtime/GenericItemManager.cs | 248 | Runtime production | helper definition | DestroyItem |
 | UI-Binding | Runtime/GenericItemManager.cs | 257 | Runtime production | direct Unity API call | Object.Destroy |
 | UI-Binding | Runtime/GenericItemManager.cs | 261 | Runtime production | direct Unity API call | Object.DestroyImmediate |
 | UI-Binding | Tests/Editor/UIBindingContainerTests.cs | 26 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
