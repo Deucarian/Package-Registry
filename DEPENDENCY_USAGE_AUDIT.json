@@ -309,7 +309,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -770,7 +770,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [

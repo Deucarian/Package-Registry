@@ -12,7 +12,7 @@ Schema version: 2
 | com.deucarian.logging | com.deucarian.editor | 0.1.2 | Logging | Editor |
 | com.deucarian.object-loading | com.deucarian.common | 0.1.0 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.logging | 0.2.5 | Object-Loading | Logging |
-| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.0 | ObjectLoading-API-Integration | API |
+| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.1 | ObjectLoading-API-Integration | API |
 | com.deucarian.object-loading.api-integration | com.deucarian.object-loading | 1.2.0 | ObjectLoading-API-Integration | Object-Loading |
 | com.deucarian.object-selection | com.deucarian.logging | 0.2.5 | Object-Selection | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.0 | ObjectSelection-CoreState-Integration | Core-State |
@@ -26,7 +26,7 @@ Schema version: 2
 | com.deucarian.selection-suite | com.deucarian.ui-binding | 1.1.0 | Selection-Suite | UI-Binding |
 | com.deucarian.selection-suite | com.deucarian.ui-binding.core-state-integration | 1.0.2 | Selection-Suite | UIBinding-CoreState-Integration |
 | com.deucarian.session | com.deucarian.logging | 0.2.5 | Session | Logging |
-| com.deucarian.session.api-integration | com.deucarian.api | 1.0.2 | Session-API-Integration | API |
+| com.deucarian.session.api-integration | com.deucarian.api | 1.1.1 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.2 | Session-API-Integration | Session |
 | com.deucarian.theming | com.deucarian.editor | 0.1.2 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 0.2.5 | Theming | Logging |
@@ -42,5 +42,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 12
+- Dependency version drift entries: 11
 - Registry dependency drift entries: 0
