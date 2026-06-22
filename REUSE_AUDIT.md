@@ -55,7 +55,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Public API symbols missing XML documentation | 877 |
 | Debug invocation records | 7 |
 | Unity object lifetime records | 65 |
-| Documentation drift findings | 20 |
+| Documentation drift findings | 19 |
 | Dependency usage findings | 30 |
 | Dependency cycles | 0 |
 

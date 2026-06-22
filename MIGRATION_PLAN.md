@@ -6,9 +6,11 @@ This plan records the completed Common extraction and the remaining governance f
 
 ## Next Safe Steps
 
-1. Shared package validation and reusable CI.
-2. Architecture enforcement and AGENTS.md.
-3. Remaining reviewed extraction candidates.
+1. Git-only stable distribution is active.
+2. npm/scoped-registry publication is deferred.
+3. Optional future release wave: manual tags/releases and manual npm/scoped-registry publication.
+4. Future package feature work can resume on develop.
+5. Remaining reviewed extraction candidates can be handled only after audit-backed decisions.
 
 ## Still Not Done
 

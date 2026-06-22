@@ -73,14 +73,6 @@
       "repository": "Package-Registry"
     },
     {
-      "dependency": "com.deucarian.ui-binding",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.selection-suite",
-      "packageJsonVersion": "1.1.0",
-      "readmeVersion": "1.0.3",
-      "repository": "Selection-Suite"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.selection-suite",
@@ -124,7 +116,6 @@
     }
   ],
   "summary": {
-    "DependencyVersionDrift": 1,
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 6
