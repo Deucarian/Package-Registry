@@ -96,8 +96,8 @@
                          "stableUrl":  "https://github.com/Deucarian/Editor.git#main",
                          "developmentUrl":  "https://github.com/Deucarian/Editor.git#develop",
                          "dependencies":  [
-                                              "com.deucarian.logging"
-                                          ],
+
+                                         ],
                          "groupId":  "infrastructure"
                      },
                      {
@@ -228,7 +228,7 @@
                          "stableUrl":  "https://github.com/Deucarian/UI-FLow.git#main",
                          "developmentUrl":  "https://github.com/Deucarian/UI-FLow.git#develop",
                          "dependencies":  [
-
+                                              "com.deucarian.logging"
                                           ],
                          "groupId":  "ui-presentation"
                      },
