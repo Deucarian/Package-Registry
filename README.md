@@ -16,6 +16,14 @@ Auto-discovery is intentionally avoided because it creates ambiguity around arch
 
 Update `packages.json` when a package is added, removed, or gains an installer-visible dependency. Keep the Package Installer bundled fallback registry in sync when bootstrap behavior depends on the package list.
 
+## Architecture / Contributor Notes
+
+- [ARCHITECTURE.md](ARCHITECTURE.md) defines practical package roles and reuse rules.
+- [CAPABILITY_OWNERSHIP.md](CAPABILITY_OWNERSHIP.md) lists owner packages for shared capabilities.
+- [DEPENDENCY_RULES.md](DEPENDENCY_RULES.md) explains allowed dependency layering.
+- [CONTRIBUTING.md](CONTRIBUTING.md) describes validation and contribution workflow.
+- [AGENTS.md](AGENTS.md) gives Codex and automation-specific repository guidance.
+
 ## Registry fields
 
 - `schemaVersion`: Registry schema version used by the installer.
