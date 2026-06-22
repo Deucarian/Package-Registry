@@ -1,6 +1,16 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-06-22",
+  "exceptions": [
+    {
+      "packageId": "com.deucarian.bootstrap",
+      "reason": "Self-contained first-time setup package outside normal dependency graph."
+    },
+    {
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.logging",
+      "reason": "Review Logging -> Editor before allowing Editor to use Logging.",
+      "status": "review-required"
+    }
+  ],
   "layers": [
     {
       "id": "common",
@@ -52,18 +62,6 @@
       ]
     }
   ],
-  "exceptions": [
-    {
-      "packageId": "com.deucarian.bootstrap",
-      "reason": "Self-contained first-time setup package outside normal dependency graph."
-    },
-    {
-      "packageId": "com.deucarian.logging",
-      "dependency": "com.deucarian.editor",
-      "status": "review-required",
-      "reason": "Prompt requested explicit review of Logging -> Editor before allowing Editor to use Logging."
-    }
-  ],
   "rules": [
     "No cyclic package dependencies.",
     "Runtime assemblies must not reference UnityEditor.",
@@ -72,5 +70,6 @@
     "Integration packages depend only on their targets plus Common/Logging when actually used.",
     "Package Registry dependencies must match package.json direct Deucarian dependencies.",
     "Assembly references must match package dependencies."
-  ]
+  ],
+  "schemaVersion": 2
 }

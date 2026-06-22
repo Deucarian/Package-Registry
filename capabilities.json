@@ -1,27 +1,7 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-06-22",
   "capabilities": [
     {
-      "id": "logging",
-      "ownerPackageId": "com.deucarian.logging",
       "description": "Category-based local package logging and Unity console forwarding.",
-      "forbiddenSymbolsOutsideOwner": [
-        "UnityEngine.Debug.Log",
-        "UnityEngine.Debug.LogFormat",
-        "UnityEngine.Debug.LogWarning",
-        "UnityEngine.Debug.LogWarningFormat",
-        "UnityEngine.Debug.LogError",
-        "UnityEngine.Debug.LogErrorFormat",
-        "UnityEngine.Debug.LogException",
-        "Debug.Log",
-        "Debug.LogFormat",
-        "Debug.LogWarning",
-        "Debug.LogWarningFormat",
-        "Debug.LogError",
-        "Debug.LogErrorFormat",
-        "Debug.LogException"
-      ],
       "exceptions": [
         {
           "packageId": "com.deucarian.bootstrap",
@@ -31,73 +11,85 @@
           "packageId": "com.deucarian.logging",
           "reason": "Owns Unity console forwarding and sink validation."
         }
-      ]
+      ],
+      "forbiddenSymbolsOutsideOwner": [
+        "UnityEngine.Debug.Log",
+        "UnityEngine.Debug.LogFormat",
+        "UnityEngine.Debug.LogWarning",
+        "UnityEngine.Debug.LogWarningFormat",
+        "UnityEngine.Debug.LogError",
+        "UnityEngine.Debug.LogErrorFormat",
+        "UnityEngine.Debug.LogException"
+      ],
+      "id": "logging",
+      "ownerPackageId": "com.deucarian.logging"
     },
     {
+      "description": "Shared editor chrome, icons, resources, style tokens, editor-only UI Toolkit helpers.",
       "id": "editor-shell",
-      "ownerPackageId": "com.deucarian.editor",
-      "description": "Shared editor chrome, icons, resources, style tokens, editor-only UI Toolkit helpers."
+      "ownerPackageId": "com.deucarian.editor"
     },
     {
+      "description": "General HTTP/API request construction, transport, serialization, authentication, and cancellation.",
       "id": "api-http-client",
-      "ownerPackageId": "com.deucarian.api",
-      "description": "General HTTP/API request construction, transport, serialization, authentication, and cancellation."
+      "ownerPackageId": "com.deucarian.api"
     },
     {
+      "description": "Authenticated session lifecycle, restore, refresh, logout, and persistence contracts.",
       "id": "session",
-      "ownerPackageId": "com.deucarian.session",
-      "description": "Authenticated session lifecycle, restore, refresh, logout, and persistence contracts."
+      "ownerPackageId": "com.deucarian.session"
     },
     {
+      "description": "Object, scene, and AssetBundle loading lifecycle and handles.",
       "id": "object-loading",
-      "ownerPackageId": "com.deucarian.object-loading",
-      "description": "Object, scene, and AssetBundle loading lifecycle and handles."
+      "ownerPackageId": "com.deucarian.object-loading"
     },
     {
+      "description": "Generic keyed repositories, selection state, and repository primitives.",
       "id": "repository-state",
-      "ownerPackageId": "com.deucarian.core-state",
-      "description": "Generic keyed repositories, selection state, and repository primitives."
+      "ownerPackageId": "com.deucarian.core-state"
     },
     {
+      "description": "Collection-to-UI synchronization and presentation binding.",
       "id": "ui-binding",
-      "ownerPackageId": "com.deucarian.ui-binding",
-      "description": "Collection-to-UI synchronization and presentation binding."
+      "ownerPackageId": "com.deucarian.ui-binding"
     },
     {
+      "description": "UI routing, screens, channels, modals, guards, transitions, and back navigation.",
       "id": "ui-flow",
-      "ownerPackageId": "com.deucarian.ui-flow",
-      "description": "UI routing, screens, channels, modals, guards, transitions, and back navigation."
+      "ownerPackageId": "com.deucarian.ui-flow"
     },
     {
+      "description": "Keyed world-object selection, hover tracking, raycast adapters, and highlight hooks.",
       "id": "world-selection",
-      "ownerPackageId": "com.deucarian.object-selection",
-      "description": "Keyed world-object selection, hover tracking, raycast adapters, and highlight hooks."
+      "ownerPackageId": "com.deucarian.object-selection"
     },
     {
+      "description": "Runtime palettes, theme assets, color roles, and UI theme adapters.",
       "id": "runtime-theming",
-      "ownerPackageId": "com.deucarian.theming",
-      "description": "Runtime palettes, theme assets, color roles, and UI theme adapters."
+      "ownerPackageId": "com.deucarian.theming"
     },
     {
+      "description": "Diagnostics providers, snapshots, JSON export, overlays, and aggregation.",
       "id": "diagnostics",
-      "ownerPackageId": "com.deucarian.diagnostics",
-      "description": "Diagnostics providers, snapshots, JSON export, overlays, and aggregation."
+      "ownerPackageId": "com.deucarian.diagnostics"
     },
     {
+      "description": "Package discovery, install/update/remove, channels, registry composition, and ecosystem visualization.",
       "id": "package-management",
-      "ownerPackageId": "com.deucarian.package-installer",
-      "description": "Package discovery, install/update/remove, channels, registry composition, and ecosystem visualization."
+      "ownerPackageId": "com.deucarian.package-installer"
     },
     {
+      "description": "Catalog, category hierarchy, dependency metadata, Integration metadata, Suite metadata, and governance metadata.",
       "id": "registry-metadata",
-      "ownerPackageId": null,
-      "description": "Catalog, category hierarchy, dependency metadata, Integration metadata, Suite metadata, and governance metadata."
+      "ownerPackageId": null
     },
     {
+      "description": "Potential tiny shared UnityEngine.Object lifetime primitives if the dedicated audit justifies a Common package.",
       "id": "unity-object-lifetime",
       "ownerPackageId": null,
-      "description": "Potential tiny shared UnityEngine.Object lifetime primitives if the dedicated audit justifies a Common package.",
-      "status": "candidate-pending-dedicated-destroy-audit"
+      "status": "runtime Common package justified"
     }
-  ]
+  ],
+  "schemaVersion": 2
 }

@@ -1,6 +1,6 @@
 # Deucarian Dependency Graph
 
-Generated: 2026-06-22
+Schema version: 2
 
 ## Direct Deucarian Package Dependencies
 
@@ -36,11 +36,7 @@ Generated: 2026-06-22
 
 None detected.
 
-## Drift Summary
+## Version Drift
 
-- Dependency version drift entries: 12.
-- Registry dependency drift entries: 0.
-- README version drift entries: 7.
-- Asmdef reference drift entries needing manual review: 0.
-
-Machine-readable details are in `DUPLICATION_REPORT.json` under `dependencyGraph` and `drift`.
+- Dependency version drift entries: 12
+- Registry dependency drift entries: 0

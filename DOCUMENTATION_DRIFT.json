@@ -1,0 +1,213 @@
+{
+  "findings": [
+    {
+      "kind": "package version drift",
+      "packageId": "com.deucarian.api",
+      "packageJsonVersion": "1.1.0",
+      "readmeVersion": "1.0.2",
+      "repository": "API"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.api",
+      "repository": "API"
+    },
+    {
+      "kind": "package version drift",
+      "packageId": "com.deucarian.bootstrap",
+      "packageJsonVersion": "1.0.1",
+      "readmeVersion": "0.1.8",
+      "repository": "Bootstrap"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap"
+    },
+    {
+      "changelogLatestVersion": "0.1.2",
+      "kind": "package version drift",
+      "packageId": "com.deucarian.editor",
+      "packageJsonVersion": "1.0.0",
+      "repository": "Editor"
+    },
+    {
+      "kind": "package version drift",
+      "packageId": "com.deucarian.logging",
+      "packageJsonVersion": "1.0.0",
+      "readmeVersion": "0.2.6",
+      "repository": "Logging"
+    },
+    {
+      "changelogLatestVersion": "0.2.6",
+      "kind": "package version drift",
+      "packageId": "com.deucarian.logging",
+      "packageJsonVersion": "1.0.0",
+      "repository": "Logging"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.logging",
+      "repository": "Logging"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.logging",
+      "repository": "Logging"
+    },
+    {
+      "dependency": "com.deucarian.logging",
+      "kind": "dependency version drift",
+      "packageId": "com.deucarian.object-loading",
+      "packageJsonVersion": "0.2.5",
+      "readmeVersion": "0.2.2",
+      "repository": "Object-Loading"
+    },
+    {
+      "changelogLatestVersion": "1.1.0",
+      "kind": "package version drift",
+      "packageId": "com.deucarian.object-loading",
+      "packageJsonVersion": "1.1.1",
+      "repository": "Object-Loading"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.object-selection",
+      "repository": "Object-Selection"
+    },
+    {
+      "dependency": "com.deucarian.api",
+      "kind": "dependency version drift",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "packageJsonVersion": "1.1.0",
+      "readmeVersion": "1.0.2",
+      "repository": "ObjectLoading-API-Integration"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "repository": "ObjectLoading-API-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "repository": "ObjectLoading-API-Integration"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "repository": "ObjectSelection-CoreState-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "repository": "ObjectSelection-CoreState-Integration"
+    },
+    {
+      "kind": "package version drift",
+      "packageId": "com.deucarian.package-installer",
+      "packageJsonVersion": "1.1.55",
+      "readmeVersion": "1.1.44",
+      "repository": "Package-Installer"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.selection-suite",
+      "repository": "Selection-Suite"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.session",
+      "repository": "Session"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration"
+    },
+    {
+      "changelogLatestVersion": "0.4.2",
+      "kind": "package version drift",
+      "packageId": "com.deucarian.theming",
+      "packageJsonVersion": "1.0.0",
+      "repository": "Theming"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding"
+    },
+    {
+      "file": "Documentation~/Integrations.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "stale Bridge terminology",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration"
+    }
+  ],
+  "summary": {
+    "dependency version drift": 2,
+    "package version drift": 8,
+    "stale Bridge terminology": 22
+  }
+}
