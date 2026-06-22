@@ -42,7 +42,7 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 | Logging | Runtime/UnityConsoleLogSink.cs | 48 | Runtime production | UnityEngine.Debug.LogError | Error | Allowed | Info |
 | Logging | Runtime/UnityConsoleLogSink.cs | 52 | Runtime production | UnityEngine.Debug.LogError | Error | Allowed | Info |
 | Logging | Runtime/UnityConsoleLogSink.cs | 53 | Runtime production | UnityEngine.Debug.LogException | Exception | Allowed | Info |
-| Object-Loading | README.md | 193 | Documentation example | yield return pipeline.LoadAsync(request, result => Debug.Log(result.Message)); | Info | ReviewRequired | Warning |
+| Object-Loading | README.md | 195 | Documentation example | yield return pipeline.LoadAsync(request, result => Debug.Log(result.Message)); | Info | ReviewRequired | Warning |
 | ObjectLoading-API-Integration | Samples~/ApiDownloaderSample/ApiIntegrationDownloaderSample.cs | 43 | Sample | Debug.Log | Info | Migrate | Error |
 | ObjectLoading-API-Integration | Samples~/ApiDownloaderSample/ApiIntegrationDownloaderSample.cs | 53 | Sample | Debug.Log | Info | Migrate | Error |
 | ObjectLoading-API-Integration | Samples~/ApiDownloaderSample/ApiIntegrationDownloaderSample.cs | 57 | Sample | Debug.LogError | Error | Migrate | Error |

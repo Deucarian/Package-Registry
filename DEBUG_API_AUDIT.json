@@ -149,7 +149,7 @@
       "classification": "Documentation example",
       "file": "README.md",
       "invocation": "yield return pipeline.LoadAsync(request, result => Debug.Log(result.Message));",
-      "line": 193,
+      "line": 195,
       "logLevel": "Info",
       "loggingDeclared": true,
       "packageId": "com.deucarian.object-loading",

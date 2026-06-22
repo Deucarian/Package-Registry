@@ -7,31 +7,10 @@
       "repository": "API"
     },
     {
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.api",
-      "packageJsonVersion": "1.1.0",
-      "readmeVersion": "1.0.2",
-      "repository": "API"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.bootstrap",
       "repository": "Bootstrap"
-    },
-    {
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.bootstrap",
-      "packageJsonVersion": "1.0.1",
-      "readmeVersion": "0.1.8",
-      "repository": "Bootstrap"
-    },
-    {
-      "changelogLatestVersion": "0.1.2",
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.editor",
-      "packageJsonVersion": "1.0.0",
-      "repository": "Editor"
     },
     {
       "file": "CHANGELOG.md",
@@ -46,70 +25,12 @@
       "repository": "Logging"
     },
     {
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.logging",
-      "packageJsonVersion": "1.0.0",
-      "readmeVersion": "0.2.6",
-      "repository": "Logging"
-    },
-    {
-      "changelogLatestVersion": "0.2.6",
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.logging",
-      "packageJsonVersion": "1.0.0",
-      "repository": "Logging"
-    },
-    {
-      "dependency": "com.deucarian.logging",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.object-loading",
-      "packageJsonVersion": "0.2.5",
-      "readmeVersion": "0.2.2",
-      "repository": "Object-Loading"
-    },
-    {
-      "changelogLatestVersion": "1.1.0",
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.object-loading",
-      "packageJsonVersion": "1.1.1",
-      "repository": "Object-Loading"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-selection",
       "repository": "Object-Selection"
     },
     {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.object-loading.api-integration",
-      "registryField": "stableUrl",
-      "repository": "ObjectLoading-API-Integration",
-      "url": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#main"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.object-loading.api-integration",
-      "registryField": "developmentUrl",
-      "repository": "ObjectLoading-API-Integration",
-      "url": "https://github.com/Deucarian/Object-Loading-API-Bridge.git#develop"
-    },
-    {
-      "file": "package.json",
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.object-loading.api-integration",
-      "repository": "ObjectLoading-API-Integration",
-      "url": "git+https://github.com/Deucarian/Object-Loading-API-Bridge.git"
-    },
-    {
-      "dependency": "com.deucarian.api",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.object-loading.api-integration",
-      "packageJsonVersion": "1.1.0",
-      "readmeVersion": "1.0.2",
-      "repository": "ObjectLoading-API-Integration"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-loading.api-integration",
@@ -122,28 +43,14 @@
       "repository": "ObjectLoading-API-Integration"
     },
     {
-      "file": "README.md",
-      "kind": "ActiveDocumentationDrift",
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "repository": "ObjectSelection-CoreState-Integration"
     },
     {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.object-selection.core-state-integration",
-      "registryField": "stableUrl",
-      "repository": "ObjectSelection-CoreState-Integration",
-      "url": "https://github.com/Deucarian/Object-Selection-Bridge.git#main"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.object-selection.core-state-integration",
-      "registryField": "developmentUrl",
-      "repository": "ObjectSelection-CoreState-Integration",
-      "url": "https://github.com/Deucarian/Object-Selection-Bridge.git#develop"
-    },
-    {
-      "file": "CHANGELOG.md",
-      "kind": "HistoricalChangelogReference",
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "repository": "ObjectSelection-CoreState-Integration"
     },
@@ -160,15 +67,8 @@
       "repository": "Package-Installer"
     },
     {
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.package-installer",
-      "packageJsonVersion": "1.1.55",
-      "readmeVersion": "1.1.44",
-      "repository": "Package-Installer"
-    },
-    {
-      "file": "README.md",
-      "kind": "ReviewRequired",
+      "file": "DOCUMENTATION_DRIFT_DECISIONS.md",
+      "kind": "MigrationDocumentation",
       "packageId": null,
       "repository": "Package-Registry"
     },
@@ -185,44 +85,16 @@
       "repository": "Session"
     },
     {
-      "file": "README.md",
-      "kind": "ActiveDocumentationDrift",
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.session.api-integration",
-      "registryField": "stableUrl",
-      "repository": "Session-API-Integration",
-      "url": "https://github.com/Deucarian/Session-API-Bridge.git#main"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.session.api-integration",
-      "registryField": "developmentUrl",
-      "repository": "Session-API-Integration",
-      "url": "https://github.com/Deucarian/Session-API-Bridge.git#develop"
-    },
-    {
-      "file": "package.json",
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration",
-      "url": "git+https://github.com/Deucarian/Session-API-Bridge.git"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.session.api-integration",
       "repository": "Session-API-Integration"
     },
     {
-      "changelogLatestVersion": "0.4.2",
-      "kind": "PackageVersionDrift",
-      "packageId": "com.deucarian.theming",
-      "packageJsonVersion": "1.0.0",
-      "repository": "Theming"
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration"
     },
     {
       "file": "CHANGELOG.md",
@@ -231,58 +103,21 @@
       "repository": "UI-Binding"
     },
     {
-      "file": "Documentation~/Integrations.md",
-      "kind": "ReviewRequired",
-      "packageId": "com.deucarian.ui-flow",
-      "repository": "UI-FLow"
-    },
-    {
-      "file": "README.md",
-      "kind": "ReviewRequired",
-      "packageId": "com.deucarian.ui-flow",
-      "repository": "UI-FLow"
-    },
-    {
-      "file": "CONTRIBUTING.md",
-      "kind": "ActiveDocumentationDrift",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "repository": "UIBinding-CoreState-Integration"
-    },
-    {
-      "file": "README.md",
-      "kind": "ActiveDocumentationDrift",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "repository": "UIBinding-CoreState-Integration"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "registryField": "stableUrl",
-      "repository": "UIBinding-CoreState-Integration",
-      "url": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#main"
-    },
-    {
-      "kind": "ActiveRepositoryUrlDrift",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "registryField": "developmentUrl",
-      "repository": "UIBinding-CoreState-Integration",
-      "url": "https://github.com/Deucarian/UI-Binding-CoreState-Bridge.git#develop"
-    },
-    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "repository": "UIBinding-CoreState-Integration"
     }
   ],
   "summary": {
-    "ActiveDocumentationDrift": 4,
-    "ActiveRepositoryUrlDrift": 10,
-    "DependencyVersionDrift": 2,
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 2,
-    "PackageVersionDrift": 8,
-    "ReviewRequired": 3
+    "MigrationDocumentation": 6
   }
 }

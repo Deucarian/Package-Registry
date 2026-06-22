@@ -25,13 +25,13 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Logging | com.deucarian.logging | 1.0.0 | 2021.3 | yes | clean | com.deucarian.editor | 4 | 69 |
 | Object-Loading | com.deucarian.object-loading | 1.1.1 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 246 |
 | Object-Selection | com.deucarian.object-selection | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 104 |
-| ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.0 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
+| ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.1 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 10 |
 | Package-Installer | com.deucarian.package-installer | 1.1.55 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
 | Selection-Suite | com.deucarian.selection-suite | 1.0.1 | 2021.3 | yes | clean | com.deucarian.object-selection.core-state-integration, com.deucarian.core-state, com.deucarian.ui-binding.core-state-integration, com.deucarian.ui-binding, com.deucarian.object-selection | 1 | 0 |
 | Session | com.deucarian.session | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 65 |
-| Session-API-Integration | com.deucarian.session.api-integration | 1.0.1 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
+| Session-API-Integration | com.deucarian.session.api-integration | 1.0.2 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
 | Theming | com.deucarian.theming | 1.0.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 4 | 221 |
 | UI-Binding | com.deucarian.ui-binding | 1.0.1 | 2021.3 | yes | clean | com.unity.ugui | 3 | 75 |
 | UI-FLow | com.deucarian.ui-flow | 0.2.0 | 2021.3 | yes | clean | com.unity.ugui | 6 | 340 |
@@ -54,7 +54,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Public API symbols missing XML documentation | 877 |
 | Debug invocation records | 45 |
 | Unity object lifetime records | 57 |
-| Documentation drift findings | 42 |
+| Documentation drift findings | 19 |
 | Dependency usage findings | 26 |
 | Dependency cycles | 0 |
 
