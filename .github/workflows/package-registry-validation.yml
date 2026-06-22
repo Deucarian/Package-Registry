@@ -1,279 +1,52 @@
-name: Validate package catalog
+name: Validate package registry
 
 on:
   push:
     branches:
       - main
       - develop
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  validate-catalog:
-    name: Validate packages.json
+  validate-registry:
+    name: Validate registry governance artifacts
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
-          node-version: 24
+          python-version: "3.11"
 
-      - name: Validate catalog
+      - name: Run validator and audit tests
+        shell: bash
+        run: python -m unittest discover Tools/tests
+
+      - name: Validate Package Registry config
         shell: bash
         run: |
-          node <<'NODE'
-          const fs = require('fs');
+          python Tools/deucarian_package_validator.py \
+            --ci \
+            --registry-root . \
+            --repository-root . \
+            --config deucarian-package.json
 
-          const catalogPath = 'packages.json';
-          const allowedCategories = new Set(['Editor', 'Core', 'UI', 'World', 'Tools', 'Integration', 'Suites']);
-          const idPattern = /^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$/;
-          const gitUrlPattern = /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\.git#([A-Za-z0-9._\/-]+)$/;
-          const errors = [];
-
-          function fail(message) {
-            errors.push(message);
-          }
-
-          function requireString(pkg, field) {
-            const value = pkg[field];
-            if (typeof value !== 'string' || value.trim() === '') {
-              fail(`${pkg.id || '<unknown>'}: ${field} must be a non-empty string.`);
-              return '';
-            }
-            return value.trim();
-          }
-
-          function validateUrl(pkg, field, expectedRef, required) {
-            const value = pkg[field];
-            if (value === undefined || value === null || value === '') {
-              if (required) {
-                fail(`${pkg.id}: ${field} is required.`);
-              }
-              return;
-            }
-
-            if (typeof value !== 'string') {
-              fail(`${pkg.id}: ${field} must be a string.`);
-              return;
-            }
-
-            const match = value.match(gitUrlPattern);
-            if (!match) {
-              fail(`${pkg.id}: ${field} must look like https://github.com/Owner/Repo.git#branch.`);
-              return;
-            }
-
-            if (expectedRef && match[1] !== expectedRef) {
-              fail(`${pkg.id}: ${field} must target #${expectedRef}, got #${match[1]}.`);
-            }
-          }
-
-          let catalog;
-          try {
-            catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-          } catch (error) {
-            fail(`${catalogPath} is not valid JSON: ${error.message}`);
-          }
-
-          if (catalog) {
-            if (!Object.prototype.hasOwnProperty.call(catalog, 'schemaVersion')) {
-              fail('schemaVersion is required.');
-            } else if (!Number.isInteger(catalog.schemaVersion) || catalog.schemaVersion < 1) {
-              fail('schemaVersion must be a positive integer.');
-            }
-
-            if (!Array.isArray(catalog.packages)) {
-              fail('packages must be an array.');
-            } else {
-              const ids = new Set();
-              const idOrder = [];
-
-              for (const pkg of catalog.packages) {
-                if (!pkg || typeof pkg !== 'object' || Array.isArray(pkg)) {
-                  fail('Every packages entry must be an object.');
-                  continue;
-                }
-
-                const id = requireString(pkg, 'id');
-                requireString(pkg, 'displayName');
-                requireString(pkg, 'description');
-                const category = requireString(pkg, 'category');
-
-                if (id && !idPattern.test(id)) {
-                  fail(`${id}: package id must use the com.deucarian.* namespace with lowercase package segments.`);
-                }
-
-                if (id) {
-                  if (ids.has(id)) {
-                    fail(`${id}: duplicate package id.`);
-                  }
-                  ids.add(id);
-                  idOrder.push(id);
-                }
-
-                if (category && !allowedCategories.has(category)) {
-                  fail(`${id}: category "${category}" is not one of ${Array.from(allowedCategories).join(', ')}.`);
-                }
-
-                validateUrl(pkg, 'stableUrl', 'main', true);
-                validateUrl(pkg, 'developmentUrl', 'develop', true);
-
-                if (!Array.isArray(pkg.dependencies)) {
-                  fail(`${id}: dependencies must be an array.`);
-                } else {
-                  const seenDeps = new Set();
-                  for (const dependency of pkg.dependencies) {
-                    if (typeof dependency !== 'string' || dependency.trim() === '') {
-                      fail(`${id}: dependencies must contain non-empty package id strings.`);
-                      continue;
-                    }
-
-                    if (seenDeps.has(dependency)) {
-                      fail(`${id}: duplicate dependency ${dependency}.`);
-                    }
-                    seenDeps.add(dependency);
-                  }
-                }
-                if (pkg.optionalCompanions !== undefined) {
-                  if (!Array.isArray(pkg.optionalCompanions)) {
-                    fail(`${id}: optionalCompanions must be an array when present.`);
-                  } else {
-                    const seenCompanions = new Set();
-                    for (const companion of pkg.optionalCompanions) {
-                      if (typeof companion !== 'string' || companion.trim() === '') {
-                        fail(`${id}: optionalCompanions must contain non-empty package id strings.`);
-                        continue;
-                      }
-
-                      if (seenCompanions.has(companion)) {
-                        fail(`${id}: duplicate optional companion ${companion}.`);
-                      }
-                      seenCompanions.add(companion);
-                    }
-                  }
-                }
-
-                for (const relationshipField of ['optionalIntegrations', 'integrationTargets', 'suiteMembers', 'recommendedWith']) {
-                  if (pkg[relationshipField] === undefined) {
-                    continue;
-                  }
-
-                  if (!Array.isArray(pkg[relationshipField])) {
-                    fail(`${id}: ${relationshipField} must be an array when present.`);
-                    continue;
-                  }
-
-                  const seenRelationships = new Set();
-                  for (const relationship of pkg[relationshipField]) {
-                    if (typeof relationship !== 'string' || relationship.trim() === '') {
-                      fail(`${id}: ${relationshipField} must contain non-empty package id strings.`);
-                      continue;
-                    }
-
-                    if (seenRelationships.has(relationship)) {
-                      fail(`${id}: duplicate ${relationshipField} value ${relationship}.`);
-                    }
-                    seenRelationships.add(relationship);
-                  }
-                }
-              }
-
-              for (const pkg of catalog.packages) {
-                if (!pkg || typeof pkg !== 'object' || !Array.isArray(pkg.dependencies)) {
-                  continue;
-                }
-
-                for (const dependency of pkg.dependencies) {
-                  if (typeof dependency === 'string' && dependency.trim() !== '' && !ids.has(dependency)) {
-                    fail(`${pkg.id}: dependency ${dependency} is not a known package id in the catalog.`);
-                  }
-                }
-              }
-
-              for (const pkg of catalog.packages) {
-                if (!pkg || typeof pkg !== 'object' || !Array.isArray(pkg.optionalCompanions)) {
-                  continue;
-                }
-
-                for (const companion of pkg.optionalCompanions) {
-                  if (typeof companion === 'string' && companion.trim() !== '' && !ids.has(companion)) {
-                    fail(`${pkg.id}: optional companion ${companion} is not a known package id in the catalog.`);
-                  }
-                }
-              }
-
-              for (const relationshipField of ['optionalIntegrations', 'integrationTargets', 'suiteMembers', 'recommendedWith']) {
-                for (const pkg of catalog.packages) {
-                  if (!pkg || typeof pkg !== 'object' || !Array.isArray(pkg[relationshipField])) {
-                    continue;
-                  }
-
-                  for (const relationship of pkg[relationshipField]) {
-                    if (typeof relationship === 'string' && relationship.trim() !== '' && !ids.has(relationship)) {
-                      fail(`${pkg.id}: ${relationshipField} ${relationship} is not a known package id in the catalog.`);
-                    }
-                  }
-                }
-              }
-
-              const visiting = new Set();
-              const visited = new Set();
-              const packageById = new Map(catalog.packages.filter((pkg) => pkg && pkg.id).map((pkg) => [pkg.id, pkg]));
-
-              function visit(id, path) {
-                if (visited.has(id)) {
-                  return;
-                }
-
-                if (visiting.has(id)) {
-                  const cycleStart = path.indexOf(id);
-                  fail(`Dependency cycle detected: ${path.slice(cycleStart).concat(id).join(' -> ')}.`);
-                  return;
-                }
-
-                visiting.add(id);
-                const pkg = packageById.get(id);
-                for (const dependency of pkg.dependencies || []) {
-                  if (packageById.has(dependency)) {
-                    visit(dependency, path.concat(dependency));
-                  }
-                }
-                visiting.delete(id);
-                visited.add(id);
-              }
-
-              for (const id of idOrder) {
-                visit(id, [id]);
-              }
-
-              const packageInstaller = packageById.get('com.deucarian.package-installer');
-              if (!packageInstaller) {
-                fail('Package Installer catalog entry com.deucarian.package-installer is required.');
-              } else {
-                if (packageInstaller.category !== 'Tools') {
-                  fail('com.deucarian.package-installer must be in the Tools category.');
-                }
-                if (!packageInstaller.stableUrl) {
-                  fail('com.deucarian.package-installer must have a stableUrl.');
-                }
-                if (!packageInstaller.developmentUrl) {
-                  fail('com.deucarian.package-installer must have a developmentUrl.');
-                }
-                if (!Array.isArray(packageInstaller.dependencies)) {
-                  fail('com.deucarian.package-installer dependencies must be an array.');
-                }
-              }
-            }
-          }
-
-          if (errors.length > 0) {
-            for (const error of errors) {
-              console.error(`::error::${error}`);
-            }
-            process.exit(1);
-          }
-
-          console.log(`Validated ${catalog.packages.length} package catalog entries.`);
-          NODE
+      - name: Audit check
+        shell: bash
+        run: |
+          if [ ! -d ../_deucarian_org_audit ]; then
+            echo "Skipping audit check: ../_deucarian_org_audit is not present in this runner."
+            exit 0
+          fi
+          python -m pip install -r Tools/audit-requirements.txt
+          python Tools/Generate-DeucarianAudit.py \
+            --audit-root ../_deucarian_org_audit \
+            --output-root . \
+            --organization Deucarian \
+            --ref ci \
+            --authoritative \
+            --format all \
+            --check

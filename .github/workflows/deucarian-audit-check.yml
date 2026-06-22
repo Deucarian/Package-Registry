@@ -1,0 +1,38 @@
+name: Deucarian audit check
+
+on:
+  workflow_call:
+    inputs:
+      audit-root:
+        description: Path containing one checkout per repository.
+        required: true
+        type: string
+
+jobs:
+  audit-check:
+    name: Run authoritative audit check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Package Registry
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install audit parser dependencies
+        shell: bash
+        run: python -m pip install -r Tools/audit-requirements.txt
+
+      - name: Run audit check
+        shell: bash
+        run: |
+          python Tools/Generate-DeucarianAudit.py \
+            --audit-root "${{ inputs.audit-root }}" \
+            --output-root . \
+            --organization Deucarian \
+            --ref ci \
+            --authoritative \
+            --format all \
+            --check

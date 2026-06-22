@@ -1,0 +1,16 @@
+{
+  "repositoryType": "package-registry",
+  "repositoryName": "Package-Registry",
+  "ownedCapabilities": [
+    "registry-metadata"
+  ],
+  "registryFiles": [
+    "packages.json",
+    "capabilities.json",
+    "dependency-rules.json",
+    "DUPLICATION_REPORT.json",
+    "DEBUG_API_AUDIT.json",
+    "UNITY_OBJECT_LIFETIME_AUDIT.json",
+    "DEPENDENCY_USAGE_AUDIT.json"
+  ]
+}

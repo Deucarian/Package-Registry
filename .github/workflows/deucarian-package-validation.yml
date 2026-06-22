@@ -1,0 +1,51 @@
+name: Deucarian package validation
+
+on:
+  workflow_call:
+    inputs:
+      package-config:
+        description: Path to the package validation config inside the caller repository.
+        required: false
+        type: string
+        default: deucarian-package.json
+      package-root:
+        description: Path to the package root inside the caller checkout.
+        required: false
+        type: string
+        default: .
+      registry-ref:
+        description: Package Registry ref that owns the shared validator.
+        required: false
+        type: string
+        default: develop
+
+jobs:
+  validate:
+    name: Validate package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout package repository
+        uses: actions/checkout@v6
+        with:
+          path: package
+
+      - name: Checkout Package Registry validator
+        uses: actions/checkout@v6
+        with:
+          repository: Deucarian/Package-Registry
+          ref: ${{ inputs.registry-ref }}
+          path: package-registry
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Run shared package validator
+        shell: bash
+        run: |
+          python package-registry/Tools/deucarian_package_validator.py \
+            --ci \
+            --registry-root package-registry \
+            --repository-root "package/${{ inputs.package-root }}" \
+            --config "package/${{ inputs.package-root }}/${{ inputs.package-config }}"
