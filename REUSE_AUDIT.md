@@ -19,11 +19,11 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | API | com.deucarian.api | 1.1.0 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.unitywebrequest, com.unity.nuget.newtonsoft-json, com.unity.modules.assetbundle, com.unity.modules.unitywebrequestassetbundle, com.unity.modules.unitywebrequesttexture, com.unity.modules.unitywebrequestwww | 4 | 169 |
 | Bootstrap | com.deucarian.bootstrap | 1.0.2 | 2021.3 | yes | clean | (none) | 2 | 1 |
-| Common | com.deucarian.common | 0.1.0 | 2021.3 | no | clean | (none) | 3 | 2 |
+| Common | com.deucarian.common | 0.1.0 | 2021.3 | yes | clean | (none) | 3 | 2 |
 | Core-State | com.deucarian.core-state | 1.0.0 | 2021.3 | yes | clean | (none) | 3 | 38 |
 | Diagnostics | com.deucarian.diagnostics | 0.1.1 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 62 |
 | Editor | com.deucarian.editor | 1.0.0 | 2021.3 | yes | clean | (none) | 2 | 91 |
-| Logging | com.deucarian.logging | 1.0.1 | 2021.3 | yes | dirty | com.deucarian.editor | 4 | 69 |
+| Logging | com.deucarian.logging | 1.0.1 | 2021.3 | yes | clean | com.deucarian.editor | 4 | 69 |
 | Object-Loading | com.deucarian.object-loading | 1.2.0 | 2021.3 | yes | clean | com.deucarian.common, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 246 |
 | Object-Selection | com.deucarian.object-selection | 1.0.2 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 104 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.3 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
