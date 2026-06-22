@@ -2,19 +2,16 @@
 
 Schema version: 2
 
-This plan remains audit/governance-only. No production source, package dependencies, package versions, package READMEs, or main branches are changed.
+This plan records the completed Common extraction and the remaining governance follow-ups. Existing repository main branches remain unchanged by the audit wave.
 
 ## Next Safe Steps
 
-1. `com.deucarian.common` implementation.
-2. Shared package validation and reusable CI.
-3. Architecture enforcement and AGENTS.md.
-4. Remaining reviewed extraction candidates.
+1. Shared package validation and reusable CI.
+2. Architecture enforcement and AGENTS.md.
+3. Remaining reviewed extraction candidates.
 
 ## Still Not Done
 
-- No Common package.
 - No Testing package.
 - No Build Tools repository.
-- No package dependency changes.
-- No source migrations.
+- No broad utility expansion beyond `UnityObjectUtility.DestroySafely`.

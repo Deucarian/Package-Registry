@@ -222,6 +222,31 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.object-loading",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.ObjectLoading.asmdef",
+          "assembly": "Deucarian.ObjectLoading",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Object-Loading",
+      "sourceMentionCount": 0
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-loading",
@@ -323,7 +348,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.1",
+      "declaredVersion": "1.2.0",
       "dependency": "com.deucarian.object-loading",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -658,7 +683,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -683,7 +708,7 @@
     },
     {
       "classification": "SampleOnlyUse",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.ui-binding.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -913,6 +938,56 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.ui-binding",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.UIBinding.asmdef",
+          "assembly": "Deucarian.UIBinding",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "UI-Binding",
+      "sourceMentionCount": 0
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.ui-flow",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.UIFlow.asmdef",
+          "assembly": "Deucarian.UIFlow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "UI-FLow",
+      "sourceMentionCount": 0
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.ui-flow",
@@ -1041,7 +1116,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "referencedAssemblies": [
@@ -1094,7 +1169,7 @@
   "summary": {
     "EditorOnlyUse": 5,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 16,
+    "RequiredAndUsed": 19,
     "SampleOnlyUse": 5
   }
 }

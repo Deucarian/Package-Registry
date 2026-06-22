@@ -72,6 +72,15 @@ DEBUG_FORBIDDEN_SYMBOLS = [
     "UnityEngine.Debug.LogErrorFormat",
     "UnityEngine.Debug.LogException",
 ]
+COMMON_PACKAGE_ID = "com.deucarian.common"
+COMMON_LIFETIME_API = "Deucarian.Common.UnityObjectUtility.DestroySafely"
+COMMON_LIFETIME_API_SIGNATURE = "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
+LIFETIME_FORBIDDEN_SYMBOLS = [
+    "UnityEngine.Object.Destroy",
+    "UnityEngine.Object.DestroyImmediate",
+    "Object.Destroy",
+    "Object.DestroyImmediate",
+]
 DESTROY_HELPER_NAMES = {
     "Destroy",
     "DestroyItem",
@@ -95,7 +104,7 @@ CAPABILITIES = [
     ("diagnostics", "com.deucarian.diagnostics", "Diagnostics providers, snapshots, JSON export, overlays, and aggregation."),
     ("package-management", "com.deucarian.package-installer", "Package discovery, install/update/remove, channels, registry composition, and ecosystem visualization."),
     ("registry-metadata", None, "Catalog, category hierarchy, dependency metadata, Integration metadata, Suite metadata, and governance metadata."),
-    ("unity-object-lifetime", None, "Potential tiny shared UnityEngine.Object lifetime primitives if the dedicated audit justifies a Common package."),
+    ("unity-object-lifetime", COMMON_PACKAGE_ID, "Safe destruction of transient UnityEngine.Object instances across Play Mode and Edit Mode."),
 ]
 OUTPUT_FILES = [
     "REUSE_AUDIT.md",
@@ -719,6 +728,59 @@ def policy_severity(disposition: str) -> str:
     return "Info"
 
 
+def apply_lifetime_policy(records: list[dict[str, Any]]) -> None:
+    for record in records:
+        disposition, reason = lifetime_policy(record)
+        record["policyDisposition"] = disposition
+        record["policyReason"] = reason
+        record["policySeverity"] = policy_severity(disposition)
+
+
+def lifetime_policy(record: dict[str, Any]) -> tuple[str, str]:
+    if is_common_lifetime_implementation(record):
+        return "Allowed", "Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability."
+    if is_common_lifetime_call_site(record):
+        return "Allowed", "Production code calls the canonical Deucarian.Common lifetime API."
+    if record.get("scope") == "Test":
+        return "Allowed", "Test-only explicit Unity object teardown remains local; no shared testing package was approved."
+    if record.get("scope") in {"Runtime production", "Editor production"}:
+        if record.get("occurrenceKind") == "helper definition":
+            return "Migrate", "Local production helper duplicates the Common lifetime capability."
+        if record.get("occurrenceKind") == "helper call site":
+            return "Migrate", "Production code calls a local or non-canonical lifetime helper instead of Common."
+        if record.get("occurrenceKind") == "direct Unity API call":
+            return "Migrate", "Production direct UnityEngine.Object destruction must route through the Common capability unless a reviewed semantic exception is recorded."
+        return "ReviewRequired", "Production lifetime behavior needs semantic review."
+    if record.get("scope") == "Sample":
+        return "ReviewRequired", "Sample lifetime behavior should not define production capability semantics."
+    return "ReviewRequired", "Lifetime finding is outside the known allowed policy scopes."
+
+
+def is_common_lifetime_implementation(record: dict[str, Any]) -> bool:
+    if record.get("packageId") != COMMON_PACKAGE_ID:
+        return False
+    if record.get("file") != "Runtime/UnityObjectUtility.cs":
+        return False
+    if record.get("occurrenceKind") == "helper definition" and record.get("symbol") == "DestroySafely":
+        return True
+    return (
+        record.get("occurrenceKind") == "direct Unity API call"
+        and record.get("containingSymbol") == "UnityObjectUtility::DestroySafely"
+        and record.get("invocation") in LIFETIME_FORBIDDEN_SYMBOLS
+    )
+
+
+def is_common_lifetime_call_site(record: dict[str, Any]) -> bool:
+    if record.get("packageId") == COMMON_PACKAGE_ID:
+        return False
+    if record.get("scope") not in {"Runtime production", "Editor production"}:
+        return False
+    if record.get("occurrenceKind") != "helper call site":
+        return False
+    invocation = record.get("invocation", "")
+    return invocation == "UnityObjectUtility.DestroySafely" or invocation.endswith(".UnityObjectUtility.DestroySafely")
+
+
 def collect_asmdefs(repo_root: Path) -> list[dict[str, Any]]:
     asmdefs = []
     for path in sorted(repo_root.rglob("*.asmdef")):
@@ -1201,6 +1263,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
     lifetime_records = [record for parsed in parsed_files for record in parsed.lifetime_occurrences]
     lifetime_records.extend(helper_definition_records(parsed_files))
     lifetime_records.sort(key=lambda item: (item["repository"], item["file"], item["line"], item.get("occurrenceKind", "")))
+    apply_lifetime_policy(lifetime_records)
 
     documentation_records = []
     dependency_usage_records = []
@@ -1279,6 +1342,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         "unityObjectLifetime": {
             "occurrences": lifetime_records,
             "summary": summarize_by(lifetime_records, "occurrenceKind"),
+            "policySummary": summarize_by(lifetime_records, "policyDisposition"),
             "conclusion": lifetime_conclusion,
         },
         "documentationDrift": {
@@ -1344,19 +1408,41 @@ def classify_lifetime_conclusion(records: list[dict[str, Any]]) -> dict[str, Any
     tests = [r for r in records if r.get("scope") == "Test"]
     comparison = lifetime_semantic_comparison(records)
     runtime_repositories = {row["repository"] for row in comparison if row["expectedExecutionContext"].startswith("Runtime")}
-    decision = "Create com.deucarian.common" if len(runtime_repositories) >= 3 or {"Object-Loading", "UI-Binding"} <= runtime_repositories else "Keep local"
+    common_implemented = any(
+        record.get("occurrenceKind") == "helper definition"
+        and is_common_lifetime_implementation(record)
+        for record in records
+    )
+    canonical_consumers = sorted({
+        record["repository"]
+        for record in records
+        if is_common_lifetime_call_site(record)
+    })
+    actionable_production = [
+        record for record in records
+        if record.get("scope") in {"Runtime production", "Editor production"}
+        and record.get("policyDisposition") in {"Migrate", "ReviewRequired"}
+    ]
+    if common_implemented:
+        decision = "Implemented in com.deucarian.common"
+    else:
+        decision = "Create com.deucarian.common" if len(runtime_repositories) >= 3 or {"Object-Loading", "UI-Binding"} <= runtime_repositories else "Keep local"
     return {
         "decision": decision,
-        "selectedOption": "A" if decision == "Create com.deucarian.common" else "D",
+        "selectedOption": "Completed" if common_implemented else ("A" if decision == "Create com.deucarian.common" else "D"),
         "helperDefinitionCount": len(helper_defs),
         "runtimeRepositoryCount": len({r["repository"] for r in runtime}),
         "editorRepositoryCount": len({r["repository"] for r in editor}),
         "testRepositoryCount": len({r["repository"] for r in tests}),
         "comparison": comparison,
-        "apiProposal": ["UnityObjectUtility.DestroySafely(UnityEngine.Object target)"] if decision == "Create com.deucarian.common" else [],
+        "canonicalOwner": COMMON_PACKAGE_ID if common_implemented else None,
+        "canonicalSymbol": COMMON_LIFETIME_API if common_implemented else "",
+        "apiProposal": [COMMON_LIFETIME_API_SIGNATURE] if common_implemented or decision == "Create com.deucarian.common" else [],
         "optionalApiProposal": [],
-        "intendedConsumers": sorted(runtime_repositories),
-        "dependencyImpact": "Future runtime consumers would add a dependency on com.deucarian.common; this audit wave does not add it.",
+        "intendedConsumers": canonical_consumers if common_implemented else sorted(runtime_repositories),
+        "actionableProductionCount": len(actionable_production),
+        "actionableProductionSummary": summarize_by(actionable_production, "policyDisposition"),
+        "dependencyImpact": "Runtime consumers now declare exact dependencies on com.deucarian.common where they call the canonical API." if common_implemented else "Future runtime consumers would add a dependency on com.deucarian.common; this audit wave does not add it.",
         "risks": [
             "Common must not grow into a generic utility bucket.",
             "Editor asset destruction and test fixture cleanup should stay out of the initial runtime API.",
@@ -1367,13 +1453,18 @@ def classify_lifetime_conclusion(records: list[dict[str, Any]]) -> dict[str, Any
             "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
             "testRepositoryCount": len({r["repository"] for r in tests}),
         },
-        "note": "No package is created by this audit wave; this conclusion directs the next design review.",
+        "note": "Common owns the approved runtime UnityEngine.Object lifetime primitive; tests keep explicit local teardown." if common_implemented else "No package is created by this audit wave; this conclusion directs the next design review.",
     }
 
 
 def lifetime_semantic_comparison(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
-    helper_defs = [r for r in records if r.get("occurrenceKind") == "helper definition" and r.get("scope") == "Runtime production"]
+    helper_defs = [
+        r for r in records
+        if r.get("occurrenceKind") == "helper definition"
+        and r.get("scope") == "Runtime production"
+        and not is_common_lifetime_implementation(r)
+    ]
     for record in helper_defs:
         call_sites = [
             r for r in records
@@ -1402,6 +1493,8 @@ def lifetime_semantic_comparison(records: list[dict[str, Any]]) -> list[dict[str
         )
     for record in records:
         if record.get("scope") != "Runtime production" or record.get("occurrenceKind") != "direct Unity API call":
+            continue
+        if is_common_lifetime_implementation(record):
             continue
         if record.get("repository") in {row["repository"] for row in rows}:
             continue
@@ -1497,10 +1590,10 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
             "scopes": ["Runtime production"],
             "summarizedBehavior": "Shared UnityEngine.Object destruction pattern across runtime consumers.",
             "differences": "; ".join(f"{row['repository']} accepts {row['acceptedType']} in {row['expectedExecutionContext']}" for row in lifetime.get("comparison", [])),
-            "existingCapabilityOwner": "none",
+            "existingCapabilityOwner": lifetime.get("canonicalOwner") or "none",
             "dependencyImpact": lifetime.get("dependencyImpact", ""),
-            "decision": "RuntimeReuseCandidate" if lifetime.get("decision") == "Create com.deucarian.common" else "KeepLocal",
-            "candidateOwner": "com.deucarian.common" if lifetime.get("decision") == "Create com.deucarian.common" else "local owners",
+            "decision": "Completed" if lifetime.get("decision") == "Implemented in com.deucarian.common" else ("RuntimeReuseCandidate" if lifetime.get("decision") == "Create com.deucarian.common" else "KeepLocal"),
+            "candidateOwner": "com.deucarian.common" if lifetime.get("decision") in {"Create com.deucarian.common", "Implemented in com.deucarian.common"} else "local owners",
             "apiProposal": ", ".join(lifetime.get("apiProposal", [])),
             "risks": "; ".join(lifetime.get("risks", [])),
             "reasoning": lifetime["note"],
@@ -1648,7 +1741,13 @@ def capabilities_json(report: dict[str, Any]) -> dict[str, Any]:
             ]
         if cap["id"] == "unity-object-lifetime":
             item["status"] = report["unityObjectLifetime"]["conclusion"]["decision"]
+            item["canonicalSymbols"] = [COMMON_LIFETIME_API]
             item["apiProposal"] = report["unityObjectLifetime"]["conclusion"].get("apiProposal", [])
+            item["forbiddenSymbolsOutsideOwner"] = LIFETIME_FORBIDDEN_SYMBOLS
+            item["exceptions"] = [
+                {"packageId": COMMON_PACKAGE_ID, "reason": "Owns the exact Play Mode/Edit Mode implementation."},
+                {"scope": "Test", "reason": "Explicit fixture teardown remains local; no testing package is approved."},
+            ]
         caps.append(item)
     return {"schemaVersion": 2, "capabilities": caps}
 
@@ -1657,7 +1756,7 @@ def dependency_rules_json(report: dict[str, Any]) -> dict[str, Any]:
     return {
         "schemaVersion": 2,
         "layers": [
-            {"id": "common", "packages": ["com.deucarian.common"], "status": "not-created"},
+            {"id": "common", "packages": ["com.deucarian.common"], "status": "active"},
             {"id": "foundation", "packages": ["com.deucarian.editor", "com.deucarian.logging", "com.deucarian.core-state"]},
             {"id": "runtime-capabilities", "packages": ["com.deucarian.api", "com.deucarian.session", "com.deucarian.object-loading", "com.deucarian.object-selection", "com.deucarian.ui-binding", "com.deucarian.ui-flow", "com.deucarian.theming", "com.deucarian.diagnostics"]},
             {"id": "integrations", "packages": ["com.deucarian.session.api-integration", "com.deucarian.object-loading.api-integration", "com.deucarian.object-selection.core-state-integration", "com.deucarian.ui-binding.core-state-integration"]},
@@ -1671,7 +1770,7 @@ def dependency_rules_json(report: dict[str, Any]) -> dict[str, Any]:
         "rules": [
             "No cyclic package dependencies.",
             "Runtime assemblies must not reference UnityEditor.",
-            "Common, if created, cannot depend on Logging or Editor.",
+            "Common cannot depend on Logging, Editor, or domain packages.",
             "Logging cannot depend on Diagnostics or telemetry.",
             "Integration packages depend only on their targets plus Common/Logging when actually used.",
             "Package Registry dependencies must match package.json direct Deucarian dependencies.",
@@ -1719,7 +1818,7 @@ def write_reuse_audit(report: dict[str, Any], path: Path) -> None:
 
 Schema version: {report['metadata']['schemaVersion']}
 
-This is the hardened organization-wide audit snapshot for `{report['metadata']['organization']}` at `{report['metadata']['ref']}`. It uses `{report['metadata']['parser']}` for C# parsing and does not migrate package source.
+This is the hardened organization-wide audit snapshot for `{report['metadata']['organization']}` at `{report['metadata']['ref']}`. It uses `{report['metadata']['parser']}` for C# parsing and records the current package sources and governance state.
 
 ## Weaknesses Fixed From The Original Audit
 
@@ -1740,7 +1839,7 @@ This is the hardened organization-wide audit snapshot for `{report['metadata']['
 
 ## Extraction Position
 
-No Common, Testing, Build Tools, or package dependency migration is performed by this audit. `EXTRACTION_DECISIONS.md` records reviewed dispositions for candidates produced by the hardened analyzer.
+`com.deucarian.common` owns the approved Unity object lifetime primitive. `EXTRACTION_DECISIONS.md` records completed and remaining reviewed dispositions for candidates produced by the hardened analyzer.
 """,
         encoding="utf-8",
     )
@@ -1760,7 +1859,7 @@ Schema version: 2
 
 ## Notes
 
-- `unity-object-lifetime` remains governed by the dedicated lifetime audit conclusion: {report['unityObjectLifetime']['conclusion']['decision']}.
+- `unity-object-lifetime` is owned by `com.deucarian.common`: {report['unityObjectLifetime']['conclusion']['decision']}.
 - `Logging -> Editor` remains a review-required dependency exception.
 - Capability ownership does not automatically justify adding dependencies; consumers must use the capability.
 """,
@@ -1800,22 +1899,19 @@ def write_migration_plan(report: dict[str, Any], path: Path) -> None:
 
 Schema version: 2
 
-This plan remains audit/governance-only. No production source, package dependencies, package versions, package READMEs, or main branches are changed.
+This plan records the completed Common extraction and the remaining governance follow-ups. Existing repository main branches remain unchanged by the audit wave.
 
 ## Next Safe Steps
 
-1. `com.deucarian.common` implementation.
-2. Shared package validation and reusable CI.
-3. Architecture enforcement and AGENTS.md.
-4. Remaining reviewed extraction candidates.
+1. Shared package validation and reusable CI.
+2. Architecture enforcement and AGENTS.md.
+3. Remaining reviewed extraction candidates.
 
 ## Still Not Done
 
-- No Common package.
 - No Testing package.
 - No Build Tools repository.
-- No package dependency changes.
-- No source migrations.
+- No broad utility expansion beyond `UnityObjectUtility.DestroySafely`.
 """,
         encoding="utf-8",
     )
@@ -1853,7 +1949,7 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 
 def write_lifetime_md(report: dict[str, Any], path: Path) -> None:
     records = report["unityObjectLifetime"]["occurrences"]
-    rows = [[r["repository"], r["file"], r["line"], r["scope"], r.get("occurrenceKind"), r.get("invocation", r.get("symbol", ""))] for r in records[:240]]
+    rows = [[r["repository"], r["file"], r["line"], r["scope"], r.get("occurrenceKind"), r.get("invocation", r.get("symbol", "")), r.get("policyDisposition", ""), r.get("policyReason", "")] for r in records[:240]]
     comparison_rows = [
         [
             row["repository"],
@@ -1888,6 +1984,10 @@ API proposal: {', '.join(report['unityObjectLifetime']['conclusion'].get('apiPro
 
 {metric_table(report['unityObjectLifetime']['summary'])}
 
+## Policy Summary
+
+{metric_table(report['unityObjectLifetime'].get('policySummary', {}))}
+
 ## Production Semantic Comparison
 
 {md_table(['Repository', 'Symbol', 'Assembly', 'Accepted type', 'Null behavior', 'Fake-null behavior', 'Play Mode', 'Edit Mode', 'Reference clearing', 'Collection behavior', 'Exception behavior', 'Call sites', 'Expected context'], comparison_rows)}
@@ -1902,7 +2002,7 @@ API proposal: {', '.join(report['unityObjectLifetime']['conclusion'].get('apiPro
 
 ## Findings
 
-{md_table(['Repository', 'File', 'Line', 'Scope', 'Kind', 'Symbol/Invocation'], rows)}
+{md_table(['Repository', 'File', 'Line', 'Scope', 'Kind', 'Symbol/Invocation', 'Policy disposition', 'Policy reason'], rows)}
 """,
         encoding="utf-8",
     )

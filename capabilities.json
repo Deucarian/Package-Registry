@@ -88,10 +88,29 @@
       "apiProposal": [
         "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
       ],
-      "description": "Potential tiny shared UnityEngine.Object lifetime primitives if the dedicated audit justifies a Common package.",
+      "canonicalSymbols": [
+        "Deucarian.Common.UnityObjectUtility.DestroySafely"
+      ],
+      "description": "Safe destruction of transient UnityEngine.Object instances across Play Mode and Edit Mode.",
+      "exceptions": [
+        {
+          "packageId": "com.deucarian.common",
+          "reason": "Owns the exact Play Mode/Edit Mode implementation."
+        },
+        {
+          "reason": "Explicit fixture teardown remains local; no testing package is approved.",
+          "scope": "Test"
+        }
+      ],
+      "forbiddenSymbolsOutsideOwner": [
+        "UnityEngine.Object.Destroy",
+        "UnityEngine.Object.DestroyImmediate",
+        "Object.Destroy",
+        "Object.DestroyImmediate"
+      ],
       "id": "unity-object-lifetime",
-      "ownerPackageId": null,
-      "status": "Create com.deucarian.common"
+      "ownerPackageId": "com.deucarian.common",
+      "status": "Implemented in com.deucarian.common"
     }
   ],
   "schemaVersion": 2

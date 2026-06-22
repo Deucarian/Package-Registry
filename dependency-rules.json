@@ -17,7 +17,7 @@
       "packages": [
         "com.deucarian.common"
       ],
-      "status": "not-created"
+      "status": "active"
     },
     {
       "id": "foundation",
@@ -65,7 +65,7 @@
   "rules": [
     "No cyclic package dependencies.",
     "Runtime assemblies must not reference UnityEditor.",
-    "Common, if created, cannot depend on Logging or Editor.",
+    "Common cannot depend on Logging, Editor, or domain packages.",
     "Logging cannot depend on Diagnostics or telemetry.",
     "Integration packages depend only on their targets plus Common/Logging when actually used.",
     "Package Registry dependencies must match package.json direct Deucarian dependencies.",

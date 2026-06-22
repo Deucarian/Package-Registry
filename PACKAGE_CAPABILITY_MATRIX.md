@@ -17,10 +17,10 @@ Schema version: 2
 | diagnostics | com.deucarian.diagnostics | Diagnostics | (none) |
 | package-management | com.deucarian.package-installer | Package-Installer | (none) |
 | registry-metadata | (pending) | Package-Registry | (none) |
-| unity-object-lifetime | (pending) | Package-Registry | (none) |
+| unity-object-lifetime | com.deucarian.common | Common | com.deucarian.object-loading, com.deucarian.ui-binding, com.deucarian.ui-flow |
 
 ## Notes
 
-- `unity-object-lifetime` remains governed by the dedicated lifetime audit conclusion: Create com.deucarian.common.
+- `unity-object-lifetime` is owned by `com.deucarian.common`: Implemented in com.deucarian.common.
 - `Logging -> Editor` remains a review-required dependency exception.
 - Capability ownership does not automatically justify adding dependencies; consumers must use the capability.

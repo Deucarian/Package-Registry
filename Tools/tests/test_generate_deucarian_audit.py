@@ -554,6 +554,73 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertIn("UnityObjectUtility.DestroySafely(UnityEngine.Object target)", conclusion["apiProposal"])
         self.assertEqual("KeepLocal", conclusion["testingPackageDecision"]["decision"])
 
+    def test_lifetime_policy_allows_common_and_canonical_consumers(self) -> None:
+        records = [
+            {
+                "repository": "Common",
+                "packageId": "com.deucarian.common",
+                "file": "Runtime/UnityObjectUtility.cs",
+                "symbol": "DestroySafely",
+                "scope": "Runtime production",
+                "occurrenceKind": "helper definition",
+                "semantics": {
+                    "acceptedType": "Object",
+                    "handlesNullOrFakeNull": True,
+                    "usesPlayModeCheck": True,
+                    "usesDestroy": True,
+                    "usesDestroyImmediate": True,
+                    "clearsReferences": False,
+                    "handlesCollections": False,
+                    "catchesExceptions": False,
+                },
+            },
+            {
+                "repository": "Common",
+                "packageId": "com.deucarian.common",
+                "file": "Runtime/UnityObjectUtility.cs",
+                "containingSymbol": "UnityObjectUtility::DestroySafely",
+                "scope": "Runtime production",
+                "occurrenceKind": "direct Unity API call",
+                "invocation": "Object.Destroy",
+            },
+            {
+                "repository": "Object-Loading",
+                "packageId": "com.deucarian.object-loading",
+                "file": "Runtime/Core/ObjectLoadHandle.cs",
+                "scope": "Runtime production",
+                "occurrenceKind": "helper call site",
+                "invocation": "UnityObjectUtility.DestroySafely",
+            },
+            {
+                "repository": "Legacy",
+                "packageId": "com.deucarian.legacy",
+                "file": "Runtime/Legacy.cs",
+                "scope": "Runtime production",
+                "occurrenceKind": "direct Unity API call",
+                "invocation": "Object.DestroyImmediate",
+            },
+            {
+                "repository": "UI-Binding",
+                "packageId": "com.deucarian.ui-binding",
+                "file": "Tests/EditMode/Fixture.cs",
+                "scope": "Test",
+                "occurrenceKind": "direct Unity API call",
+                "invocation": "Object.DestroyImmediate",
+            },
+        ]
+
+        audit.apply_lifetime_policy(records)
+        conclusion = audit.classify_lifetime_conclusion(records)
+
+        self.assertEqual("Allowed", records[0]["policyDisposition"])
+        self.assertEqual("Allowed", records[1]["policyDisposition"])
+        self.assertEqual("Allowed", records[2]["policyDisposition"])
+        self.assertEqual("Migrate", records[3]["policyDisposition"])
+        self.assertEqual("Allowed", records[4]["policyDisposition"])
+        self.assertEqual("Implemented in com.deucarian.common", conclusion["decision"])
+        self.assertEqual("com.deucarian.common", conclusion["canonicalOwner"])
+        self.assertEqual(["Object-Loading"], conclusion["intendedConsumers"])
+
 
 if __name__ == "__main__":
     unittest.main()
