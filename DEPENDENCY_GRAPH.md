@@ -31,6 +31,7 @@ Schema version: 2
 | com.deucarian.theming | com.deucarian.logging | 0.2.5 | Theming | Logging |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.core-state | 1.0.0 | UIBinding-CoreState-Integration | Core-State |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.0.1 | UIBinding-CoreState-Integration | UI-Binding |
+| com.deucarian.ui-flow | com.deucarian.logging | 1.0.1 | UI-FLow | Logging |
 
 ## Cycle Report
 
@@ -39,4 +40,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 12
-- Registry dependency drift entries: 0
+- Registry dependency drift entries: 2

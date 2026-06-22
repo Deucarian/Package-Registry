@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 5 |
 | Optional version-defined use | 1 |
-| Required and used | 15 |
+| Required and used | 16 |
 | Sample-only use | 5 |
 
 Findings marked `apparently unused` are review prompts, not removal recommendations.
@@ -17,7 +17,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | --- | --- | --- | --- | --- | --- |
 | API | com.deucarian.logging | Required and used | Editor production: Deucarian.API.Editor -> Deucarian.Logging; Runtime production: Deucarian.API -> Deucarian.Logging; Sample: Deucarian.API.Samples -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Diagnostics | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Diagnostics.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
-| Diagnostics | com.deucarian.logging | Required and used | Runtime production: Deucarian.Diagnostics -> Deucarian.Logging; Test: Deucarian.Diagnostics.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Diagnostics | com.deucarian.logging | Required and used | Editor production: Deucarian.Diagnostics.Editor -> Deucarian.Logging; Runtime production: Deucarian.Diagnostics -> Deucarian.Logging; Test: Deucarian.Diagnostics.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Logging | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Logging.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Object-Loading | com.deucarian.diagnostics | Optional version-defined use | Runtime production: Deucarian.ObjectLoading.Diagnostics -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED]; Test: Deucarian.ObjectLoading.Diagnostics.Tests -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED] | Deucarian.Diagnostics |  |
 | Object-Loading | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectLoading -> Deucarian.Logging | Deucarian.Logging | 0 |
@@ -39,5 +39,6 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Session-API-Integration | com.deucarian.session | Required and used | Runtime production: Deucarian.Session.APIIntegration -> Deucarian.Session; Sample: Deucarian.Session.APIIntegration.Samples -> Deucarian.Session; Test: Deucarian.Session.APIIntegration.Tests -> Deucarian.Session | Deucarian.Session | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
+| UI-FLow | com.deucarian.logging | Required and used | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Logging; Runtime production: Deucarian.UIFlow -> Deucarian.Logging; Runtime production: Deucarian.UIFlow.UGUI -> Deucarian.Logging; Sample: Deucarian.UIFlow.Samples.BasicFlow -> Deucarian.Logging; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.CoreState; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.CoreState; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.UIBinding; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.UIBinding; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.UIBinding | Deucarian.UIBinding | 0 |

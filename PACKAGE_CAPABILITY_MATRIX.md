@@ -4,7 +4,7 @@ Schema version: 2
 
 | Capability | Owner package | Owner repository | Current package.json consumers |
 | --- | --- | --- | --- |
-| logging | com.deucarian.logging | Logging | com.deucarian.api, com.deucarian.diagnostics, com.deucarian.object-loading, com.deucarian.object-selection, com.deucarian.object-selection.core-state-integration, com.deucarian.package-installer, com.deucarian.session, com.deucarian.theming |
+| logging | com.deucarian.logging | Logging | com.deucarian.api, com.deucarian.diagnostics, com.deucarian.object-loading, com.deucarian.object-selection, com.deucarian.object-selection.core-state-integration, com.deucarian.package-installer, com.deucarian.session, com.deucarian.theming, com.deucarian.ui-flow |
 | editor-shell | com.deucarian.editor | Editor | com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.package-installer, com.deucarian.theming |
 | api-http-client | com.deucarian.api | API | com.deucarian.object-loading.api-integration, com.deucarian.session.api-integration |
 | session | com.deucarian.session | Session | com.deucarian.session.api-integration |

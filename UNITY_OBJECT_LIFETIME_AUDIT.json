@@ -722,6 +722,18 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.UIFlow.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "UIFlowLogTests::TearDown",
+      "file": "Tests/EditMode/UIFlowLogTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 32,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow",
+      "scope": "Test"
+    },
+    {
       "assembly": "Deucarian.UIFlow.Tests.PlayMode",
       "classification": "Test",
       "containingSymbol": "UIFlowRuntimeNavigationTests::TearDown",
@@ -783,7 +795,7 @@
     }
   ],
   "summary": {
-    "direct Unity API call": 51,
+    "direct Unity API call": 52,
     "helper call site": 4,
     "helper definition": 2
   }

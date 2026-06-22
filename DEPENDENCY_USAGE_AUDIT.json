@@ -88,6 +88,20 @@
       ],
       "referencedBy": [
         {
+          "asmdef": "Editor/Deucarian.Diagnostics.Editor.asmdef",
+          "assembly": "Deucarian.Diagnostics.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Logging",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Runtime/Deucarian.Diagnostics.asmdef",
           "assembly": "Deucarian.Diagnostics",
           "autoReferenced": true,
@@ -899,6 +913,83 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "1.0.1",
+      "dependency": "com.deucarian.logging",
+      "packageId": "com.deucarian.ui-flow",
+      "referencedAssemblies": [
+        "Deucarian.Logging"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.UIFlow.Editor.asmdef",
+          "assembly": "Deucarian.UIFlow.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Logging",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.UIFlow.asmdef",
+          "assembly": "Deucarian.UIFlow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime.UGUI/Deucarian.UIFlow.UGUI.asmdef",
+          "assembly": "Deucarian.UIFlow.UGUI",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/BasicFlow/Deucarian.UIFlow.Samples.BasicFlow.asmdef",
+          "assembly": "Deucarian.UIFlow.Samples.BasicFlow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.UIFlow.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.UIFlow.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Logging",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "UI-FLow",
+      "sourceMentionCount": 0
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
@@ -1003,7 +1094,7 @@
   "summary": {
     "EditorOnlyUse": 5,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 15,
+    "RequiredAndUsed": 16,
     "SampleOnlyUse": 5
   }
 }

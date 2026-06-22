@@ -6,11 +6,10 @@ This plan remains audit/governance-only. No production source, package dependenc
 
 ## Next Safe Steps
 
-1. Logging compliance migration.
-2. `com.deucarian.common` implementation.
-3. Shared package validation and reusable CI.
-4. Architecture enforcement and AGENTS.md.
-5. Remaining reviewed extraction candidates.
+1. `com.deucarian.common` implementation.
+2. Shared package validation and reusable CI.
+3. Architecture enforcement and AGENTS.md.
+4. Remaining reviewed extraction candidates.
 
 ## Still Not Done
 

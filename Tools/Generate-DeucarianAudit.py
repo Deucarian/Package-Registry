@@ -617,7 +617,7 @@ class CSharpSyntaxAnalyzer:
     def _debug_record(self, parsed: ParsedFile, node: Any, invocation_name: str, containing_symbol: str) -> dict[str, Any]:
         logging_declared = bool((parsed_repo_dependencies.get(parsed.repo) or {}).get("com.deucarian.logging"))
         logging_asmdef = bool(repo_asm_refs.get(parsed.repo, set()) & {"Deucarian.Logging", "GUID:Deucarian.Logging"})
-        classification = classify_scope(parsed.package_id, parsed.scope)
+        classification = classify_debug_invocation(parsed, containing_symbol)
         disposition = policy_disposition(classification, parsed.scope)
         return {
             "repository": parsed.repo,
@@ -675,8 +675,6 @@ def normalize_body(body_text: str, local_names: set[str]) -> str:
 def classify_scope(package_id: str | None, scope: str) -> str:
     if package_id == "com.deucarian.bootstrap":
         return "Bootstrap exception"
-    if package_id == "com.deucarian.logging":
-        return "Logging package sink implementation"
     if scope == "Test":
         return "Test"
     if scope == "Sample":
@@ -684,6 +682,20 @@ def classify_scope(package_id: str | None, scope: str) -> str:
     if scope in {"Runtime production", "Editor production"}:
         return scope
     return "Unknown"
+
+
+def classify_debug_invocation(parsed: ParsedFile, containing_symbol: str) -> str:
+    if parsed.package_id == "com.deucarian.logging" and is_logging_debug_allowlisted(parsed.relative_path, containing_symbol):
+        return "Logging package sink implementation"
+
+    return classify_scope(parsed.package_id, parsed.scope)
+
+
+def is_logging_debug_allowlisted(relative_path: str, containing_symbol: str) -> bool:
+    return relative_path == "Runtime/UnityConsoleLogSink.cs" or (
+        relative_path == "Runtime/DeucarianLog.cs"
+        and containing_symbol == "DeucarianLog::ReportSinkFailure"
+    )
 
 
 def debug_log_level(invocation_name: str) -> str:
@@ -1792,11 +1804,10 @@ This plan remains audit/governance-only. No production source, package dependenc
 
 ## Next Safe Steps
 
-1. Logging compliance migration.
-2. `com.deucarian.common` implementation.
-3. Shared package validation and reusable CI.
-4. Architecture enforcement and AGENTS.md.
-5. Remaining reviewed extraction candidates.
+1. `com.deucarian.common` implementation.
+2. Shared package validation and reusable CI.
+3. Architecture enforcement and AGENTS.md.
+4. Remaining reviewed extraction candidates.
 
 ## Still Not Done
 

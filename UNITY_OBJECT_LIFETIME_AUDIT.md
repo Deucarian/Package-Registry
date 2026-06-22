@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 51 |
+| direct Unity API call | 52 |
 | helper call site | 4 |
 | helper definition | 2 |
 
@@ -88,6 +88,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | UI-Binding | Tests/Editor/UIBindingSelectionVisualTests.cs | 25 | Test | direct Unity API call | Object.DestroyImmediate |
 | UI-Binding | Tests/Editor/UIBindingSelectionVisualTests.cs | 30 | Test | direct Unity API call | Object.DestroyImmediate |
 | UI-FLow | Runtime/Providers/UIFlowPrefabScreenProvider.cs | 78 | Runtime production | direct Unity API call | Object.Destroy |
+| UI-FLow | Tests/EditMode/UIFlowLogTests.cs | 32 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
 | UI-FLow | Tests/PlayMode/UIFlowRuntimeNavigationTests.cs | 24 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate |
 | UIBinding-CoreState-Integration | Tests/Editor/RepositoryUIBindingTests.cs | 26 | Test | direct Unity API call | Object.DestroyImmediate |
 | UIBinding-CoreState-Integration | Tests/Editor/RepositoryUIBindingTests.cs | 31 | Test | direct Unity API call | Object.DestroyImmediate |

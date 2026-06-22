@@ -331,7 +331,7 @@ class AuditFixture:
         write(repo / "README.md", "# Logging\n\nCurrent package version: 1.0.0\n\nThis is an adapter bridge for console output.")
         write_json(repo / "Runtime" / "Logging.asmdef", {"name": "Deucarian.Logging", "references": []})
         write(
-            repo / "Runtime" / "Logging.cs",
+            repo / "Runtime" / "UnityConsoleLogSink.cs",
             """
             namespace Fixture
             {
@@ -341,6 +341,21 @@ class AuditFixture:
                     {
                         UnityEngine.Debug.Log("allowed sink");
                         UnityEngine.Debug.LogWarning("allowed warning sink");
+                    }
+                }
+            }
+            """,
+        )
+        write(
+            repo / "Editor" / "DeucarianLoggingMenu.cs",
+            """
+            namespace Fixture
+            {
+                public static class DeucarianLoggingMenu
+                {
+                    public static void ResetLoggingSettings()
+                    {
+                        UnityEngine.Debug.Log("non-sink logging menu");
                     }
                 }
             }
@@ -421,6 +436,8 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         sink_warning = next(item for item in records if item["repository"] == "Logging" and item["invocation"] == "UnityEngine.Debug.LogWarning")
         self.assertEqual("Warning", sink_warning["logLevel"])
         self.assertEqual("Allowed", sink_warning["policyDisposition"])
+        menu_log = next(item for item in records if item["repository"] == "Logging" and item["file"] == "Editor/DeucarianLoggingMenu.cs")
+        self.assertEqual("Migrate", menu_log["policyDisposition"])
 
     def test_public_api_inventory_excludes_tests_and_internal_containing_types(self) -> None:
         report = self.build_fixture_report()
