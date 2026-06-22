@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-22",
+  "layers": [
+    {
+      "id": "common",
+      "packages": [
+        "com.deucarian.common"
+      ],
+      "status": "not-created"
+    },
+    {
+      "id": "foundation",
+      "packages": [
+        "com.deucarian.editor",
+        "com.deucarian.logging",
+        "com.deucarian.core-state"
+      ]
+    },
+    {
+      "id": "runtime-capabilities",
+      "packages": [
+        "com.deucarian.api",
+        "com.deucarian.session",
+        "com.deucarian.object-loading",
+        "com.deucarian.object-selection",
+        "com.deucarian.ui-binding",
+        "com.deucarian.ui-flow",
+        "com.deucarian.theming",
+        "com.deucarian.diagnostics"
+      ]
+    },
+    {
+      "id": "integrations",
+      "packages": [
+        "com.deucarian.session.api-integration",
+        "com.deucarian.object-loading.api-integration",
+        "com.deucarian.object-selection.core-state-integration",
+        "com.deucarian.ui-binding.core-state-integration"
+      ]
+    },
+    {
+      "id": "suites",
+      "packages": [
+        "com.deucarian.selection-suite"
+      ]
+    },
+    {
+      "id": "catalog-composition",
+      "packages": [
+        "com.deucarian.package-installer"
+      ]
+    }
+  ],
+  "exceptions": [
+    {
+      "packageId": "com.deucarian.bootstrap",
+      "reason": "Self-contained first-time setup package outside normal dependency graph."
+    },
+    {
+      "packageId": "com.deucarian.logging",
+      "dependency": "com.deucarian.editor",
+      "status": "review-required",
+      "reason": "Prompt requested explicit review of Logging -> Editor before allowing Editor to use Logging."
+    }
+  ],
+  "rules": [
+    "No cyclic package dependencies.",
+    "Runtime assemblies must not reference UnityEditor.",
+    "Common, if created, cannot depend on Logging or Editor.",
+    "Logging cannot depend on Diagnostics or telemetry.",
+    "Integration packages depend only on their targets plus Common/Logging when actually used.",
+    "Package Registry dependencies must match package.json direct Deucarian dependencies.",
+    "Assembly references must match package dependencies."
+  ]
+}
