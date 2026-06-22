@@ -39,7 +39,7 @@ Update `packages.json` when a package is added, removed, or gains an installer-v
 The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.
 Packages that declare another Deucarian package in their Unity `package.json` dependencies should also list that package here so dependency-first installation works from the installer.
 Packages that merely light up optional integration behavior should list that package in `optionalCompanions` instead of `dependencies`.
-Integration packages use `category` value `Integration`; the old bridge package IDs are replaced by `api-integration` and `core-state-integration` package IDs.
+Integration packages use `category` value `Integration`; legacy predecessor package IDs are replaced by `api-integration` and `core-state-integration` package IDs.
 
 ## Current categories
 
