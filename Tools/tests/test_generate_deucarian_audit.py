@@ -504,6 +504,53 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "HistoricalChangelogReference" for item in doc_findings))
         self.assertTrue(any(item["repository"] == "Logging" and item["kind"] == "LegitimateGenericBridgeTerm" for item in doc_findings))
 
+    def test_package_id_version_mentions_use_exact_package_id_boundaries(self) -> None:
+        text = """
+        README prose mentions com.deucarian.ui-binding 1.2.3.
+        Inline code mentions `com.deucarian.ui-binding`: `1.2.4`.
+        JSON dependencies may contain "com.deucarian.ui-binding": "1.2.5".
+        Package Registry entries may contain "id": "com.deucarian.ui-binding", "version": "1.2.6".
+        Longer IDs must remain separate: com.deucarian.ui-binding.core-state-integration 9.9.9.
+        """
+
+        self.assertEqual(
+            ["1.2.3", "1.2.4", "1.2.5", "1.2.6"],
+            audit.package_id_version_mentions(text, "com.deucarian.ui-binding"),
+        )
+        self.assertEqual(
+            ["9.9.9"],
+            audit.package_id_version_mentions(text, "com.deucarian.ui-binding.core-state-integration"),
+        )
+
+    def test_documentation_drift_does_not_match_package_id_prefixes(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            repo_root = Path(temp)
+            write(
+                repo_root / "README.md",
+                """
+                # UI Binding Consumer
+
+                Current package version: 1.0.0
+
+                Required dependency:
+                - com.deucarian.ui-binding 1.0.0
+
+                Related integration:
+                - com.deucarian.ui-binding.core-state-integration 9.9.9
+                """,
+            )
+            write(repo_root / "CHANGELOG.md", "# Changelog\n\n## 1.0.0\n- Fixture.")
+            repo = {
+                "name": "Consumer",
+                "packageId": "com.deucarian.consumer",
+                "packageVersion": "1.0.0",
+                "dependencies": {"com.deucarian.ui-binding": "1.0.0"},
+            }
+
+            findings = audit.documentation_drift(repo, repo_root, None)
+
+            self.assertFalse(any(item.get("kind") == "DependencyVersionDrift" for item in findings), findings)
+
     def test_lifetime_conclusion_records_common_and_testing_decisions(self) -> None:
         conclusion = audit.classify_lifetime_conclusion(
             [

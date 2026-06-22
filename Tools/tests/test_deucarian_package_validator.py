@@ -237,6 +237,191 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
             self.assertTrue(result["ok"], result["errors"])
 
+    def test_release_policy_allows_validation_workflow_on_push(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "validate.yml",
+                """
+                name: Validate
+                on:
+                  push:
+                    branches: [main, develop]
+                  pull_request:
+                jobs:
+                  validate:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - uses: actions/checkout@v4
+                      - run: python Tools/validate.py
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertEqual([], validator.errors)
+            self.assertEqual(0, validator.details["releasePolicy"]["releaseWorkflowCount"])
+
+    def test_release_policy_rejects_npm_publish_on_push(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "npm-stable.yml",
+                """
+                name: Publish
+                on:
+                  push:
+                    branches: [main]
+                jobs:
+                  publish:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - run: npm publish
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertTrue(any("must not run on push" in error for error in validator.errors))
+            self.assertEqual(1, validator.details["releasePolicy"]["publishWorkflowCount"])
+            self.assertEqual([".github/workflows/npm-stable.yml"], validator.details["releasePolicy"]["autoPublishViolations"])
+
+    def test_release_policy_rejects_tag_creation_on_push(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "release.yml",
+                """
+                name: Release
+                on:
+                  push:
+                    branches: [main]
+                jobs:
+                  release:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - run: git tag v1.2.3
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertTrue(any("must not run on push" in error for error in validator.errors))
+            self.assertEqual(1, validator.details["releasePolicy"]["releaseWorkflowCount"])
+
+    def test_release_policy_accepts_guarded_manual_publish_workflow(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "npm-development.yml",
+                f"""
+                name: Publish Preview
+                on:
+                  workflow_dispatch:
+                    inputs:
+                      confirm_release:
+                        description: "Type exactly: {validator_module.RELEASE_CONFIRMATION_TEXT}"
+                        required: true
+                        type: string
+                jobs:
+                  publish:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - run: npm publish --tag develop
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertEqual([], validator.errors)
+            self.assertEqual([".github/workflows/npm-development.yml"], validator.details["releasePolicy"]["guardedManualPublishWorkflows"])
+
+    def test_release_policy_counts_guarded_manual_release_artifact_workflow(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "release-package.yml",
+                f"""
+                name: Release Package Artifact
+                on:
+                  workflow_dispatch:
+                    inputs:
+                      confirm_release:
+                        description: "Type exactly: {validator_module.RELEASE_CONFIRMATION_TEXT}"
+                        required: true
+                        type: string
+                jobs:
+                  package:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - uses: actions/upload-artifact@v4
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertEqual([], validator.errors)
+            self.assertEqual(1, validator.details["releasePolicy"]["releaseWorkflowCount"])
+            self.assertEqual(0, validator.details["releasePolicy"]["publishWorkflowCount"])
+
+    def test_release_policy_rejects_unguarded_manual_publish_workflow(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / ".github" / "workflows" / "npm-development.yml",
+                """
+                name: Publish Preview
+                on:
+                  workflow_dispatch:
+                    inputs:
+                      mode:
+                        type: choice
+                        options: [dry-run, publish]
+                jobs:
+                  publish:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - run: npm publish --tag develop
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertTrue(any("must require confirm_release" in error for error in validator.errors))
+
+    def test_release_policy_detects_publish_through_package_script(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            package_json = json.loads((fixture.package / "package.json").read_text(encoding="utf-8"))
+            package_json["scripts"] = {"release:stable": "npm publish --access public"}
+            write_json(fixture.package / "package.json", package_json)
+            write(
+                fixture.package / ".github" / "workflows" / "npm-stable.yml",
+                """
+                name: Publish Stable
+                on:
+                  push:
+                    branches: [main]
+                jobs:
+                  publish:
+                    runs-on: ubuntu-latest
+                    steps:
+                      - run: npm run release:stable
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_release_workflow_policy(fixture.package)
+
+            self.assertEqual(1, validator.details["releasePolicy"]["publishWorkflowCount"])
+            self.assertTrue(any("must not run on push" in error for error in validator.errors))
+
 
 if __name__ == "__main__":
     unittest.main()

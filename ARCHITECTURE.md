@@ -7,8 +7,18 @@ This repository is the governance source for Deucarian Unity package metadata, c
 - `packages.json` defines installable packages, Installer-visible dependencies, Integration metadata, Suite metadata, and category/group placement.
 - `capabilities.json` defines which package owns each reusable capability.
 - `dependency-rules.json` defines the allowed package layering model.
+- `DISTRIBUTION_POLICY.md` defines active stable/development Git channels.
+- `RELEASE_POLICY.md` defines deferred npm/tag/release workflow policy.
 - `Tools/deucarian_package_validator.py` enforces package manifests, asmdefs, documentation, audit policy, and registry/catalog consistency.
 - Generated audit artifacts (`*_AUDIT.json`, `DUPLICATION_REPORT.json`) describe current organization state and must stay in sync.
+
+## Distribution And Release
+
+- `main` is the stable Git distribution channel through registry `stableUrl` values.
+- `develop` is the development Git distribution channel through registry `developmentUrl` values.
+- npm/scoped-registry publication is deferred and must not run during branch promotion.
+- Git tags and GitHub releases are deferred and must not be created automatically.
+- Future npm, tag, or GitHub release publication requires a separate deliberate release wave.
 
 ## Package Roles
 

@@ -41,6 +41,19 @@ HELPER_DEFINITION_RE = re.compile(
     r"(?P<name>DestroyUnityObjectSafely|DestroyUnityObject|SafeDestroy|DestroySafely|DestroyObject|DestroyItem)\s*\(",
     re.M,
 )
+RELEASE_CONFIRMATION_TEXT = "I understand this publishes a Deucarian package"
+WORKFLOW_FILE_RE = re.compile(r"\.ya?ml$", re.I)
+NPM_PUBLISH_RE = re.compile(r"\bnpm\s+publish\b", re.I)
+NPM_TOKEN_RE = re.compile(r"\b(?:NPM_TOKEN|NODE_AUTH_TOKEN)\b")
+TRUSTED_PUBLISHING_RE = re.compile(r"\bid-token\s*:\s*write\b", re.I)
+GIT_TAG_RE = re.compile(r"\bgit\s+tag\b", re.I)
+GITHUB_RELEASE_RE = re.compile(r"\bgh\s+release\b|actions/create-release|softprops/action-gh-release", re.I)
+GIT_RELEASE_PREP_RE = re.compile(r"\bgit\s+(?:commit|push)\b", re.I)
+WORKFLOW_PUSH_RE = re.compile(r"^\s*push\s*:|\bon\s*:\s*\[[^\]]*\bpush\b|^\s*on\s*:\s*push\s*$", re.I | re.M)
+WORKFLOW_DISPATCH_RE = re.compile(r"^\s*workflow_dispatch\s*:|\bon\s*:\s*\[[^\]]*\bworkflow_dispatch\b|^\s*on\s*:\s*workflow_dispatch\s*$", re.I | re.M)
+WORKFLOW_TAG_TRIGGER_RE = re.compile(r"^\s*tags\s*:", re.I | re.M)
+RELEASE_ARTIFACT_RE = re.compile(r"\brelease\b|upload-artifact|git\s+archive|Compress-Archive", re.I)
+RELEASE_WORKFLOW_NAME_RE = re.compile(r"^\s*name\s*:\s*.*\brelease\b", re.I | re.M)
 
 
 class ValidationError(Exception):
@@ -206,6 +219,7 @@ class Validator:
         self.validate_asmdef_dependencies(package_id, dependencies, config, asmdefs)
         self.validate_samples(root, config, asmdefs)
         self.validate_generated_files(root)
+        self.validate_release_workflow_policy(root)
         self.validate_architecture_calls(package_id, config, root)
         self.validate_capability_ownership(package_id, config)
         self.validate_registry_entry(package_id, dependencies)
@@ -425,6 +439,83 @@ class Validator:
         self.validate_dependency_rules_schema()
         self.validate_authoritative_audit_artifacts()
         self.validate_catalog_sync()
+        self.validate_release_workflow_policy(self.registry_root)
+
+    def validate_release_workflow_policy(self, root: Path) -> None:
+        workflows_root = root / ".github" / "workflows"
+        summary: dict[str, Any] = {
+            "releaseWorkflowCount": 0,
+            "publishWorkflowCount": 0,
+            "autoPublishViolations": [],
+            "manualPublishWorkflows": [],
+            "guardedManualPublishWorkflows": [],
+        }
+        if not workflows_root.exists():
+            self.details["releasePolicy"] = summary
+            return
+
+        publish_scripts = self.package_publish_scripts(root)
+        for path in sorted(workflows_root.iterdir(), key=lambda item: item.name.lower()):
+            if not path.is_file() or not WORKFLOW_FILE_RE.search(path.name):
+                continue
+            text = self.text(path)
+            relative = self.display_path(path)
+            uses_publish_script = self.workflow_invokes_publish_script(text, publish_scripts)
+            can_publish = bool(
+                NPM_PUBLISH_RE.search(text)
+                or NPM_TOKEN_RE.search(text)
+                or TRUSTED_PUBLISHING_RE.search(text)
+                or uses_publish_script
+            )
+            creates_release_artifact = bool(
+                GIT_TAG_RE.search(text)
+                or GITHUB_RELEASE_RE.search(text)
+                or (WORKFLOW_TAG_TRIGGER_RE.search(text) and RELEASE_ARTIFACT_RE.search(text))
+                or (RELEASE_WORKFLOW_NAME_RE.search(text) and RELEASE_ARTIFACT_RE.search(text))
+            )
+            commits_release_prep = bool(GIT_RELEASE_PREP_RE.search(text))
+            is_release_workflow = can_publish or creates_release_artifact or commits_release_prep
+            if not is_release_workflow:
+                continue
+
+            summary["releaseWorkflowCount"] += 1
+            has_push_trigger = bool(WORKFLOW_PUSH_RE.search(text))
+            has_manual_trigger = bool(WORKFLOW_DISPATCH_RE.search(text))
+            has_confirmation = "confirm_release" in text and RELEASE_CONFIRMATION_TEXT in text
+
+            if can_publish:
+                summary["publishWorkflowCount"] += 1
+                summary["manualPublishWorkflows"].append(relative)
+
+            if has_push_trigger:
+                summary["autoPublishViolations"].append(relative)
+                self.fail(f"{relative}: release/publish workflow must not run on push.")
+            if can_publish and not has_manual_trigger:
+                self.fail(f"{relative}: publish-capable workflow must be workflow_dispatch only.")
+            if is_release_workflow and has_manual_trigger and not has_confirmation:
+                self.fail(f"{relative}: release/publish workflow must require confirm_release with exact text {RELEASE_CONFIRMATION_TEXT!r}.")
+            if can_publish and has_manual_trigger and has_confirmation and not has_push_trigger:
+                summary["guardedManualPublishWorkflows"].append(relative)
+
+        for key in ("autoPublishViolations", "manualPublishWorkflows", "guardedManualPublishWorkflows"):
+            summary[key] = sorted(summary[key])
+        self.details["releasePolicy"] = summary
+
+    def package_publish_scripts(self, root: Path) -> set[str]:
+        package_json = self.read_json(root / "package.json", required=False)
+        if not isinstance(package_json, dict):
+            return set()
+        scripts = package_json.get("scripts") or {}
+        if not isinstance(scripts, dict):
+            return set()
+        return {str(name) for name, command in scripts.items() if isinstance(command, str) and NPM_PUBLISH_RE.search(command)}
+
+    def workflow_invokes_publish_script(self, text: str, publish_scripts: set[str]) -> bool:
+        for script in publish_scripts:
+            script_pattern = re.escape(script)
+            if re.search(rf"\bnpm\s+(?:run|run-script)\s+{script_pattern}(?:\s|$)", text, re.I):
+                return True
+        return False
 
     def validate_authoritative_audit_artifacts(self) -> None:
         for finding in self.dependency_usage_audit.get("findings", []):

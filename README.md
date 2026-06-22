@@ -16,10 +16,20 @@ Auto-discovery is intentionally avoided because it creates ambiguity around arch
 
 Update `packages.json` when a package is added, removed, or gains an installer-visible dependency. Keep the Package Installer bundled fallback registry in sync when bootstrap behavior depends on the package list.
 
+## Distribution Policy
+
+Current stable distribution uses Git URLs pinned to `#main`. Current development distribution uses Git URLs pinned to `#develop`.
+
+npm/scoped-registry publishing, Git tags, and GitHub releases are deferred for now. Use Git URLs until a separate deliberate release wave enables another channel.
+
+Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Package Installer consumes the registry and its bundled fallback catalog.
+
 ## Architecture / Contributor Notes
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) defines practical package roles and reuse rules.
 - [CAPABILITY_OWNERSHIP.md](CAPABILITY_OWNERSHIP.md) lists owner packages for shared capabilities.
+- [DISTRIBUTION_POLICY.md](DISTRIBUTION_POLICY.md) defines active Git-only package distribution.
+- [RELEASE_POLICY.md](RELEASE_POLICY.md) defines deferred npm/tag/release policy and workflow requirements.
 - [DEPENDENCY_RULES.md](DEPENDENCY_RULES.md) explains allowed dependency layering.
 - [CONTRIBUTING.md](CONTRIBUTING.md) describes validation and contribution workflow.
 - [AGENTS.md](AGENTS.md) gives Codex and automation-specific repository guidance.
