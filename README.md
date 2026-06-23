@@ -46,7 +46,7 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `stableUrl`: GitHub HTTPS Unity Package Manager URL for the stable install channel. Mature packages normally use `#main`; pre-stable bootstrap packages may temporarily point this at a verified development branch when `main` does not exist yet.
 - `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development install channel.
 - `dependencies`: Package IDs that must also exist in this registry and should be installed first by the Package Installer.
-- `groupId`: Optional Package Installer Ecosystem Graph structural group ID. Supported top-level IDs are `infrastructure`, `state-data`, `runtime-services`, `experience-interaction`, `tools-quality`, `integrations`, `gameplay`, and `suites`.
+- `groupId`: Optional Package Installer Ecosystem Graph structural group ID. Supported top-level IDs are `infrastructure`, `state-data`, `runtime-services`, `experience-interaction`, `tools-quality`, `integrations`, `gameplay`, `suites`, and `templates`.
 - `ecosystemGroup`: Legacy Package Installer overview-wheel sector override retained for older installers. Prefer `groupId` for new entries.
 - `overviewOrder`: Optional positive integer used to order packages within their semantic overview sector.
 - `optionalCompanions`: Package IDs that are useful optional add-ons but must not be installed automatically as dependencies.
@@ -82,11 +82,14 @@ Gameplay
 ├── Simulation
 └── Genre Frameworks
 Suites
+Templates
+└── Games
+    └── Idle Auto Defense
 ```
 
-The Phase 1Z gameplay packages use a pre-stable bootstrap URL policy because their GitHub repositories do not yet have `main` branches. For those entries, `stableUrl` and `developmentUrl` intentionally point to the same verified pushed phase branch. Replace those stable URLs with `#main` only after the corresponding package repository has a real `main` branch.
+The Phase 1Z gameplay packages and Phase 2B Idle Auto Defense template use a pre-stable bootstrap URL policy because their GitHub repositories do not yet have `main` branches. For those entries, `stableUrl` and `developmentUrl` intentionally point to the same verified pushed phase branch. Replace those stable URLs with `#main` only after the corresponding package repository has a real `main` branch.
 
-The planned `Templates > Games` registry group is intentionally not active yet because no template package entry exists in this phase.
+The `Templates > Games > Idle Auto Defense` group is active for starter game template packages. Template entries are installable packages, but they are categorized separately from runtime, tooling, integration, and suite packages.
 
 ## Current categories
 
@@ -98,6 +101,7 @@ The planned `Templates > Games` registry group is intentionally not active yet b
 - `Tools`: developer-facing installer, diagnostics, and package tooling.
 - `Integration`: explicit integration packages between two package owners.
 - `Suites`: curated bundles that install a complete stack through declared dependencies.
+- `Templates`: starter projects, samples, and full game foundations that depend on curated runtime suites.
 
 ## License
 
