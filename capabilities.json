@@ -30,6 +30,11 @@
       "ownerPackageId": "com.deucarian.editor"
     },
     {
+      "description": "Shared game content authoring editor window, provider registration/discovery, validation display, asset path helpers, and creation-result UI.",
+      "id": "game-content-authoring",
+      "ownerPackageId": "com.deucarian.game-content-authoring"
+    },
+    {
       "description": "General HTTP/API request construction, transport, serialization, authentication, and cancellation.",
       "id": "api-http-client",
       "ownerPackageId": "com.deucarian.api"
