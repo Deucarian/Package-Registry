@@ -84,12 +84,14 @@ Gameplay
 Suites
 Templates
 └── Games
-    └── Idle Auto Defense
+    ├── Idle Auto Defense
+    ├── Survivors
+    └── Movement FPS
 ```
 
-The Phase 1Z gameplay packages and Phase 2B Idle Auto Defense template use a pre-stable bootstrap URL policy because their GitHub repositories do not yet have `main` branches. For those entries, `stableUrl` and `developmentUrl` intentionally point to the same verified pushed phase branch. Replace those stable URLs with `#main` only after the corresponding package repository has a real `main` branch.
+Promoted gameplay packages and starter templates use stable Git `#main` URLs and development Git `#develop` URLs. Use temporary same-branch stable and development URLs only for future pre-stable bootstrap packages whose repositories do not yet have `main` branches.
 
-The `Templates > Games > Idle Auto Defense` group is active for starter game template packages. Template entries are installable packages, but they are categorized separately from runtime, tooling, integration, and suite packages.
+The `Templates > Games` groups are active for starter game template packages such as Idle Auto Defense, Survivors, and Movement FPS. Template entries are installable packages, but they are categorized separately from runtime, tooling, integration, and suite packages.
 
 ## Current categories
 
