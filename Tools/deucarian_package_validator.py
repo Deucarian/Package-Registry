@@ -413,9 +413,13 @@ class Validator:
             text = self.strip_comments_and_strings(self.text(path))
             for match in re.finditer(r"\bpublic\s+(?:static\s+)?[A-Za-z0-9_<>,.\[\] ]+\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(", text):
                 public_methods.append((path.relative_to(root).as_posix(), match.group(1)))
-        approved = [item for item in public_methods if item == ("Runtime/UnityObjectUtility.cs", "DestroySafely")]
+        approved_public_methods = {
+            ("Runtime/UnityObjectUtility.cs", "DestroySafely"),
+            ("Runtime/DeucarianEasing.cs", "Evaluate"),
+        }
+        approved = [item for item in public_methods if item in approved_public_methods]
         extras = [item for item in public_methods if item not in approved]
-        if len(approved) != 1 or extras:
+        if len(approved) != len(approved_public_methods) or extras:
             self.fail(f"com.deucarian.common exposes unexpected public methods: {public_methods}.")
 
     def validate_registry_entry(self, package_id: str, dependencies: dict[str, str]) -> None:
