@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
 | Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
-| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; Idle Auto Defense, Movement FPS, and Survivors now have template front-door README polish; remaining work is broader README normalization, deeper template UX polish beyond README onboarding, and manual branch/default cleanup. |
+| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; broad README front-door normalization has been added to clean package branches; remaining work is deeper Unity/template playability verification, screenshots or GIFs, Bootstrap catalog modeling, and manual branch/default cleanup. |
 
 ## Local Checkout Coverage
 
@@ -125,11 +125,15 @@ Manifest repository URL gaps with draft PRs from this polish pass:
 | --- | --- | --- |
 | None | All URL-only package PRs opened earlier in this pass have been upgraded to validator-backed skeleton PRs. | N/A |
 
-Deferred exact-checkout polish:
+Additional README/front-door PRs completed after skeleton coverage:
 
-| Repository | Current state | Follow-up |
+| Repository | Gap addressed | Draft PR |
 | --- | --- | --- |
-| ObjectLoading-API-Integration | Exact checkout is present and registry alignment passes; `AGENTS.md`, `deucarian-package.json`, and Unity metadata are present, but README/workflow polish remains. | Resolve branch/default-branch hygiene first because `origin/main` contains Unity metadata commit `78341b9` that is not on `origin/develop`. |
+| API | Added explicit README guidance for when to use the API package and which ownership boundaries remain with Session, Object Loading, Package Installer, gameplay packages, and Common. | `https://github.com/Deucarian/API/pull/5` |
+| ObjectLoading-API-Integration | Added README front-door guidance for use boundaries, stable/development install snippets, quick start, validation, and troubleshooting. | `https://github.com/Deucarian/ObjectLoading-API-Integration/pull/1` |
+| Package-Installer | Added Package Installer README troubleshooting notes as part of the installer front-door polish branch. | `https://github.com/Deucarian/Package-Installer/pull/1` |
+
+README front-door normalization was also added to the existing draft package branches for: `Game-Content-Authoring`, `Monetization`, `Object-Loading`, `Session-API-Integration`, `UIBinding-CoreState-Integration`, `ObjectSelection-CoreState-Integration`, `Selection-Suite`, `Gameplay-Foundation`, `Persistence`, `Progression`, `Run-Upgrades`, `Idle-Progression`, `Combat`, `Encounters`, `World-Spawning`, `World-Navigation`, `Attacks`, `Projectiles`, `Weapon-Systems`, `Defense-Games`, `Auto-Defense`, `Test-Automation`, and `Auto-Defense-Suite`. Each branch was validated with the shared package validator plus whitespace checks before push.
 
 Remaining notable local checkout gaps from the scout pass:
 
@@ -173,7 +177,7 @@ python Tools/check_registry_manifest_alignment.py --registry-root . --audit-root
 ## Next Phase Recommendations
 
 1. Fix GitHub default branches listed in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`.
-2. Add missing `deucarian-package.json`, `AGENTS.md`, and shared `package-validation.yml` files to gameplay/template packages package-by-package.
-3. Continue README normalization after each package skeleton validates; Idle Auto Defense, Movement FPS, and Survivors root/sample READMEs now cover install, play, controls or in-game actions, customization, validation, media placeholders, and troubleshooting.
-4. Resolve `ObjectLoading-API-Integration` branch/default-branch hygiene before README/workflow polish there.
+2. Review and merge the draft package skeleton and README PRs, then prune stale `codex/*` branches only after maintainers confirm they are no longer needed.
+3. Run Unity Editor playability checks for the three templates, add real screenshots or GIFs, and verify sample import paths in a clean Unity project.
+4. Decide whether Bootstrap remains setup-only outside `packages.json` or should be modeled explicitly in Package Registry without making Package Installer own bootstrap setup behavior.
 5. Re-check Package Installer and Bootstrap fallback catalogs whenever `packages.json` changes.

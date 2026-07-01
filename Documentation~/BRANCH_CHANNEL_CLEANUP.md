@@ -2,7 +2,7 @@
 
 Audit date: 2026-07-01
 
-Source: GitHub REST repository and branch metadata for `Deucarian` public repositories, queried from this workspace. The API response available here reported no admin or push permission, so default branch changes were not attempted.
+Source: GitHub REST repository and branch metadata for `Deucarian` public repositories, queried from this workspace. The API response available here reported no admin or push permission, and the available GitHub connector did not expose a repository-settings write operation, so default branch changes remain a manual admin action.
 
 ## Policy
 
