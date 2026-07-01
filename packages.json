@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-07-01",
   "groups": [
     {
       "id": "infrastructure",
@@ -348,6 +348,22 @@
       "groupId": "ui-presentation"
     },
     {
+      "id": "com.deucarian.ui",
+      "displayName": "Deucarian UI",
+      "category": "UI",
+      "type": "Core",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 12,
+      "description": "Reusable Deucarian UI motion, glass, icon, control island, and UI Toolkit/uGUI presentation primitives.",
+      "stableUrl": "https://github.com/Deucarian/UI.git#main",
+      "developmentUrl": "https://github.com/Deucarian/UI.git#develop",
+      "dependencies": [
+        "com.deucarian.common",
+        "com.deucarian.theming"
+      ],
+      "groupId": "ui-presentation"
+    },
+    {
       "id": "com.deucarian.ui-flow",
       "displayName": "Deucarian UI Flow",
       "category": "UI",
@@ -378,6 +394,21 @@
         "com.deucarian.logging"
       ],
       "groupId": "ui-presentation"
+    },
+    {
+      "id": "com.deucarian.camera-navigation",
+      "displayName": "Deucarian Camera Navigation",
+      "category": "World",
+      "type": "Core",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 25,
+      "description": "Reusable camera pose, framing, transition, orbit, fly, top-down, and waypoint navigation primitives.",
+      "stableUrl": "https://github.com/Deucarian/Camera-Navigation.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Camera-Navigation.git#develop",
+      "dependencies": [
+        "com.deucarian.common"
+      ],
+      "groupId": "world-interaction"
     },
     {
       "id": "com.deucarian.object-selection",

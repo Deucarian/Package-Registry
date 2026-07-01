@@ -60,6 +60,16 @@
       "ownerPackageId": "com.deucarian.ui-binding"
     },
     {
+      "description": "Reusable UI Toolkit and uGUI glass panels, icon buttons, control islands, scrubbers, and presentation chrome.",
+      "id": "ui-presentation-primitives",
+      "ownerPackageId": "com.deucarian.ui"
+    },
+    {
+      "description": "Reusable UI motion profiles, animated visibility, and cancellable icon/content reveal helpers.",
+      "id": "ui-motion",
+      "ownerPackageId": "com.deucarian.ui"
+    },
+    {
       "description": "UI routing, screens, channels, modals, guards, transitions, and back navigation.",
       "id": "ui-flow",
       "ownerPackageId": "com.deucarian.ui-flow"
@@ -73,6 +83,11 @@
       "description": "Runtime palettes, theme assets, color roles, and UI theme adapters.",
       "id": "runtime-theming",
       "ownerPackageId": "com.deucarian.theming"
+    },
+    {
+      "description": "Camera pose capture/apply, bounds framing, camera movement, orbit/fly controls, projection transitions, and waypoint navigation.",
+      "id": "camera-navigation",
+      "ownerPackageId": "com.deucarian.camera-navigation"
     },
     {
       "description": "Diagnostics providers, snapshots, JSON export, overlays, and aggregation.",
@@ -114,6 +129,25 @@
         "Object.DestroyImmediate"
       ],
       "id": "unity-object-lifetime",
+      "ownerPackageId": "com.deucarian.common",
+      "status": "Implemented in com.deucarian.common"
+    },
+    {
+      "apiProposal": [
+        "DeucarianEasingUtility.Evaluate(DeucarianEasing easing, float value)"
+      ],
+      "canonicalSymbols": [
+        "Deucarian.Common.DeucarianEasing",
+        "Deucarian.Common.DeucarianEasingUtility.Evaluate"
+      ],
+      "description": "Shared normalized easing presets used by Deucarian package-owned motion systems.",
+      "exceptions": [
+        {
+          "packageId": "com.deucarian.common",
+          "reason": "Owns the canonical easing implementation."
+        }
+      ],
+      "id": "shared-motion-easing",
       "ownerPackageId": "com.deucarian.common",
       "status": "Implemented in com.deucarian.common"
     }
