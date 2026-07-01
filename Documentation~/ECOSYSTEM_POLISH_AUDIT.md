@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata; the same branch now also standardizes installer front-door docs and `main` workflow coverage. |
 | Registry/manifest mismatch | No mismatch remains for the 12 locally matched package manifests after refreshing stale local checkouts. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | 31 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
-| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Editor, Object Loading, Theming, UI, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs; remaining gaps are recorded below. |
+| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Editor, Logging, Object Loading, Theming, UI, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs; remaining gaps are recorded below. |
 
 ## Local Checkout Coverage
 
@@ -52,6 +52,7 @@ Package skeleton gaps with draft PRs from this polish pass:
 | Common | Added README polish, `main` workflow coverage, and synchronized AGENTS ownership notes with approved shared motion easing primitives. | `https://github.com/Deucarian/Common/pull/1` |
 | Diagnostics | Fast-forwarded the stale local checkout to upstream skeleton work, then added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Diagnostics/pull/1` |
 | Editor | Added README polish and `main` workflow coverage while preserving shared editor shell API and UX standards guidance. | `https://github.com/Deucarian/Editor/pull/3` |
+| Logging | Added README polish and `main` workflow coverage from a clean worktree off `origin/develop`, leaving the existing dirty local codex worktree untouched. | `https://github.com/Deucarian/Logging/pull/1` |
 | Object-Loading | Added README polish, stable/development Git install guidance, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Object-Loading/pull/1` |
 | Theming | Added README polish, stable/development Git install guidance, validation notes, and `main` workflow coverage while preserving detailed palette/theme workflows. | `https://github.com/Deucarian/Theming/pull/1` |
 | UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
@@ -63,7 +64,6 @@ Remaining notable local checkout gaps from the scout pass:
 | Repository | Gap |
 | --- | --- |
 | Core-State | Local checkout is a fork remote; missing `AGENTS.md`; missing `CHANGELOG.md`; missing `LICENSE.md`; missing `deucarian-package.json`. |
-| Logging | Local checkout is dirty and on a `codex/*` branch; missing `AGENTS.md`; missing `deucarian-package.json`. |
 
 Catalog follow-up:
 
