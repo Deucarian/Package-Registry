@@ -18,7 +18,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Severity | Finding | Status |
 | --- | --- | --- |
 | Branch hygiene | 18 public repositories have a temporary `codex/*` default branch. | Documented in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`; requires GitHub admin action. |
-| Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata. |
+| Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata; the same branch now also standardizes installer front-door docs and `main` workflow coverage. |
 | Registry/manifest mismatch | No mismatch remains for the 12 locally matched package manifests after refreshing stale local checkouts. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | 31 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
 | Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Editor, Object Loading, Theming, UI, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs; remaining gaps are recorded below. |
