@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
 | Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
-| Package skeleton gaps | Some local checkouts still lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Infrastructure/integration docs and workflow gaps have draft PRs; Gameplay Foundation, Persistence, Progression, Run Upgrades, Idle Progression, Combat, Encounters, World Spawning, World Navigation, Attacks, Projectiles, Weapon Systems, Defense Games, Auto Defense, Auto Defense Suite, Test Automation, Game Content Authoring, Monetization, and Idle Auto Defense Template now have validation skeleton PRs; remaining template skeleton work should proceed package-by-package after branch/default cleanup. |
+| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; remaining work is README normalization, deeper template UX polish, and manual branch/default cleanup. |
 
 ## Local Checkout Coverage
 
@@ -105,6 +105,8 @@ Package skeleton gaps with draft PRs from this polish pass:
 | Session | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session/pull/1` |
 | Session-API-Integration | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session-API-Integration/pull/1` |
 | Template-Game-Idle-Auto-Defense | Added `AGENTS.md`, shared `package-validation.yml`, Unity metadata for the guidance file, and synchronized config dependencies with `package.json`. | `https://github.com/Deucarian/Template-Game-Idle-Auto-Defense/pull/1` |
+| Template-Game-Movement-FPS | Added `LICENSE.md`, `CHANGELOG.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for new guidance files, manifest repository metadata, and Common-backed local template runtime cleanup. | `https://github.com/Deucarian/Template-Game-Movement-FPS/pull/1` |
+| Template-Game-Survivors | Added `LICENSE.md`, `CHANGELOG.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for new guidance files, manifest repository metadata, and Common-backed local template runtime cleanup. | `https://github.com/Deucarian/Template-Game-Survivors/pull/1` |
 | Test-Automation | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, an explicit empty dependency manifest, and guidance for the Unity TestAssemblies runner exception. | `https://github.com/Deucarian/Test-Automation/pull/1` |
 | Theming | Added README polish, stable/development Git install guidance, validation notes, and `main` workflow coverage while preserving detailed palette/theme workflows. | `https://github.com/Deucarian/Theming/pull/1` |
 | UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
@@ -121,8 +123,7 @@ Manifest repository URL gaps with draft PRs from this polish pass:
 
 | Repository | Gap addressed | Draft PR |
 | --- | --- | --- |
-| Template-Game-Movement-FPS | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Movement-FPS/pull/1` |
-| Template-Game-Survivors | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Survivors/pull/1` |
+| None | All URL-only package PRs opened earlier in this pass have been upgraded to validator-backed skeleton PRs. | N/A |
 
 Deferred exact-checkout polish:
 
@@ -139,6 +140,7 @@ Catalog follow-up completed in this pass:
 
 - Package Registry and Package Installer fallback dependencies now match direct Deucarian dependencies in local `package.json` manifests for `Attacks`, `Run-Upgrades`, `Weapon-Systems`, `Template-Game-Idle-Auto-Defense`, and `Template-Game-Movement-FPS`.
 - `World-Spawning` now declares `com.deucarian.common` across `package.json`, Package Registry, and Package Installer fallback metadata because production cleanup uses Common's approved `UnityObjectUtility.DestroySafely`.
+- `Template-Game-Movement-FPS` and `Template-Game-Survivors` now declare `com.deucarian.common` across `package.json`, Package Registry, and Package Installer fallback metadata because local template runtime cleanup uses Common's approved `UnityObjectUtility.DestroySafely`.
 - `Tools/check_registry_manifest_alignment.py --registry-root . --audit-root C:/Repositories --json` now reports 43 checked packages, no missing checkouts, no findings, and no warnings.
 
 Remaining catalog follow-up:
