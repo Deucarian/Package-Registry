@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
 | Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
-| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; broad README front-door normalization has been added to clean package branches; remaining work is deeper Unity/template playability verification, screenshots or GIFs, Bootstrap catalog modeling, and manual branch/default cleanup. |
+| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; broad README front-door normalization and explicit validation/license footer cleanup have been added to clean package branches; remaining work is deeper Unity/template playability verification, screenshots or GIFs, Bootstrap catalog modeling, and manual branch/default cleanup. |
 
 ## Local Checkout Coverage
 
@@ -134,6 +134,8 @@ Additional README/front-door PRs completed after skeleton coverage:
 | Package-Installer | Added Package Installer README troubleshooting notes as part of the installer front-door polish branch. | `https://github.com/Deucarian/Package-Installer/pull/1` |
 
 README front-door normalization was also added to the existing draft package branches for: `Game-Content-Authoring`, `Monetization`, `Object-Loading`, `Session-API-Integration`, `UIBinding-CoreState-Integration`, `ObjectSelection-CoreState-Integration`, `Selection-Suite`, `Gameplay-Foundation`, `Persistence`, `Progression`, `Run-Upgrades`, `Idle-Progression`, `Combat`, `Encounters`, `World-Spawning`, `World-Navigation`, `Attacks`, `Projectiles`, `Weapon-Systems`, `Defense-Games`, `Auto-Defense`, `Test-Automation`, and `Auto-Defense-Suite`. Each branch was validated with the shared package validator plus whitespace checks before push.
+
+A final footer pass added explicit `Validation` and/or `License` README sections, or promoted template content validation under an explicit `Validation` heading, for `Gameplay-Foundation`, `Persistence`, `Combat`, `Encounters`, `World-Spawning`, `Auto-Defense`, `Auto-Defense-Suite`, `Game-Content-Authoring`, `Test-Automation`, `Monetization`, `Template-Game-Survivors`, and `Template-Game-Movement-FPS`.
 
 Remaining notable local checkout gaps from the scout pass:
 
