@@ -19,13 +19,13 @@ The GitHub API response available to this environment reported `admin=false` and
 | --- | --- | --- |
 | Branch hygiene | 18 public repositories have a temporary `codex/*` default branch. | Documented in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`; requires GitHub admin action. |
 | Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata; the same branch now also standardizes installer front-door docs and `main` workflow coverage. |
-| Registry/manifest mismatch | No mismatch remains for the 17 locally matched package manifests after refreshing/cloning exact local checkouts. | Keep using the alignment checker before registry/fallback updates. |
-| Missing local coverage | 26 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
-| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Core State, Editor, Logging, Object Loading, Object Selection, Session, Theming, UI, UI Binding, UI Flow, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs. |
+| Registry/manifest mismatch | No mismatch remains for the 22 locally matched package manifests after refreshing/cloning exact local checkouts. | Keep using the alignment checker before registry/fallback updates. |
+| Missing local coverage | 21 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
+| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Core State, Editor, Logging, Object Loading, Object Selection, Session, Session API Integration, Theming, UI, UI Binding, UI Binding Core State Integration, UI Flow, Object Selection Core State Integration, Selection Suite, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs. Object Loading API Integration is alignment-clean but deferred pending branch hygiene. |
 
 ## Local Checkout Coverage
 
-The alignment checker matched 17 package manifests from local checkouts and skipped 26 packages whose exact Deucarian checkout was not present locally.
+The alignment checker matched 22 package manifests from local checkouts and skipped 21 packages whose exact Deucarian checkout was not present locally.
 
 Matched package checkouts:
 
@@ -37,16 +37,20 @@ Matched package checkouts:
 - `com.deucarian.editor`
 - `com.deucarian.logging`
 - `com.deucarian.object-loading`
+- `com.deucarian.object-loading.api-integration`
 - `com.deucarian.object-selection`
+- `com.deucarian.object-selection.core-state-integration`
 - `com.deucarian.package-installer`
+- `com.deucarian.selection-suite`
 - `com.deucarian.session`
+- `com.deucarian.session.api-integration`
 - `com.deucarian.theming`
 - `com.deucarian.ui`
 - `com.deucarian.ui-binding`
+- `com.deucarian.ui-binding.core-state-integration`
 - `com.deucarian.ui-flow`
 - `com.deucarian.xr-ui`
 - `com.deucarian.xr-ui.theming-integration`
-- one legacy local bridge checkout was present but does not satisfy the exact current `ObjectLoading-API-Integration` repo name.
 
 Package skeleton gaps with draft PRs from this polish pass:
 
@@ -61,18 +65,28 @@ Package skeleton gaps with draft PRs from this polish pass:
 | Logging | Added README polish and `main` workflow coverage from a clean worktree off `origin/develop`, leaving the existing dirty local codex worktree untouched. | `https://github.com/Deucarian/Logging/pull/1` |
 | Object-Loading | Added README polish, stable/development Git install guidance, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Object-Loading/pull/1` |
 | Object-Selection | Added README polish, corrected hyphenated Git/local paths, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Object-Selection/pull/1` |
+| ObjectSelection-CoreState-Integration | Added README polish, corrected exact local checkout paths, updated validation guidance, and Unity metadata for the guidance file. | `https://github.com/Deucarian/ObjectSelection-CoreState-Integration/pull/1` |
+| Selection-Suite | Added README polish, stable/development Git install guidance, troubleshooting notes, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Selection-Suite/pull/1` |
 | Session | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session/pull/1` |
+| Session-API-Integration | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session-API-Integration/pull/1` |
 | Theming | Added README polish, stable/development Git install guidance, validation notes, and `main` workflow coverage while preserving detailed palette/theme workflows. | `https://github.com/Deucarian/Theming/pull/1` |
 | UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
 | UI-Binding | Added README polish, stable/development Git install guidance, corrected local checkout path, and Unity metadata for the guidance file. | `https://github.com/Deucarian/UI-Binding/pull/1` |
+| UIBinding-CoreState-Integration | Added README polish, corrected exact local checkout paths, added `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/UIBinding-CoreState-Integration/pull/1` |
 | UI-FLow | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file while preserving the existing repository capitalization. | `https://github.com/Deucarian/UI-FLow/pull/1` |
 | XR-UI | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI/pull/1` |
 | XR-UI-Theming-Integration | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI-Theming-Integration/pull/1` |
 
+Deferred exact-checkout polish:
+
+| Repository | Current state | Follow-up |
+| --- | --- | --- |
+| ObjectLoading-API-Integration | Exact checkout is present and registry alignment passes; `AGENTS.md`, `deucarian-package.json`, and Unity metadata are present, but README/workflow polish remains. | Resolve branch/default-branch hygiene first because `origin/main` contains Unity metadata commit `78341b9` that is not on `origin/develop`. |
+
 Remaining notable local checkout gaps from the scout pass:
 
-- No remaining exact local checkout skeleton gap is known after the current draft PR set.
-- Non-exact local fork/legacy checkouts such as `ObjectSelection` and bridge-era repositories still require exact Deucarian checkouts before strict package-level patching.
+- 21 registry packages still do not have exact local checkouts under `C:/Repositories`; the alignment checker skips these as warnings unless `--require-checkouts` is used.
+- Non-exact local fork/legacy checkouts such as `ObjectSelection` still require exact Deucarian checkouts before strict package-level patching.
 
 Catalog follow-up:
 
