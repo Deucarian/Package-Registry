@@ -85,6 +85,11 @@
       "ownerPackageId": "com.deucarian.theming"
     },
     {
+      "description": "XR-ready world-space uGUI pressable controls, poke affordances, and world canvas event-camera helpers.",
+      "id": "xr-world-ui-controls",
+      "ownerPackageId": "com.deucarian.xr-ui"
+    },
+    {
       "description": "Camera pose capture/apply, bounds framing, camera movement, orbit/fly controls, projection transitions, and waypoint navigation.",
       "id": "camera-navigation",
       "ownerPackageId": "com.deucarian.camera-navigation"

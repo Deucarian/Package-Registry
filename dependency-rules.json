@@ -35,6 +35,7 @@
         "com.deucarian.object-loading",
         "com.deucarian.object-selection",
         "com.deucarian.camera-navigation",
+        "com.deucarian.xr-ui",
         "com.deucarian.ui",
         "com.deucarian.ui-binding",
         "com.deucarian.ui-flow",
@@ -48,7 +49,8 @@
         "com.deucarian.session.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
-        "com.deucarian.ui-binding.core-state-integration"
+        "com.deucarian.ui-binding.core-state-integration",
+        "com.deucarian.xr-ui.theming-integration"
       ]
     },
     {
