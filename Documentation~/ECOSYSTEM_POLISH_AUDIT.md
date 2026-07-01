@@ -8,7 +8,7 @@ This is the first scout pass for the Deucarian Unity package ecosystem polish go
 
 - GitHub organization metadata: 43 public repositories returned for `Deucarian`.
 - Package Registry catalog: 43 packages in `packages.json`.
-- Local workspace: partial checkout set under `C:/Repositories`; not every Deucarian repository is present locally.
+- Local workspace: all 43 Package Registry package checkouts are present under `C:/Repositories` after this pass.
 - Validation/tooling: `Tools/check_registry_manifest_alignment.py --registry-root . --audit-root C:/Repositories --json`.
 
 The GitHub API response available to this environment reported `admin=false` and `push=false`, so repository settings were not changed.
@@ -18,37 +18,58 @@ The GitHub API response available to this environment reported `admin=false` and
 | Severity | Finding | Status |
 | --- | --- | --- |
 | Branch hygiene | 18 public repositories have a temporary `codex/*` default branch. | Documented in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`; requires GitHub admin action. |
-| Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata; the same branch now also standardizes installer front-door docs and `main` workflow coverage. |
-| Registry/manifest mismatch | No mismatch remains for the 22 locally matched package manifests after refreshing/cloning exact local checkouts. | Keep using the alignment checker before registry/fallback updates. |
-| Missing local coverage | 21 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
-| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, Core State, Editor, Logging, Object Loading, Object Selection, Session, Session API Integration, Theming, UI, UI Binding, UI Binding Core State Integration, UI Flow, Object Selection Core State Integration, Selection Suite, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs. Object Loading API Integration is alignment-clean but deferred pending branch hygiene. |
+| Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
+| Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
+| Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
+| Package skeleton gaps | Some local checkouts still lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Infrastructure/integration docs and workflow gaps have draft PRs; gameplay/template manifest URL gaps now have draft PRs. Remaining gameplay/template skeleton work should proceed package-by-package after branch/default cleanup. |
 
 ## Local Checkout Coverage
 
-The alignment checker matched 22 package manifests from local checkouts and skipped 21 packages whose exact Deucarian checkout was not present locally.
+The alignment checker matched all 43 package manifests from local checkouts and skipped no packages.
 
 Matched package checkouts:
 
 - `com.deucarian.camera-navigation`
 - `com.deucarian.api`
+- `com.deucarian.attacks`
+- `com.deucarian.auto-defense`
+- `com.deucarian.auto-defense-suite`
+- `com.deucarian.combat`
 - `com.deucarian.common`
 - `com.deucarian.core-state`
+- `com.deucarian.defense-games`
 - `com.deucarian.diagnostics`
 - `com.deucarian.editor`
+- `com.deucarian.encounters`
+- `com.deucarian.game-content-authoring`
+- `com.deucarian.gameplay-foundation`
+- `com.deucarian.idle-progression`
 - `com.deucarian.logging`
+- `com.deucarian.monetization`
 - `com.deucarian.object-loading`
 - `com.deucarian.object-loading.api-integration`
 - `com.deucarian.object-selection`
 - `com.deucarian.object-selection.core-state-integration`
 - `com.deucarian.package-installer`
+- `com.deucarian.persistence`
+- `com.deucarian.progression`
+- `com.deucarian.projectiles`
+- `com.deucarian.run-upgrades`
 - `com.deucarian.selection-suite`
 - `com.deucarian.session`
 - `com.deucarian.session.api-integration`
+- `com.deucarian.template.game.idle-auto-defense`
+- `com.deucarian.template.game.movement-fps`
+- `com.deucarian.template.game.survivors`
 - `com.deucarian.theming`
+- `com.deucarian.test-automation`
 - `com.deucarian.ui`
 - `com.deucarian.ui-binding`
 - `com.deucarian.ui-binding.core-state-integration`
 - `com.deucarian.ui-flow`
+- `com.deucarian.weapon-systems`
+- `com.deucarian.world-navigation`
+- `com.deucarian.world-spawning`
 - `com.deucarian.xr-ui`
 - `com.deucarian.xr-ui.theming-integration`
 
@@ -77,6 +98,29 @@ Package skeleton gaps with draft PRs from this polish pass:
 | XR-UI | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI/pull/1` |
 | XR-UI-Theming-Integration | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI-Theming-Integration/pull/1` |
 
+Manifest repository URL gaps with draft PRs from this polish pass:
+
+| Repository | Gap addressed | Draft PR |
+| --- | --- | --- |
+| Attacks | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Attacks/pull/1` |
+| Auto-Defense | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Auto-Defense/pull/1` |
+| Auto-Defense-Suite | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Auto-Defense-Suite/pull/1` |
+| Combat | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Combat/pull/1` |
+| Defense-Games | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Defense-Games/pull/1` |
+| Encounters | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Encounters/pull/1` |
+| Gameplay-Foundation | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Gameplay-Foundation/pull/1` |
+| Idle-Progression | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Idle-Progression/pull/1` |
+| Persistence | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Persistence/pull/1` |
+| Progression | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Progression/pull/1` |
+| Projectiles | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Projectiles/pull/1` |
+| Run-Upgrades | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Run-Upgrades/pull/1` |
+| Template-Game-Movement-FPS | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Movement-FPS/pull/1` |
+| Template-Game-Survivors | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Survivors/pull/1` |
+| Test-Automation | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Test-Automation/pull/1` |
+| Weapon-Systems | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Weapon-Systems/pull/1` |
+| World-Navigation | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/World-Navigation/pull/1` |
+| World-Spawning | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/World-Spawning/pull/1` |
+
 Deferred exact-checkout polish:
 
 | Repository | Current state | Follow-up |
@@ -85,10 +129,15 @@ Deferred exact-checkout polish:
 
 Remaining notable local checkout gaps from the scout pass:
 
-- 21 registry packages still do not have exact local checkouts under `C:/Repositories`; the alignment checker skips these as warnings unless `--require-checkouts` is used.
-- Non-exact local fork/legacy checkouts such as `ObjectSelection` still require exact Deucarian checkouts before strict package-level patching.
+- None. The current workspace has exact checkouts for all 43 Package Registry entries.
+- Non-exact local fork/legacy checkouts such as `ObjectSelection` can be ignored for registry alignment now that exact Deucarian checkouts exist.
 
-Catalog follow-up:
+Catalog follow-up completed in this pass:
+
+- Package Registry and Package Installer fallback dependencies now match direct Deucarian dependencies in local `package.json` manifests for `Attacks`, `Run-Upgrades`, `Weapon-Systems`, `Template-Game-Idle-Auto-Defense`, and `Template-Game-Movement-FPS`.
+- `Tools/check_registry_manifest_alignment.py --registry-root . --audit-root C:/Repositories --json` now reports 43 checked packages, no missing checkouts, no findings, and no warnings.
+
+Remaining catalog follow-up:
 
 - Bootstrap validates locally, but the shared validator reports `com.deucarian.bootstrap: no packages.json entry found.` Decide whether Bootstrap should remain a setup-only package outside the installable catalog or be modeled explicitly in Package Registry without making Package Installer own Bootstrap setup behavior.
 
@@ -105,6 +154,8 @@ Checks included:
 
 Default behavior keeps missing local checkouts as warnings. Use `--require-checkouts` for a strict full-audit workspace.
 
+Latest full-workspace result: 43 checked packages, no missing checkouts, no findings, and no warnings.
+
 Useful commands:
 
 ```powershell
@@ -116,7 +167,7 @@ python Tools/check_registry_manifest_alignment.py --registry-root . --audit-root
 ## Next Phase Recommendations
 
 1. Fix GitHub default branches listed in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`.
-2. Re-run the alignment checker from a full exact checkout/audit root.
-3. Add missing `deucarian-package.json` files and shared `package-validation.yml` workflows package-by-package.
-4. Continue README normalization after each package skeleton validates.
+2. Add missing `deucarian-package.json`, `AGENTS.md`, and shared `package-validation.yml` files to gameplay/template packages package-by-package.
+3. Continue README normalization after each package skeleton validates.
+4. Resolve `ObjectLoading-API-Integration` branch/default-branch hygiene before README/workflow polish there.
 5. Re-check Package Installer and Bootstrap fallback catalogs whenever `packages.json` changes.
