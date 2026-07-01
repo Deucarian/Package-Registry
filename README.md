@@ -31,6 +31,9 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - [DISTRIBUTION_POLICY.md](DISTRIBUTION_POLICY.md) defines active Git-only package distribution.
 - [RELEASE_POLICY.md](RELEASE_POLICY.md) defines deferred npm/tag/release policy and workflow requirements.
 - [DEPENDENCY_RULES.md](DEPENDENCY_RULES.md) explains allowed dependency layering.
+- [Documentation~/START_HERE.md](Documentation~/START_HERE.md) gives the package ecosystem entry point for developers and designers.
+- [Documentation~/ECOSYSTEM_POLISH_AUDIT.md](Documentation~/ECOSYSTEM_POLISH_AUDIT.md) tracks the current ecosystem polish pass.
+- [Documentation~/BRANCH_CHANNEL_CLEANUP.md](Documentation~/BRANCH_CHANNEL_CLEANUP.md) lists default-branch cleanup actions requiring GitHub admin permissions.
 - [CONTRIBUTING.md](CONTRIBUTING.md) describes validation and contribution workflow.
 - [AGENTS.md](AGENTS.md) gives Codex and automation-specific repository guidance.
 
