@@ -393,7 +393,28 @@
         "com.deucarian.editor",
         "com.deucarian.logging"
       ],
+      "optionalIntegrations": [
+        "com.deucarian.xr-ui.theming-integration"
+      ],
       "groupId": "ui-presentation"
+    },
+    {
+      "id": "com.deucarian.xr-ui",
+      "displayName": "Deucarian XR UI",
+      "category": "World",
+      "type": "Core",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 28,
+      "description": "Standalone XR-ready uGUI pressable controls, world canvas helpers, poke affordances, and neutral visual settings.",
+      "stableUrl": "https://github.com/Deucarian/XR-UI.git#main",
+      "developmentUrl": "https://github.com/Deucarian/XR-UI.git#develop",
+      "dependencies": [
+        "com.deucarian.common"
+      ],
+      "optionalIntegrations": [
+        "com.deucarian.xr-ui.theming-integration"
+      ],
+      "groupId": "world-interaction"
     },
     {
       "id": "com.deucarian.camera-navigation",
@@ -518,6 +539,26 @@
       "integrationTargets": [
         "com.deucarian.ui-binding",
         "com.deucarian.core-state"
+      ],
+      "groupId": "integrations",
+      "ecosystemGroup": "Integrations"
+    },
+    {
+      "id": "com.deucarian.xr-ui.theming-integration",
+      "displayName": "Deucarian XR UI Theming Integration",
+      "category": "Integration",
+      "type": "Integration",
+      "overviewOrder": 35,
+      "description": "Optional integration that maps Deucarian Theming color roles into Deucarian XR UI palettes.",
+      "stableUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git#main",
+      "developmentUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git#develop",
+      "dependencies": [
+        "com.deucarian.xr-ui",
+        "com.deucarian.theming"
+      ],
+      "integrationTargets": [
+        "com.deucarian.xr-ui",
+        "com.deucarian.theming"
       ],
       "groupId": "integrations",
       "ecosystemGroup": "Integrations"
