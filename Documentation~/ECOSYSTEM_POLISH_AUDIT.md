@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
 | Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
-| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; broad README front-door normalization and explicit validation/license footer cleanup have been added to clean package branches; remaining work is deeper Unity/template playability verification, screenshots or GIFs, Bootstrap catalog modeling, and manual branch/default cleanup. |
+| Package skeleton gaps | All local checkouts now have draft PR coverage for the package skeleton gaps found in this pass. | Infrastructure, integration, gameplay, suite, tool, and template package skeleton/doc/workflow gaps have draft PRs; broad README front-door normalization and explicit validation/license footer cleanup have been added to clean package branches; remaining work is deeper Unity/template playability verification, screenshots or GIFs, and manual branch/default cleanup. |
 
 ## Local Checkout Coverage
 
@@ -80,7 +80,7 @@ Package skeleton gaps with draft PRs from this polish pass:
 | Attacks | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, and manifest repository metadata. | `https://github.com/Deucarian/Attacks/pull/1` |
 | Auto-Defense | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, manifest repository metadata, and a validator-backed imported sample cleanup exception. | `https://github.com/Deucarian/Auto-Defense/pull/1` |
 | Auto-Defense-Suite | Added `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Auto-Defense-Suite/pull/1` |
-| Bootstrap | Added README polish and `main` workflow coverage after fast-forwarding `develop`; validator still warns that Bootstrap has no `packages.json` entry. | `https://github.com/Deucarian/Bootstrap/pull/2` |
+| Bootstrap | Added README polish and `main` workflow coverage after fast-forwarding `develop`; the missing `packages.json` entry is intentional because Bootstrap is setup-only for getting Package Installer and installing its dependencies. | `https://github.com/Deucarian/Bootstrap/pull/2` |
 | Camera-Navigation | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/Camera-Navigation/pull/1` |
 | Combat | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, manifest repository metadata, and test asmdef validation metadata. | `https://github.com/Deucarian/Combat/pull/1` |
 | Common | Added README polish, `main` workflow coverage, and synchronized AGENTS ownership notes with approved shared motion easing primitives. | `https://github.com/Deucarian/Common/pull/1` |
@@ -149,9 +149,9 @@ Catalog follow-up completed in this pass:
 - `Template-Game-Movement-FPS` and `Template-Game-Survivors` now declare `com.deucarian.common` across `package.json`, Package Registry, and Package Installer fallback metadata because local template runtime cleanup uses Common's approved `UnityObjectUtility.DestroySafely`.
 - `Tools/check_registry_manifest_alignment.py --registry-root . --audit-root C:/Repositories --json` now reports 43 checked packages, no missing checkouts, no findings, and no warnings.
 
-Remaining catalog follow-up:
+Catalog modeling decision:
 
-- Bootstrap validates locally, but the shared validator reports `com.deucarian.bootstrap: no packages.json entry found.` Decide whether Bootstrap should remain a setup-only package outside the installable catalog or be modeled explicitly in Package Registry without making Package Installer own Bootstrap setup behavior.
+- Bootstrap remains setup-only outside `packages.json`. Its job is to get Package Installer and install Package Installer dependencies; it should not become an installable Package Registry entry or make Package Installer own bootstrap setup behavior.
 
 ## Registry Alignment Checker
 
@@ -181,5 +181,4 @@ python Tools/check_registry_manifest_alignment.py --registry-root . --audit-root
 1. Fix GitHub default branches listed in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`.
 2. Review and merge the draft package skeleton and README PRs, then prune stale `codex/*` branches only after maintainers confirm they are no longer needed.
 3. Run Unity Editor playability checks for the three templates, add real screenshots or GIFs, and verify sample import paths in a clean Unity project.
-4. Decide whether Bootstrap remains setup-only outside `packages.json` or should be modeled explicitly in Package Registry without making Package Installer own bootstrap setup behavior.
-5. Re-check Package Installer and Bootstrap fallback catalogs whenever `packages.json` changes.
+4. Re-check Package Installer fallback catalogs whenever `packages.json` changes.
