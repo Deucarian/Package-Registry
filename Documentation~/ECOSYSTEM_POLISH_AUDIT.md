@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata. |
 | Registry/manifest mismatch | No mismatch remains for the 12 locally matched package manifests after refreshing stale local checkouts. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | 31 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
-| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, UI, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs; remaining gaps are recorded below. |
+| Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Bootstrap, Camera Navigation, Common, UI, XR UI, XR UI Theming Integration, and Diagnostics have draft PRs; remaining gaps are recorded below. |
 
 ## Local Checkout Coverage
 
@@ -49,6 +49,7 @@ Package skeleton gaps with draft PRs from this polish pass:
 | --- | --- | --- |
 | Bootstrap | Added README polish and `main` workflow coverage after fast-forwarding `develop`; validator still warns that Bootstrap has no `packages.json` entry. | `https://github.com/Deucarian/Bootstrap/pull/2` |
 | Camera-Navigation | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/Camera-Navigation/pull/1` |
+| Common | Added README polish, `main` workflow coverage, and synchronized AGENTS ownership notes with approved shared motion easing primitives. | `https://github.com/Deucarian/Common/pull/1` |
 | Diagnostics | Fast-forwarded the stale local checkout to upstream skeleton work, then added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Diagnostics/pull/1` |
 | UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
 | XR-UI | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI/pull/1` |
