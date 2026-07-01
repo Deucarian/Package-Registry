@@ -19,7 +19,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | --- | --- | --- |
 | Branch hygiene | 18 public repositories have a temporary `codex/*` default branch. | Documented in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`; requires GitHub admin action. |
 | Registry/fallback drift | Package Installer fallback was missing `UI`, `XR UI`, `Camera Navigation`, and `XR UI Theming Integration`. | Fixed in the Package Installer branch by syncing installer-visible metadata. |
-| Registry/manifest mismatch | Local `Object-Loading/package.json` declares only `com.deucarian.logging`, while `packages.json` declares `com.deucarian.common` and `com.deucarian.logging`. | Recorded as follow-up; do not patch the dependency chain without updating Object Loading manifest/config/asmdefs and validating that repo. |
+| Registry/manifest mismatch | No mismatch remains for the 12 locally matched package manifests after refreshing stale local checkouts. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | 31 registry packages were not available as exact local checkouts for manifest comparison. | Use exact repo checkouts or a generated audit root before strict alignment. |
 | Package skeleton gaps | Some local checkouts lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Record below; address package-by-package with local AGENTS/governance checks. |
 
@@ -51,7 +51,6 @@ Notable local checkout gaps from the scout pass:
 | Core-State | Local checkout is a fork remote; missing `AGENTS.md`; missing `CHANGELOG.md`; missing `LICENSE.md`; missing `deucarian-package.json`. |
 | Diagnostics | Missing `AGENTS.md`; missing `deucarian-package.json`; no `.github/workflows` directory. |
 | Logging | Local checkout is dirty and on a `codex/*` branch; missing `AGENTS.md`; missing `deucarian-package.json`. |
-| Object-Loading | Missing `AGENTS.md`; missing `deucarian-package.json`. |
 | UI | Missing `AGENTS.md`; no `.github/workflows` directory. |
 | XR-UI | Missing `AGENTS.md`; no `.github/workflows` directory. |
 | XR-UI-Theming-Integration | Missing `AGENTS.md`; no `.github/workflows` directory. |
@@ -81,6 +80,6 @@ python Tools/check_registry_manifest_alignment.py --registry-root . --audit-root
 
 1. Fix GitHub default branches listed in `Documentation~/BRANCH_CHANNEL_CLEANUP.md`.
 2. Re-run the alignment checker from a full exact checkout/audit root.
-3. Address `Object-Loading` dependency drift in its own focused branch after inspecting that repo's architecture and asmdefs.
-4. Add missing `deucarian-package.json` files and shared `package-validation.yml` workflows package-by-package.
-5. Continue README normalization after each package skeleton validates.
+3. Add missing `deucarian-package.json` files and shared `package-validation.yml` workflows package-by-package.
+4. Continue README normalization after each package skeleton validates.
+5. Re-check Package Installer and Bootstrap fallback catalogs whenever `packages.json` changes.
