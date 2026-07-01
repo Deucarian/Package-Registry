@@ -48,6 +48,7 @@ Package skeleton gaps with draft PRs from this polish pass:
 | Repository | Gap addressed | Draft PR |
 | --- | --- | --- |
 | Camera-Navigation | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/Camera-Navigation/pull/1` |
+| UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
 | XR-UI | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI/pull/1` |
 | XR-UI-Theming-Integration | Added `AGENTS.md`, shared `package-validation.yml`, and README polish. | `https://github.com/Deucarian/XR-UI-Theming-Integration/pull/1` |
 
@@ -58,7 +59,6 @@ Remaining notable local checkout gaps from the scout pass:
 | Core-State | Local checkout is a fork remote; missing `AGENTS.md`; missing `CHANGELOG.md`; missing `LICENSE.md`; missing `deucarian-package.json`. |
 | Diagnostics | Missing `AGENTS.md`; missing `deucarian-package.json`; no `.github/workflows` directory. |
 | Logging | Local checkout is dirty and on a `codex/*` branch; missing `AGENTS.md`; missing `deucarian-package.json`. |
-| UI | Missing `AGENTS.md`; no `.github/workflows` directory. |
 
 ## Registry Alignment Checker
 
