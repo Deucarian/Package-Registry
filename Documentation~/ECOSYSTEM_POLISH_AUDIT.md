@@ -21,7 +21,7 @@ The GitHub API response available to this environment reported `admin=false` and
 | Registry/fallback drift | Package Installer fallback was missing several registry packages, then later had gameplay/template dependency metadata that did not match direct manifest dependencies. | Fixed in the Package Installer branch by syncing installer-visible metadata, standardizing installer front-door docs and `main` workflow coverage, and aligning fallback gameplay/template dependencies with Package Registry. |
 | Registry/manifest mismatch | No mismatch remains for all 43 locally matched package manifests after refreshing/cloning exact local checkouts, adding missing manifest repository URLs, and aligning registry dependencies. | Keep using the alignment checker before registry/fallback updates. |
 | Missing local coverage | No registry package is currently missing an exact local checkout under `C:/Repositories`. | Re-run the checker after new packages are added or checkouts move. |
-| Package skeleton gaps | Some local checkouts still lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Infrastructure/integration docs and workflow gaps have draft PRs; Gameplay Foundation, Persistence, Progression, Idle Progression, Combat, Encounters, World Spawning, World Navigation, Game Content Authoring, Monetization, and Idle Auto Defense Template now have validation skeleton PRs; remaining gameplay/template skeleton work should proceed package-by-package after branch/default cleanup. |
+| Package skeleton gaps | Some local checkouts still lack `AGENTS.md`, `deucarian-package.json`, or validation workflows. | Infrastructure/integration docs and workflow gaps have draft PRs; Gameplay Foundation, Persistence, Progression, Idle Progression, Combat, Encounters, World Spawning, World Navigation, Projectiles, Test Automation, Game Content Authoring, Monetization, and Idle Auto Defense Template now have validation skeleton PRs; remaining gameplay/template skeleton work should proceed package-by-package after branch/default cleanup. |
 
 ## Local Checkout Coverage
 
@@ -95,10 +95,12 @@ Package skeleton gaps with draft PRs from this polish pass:
 | ObjectSelection-CoreState-Integration | Added README polish, corrected exact local checkout paths, updated validation guidance, and Unity metadata for the guidance file. | `https://github.com/Deucarian/ObjectSelection-CoreState-Integration/pull/1` |
 | Persistence | Added `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, and manifest repository metadata. | `https://github.com/Deucarian/Persistence/pull/1` |
 | Progression | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, manifest repository metadata, and test asmdef validation metadata. | `https://github.com/Deucarian/Progression/pull/1` |
+| Projectiles | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, and manifest repository metadata. | `https://github.com/Deucarian/Projectiles/pull/1` |
 | Selection-Suite | Added README polish, stable/development Git install guidance, troubleshooting notes, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Selection-Suite/pull/1` |
 | Session | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session/pull/1` |
 | Session-API-Integration | Added README polish, `main` workflow coverage, and Unity metadata for the guidance file. | `https://github.com/Deucarian/Session-API-Integration/pull/1` |
 | Template-Game-Idle-Auto-Defense | Added `AGENTS.md`, shared `package-validation.yml`, Unity metadata for the guidance file, and synchronized config dependencies with `package.json`. | `https://github.com/Deucarian/Template-Game-Idle-Auto-Defense/pull/1` |
+| Test-Automation | Added `LICENSE.md`, `AGENTS.md`, `deucarian-package.json`, shared `package-validation.yml`, Unity metadata for the guidance file, an explicit empty dependency manifest, and guidance for the Unity TestAssemblies runner exception. | `https://github.com/Deucarian/Test-Automation/pull/1` |
 | Theming | Added README polish, stable/development Git install guidance, validation notes, and `main` workflow coverage while preserving detailed palette/theme workflows. | `https://github.com/Deucarian/Theming/pull/1` |
 | UI | Added `AGENTS.md`, shared `package-validation.yml`, README polish, and Unity metadata for the new guidance file. | `https://github.com/Deucarian/UI/pull/1` |
 | UI-Binding | Added README polish, stable/development Git install guidance, corrected local checkout path, and Unity metadata for the guidance file. | `https://github.com/Deucarian/UI-Binding/pull/1` |
@@ -117,11 +119,9 @@ Manifest repository URL gaps with draft PRs from this polish pass:
 | Auto-Defense | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Auto-Defense/pull/1` |
 | Auto-Defense-Suite | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Auto-Defense-Suite/pull/1` |
 | Defense-Games | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Defense-Games/pull/1` |
-| Projectiles | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Projectiles/pull/1` |
 | Run-Upgrades | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Run-Upgrades/pull/1` |
 | Template-Game-Movement-FPS | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Movement-FPS/pull/1` |
 | Template-Game-Survivors | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Template-Game-Survivors/pull/1` |
-| Test-Automation | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Test-Automation/pull/1` |
 | Weapon-Systems | Added `package.json` repository metadata so manifest URL alignment can verify the package. | `https://github.com/Deucarian/Weapon-Systems/pull/1` |
 
 Deferred exact-checkout polish:
