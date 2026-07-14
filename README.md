@@ -110,4 +110,4 @@ The `Templates > Games` groups are active for starter game template packages suc
 
 ## License
 
-See [LICENSE.md](LICENSE.md).
+MIT. See [LICENSE.md](LICENSE.md).
