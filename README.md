@@ -83,6 +83,7 @@ Package Registry is the source of truth for public `stableUrl` and `developmentU
 - `optionalCompanions`: Package IDs that are useful optional add-ons but must not be installed automatically as dependencies.
 - `optionalIntegrations`: Integration package IDs that are useful for this package but must not be installed automatically as dependencies.
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.
+- `recommendedWith`: Package IDs highlighted as useful pairings without creating an installation dependency.
 - `suiteMembers`: Package IDs composed by a Suite package in the Package Installer ecosystem graph.
 
 The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.
