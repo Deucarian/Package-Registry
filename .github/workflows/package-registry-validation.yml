@@ -25,6 +25,19 @@ jobs:
         shell: bash
         run: python -m unittest discover Tools/tests
 
+      - name: Exercise deterministic catalog projection
+        shell: bash
+        run: |
+          installer_root="$RUNNER_TEMP/package-installer"
+          bootstrap_root="$RUNNER_TEMP/bootstrap"
+          python Tools/project_package_catalogs.py \
+            --installer-root "$installer_root" \
+            --bootstrap-root "$bootstrap_root"
+          python Tools/project_package_catalogs.py \
+            --installer-root "$installer_root" \
+            --bootstrap-root "$bootstrap_root" \
+            --check
+
       - name: Validate Package Registry config
         shell: bash
         run: |

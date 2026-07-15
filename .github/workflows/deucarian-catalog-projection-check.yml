@@ -1,0 +1,60 @@
+name: Deucarian catalog projection check
+
+on:
+  workflow_call:
+    inputs:
+      catalog:
+        description: Consumer catalog to check (installer or bootstrap).
+        required: true
+        type: string
+      registry-ref:
+        description: Package Registry ref that owns the projection tool and canonical packages.json.
+        required: false
+        type: string
+        default: develop
+
+jobs:
+  check-catalog:
+    name: Check projected fallback catalog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout consumer repository
+        uses: actions/checkout@v6
+        with:
+          path: consumer
+
+      - name: Checkout Package Registry projection tool
+        uses: actions/checkout@v6
+        with:
+          repository: Deucarian/Package-Registry
+          ref: ${{ inputs.registry-ref }}
+          path: package-registry
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Check consumer catalog
+        shell: bash
+        env:
+          CATALOG: ${{ inputs.catalog }}
+        run: |
+          case "$CATALOG" in
+            installer)
+              python package-registry/Tools/project_package_catalogs.py \
+                --registry-root package-registry \
+                --installer-root consumer \
+                --check
+              ;;
+            bootstrap)
+              python package-registry/Tools/project_package_catalogs.py \
+                --registry-root package-registry \
+                --bootstrap-root consumer \
+                --check
+              ;;
+            *)
+              echo "catalog must be installer or bootstrap, got: $CATALOG" >&2
+              exit 2
+              ;;
+          esac

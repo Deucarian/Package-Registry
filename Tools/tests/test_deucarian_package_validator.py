@@ -160,6 +160,22 @@ class ValidatorFixture:
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_canonical_registry_produces_expected_catalog_projections(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+
+        validator.validate_catalog_projection()
+
+        self.assertEqual([], validator.errors)
+        self.assertEqual(
+            [
+                "com.deucarian.editor",
+                "com.deucarian.logging",
+                "com.deucarian.package-installer",
+            ],
+            validator.details["catalogProjection"]["bootstrapPackageIds"],
+        )
+
     def test_valid_package_uses_configured_manifest_assemblies_capability_and_registry_entry(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))

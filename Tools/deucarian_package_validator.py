@@ -14,6 +14,17 @@ from pathlib import Path
 from typing import Any
 
 
+TOOLS_ROOT = Path(__file__).resolve().parent
+if str(TOOLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(TOOLS_ROOT))
+
+from project_package_catalogs import (  # noqa: E402
+    CatalogProjectionError,
+    project_bootstrap_catalog,
+    project_installer_catalog,
+)
+
+
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
 PACKAGE_ID_RE = re.compile(r"^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$")
 GIT_URL_RE = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git#(?P<branch>[A-Za-z0-9._/-]+)$")
@@ -442,8 +453,21 @@ class Validator:
         self.validate_capabilities_schema()
         self.validate_dependency_rules_schema()
         self.validate_authoritative_audit_artifacts()
+        self.validate_catalog_projection()
         self.validate_catalog_sync()
         self.validate_release_workflow_policy(self.registry_root)
+
+    def validate_catalog_projection(self) -> None:
+        try:
+            installer = project_installer_catalog(self.packages)
+            bootstrap = project_bootstrap_catalog(self.packages)
+        except CatalogProjectionError as exc:
+            self.fail(f"packages.json cannot produce fallback catalogs: {exc}")
+            return
+        self.details["catalogProjection"] = {
+            "installerPackageCount": len(installer.get("packages", [])),
+            "bootstrapPackageIds": [package["id"] for package in bootstrap.get("packages", [])],
+        }
 
     def validate_release_workflow_policy(self, root: Path) -> None:
         workflows_root = root / ".github" / "workflows"
