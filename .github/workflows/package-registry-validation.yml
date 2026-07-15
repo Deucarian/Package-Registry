@@ -38,6 +38,10 @@ jobs:
             --bootstrap-root "$bootstrap_root" \
             --check
 
+      - name: Validate clean Unity matrix evidence
+        shell: bash
+        run: python Tools/generate_public_catalog_unity_matrix.py --check
+
       - name: Validate Package Registry config
         shell: bash
         run: |

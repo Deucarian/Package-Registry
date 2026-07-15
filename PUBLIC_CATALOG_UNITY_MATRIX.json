@@ -1,0 +1,2249 @@
+{
+  "schemaVersion": 1,
+  "catalogUpdatedAt": "2026-07-15",
+  "unityVersion": "2022.3",
+  "packageCount": 38,
+  "caseCount": 76,
+  "cases": [
+    {
+      "caseId": "com.deucarian.api:stable",
+      "targetPackageId": "com.deucarian.api",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.api:development",
+      "targetPackageId": "com.deucarian.api",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.attacks:stable",
+      "targetPackageId": "com.deucarian.attacks",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.attacks:development",
+      "targetPackageId": "com.deucarian.attacks",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.auto-defense:stable",
+      "targetPackageId": "com.deucarian.auto-defense",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.auto-defense:development",
+      "targetPackageId": "com.deucarian.auto-defense",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.auto-defense-suite:stable",
+      "targetPackageId": "com.deucarian.auto-defense-suite",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#main"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#main"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#main"
+        },
+        {
+          "id": "com.deucarian.auto-defense-suite",
+          "url": "https://github.com/Deucarian/Auto-Defense-Suite.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.auto-defense-suite:development",
+      "targetPackageId": "com.deucarian.auto-defense-suite",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#develop"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#develop"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#develop"
+        },
+        {
+          "id": "com.deucarian.auto-defense-suite",
+          "url": "https://github.com/Deucarian/Auto-Defense-Suite.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.combat:stable",
+      "targetPackageId": "com.deucarian.combat",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.combat:development",
+      "targetPackageId": "com.deucarian.combat",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.common:stable",
+      "targetPackageId": "com.deucarian.common",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.common:development",
+      "targetPackageId": "com.deucarian.common",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.core-state:stable",
+      "targetPackageId": "com.deucarian.core-state",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.core-state:development",
+      "targetPackageId": "com.deucarian.core-state",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.defense-games:stable",
+      "targetPackageId": "com.deucarian.defense-games",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.defense-games:development",
+      "targetPackageId": "com.deucarian.defense-games",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.diagnostics:stable",
+      "targetPackageId": "com.deucarian.diagnostics",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.diagnostics",
+          "url": "https://github.com/Deucarian/Diagnostics.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.diagnostics:development",
+      "targetPackageId": "com.deucarian.diagnostics",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.diagnostics",
+          "url": "https://github.com/Deucarian/Diagnostics.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.editor:stable",
+      "targetPackageId": "com.deucarian.editor",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.editor:development",
+      "targetPackageId": "com.deucarian.editor",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.encounters:stable",
+      "targetPackageId": "com.deucarian.encounters",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.encounters:development",
+      "targetPackageId": "com.deucarian.encounters",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.game-content-authoring:stable",
+      "targetPackageId": "com.deucarian.game-content-authoring",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.game-content-authoring:development",
+      "targetPackageId": "com.deucarian.game-content-authoring",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.gameplay-foundation:stable",
+      "targetPackageId": "com.deucarian.gameplay-foundation",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.gameplay-foundation:development",
+      "targetPackageId": "com.deucarian.gameplay-foundation",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.idle-progression:stable",
+      "targetPackageId": "com.deucarian.idle-progression",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.idle-progression:development",
+      "targetPackageId": "com.deucarian.idle-progression",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.logging:stable",
+      "targetPackageId": "com.deucarian.logging",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.logging:development",
+      "targetPackageId": "com.deucarian.logging",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.monetization:stable",
+      "targetPackageId": "com.deucarian.monetization",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.monetization",
+          "url": "https://github.com/Deucarian/Monetization.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.monetization:development",
+      "targetPackageId": "com.deucarian.monetization",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.monetization",
+          "url": "https://github.com/Deucarian/Monetization.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-loading:stable",
+      "targetPackageId": "com.deucarian.object-loading",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.object-loading",
+          "url": "https://github.com/Deucarian/Object-Loading.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-loading:development",
+      "targetPackageId": "com.deucarian.object-loading",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-loading",
+          "url": "https://github.com/Deucarian/Object-Loading.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-loading.api-integration:stable",
+      "targetPackageId": "com.deucarian.object-loading.api-integration",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.object-loading",
+          "url": "https://github.com/Deucarian/Object-Loading.git#main"
+        },
+        {
+          "id": "com.deucarian.object-loading.api-integration",
+          "url": "https://github.com/Deucarian/ObjectLoading-API-Integration.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-loading.api-integration:development",
+      "targetPackageId": "com.deucarian.object-loading.api-integration",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-loading",
+          "url": "https://github.com/Deucarian/Object-Loading.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-loading.api-integration",
+          "url": "https://github.com/Deucarian/ObjectLoading-API-Integration.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-selection:stable",
+      "targetPackageId": "com.deucarian.object-selection",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-selection:development",
+      "targetPackageId": "com.deucarian.object-selection",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-selection.core-state-integration:stable",
+      "targetPackageId": "com.deucarian.object-selection.core-state-integration",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#main"
+        },
+        {
+          "id": "com.deucarian.object-selection.core-state-integration",
+          "url": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.object-selection.core-state-integration:development",
+      "targetPackageId": "com.deucarian.object-selection.core-state-integration",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-selection.core-state-integration",
+          "url": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.package-installer:stable",
+      "targetPackageId": "com.deucarian.package-installer",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.package-installer",
+          "url": "https://github.com/Deucarian/Package-Installer.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.package-installer:development",
+      "targetPackageId": "com.deucarian.package-installer",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.package-installer",
+          "url": "https://github.com/Deucarian/Package-Installer.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.persistence:stable",
+      "targetPackageId": "com.deucarian.persistence",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.persistence:development",
+      "targetPackageId": "com.deucarian.persistence",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.progression:stable",
+      "targetPackageId": "com.deucarian.progression",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.progression:development",
+      "targetPackageId": "com.deucarian.progression",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.projectiles:stable",
+      "targetPackageId": "com.deucarian.projectiles",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.projectiles:development",
+      "targetPackageId": "com.deucarian.projectiles",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.run-upgrades:stable",
+      "targetPackageId": "com.deucarian.run-upgrades",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.run-upgrades:development",
+      "targetPackageId": "com.deucarian.run-upgrades",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.selection-suite:stable",
+      "targetPackageId": "com.deucarian.selection-suite",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#main"
+        },
+        {
+          "id": "com.deucarian.object-selection.core-state-integration",
+          "url": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-binding.core-state-integration",
+          "url": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git#main"
+        },
+        {
+          "id": "com.deucarian.selection-suite",
+          "url": "https://github.com/Deucarian/Selection-Suite.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.selection-suite:development",
+      "targetPackageId": "com.deucarian.selection-suite",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-selection",
+          "url": "https://github.com/Deucarian/Object-Selection.git#develop"
+        },
+        {
+          "id": "com.deucarian.object-selection.core-state-integration",
+          "url": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-binding.core-state-integration",
+          "url": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git#develop"
+        },
+        {
+          "id": "com.deucarian.selection-suite",
+          "url": "https://github.com/Deucarian/Selection-Suite.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.session:stable",
+      "targetPackageId": "com.deucarian.session",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.session",
+          "url": "https://github.com/Deucarian/Session.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.session:development",
+      "targetPackageId": "com.deucarian.session",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.session",
+          "url": "https://github.com/Deucarian/Session.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.session.api-integration:stable",
+      "targetPackageId": "com.deucarian.session.api-integration",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#main"
+        },
+        {
+          "id": "com.deucarian.session",
+          "url": "https://github.com/Deucarian/Session.git#main"
+        },
+        {
+          "id": "com.deucarian.session.api-integration",
+          "url": "https://github.com/Deucarian/Session-API-Integration.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.session.api-integration:development",
+      "targetPackageId": "com.deucarian.session.api-integration",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.api",
+          "url": "https://github.com/Deucarian/API.git#develop"
+        },
+        {
+          "id": "com.deucarian.session",
+          "url": "https://github.com/Deucarian/Session.git#develop"
+        },
+        {
+          "id": "com.deucarian.session.api-integration",
+          "url": "https://github.com/Deucarian/Session-API-Integration.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.idle-auto-defense:stable",
+      "targetPackageId": "com.deucarian.template.game.idle-auto-defense",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#main"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#main"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#main"
+        },
+        {
+          "id": "com.deucarian.auto-defense-suite",
+          "url": "https://github.com/Deucarian/Auto-Defense-Suite.git#main"
+        },
+        {
+          "id": "com.deucarian.monetization",
+          "url": "https://github.com/Deucarian/Monetization.git#main"
+        },
+        {
+          "id": "com.deucarian.template.game.idle-auto-defense",
+          "url": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.idle-auto-defense:development",
+      "targetPackageId": "com.deucarian.template.game.idle-auto-defense",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.defense-games",
+          "url": "https://github.com/Deucarian/Defense-Games.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.auto-defense",
+          "url": "https://github.com/Deucarian/Auto-Defense.git#develop"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.idle-progression",
+          "url": "https://github.com/Deucarian/Idle-Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#develop"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#develop"
+        },
+        {
+          "id": "com.deucarian.auto-defense-suite",
+          "url": "https://github.com/Deucarian/Auto-Defense-Suite.git#develop"
+        },
+        {
+          "id": "com.deucarian.monetization",
+          "url": "https://github.com/Deucarian/Monetization.git#develop"
+        },
+        {
+          "id": "com.deucarian.template.game.idle-auto-defense",
+          "url": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.movement-fps:stable",
+      "targetPackageId": "com.deucarian.template.game.movement-fps",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#main"
+        },
+        {
+          "id": "com.deucarian.template.game.movement-fps",
+          "url": "https://github.com/Deucarian/Template-Game-Movement-FPS.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.movement-fps:development",
+      "targetPackageId": "com.deucarian.template.game.movement-fps",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#develop"
+        },
+        {
+          "id": "com.deucarian.template.game.movement-fps",
+          "url": "https://github.com/Deucarian/Template-Game-Movement-FPS.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.survivors:stable",
+      "targetPackageId": "com.deucarian.template.game.survivors",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#main"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#main"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#main"
+        },
+        {
+          "id": "com.deucarian.template.game.survivors",
+          "url": "https://github.com/Deucarian/Template-Game-Survivors.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.template.game.survivors:development",
+      "targetPackageId": "com.deucarian.template.game.survivors",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.encounters",
+          "url": "https://github.com/Deucarian/Encounters.git#develop"
+        },
+        {
+          "id": "com.deucarian.persistence",
+          "url": "https://github.com/Deucarian/Persistence.git#develop"
+        },
+        {
+          "id": "com.deucarian.progression",
+          "url": "https://github.com/Deucarian/Progression.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        },
+        {
+          "id": "com.deucarian.run-upgrades",
+          "url": "https://github.com/Deucarian/Run-Upgrades.git#develop"
+        },
+        {
+          "id": "com.deucarian.template.game.survivors",
+          "url": "https://github.com/Deucarian/Template-Game-Survivors.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.test-automation:stable",
+      "targetPackageId": "com.deucarian.test-automation",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.test-automation",
+          "url": "https://github.com/Deucarian/Test-Automation.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.test-automation:development",
+      "targetPackageId": "com.deucarian.test-automation",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.test-automation",
+          "url": "https://github.com/Deucarian/Test-Automation.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-binding:stable",
+      "targetPackageId": "com.deucarian.ui-binding",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-binding:development",
+      "targetPackageId": "com.deucarian.ui-binding",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-binding.core-state-integration:stable",
+      "targetPackageId": "com.deucarian.ui-binding.core-state-integration",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-binding.core-state-integration",
+          "url": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-binding.core-state-integration:development",
+      "targetPackageId": "com.deucarian.ui-binding.core-state-integration",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.core-state",
+          "url": "https://github.com/Deucarian/Core-State.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-binding",
+          "url": "https://github.com/Deucarian/UI-Binding.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-binding.core-state-integration",
+          "url": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-flow:stable",
+      "targetPackageId": "com.deucarian.ui-flow",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#main"
+        },
+        {
+          "id": "com.deucarian.ui-flow",
+          "url": "https://github.com/Deucarian/UI-FLow.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.ui-flow:development",
+      "targetPackageId": "com.deucarian.ui-flow",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.logging",
+          "url": "https://github.com/Deucarian/Logging.git#develop"
+        },
+        {
+          "id": "com.deucarian.ui-flow",
+          "url": "https://github.com/Deucarian/UI-FLow.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.weapon-systems:stable",
+      "targetPackageId": "com.deucarian.weapon-systems",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#main"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#main"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#main"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.weapon-systems:development",
+      "targetPackageId": "com.deucarian.weapon-systems",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.combat",
+          "url": "https://github.com/Deucarian/Combat.git#develop"
+        },
+        {
+          "id": "com.deucarian.editor",
+          "url": "https://github.com/Deucarian/Editor.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.game-content-authoring",
+          "url": "https://github.com/Deucarian/Game-Content-Authoring.git#develop"
+        },
+        {
+          "id": "com.deucarian.attacks",
+          "url": "https://github.com/Deucarian/Attacks.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        },
+        {
+          "id": "com.deucarian.projectiles",
+          "url": "https://github.com/Deucarian/Projectiles.git#develop"
+        },
+        {
+          "id": "com.deucarian.weapon-systems",
+          "url": "https://github.com/Deucarian/Weapon-Systems.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.world-navigation:stable",
+      "targetPackageId": "com.deucarian.world-navigation",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.world-navigation:development",
+      "targetPackageId": "com.deucarian.world-navigation",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-navigation",
+          "url": "https://github.com/Deucarian/World-Navigation.git#develop"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.world-spawning:stable",
+      "targetPackageId": "com.deucarian.world-spawning",
+      "channel": "stable",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#main"
+        },
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#main"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#main"
+        }
+      ]
+    },
+    {
+      "caseId": "com.deucarian.world-spawning:development",
+      "targetPackageId": "com.deucarian.world-spawning",
+      "channel": "development",
+      "unityVersion": "2022.3",
+      "dependencyFirstClosure": [
+        {
+          "id": "com.deucarian.common",
+          "url": "https://github.com/Deucarian/Common.git#develop"
+        },
+        {
+          "id": "com.deucarian.gameplay-foundation",
+          "url": "https://github.com/Deucarian/Gameplay-Foundation.git#develop"
+        },
+        {
+          "id": "com.deucarian.world-spawning",
+          "url": "https://github.com/Deucarian/World-Spawning.git#develop"
+        }
+      ]
+    }
+  ]
+}

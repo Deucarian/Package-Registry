@@ -99,13 +99,33 @@ class PackageCatalogProjectionTests(unittest.TestCase):
     def test_projection_rejects_missing_dependencies_and_cycles(self) -> None:
         missing = registry_fixture()
         missing["packages"][2]["dependencies"] = ["com.deucarian.missing"]
-        with self.assertRaisesRegex(projection.CatalogProjectionError, "is not in packages.json"):
+        with self.assertRaisesRegex(projection.CatalogProjectionError, "dependencies target .* is not in packages.json"):
             projection.project_bootstrap_catalog(missing)
 
         cyclic = registry_fixture()
         cyclic["packages"][3]["dependencies"] = [projection.INSTALLER_PACKAGE_ID]
         with self.assertRaisesRegex(projection.CatalogProjectionError, "Dependency cycle detected"):
             projection.project_bootstrap_catalog(cyclic)
+
+    def test_projection_rejects_invalid_or_dangling_relationships(self) -> None:
+        for field in projection.PACKAGE_RELATIONSHIP_FIELDS:
+            with self.subTest(field=field, case="invalid-shape"):
+                invalid = registry_fixture()
+                invalid["packages"][1][field] = "com.deucarian.editor"
+                with self.assertRaisesRegex(
+                    projection.CatalogProjectionError,
+                    rf"{field} must be an array of non-empty package ids",
+                ):
+                    projection.project_installer_catalog(invalid)
+
+            with self.subTest(field=field, case="missing-target"):
+                missing = registry_fixture()
+                missing["packages"][1][field] = ["com.deucarian.missing"]
+                with self.assertRaisesRegex(
+                    projection.CatalogProjectionError,
+                    rf"{field} target com.deucarian.missing is not in packages.json",
+                ):
+                    projection.project_installer_catalog(missing)
 
     def test_write_and_semantic_check_modes_round_trip(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
@@ -177,6 +197,9 @@ class PackageCatalogProjectionTests(unittest.TestCase):
             ],
             [item["id"] for item in projected["packages"]],
         )
+
+        installer = projection.project_installer_catalog(registry)
+        self.assertEqual(38, len(installer["packages"]))
 
 
 if __name__ == "__main__":
