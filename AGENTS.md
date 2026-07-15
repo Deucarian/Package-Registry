@@ -45,6 +45,7 @@ Architecture exceptions:
 ```powershell
 python -m unittest discover Tools/tests
 python Tools/deucarian_package_validator.py --registry-root . --repository-root . --config deucarian-package.json
+python Tools/project_package_catalogs.py --installer-root ../Package-Installer --bootstrap-root ../Bootstrap --check
 python Tools/Generate-DeucarianAudit.py --audit-root <audit-root> --output-root . --organization Deucarian --ref develop --authoritative --format all --check
 ```
 
@@ -55,6 +56,7 @@ python Tools/Generate-DeucarianAudit.py --audit-root <audit-root> --output-root 
 - Do not edit `Library/PackageCache`.
 - Do not guess package versions or dependency versions.
 - Keep Package Installer and Bootstrap fallback catalogs aligned when package metadata changes.
+- Generate consumer fallback catalogs with `Tools/project_package_catalogs.py`; do not maintain them by hand.
 - Do not create new packages without explicit user request and audit evidence.
 - Do not publish npm packages.
 - Commit focused governance/tooling/doc changes and report validation results.

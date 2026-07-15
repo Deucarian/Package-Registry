@@ -16,6 +16,25 @@ Auto-discovery is intentionally avoided because it creates ambiguity around arch
 
 Update `packages.json` when a package is added, removed, or gains an installer-visible dependency. Keep the Package Installer bundled fallback registry in sync when bootstrap behavior depends on the package list.
 
+Project both consumer fallback catalogs from the canonical registry instead of editing them by hand:
+
+```powershell
+python Tools/project_package_catalogs.py --installer-root ../Package-Installer --bootstrap-root ../Bootstrap
+python Tools/project_package_catalogs.py --installer-root ../Package-Installer --bootstrap-root ../Bootstrap --check
+```
+
+Write mode is the default. It writes the full canonical catalog to Package Installer and writes only the dependency-first closure needed to install `com.deucarian.package-installer` to Bootstrap. That Bootstrap catalog contains Editor, Logging, and Package Installer and deliberately omits mutable `stableVersion` and `developmentVersion` claims. `--check` compares parsed JSON semantically and exits non-zero when either consumer catalog has drifted.
+
+Each consumer can pass only its own root. Consumer CI can use the reusable check without checking out or depending on the other consumer repository:
+
+```yaml
+jobs:
+  check-catalog:
+    uses: Deucarian/Package-Registry/.github/workflows/deucarian-catalog-projection-check.yml@develop
+    with:
+      catalog: installer # use bootstrap in the Bootstrap repository
+```
+
 ## Distribution Policy
 
 Current stable distribution uses Git URLs pinned to `#main`. Current development distribution uses Git URLs pinned to `#develop`.
