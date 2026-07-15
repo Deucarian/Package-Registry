@@ -24,6 +24,14 @@ BOOTSTRAP_PACKAGE_FIELDS = (
     "developmentUrl",
     "dependencies",
 )
+PACKAGE_RELATIONSHIP_FIELDS = (
+    "dependencies",
+    "optionalCompanions",
+    "optionalIntegrations",
+    "integrationTargets",
+    "recommendedWith",
+    "suiteMembers",
+)
 
 
 class CatalogProjectionError(ValueError):
@@ -57,15 +65,23 @@ def package_index(registry: dict[str, Any]) -> dict[str, dict[str, Any]]:
             raise CatalogProjectionError(f"packages[{position}] must contain a non-empty id.")
         if package_id in index:
             raise CatalogProjectionError(f"packages.json contains duplicate package id {package_id}.")
-        dependencies = package.get("dependencies", [])
-        if not isinstance(dependencies, list) or any(not isinstance(item, str) or not item.strip() for item in dependencies):
-            raise CatalogProjectionError(f"{package_id}: dependencies must be an array of non-empty package ids.")
+        for field in PACKAGE_RELATIONSHIP_FIELDS:
+            relationships = package.get(field, [])
+            if not isinstance(relationships, list) or any(
+                not isinstance(item, str) or not item.strip() for item in relationships
+            ):
+                raise CatalogProjectionError(
+                    f"{package_id}: {field} must be an array of non-empty package ids."
+                )
         index[package_id] = package
 
     for package_id, package in index.items():
-        for dependency_id in package.get("dependencies", []):
-            if dependency_id not in index:
-                raise CatalogProjectionError(f"{package_id}: dependency {dependency_id} is not in packages.json.")
+        for field in PACKAGE_RELATIONSHIP_FIELDS:
+            for related_package_id in package.get(field, []):
+                if related_package_id not in index:
+                    raise CatalogProjectionError(
+                        f"{package_id}: {field} target {related_package_id} is not in packages.json."
+                    )
     return index
 
 

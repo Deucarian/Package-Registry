@@ -185,6 +185,43 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
             self.assertTrue(result["ok"], result["errors"])
 
+    def test_unity_modules_remain_in_package_contract_but_outside_deucarian_relationship_closure(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            unity_module = "com.unity.modules.physics"
+            package_path = fixture.package / "package.json"
+            config_path = fixture.package / "deucarian-package.json"
+            package = json.loads(package_path.read_text(encoding="utf-8"))
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            package["dependencies"][unity_module] = "1.0.0"
+            config["requiredDependencies"].append(unity_module)
+            write_json(package_path, package)
+            write_json(config_path, config)
+
+            registry = json.loads((fixture.registry / "packages.json").read_text(encoding="utf-8"))
+            alpha = next(item for item in registry["packages"] if item["id"] == "com.deucarian.alpha")
+            result = validator_module.Validator(fixture.registry, fixture.package).validate_package()
+
+            self.assertTrue(result["ok"], result["errors"])
+            self.assertIn(unity_module, package["dependencies"])
+            self.assertIn(unity_module, config["requiredDependencies"])
+            self.assertNotIn(unity_module, {item["id"] for item in registry["packages"]})
+            self.assertNotIn(unity_module, alpha["dependencies"])
+
+            package["dependencies"]["com.deucarian.unregistered"] = "1.0.0"
+            config["requiredDependencies"].append("com.deucarian.unregistered")
+            write_json(package_path, package)
+            write_json(config_path, config)
+
+            result = validator_module.Validator(fixture.registry, fixture.package).validate_package()
+
+            self.assertFalse(result["ok"])
+            self.assertIn(
+                "com.deucarian.alpha: registry dependencies ['com.deucarian.logging'] do not match "
+                "package.json Deucarian dependencies ['com.deucarian.logging', 'com.deucarian.unregistered'].",
+                result["errors"],
+            )
+
     def test_registry_audit_artifact_rejects_non_allowed_debug_finding(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))

@@ -8,7 +8,7 @@ The installer reads `packages.json` from the public raw GitHub URL:
 
 https://raw.githubusercontent.com/Deucarian/Package-Registry/main/packages.json
 
-The registry is intentionally manual and explicit. Adding a new package means adding a new entry to `packages.json`.
+The registry is intentionally manual and explicit. It contains supported public open-foundation packages; proprietary product packages are distributed separately and are not fetched by the public Package Installer. Adding a new package means adding a reviewed entry to `packages.json`.
 
 Auto-discovery is intentionally avoided because it creates ambiguity around archived repositories, naming, package IDs, dependency resolution, and GitHub rate limits.
 
@@ -25,6 +25,15 @@ python Tools/project_package_catalogs.py --installer-root ../Package-Installer -
 
 Write mode is the default. It writes the full canonical catalog to Package Installer and writes only the dependency-first closure needed to install `com.deucarian.package-installer` to Bootstrap. That Bootstrap catalog contains Editor, Logging, and Package Installer and deliberately omits mutable `stableVersion` and `developmentVersion` claims. `--check` compares parsed JSON semantically and exits non-zero when either consumer catalog has drifted.
 
+Generate and verify the deterministic clean-Unity matrix separately:
+
+```powershell
+python Tools/generate_public_catalog_unity_matrix.py
+python Tools/generate_public_catalog_unity_matrix.py --check
+```
+
+The committed matrix enumerates every public package on both channels. It is evidence of complete test coverage planning; all cases still require execution in clean Unity 2022.3 projects before catalog removal is merged.
+
 Each consumer can pass only its own root. Consumer CI can use the reusable check without checking out or depending on the other consumer repository:
 
 ```yaml
@@ -37,11 +46,11 @@ jobs:
 
 ## Distribution Policy
 
-Current stable distribution uses Git URLs pinned to `#main`. Current development distribution uses Git URLs pinned to `#develop`.
+Current public stable distribution uses Git URLs pinned to `#main`. Current public development distribution uses Git URLs pinned to `#develop`.
 
 npm/scoped-registry publishing, Git tags, and GitHub releases are deferred for now. Use Git URLs until a separate deliberate release wave enables another channel.
 
-Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Package Installer consumes the registry and its bundled fallback catalog.
+Package Registry is the source of truth for public `stableUrl` and `developmentUrl` values. Package Installer consumes the registry and its bundled fallback catalog. Reserved proprietary package IDs remain stable but are intentionally absent from both public catalogs.
 
 ## Architecture / Contributor Notes
 
@@ -74,6 +83,7 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `optionalCompanions`: Package IDs that are useful optional add-ons but must not be installed automatically as dependencies.
 - `optionalIntegrations`: Integration package IDs that are useful for this package but must not be installed automatically as dependencies.
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.
+- `recommendedWith`: Package IDs highlighted as useful pairings without creating an installation dependency.
 - `suiteMembers`: Package IDs composed by a Suite package in the Package Installer ecosystem graph.
 
 The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.

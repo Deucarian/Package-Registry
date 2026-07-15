@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-15",
   "groups": [
     {
       "id": "infrastructure",
@@ -348,22 +348,6 @@
       "groupId": "ui-presentation"
     },
     {
-      "id": "com.deucarian.ui",
-      "displayName": "Deucarian UI",
-      "category": "UI",
-      "type": "Core",
-      "ecosystemGroup": "Experience & Interaction",
-      "overviewOrder": 12,
-      "description": "Reusable Deucarian UI motion, glass, icon, control island, and UI Toolkit/uGUI presentation primitives.",
-      "stableUrl": "https://github.com/Deucarian/UI.git#main",
-      "developmentUrl": "https://github.com/Deucarian/UI.git#develop",
-      "dependencies": [
-        "com.deucarian.common",
-        "com.deucarian.theming"
-      ],
-      "groupId": "ui-presentation"
-    },
-    {
       "id": "com.deucarian.ui-flow",
       "displayName": "Deucarian UI Flow",
       "category": "UI",
@@ -378,58 +362,6 @@
         "com.deucarian.logging"
       ],
       "groupId": "ui-presentation"
-    },
-    {
-      "id": "com.deucarian.theming",
-      "displayName": "Deucarian Theming",
-      "category": "UI",
-      "type": "OptionalIntegration",
-      "ecosystemGroup": "Experience & Interaction",
-      "overviewOrder": 30,
-      "description": "Designer-friendly ScriptableObject theming with color role assets, palettes, themes, and Unity component adapters.",
-      "stableUrl": "https://github.com/Deucarian/Theming.git#main",
-      "developmentUrl": "https://github.com/Deucarian/Theming.git#develop",
-      "dependencies": [
-        "com.deucarian.editor",
-        "com.deucarian.logging"
-      ],
-      "optionalIntegrations": [
-        "com.deucarian.xr-ui.theming-integration"
-      ],
-      "groupId": "ui-presentation"
-    },
-    {
-      "id": "com.deucarian.xr-ui",
-      "displayName": "Deucarian XR UI",
-      "category": "World",
-      "type": "Core",
-      "ecosystemGroup": "Experience & Interaction",
-      "overviewOrder": 28,
-      "description": "Standalone XR-ready uGUI pressable controls, world canvas helpers, poke affordances, and neutral visual settings.",
-      "stableUrl": "https://github.com/Deucarian/XR-UI.git#main",
-      "developmentUrl": "https://github.com/Deucarian/XR-UI.git#develop",
-      "dependencies": [
-        "com.deucarian.common"
-      ],
-      "optionalIntegrations": [
-        "com.deucarian.xr-ui.theming-integration"
-      ],
-      "groupId": "world-interaction"
-    },
-    {
-      "id": "com.deucarian.camera-navigation",
-      "displayName": "Deucarian Camera Navigation",
-      "category": "World",
-      "type": "Core",
-      "ecosystemGroup": "Experience & Interaction",
-      "overviewOrder": 25,
-      "description": "Reusable camera pose, framing, transition, orbit, fly, top-down, and waypoint navigation primitives.",
-      "stableUrl": "https://github.com/Deucarian/Camera-Navigation.git#main",
-      "developmentUrl": "https://github.com/Deucarian/Camera-Navigation.git#develop",
-      "dependencies": [
-        "com.deucarian.common"
-      ],
-      "groupId": "world-interaction"
     },
     {
       "id": "com.deucarian.object-selection",
@@ -539,26 +471,6 @@
       "integrationTargets": [
         "com.deucarian.ui-binding",
         "com.deucarian.core-state"
-      ],
-      "groupId": "integrations",
-      "ecosystemGroup": "Integrations"
-    },
-    {
-      "id": "com.deucarian.xr-ui.theming-integration",
-      "displayName": "Deucarian XR UI Theming Integration",
-      "category": "Integration",
-      "type": "Integration",
-      "overviewOrder": 35,
-      "description": "Optional integration that maps Deucarian Theming color roles into Deucarian XR UI palettes.",
-      "stableUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git#main",
-      "developmentUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git#develop",
-      "dependencies": [
-        "com.deucarian.xr-ui",
-        "com.deucarian.theming"
-      ],
-      "integrationTargets": [
-        "com.deucarian.xr-ui",
-        "com.deucarian.theming"
       ],
       "groupId": "integrations",
       "ecosystemGroup": "Integrations"
