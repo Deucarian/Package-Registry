@@ -35,7 +35,9 @@ Before adding a dependency:
 
 ## Required Vs Optional
 
-- Hard dependencies go in Unity `package.json`, registry `dependencies`, asmdef references, and package config.
+- Hard dependencies on other `com.deucarian.*` packages go in Unity `package.json`, registry `dependencies`, asmdef references, and package config.
+- Unity-provided built-in modules (`com.unity.modules.*`) remain explicit in a package's Unity `package.json` and `deucarian-package.json` dependency contract when used, but are not Deucarian-distributed packages. They must not receive `packages.json` records or appear in Package Registry relationship fields, and they do not participate in the public Deucarian dependency closure.
+- Every `com.deucarian.*` dependency and relationship target participates in that closure and must resolve to a `packages.json` record; validation fails closed when a target is absent.
 - Optional companions are recommendations only. They must not imply install order or auto-install behavior.
 - Optional diagnostics hooks should use version-defined asmdefs or guarded code.
 - Integration package dependencies are hard requirements for that Integration package.
