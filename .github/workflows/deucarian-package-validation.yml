@@ -19,6 +19,9 @@ on:
         type: string
         default: 7d905efd860eb8a259458878a56339ed5f05b827
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     name: Validate package
