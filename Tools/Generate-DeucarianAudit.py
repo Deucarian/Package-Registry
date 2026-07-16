@@ -614,7 +614,10 @@ class CSharpSyntaxAnalyzer:
                 parsed.lifetime_occurrences.append(self._lifetime_record(parsed, node, invocation_name, containing_symbol, lifetime_kind))
 
     def _symbol_ranges(self, symbols: list[dict[str, Any]]) -> list[tuple[int, dict[str, Any]]]:
-        return sorted((symbol["line"], symbol) for symbol in symbols)
+        return sorted(
+            ((symbol["line"], symbol) for symbol in symbols),
+            key=lambda item: (item[0], str(item[1].get("symbol") or "")),
+        )
 
     def _containing_symbol(self, ranges: list[tuple[int, dict[str, Any]]], line: int) -> str:
         current = ""
