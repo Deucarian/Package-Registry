@@ -415,6 +415,22 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         return AuditFixture(Path(temp.name)).build()
 
+    def test_symbol_ranges_are_deterministic_when_symbols_share_a_line(self) -> None:
+        analyzer = audit.CSharpSyntaxAnalyzer(authoritative=True)
+
+        ranges = analyzer._symbol_ranges(
+            [
+                {"line": 7, "symbol": "Zulu"},
+                {"line": 7, "symbol": "Alpha"},
+                {"line": 3, "symbol": "Earlier"},
+            ]
+        )
+
+        self.assertEqual(
+            [(3, "Earlier"), (7, "Alpha"), (7, "Zulu")],
+            [(line, symbol["symbol"]) for line, symbol in ranges],
+        )
+
     def test_debug_audit_uses_invocations_not_text_mentions(self) -> None:
         report = self.build_fixture_report()
         records = report["debugApi"]["invocations"]

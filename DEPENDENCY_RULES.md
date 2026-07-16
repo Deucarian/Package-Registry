@@ -11,13 +11,16 @@
    - `com.deucarian.editor`
    - `com.deucarian.logging`
    - `com.deucarian.core-state`
-3. Runtime capability packages
+3. Editor tooling packages
+   - `com.deucarian.build-pipeline`
+   - Depend on foundation packages and remain editor-only.
+4. Runtime capability packages
    - API, Session, Object Loading, Object Selection, UI Binding, UI Flow, Theming, Diagnostics.
-4. Integration packages
+5. Integration packages
    - Adapters between declared target packages.
-5. Suite packages
+6. Suite packages
    - Dependency bundles and samples.
-6. Package Installer
+7. Package Installer
    - Installer/composition UI and registry channel handling.
 
 ## Dependency Checklist
