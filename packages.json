@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-16",
   "groups": [
     {
       "id": "infrastructure",
@@ -466,6 +466,19 @@
         "com.deucarian.editor",
         "com.deucarian.logging"
       ],
+      "groupId": "tools-quality"
+    },
+    {
+      "id": "com.deucarian.build-pipeline",
+      "displayName": "Deucarian Build Pipeline",
+      "category": "Tools",
+      "type": "Tool",
+      "ecosystemGroup": "Tools & Quality",
+      "overviewOrder": 50,
+      "description": "Editor-only, profile-backed Unity build policies, drift validation, artifact manifests, and CI build entry points.",
+      "stableUrl": "https://github.com/Deucarian/Build-Pipeline.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Build-Pipeline.git#develop",
+      "dependencies": [],
       "groupId": "tools-quality"
     },
     {
