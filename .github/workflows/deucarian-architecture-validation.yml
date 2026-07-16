@@ -14,6 +14,9 @@ on:
         type: string
         default: 2f10d0dcc049b63474c6e96ed929127d93560b33
 
+permissions:
+  contents: read
+
 jobs:
   validate-architecture:
     name: Validate registry architecture

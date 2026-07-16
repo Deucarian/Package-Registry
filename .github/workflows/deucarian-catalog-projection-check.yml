@@ -13,6 +13,9 @@ on:
         type: string
         default: 2f10d0dcc049b63474c6e96ed929127d93560b33
 
+permissions:
+  contents: read
+
 jobs:
   check-catalog:
     name: Check projected fallback catalog
