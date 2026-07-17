@@ -18,7 +18,11 @@ BOOTSTRAP_CATALOG_PATH = Path("Editor") / "PackageCatalogFallback.json"
 BOOTSTRAP_PACKAGE_FIELDS = (
     "id",
     "displayName",
+    "kind",
+    "groupId",
     "category",
+    "type",
+    "ecosystemGroup",
     "description",
     "stableUrl",
     "developmentUrl",
@@ -135,6 +139,7 @@ def project_bootstrap_catalog(
     return {
         "schemaVersion": copy.deepcopy(registry["schemaVersion"]),
         "updatedAt": copy.deepcopy(registry["updatedAt"]),
+        "groups": copy.deepcopy(registry.get("groups", [])),
         "packages": projected_packages,
     }
 

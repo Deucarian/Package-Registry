@@ -65,6 +65,7 @@ WORKFLOW_DISPATCH_RE = re.compile(r"^\s*workflow_dispatch\s*:|\bon\s*:\s*\[[^\]]
 WORKFLOW_TAG_TRIGGER_RE = re.compile(r"^\s*tags\s*:", re.I | re.M)
 RELEASE_ARTIFACT_RE = re.compile(r"\brelease\b|upload-artifact|git\s+archive|Compress-Archive", re.I)
 RELEASE_WORKFLOW_NAME_RE = re.compile(r"^\s*name\s*:\s*.*\brelease\b", re.I | re.M)
+PACKAGE_KINDS = {"Library", "Tool", "Integration", "Suite", "Template"}
 
 
 class ValidationError(Exception):
@@ -573,6 +574,57 @@ class Validator:
 
     def validate_registry_schema(self) -> None:
         data = self.packages
+        if data.get("schemaVersion") != 2:
+            self.fail(f"packages.json: schemaVersion must be 2, got {data.get('schemaVersion')!r}.")
+        groups = data.get("groups")
+        if not isinstance(groups, list):
+            self.fail("packages.json: groups must be an array.")
+            groups = []
+        group_ids: set[str] = set()
+        group_parents: dict[str, str] = {}
+        sort_orders: set[int] = set()
+        for group in groups:
+            if not isinstance(group, dict):
+                self.fail("packages.json: every group entry must be an object.")
+                continue
+            group_id = group.get("id")
+            if not isinstance(group_id, str) or not group_id:
+                self.fail(f"packages.json: invalid group id {group_id!r}.")
+                continue
+            if group_id in group_ids:
+                self.fail(f"packages.json: duplicate group id {group_id}.")
+            group_ids.add(group_id)
+            if not group.get("displayName"):
+                self.fail(f"packages.json: group {group_id} requires displayName.")
+            parent = group.get("parentGroupId") or ""
+            if not isinstance(parent, str):
+                self.fail(f"packages.json: group {group_id} parentGroupId must be a string.")
+                parent = ""
+            group_parents[group_id] = parent
+            order = group.get("sortOrder")
+            if not isinstance(order, int):
+                self.fail(f"packages.json: group {group_id} requires integer sortOrder.")
+            elif order in sort_orders:
+                self.fail(f"packages.json: duplicate group sortOrder {order}.")
+            else:
+                sort_orders.add(order)
+        for group_id, parent in group_parents.items():
+            if parent and parent not in group_ids:
+                self.fail(f"packages.json: group {group_id} has unknown parentGroupId {parent}.")
+        for group_id in sorted(group_ids):
+            seen: set[str] = set()
+            current = group_id
+            depth = 0
+            while group_parents.get(current):
+                if current in seen:
+                    self.fail(f"packages.json: group hierarchy contains a cycle at {group_id}.")
+                    break
+                seen.add(current)
+                current = group_parents[current]
+                depth += 1
+                if depth > 1:
+                    self.fail(f"packages.json: group {group_id} exceeds the maximum depth of two levels.")
+                    break
         if not isinstance(data.get("packages"), list):
             self.fail("packages.json: packages must be an array.")
             return
@@ -588,9 +640,20 @@ class Validator:
             if package_id in ids:
                 self.fail(f"packages.json: duplicate package id {package_id}.")
             ids.add(package_id)
+            kind = pkg.get("kind")
+            if kind not in PACKAGE_KINDS:
+                self.fail(f"{package_id}: kind must be one of {sorted(PACKAGE_KINDS)}, got {kind!r}.")
+            for legacy_field in ("category", "type", "ecosystemGroup"):
+                if not pkg.get(legacy_field):
+                    self.fail(f"{package_id}: legacy bridge field {legacy_field} is required for schema v2 rollout.")
             group_id = pkg.get("groupId")
-            if group_id and group_id not in self.registry_groups_by_id:
+            if not group_id:
+                self.fail(f"{package_id}: groupId is required.")
+            elif group_id not in self.registry_groups_by_id:
                 self.fail(f"{package_id}: unknown groupId {group_id}.")
+            for reverse_field in ("optionalCompanions", "optionalIntegrations"):
+                if reverse_field in pkg:
+                    self.fail(f"{package_id}: {reverse_field} is a derived reverse relation and must not be stored in schema v2.")
             for field, branch in (("stableUrl", "main"), ("developmentUrl", "develop")):
                 url = pkg.get(field, "")
                 match = GIT_URL_RE.match(str(url))
@@ -600,9 +663,49 @@ class Validator:
                     self.fail(f"{package_id}: {field} must target #{branch}.")
                 elif self.check_remote_urls and not self.git_ref_exists(url):
                     self.fail(f"{package_id}: {field} does not resolve: {url}.")
-            for dep in pkg.get("dependencies") or []:
+            dependencies = pkg.get("dependencies") or []
+            if not isinstance(dependencies, list) or any(not isinstance(dep, str) or not dep for dep in dependencies):
+                self.fail(f"{package_id}: dependencies must be an array of non-empty package ids.")
+                dependencies = []
+            if len(dependencies) != len(set(dependencies)) or package_id in dependencies:
+                self.fail(f"{package_id}: dependencies must not contain duplicates or self references.")
+            for dep in dependencies:
                 if dep not in ids and dep not in self.registry_packages_by_id:
                     self.fail(f"{package_id}: dependency {dep} is not in packages.json.")
+            relations: dict[str, list[str]] = {}
+            for field in ("integrationTargets", "suiteMembers", "recommendedWith"):
+                value = pkg.get(field) or []
+                if not isinstance(value, list) or any(not isinstance(target, str) or not target for target in value):
+                    self.fail(f"{package_id}: {field} must be an array of non-empty package ids.")
+                    value = []
+                if len(value) != len(set(value)) or package_id in value:
+                    self.fail(f"{package_id}: {field} must not contain duplicates or self references.")
+                for target in value:
+                    if target not in self.registry_packages_by_id:
+                        self.fail(f"{package_id}: {field} target {target} is not in packages.json.")
+                relations[field] = value
+            integration_targets = relations["integrationTargets"]
+            suite_members = relations["suiteMembers"]
+            recommended = relations["recommendedWith"]
+            if kind == "Integration":
+                if not integration_targets:
+                    self.fail(f"{package_id}: Integration packages require integrationTargets.")
+                missing_targets = sorted(set(integration_targets) - set(dependencies))
+                if missing_targets:
+                    self.fail(f"{package_id}: integrationTargets missing from dependencies: {missing_targets}.")
+            elif integration_targets:
+                self.fail(f"{package_id}: only Integration packages may declare integrationTargets.")
+            if kind == "Suite":
+                if not suite_members:
+                    self.fail(f"{package_id}: Suite packages require suiteMembers.")
+                if set(suite_members) != set(dependencies):
+                    self.fail(f"{package_id}: suiteMembers must exactly match dependencies.")
+            elif suite_members:
+                self.fail(f"{package_id}: only Suite packages may declare suiteMembers.")
+            structural = set(integration_targets) | set(suite_members)
+            overlap = sorted(structural & set(recommended))
+            if overlap:
+                self.fail(f"{package_id}: recommendedWith duplicates structural relations: {overlap}.")
         cycles = self.detect_cycles({pkg["id"]: pkg.get("dependencies") or [] for pkg in data["packages"] if isinstance(pkg, dict) and pkg.get("id")})
         for cycle in cycles:
             self.fail("Dependency cycle detected: " + " -> ".join(cycle))
