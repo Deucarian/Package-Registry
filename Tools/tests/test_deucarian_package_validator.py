@@ -40,11 +40,26 @@ class ValidatorFixture:
         write_json(
             self.registry / "packages.json",
             {
-                "groups": [{"id": "core", "displayName": "Core"}],
+                "schemaVersion": 2,
+                "updatedAt": "2026-07-17",
+                "groups": [
+                    {
+                        "id": "core",
+                        "displayName": "Core",
+                        "parentGroupId": "",
+                        "sortOrder": 10,
+                        "iconKey": "blocks",
+                    }
+                ],
                 "packages": [
                     {
                         "id": "com.deucarian.alpha",
                         "displayName": "Deucarian Alpha",
+                        "category": "Core",
+                        "type": "Core",
+                        "kind": "Library",
+                        "ecosystemGroup": "Core",
+                        "iconKey": "sparkles",
                         "groupId": "core",
                         "dependencies": ["com.deucarian.logging"],
                         "stableUrl": "https://github.com/Deucarian/Alpha.git#main",
@@ -53,6 +68,11 @@ class ValidatorFixture:
                     {
                         "id": "com.deucarian.logging",
                         "displayName": "Deucarian Logging",
+                        "category": "Core",
+                        "type": "Core",
+                        "kind": "Library",
+                        "ecosystemGroup": "Core",
+                        "iconKey": "scroll-text",
                         "groupId": "core",
                         "dependencies": [],
                         "stableUrl": "https://github.com/Deucarian/Logging.git#main",
@@ -61,6 +81,11 @@ class ValidatorFixture:
                     {
                         "id": "com.deucarian.diagnostics",
                         "displayName": "Deucarian Diagnostics",
+                        "category": "Editor",
+                        "type": "Tool",
+                        "kind": "Tool",
+                        "ecosystemGroup": "Core",
+                        "iconKey": "stethoscope",
                         "groupId": "core",
                         "dependencies": [],
                         "stableUrl": "https://github.com/Deucarian/Diagnostics.git#main",
@@ -119,6 +144,13 @@ class ValidatorFixture:
                 "unity": "2022.3",
                 "repository": {"type": "git", "url": "https://github.com/Deucarian/Alpha.git"},
                 "dependencies": {"com.deucarian.logging": "1.0.0"},
+                "samples": [
+                    {
+                        "displayName": "Demo",
+                        "description": "Compiled Alpha example.",
+                        "path": "Samples~/Demo",
+                    }
+                ],
             },
         )
         write(self.package / "README.md", "# Alpha\n\nCurrent package version: 1.2.3")
@@ -136,6 +168,7 @@ class ValidatorFixture:
             self.package / "Samples~" / "Demo" / "Alpha.Sample.asmdef",
             {"name": "Deucarian.Alpha.Sample", "references": ["Deucarian.Alpha"]},
         )
+        write(self.package / "Samples~" / "Demo" / "README.md", "# Alpha Demo")
         write_json(
             self.package / "Tests" / "Editor" / "Alpha.Tests.asmdef",
             {"name": "Deucarian.Alpha.Tests", "references": ["Deucarian.Alpha"], "optionalUnityReferences": ["TestAssemblies"]},
@@ -155,11 +188,48 @@ class ValidatorFixture:
                 "allowedDirectDebugCalls": [],
                 "allowedDirectUnityObjectLifetimeCalls": [],
                 "expectedSamplesRoot": "Samples~",
+                "samplePolicy": "compiled-example",
             },
         )
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_canonical_registry_policy_schemas_are_complete(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+
+        validator.validate_registry_schema()
+        validator.validate_capabilities_schema()
+        validator.validate_dependency_rules_schema()
+
+        self.assertEqual([], validator.errors)
+
+    def test_registry_rejects_unknown_kind_and_stored_reverse_relations(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        package = validator.packages["packages"][0]
+        package["kind"] = "Core"
+        package["optionalIntegrations"] = ["com.deucarian.logging"]
+
+        validator.validate_registry_schema()
+
+        self.assertTrue(any("kind must be one of" in error for error in validator.errors))
+        self.assertTrue(any("derived reverse relation" in error for error in validator.errors))
+
+    def test_playable_scene_policy_requires_scene(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            config_path = fixture.package / "deucarian-package.json"
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            config["samplePolicy"] = "playable-scene"
+            write_json(config_path, config)
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            result = validator.validate_package()
+
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("requires a playable Unity scene" in error for error in result["errors"]))
+
     def test_canonical_registry_produces_expected_catalog_projections(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)
@@ -207,6 +277,128 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
             self.assertIn("DEBUG_API_AUDIT.json: com.deucarian.alpha Runtime/Alpha.cs:4 is not Allowed.", validator.errors)
 
+    def test_dependency_audit_accepts_test_only_and_suite_composition_findings(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write_json(
+                fixture.registry / "DEPENDENCY_USAGE_AUDIT.json",
+                {
+                    "findings": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.test-support",
+                            "classification": "TestOnlyUse",
+                        },
+                        {
+                            "packageId": "com.deucarian.alpha-suite",
+                            "dependency": "com.deucarian.alpha",
+                            "classification": "SuiteComposition",
+                        },
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.missing",
+                            "classification": "MissingHardPackageDependency",
+                        },
+                    ]
+                },
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_authoritative_audit_artifacts()
+
+            self.assertEqual(
+                [
+                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha -> "
+                    "com.deucarian.missing is MissingHardPackageDependency."
+                ],
+                validator.errors,
+            )
+
+    def test_common_api_boundary_accepts_approved_overloads(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            common = Path(temp) / "Common"
+            common.mkdir()
+            write(
+                common / "Runtime" / "UnityObjectUtility.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class UnityObjectUtility
+                    {
+                        public static void DestroySafely(UnityEngine.Object target) {}
+                        public static void DestroySafely(UnityEngine.Object target, float delaySeconds) {}
+                    }
+                }
+                """,
+            )
+            write(
+                common / "Runtime" / "DeucarianEasing.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class DeucarianEasing
+                    {
+                        public static float Evaluate(float value) => value;
+                    }
+                }
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, common)
+
+            validator.validate_common_api(common)
+
+            self.assertEqual([], validator.errors)
+
+    def test_registry_requires_safe_group_icon_key(self) -> None:
+        for icon_key in (None, "", "Editor", "package/plus", "icon_key", "-icon", "icon-", "icon--key"):
+            with self.subTest(icon_key=icon_key), tempfile.TemporaryDirectory() as temp:
+                fixture = ValidatorFixture(Path(temp))
+                registry_path = fixture.registry / "packages.json"
+                registry = json.loads(registry_path.read_text(encoding="utf-8"))
+                if icon_key is None:
+                    registry["groups"][0].pop("iconKey")
+                else:
+                    registry["groups"][0]["iconKey"] = icon_key
+                write_json(registry_path, registry)
+                validator = validator_module.Validator(fixture.registry)
+
+                validator.validate_registry_schema()
+
+                self.assertIn(
+                    f"packages.json group core: iconKey must match {validator_module.ICON_KEY_RE.pattern}.",
+                    validator.errors,
+                )
+
+    def test_registry_accepts_safe_group_and_package_icon_keys(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            validator = validator_module.Validator(fixture.registry)
+
+            validator.validate_registry_schema()
+
+            self.assertEqual([], validator.errors)
+
+    def test_registry_requires_safe_package_icon_key(self) -> None:
+        for icon_key in (None, "", "PackagePlus", "package/plus", "package_plus", "-package", "package-", "package--plus"):
+            with self.subTest(icon_key=icon_key), tempfile.TemporaryDirectory() as temp:
+                fixture = ValidatorFixture(Path(temp))
+                registry_path = fixture.registry / "packages.json"
+                registry = json.loads(registry_path.read_text(encoding="utf-8"))
+                if icon_key is None:
+                    registry["packages"][0].pop("iconKey")
+                else:
+                    registry["packages"][0]["iconKey"] = icon_key
+                write_json(registry_path, registry)
+                validator = validator_module.Validator(fixture.registry)
+
+                validator.validate_registry_schema()
+
+                self.assertIn(
+                    f"com.deucarian.alpha: iconKey must match {validator_module.ICON_KEY_RE.pattern}.",
+                    validator.errors,
+                )
+
     def test_common_api_boundary_rejects_extra_public_runtime_method(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))
@@ -220,7 +412,20 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                     public static class UnityObjectUtility
                     {
                         public static void DestroySafely(UnityEngine.Object target) {}
+                        public static void DestroySafely(UnityEngine.Object target, float delaySeconds) {}
                         public static void ExtraApi() {}
+                    }
+                }
+                """,
+            )
+            write(
+                common / "Runtime" / "DeucarianEasing.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class DeucarianEasing
+                    {
+                        public static float Evaluate(float value) => value;
                     }
                 }
                 """,

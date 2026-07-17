@@ -28,12 +28,15 @@ def package(
     result = {
         "id": package_id,
         "displayName": "Deucarian " + repository_name,
+        "kind": "Tool" if package_id == projection.INSTALLER_PACKAGE_ID else "Library",
+        "groupId": "infrastructure",
         "category": "Tools" if package_id == projection.INSTALLER_PACKAGE_ID else "Core",
+        "type": "Tool" if package_id == projection.INSTALLER_PACKAGE_ID else "Core",
+        "ecosystemGroup": "Infrastructure",
         "description": f"{package_id} description.",
         "stableUrl": f"https://github.com/Deucarian/{repository_name}.git#main",
         "developmentUrl": f"https://github.com/Deucarian/{repository_name}.git#develop",
         "dependencies": dependencies,
-        "groupId": "infrastructure",
     }
     if stable_version is not None:
         result["stableVersion"] = stable_version
@@ -91,10 +94,13 @@ class PackageCatalogProjectionTests(unittest.TestCase):
             [item["id"] for item in projected["packages"]],
         )
         self.assertEqual(set(projection.BOOTSTRAP_PACKAGE_FIELDS), set(projected["packages"][0]))
+        self.assertEqual(registry_fixture()["groups"], projected["groups"])
         for item in projected["packages"]:
             self.assertNotIn("stableVersion", item)
             self.assertNotIn("developmentVersion", item)
-            self.assertNotIn("groupId", item)
+            self.assertIn("groupId", item)
+            self.assertIn("kind", item)
+            self.assertNotIn("iconKey", item)
 
     def test_projection_rejects_missing_dependencies_and_cycles(self) -> None:
         missing = registry_fixture()

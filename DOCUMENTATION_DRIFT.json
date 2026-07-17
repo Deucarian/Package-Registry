@@ -13,6 +13,18 @@
       "repository": "Bootstrap"
     },
     {
+      "file": "Documentation~/CrossGenre.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.defense-games",
+      "repository": "Defense-Games"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.diagnostics",
+      "repository": "Diagnostics"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.logging",
@@ -73,6 +85,12 @@
       "repository": "Package-Registry"
     },
     {
+      "file": "MIGRATION_PLAN.md",
+      "kind": "MigrationDocumentation",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.selection-suite",
@@ -97,6 +115,24 @@
       "repository": "Session-API-Integration"
     },
     {
+      "file": "Documentation~/validation.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors"
+    },
+    {
+      "file": "Documentation~/game-content-authoring.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors"
+    },
+    {
+      "file": "Documentation~/lifecycle.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.test-automation",
+      "repository": "Test-Automation"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.ui-binding",
@@ -113,11 +149,18 @@
       "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "repository": "UIBinding-CoreState-Integration"
+    },
+    {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration"
     }
   ],
   "summary": {
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 6
+    "MigrationDocumentation": 8,
+    "ReviewRequired": 5
   }
 }

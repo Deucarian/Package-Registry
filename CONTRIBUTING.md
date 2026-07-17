@@ -56,6 +56,8 @@ python Tools/project_package_catalogs.py --installer-root ../Package-Installer -
 python Tools/Generate-DeucarianAudit.py --audit-root <audit-root> --output-root . --organization Deucarian --ref develop --authoritative --format all --check
 ```
 
+Authoritative `--check` rejects incomplete coverage, parse failures, stale artifacts, dependency cycles, and actionable dependency, debug, or Unity object-lifetime policy findings. Use `--write` to refresh evidence while repairing a finding; the resulting artifacts do not make the policy check pass by themselves.
+
 If coordinated Package Installer or Bootstrap changes have not landed locally yet, run the projection tool in write mode against temporary roots and then run `--check` against those same roots. Registry CI uses that order so it validates deterministic generation without depending on unmerged consumer branches.
 Package Installer and Bootstrap CI should call `.github/workflows/deucarian-catalog-projection-check.yml` with `catalog: installer` or `catalog: bootstrap` respectively; each check is independent of the other consumer checkout.
 
