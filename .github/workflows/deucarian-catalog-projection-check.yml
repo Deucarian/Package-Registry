@@ -11,7 +11,10 @@ on:
         description: Package Registry ref that owns the projection tool and canonical packages.json.
         required: false
         type: string
-        default: develop
+        default: e54a2336879d35b75e38da7ed0ffa943d2e370c2
+
+permissions:
+  contents: read
 
 jobs:
   check-catalog:
@@ -19,19 +22,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout consumer repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           path: consumer
 
       - name: Checkout Package Registry projection tool
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           repository: Deucarian/Package-Registry
           ref: ${{ inputs.registry-ref }}
           path: package-registry
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.11"
 
