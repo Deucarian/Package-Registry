@@ -145,5 +145,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 0
+- Dependency version drift entries: 10
 - Registry dependency drift entries: 0

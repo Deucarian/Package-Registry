@@ -85,6 +85,12 @@
       "repository": "Package-Registry"
     },
     {
+      "file": "MIGRATION_PLAN.md",
+      "kind": "MigrationDocumentation",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.selection-suite",
@@ -154,7 +160,7 @@
   "summary": {
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 7,
+    "MigrationDocumentation": 8,
     "ReviewRequired": 5
   }
 }
