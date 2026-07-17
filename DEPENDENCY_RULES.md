@@ -2,26 +2,15 @@
 
 `dependency-rules.json` is authoritative. These notes explain the practical package layering rules.
 
-## Layering
+## Dependency ranks
 
-1. `com.deucarian.common`
-   - Lowest-level runtime primitive package.
-   - No Logging, Editor, JSON, networking, diagnostics, state, UI, or domain dependencies.
-2. Foundation packages
-   - `com.deucarian.editor`
-   - `com.deucarian.logging`
-   - `com.deucarian.core-state`
-3. Editor tooling packages
-   - `com.deucarian.build-pipeline`
-   - Depend on foundation packages and remain editor-only.
-4. Runtime capability packages
-   - API, Session, Object Loading, Object Selection, UI Binding, UI Flow, Theming, Diagnostics.
-5. Integration packages
-   - Adapters between declared target packages.
-6. Suite packages
-   - Dependency bundles and samples.
-7. Package Installer
-   - Installer/composition UI and registry channel handling.
+- Every catalog package appears in exactly one machine-readable rank in `dependency-rules.json`.
+- Rank 0 contains dependency-free portfolio foundations, including Common.
+- Every dependency must point to a strictly lower rank; this makes cycles and sideways coupling invalid by construction.
+- Ranks describe dependency depth, not product taxonomy. Functional placement comes from `groupId`, while Integration, Suite, Template, Tool, and Library behavior comes from `kind`.
+- Integration dependencies contain every `integrationTargets` entry plus only foundations the adapter actually uses.
+- Suite dependencies exactly equal `suiteMembers`; Suite repositories remain implementation-free and own composition samples.
+- Template assemblies and samples declare direct dependencies instead of relying on Suite transitivity.
 
 ## Dependency Checklist
 
@@ -39,7 +28,8 @@ Before adding a dependency:
 ## Required Vs Optional
 
 - Hard dependencies go in Unity `package.json`, registry `dependencies`, asmdef references, and package config.
-- Optional companions are recommendations only. They must not imply install order or auto-install behavior.
+- `recommendedWith` is a non-structural recommendation only. It does not imply install order or auto-install behavior.
+- Reverse Integration and Suite relationships are derived from `integrationTargets` and `suiteMembers`.
 - Optional diagnostics hooks should use version-defined asmdefs or guarded code.
 - Integration package dependencies are hard requirements for that Integration package.
 

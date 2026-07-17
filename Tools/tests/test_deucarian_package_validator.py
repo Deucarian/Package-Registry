@@ -119,6 +119,13 @@ class ValidatorFixture:
                 "unity": "2022.3",
                 "repository": {"type": "git", "url": "https://github.com/Deucarian/Alpha.git"},
                 "dependencies": {"com.deucarian.logging": "1.0.0"},
+                "samples": [
+                    {
+                        "displayName": "Demo",
+                        "description": "Compiled Alpha example.",
+                        "path": "Samples~/Demo",
+                    }
+                ],
             },
         )
         write(self.package / "README.md", "# Alpha\n\nCurrent package version: 1.2.3")
@@ -136,6 +143,7 @@ class ValidatorFixture:
             self.package / "Samples~" / "Demo" / "Alpha.Sample.asmdef",
             {"name": "Deucarian.Alpha.Sample", "references": ["Deucarian.Alpha"]},
         )
+        write(self.package / "Samples~" / "Demo" / "README.md", "# Alpha Demo")
         write_json(
             self.package / "Tests" / "Editor" / "Alpha.Tests.asmdef",
             {"name": "Deucarian.Alpha.Tests", "references": ["Deucarian.Alpha"], "optionalUnityReferences": ["TestAssemblies"]},
@@ -155,16 +163,19 @@ class ValidatorFixture:
                 "allowedDirectDebugCalls": [],
                 "allowedDirectUnityObjectLifetimeCalls": [],
                 "expectedSamplesRoot": "Samples~",
+                "samplePolicy": "compiled-example",
             },
         )
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
-    def test_canonical_registry_schema_v2_is_valid(self) -> None:
+    def test_canonical_registry_policy_schemas_are_complete(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)
 
         validator.validate_registry_schema()
+        validator.validate_capabilities_schema()
+        validator.validate_dependency_rules_schema()
 
         self.assertEqual([], validator.errors)
 
@@ -179,6 +190,20 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
         self.assertTrue(any("kind must be one of" in error for error in validator.errors))
         self.assertTrue(any("derived reverse relation" in error for error in validator.errors))
+
+    def test_playable_scene_policy_requires_scene(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            config_path = fixture.package / "deucarian-package.json"
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            config["samplePolicy"] = "playable-scene"
+            write_json(config_path, config)
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            result = validator.validate_package()
+
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("requires a playable Unity scene" in error for error in result["errors"]))
 
     def test_canonical_registry_produces_expected_catalog_projections(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
@@ -226,6 +251,43 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
             validator.validate_registry()
 
             self.assertIn("DEBUG_API_AUDIT.json: com.deucarian.alpha Runtime/Alpha.cs:4 is not Allowed.", validator.errors)
+
+    def test_dependency_audit_accepts_test_only_and_suite_composition_findings(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write_json(
+                fixture.registry / "DEPENDENCY_USAGE_AUDIT.json",
+                {
+                    "findings": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.test-support",
+                            "classification": "TestOnlyUse",
+                        },
+                        {
+                            "packageId": "com.deucarian.alpha-suite",
+                            "dependency": "com.deucarian.alpha",
+                            "classification": "SuiteComposition",
+                        },
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.missing",
+                            "classification": "MissingHardPackageDependency",
+                        },
+                    ]
+                },
+            )
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            validator.validate_authoritative_audit_artifacts()
+
+            self.assertEqual(
+                [
+                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha -> "
+                    "com.deucarian.missing is MissingHardPackageDependency."
+                ],
+                validator.errors,
+            )
 
     def test_common_api_boundary_accepts_approved_overloads(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
