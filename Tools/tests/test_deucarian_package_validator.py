@@ -160,6 +160,26 @@ class ValidatorFixture:
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_canonical_registry_schema_v2_is_valid(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+
+        validator.validate_registry_schema()
+
+        self.assertEqual([], validator.errors)
+
+    def test_registry_rejects_unknown_kind_and_stored_reverse_relations(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        package = validator.packages["packages"][0]
+        package["kind"] = "Core"
+        package["optionalIntegrations"] = ["com.deucarian.logging"]
+
+        validator.validate_registry_schema()
+
+        self.assertTrue(any("kind must be one of" in error for error in validator.errors))
+        self.assertTrue(any("derived reverse relation" in error for error in validator.errors))
+
     def test_canonical_registry_produces_expected_catalog_projections(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)

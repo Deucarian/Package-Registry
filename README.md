@@ -63,23 +63,21 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `packages`: List of package entries available to the installer.
 - `id`: Unique Unity package ID.
 - `displayName`: Human-readable package name.
-- `category`: Package grouping shown by the installer.
+- `kind`: Canonical artifact kind: `Library`, `Tool`, `Integration`, `Suite`, or `Template`.
+- `groupId`: Required functional-domain group used for navigation and ordering.
+- `category`, `type`, `ecosystemGroup`: One-release compatibility projections for older Installer and Bootstrap versions. New consumers must not use them as canonical metadata.
 - `description`: Short explanation of what the package provides.
 - `stableUrl`: GitHub HTTPS Unity Package Manager URL for the stable install channel. Mature packages normally use `#main`; pre-stable bootstrap packages may temporarily point this at a verified development branch when `main` does not exist yet.
 - `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development install channel.
 - `dependencies`: Package IDs that must also exist in this registry and should be installed first by the Package Installer.
-- `groupId`: Optional Package Installer Ecosystem Graph structural group ID. Supported top-level IDs are `infrastructure`, `state-data`, `runtime-services`, `experience-interaction`, `tools-quality`, `integrations`, `gameplay`, `suites`, and `templates`.
-- `ecosystemGroup`: Legacy Package Installer overview-wheel sector override retained for older installers. Prefer `groupId` for new entries.
 - `overviewOrder`: Optional positive integer used to order packages within their semantic overview sector.
-- `optionalCompanions`: Package IDs that are useful optional add-ons but must not be installed automatically as dependencies.
-- `optionalIntegrations`: Integration package IDs that are useful for this package but must not be installed automatically as dependencies.
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.
 - `suiteMembers`: Package IDs composed by a Suite package in the Package Installer ecosystem graph.
+- `recommendedWith`: Genuine non-structural recommendations. Reverse Integration and Suite relationships are derived and must not be stored.
 
 The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.
 Packages that declare another Deucarian package in their Unity `package.json` dependencies should also list that package here so dependency-first installation works from the installer.
-Packages that merely light up optional integration behavior should list that package in `optionalCompanions` instead of `dependencies`.
-Integration packages use `category` value `Integration`; legacy predecessor package IDs are replaced by `api-integration` and `core-state-integration` package IDs.
+Integration packages declare every owner package in `integrationTargets` and as a direct dependency. Suite dependencies exactly match `suiteMembers`.
 
 ## Capability ownership
 
@@ -95,37 +93,31 @@ State & Data
 Runtime Services
 Experience & Interaction
 ├── UI & Presentation
-└── World Interaction
+└── World & XR Interaction
 Tools & Quality
-Integrations
 Gameplay
 ├── Foundations
-├── Systems
-├── Simulation
+├── Progression & Meta
+├── Combat & Weapons
+├── Encounters & World
 └── Genre Frameworks
-Suites
 Templates
 └── Games
-    ├── Idle Auto Defense
-    ├── Survivors
-    └── Movement FPS
 ```
 
 Promoted gameplay packages and starter templates use stable Git `#main` URLs and development Git `#develop` URLs. Use temporary same-branch stable and development URLs only for future pre-stable bootstrap packages whose repositories do not yet have `main` branches.
 
-The `Templates > Games` groups are active for starter game template packages such as Idle Auto Defense, Survivors, and Movement FPS. Template entries are installable packages, but they are categorized separately from runtime, tooling, integration, and suite packages.
+The three starter templates live directly in `Templates > Games`. Integration and Suite packages live beside their functional owners and remain distinguishable through `kind`.
 
-## Current categories
+## Artifact kinds and compatibility
 
-- `Editor`: editor-only package tooling, chrome, and infrastructure.
-- `Core`: standalone runtime, state, and service packages.
-- `Gameplay`: gameplay foundations, systems, simulation packages, and genre frameworks.
-- `UI`: UI presentation packages.
-- `World`: world-object and scene-interaction packages.
-- `Tools`: developer-facing installer, diagnostics, and package tooling.
-- `Integration`: explicit integration packages between two package owners.
-- `Suites`: curated bundles that install a complete stack through declared dependencies.
-- `Templates`: starter projects, samples, and full game foundations that depend on curated runtime suites.
+- `Library`: reusable runtime or editor-facing capability packages, including existing Core, Framework, and OptionalIntegration packages.
+- `Tool`: developer-facing tooling such as Installer, Diagnostics, authoring, build, and test automation.
+- `Integration`: explicit adapters between declared package owners.
+- `Suite`: implementation-free dependency composition packages with suite-owned samples.
+- `Template`: installable starter projects validated in disposable Unity hosts.
+
+Schema v2 retains legacy `category`, `type`, and `ecosystemGroup` values for one tagged release. They are removed after released Installer and Bootstrap versions have demonstrated v2 consumption.
 
 ## License
 
