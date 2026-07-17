@@ -1,85 +1,129 @@
 {
-  "exceptions": [
-    {
-      "packageId": "com.deucarian.bootstrap",
-      "reason": "Self-contained first-time setup package outside normal dependency graph."
-    },
-    {
-      "dependency": "com.deucarian.editor",
-      "packageId": "com.deucarian.logging",
-      "reason": "Review Logging -> Editor before allowing Editor to use Logging.",
-      "status": "review-required"
-    }
-  ],
+  "schemaVersion": 3,
   "layers": [
     {
-      "id": "common",
+      "id": "tier-0",
+      "rank": 0,
+      "description": "Dependency-free portfolio foundations.",
       "packages": [
-        "com.deucarian.common"
-      ],
-      "status": "active"
-    },
-    {
-      "id": "foundation",
-      "packages": [
+        "com.deucarian.common",
+        "com.deucarian.core-state",
         "com.deucarian.editor",
-        "com.deucarian.logging",
-        "com.deucarian.core-state"
+        "com.deucarian.gameplay-foundation",
+        "com.deucarian.monetization",
+        "com.deucarian.persistence",
+        "com.deucarian.test-automation"
       ]
     },
     {
-      "id": "editor-tooling",
+      "id": "tier-1",
+      "rank": 1,
+      "description": "Packages whose longest canonical dependency path has 1 edge.",
       "packages": [
-        "com.deucarian.build-pipeline"
+        "com.deucarian.camera-navigation",
+        "com.deucarian.combat",
+        "com.deucarian.encounters",
+        "com.deucarian.game-content-authoring",
+        "com.deucarian.logging",
+        "com.deucarian.progression",
+        "com.deucarian.ui-binding",
+        "com.deucarian.world-spawning",
+        "com.deucarian.xr-ui"
       ]
     },
     {
-      "id": "runtime-capabilities",
+      "id": "tier-2",
+      "rank": 2,
+      "description": "Packages whose longest canonical dependency path has 2 edges.",
       "packages": [
         "com.deucarian.api",
-        "com.deucarian.session",
+        "com.deucarian.attacks",
+        "com.deucarian.build-pipeline",
+        "com.deucarian.diagnostics",
+        "com.deucarian.idle-progression",
         "com.deucarian.object-loading",
         "com.deucarian.object-selection",
-        "com.deucarian.camera-navigation",
-        "com.deucarian.xr-ui",
-        "com.deucarian.ui",
-        "com.deucarian.ui-binding",
-        "com.deucarian.ui-flow",
+        "com.deucarian.package-installer",
+        "com.deucarian.session",
         "com.deucarian.theming",
-        "com.deucarian.diagnostics"
+        "com.deucarian.ui-binding.core-state-integration",
+        "com.deucarian.ui-flow",
+        "com.deucarian.world-navigation"
       ]
     },
     {
-      "id": "integrations",
+      "id": "tier-3",
+      "rank": 3,
+      "description": "Packages whose longest canonical dependency path has 3 edges.",
       "packages": [
-        "com.deucarian.session.api-integration",
+        "com.deucarian.defense-games",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
-        "com.deucarian.ui-binding.core-state-integration",
+        "com.deucarian.projectiles",
+        "com.deucarian.session.api-integration",
+        "com.deucarian.ui",
         "com.deucarian.xr-ui.theming-integration"
       ]
     },
     {
-      "id": "suites",
+      "id": "tier-4",
+      "rank": 4,
+      "description": "Packages whose longest canonical dependency path has 4 edges.",
       "packages": [
-        "com.deucarian.selection-suite"
+        "com.deucarian.selection-suite",
+        "com.deucarian.weapon-systems"
       ]
     },
     {
-      "id": "catalog-composition",
+      "id": "tier-5",
+      "rank": 5,
+      "description": "Packages whose longest canonical dependency path has 5 edges.",
       "packages": [
-        "com.deucarian.package-installer"
+        "com.deucarian.auto-defense",
+        "com.deucarian.run-upgrades"
+      ]
+    },
+    {
+      "id": "tier-6",
+      "rank": 6,
+      "description": "Packages whose longest canonical dependency path has 6 edges.",
+      "packages": [
+        "com.deucarian.auto-defense-suite",
+        "com.deucarian.template.game.movement-fps",
+        "com.deucarian.template.game.survivors"
+      ]
+    },
+    {
+      "id": "tier-7",
+      "rank": 7,
+      "description": "Packages whose longest canonical dependency path has 7 edges.",
+      "packages": [
+        "com.deucarian.template.game.idle-auto-defense"
       ]
     }
   ],
+  "exceptions": [
+    {
+      "packageId": "com.deucarian.bootstrap",
+      "reason": "Self-contained first-time setup package outside the Installer-visible dependency graph."
+    },
+    {
+      "packageId": "com.deucarian.logging",
+      "dependency": "com.deucarian.editor",
+      "status": "accepted-follow-up",
+      "reason": "Retained for compatibility in this program; review optional editor presentation in a dedicated follow-up."
+    }
+  ],
   "rules": [
+    "Every Installer-visible package is assigned to exactly one dependency rank.",
+    "Every direct package dependency points to a strictly lower rank.",
     "No cyclic package dependencies.",
     "Runtime assemblies must not reference UnityEditor.",
     "Common cannot depend on Logging, Editor, or domain packages.",
     "Logging cannot depend on Diagnostics or telemetry.",
-    "Integration packages depend only on their targets plus Common/Logging when actually used.",
-    "Package Registry dependencies must match package.json direct Deucarian dependencies.",
-    "Assembly references must match package dependencies."
-  ],
-  "schemaVersion": 2
+    "Integration packages depend on every integration target plus only explicitly used foundations.",
+    "Suite package dependencies exactly match suiteMembers and suites remain implementation-free.",
+    "Package Registry dependencies match package.json direct Deucarian dependencies and versions.",
+    "Production and sample assembly references match direct package dependencies."
+  ]
 }

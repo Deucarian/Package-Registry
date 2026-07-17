@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 SCRIPT_PATH = Path(__file__).resolve().parents[1] / "Generate-DeucarianAudit.py"
@@ -70,6 +71,37 @@ class AuditFixture:
                 ]
             },
         )
+        write_json(
+            self.output_root / "capabilities.json",
+            {
+                "schemaVersion": 2,
+                "capabilities": [
+                    {
+                        "id": "fixture-capability",
+                        "ownerPackageId": "com.deucarian.beta",
+                        "description": "Capability supplied only by the authored policy fixture.",
+                    }
+                ],
+            },
+        )
+        write_json(
+            self.output_root / "dependency-rules.json",
+            {
+                "schemaVersion": 2,
+                "layers": [
+                    {
+                        "id": "fixture",
+                        "packages": [
+                            "com.deucarian.alpha",
+                            "com.deucarian.beta",
+                            "com.deucarian.gamma",
+                            "com.deucarian.logging",
+                            "com.deucarian.sample-target",
+                        ],
+                    }
+                ],
+            },
+        )
         self._alpha()
         self._beta()
         self._logging()
@@ -87,6 +119,8 @@ class AuditFixture:
             include_repository=[],
             exclude_repository=[],
             check=False,
+            write=True,
+            strict_snapshots=False,
         )
         return audit.build_report(args)
 
@@ -102,6 +136,20 @@ class AuditFixture:
                 "unity": "2022.3",
                 "dependencies": deps or {},
                 "repository": {"type": "git", "url": f"git+https://github.com/Deucarian/{name}.git"},
+            },
+        )
+        write_json(
+            repo / "deucarian-package.json",
+            {
+                "packageId": package_id,
+                "runtimeAssemblies": [],
+                "editorAssemblies": [],
+                "sampleAssemblies": [],
+                "testAssemblies": [],
+                "requiredDependencies": sorted((deps or {}).keys()),
+                "optionalVersionDefinedDependencies": [],
+                "allowedDirectDebugCalls": [],
+                "allowedDirectUnityObjectLifetimeCalls": [],
             },
         )
         write(repo / "CHANGELOG.md", f"# Changelog\n\n## {version}\n- Fixture release.")
@@ -328,6 +376,11 @@ class AuditFixture:
 
     def _logging(self) -> None:
         repo = self._package("Logging", "com.deucarian.logging", "1.0.0")
+        config = json.loads((repo / "deucarian-package.json").read_text(encoding="utf-8"))
+        config["allowedDirectDebugCalls"] = [
+            {"file": "Runtime/UnityConsoleLogSink.cs", "reason": "Fixture sink owns console forwarding."}
+        ]
+        write_json(repo / "deucarian-package.json", config)
         write(repo / "README.md", "# Logging\n\nCurrent package version: 1.0.0\n\nThis is an adapter bridge for console output.")
         write_json(repo / "Runtime" / "Logging.asmdef", {"name": "Deucarian.Logging", "references": []})
         write(
@@ -364,6 +417,9 @@ class AuditFixture:
 
     def _gamma(self) -> None:
         repo = self._package("Gamma", "com.deucarian.gamma", "1.0.0")
+        config = json.loads((repo / "deucarian-package.json").read_text(encoding="utf-8"))
+        config["optionalVersionDefinedDependencies"] = ["com.deucarian.logging"]
+        write_json(repo / "deucarian-package.json", config)
         package_json = json.loads((repo / "package.json").read_text(encoding="utf-8"))
         package_json["repository"]["url"] = "git+https://github.com/Deucarian/Gamma-Bridge.git"
         write_json(repo / "package.json", package_json)
@@ -431,6 +487,250 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
             [(line, symbol["symbol"]) for line, symbol in ranges],
         )
 
+    def test_game_content_manifest_required_identifier_uses_offset_preserving_parser_recovery(self) -> None:
+        fixture = Path(__file__).resolve().parent / "fixtures" / "GameContentPackManifest.cs"
+        parsed = audit.ParsedFile(
+            repo="Game-Content-Authoring",
+            package_id="com.deucarian.game-content-authoring",
+            repo_root=fixture.parent,
+            path=fixture,
+            relative_path="Editor/GameContentPackManifest.cs",
+            scope="Editor production",
+            assembly="Deucarian.GameContentAuthoring.Editor",
+            text=fixture.read_text(encoding="utf-8"),
+        )
+
+        audit.CSharpSyntaxAnalyzer(authoritative=True).parse_file(parsed)
+
+        self.assertIsNone(parsed.parse_error)
+        self.assertEqual(["contextual-required-identifier"], parsed.parser_recoveries)
+        self.assertTrue(any(symbol["symbol"] == "Required" for symbol in parsed.symbols))
+        self.assertTrue(any(symbol["symbol"] == "Name" for symbol in parsed.symbols))
+
+    def test_policy_files_are_authored_inputs_and_never_generated_outputs(self) -> None:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        fixture = AuditFixture(Path(temp.name))
+        capability_bytes = (fixture.output_root / "capabilities.json").read_bytes()
+        dependency_rule_bytes = (fixture.output_root / "dependency-rules.json").read_bytes()
+        report = fixture.build()
+
+        audit.write_artifacts_atomically(report, fixture.output_root, "all")
+        first_generation = {
+            filename: (fixture.output_root / filename).read_bytes()
+            for filename in audit.OUTPUT_FILES
+        }
+        audit.write_artifacts_atomically(report, fixture.output_root, "all")
+
+        self.assertEqual(capability_bytes, (fixture.output_root / "capabilities.json").read_bytes())
+        self.assertEqual(dependency_rule_bytes, (fixture.output_root / "dependency-rules.json").read_bytes())
+        self.assertTrue(any(item["id"] == "fixture-capability" for item in report["capabilityMatrix"]))
+        self.assertNotIn("capabilities.json", audit.OUTPUT_FILES)
+        self.assertNotIn("dependency-rules.json", audit.OUTPUT_FILES)
+        self.assertEqual(
+            first_generation,
+            {filename: (fixture.output_root / filename).read_bytes() for filename in audit.OUTPUT_FILES},
+        )
+
+    def test_authoritative_repository_inventory_is_derived_from_catalog_plus_special_repositories(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            write_json(
+                root / "packages.json",
+                {
+                    "packages": [
+                        {
+                            "id": "com.deucarian.alpha",
+                            "developmentUrl": "https://github.com/Deucarian/Alpha.git#develop",
+                        }
+                    ]
+                },
+            )
+            document = audit.load_registry_document(root)
+            specs = audit.expected_repository_specs(document, "Deucarian", "develop")
+            audit_root = root / "audit"
+            audit_root.mkdir()
+            (audit_root / "Alpha").mkdir()
+            _, coverage = audit.repository_inventory(audit_root, specs)
+
+            self.assertEqual(["Alpha", "Bootstrap", "Package-Registry"], [item["name"] for item in specs])
+            self.assertFalse(coverage["complete"])
+            self.assertEqual(["Bootstrap", "Package-Registry"], coverage["missingRepositories"])
+
+    def test_configured_assembly_roles_override_path_and_test_constraints_are_not_optional_guards(self) -> None:
+        governance = {
+            "testAssemblies": ["Deucarian.Feature.Validation"],
+            "optionalVersionDefinedDependencies": [],
+        }
+        asmdef = {
+            "name": "Deucarian.Feature.Validation",
+            "path": "Runtime.Validation/Feature.Validation.asmdef",
+            "defineConstraints": ["DEUCARIAN_FEATURE_TESTS"],
+            "versionDefines": [],
+        }
+
+        self.assertEqual("Test", audit.scope_for(asmdef["path"], asmdef, governance))
+        self.assertEqual(
+            {"kind": "", "evidence": None},
+            audit.asmdef_guard_for_package(asmdef, "com.deucarian.feature", governance),
+        )
+        self.assertEqual(
+            "TestOnlyUse",
+            audit.classify_dependency_records([{"scope": "Test", "guardKind": "DefineConstraint"}], declared=False, source_mentions=0),
+        )
+
+    def test_implementation_free_suite_dependencies_are_composition(self) -> None:
+        findings = audit.dependency_usage(
+            {
+                "name": "Fixture-Suite",
+                "packageId": "com.deucarian.fixture-suite",
+                "dependencies": {"com.deucarian.alpha": "1.0.0"},
+                "asmdefs": [],
+                "governance": {"runtimeAssemblies": [], "editorAssemblies": []},
+            },
+            [],
+            {"com.deucarian.alpha": {"Deucarian.Alpha"}},
+            {
+                "id": "com.deucarian.fixture-suite",
+                "kind": "Suite",
+                "suiteMembers": ["com.deucarian.alpha"],
+            },
+        )
+
+        self.assertEqual("SuiteComposition", findings[0]["classification"])
+
+    def test_dependency_on_suite_is_intentional_composition_without_assembly_reference(self) -> None:
+        findings = audit.dependency_usage(
+            {
+                "name": "Fixture-Template",
+                "packageId": "com.deucarian.fixture-template",
+                "dependencies": {"com.deucarian.fixture-suite": "1.0.0"},
+                "asmdefs": [],
+                "governance": {"runtimeAssemblies": ["Fixture.Template"]},
+            },
+            [],
+            {},
+            {
+                "id": "com.deucarian.fixture-template",
+                "kind": "Template",
+            },
+            {
+                "com.deucarian.fixture-suite": {
+                    "id": "com.deucarian.fixture-suite",
+                    "kind": "Suite",
+                }
+            },
+        )
+
+        self.assertEqual("SuiteComposition", findings[0]["classification"])
+
+    def test_check_and_write_modes_are_explicit_and_format_specific(self) -> None:
+        parser = audit.build_arg_parser()
+        with self.assertRaises(SystemExit):
+            parser.parse_args([])
+        with self.assertRaises(SystemExit):
+            parser.parse_args(["--check", "--write"])
+        self.assertTrue(parser.parse_args(["--check"]).check)
+        self.assertTrue(parser.parse_args(["--write"]).write)
+        self.assertEqual(audit.JSON_OUTPUT_FILES, audit.selected_output_files("json"))
+        self.assertEqual(audit.MARKDOWN_OUTPUT_FILES, audit.selected_output_files("markdown"))
+
+    def test_git_subprocesses_enable_windows_long_path_support(self) -> None:
+        completed = mock.Mock(stdout="clean\n", stderr="", returncode=0)
+        working_directory = Path("fixture-repository")
+
+        with mock.patch.object(audit.subprocess, "run", return_value=completed) as subprocess_run:
+            output, error, code = audit.run(
+                ["git", "status", "--short"],
+                cwd=working_directory,
+                timeout=12,
+            )
+
+        self.assertEqual(("clean", "", 0), (output, error, code))
+        subprocess_run.assert_called_once_with(
+            ["git", "-c", "core.longpaths=true", "status", "--short"],
+            cwd=working_directory,
+            capture_output=True,
+            text=True,
+            timeout=12,
+        )
+
+    def test_authoritative_policy_check_rejects_actionable_findings(self) -> None:
+        report = {
+            "metadata": {"authoritative": True},
+            "dependencyUsage": {
+                "findings": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "assemblyReference": "Deucarian.Beta",
+                        "classification": "MissingHardPackageDependency",
+                    }
+                ]
+            },
+            "debugApi": {
+                "invocations": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "file": "Runtime/Alpha.cs",
+                        "line": 10,
+                        "policyDisposition": "Allowed",
+                    }
+                ]
+            },
+            "unityObjectLifetime": {
+                "occurrences": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "file": "Runtime/Alpha.cs",
+                        "line": 11,
+                        "policyDisposition": "Migrate",
+                    }
+                ]
+            },
+        }
+
+        with self.assertRaisesRegex(RuntimeError, "2 policy violation"):
+            audit.validate_policy_compliance(report)
+
+        report["dependencyUsage"]["findings"][0]["classification"] = "RequiredAndUsed"
+        report["unityObjectLifetime"]["occurrences"][0]["policyDisposition"] = "Allowed"
+        audit.validate_policy_compliance(report)
+
+    def test_registry_worktree_mirror_creates_a_clean_synthetic_snapshot(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source = root / "source"
+            destination = root / "destination"
+            source.mkdir()
+
+            def git(cwd: Path, *arguments: str) -> str:
+                output, error, code = audit.run(["git", *arguments], cwd=cwd, timeout=120)
+                self.assertEqual(0, code, error)
+                return output
+
+            git(source, "init", "--initial-branch", "develop")
+            git(source, "config", "user.name", "Audit Fixture")
+            git(source, "config", "user.email", "fixture@deucarian.invalid")
+            git(source, "config", "core.autocrlf", "false")
+            write(source / "kept.txt", "old")
+            write(source / "removed" / "nested" / "removed.txt", "remove me")
+            git(source, "add", "--all")
+            git(source, "commit", "-m", "fixture")
+            git(root, "clone", "--no-hardlinks", str(source), str(destination))
+            git(destination, "config", "core.autocrlf", "false")
+
+            write(source / "kept.txt", "new")
+            (source / "removed" / "nested" / "removed.txt").unlink()
+            write(source / "new.txt", "untracked")
+
+            audit.mirror_registry_worktree(source, destination)
+
+            self.assertEqual("new\n", (destination / "kept.txt").read_text(encoding="utf-8"))
+            self.assertEqual("untracked\n", (destination / "new.txt").read_text(encoding="utf-8"))
+            self.assertFalse((destination / "removed").exists())
+            self.assertEqual("", git(destination, "status", "--short"))
+            self.assertEqual("Synthetic Package Registry audit snapshot", git(destination, "log", "-1", "--pretty=%s"))
+
     def test_debug_audit_uses_invocations_not_text_mentions(self) -> None:
         report = self.build_fixture_report()
         records = report["debugApi"]["invocations"]
@@ -452,6 +752,7 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         sink_warning = next(item for item in records if item["repository"] == "Logging" and item["invocation"] == "UnityEngine.Debug.LogWarning")
         self.assertEqual("Warning", sink_warning["logLevel"])
         self.assertEqual("Allowed", sink_warning["policyDisposition"])
+        self.assertEqual("Fixture sink owns console forwarding.", sink_warning["policyReason"])
         menu_log = next(item for item in records if item["repository"] == "Logging" and item["file"] == "Editor/DeucarianLoggingMenu.cs")
         self.assertEqual("Migrate", menu_log["policyDisposition"])
 
@@ -467,10 +768,12 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertNotIn("HiddenPublic", symbol_names)
         self.assertFalse(any(file.startswith("Tests") for file in files))
         self.assertTrue(any(item["symbol"] == "PublicTestFixture" for item in report["publicApi"]["tests"]))
-        self.assertTrue(any(item["symbol"] == "HiddenPublic" for item in report["publicApi"]["internalPrivate"]))
-        self.assertTrue(any(item["file"].startswith("Runtime.UGUI/") and item["scope"] == "Runtime production" for item in report["publicApi"]["runtimeProduction"]))
-        self.assertTrue(any(item["file"].startswith("Editor.Tools/") and item["scope"] == "Editor production" for item in report["publicApi"]["editorProduction"]))
+        self.assertGreater(report["publicApi"]["internalPrivateProductionCount"], 0)
+        self.assertTrue(any(item["file"].startswith("Runtime.UGUI/") and item["scope"] == "Runtime production" for item in symbols))
+        self.assertTrue(any(item["file"].startswith("Editor.Tools/") and item["scope"] == "Editor production" for item in symbols))
         self.assertTrue(any(item["file"].startswith("Samples~/") and item["scope"] == "Sample" for item in report["publicApi"]["samples"]))
+        alpha_baseline = next(item for item in report["publicApi"]["documentationBaseline"] if item["repository"] == "Alpha")
+        self.assertGreater(alpha_baseline["missingXmlDocumentationCount"], 0)
 
     def test_clone_analysis_uses_parsed_method_bodies(self) -> None:
         report = self.build_fixture_report()

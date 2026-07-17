@@ -12,13 +12,16 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urlsplit
 
 try:
     from tree_sitter import Language, Parser
@@ -76,6 +79,14 @@ DEBUG_FORBIDDEN_SYMBOLS = [
 COMMON_PACKAGE_ID = "com.deucarian.common"
 COMMON_LIFETIME_API = "Deucarian.Common.UnityObjectUtility.DestroySafely"
 COMMON_LIFETIME_API_SIGNATURE = "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
+ACCEPTED_DEPENDENCY_CLASSIFICATIONS = {
+    "RequiredAndUsed",
+    "EditorOnlyUse",
+    "SampleOnlyUse",
+    "TestOnlyUse",
+    "OptionalVersionDefinedUse",
+    "SuiteComposition",
+}
 LIFETIME_FORBIDDEN_SYMBOLS = [
     "UnityEngine.Object.Destroy",
     "UnityEngine.Object.DestroyImmediate",
@@ -91,40 +102,38 @@ DESTROY_HELPER_NAMES = {
     "DestroySafely",
     "DestroyObject",
 }
-CAPABILITIES = [
-    ("logging", "com.deucarian.logging", "Category-based local package logging and Unity console forwarding."),
-    ("editor-shell", "com.deucarian.editor", "Shared editor chrome, icons, resources, style tokens, editor-only UI Toolkit helpers."),
-    ("api-http-client", "com.deucarian.api", "General HTTP/API request construction, transport, serialization, authentication, and cancellation."),
-    ("session", "com.deucarian.session", "Authenticated session lifecycle, restore, refresh, logout, and persistence contracts."),
-    ("object-loading", "com.deucarian.object-loading", "Object, scene, and AssetBundle loading lifecycle and handles."),
-    ("repository-state", "com.deucarian.core-state", "Generic keyed repositories, selection state, and repository primitives."),
-    ("ui-binding", "com.deucarian.ui-binding", "Collection-to-UI synchronization and presentation binding."),
-    ("ui-flow", "com.deucarian.ui-flow", "UI routing, screens, channels, modals, guards, transitions, and back navigation."),
-    ("world-selection", "com.deucarian.object-selection", "Keyed world-object selection, hover tracking, raycast adapters, and highlight hooks."),
-    ("runtime-theming", "com.deucarian.theming", "Runtime palettes, theme assets, color roles, and UI theme adapters."),
-    ("diagnostics", "com.deucarian.diagnostics", "Diagnostics providers, snapshots, JSON export, overlays, and aggregation."),
-    ("package-management", "com.deucarian.package-installer", "Package discovery, install/update/remove, channels, registry composition, and ecosystem visualization."),
-    ("registry-metadata", None, "Catalog, category hierarchy, dependency metadata, Integration metadata, Suite metadata, and governance metadata."),
-    ("unity-object-lifetime", COMMON_PACKAGE_ID, "Safe destruction of transient UnityEngine.Object instances across Play Mode and Edit Mode."),
+SPECIAL_REPOSITORIES = (
+    {
+        "name": "Bootstrap",
+        "packageId": "com.deucarian.bootstrap",
+        "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
+        "source": "bootstrap",
+    },
+    {
+        "name": "Package-Registry",
+        "packageId": None,
+        "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
+        "source": "registry",
+    },
+)
+JSON_OUTPUT_FILES = [
+    "DUPLICATION_REPORT.json",
+    "DEBUG_API_AUDIT.json",
+    "UNITY_OBJECT_LIFETIME_AUDIT.json",
+    "DOCUMENTATION_DRIFT.json",
+    "DEPENDENCY_USAGE_AUDIT.json",
 ]
-OUTPUT_FILES = [
+MARKDOWN_OUTPUT_FILES = [
     "REUSE_AUDIT.md",
     "PACKAGE_CAPABILITY_MATRIX.md",
     "DEPENDENCY_GRAPH.md",
-    "DUPLICATION_REPORT.json",
-    "MIGRATION_PLAN.md",
-    "capabilities.json",
-    "dependency-rules.json",
-    "DEBUG_API_AUDIT.json",
     "DEBUG_API_AUDIT.md",
-    "UNITY_OBJECT_LIFETIME_AUDIT.json",
     "UNITY_OBJECT_LIFETIME_AUDIT.md",
-    "DOCUMENTATION_DRIFT.json",
     "DOCUMENTATION_DRIFT.md",
-    "DEPENDENCY_USAGE_AUDIT.json",
     "DEPENDENCY_USAGE_AUDIT.md",
-    "EXTRACTION_DECISIONS.md",
+    "EXTRACTION_CANDIDATES.md",
 ]
+OUTPUT_FILES = JSON_OUTPUT_FILES + MARKDOWN_OUTPUT_FILES
 
 parsed_repo_dependencies: dict[str, dict[str, str]] = {}
 repo_asm_refs: dict[str, set[str]] = {}
@@ -150,8 +159,10 @@ class ParsedFile:
     scope: str
     assembly: str
     text: str
+    governance: dict[str, Any] = field(default_factory=dict)
     tree: Any = None
     parse_error: str | None = None
+    parser_recoveries: list[str] = field(default_factory=list)
     generated: bool = False
     aliases: dict[str, str] = field(default_factory=dict)
     using_unity_engine: bool = False
@@ -170,7 +181,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--format", choices=["all", "json", "markdown"], default="all", help="Artifact format subset to write.")
     parser.add_argument("--include-repository", action="append", default=[], help="Repository name to include; may be passed multiple times.")
     parser.add_argument("--exclude-repository", action="append", default=[], help="Repository name to exclude; may be passed multiple times.")
-    parser.add_argument("--check", action="store_true", help="Regenerate into a temporary directory and fail if committed artifacts differ.")
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--check", action="store_true", help="Regenerate into a temporary directory and fail if committed artifacts differ.")
+    mode.add_argument("--write", action="store_true", help="Write deterministic generated artifacts to --output-root.")
+    parser.add_argument("--provision", action="store_true", help="Clone the exact registry repository set into an empty --audit-root before auditing.")
+    parser.add_argument("--clone-workers", type=int, default=6, help="Maximum concurrent clones used with --provision.")
     return parser
 
 
@@ -178,9 +193,11 @@ def repo_root_default(output_root: Path) -> Path:
     return output_root
 
 
-def run(cmd: list[str], cwd: Path | None = None) -> tuple[str, str, int]:
+def run(cmd: list[str], cwd: Path | None = None, timeout: int = 60) -> tuple[str, str, int]:
+    if cmd and Path(cmd[0]).name.lower() in {"git", "git.exe"}:
+        cmd = [cmd[0], "-c", "core.longpaths=true", *cmd[1:]]
     try:
-        result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=60)
+        result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
         return result.stdout.strip(), result.stderr.strip(), result.returncode
     except Exception as exc:
         return "", str(exc), 1
@@ -200,6 +217,12 @@ def read_json(path: Path) -> Any:
         return json.loads(read_text(path))
     except Exception:
         return None
+
+
+def file_sha256(path: Path) -> str:
+    if not path.is_file():
+        return ""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def package_id_version_mentions(text: str, package_id: str) -> list[str]:
@@ -255,11 +278,29 @@ def path_fallback_scope(relative_path: str) -> str:
     return "Other"
 
 
-def scope_for(relative_path: str, asmdef: dict[str, Any] | None = None) -> str:
+def assembly_roles(governance: dict[str, Any] | None) -> dict[str, str]:
+    governance = governance or {}
+    roles: dict[str, str] = {}
+    for key, scope in (
+        ("runtimeAssemblies", "Runtime production"),
+        ("editorAssemblies", "Editor production"),
+        ("sampleAssemblies", "Sample"),
+        ("testAssemblies", "Test"),
+    ):
+        for assembly in governance.get(key, []) or []:
+            if isinstance(assembly, str) and assembly:
+                roles[assembly] = scope
+    return roles
+
+
+def scope_for(relative_path: str, asmdef: dict[str, Any] | None = None, governance: dict[str, Any] | None = None) -> str:
     fallback = path_fallback_scope(relative_path)
     if fallback in {"Sample", "Build/CI"}:
         return fallback
     if asmdef:
+        configured_scope = assembly_roles(governance).get(asmdef.get("name", ""))
+        if configured_scope:
+            return configured_scope
         if is_test_asmdef(asmdef):
             return "Test"
         if "Editor" in asmdef.get("includePlatforms", []):
@@ -337,6 +378,21 @@ def is_generated_file(path: Path, text: str) -> bool:
     return name.endswith(".g.cs") or name.endswith(".generated.cs") or name.endswith(".designer.cs") or any(marker.lower() in text[:1200].lower() for marker in GENERATED_MARKERS)
 
 
+def parser_source_with_contextual_identifier_recovery(text: str) -> str:
+    """Rewrite valid lowercase `required` identifiers for the parser only.
+
+    tree-sitter-c-sharp currently treats some uses of the contextual `required`
+    keyword as syntax errors. The equal-byte-length sentinel preserves every
+    source offset, and the look-ahead deliberately leaves `required T Member`
+    modifiers unchanged.
+    """
+    return re.sub(
+        r"\brequired\b(?=\s*(?:[=;,.)?\[\]}:+\-*/%&|]|$))",
+        "requireD",
+        text,
+    )
+
+
 def is_production_scope(scope: str) -> bool:
     return scope in {"Runtime production", "Editor production"}
 
@@ -400,6 +456,13 @@ class CSharpSyntaxAnalyzer:
 
         source = parsed.text.encode("utf-8")
         parsed.tree = self.parser.parse(source)
+        if parsed.tree.root_node.has_error:
+            recovered_text = parser_source_with_contextual_identifier_recovery(parsed.text)
+            if recovered_text != parsed.text:
+                recovered_tree = self.parser.parse(recovered_text.encode("utf-8"))
+                if not recovered_tree.root_node.has_error:
+                    parsed.tree = recovered_tree
+                    parsed.parser_recoveries.append("contextual-required-identifier")
         if parsed.tree.root_node.has_error:
             parsed.parse_error = "tree-sitter-parse-error"
             if self.authoritative:
@@ -643,7 +706,13 @@ class CSharpSyntaxAnalyzer:
     def _debug_record(self, parsed: ParsedFile, node: Any, invocation_name: str, containing_symbol: str) -> dict[str, Any]:
         logging_declared = bool((parsed_repo_dependencies.get(parsed.repo) or {}).get("com.deucarian.logging"))
         logging_asmdef = bool(repo_asm_refs.get(parsed.repo, set()) & {"Deucarian.Logging", "GUID:Deucarian.Logging"})
-        classification = classify_debug_invocation(parsed, containing_symbol)
+        exception_reason = configured_exception_reason(
+            parsed.governance,
+            "allowedDirectDebugCalls",
+            parsed.relative_path,
+            containing_symbol,
+        )
+        classification = "Configured exception" if exception_reason is not None else classify_debug_invocation(parsed, containing_symbol)
         disposition = policy_disposition(classification, parsed.scope)
         return {
             "repository": parsed.repo,
@@ -658,6 +727,7 @@ class CSharpSyntaxAnalyzer:
             "logLevel": debug_log_level(invocation_name),
             "policyDisposition": disposition,
             "policySeverity": policy_severity(disposition),
+            "policyReason": exception_reason or "",
             "loggingDeclared": logging_declared,
             "asmdefReferencesLogging": logging_asmdef,
         }
@@ -673,7 +743,7 @@ class CSharpSyntaxAnalyzer:
         return ""
 
     def _lifetime_record(self, parsed: ParsedFile, node: Any, invocation_name: str, containing_symbol: str, kind: str) -> dict[str, Any]:
-        return {
+        record = {
             "repository": parsed.repo,
             "packageId": parsed.package_id,
             "file": parsed.relative_path,
@@ -685,6 +755,15 @@ class CSharpSyntaxAnalyzer:
             "occurrenceKind": kind,
             "invocation": invocation_name,
         }
+        exception_reason = configured_exception_reason(
+            parsed.governance,
+            "allowedDirectUnityObjectLifetimeCalls",
+            parsed.relative_path,
+            containing_symbol,
+        )
+        if exception_reason is not None:
+            record["configuredExceptionReason"] = exception_reason
+        return record
 
 
 def normalize_body(body_text: str, local_names: set[str]) -> str:
@@ -710,18 +789,29 @@ def classify_scope(package_id: str | None, scope: str) -> str:
     return "Unknown"
 
 
+def normalize_containing_symbol(value: str) -> str:
+    return re.sub(r"[:.]+", ".", value or "").strip(".")
+
+
+def configured_exception_reason(
+    governance: dict[str, Any] | None,
+    key: str,
+    relative_path: str,
+    containing_symbol: str = "",
+) -> str | None:
+    for item in (governance or {}).get(key, []) or []:
+        if not isinstance(item, dict) or item.get("file") != relative_path:
+            continue
+        expected_symbol = normalize_containing_symbol(str(item.get("containingSymbol", "")))
+        actual_symbol = normalize_containing_symbol(containing_symbol)
+        if expected_symbol and not (actual_symbol == expected_symbol or actual_symbol.endswith("." + expected_symbol)):
+            continue
+        return str(item.get("reason") or "Reviewed exception declared in deucarian-package.json.")
+    return None
+
+
 def classify_debug_invocation(parsed: ParsedFile, containing_symbol: str) -> str:
-    if parsed.package_id == "com.deucarian.logging" and is_logging_debug_allowlisted(parsed.relative_path, containing_symbol):
-        return "Logging package sink implementation"
-
     return classify_scope(parsed.package_id, parsed.scope)
-
-
-def is_logging_debug_allowlisted(relative_path: str, containing_symbol: str) -> bool:
-    return relative_path == "Runtime/UnityConsoleLogSink.cs" or (
-        relative_path == "Runtime/DeucarianLog.cs"
-        and containing_symbol == "DeucarianLog::ReportSinkFailure"
-    )
 
 
 def debug_log_level(invocation_name: str) -> str:
@@ -730,7 +820,7 @@ def debug_log_level(invocation_name: str) -> str:
 
 
 def policy_disposition(classification: str, scope: str) -> str:
-    if classification in {"Test", "Bootstrap exception", "Logging package sink implementation"}:
+    if classification in {"Test", "Bootstrap exception", "Configured exception"}:
         return "Allowed"
     if scope in {"Runtime production", "Editor production", "Sample"}:
         return "Migrate"
@@ -758,6 +848,8 @@ def lifetime_policy(record: dict[str, Any]) -> tuple[str, str]:
         return "Allowed", "Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability."
     if is_common_lifetime_call_site(record):
         return "Allowed", "Production code calls the canonical Deucarian.Common lifetime API."
+    if record.get("configuredExceptionReason"):
+        return "Allowed", str(record["configuredExceptionReason"])
     if record.get("scope") == "Test":
         return "Allowed", "Test-only explicit Unity object teardown remains local; no shared testing package was approved."
     if record.get("scope") in {"Runtime production", "Editor production"}:
@@ -798,7 +890,7 @@ def is_common_lifetime_call_site(record: dict[str, Any]) -> bool:
     return invocation == "UnityObjectUtility.DestroySafely" or invocation.endswith(".UnityObjectUtility.DestroySafely")
 
 
-def collect_asmdefs(repo_root: Path) -> list[dict[str, Any]]:
+def collect_asmdefs(repo_root: Path, governance: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     asmdefs = []
     for path in sorted(repo_root.rglob("*.asmdef")):
         relative_path = rel(path, repo_root)
@@ -816,24 +908,35 @@ def collect_asmdefs(repo_root: Path) -> list[dict[str, Any]]:
             "versionDefines": sorted(data.get("versionDefines", []) or [], key=lambda item: (item.get("name", ""), item.get("define", ""), item.get("expression", ""))),
             "autoReferenced": data.get("autoReferenced", True),
         }
-        record["scope"] = scope_for(relative_path, record)
+        record["scope"] = scope_for(relative_path, record, governance)
         asmdefs.append(
             record
         )
     return asmdefs
 
 
-def collect_branch_info(repo_root: Path) -> dict[str, Any]:
+def collect_branch_info(repo_root: Path, requested_ref: str) -> dict[str, Any]:
     branch, _, _ = run(["git", "branch", "--show-current"], cwd=repo_root)
     status, _, _ = run(["git", "status", "--short"], cwd=repo_root)
     remote, _, _ = run(["git", "remote", "get-url", "origin"], cwd=repo_root)
-    heads, _, _ = run(["git", "ls-remote", "--heads", "origin"], cwd=repo_root)
+    head, _, head_code = run(["git", "rev-parse", "HEAD"], cwd=repo_root)
+    local_requested, _, local_code = run(["git", "rev-parse", "--verify", f"refs/heads/{requested_ref}"], cwd=repo_root)
+    remote_requested, _, remote_code = run(["git", "rev-parse", "--verify", f"refs/remotes/origin/{requested_ref}"], cwd=repo_root)
+    develop_local, _, develop_local_code = run(["git", "rev-parse", "--verify", "refs/heads/develop"], cwd=repo_root)
+    develop_remote, _, develop_remote_code = run(["git", "rev-parse", "--verify", "refs/remotes/origin/develop"], cwd=repo_root)
+    main_local, _, main_local_code = run(["git", "rev-parse", "--verify", "refs/heads/main"], cwd=repo_root)
+    main_remote, _, main_remote_code = run(["git", "rev-parse", "--verify", "refs/remotes/origin/main"], cwd=repo_root)
+    requested_commits = {value for value, code in ((local_requested, local_code), (remote_requested, remote_code)) if code == 0 and value}
     return {
         "currentBranch": branch,
         "dirty": bool(status),
         "origin": remote,
-        "hasDevelop": "refs/heads/develop" in heads,
-        "hasMain": "refs/heads/main" in heads,
+        "headCommit": head if head_code == 0 else "",
+        "requestedRef": requested_ref,
+        "requestedRefCommit": remote_requested if remote_code == 0 else (local_requested if local_code == 0 else ""),
+        "atRequestedRef": bool(head and head in requested_commits),
+        "hasDevelop": develop_local_code == 0 or develop_remote_code == 0,
+        "hasMain": main_local_code == 0 or main_remote_code == 0,
     }
 
 
@@ -949,7 +1052,13 @@ def extract_changelog_version(text: str) -> str | None:
     return match.group(1) if match else None
 
 
-def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], package_to_assemblies: dict[str, set[str]], registry_package: dict[str, Any] | None) -> list[dict[str, Any]]:
+def dependency_usage(
+    repo: dict[str, Any],
+    parsed_files: list[ParsedFile],
+    package_to_assemblies: dict[str, set[str]],
+    registry_package: dict[str, Any] | None,
+    registry_packages: dict[str, dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
     usages = []
     assembly_to_package = {
         assembly: package_id
@@ -957,7 +1066,16 @@ def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], packa
         for assembly in assemblies
     }
     declared_deps = set((repo.get("dependencies") or {}).keys())
-    source_text = "\n".join(parsed.text for parsed in parsed_files)
+    production_source_text = "\n".join(parsed.text for parsed in parsed_files if is_production_scope(parsed.scope))
+    source_text_by_scope = {
+        scope: "\n".join(parsed.text for parsed in parsed_files if parsed.scope == scope)
+        for scope in ("Runtime production", "Editor production", "Test", "Sample", "Other")
+    }
+    governance = repo.get("governance") or {}
+    suite_members = set((registry_package or {}).get("suiteMembers", []) or [])
+    artifact_kind = (registry_package or {}).get("kind") or (registry_package or {}).get("type")
+    production_assemblies = set(governance.get("runtimeAssemblies", []) or []) | set(governance.get("editorAssemblies", []) or [])
+    composition_only_suite = artifact_kind == "Suite" and not production_assemblies
 
     refs_by_package: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for asm in repo.get("asmdefs", []):
@@ -966,7 +1084,7 @@ def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], packa
             owner = assembly_to_package.get(clean)
             if not owner or owner == repo.get("packageId"):
                 continue
-            guard = asmdef_guard_for_package(asm, owner)
+            guard = asmdef_guard_for_package(asm, owner, governance)
             refs_by_package[owner].append(
                 {
                     "assembly": asm.get("name", ""),
@@ -987,8 +1105,23 @@ def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], packa
             continue
         referenced_by = sorted(refs_by_package.get(dep, []), key=lambda item: (item["scope"], item["assembly"], item["reference"]))
         namespace_hint = dep.replace("com.deucarian.", "Deucarian.").replace("-", ".")
-        source_mentions = source_text.count(namespace_hint)
-        classification = classify_dependency_records(referenced_by, declared=True, source_mentions=source_mentions)
+        source_mentions = production_source_text.count(namespace_hint)
+        mentions_by_scope = {
+            scope: text.count(namespace_hint)
+            for scope, text in source_text_by_scope.items()
+            if text.count(namespace_hint)
+        }
+        dependency_package = (registry_packages or {}).get(dep) or {}
+        dependency_kind = dependency_package.get("kind") or dependency_package.get("type")
+        intentional_suite_composition = (
+            (composition_only_suite and dep in suite_members)
+            or dependency_kind == "Suite"
+        )
+        classification = (
+            "SuiteComposition"
+            if intentional_suite_composition
+            else classify_dependency_records(referenced_by, declared=True, source_mentions=source_mentions)
+        )
         usages.append(
             {
                 "repository": repo["name"],
@@ -999,6 +1132,7 @@ def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], packa
                 "referencedAssemblies": sorted({item["reference"] for item in referenced_by}),
                 "referencedBy": referenced_by,
                 "sourceMentionCount": source_mentions,
+                "sourceMentionsByScope": mentions_by_scope,
             }
         )
 
@@ -1021,32 +1155,29 @@ def dependency_usage(repo: dict[str, Any], parsed_files: list[ParsedFile], packa
     return usages
 
 
-def asmdef_guard_for_package(asmdef: dict[str, Any], package_id: str) -> dict[str, Any]:
+def asmdef_guard_for_package(asmdef: dict[str, Any], package_id: str, governance: dict[str, Any] | None = None) -> dict[str, Any]:
     version_defines = asmdef.get("versionDefines", []) or []
     for item in version_defines:
-        if item.get("name") == package_id:
+        optional_dependencies = set((governance or {}).get("optionalVersionDefinedDependencies", []) or [])
+        if item.get("name") == package_id and package_id in optional_dependencies:
             return {"kind": "VersionDefine", "evidence": item}
-    constraints = asmdef.get("defineConstraints", []) or []
-    if constraints:
-        return {"kind": "DefineConstraint", "evidence": constraints}
     return {"kind": "", "evidence": None}
 
 
 def classify_dependency_records(records: list[dict[str, Any]], declared: bool, source_mentions: int) -> str:
     if records:
-        if any(record.get("guardKind") == "VersionDefine" for record in records):
-            return "OptionalVersionDefinedUse"
-        if any(record.get("guardKind") == "DefineConstraint" for record in records):
-            return "OptionalConstraintUse"
         scopes = {record.get("scope", "Other") for record in records}
-        if "Runtime production" in scopes:
-            return "RequiredAndUsed" if declared else "MissingHardPackageDependency"
-        if "Editor production" in scopes:
-            return "EditorOnlyUse" if declared else "MissingHardPackageDependency"
         if scopes and scopes <= {"Test"}:
             return "TestOnlyUse"
         if scopes and scopes <= {"Sample"}:
             return "SampleOnlyUse"
+        production_records = [record for record in records if record.get("scope") in {"Runtime production", "Editor production"}]
+        if production_records and all(record.get("guardKind") == "VersionDefine" for record in production_records):
+            return "OptionalVersionDefinedUse"
+        if "Runtime production" in scopes:
+            return "RequiredAndUsed" if declared else "MissingHardPackageDependency"
+        if "Editor production" in scopes:
+            return "EditorOnlyUse" if declared else "MissingHardPackageDependency"
         return "ReviewRequired"
     if source_mentions:
         return "ReviewRequired"
@@ -1136,8 +1267,7 @@ def helper_definition_records(parsed_files: list[ParsedFile]) -> list[dict[str, 
             text = parsed.text
             line = method["line"]
             snippet = "\n".join(text.splitlines()[line - 1 : line + method["lineCount"]])
-            records.append(
-                {
+            record = {
                     "repository": method["repository"],
                     "packageId": method["packageId"],
                     "file": method["file"],
@@ -1158,7 +1288,15 @@ def helper_definition_records(parsed_files: list[ParsedFile]) -> list[dict[str, 
                     },
                     "assemblyPlatform": parsed.assembly,
                 }
+            exception_reason = configured_exception_reason(
+                parsed.governance,
+                "allowedDirectUnityObjectLifetimeCalls",
+                parsed.relative_path,
+                method.get("containingSymbol", ""),
             )
+            if exception_reason is not None:
+                record["configuredExceptionReason"] = exception_reason
+            records.append(record)
     return records
 
 
@@ -1171,30 +1309,426 @@ def accepted_type_from_signature(signature: str) -> str:
     return parts[0] if parts else ""
 
 
-def load_registry(output_root: Path) -> dict[str, Any]:
-    data = read_json(output_root / "packages.json") or {}
-    return {pkg.get("id"): pkg for pkg in data.get("packages", []) if pkg.get("id")}
+def load_registry_document(output_root: Path) -> dict[str, Any]:
+    data = read_json(output_root / "packages.json")
+    if not isinstance(data, dict) or not isinstance(data.get("packages"), list):
+        raise RuntimeError(f"Invalid or missing registry catalog: {output_root / 'packages.json'}")
+    return data
+
+
+def load_policy_inputs(output_root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+    capabilities = read_json(output_root / "capabilities.json")
+    dependency_rules = read_json(output_root / "dependency-rules.json")
+    if not isinstance(capabilities, dict) or not isinstance(capabilities.get("capabilities"), list):
+        raise RuntimeError(f"Invalid or missing capability policy: {output_root / 'capabilities.json'}")
+    if not isinstance(dependency_rules, dict) or not isinstance(dependency_rules.get("layers"), list):
+        raise RuntimeError(f"Invalid or missing dependency policy: {output_root / 'dependency-rules.json'}")
+    return capabilities, dependency_rules
+
+
+def normalize_git_url(url: str) -> str:
+    value = (url or "").strip()
+    if value.startswith("git+"):
+        value = value[4:]
+    value = value.split("#", 1)[0].split("?", 1)[0].rstrip("/")
+    if value.startswith("git@github.com:"):
+        value = "https://github.com/" + value[len("git@github.com:") :]
+    elif value.startswith("ssh://git@github.com/"):
+        value = "https://github.com/" + value[len("ssh://git@github.com/") :]
+    parsed = urlsplit(value)
+    if parsed.scheme and parsed.netloc:
+        value = f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{parsed.path.rstrip('/')}"
+    if value and not value.lower().endswith(".git"):
+        value += ".git"
+    return value
+
+
+def git_url_key(url: str) -> str:
+    return normalize_git_url(url).lower()
+
+
+def repository_name_from_url(url: str) -> str:
+    normalized = normalize_git_url(url)
+    name = normalized.rsplit("/", 1)[-1]
+    if name.lower().endswith(".git"):
+        name = name[:-4]
+    if not name:
+        raise RuntimeError(f"Cannot derive repository name from URL: {url!r}")
+    return name
+
+
+def expected_repository_specs(registry_document: dict[str, Any], organization: str, ref: str) -> list[dict[str, Any]]:
+    specs: list[dict[str, Any]] = []
+    url_field = "stableUrl" if ref == "main" else "developmentUrl"
+    for package in sorted(registry_document.get("packages", []), key=lambda item: item.get("id", "")):
+        package_id = package.get("id")
+        url = package.get(url_field) or package.get("developmentUrl") or package.get("stableUrl")
+        if not package_id or not url:
+            raise RuntimeError(f"Registry package is missing id or canonical URL: {package!r}")
+        canonical_url = normalize_git_url(str(url))
+        specs.append(
+            {
+                "name": repository_name_from_url(canonical_url),
+                "packageId": package_id,
+                "canonicalUrl": canonical_url,
+                "source": "catalog",
+            }
+        )
+    for special in SPECIAL_REPOSITORIES:
+        item = dict(special)
+        item["canonicalUrl"] = normalize_git_url(
+            f"https://github.com/{organization}/{special['name']}.git"
+        )
+        specs.append(item)
+
+    by_name: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_package: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for spec in specs:
+        by_name[spec["name"].lower()].append(spec)
+        if spec.get("packageId"):
+            by_package[str(spec["packageId"])].append(spec)
+    duplicate_names = sorted(name for name, items in by_name.items() if len(items) != 1)
+    duplicate_packages = sorted(package_id for package_id, items in by_package.items() if len(items) != 1)
+    if duplicate_names or duplicate_packages:
+        raise RuntimeError(
+            "Registry repository mapping is not one-to-one: "
+            f"duplicate repositories={duplicate_names}, duplicate package ids={duplicate_packages}"
+        )
+    return sorted(specs, key=lambda item: item["name"].lower())
+
+
+def repository_inventory(audit_root: Path, specs: list[dict[str, Any]]) -> tuple[list[Path], dict[str, Any]]:
+    actual_roots = sorted(
+        [path for path in audit_root.iterdir() if path.is_dir() and not path.name.startswith(".")],
+        key=lambda path: path.name.lower(),
+    )
+    expected_by_name = {spec["name"].lower(): spec for spec in specs}
+    actual_by_name: dict[str, list[Path]] = defaultdict(list)
+    for path in actual_roots:
+        actual_by_name[path.name.lower()].append(path)
+    duplicate_actual = sorted(name for name, roots in actual_by_name.items() if len(roots) != 1)
+    missing = sorted(spec["name"] for spec in specs if spec["name"].lower() not in actual_by_name)
+    unexpected = sorted(path.name for path in actual_roots if path.name.lower() not in expected_by_name)
+    case_mismatches = sorted(
+        f"{actual_by_name[spec['name'].lower()][0].name} != {spec['name']}"
+        for spec in specs
+        if spec["name"].lower() in actual_by_name
+        and actual_by_name[spec["name"].lower()][0].name != spec["name"]
+    )
+    complete = not (duplicate_actual or missing or unexpected or case_mismatches)
+    coverage = {
+        "expectedRepositoryCount": len(specs),
+        "actualRepositoryCount": len(actual_roots),
+        "expectedRepositories": [spec["name"] for spec in specs],
+        "actualRepositories": [path.name for path in actual_roots],
+        "missingRepositories": missing,
+        "unexpectedRepositories": unexpected,
+        "duplicateRepositories": duplicate_actual,
+        "caseMismatches": case_mismatches,
+        "complete": complete,
+    }
+    return actual_roots, coverage
+
+
+def validate_policy_inputs(
+    registry_document: dict[str, Any],
+    capabilities: dict[str, Any],
+    dependency_rules: dict[str, Any],
+) -> None:
+    if capabilities.get("schemaVersion") != 2:
+        raise RuntimeError(f"capabilities.json has unsupported schemaVersion {capabilities.get('schemaVersion')!r}")
+    if dependency_rules.get("schemaVersion") not in {2, 3}:
+        raise RuntimeError(f"dependency-rules.json has unsupported schemaVersion {dependency_rules.get('schemaVersion')!r}")
+    catalog_ids = {str(package.get("id")) for package in registry_document.get("packages", []) if package.get("id")}
+    known_owner_ids = catalog_ids | {"com.deucarian.bootstrap"}
+    capability_ids: set[str] = set()
+    for capability in capabilities.get("capabilities", []):
+        capability_id = capability.get("id") if isinstance(capability, dict) else None
+        owner = capability.get("ownerPackageId") if isinstance(capability, dict) else None
+        if not capability_id or capability_id in capability_ids:
+            raise RuntimeError(f"Capability policy contains a missing or duplicate id: {capability_id!r}")
+        if owner is not None and owner not in known_owner_ids:
+            raise RuntimeError(f"Capability {capability_id!r} has unknown owner {owner!r}")
+        capability_ids.add(str(capability_id))
+
+    assignments: dict[str, list[str]] = defaultdict(list)
+    for layer in dependency_rules.get("layers", []):
+        if not isinstance(layer, dict) or not layer.get("id"):
+            raise RuntimeError("Dependency policy contains a layer without an id.")
+        for package_id in layer.get("packages", []) or []:
+            assignments[str(package_id)].append(str(layer["id"]))
+    missing = sorted(package_id for package_id in catalog_ids if not assignments.get(package_id))
+    duplicate = sorted(package_id for package_id in catalog_ids if len(assignments.get(package_id, [])) > 1)
+    unknown = sorted(package_id for package_id in assignments if package_id not in catalog_ids | {"com.deucarian.bootstrap"})
+    if missing or duplicate or unknown:
+        raise RuntimeError(
+            "Dependency policy must assign every catalog package exactly once: "
+            f"missing={missing}, duplicate={duplicate}, unknown={unknown}"
+        )
+
+
+def provision_repositories(
+    audit_root: Path,
+    specs: list[dict[str, Any]],
+    ref: str,
+    workers: int,
+    current_registry_root: Path | None = None,
+) -> None:
+    audit_root.mkdir(parents=True, exist_ok=True)
+    existing = list(audit_root.iterdir())
+    if existing:
+        raise RuntimeError(f"--provision requires an empty audit root: {audit_root}")
+    worker_count = max(1, min(workers, 16))
+
+    def clone(spec: dict[str, Any]) -> tuple[str, str]:
+        destination = audit_root / spec["name"]
+        if spec.get("source") == "registry" and current_registry_root is not None:
+            head, head_error, head_code = run(["git", "rev-parse", "HEAD"], cwd=current_registry_root)
+            if head_code != 0:
+                return spec["name"], head_error or "could not resolve current Package Registry HEAD"
+            clone_command = [
+                "git",
+                "-c",
+                "core.longpaths=true",
+                "-c",
+                "core.autocrlf=false",
+                "clone",
+                "--no-hardlinks",
+                "--no-checkout",
+                str(current_registry_root),
+                str(destination),
+            ]
+            _, stderr, code = run(clone_command, timeout=300)
+            if code != 0:
+                return spec["name"], stderr or f"local git clone exited {code}"
+            _, stderr, code = run(["git", "config", "core.autocrlf", "false"], cwd=destination)
+            if code == 0:
+                _, stderr, code = run(["git", "config", "core.longpaths", "true"], cwd=destination)
+            if code == 0:
+                _, stderr, code = run(["git", "fetch", "--no-tags", str(current_registry_root), head], cwd=destination, timeout=120)
+            if code == 0:
+                _, stderr, code = run(["git", "checkout", "--detach", head], cwd=destination, timeout=120)
+            if code == 0:
+                try:
+                    mirror_registry_worktree(current_registry_root, destination)
+                except Exception as exc:
+                    return spec["name"], f"could not mirror current Package Registry worktree: {exc}"
+            if code == 0:
+                _, stderr, code = run(["git", "remote", "set-url", "origin", spec["canonicalUrl"]], cwd=destination)
+            return spec["name"], "" if code == 0 else (stderr or f"local registry checkout exited {code}")
+        command = [
+            "git",
+            "-c",
+            "core.longpaths=true",
+            "-c",
+            "core.autocrlf=false",
+            "clone",
+            "--depth",
+            "1",
+            "--branch",
+            ref,
+            "--single-branch",
+            spec["canonicalUrl"],
+            str(destination),
+        ]
+        _, stderr, code = run(command, timeout=300)
+        if code == 0:
+            _, stderr, code = run(["git", "config", "core.autocrlf", "false"], cwd=destination)
+        if code == 0:
+            _, stderr, code = run(["git", "config", "core.longpaths", "true"], cwd=destination)
+        return spec["name"], "" if code == 0 else (stderr or f"git clone exited {code}")
+
+    failures = []
+    with ThreadPoolExecutor(max_workers=worker_count) as pool:
+        futures = {pool.submit(clone, spec): spec for spec in specs}
+        for future in as_completed(futures):
+            name, error = future.result()
+            if error:
+                failures.append(f"{name}: {error}")
+    if failures:
+        raise RuntimeError("Could not provision authoritative audit repositories:\n" + "\n".join(sorted(failures)))
+
+
+def git_worktree_files(repo_root: Path) -> list[str]:
+    output, error, code = run(
+        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+        cwd=repo_root,
+    )
+    if code != 0:
+        raise RuntimeError(error or f"could not enumerate {repo_root}")
+    return sorted(
+        path
+        for path in output.split("\0")
+        if path and ((repo_root / path).is_file() or (repo_root / path).is_symlink())
+    )
+
+
+def mirror_registry_worktree(source_root: Path, destination_root: Path) -> None:
+    source_root = source_root.resolve()
+    destination_root = destination_root.resolve()
+    if source_root == destination_root or not (destination_root / ".git").exists():
+        raise RuntimeError("registry mirror destination must be a separate Git checkout")
+
+    source_files = set(git_worktree_files(source_root))
+    destination_files = set(git_worktree_files(destination_root))
+    removed_parents: set[Path] = set()
+    for relative_path in sorted(destination_files - source_files, reverse=True):
+        target = destination_root / relative_path
+        if target.is_file() or target.is_symlink():
+            target.unlink()
+            parent = target.parent
+            while parent != destination_root:
+                removed_parents.add(parent)
+                parent = parent.parent
+    for directory in sorted(removed_parents, key=lambda item: len(item.parts), reverse=True):
+        if directory.is_dir() and not any(directory.iterdir()):
+            directory.rmdir()
+    for relative_path in sorted(source_files):
+        source = source_root / relative_path
+        destination = destination_root / relative_path
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+
+    _, error, code = run(["git", "add", "--all"], cwd=destination_root, timeout=120)
+    if code != 0:
+        raise RuntimeError(error or "could not stage mirrored Package Registry snapshot")
+    _, _, diff_code = run(["git", "diff", "--cached", "--quiet"], cwd=destination_root)
+    if diff_code == 1:
+        _, error, code = run(
+            [
+                "git",
+                "-c",
+                "user.name=Deucarian Audit",
+                "-c",
+                "user.email=audit@deucarian.invalid",
+                "commit",
+                "--no-gpg-sign",
+                "--no-verify",
+                "-m",
+                "Synthetic Package Registry audit snapshot",
+            ],
+            cwd=destination_root,
+            timeout=120,
+        )
+        if code != 0:
+            raise RuntimeError(error or "could not commit mirrored Package Registry snapshot")
+    elif diff_code != 0:
+        raise RuntimeError("could not compare mirrored Package Registry snapshot")
+
+
+def registry_audit_input_sha256(repo_root: Path) -> str:
+    digest = hashlib.sha256()
+    for relative_path in (
+        ".github/workflows/package-registry-validation.yml",
+        "Tools/Generate-DeucarianAudit.py",
+        "capabilities.json",
+        "dependency-rules.json",
+        "deucarian-package.json",
+        "packages.json",
+    ):
+        path = repo_root / relative_path
+        digest.update(relative_path.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(path.read_bytes() if path.is_file() else b"")
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
+def validate_repository_snapshot(
+    repo_root: Path,
+    spec: dict[str, Any],
+    package_json: dict[str, Any],
+    governance: dict[str, Any],
+    branches: dict[str, Any],
+    ref: str,
+) -> None:
+    errors = []
+    expected_package_id = spec.get("packageId")
+    if expected_package_id and package_json.get("name") != expected_package_id:
+        errors.append(f"package.json name {package_json.get('name')!r} != {expected_package_id!r}")
+    if not governance:
+        errors.append("deucarian-package.json is missing or invalid")
+    elif expected_package_id and governance.get("packageId") != expected_package_id:
+        errors.append(f"deucarian-package.json packageId {governance.get('packageId')!r} != {expected_package_id!r}")
+    if spec.get("source") == "registry" and governance.get("repositoryName") != "Package-Registry":
+        errors.append("deucarian-package.json does not identify Package-Registry")
+    if branches.get("dirty"):
+        errors.append("worktree is dirty")
+    if spec.get("source") != "registry":
+        if branches.get("currentBranch") != ref:
+            errors.append(f"current branch {branches.get('currentBranch')!r} != {ref!r}")
+        if not branches.get("atRequestedRef"):
+            errors.append(f"HEAD is not the local origin/{ref} snapshot")
+    elif not branches.get("headCommit"):
+        errors.append("current Package Registry revision cannot be resolved")
+    if git_url_key(branches.get("origin", "")) != git_url_key(spec.get("canonicalUrl", "")):
+        errors.append(f"origin {branches.get('origin')!r} != {spec.get('canonicalUrl')!r}")
+    if errors:
+        raise RuntimeError(f"Invalid authoritative snapshot {repo_root.name}: " + "; ".join(errors))
 
 
 def build_report(args: argparse.Namespace) -> dict[str, Any]:
     output_root = args.output_root.resolve()
     audit_root = (args.audit_root or repo_root_default(output_root)).resolve()
-    registry = load_registry(output_root)
+    registry_document = load_registry_document(output_root)
+    registry = {pkg.get("id"): pkg for pkg in registry_document.get("packages", []) if pkg.get("id")}
+    capabilities_policy, dependency_policy = load_policy_inputs(output_root)
+    validate_policy_inputs(registry_document, capabilities_policy, dependency_policy)
+    repository_specs = expected_repository_specs(registry_document, args.organization, args.ref)
+    spec_by_name = {spec["name"].lower(): spec for spec in repository_specs}
+    strict_snapshots = getattr(args, "strict_snapshots", args.authoritative)
     include = {name.lower() for name in args.include_repository}
     exclude = {name.lower() for name in args.exclude_repository}
+    if strict_snapshots and (include or exclude):
+        raise RuntimeError("Authoritative snapshot validation cannot be combined with repository include/exclude filters.")
+
+    repo_roots, coverage = repository_inventory(audit_root, repository_specs)
+    if strict_snapshots and not coverage["complete"]:
+        raise RuntimeError(
+            "Authoritative repository coverage is incomplete: "
+            f"missing={coverage['missingRepositories']}, unexpected={coverage['unexpectedRepositories']}, "
+            f"duplicates={coverage['duplicateRepositories']}, case={coverage['caseMismatches']}"
+        )
 
     analyzer = CSharpSyntaxAnalyzer(authoritative=args.authoritative)
     repositories: list[dict[str, Any]] = []
     parsed_files: list[ParsedFile] = []
     parse_failures: list[dict[str, Any]] = []
 
-    for repo_root in sorted([p for p in audit_root.iterdir() if p.is_dir()], key=lambda p: p.name.lower()):
+    for repo_root in repo_roots:
         if include and repo_root.name.lower() not in include:
             continue
         if repo_root.name.lower() in exclude:
             continue
+        spec = spec_by_name.get(repo_root.name.lower())
         package_json = read_json(repo_root / "package.json") or {}
-        asmdefs = collect_asmdefs(repo_root)
+        governance = read_json(repo_root / "deucarian-package.json") or {}
+        asmdefs = collect_asmdefs(repo_root, governance)
+        branches = collect_branch_info(repo_root, args.ref)
+        if strict_snapshots:
+            if spec is None:
+                raise RuntimeError(f"No canonical repository specification for {repo_root.name}")
+            validate_repository_snapshot(repo_root, spec, package_json, governance, branches, args.ref)
+
+        manifest_sha = file_sha256(repo_root / "package.json")
+        config_sha = file_sha256(repo_root / "deucarian-package.json")
+        recorded_branches = dict(branches)
+        audit_input_sha = ""
+        if repo_root.name == "Package-Registry":
+            # A tracked artifact cannot embed the commit which contains itself;
+            # use a stable marker and hash all non-generated audit inputs instead.
+            recorded_branches.update(
+                {
+                    "currentBranch": "self",
+                    "dirty": False,
+                    "headCommit": "self",
+                    "requestedRefCommit": "self",
+                    "atRequestedRef": True,
+                    "hasDevelop": True,
+                    "hasMain": True,
+                }
+            )
+            audit_input_sha = registry_audit_input_sha256(output_root)
         repo = {
             "name": repo_root.name,
             "canonicalId": f"{args.organization}/{repo_root.name}",
@@ -1203,14 +1737,24 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "unity": package_json.get("unity"),
             "displayName": package_json.get("displayName"),
             "repository": package_json.get("repository"),
-            "branches": collect_branch_info(repo_root),
+            "branches": recorded_branches,
             "dependencies": package_json.get("dependencies", {}) or {},
             "asmdefs": asmdefs,
+            "governance": governance,
             "registryDependencies": (registry.get(package_json.get("name")) or {}).get("dependencies") if package_json.get("name") else None,
             "registryGroupId": (registry.get(package_json.get("name")) or {}).get("groupId") if package_json.get("name") else None,
+            "registryKind": ((registry.get(package_json.get("name")) or {}).get("kind") or (registry.get(package_json.get("name")) or {}).get("type")) if package_json.get("name") else None,
             "ciWorkflows": sorted(rel(p, repo_root) for p in (repo_root / ".github" / "workflows").glob("*.y*ml")) if (repo_root / ".github" / "workflows").exists() else [],
             "validationScripts": sorted(rel(p, repo_root) for p in repo_root.glob("Tools/**/*") if p.is_file() and "validat" in p.name.lower()),
-            "samples": sorted(rel(p, repo_root) for p in repo_root.glob("Samples~/**/*") if p.is_file())[:80],
+            "samples": sorted(rel(p, repo_root) for p in repo_root.glob("Samples~/**/*") if p.is_file()),
+            "provenance": {
+                "canonicalUrl": spec.get("canonicalUrl", "") if spec else normalize_git_url(branches.get("origin", "")),
+                "requestedRef": args.ref,
+                "headCommit": recorded_branches.get("headCommit", ""),
+                "manifestSha256": manifest_sha,
+                "governanceConfigSha256": config_sha,
+                "auditInputSha256": audit_input_sha,
+            },
         }
         repositories.append(repo)
 
@@ -1226,9 +1770,10 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
                 repo_root=repo_root,
                 path=path,
                 relative_path=relative_path,
-                scope=scope_for(relative_path, owner_asmdef),
+                scope=scope_for(relative_path, owner_asmdef, governance),
                 assembly=owner_asmdef.get("name", "") if owner_asmdef else "",
                 text=text,
+                governance=governance,
                 generated=is_generated_file(path, text),
             )
             analyzer.parse_file(parsed)
@@ -1287,7 +1832,15 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         repo_root = audit_root / repo["name"]
         registry_package = registry.get(repo.get("packageId"))
         documentation_records.extend(documentation_drift(repo, repo_root, registry_package))
-        dependency_usage_records.extend(dependency_usage(repo, [p for p in parsed_files if p.repo == repo["name"]], package_to_assemblies, registry_package))
+        dependency_usage_records.extend(
+            dependency_usage(
+                repo,
+                [p for p in parsed_files if p.repo == repo["name"]],
+                package_to_assemblies,
+                registry_package,
+                registry,
+            )
+        )
     documentation_records.sort(key=lambda item: (item["repository"], item["kind"], item.get("file", ""), item.get("dependency", "")))
     dependency_usage_records.sort(key=lambda item: (item["repository"], item.get("dependency", item.get("assemblyReference", ""))))
 
@@ -1309,13 +1862,28 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
                 registry_drifts.append({"repo": repo["name"], "packageId": repo.get("packageId"), "packageJsonDependencies": pkg_deps, "registryDependencies": reg_deps})
 
     capability_matrix = []
-    for cap_id, owner, desc in CAPABILITIES:
+    for capability in sorted(capabilities_policy.get("capabilities", []), key=lambda item: item.get("id", "")):
+        cap_id = capability.get("id")
+        owner = capability.get("ownerPackageId")
+        desc = capability.get("description", "")
         owner_repo = next((repo["name"] for repo in repositories if repo.get("packageId") == owner), None)
-        consumers = sorted(set(edge["from"] for edge in edges if edge["to"] == owner))
+        consumers = sorted(set(edge["from"] for edge in edges if owner and edge["to"] == owner))
         capability_matrix.append({"id": cap_id, "ownerPackageId": owner, "ownerRepository": owner_repo or ("Package-Registry" if cap_id == "registry-metadata" else None), "description": desc, "currentConsumers": consumers})
 
     lifetime_conclusion = classify_lifetime_conclusion(lifetime_records)
-    extraction_decisions = reviewed_extraction_decisions(exact_clones, structural_clones, semantic_candidates, lifetime_conclusion)
+    extraction_candidates = build_extraction_candidates(exact_clones, structural_clones, semantic_candidates, lifetime_conclusion)
+    documentation_baseline = []
+    for repo in repositories:
+        repo_production = [symbol for symbol in production_api if symbol["repository"] == repo["name"]]
+        documentation_baseline.append(
+            {
+                "repository": repo["name"],
+                "packageId": repo.get("packageId"),
+                "runtimePublicCount": sum(symbol["scope"] == "Runtime production" for symbol in repo_production),
+                "editorPublicCount": sum(symbol["scope"] == "Editor production" for symbol in repo_production),
+                "missingXmlDocumentationCount": sum(not symbol.get("xmlDocumentation") for symbol in repo_production),
+            }
+        )
 
     return {
         "metadata": {
@@ -1325,22 +1893,38 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "parser": "tree-sitter-c-sharp" if analyzer.available else "unavailable",
             "authoritative": args.authoritative,
             "generatedAtUtc": "not-recorded-deterministic-output",
+            "coverage": coverage,
+            "inputSignatures": {
+                "packagesSha256": file_sha256(output_root / "packages.json"),
+                "capabilitiesSha256": file_sha256(output_root / "capabilities.json"),
+                "dependencyRulesSha256": file_sha256(output_root / "dependency-rules.json"),
+            },
         },
         "repositories": repositories,
         "parseFailures": parse_failures,
+        "parserRecoveries": sorted(
+            [
+                {
+                    "repository": parsed.repo,
+                    "file": parsed.relative_path,
+                    "recoveries": parsed.parser_recoveries,
+                }
+                for parsed in parsed_files
+                if parsed.parser_recoveries
+            ],
+            key=lambda item: (item["repository"], item["file"]),
+        ),
         "publicApi": {
             "runtimeProductionCount": len(runtime_api),
             "editorProductionCount": len(editor_api),
             "testsPublicCount": len(test_public),
             "samplesPublicCount": len(sample_public),
             "internalPrivateProductionCount": len(internal_private),
-            "runtimeProduction": sort_symbols(runtime_api),
-            "editorProduction": sort_symbols(editor_api),
-            "tests": sort_symbols(test_public),
-            "samples": sort_symbols(sample_public),
-            "internalPrivate": sort_symbols(internal_private),
-            "symbols": sort_symbols(production_api),
-            "missingXmlDocumentation": sort_symbols(public_missing_xml),
+            "missingXmlDocumentationCount": len(public_missing_xml),
+            "documentationBaseline": documentation_baseline,
+            "tests": compact_symbols(test_public),
+            "samples": compact_symbols(sample_public),
+            "symbols": compact_symbols(production_api),
         },
         "duplication": {
             "methodCountAnalyzed": len(methods),
@@ -1372,7 +1956,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         "dependencyGraph": {"edges": sorted(edges, key=lambda e: (e.get("from") or "", e.get("to") or "")), "cycles": detect_cycles(edges)},
         "drift": {"dependencyVersionDrift": sorted(version_drifts, key=lambda x: (x["repo"], x["dependency"])), "registryDependencyDrift": sorted(registry_drifts, key=lambda x: x["repo"])},
         "capabilityMatrix": capability_matrix,
-        "extractionDecisions": extraction_decisions,
+        "extractionCandidates": extraction_candidates,
     }
 
 
@@ -1385,6 +1969,28 @@ def summarize_by(records: list[dict[str, Any]], key: str) -> dict[str, int]:
 
 def sort_symbols(symbols: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(symbols, key=lambda symbol: (symbol["repository"], symbol["file"], symbol["line"], symbol["symbol"]))
+
+
+def compact_symbols(symbols: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    keys = (
+        "repository",
+        "packageId",
+        "file",
+        "line",
+        "assembly",
+        "scope",
+        "namespace",
+        "containingType",
+        "symbol",
+        "symbolKind",
+        "fullSignature",
+        "xmlDocumentation",
+        "obsolete",
+    )
+    return [
+        {key: symbol.get(key) for key in keys}
+        for symbol in sort_symbols(symbols)
+    ]
 
 
 def detect_cycles(edges: list[dict[str, Any]]) -> list[list[str]]:
@@ -1555,11 +2161,11 @@ def expected_lifetime_context(record: dict[str, Any]) -> str:
     return "Runtime production cleanup"
 
 
-def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[dict[str, Any]], semantic: list[dict[str, Any]], lifetime: dict[str, Any]) -> list[dict[str, Any]]:
+def build_extraction_candidates(exact: list[dict[str, Any]], structural: list[dict[str, Any]], semantic: list[dict[str, Any]], lifetime: dict[str, Any]) -> list[dict[str, Any]]:
     decisions = []
     exact_keys = {group["groupKey"] for group in exact}
     for group in structural[:50]:
-        decision = clone_decision(group)
+        disposition = clone_candidate_disposition(group)
         decisions.append(
             {
                 "candidate": group["groupKey"],
@@ -1572,7 +2178,7 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
                 "differences": summarize_clone_differences(group),
                 "existingCapabilityOwner": group.get("proposedOwner", "needs capability-owner review"),
                 "dependencyImpact": summarize_dependency_impact(group),
-                "decision": decision,
+                "suggestedDisposition": disposition,
                 "candidateOwner": group.get("proposedOwner", "needs capability-owner review"),
                 "reasoning": "; ".join(group["reasonsNotToExtract"] or group["reasonsToExtract"] or ["Manual semantic review required."]),
             }
@@ -1590,7 +2196,7 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
                 "differences": "Requires human review of call sites, lifecycle, and ownership.",
                 "existingCapabilityOwner": group.get("proposedOwner", "needs capability-owner review"),
                 "dependencyImpact": summarize_dependency_impact(group),
-                "decision": "NeedsDesignReview",
+                "suggestedDisposition": "NeedsDesignReview",
                 "candidateOwner": group.get("proposedOwner", "needs capability-owner review"),
                 "reasoning": "Same symbol names are not enough to extract; review semantics and owner capability.",
             }
@@ -1608,7 +2214,7 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
             "differences": "; ".join(f"{row['repository']} accepts {row['acceptedType']} in {row['expectedExecutionContext']}" for row in lifetime.get("comparison", [])),
             "existingCapabilityOwner": lifetime.get("canonicalOwner") or "none",
             "dependencyImpact": lifetime.get("dependencyImpact", ""),
-            "decision": "Completed" if lifetime.get("decision") == "Implemented in com.deucarian.common" else ("RuntimeReuseCandidate" if lifetime.get("decision") == "Create com.deucarian.common" else "KeepLocal"),
+            "suggestedDisposition": "Completed" if lifetime.get("decision") == "Implemented in com.deucarian.common" else ("RuntimeReuseCandidate" if lifetime.get("decision") == "Create com.deucarian.common" else "KeepLocal"),
             "candidateOwner": "com.deucarian.common" if lifetime.get("decision") in {"Create com.deucarian.common", "Implemented in com.deucarian.common"} else "local owners",
             "apiProposal": ", ".join(lifetime.get("apiProposal", [])),
             "risks": "; ".join(lifetime.get("risks", [])),
@@ -1628,7 +2234,7 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
             "differences": "No shared fixture ownership, teardown registration, temporary asset cleanup abstraction, or exception-safe cleanup pattern was identified.",
             "existingCapabilityOwner": "none",
             "dependencyImpact": "No testing package dependency is introduced.",
-            "decision": testing.get("decision", "KeepLocal"),
+            "suggestedDisposition": testing.get("decision", "KeepLocal"),
             "candidateOwner": "local tests",
             "reasoning": testing.get("reasoning", "Keep local."),
         }
@@ -1636,7 +2242,7 @@ def reviewed_extraction_decisions(exact: list[dict[str, Any]], structural: list[
     return sorted(decisions, key=lambda item: (item["category"], item["candidate"]))
 
 
-def clone_decision(group: dict[str, Any]) -> str:
+def clone_candidate_disposition(group: dict[str, Any]) -> str:
     scopes = set(group.get("scopes", []))
     if scopes and scopes <= {"Test"}:
         return "TestOnlyReuse"
@@ -1689,6 +2295,7 @@ def display_label(value: str) -> str:
         "EditorOnlyUse": "Editor-only use",
         "SampleOnlyUse": "Sample-only use",
         "TestOnlyUse": "Test-only use",
+        "SuiteComposition": "Suite composition",
         "OptionalVersionDefinedUse": "Optional version-defined use",
         "OptionalConstraintUse": "Optional constraint use",
         "MissingHardPackageDependency": "Missing hard package dependency",
@@ -1728,8 +2335,6 @@ def write_artifacts(report: dict[str, Any], output_root: Path, formats: str = "a
         write_json(output_root / "UNITY_OBJECT_LIFETIME_AUDIT.json", report["unityObjectLifetime"])
         write_json(output_root / "DOCUMENTATION_DRIFT.json", report["documentationDrift"])
         write_json(output_root / "DEPENDENCY_USAGE_AUDIT.json", report["dependencyUsage"])
-        write_json(output_root / "capabilities.json", capabilities_json(report))
-        write_json(output_root / "dependency-rules.json", dependency_rules_json(report))
 
     if not md_enabled:
         return
@@ -1737,62 +2342,11 @@ def write_artifacts(report: dict[str, Any], output_root: Path, formats: str = "a
     write_reuse_audit(report, output_root / "REUSE_AUDIT.md")
     write_capability_matrix(report, output_root / "PACKAGE_CAPABILITY_MATRIX.md")
     write_dependency_graph(report, output_root / "DEPENDENCY_GRAPH.md")
-    write_migration_plan(report, output_root / "MIGRATION_PLAN.md")
     write_debug_md(report, output_root / "DEBUG_API_AUDIT.md")
     write_lifetime_md(report, output_root / "UNITY_OBJECT_LIFETIME_AUDIT.md")
     write_doc_drift_md(report, output_root / "DOCUMENTATION_DRIFT.md")
     write_dependency_usage_md(report, output_root / "DEPENDENCY_USAGE_AUDIT.md")
-    write_extraction_decisions_md(report, output_root / "EXTRACTION_DECISIONS.md")
-
-
-def capabilities_json(report: dict[str, Any]) -> dict[str, Any]:
-    caps = []
-    for cap in report["capabilityMatrix"]:
-        item = {"id": cap["id"], "ownerPackageId": cap.get("ownerPackageId"), "description": cap["description"]}
-        if cap["id"] == "logging":
-            item["forbiddenSymbolsOutsideOwner"] = DEBUG_FORBIDDEN_SYMBOLS
-            item["exceptions"] = [
-                {"packageId": "com.deucarian.bootstrap", "reason": "First-time self-contained bootstrap."},
-                {"packageId": "com.deucarian.logging", "reason": "Owns Unity console forwarding and sink validation."},
-            ]
-        if cap["id"] == "unity-object-lifetime":
-            item["status"] = report["unityObjectLifetime"]["conclusion"]["decision"]
-            item["canonicalSymbols"] = [COMMON_LIFETIME_API]
-            item["apiProposal"] = report["unityObjectLifetime"]["conclusion"].get("apiProposal", [])
-            item["forbiddenSymbolsOutsideOwner"] = LIFETIME_FORBIDDEN_SYMBOLS
-            item["exceptions"] = [
-                {"packageId": COMMON_PACKAGE_ID, "reason": "Owns the exact Play Mode/Edit Mode implementation."},
-                {"scope": "Test", "reason": "Explicit fixture teardown remains local; no testing package is approved."},
-            ]
-        caps.append(item)
-    return {"schemaVersion": 2, "capabilities": caps}
-
-
-def dependency_rules_json(report: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "schemaVersion": 2,
-        "layers": [
-            {"id": "common", "packages": ["com.deucarian.common"], "status": "active"},
-            {"id": "foundation", "packages": ["com.deucarian.editor", "com.deucarian.logging", "com.deucarian.core-state"]},
-            {"id": "runtime-capabilities", "packages": ["com.deucarian.api", "com.deucarian.session", "com.deucarian.object-loading", "com.deucarian.object-selection", "com.deucarian.ui-binding", "com.deucarian.ui-flow", "com.deucarian.theming", "com.deucarian.diagnostics"]},
-            {"id": "integrations", "packages": ["com.deucarian.session.api-integration", "com.deucarian.object-loading.api-integration", "com.deucarian.object-selection.core-state-integration", "com.deucarian.ui-binding.core-state-integration"]},
-            {"id": "suites", "packages": ["com.deucarian.selection-suite"]},
-            {"id": "catalog-composition", "packages": ["com.deucarian.package-installer"]},
-        ],
-        "exceptions": [
-            {"packageId": "com.deucarian.bootstrap", "reason": "Self-contained first-time setup package outside normal dependency graph."},
-            {"packageId": "com.deucarian.logging", "dependency": "com.deucarian.editor", "status": "review-required", "reason": "Review Logging -> Editor before allowing Editor to use Logging."},
-        ],
-        "rules": [
-            "No cyclic package dependencies.",
-            "Runtime assemblies must not reference UnityEditor.",
-            "Common cannot depend on Logging, Editor, or domain packages.",
-            "Logging cannot depend on Diagnostics or telemetry.",
-            "Integration packages depend only on their targets plus Common/Logging when actually used.",
-            "Package Registry dependencies must match package.json direct Deucarian dependencies.",
-            "Assembly references must match package dependencies.",
-        ],
-    }
+    write_extraction_candidates_md(report, output_root / "EXTRACTION_CANDIDATES.md")
 
 
 def write_reuse_audit(report: dict[str, Any], path: Path) -> None:
@@ -1808,7 +2362,7 @@ def write_reuse_audit(report: dict[str, Any], path: Path) -> None:
         ["Test public symbols excluded from production API", report["publicApi"]["testsPublicCount"]],
         ["Sample public symbols excluded from production API", report["publicApi"]["samplesPublicCount"]],
         ["Internal/private production symbols", report["publicApi"]["internalPrivateProductionCount"]],
-        ["Public API symbols missing XML documentation", len(report["publicApi"]["missingXmlDocumentation"])],
+        ["Public API symbols missing XML documentation", report["publicApi"]["missingXmlDocumentationCount"]],
         ["Debug invocation records", len(report["debugApi"]["invocations"])],
         ["Unity object lifetime records", len(report["unityObjectLifetime"]["occurrences"])],
         ["Documentation drift findings", len(report["documentationDrift"]["findings"])],
@@ -1855,7 +2409,7 @@ This is the hardened organization-wide audit snapshot for `{report['metadata']['
 
 ## Extraction Position
 
-`com.deucarian.common` owns the approved Unity object lifetime primitive. `EXTRACTION_DECISIONS.md` records completed and remaining reviewed dispositions for candidates produced by the hardened analyzer.
+`com.deucarian.common` owns the approved Unity object lifetime primitive. `EXTRACTION_CANDIDATES.md` contains generated evidence; reviewed outcomes are maintained separately in `EXTRACTION_DECISIONS.md`.
 """,
         encoding="utf-8",
     )
@@ -1909,35 +2463,9 @@ Schema version: 2
     )
 
 
-def write_migration_plan(report: dict[str, Any], path: Path) -> None:
-    path.write_text(
-        f"""# Deucarian Migration Plan
-
-Schema version: 2
-
-This plan records the completed Common extraction and the remaining governance follow-ups. Existing repository main branches remain unchanged by the audit wave.
-
-## Next Safe Steps
-
-1. Git-only stable distribution is active.
-2. npm/scoped-registry publication is deferred.
-3. Optional future release wave: manual tags/releases and manual npm/scoped-registry publication.
-4. Future package feature work can resume on develop.
-5. Remaining reviewed extraction candidates can be handled only after audit-backed decisions.
-
-## Still Not Done
-
-- No Testing package.
-- No Build Tools repository.
-- No broad utility expansion beyond `UnityObjectUtility.DestroySafely`.
-""",
-        encoding="utf-8",
-    )
-
-
 def write_debug_md(report: dict[str, Any], path: Path) -> None:
     records = report["debugApi"]["invocations"]
-    rows = [[r["repository"], r["file"], r["line"], r["scope"], r["invocation"], r.get("logLevel", ""), r.get("policyDisposition", ""), r.get("policySeverity", "")] for r in records[:200]]
+    rows = [[r["repository"], r["file"], r["line"], r["scope"], r["invocation"], r.get("logLevel", ""), r.get("policyDisposition", ""), r.get("policySeverity", ""), r.get("policyReason", "")] for r in records[:200]]
     path.write_text(
         f"""# Debug API Audit
 
@@ -1959,7 +2487,7 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 
 ## Findings
 
-{md_table(['Repository', 'File', 'Line', 'Scope', 'Invocation', 'Log level', 'Policy disposition', 'Policy severity'], rows)}
+{md_table(['Repository', 'File', 'Line', 'Scope', 'Invocation', 'Log level', 'Policy disposition', 'Policy severity', 'Policy reason'], rows)}
 """,
         encoding="utf-8",
     )
@@ -2072,7 +2600,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
     )
 
 
-def write_extraction_decisions_md(report: dict[str, Any], path: Path) -> None:
+def write_extraction_candidates_md(report: dict[str, Any], path: Path) -> None:
     rows = [
         [
             d["candidate"],
@@ -2085,21 +2613,21 @@ def write_extraction_decisions_md(report: dict[str, Any], path: Path) -> None:
             d.get("differences", ""),
             d.get("existingCapabilityOwner", ""),
             d.get("dependencyImpact", ""),
-            d["decision"],
+            d["suggestedDisposition"],
             d.get("candidateOwner", ""),
             d.get("apiProposal", ""),
             d["reasoning"],
         ]
-        for d in report["extractionDecisions"]
+        for d in report["extractionCandidates"]
     ]
     path.write_text(
-        f"""# Extraction Decisions
+        f"""# Extraction Candidates
 
 Schema version: 1
 
-These decisions are manual-review defaults produced after the Wave 1C correctness pass. They deliberately avoid extraction from occurrence count alone.
+This is generated evidence, not an architecture decision ledger. Candidate dispositions are heuristic review prompts and must not be treated as accepted or rejected refactors. Reviewed outcomes live in `EXTRACTION_DECISIONS.md`, which this generator never writes.
 
-{md_table(['Candidate', 'Category', 'Symbols', 'Repositories', 'Files', 'Scopes', 'Behavior', 'Differences', 'Existing owner', 'Dependency impact', 'Decision', 'Candidate owner', 'API proposal', 'Reasoning'], rows)}
+{md_table(['Candidate', 'Category', 'Symbols', 'Repositories', 'Files', 'Scopes', 'Behavior', 'Differences', 'Existing owner', 'Dependency impact', 'Suggested disposition', 'Candidate owner', 'API proposal', 'Reasoning'], rows)}
 """,
         encoding="utf-8",
     )
@@ -2110,7 +2638,7 @@ def check_artifacts(args: argparse.Namespace, report: dict[str, Any]) -> int:
         tmp_root = Path(tmp)
         write_artifacts(report, tmp_root, args.format)
         stale = []
-        for filename in OUTPUT_FILES:
+        for filename in selected_output_files(args.format):
             expected = tmp_root / filename
             actual = args.output_root / filename
             if not expected.exists() and not actual.exists():
@@ -2124,6 +2652,91 @@ def check_artifacts(args: argparse.Namespace, report: dict[str, Any]) -> int:
     return 0
 
 
+def selected_output_files(formats: str) -> list[str]:
+    if formats == "json":
+        return list(JSON_OUTPUT_FILES)
+    if formats == "markdown":
+        return list(MARKDOWN_OUTPUT_FILES)
+    return list(OUTPUT_FILES)
+
+
+def validate_authoritative_report(report: dict[str, Any]) -> None:
+    if not report.get("metadata", {}).get("authoritative"):
+        return
+    if not report.get("metadata", {}).get("coverage", {}).get("complete"):
+        raise RuntimeError("Authoritative audit repository coverage is incomplete.")
+    if report.get("parseFailures"):
+        raise RuntimeError("Authoritative audit contains C# parse failures.")
+    cycles = report.get("dependencyGraph", {}).get("cycles", [])
+    if cycles:
+        raise RuntimeError(f"Authoritative audit found dependency cycles: {cycles}")
+
+
+def validate_policy_compliance(report: dict[str, Any]) -> None:
+    if not report.get("metadata", {}).get("authoritative"):
+        return
+
+    violations = []
+    for finding in report.get("dependencyUsage", {}).get("findings", []):
+        classification = finding.get("classification")
+        if classification not in ACCEPTED_DEPENDENCY_CLASSIFICATIONS:
+            package_id = finding.get("packageId", "<unknown>")
+            dependency = finding.get("dependency") or finding.get("assemblyReference") or "<unknown>"
+            violations.append(f"dependency {package_id} -> {dependency} is {classification}")
+
+    for invocation in report.get("debugApi", {}).get("invocations", []):
+        if invocation.get("policyDisposition") != "Allowed":
+            violations.append(
+                "debug "
+                f"{invocation.get('packageId', '<unknown>')} "
+                f"{invocation.get('file', '<unknown>')}:{invocation.get('line', '?')} "
+                f"is {invocation.get('policyDisposition', '<unknown>')}"
+            )
+
+    lifetime = report.get("unityObjectLifetime", {})
+    for occurrence in lifetime.get("occurrences", []):
+        if occurrence.get("policyDisposition") != "Allowed":
+            violations.append(
+                "lifetime "
+                f"{occurrence.get('packageId', '<unknown>')} "
+                f"{occurrence.get('file', '<unknown>')}:{occurrence.get('line', '?')} "
+                f"is {occurrence.get('policyDisposition', '<unknown>')}"
+            )
+
+    if violations:
+        preview = "; ".join(violations[:10])
+        if len(violations) > 10:
+            preview += f"; ... and {len(violations) - 10} more"
+        raise RuntimeError(f"Authoritative audit found {len(violations)} policy violation(s): {preview}")
+
+
+def write_artifacts_atomically(report: dict[str, Any], output_root: Path, formats: str) -> None:
+    output_root.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=output_root.parent) as tmp:
+        staging_root = Path(tmp)
+        write_artifacts(report, staging_root, formats)
+        for filename in selected_output_files(formats):
+            source = staging_root / filename
+            destination = output_root / filename
+            if not source.is_file():
+                raise RuntimeError(f"Audit generator did not stage expected artifact: {filename}")
+            descriptor, adjacent_name = tempfile.mkstemp(
+                prefix=f".{filename}.",
+                suffix=".tmp",
+                dir=output_root,
+            )
+            os.close(descriptor)
+            adjacent = Path(adjacent_name)
+            try:
+                shutil.copyfile(source, adjacent)
+                if destination.exists():
+                    shutil.copymode(destination, adjacent)
+                os.replace(adjacent, destination)
+            finally:
+                if adjacent.exists():
+                    adjacent.unlink()
+
+
 def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
@@ -2131,10 +2744,22 @@ def main() -> int:
     if args.audit_root is None:
         args.audit_root = repo_root_default(args.output_root)
     args.audit_root = args.audit_root.resolve()
+    if args.provision:
+        registry_document = load_registry_document(args.output_root)
+        specs = expected_repository_specs(registry_document, args.organization, args.ref)
+        provision_repositories(
+            args.audit_root,
+            specs,
+            args.ref,
+            args.clone_workers,
+            current_registry_root=args.output_root,
+        )
     report = build_report(args)
+    validate_authoritative_report(report)
     if args.check:
+        validate_policy_compliance(report)
         return check_artifacts(args, report)
-    write_artifacts(report, args.output_root, args.format)
+    write_artifacts_atomically(report, args.output_root, args.format)
     print(json.dumps({
         "repositories": len(report["repositories"]),
         "methodsAnalyzed": report["duplication"]["methodCountAnalyzed"],
