@@ -1472,7 +1472,6 @@ def provision_repositories(
     specs: list[dict[str, Any]],
     ref: str,
     workers: int,
-    current_registry_root: Path | None = None,
 ) -> None:
     audit_root.mkdir(parents=True, exist_ok=True)
     existing = list(audit_root.iterdir())
@@ -1482,40 +1481,6 @@ def provision_repositories(
 
     def clone(spec: dict[str, Any]) -> tuple[str, str]:
         destination = audit_root / spec["name"]
-        if spec.get("source") == "registry" and current_registry_root is not None:
-            head, head_error, head_code = run(["git", "rev-parse", "HEAD"], cwd=current_registry_root)
-            if head_code != 0:
-                return spec["name"], head_error or "could not resolve current Package Registry HEAD"
-            clone_command = [
-                "git",
-                "-c",
-                "core.longpaths=true",
-                "-c",
-                "core.autocrlf=false",
-                "clone",
-                "--no-hardlinks",
-                "--no-checkout",
-                str(current_registry_root),
-                str(destination),
-            ]
-            _, stderr, code = run(clone_command, timeout=300)
-            if code != 0:
-                return spec["name"], stderr or f"local git clone exited {code}"
-            _, stderr, code = run(["git", "config", "core.autocrlf", "false"], cwd=destination)
-            if code == 0:
-                _, stderr, code = run(["git", "config", "core.longpaths", "true"], cwd=destination)
-            if code == 0:
-                _, stderr, code = run(["git", "fetch", "--no-tags", str(current_registry_root), head], cwd=destination, timeout=120)
-            if code == 0:
-                _, stderr, code = run(["git", "checkout", "--detach", head], cwd=destination, timeout=120)
-            if code == 0:
-                try:
-                    mirror_registry_worktree(current_registry_root, destination)
-                except Exception as exc:
-                    return spec["name"], f"could not mirror current Package Registry worktree: {exc}"
-            if code == 0:
-                _, stderr, code = run(["git", "remote", "set-url", "origin", spec["canonicalUrl"]], cwd=destination)
-            return spec["name"], "" if code == 0 else (stderr or f"local registry checkout exited {code}")
         command = [
             "git",
             "-c",
@@ -1547,73 +1512,6 @@ def provision_repositories(
                 failures.append(f"{name}: {error}")
     if failures:
         raise RuntimeError("Could not provision authoritative audit repositories:\n" + "\n".join(sorted(failures)))
-
-
-def git_worktree_files(repo_root: Path) -> list[str]:
-    output, error, code = run(
-        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
-        cwd=repo_root,
-    )
-    if code != 0:
-        raise RuntimeError(error or f"could not enumerate {repo_root}")
-    return sorted(
-        path
-        for path in output.split("\0")
-        if path and ((repo_root / path).is_file() or (repo_root / path).is_symlink())
-    )
-
-
-def mirror_registry_worktree(source_root: Path, destination_root: Path) -> None:
-    source_root = source_root.resolve()
-    destination_root = destination_root.resolve()
-    if source_root == destination_root or not (destination_root / ".git").exists():
-        raise RuntimeError("registry mirror destination must be a separate Git checkout")
-
-    source_files = set(git_worktree_files(source_root))
-    destination_files = set(git_worktree_files(destination_root))
-    removed_parents: set[Path] = set()
-    for relative_path in sorted(destination_files - source_files, reverse=True):
-        target = destination_root / relative_path
-        if target.is_file() or target.is_symlink():
-            target.unlink()
-            parent = target.parent
-            while parent != destination_root:
-                removed_parents.add(parent)
-                parent = parent.parent
-    for directory in sorted(removed_parents, key=lambda item: len(item.parts), reverse=True):
-        if directory.is_dir() and not any(directory.iterdir()):
-            directory.rmdir()
-    for relative_path in sorted(source_files):
-        source = source_root / relative_path
-        destination = destination_root / relative_path
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, destination)
-
-    _, error, code = run(["git", "add", "--all"], cwd=destination_root, timeout=120)
-    if code != 0:
-        raise RuntimeError(error or "could not stage mirrored Package Registry snapshot")
-    _, _, diff_code = run(["git", "diff", "--cached", "--quiet"], cwd=destination_root)
-    if diff_code == 1:
-        _, error, code = run(
-            [
-                "git",
-                "-c",
-                "user.name=Deucarian Audit",
-                "-c",
-                "user.email=audit@deucarian.invalid",
-                "commit",
-                "--no-gpg-sign",
-                "--no-verify",
-                "-m",
-                "Synthetic Package Registry audit snapshot",
-            ],
-            cwd=destination_root,
-            timeout=120,
-        )
-        if code != 0:
-            raise RuntimeError(error or "could not commit mirrored Package Registry snapshot")
-    elif diff_code != 0:
-        raise RuntimeError("could not compare mirrored Package Registry snapshot")
 
 
 def registry_audit_input_sha256(repo_root: Path) -> str:
@@ -1654,13 +1552,10 @@ def validate_repository_snapshot(
         errors.append("deucarian-package.json does not identify Package-Registry")
     if branches.get("dirty"):
         errors.append("worktree is dirty")
-    if spec.get("source") != "registry":
-        if branches.get("currentBranch") != ref:
-            errors.append(f"current branch {branches.get('currentBranch')!r} != {ref!r}")
-        if not branches.get("atRequestedRef"):
-            errors.append(f"HEAD is not the local origin/{ref} snapshot")
-    elif not branches.get("headCommit"):
-        errors.append("current Package Registry revision cannot be resolved")
+    if branches.get("currentBranch") != ref:
+        errors.append(f"current branch {branches.get('currentBranch')!r} != {ref!r}")
+    if not branches.get("atRequestedRef"):
+        errors.append(f"HEAD is not the local origin/{ref} snapshot")
     if git_url_key(branches.get("origin", "")) != git_url_key(spec.get("canonicalUrl", "")):
         errors.append(f"origin {branches.get('origin')!r} != {spec.get('canonicalUrl')!r}")
     if errors:
@@ -1712,22 +1607,8 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
 
         manifest_sha = file_sha256(repo_root / "package.json")
         config_sha = file_sha256(repo_root / "deucarian-package.json")
-        recorded_branches = dict(branches)
         audit_input_sha = ""
         if repo_root.name == "Package-Registry":
-            # A tracked artifact cannot embed the commit which contains itself;
-            # use a stable marker and hash all non-generated audit inputs instead.
-            recorded_branches.update(
-                {
-                    "currentBranch": "self",
-                    "dirty": False,
-                    "headCommit": "self",
-                    "requestedRefCommit": "self",
-                    "atRequestedRef": True,
-                    "hasDevelop": True,
-                    "hasMain": True,
-                }
-            )
             audit_input_sha = registry_audit_input_sha256(output_root)
         repo = {
             "name": repo_root.name,
@@ -1737,7 +1618,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "unity": package_json.get("unity"),
             "displayName": package_json.get("displayName"),
             "repository": package_json.get("repository"),
-            "branches": recorded_branches,
+            "branches": branches,
             "dependencies": package_json.get("dependencies", {}) or {},
             "asmdefs": asmdefs,
             "governance": governance,
@@ -1750,7 +1631,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "provenance": {
                 "canonicalUrl": spec.get("canonicalUrl", "") if spec else normalize_git_url(branches.get("origin", "")),
                 "requestedRef": args.ref,
-                "headCommit": recorded_branches.get("headCommit", ""),
+                "headCommit": branches.get("headCommit", ""),
                 "manifestSha256": manifest_sha,
                 "governanceConfigSha256": config_sha,
                 "auditInputSha256": audit_input_sha,
@@ -2752,7 +2633,6 @@ def main() -> int:
             specs,
             args.ref,
             args.clone_workers,
-            current_registry_root=args.output_root,
         )
     report = build_report(args)
     validate_authoritative_report(report)

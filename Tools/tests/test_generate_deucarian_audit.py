@@ -696,40 +696,113 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         report["unityObjectLifetime"]["occurrences"][0]["policyDisposition"] = "Allowed"
         audit.validate_policy_compliance(report)
 
-    def test_registry_worktree_mirror_creates_a_clean_synthetic_snapshot(self) -> None:
+    def test_registry_provisioning_uses_the_canonical_requested_ref(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            audit_root = Path(temp) / "audit"
+            audit_root.mkdir()
+            canonical_url = "https://github.com/Deucarian/Package-Registry.git"
+            spec = {
+                "name": "Package-Registry",
+                "canonicalUrl": canonical_url,
+                "source": "registry",
+            }
+
+            with mock.patch.object(audit, "run", return_value=("", "", 0)) as git_run:
+                audit.provision_repositories(audit_root, [spec], "develop", 1)
+
+            commands = [call.args[0] for call in git_run.call_args_list]
+            clone_command = next(command for command in commands if "clone" in command)
+            self.assertEqual(canonical_url, clone_command[-2])
+            self.assertEqual(str(audit_root / "Package-Registry"), clone_command[-1])
+            self.assertEqual("develop", clone_command[clone_command.index("--branch") + 1])
+            self.assertNotIn("--no-checkout", clone_command)
+            self.assertNotIn("--no-hardlinks", clone_command)
+
+    def test_registry_report_records_the_canonical_snapshot_provenance(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            source = root / "source"
-            destination = root / "destination"
-            source.mkdir()
+            audit_root = root / "audit"
+            output_root = root / "registry"
+            registry_root = audit_root / "Package-Registry"
+            registry_root.mkdir(parents=True)
+            output_root.mkdir()
+            write_json(output_root / "packages.json", {"packages": []})
+            write_json(output_root / "capabilities.json", {"schemaVersion": 2, "capabilities": []})
+            write_json(output_root / "dependency-rules.json", {"schemaVersion": 2, "layers": []})
+            write_json(registry_root / "deucarian-package.json", {"repositoryName": "Package-Registry"})
+            branches = {
+                "currentBranch": "develop",
+                "dirty": False,
+                "origin": "https://github.com/Deucarian/Package-Registry.git",
+                "headCommit": "abc123develop",
+                "requestedRef": "develop",
+                "requestedRefCommit": "abc123develop",
+                "atRequestedRef": True,
+                "hasDevelop": True,
+                "hasMain": True,
+            }
+            args = argparse.Namespace(
+                audit_root=audit_root,
+                output_root=output_root,
+                organization="Deucarian",
+                ref="develop",
+                authoritative=False,
+                include_repository=[],
+                exclude_repository=[],
+                strict_snapshots=False,
+            )
 
-            def git(cwd: Path, *arguments: str) -> str:
-                output, error, code = audit.run(["git", *arguments], cwd=cwd, timeout=120)
-                self.assertEqual(0, code, error)
-                return output
+            with mock.patch.object(audit, "collect_branch_info", return_value=branches):
+                report = audit.build_report(args)
 
-            git(source, "init", "--initial-branch", "develop")
-            git(source, "config", "user.name", "Audit Fixture")
-            git(source, "config", "user.email", "fixture@deucarian.invalid")
-            git(source, "config", "core.autocrlf", "false")
-            write(source / "kept.txt", "old")
-            write(source / "removed" / "nested" / "removed.txt", "remove me")
-            git(source, "add", "--all")
-            git(source, "commit", "-m", "fixture")
-            git(root, "clone", "--no-hardlinks", str(source), str(destination))
-            git(destination, "config", "core.autocrlf", "false")
+            registry = next(repo for repo in report["repositories"] if repo["name"] == "Package-Registry")
+            self.assertEqual(branches, registry["branches"])
+            self.assertEqual("abc123develop", registry["provenance"]["headCommit"])
+            self.assertEqual("develop", registry["provenance"]["requestedRef"])
 
-            write(source / "kept.txt", "new")
-            (source / "removed" / "nested" / "removed.txt").unlink()
-            write(source / "new.txt", "untracked")
+    def test_main_provisions_package_registry_from_the_canonical_ref(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            audit_root = root / "audit"
+            output_root = root / "registry"
+            registry_document = {"packages": []}
+            specs = [
+                {
+                    "name": "Package-Registry",
+                    "packageId": None,
+                    "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
+                    "source": "registry",
+                }
+            ]
+            report = {"metadata": {"authoritative": False}}
 
-            audit.mirror_registry_worktree(source, destination)
+            arguments = [
+                str(SCRIPT_PATH),
+                "--audit-root",
+                str(audit_root),
+                "--output-root",
+                str(output_root),
+                "--ref",
+                "develop",
+                "--provision",
+                "--check",
+            ]
+            with (
+                mock.patch.object(sys, "argv", arguments),
+                mock.patch.object(audit, "load_registry_document", return_value=registry_document),
+                mock.patch.object(audit, "expected_repository_specs", return_value=specs),
+                mock.patch.object(audit, "provision_repositories") as provision,
+                mock.patch.object(audit, "build_report", return_value=report),
+                mock.patch.object(audit, "check_artifacts", return_value=0),
+            ):
+                self.assertEqual(0, audit.main())
 
-            self.assertEqual("new\n", (destination / "kept.txt").read_text(encoding="utf-8"))
-            self.assertEqual("untracked\n", (destination / "new.txt").read_text(encoding="utf-8"))
-            self.assertFalse((destination / "removed").exists())
-            self.assertEqual("", git(destination, "status", "--short"))
-            self.assertEqual("Synthetic Package Registry audit snapshot", git(destination, "log", "-1", "--pretty=%s"))
+            provision.assert_called_once_with(
+                audit_root.resolve(),
+                specs,
+                "develop",
+                6,
+            )
 
     def test_debug_audit_uses_invocations_not_text_mentions(self) -> None:
         report = self.build_fixture_report()
