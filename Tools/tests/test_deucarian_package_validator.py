@@ -289,6 +289,42 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                 validator.errors,
             )
 
+    def test_common_api_boundary_accepts_approved_overloads(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            common = Path(temp) / "Common"
+            common.mkdir()
+            write(
+                common / "Runtime" / "UnityObjectUtility.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class UnityObjectUtility
+                    {
+                        public static void DestroySafely(UnityEngine.Object target) {}
+                        public static void DestroySafely(UnityEngine.Object target, float delaySeconds) {}
+                    }
+                }
+                """,
+            )
+            write(
+                common / "Runtime" / "DeucarianEasing.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class DeucarianEasing
+                    {
+                        public static float Evaluate(float value) => value;
+                    }
+                }
+                """,
+            )
+            validator = validator_module.Validator(fixture.registry, common)
+
+            validator.validate_common_api(common)
+
+            self.assertEqual([], validator.errors)
+
     def test_common_api_boundary_rejects_extra_public_runtime_method(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))
@@ -304,6 +340,18 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                         public static void DestroySafely(UnityEngine.Object target) {}
                         public static void DestroySafely(UnityEngine.Object target, float delaySeconds) {}
                         public static void ExtraApi() {}
+                    }
+                }
+                """,
+            )
+            write(
+                common / "Runtime" / "DeucarianEasing.cs",
+                """
+                namespace Deucarian.Common
+                {
+                    public static class DeucarianEasing
+                    {
+                        public static float Evaluate(float value) => value;
                     }
                 }
                 """,
