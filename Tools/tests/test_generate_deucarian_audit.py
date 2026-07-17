@@ -461,6 +461,40 @@ class AuditFixture:
 
 
 class GenerateDeucarianAuditTests(unittest.TestCase):
+    def test_text_hashes_are_stable_across_checkout_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            lf = root / "lf.json"
+            crlf = root / "crlf.json"
+            lf.write_bytes(b'{\n  "value": 1\n}\n')
+            crlf.write_bytes(b'{\r\n  "value": 1\r\n}\r\n')
+
+            self.assertEqual(audit.file_sha256(lf), audit.file_sha256(crlf))
+
+    def test_registry_input_hash_is_stable_across_checkout_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as first, tempfile.TemporaryDirectory() as second:
+            lf_root = Path(first)
+            crlf_root = Path(second)
+            for relative_path in (
+                ".github/workflows/package-registry-validation.yml",
+                "Tools/Generate-DeucarianAudit.py",
+                "capabilities.json",
+                "dependency-rules.json",
+                "deucarian-package.json",
+                "packages.json",
+            ):
+                lf_path = lf_root / relative_path
+                crlf_path = crlf_root / relative_path
+                lf_path.parent.mkdir(parents=True, exist_ok=True)
+                crlf_path.parent.mkdir(parents=True, exist_ok=True)
+                lf_path.write_bytes(b"first\nsecond\n")
+                crlf_path.write_bytes(b"first\r\nsecond\r\n")
+
+            self.assertEqual(
+                audit.registry_audit_input_sha256(lf_root),
+                audit.registry_audit_input_sha256(crlf_root),
+            )
+
     @classmethod
     def setUpClass(cls) -> None:
         if not audit.CSharpSyntaxAnalyzer(authoritative=False).available:

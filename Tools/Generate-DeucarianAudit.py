@@ -222,7 +222,12 @@ def read_json(path: Path) -> Any:
 def file_sha256(path: Path) -> str:
     if not path.is_file():
         return ""
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_text_bytes(path)).hexdigest()
+
+
+def canonical_text_bytes(path: Path) -> bytes:
+    """Return text bytes with platform checkout line endings normalized."""
+    return path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
 def package_id_version_mentions(text: str, package_id: str) -> list[str]:
@@ -1527,7 +1532,7 @@ def registry_audit_input_sha256(repo_root: Path) -> str:
         path = repo_root / relative_path
         digest.update(relative_path.encode("utf-8"))
         digest.update(b"\0")
-        digest.update(path.read_bytes() if path.is_file() else b"")
+        digest.update(canonical_text_bytes(path) if path.is_file() else b"")
         digest.update(b"\0")
     return digest.hexdigest()
 
