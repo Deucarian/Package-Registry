@@ -873,25 +873,9 @@
       "scope": "Test"
     },
     {
-      "assembly": "Deucarian.Common",
-      "classification": "Runtime production",
-      "configuredExceptionReason": "Reviewed exception declared in deucarian-package.json.",
-      "containingSymbol": "UnityObjectUtility::DestroySafely",
-      "file": "Runtime/UnityObjectUtility.cs",
-      "invocation": "DestroySafely",
-      "line": 16,
-      "occurrenceKind": "helper call site",
-      "packageId": "com.deucarian.common",
-      "policyDisposition": "Allowed",
-      "policyReason": "Reviewed exception declared in deucarian-package.json.",
-      "policySeverity": "Info",
-      "repository": "Common",
-      "scope": "Runtime production"
-    },
-    {
       "assemblyPlatform": "Deucarian.Common",
       "file": "Runtime/UnityObjectUtility.cs",
-      "line": 24,
+      "line": 14,
       "occurrenceKind": "helper definition",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -909,7 +893,7 @@
         "usesDestroyImmediate": true,
         "usesPlayModeCheck": true
       },
-      "signature": "public static void DestroySafely(Object target, float delaySeconds)",
+      "signature": "public static void DestroySafely(Object target)",
       "symbol": "DestroySafely"
     },
     {
@@ -919,7 +903,7 @@
       "containingSymbol": "UnityObjectUtility::DestroySafely",
       "file": "Runtime/UnityObjectUtility.cs",
       "invocation": "Object.Destroy",
-      "line": 33,
+      "line": 23,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -935,7 +919,7 @@
       "containingSymbol": "UnityObjectUtility::DestroySafely",
       "file": "Runtime/UnityObjectUtility.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 37,
+      "line": 27,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -1052,25 +1036,10 @@
     {
       "assembly": "Deucarian.Common.Tests.PlayMode",
       "classification": "Test",
-      "containingSymbol": "UnityObjectUtilityPlayModeTests::DestroySafelyHonorsPlayModeDelay",
-      "file": "Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs",
-      "invocation": "UnityObjectUtility.DestroySafely",
-      "line": 35,
-      "occurrenceKind": "helper call site",
-      "packageId": "com.deucarian.common",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Common",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Common.Tests.PlayMode",
-      "classification": "Test",
       "containingSymbol": "UnityObjectUtilityPlayModeTests::DestroySafelyHandlesComponentTargets",
       "file": "Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs",
       "invocation": "UnityObjectUtility.DestroySafely",
-      "line": 49,
+      "line": 36,
       "occurrenceKind": "helper call site",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -1085,7 +1054,7 @@
       "containingSymbol": "UnityObjectUtilityPlayModeTests::DestroySafelyHandlesComponentTargets",
       "file": "Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs",
       "invocation": "Object.Destroy",
-      "line": 56,
+      "line": 43,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -1100,7 +1069,7 @@
       "containingSymbol": "UnityObjectUtilityPlayModeTests::DestroySafelyDoesNotThrowDuringCleanupLikeUse",
       "file": "Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs",
       "invocation": "UnityObjectUtility.DestroySafely",
-      "line": 66,
+      "line": 53,
       "occurrenceKind": "helper call site",
       "packageId": "com.deucarian.common",
       "policyDisposition": "Allowed",
@@ -1152,36 +1121,6 @@
       "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
       "policySeverity": "Info",
       "repository": "Diagnostics",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Editor.Tests",
-      "classification": "Test",
-      "containingSymbol": "DeucarianEditorLucideAndDialogTests::DialogWindow_PrimaryActionIsEmphasizedWithoutChangingContentAlignment",
-      "file": "Tests/Editor/DeucarianEditorLucideAndDialogTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 379,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.editor",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Editor",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Editor.Tests",
-      "classification": "Test",
-      "containingSymbol": "DeucarianEditorLucideAndDialogTests::DialogWindowClose_CompletesCallbackExactlyOnceWithCancelAction",
-      "file": "Tests/Editor/DeucarianEditorLucideAndDialogTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 449,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.editor",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Editor",
       "scope": "Test"
     },
     {
@@ -1640,7 +1579,7 @@
       "containingSymbol": "PackageInstallerUiBaselineContractTests::Toolbar_UsesCanonicalLanesComposedActionsAndFixedGeometry",
       "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 79,
+      "line": 97,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.package-installer",
       "policyDisposition": "Allowed",
@@ -7711,11 +7650,11 @@
     }
   ],
   "policySummary": {
-    "Allowed": 510
+    "Allowed": 506
   },
   "summary": {
-    "direct Unity API call": 448,
-    "helper call site": 61,
+    "direct Unity API call": 446,
+    "helper call site": 59,
     "helper definition": 1
   }
 }

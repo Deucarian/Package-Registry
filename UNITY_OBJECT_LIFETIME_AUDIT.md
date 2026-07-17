@@ -12,15 +12,15 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 448 |
-| helper call site | 61 |
+| direct Unity API call | 446 |
+| helper call site | 59 |
 | helper definition | 1 |
 
 ## Policy Summary
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 510 |
+| Allowed | 506 |
 
 ## Production Semantic Comparison
 
@@ -94,10 +94,9 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 131 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 33 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 136 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Common | Runtime/UnityObjectUtility.cs | 16 | Runtime production | helper call site | DestroySafely | Allowed | Reviewed exception declared in deucarian-package.json. |
-| Common | Runtime/UnityObjectUtility.cs | 24 | Runtime production | helper definition | DestroySafely | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
-| Common | Runtime/UnityObjectUtility.cs | 33 | Runtime production | direct Unity API call | Object.Destroy | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
-| Common | Runtime/UnityObjectUtility.cs | 37 | Runtime production | direct Unity API call | Object.DestroyImmediate | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
+| Common | Runtime/UnityObjectUtility.cs | 14 | Runtime production | helper definition | DestroySafely | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
+| Common | Runtime/UnityObjectUtility.cs | 23 | Runtime production | direct Unity API call | Object.Destroy | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
+| Common | Runtime/UnityObjectUtility.cs | 27 | Runtime production | direct Unity API call | Object.DestroyImmediate | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
 | Common | Tests/EditMode/UnityObjectUtilityEditModeTests.cs | 13 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Common | Tests/EditMode/UnityObjectUtilityEditModeTests.cs | 22 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Common | Tests/EditMode/UnityObjectUtilityEditModeTests.cs | 24 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -105,15 +104,12 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Common | Tests/EditMode/UnityObjectUtilityEditModeTests.cs | 46 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 15 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 25 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 35 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 49 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 56 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 66 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 36 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 43 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Common | Tests/PlayMode/UnityObjectUtilityPlayModeTests.cs | 53 | Test | helper call site | UnityObjectUtility.DestroySafely | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Defense-Games | Tests/EditMode/DefenseGamesEditModeTests.cs | 186 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Diagnostics | Tests/Editor/DiagnosticsWindowRuntimeOverlayTests.cs | 82 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Diagnostics | Tests/Editor/DiagnosticsWindowWorkbenchTests.cs | 31 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Editor | Tests/Editor/DeucarianEditorLucideAndDialogTests.cs | 379 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Editor | Tests/Editor/DeucarianEditorLucideAndDialogTests.cs | 449 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Editor | Tests/Editor/DeucarianEditorPackageTests.cs | 195 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Editor | Tests/Editor/DeucarianEditorPackageTests.cs | 287 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Editor | Tests/Editor/DeucarianEditorPackageTests.cs | 766 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -144,7 +140,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | ObjectSelection-CoreState-Integration | Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs | 257 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | ObjectSelection-CoreState-Integration | Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs | 258 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | ObjectSelection-CoreState-Integration | Tests/EditMode/ObjectSelectionCoreStateIntegrationTests.cs | 262 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Package-Installer | Tests/Editor/PackageInstallerUiBaselineContractTests.cs | 79 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Package-Installer | Tests/Editor/PackageInstallerUiBaselineContractTests.cs | 97 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Projectiles | Tests/EditMode/ProjectilesTests.cs | 255 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Projectiles | Tests/EditMode/ProjectilesTests.cs | 315 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringTests.cs | 48 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -279,3 +275,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 690 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 752 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 805 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 823 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 932 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 951 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Template-Game-Survivors | Tests/PlayMode/SurvivorsTemplatePlayModeTests.cs | 1001 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |

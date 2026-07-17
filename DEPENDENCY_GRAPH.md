@@ -6,7 +6,7 @@ Schema version: 2
 
 | From package | To package | Declared version | From repo | To repo |
 | --- | --- | --- | --- | --- |
-| com.deucarian.api | com.deucarian.logging | 1.0.2 | API | Logging |
+| com.deucarian.api | com.deucarian.logging | 1.0.1 | API | Logging |
 | com.deucarian.attacks | com.deucarian.combat | 0.1.1 | Attacks | Combat |
 | com.deucarian.attacks | com.deucarian.editor | 1.0.3 | Attacks | Editor |
 | com.deucarian.attacks | com.deucarian.game-content-authoring | 0.1.1 | Attacks | Game-Content-Authoring |
@@ -51,16 +51,16 @@ Schema version: 2
 | com.deucarian.game-content-authoring | com.deucarian.gameplay-foundation | 0.1.1 | Game-Content-Authoring | Gameplay-Foundation |
 | com.deucarian.idle-progression | com.deucarian.gameplay-foundation | 0.1.1 | Idle-Progression | Gameplay-Foundation |
 | com.deucarian.idle-progression | com.deucarian.progression | 0.1.1 | Idle-Progression | Progression |
-| com.deucarian.logging | com.deucarian.editor | 1.0.3 | Logging | Editor |
-| com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
-| com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
-| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.4 | ObjectLoading-API-Integration | API |
-| com.deucarian.object-loading.api-integration | com.deucarian.object-loading | 1.2.2 | ObjectLoading-API-Integration | Object-Loading |
+| com.deucarian.logging | com.deucarian.editor | 1.0.0 | Logging | Editor |
+| com.deucarian.object-loading | com.deucarian.common | 0.1.0 | Object-Loading | Common |
+| com.deucarian.object-loading | com.deucarian.logging | 1.0.1 | Object-Loading | Logging |
+| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.3 | ObjectLoading-API-Integration | API |
+| com.deucarian.object-loading.api-integration | com.deucarian.object-loading | 1.2.1 | ObjectLoading-API-Integration | Object-Loading |
 | com.deucarian.object-selection | com.deucarian.logging | 1.0.2 | Object-Selection | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.0.3 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.editor | 1.0.4 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.2 | Package-Installer | Logging |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
 | com.deucarian.projectiles | com.deucarian.attacks | 0.1.1 | Projectiles | Attacks |
@@ -145,5 +145,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 10
+- Dependency version drift entries: 42
 - Registry dependency drift entries: 0

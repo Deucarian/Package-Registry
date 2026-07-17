@@ -2,7 +2,7 @@
   "findings": [
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -2230,7 +2230,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
       "referencedAssemblies": [
@@ -2249,22 +2249,6 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/Editor/Deucarian.Logging.Editor.Tests.asmdef",
-          "assembly": "Deucarian.Logging.Editor.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.Editor",
-          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -2336,7 +2320,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.1.0",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -2362,7 +2346,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.1",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -2426,7 +2410,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.1.3",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -2443,18 +2427,6 @@
           "includePlatforms": [],
           "reference": "Deucarian.API",
           "scope": "Runtime production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Samples~/ApiDownloaderSample/Deucarian.ObjectLoading.APIIntegration.Samples.asmdef",
-          "assembly": "Deucarian.ObjectLoading.APIIntegration.Samples",
-          "autoReferenced": false,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.API",
-          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -2478,7 +2450,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.2",
+      "declaredVersion": "1.2.1",
       "dependency": "com.deucarian.object-loading",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -2495,18 +2467,6 @@
           "includePlatforms": [],
           "reference": "Deucarian.ObjectLoading",
           "scope": "Runtime production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Samples~/ApiDownloaderSample/Deucarian.ObjectLoading.APIIntegration.Samples.asmdef",
-          "assembly": "Deucarian.ObjectLoading.APIIntegration.Samples",
-          "autoReferenced": false,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.ObjectLoading",
-          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -2672,7 +2632,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
