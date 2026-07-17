@@ -11,7 +11,7 @@ on:
         description: Package Registry ref that owns the projection tool and canonical packages.json.
         required: false
         type: string
-        default: 2f10d0dcc049b63474c6e96ed929127d93560b33
+        default: e54a2336879d35b75e38da7ed0ffa943d2e370c2
 
 permissions:
   contents: read

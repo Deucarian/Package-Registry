@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-16",
   "groups": [
     {
       "id": "infrastructure",
@@ -462,6 +462,22 @@
       "description": "Editor installer window for installing and composing Deucarian Unity UPM packages.",
       "stableUrl": "https://github.com/Deucarian/Package-Installer.git#main",
       "developmentUrl": "https://github.com/Deucarian/Package-Installer.git#develop",
+      "dependencies": [
+        "com.deucarian.editor",
+        "com.deucarian.logging"
+      ],
+      "groupId": "tools-quality"
+    },
+    {
+      "id": "com.deucarian.build-pipeline",
+      "displayName": "Deucarian Build Pipeline",
+      "category": "Tools",
+      "type": "Tool",
+      "ecosystemGroup": "Tools & Quality",
+      "overviewOrder": 50,
+      "description": "Editor-only Build Pipeline Manager, provider workflows, profile policies, drift validation, artifact manifests, and CI build entry points.",
+      "stableUrl": "https://github.com/Deucarian/Build-Pipeline.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Build-Pipeline.git#develop",
       "dependencies": [
         "com.deucarian.editor",
         "com.deucarian.logging"
