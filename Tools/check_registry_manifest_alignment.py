@@ -83,6 +83,13 @@ def sorted_strings(values: Any) -> list[str]:
     return sorted(str(value).strip() for value in values if str(value).strip())
 
 
+def unity_version_tuple(value: Any) -> tuple[int, ...]:
+    parts = str(value or "").split(".")
+    if not parts or any(not part.isdigit() for part in parts):
+        return ()
+    return tuple(int(part) for part in parts)
+
+
 def display_path(path: Path) -> str:
     return str(path).replace("\\", "/")
 
@@ -93,6 +100,7 @@ class AlignmentChecker:
         self.audit_root = audit_root.resolve()
         self.require_checkouts = require_checkouts
         self.checkout_index: dict[str, Path] = {}
+        self.manifests_by_package_id: dict[str, dict[str, Any]] = {}
         self.findings: list[dict[str, Any]] = []
         self.warnings: list[str] = []
 
@@ -103,6 +111,7 @@ class AlignmentChecker:
             raise ValueError("packages.json must contain a packages array.")
 
         self.checkout_index = self.build_checkout_index()
+        self.manifests_by_package_id = self.load_manifests(packages)
 
         checked = 0
         missing_checkouts = []
@@ -146,6 +155,24 @@ class AlignmentChecker:
             "findings": sorted(self.findings, key=lambda item: (item.get("packageId", ""), item.get("field", ""))),
             "warnings": sorted(self.warnings),
         }
+
+    def load_manifests(self, packages: list[Any]) -> dict[str, dict[str, Any]]:
+        manifests: dict[str, dict[str, Any]] = {}
+        for package in packages:
+            if not isinstance(package, dict):
+                continue
+            package_id = str(package.get("id") or "")
+            checkout = self.find_checkout(package_repo_name(package))
+            manifest_path = checkout / "package.json" if checkout else None
+            if manifest_path is None or not manifest_path.exists():
+                continue
+            try:
+                manifest = read_json(manifest_path)
+            except ValueError:
+                continue
+            if isinstance(manifest, dict):
+                manifests[package_id] = manifest
+        return manifests
 
     def build_checkout_index(self) -> dict[str, Path]:
         index: dict[str, Path] = {}
@@ -219,6 +246,33 @@ class AlignmentChecker:
                 manifest_deps,
                 "Registry dependencies differ from Deucarian dependencies in package.json.",
             )
+        dependency_versions = manifest.get("dependencies") or {}
+        if not isinstance(dependency_versions, dict):
+            dependency_versions = {}
+        package_unity = unity_version_tuple(manifest.get("unity"))
+        for dependency_id in registry_deps:
+            dependency_manifest = self.manifests_by_package_id.get(dependency_id)
+            if dependency_manifest is None:
+                continue
+            expected_version = str(dependency_manifest.get("version") or "")
+            actual_version = str(dependency_versions.get(dependency_id) or "")
+            if expected_version and actual_version != expected_version:
+                self.add_finding(
+                    package_id,
+                    f"dependencyVersion:{dependency_id}",
+                    expected_version,
+                    actual_version,
+                    "Direct Deucarian dependency version must equal the dependency package version.",
+                )
+            dependency_unity = unity_version_tuple(dependency_manifest.get("unity"))
+            if package_unity and dependency_unity and package_unity < dependency_unity:
+                self.add_finding(
+                    package_id,
+                    f"unityFloor:{dependency_id}",
+                    str(manifest.get("unity") or ""),
+                    str(dependency_manifest.get("unity") or ""),
+                    "A package cannot declare a lower Unity floor than one of its dependencies.",
+                )
 
     def compare_field(self, package_id: str, field: str, expected: Any, actual: Any) -> None:
         if expected != actual:

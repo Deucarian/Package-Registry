@@ -7,7 +7,7 @@ This is the first scout pass for the Deucarian Unity package ecosystem polish go
 ## Scope And Sources
 
 - GitHub organization metadata: 43 public repositories returned for `Deucarian`.
-- Package Registry catalog: 43 packages in `packages.json`.
+- Package Registry catalog: 44 packages in schema-v2 `packages.json`.
 - Local workspace: all 43 Package Registry package checkouts are present under `C:/Repositories` after this pass.
 - Validation/tooling: `Tools/check_registry_manifest_alignment.py --registry-root . --audit-root C:/Repositories --json`.
 

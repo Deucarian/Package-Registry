@@ -4,7 +4,7 @@ This repository is the governance source for Deucarian Unity package metadata, c
 
 ## Governance Sources
 
-- `packages.json` defines installable packages, Installer-visible dependencies, Integration metadata, Suite metadata, and category/group placement.
+- `packages.json` defines installable packages, canonical functional groups, artifact kinds, dependencies, Integration targets, and Suite members.
 - `capabilities.json` defines which package owns each reusable capability.
 - `dependency-rules.json` defines the allowed package layering model.
 - `DISTRIBUTION_POLICY.md` defines active stable/development Git channels.
@@ -30,6 +30,8 @@ This repository is the governance source for Deucarian Unity package metadata, c
 - Package Installer owns package installation, registry channel selection, dependency-first installation, and package-specific ecosystem visualization. It must not become a generic graph or UI framework.
 - Integration packages own adapter code between declared target packages only. They must not duplicate target-package logic or introduce independent frameworks.
 - Suite packages own dependency composition, samples, and installable bundles only. They must not duplicate implementation logic.
+- Functional groups answer where a package belongs; `kind` answers what is shipped. Integration and Suite are artifact kinds, not top-level domains.
+- Legacy `category`, `type`, and `ecosystemGroup` fields are compatibility projections for one schema-v2 release and are not governance inputs.
 
 ## Reuse Before Extraction
 
@@ -43,6 +45,7 @@ Before adding a helper or local utility:
 6. Do not copy helpers between repositories.
 7. Do not create a new shared package without audit evidence.
 8. Do not add unrelated APIs to Common.
+9. Treat generated duplication output as candidates; only the reviewed decision ledger authorizes an extraction.
 
 ## Logging
 

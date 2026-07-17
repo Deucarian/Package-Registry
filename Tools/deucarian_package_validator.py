@@ -9,7 +9,7 @@ import os
 import re
 import subprocess
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +27,7 @@ from project_package_catalogs import (  # noqa: E402
 
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
 PACKAGE_ID_RE = re.compile(r"^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$")
+ICON_KEY_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 GIT_URL_RE = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git#(?P<branch>[A-Za-z0-9._/-]+)$")
 README_VERSION_PATTERNS = (
     re.compile(r"Current package version\s*[:|]\s*`?(\d+\.\d+\.\d+)`?", re.I),
@@ -65,6 +66,8 @@ WORKFLOW_DISPATCH_RE = re.compile(r"^\s*workflow_dispatch\s*:|\bon\s*:\s*\[[^\]]
 WORKFLOW_TAG_TRIGGER_RE = re.compile(r"^\s*tags\s*:", re.I | re.M)
 RELEASE_ARTIFACT_RE = re.compile(r"\brelease\b|upload-artifact|git\s+archive|Compress-Archive", re.I)
 RELEASE_WORKFLOW_NAME_RE = re.compile(r"^\s*name\s*:\s*.*\brelease\b", re.I | re.M)
+PACKAGE_KINDS = {"Library", "Tool", "Integration", "Suite", "Template"}
+SAMPLE_POLICIES = {"compiled-example", "playable-scene", "tool", "composition", "template"}
 
 
 class ValidationError(Exception):
@@ -180,7 +183,16 @@ class Validator:
     def validate_unity_package(self, config: dict[str, Any]) -> None:
         root = self.repository_root
         assert root is not None
-        required_config = ["packageId", "displayName", "runtimeAssemblies", "editorAssemblies", "sampleAssemblies", "testAssemblies", "requiredDependencies"]
+        required_config = [
+            "packageId",
+            "displayName",
+            "runtimeAssemblies",
+            "editorAssemblies",
+            "sampleAssemblies",
+            "testAssemblies",
+            "requiredDependencies",
+            "samplePolicy",
+        ]
         for field in required_config:
             if field not in config:
                 self.fail(f"deucarian-package.json: {field} is required.")
@@ -336,7 +348,7 @@ class Validator:
                     continue
                 if owner in optional_deps and self.asmdef_has_optional_guard(asmdef, owner):
                     continue
-                if asmdef["scope"] in {"test", "sample"}:
+                if asmdef["scope"] == "test":
                     continue
                 self.fail(f"{package_id}: {asmdef['path']} references {clean} from {owner} without a package.json dependency.")
         registry_package = self.registry_packages_by_id.get(package_id)
@@ -352,6 +364,11 @@ class Validator:
     def validate_samples(self, root: Path, config: dict[str, Any], asmdefs: list[dict[str, Any]]) -> None:
         if (root / "Samples").exists() or (root / "Assets").exists():
             self.fail("Samples must live under Samples~, and package repos must not contain Assets/Samples.")
+        package_id = str(config.get("packageId") or "<unknown>")
+        policy = config.get("samplePolicy")
+        if policy not in SAMPLE_POLICIES:
+            self.fail(f"{package_id}: samplePolicy must be one of {sorted(SAMPLE_POLICIES)}, got {policy!r}.")
+            return
         expected_root = config.get("expectedSamplesRoot")
         has_sample_asmdef = any(asm["scope"] == "sample" for asm in asmdefs)
         if has_sample_asmdef and expected_root and not (root / expected_root).exists():
@@ -363,6 +380,55 @@ class Validator:
             refs = set(asmdef.get("references") or [])
             if refs.isdisjoint(package_assemblies):
                 self.fail(f"{asmdef['path']}: sample asmdef must reference at least one package production assembly directly.")
+
+        package_json = self.read_json(root / "package.json", required=False) or {}
+        declared_samples = package_json.get("samples") or []
+        if not isinstance(declared_samples, list):
+            self.fail(f"{package_id}: package.json samples must be an array.")
+            declared_samples = []
+        declared_paths = {
+            str(sample.get("path") or "").replace("\\", "/").rstrip("/")
+            for sample in declared_samples
+            if isinstance(sample, dict)
+        }
+        samples_root = root / "Samples~"
+        sample_dirs = sorted(path for path in samples_root.iterdir() if path.is_dir()) if samples_root.exists() else []
+        actual_paths = {path.relative_to(root).as_posix() for path in sample_dirs}
+        if declared_paths != actual_paths:
+            self.fail(
+                f"{package_id}: package.json sample paths {sorted(declared_paths)} "
+                f"do not match Samples~ directories {sorted(actual_paths)}."
+            )
+
+        if policy in {"compiled-example", "playable-scene", "composition"} and not sample_dirs:
+            self.fail(f"{package_id}: samplePolicy {policy} requires at least one Samples~ entry.")
+        for sample_dir in sample_dirs:
+            relative = sample_dir.relative_to(root).as_posix()
+            if not any(path.name.lower().startswith("readme") for path in sample_dir.iterdir() if path.is_file()):
+                self.fail(f"{package_id}: {relative} requires a README.")
+            if not any(sample_dir.rglob("*.asmdef")):
+                self.fail(f"{package_id}: {relative} requires an isolated sample asmdef.")
+            if policy in {"playable-scene", "composition"} and not any(sample_dir.rglob("*.unity")):
+                self.fail(f"{package_id}: {relative} requires a playable Unity scene.")
+
+        if policy == "tool" and not (config.get("testAssemblies") or []):
+            self.fail(f"{package_id}: tool packages require at least one automated test assembly.")
+        if policy == "composition" and self.registry_packages_by_id.get(package_id, {}).get("kind") != "Suite":
+            self.fail(f"{package_id}: composition samplePolicy is reserved for Suite packages.")
+        if policy == "template":
+            template_root = root / "TemplateSource~"
+            template_scenes = list(template_root.rglob("*.unity")) if template_root.exists() else []
+            sample_scenes = [scene for sample_dir in sample_dirs for scene in sample_dir.rglob("*.unity")]
+            if not template_scenes and not sample_scenes:
+                self.fail(f"{package_id}: template samplePolicy requires a playable scene in TemplateSource~ or Samples~.")
+            for path in self.iter_files(root):
+                relative = path.relative_to(root).as_posix()
+                simulated_length = 101 + len(relative)
+                if simulated_length >= 240:
+                    self.fail(
+                        f"{package_id}: {relative} reaches {simulated_length} characters "
+                        "under the 100-character Windows host-root simulation (limit 239)."
+                    )
 
     def validate_generated_files(self, root: Path) -> None:
         for forbidden in ("Library", "Temp", "Obj", "Build", "Builds", "ProjectSettings", "Packages"):
@@ -424,13 +490,13 @@ class Validator:
             text = self.strip_comments_and_strings(self.text(path))
             for match in re.finditer(r"\bpublic\s+(?:static\s+)?[A-Za-z0-9_<>,.\[\] ]+\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(", text):
                 public_methods.append((path.relative_to(root).as_posix(), match.group(1)))
-        approved_public_methods = {
-            ("Runtime/UnityObjectUtility.cs", "DestroySafely"),
-            ("Runtime/DeucarianEasing.cs", "Evaluate"),
-        }
-        approved = [item for item in public_methods if item in approved_public_methods]
-        extras = [item for item in public_methods if item not in approved]
-        if len(approved) != len(approved_public_methods) or extras:
+        approved_public_methods = Counter(
+            {
+                ("Runtime/UnityObjectUtility.cs", "DestroySafely"): 2,
+                ("Runtime/DeucarianEasing.cs", "Evaluate"): 1,
+            }
+        )
+        if Counter(public_methods) != approved_public_methods:
             self.fail(f"com.deucarian.common exposes unexpected public methods: {public_methods}.")
 
     def validate_registry_entry(self, package_id: str, dependencies: dict[str, str]) -> None:
@@ -546,9 +612,17 @@ class Validator:
         return False
 
     def validate_authoritative_audit_artifacts(self) -> None:
+        accepted_dependency_classifications = {
+            "RequiredAndUsed",
+            "EditorOnlyUse",
+            "SampleOnlyUse",
+            "TestOnlyUse",
+            "OptionalVersionDefinedUse",
+            "SuiteComposition",
+        }
         for finding in self.dependency_usage_audit.get("findings", []):
             classification = finding.get("classification")
-            if classification not in {"RequiredAndUsed", "EditorOnlyUse", "SampleOnlyUse", "OptionalVersionDefinedUse"}:
+            if classification not in accepted_dependency_classifications:
                 package_id = finding.get("packageId", "<unknown>")
                 dependency = finding.get("dependency", "<unknown>")
                 self.fail(f"DEPENDENCY_USAGE_AUDIT.json: {package_id} -> {dependency} is {classification}.")
@@ -573,6 +647,58 @@ class Validator:
 
     def validate_registry_schema(self) -> None:
         data = self.packages
+        if data.get("schemaVersion") != 2:
+            self.fail(f"packages.json: schemaVersion must be 2, got {data.get('schemaVersion')!r}.")
+        groups = data.get("groups")
+        if not isinstance(groups, list):
+            self.fail("packages.json: groups must be an array.")
+            groups = []
+        group_ids: set[str] = set()
+        group_parents: dict[str, str] = {}
+        sort_orders: set[int] = set()
+        for group in groups:
+            if not isinstance(group, dict):
+                self.fail("packages.json: every group entry must be an object.")
+                continue
+            group_id = group.get("id")
+            if not isinstance(group_id, str) or not group_id:
+                self.fail(f"packages.json: invalid group id {group_id!r}.")
+                continue
+            if group_id in group_ids:
+                self.fail(f"packages.json: duplicate group id {group_id}.")
+            group_ids.add(group_id)
+            if not group.get("displayName"):
+                self.fail(f"packages.json: group {group_id} requires displayName.")
+            self.validate_icon_key(f"packages.json group {group_id}", group.get("iconKey"))
+            parent = group.get("parentGroupId") or ""
+            if not isinstance(parent, str):
+                self.fail(f"packages.json: group {group_id} parentGroupId must be a string.")
+                parent = ""
+            group_parents[group_id] = parent
+            order = group.get("sortOrder")
+            if not isinstance(order, int):
+                self.fail(f"packages.json: group {group_id} requires integer sortOrder.")
+            elif order in sort_orders:
+                self.fail(f"packages.json: duplicate group sortOrder {order}.")
+            else:
+                sort_orders.add(order)
+        for group_id, parent in group_parents.items():
+            if parent and parent not in group_ids:
+                self.fail(f"packages.json: group {group_id} has unknown parentGroupId {parent}.")
+        for group_id in sorted(group_ids):
+            seen: set[str] = set()
+            current = group_id
+            depth = 0
+            while group_parents.get(current):
+                if current in seen:
+                    self.fail(f"packages.json: group hierarchy contains a cycle at {group_id}.")
+                    break
+                seen.add(current)
+                current = group_parents[current]
+                depth += 1
+                if depth > 1:
+                    self.fail(f"packages.json: group {group_id} exceeds the maximum depth of two levels.")
+                    break
         if not isinstance(data.get("packages"), list):
             self.fail("packages.json: packages must be an array.")
             return
@@ -588,9 +714,21 @@ class Validator:
             if package_id in ids:
                 self.fail(f"packages.json: duplicate package id {package_id}.")
             ids.add(package_id)
+            kind = pkg.get("kind")
+            if kind not in PACKAGE_KINDS:
+                self.fail(f"{package_id}: kind must be one of {sorted(PACKAGE_KINDS)}, got {kind!r}.")
+            for legacy_field in ("category", "type", "ecosystemGroup"):
+                if not pkg.get(legacy_field):
+                    self.fail(f"{package_id}: legacy bridge field {legacy_field} is required for schema v2 rollout.")
+            self.validate_icon_key(str(package_id), pkg.get("iconKey"))
             group_id = pkg.get("groupId")
-            if group_id and group_id not in self.registry_groups_by_id:
+            if not group_id:
+                self.fail(f"{package_id}: groupId is required.")
+            elif group_id not in self.registry_groups_by_id:
                 self.fail(f"{package_id}: unknown groupId {group_id}.")
+            for reverse_field in ("optionalCompanions", "optionalIntegrations"):
+                if reverse_field in pkg:
+                    self.fail(f"{package_id}: {reverse_field} is a derived reverse relation and must not be stored in schema v2.")
             for field, branch in (("stableUrl", "main"), ("developmentUrl", "develop")):
                 url = pkg.get(field, "")
                 match = GIT_URL_RE.match(str(url))
@@ -600,12 +738,56 @@ class Validator:
                     self.fail(f"{package_id}: {field} must target #{branch}.")
                 elif self.check_remote_urls and not self.git_ref_exists(url):
                     self.fail(f"{package_id}: {field} does not resolve: {url}.")
-            for dep in pkg.get("dependencies") or []:
+            dependencies = pkg.get("dependencies") or []
+            if not isinstance(dependencies, list) or any(not isinstance(dep, str) or not dep for dep in dependencies):
+                self.fail(f"{package_id}: dependencies must be an array of non-empty package ids.")
+                dependencies = []
+            if len(dependencies) != len(set(dependencies)) or package_id in dependencies:
+                self.fail(f"{package_id}: dependencies must not contain duplicates or self references.")
+            for dep in dependencies:
                 if dep not in ids and dep not in self.registry_packages_by_id:
                     self.fail(f"{package_id}: dependency {dep} is not in packages.json.")
+            relations: dict[str, list[str]] = {}
+            for field in ("integrationTargets", "suiteMembers", "recommendedWith"):
+                value = pkg.get(field) or []
+                if not isinstance(value, list) or any(not isinstance(target, str) or not target for target in value):
+                    self.fail(f"{package_id}: {field} must be an array of non-empty package ids.")
+                    value = []
+                if len(value) != len(set(value)) or package_id in value:
+                    self.fail(f"{package_id}: {field} must not contain duplicates or self references.")
+                for target in value:
+                    if target not in self.registry_packages_by_id:
+                        self.fail(f"{package_id}: {field} target {target} is not in packages.json.")
+                relations[field] = value
+            integration_targets = relations["integrationTargets"]
+            suite_members = relations["suiteMembers"]
+            recommended = relations["recommendedWith"]
+            if kind == "Integration":
+                if not integration_targets:
+                    self.fail(f"{package_id}: Integration packages require integrationTargets.")
+                missing_targets = sorted(set(integration_targets) - set(dependencies))
+                if missing_targets:
+                    self.fail(f"{package_id}: integrationTargets missing from dependencies: {missing_targets}.")
+            elif integration_targets:
+                self.fail(f"{package_id}: only Integration packages may declare integrationTargets.")
+            if kind == "Suite":
+                if not suite_members:
+                    self.fail(f"{package_id}: Suite packages require suiteMembers.")
+                if set(suite_members) != set(dependencies):
+                    self.fail(f"{package_id}: suiteMembers must exactly match dependencies.")
+            elif suite_members:
+                self.fail(f"{package_id}: only Suite packages may declare suiteMembers.")
+            structural = set(integration_targets) | set(suite_members)
+            overlap = sorted(structural & set(recommended))
+            if overlap:
+                self.fail(f"{package_id}: recommendedWith duplicates structural relations: {overlap}.")
         cycles = self.detect_cycles({pkg["id"]: pkg.get("dependencies") or [] for pkg in data["packages"] if isinstance(pkg, dict) and pkg.get("id")})
         for cycle in cycles:
             self.fail("Dependency cycle detected: " + " -> ".join(cycle))
+
+    def validate_icon_key(self, owner: str, icon_key: Any) -> None:
+        if not isinstance(icon_key, str) or not ICON_KEY_RE.fullmatch(icon_key):
+            self.fail(f"{owner}: iconKey must match {ICON_KEY_RE.pattern}.")
 
     def git_ref_exists(self, url: str) -> bool:
         match = GIT_URL_RE.match(url)
@@ -641,13 +823,24 @@ class Validator:
         return cycles
 
     def validate_capabilities_schema(self) -> None:
+        if self.capabilities.get("schemaVersion") != 2:
+            self.fail(f"capabilities.json: schemaVersion must be 2, got {self.capabilities.get('schemaVersion')!r}.")
         caps = self.capabilities.get("capabilities")
         if not isinstance(caps, list):
             self.fail("capabilities.json: capabilities must be an array.")
             return
+        capability_ids: set[str] = set()
         for cap in caps:
-            if not cap.get("id") or "description" not in cap:
+            if not isinstance(cap, dict) or not cap.get("id") or "description" not in cap:
                 self.fail("capabilities.json: every capability needs id and description.")
+                continue
+            capability_id = str(cap["id"])
+            if capability_id in capability_ids:
+                self.fail(f"capabilities.json: duplicate capability id {capability_id}.")
+            capability_ids.add(capability_id)
+            owner = cap.get("ownerPackageId")
+            if owner is not None and owner not in self.registry_packages_by_id:
+                self.fail(f"capabilities.json: {capability_id} has unknown ownerPackageId {owner}.")
         lifetime = next((cap for cap in caps if cap.get("id") == "unity-object-lifetime"), None)
         if lifetime:
             if lifetime.get("ownerPackageId") != "com.deucarian.common":
@@ -656,13 +849,75 @@ class Validator:
                 self.fail("unity-object-lifetime capability must declare the DestroySafely canonical symbol.")
 
     def validate_dependency_rules_schema(self) -> None:
+        if self.dependency_rules.get("schemaVersion") != 3:
+            self.fail(f"dependency-rules.json: schemaVersion must be 3, got {self.dependency_rules.get('schemaVersion')!r}.")
         layers = self.dependency_rules.get("layers")
         if not isinstance(layers, list):
             self.fail("dependency-rules.json: layers must be an array.")
             return
-        common = next((layer for layer in layers if layer.get("id") == "common"), None)
-        if not common or "com.deucarian.common" not in (common.get("packages") or []):
-            self.fail("dependency-rules.json: common layer must contain com.deucarian.common.")
+        layer_ids: set[str] = set()
+        ranks: set[int] = set()
+        assignments: dict[str, int] = {}
+        for layer in layers:
+            if not isinstance(layer, dict):
+                self.fail("dependency-rules.json: every layer must be an object.")
+                continue
+            layer_id = layer.get("id")
+            rank = layer.get("rank")
+            packages = layer.get("packages")
+            if not isinstance(layer_id, str) or not layer_id:
+                self.fail("dependency-rules.json: every layer requires id.")
+                continue
+            if layer_id in layer_ids:
+                self.fail(f"dependency-rules.json: duplicate layer id {layer_id}.")
+            layer_ids.add(layer_id)
+            if not isinstance(rank, int) or rank < 0:
+                self.fail(f"dependency-rules.json: layer {layer_id} requires a non-negative integer rank.")
+                continue
+            if rank in ranks:
+                self.fail(f"dependency-rules.json: duplicate layer rank {rank}.")
+            ranks.add(rank)
+            if not isinstance(packages, list):
+                self.fail(f"dependency-rules.json: layer {layer_id} packages must be an array.")
+                continue
+            for package_id in packages:
+                if package_id in assignments:
+                    self.fail(f"dependency-rules.json: {package_id} is assigned to more than one layer.")
+                assignments[package_id] = rank
+        registry_ids = set(self.registry_packages_by_id)
+        missing = sorted(registry_ids - set(assignments))
+        unknown = sorted(set(assignments) - registry_ids)
+        if missing:
+            self.fail(f"dependency-rules.json: packages missing layer assignments: {missing}.")
+        if unknown:
+            self.fail(f"dependency-rules.json: unknown package assignments: {unknown}.")
+        if assignments.get("com.deucarian.common") != 0:
+            self.fail("dependency-rules.json: com.deucarian.common must be assigned to rank 0.")
+        for package_id, package in self.registry_packages_by_id.items():
+            package_rank = assignments.get(package_id)
+            if package_rank is None:
+                continue
+            for dependency in package.get("dependencies") or []:
+                dependency_rank = assignments.get(dependency)
+                if dependency_rank is not None and dependency_rank >= package_rank:
+                    self.fail(
+                        f"dependency-rules.json: {package_id} (rank {package_rank}) depends on "
+                        f"{dependency} (rank {dependency_rank}); dependencies must point to a lower rank."
+                    )
+        exceptions = self.dependency_rules.get("exceptions") or []
+        if not isinstance(exceptions, list):
+            self.fail("dependency-rules.json: exceptions must be an array.")
+        else:
+            known_exception_ids = registry_ids | {"com.deucarian.bootstrap"}
+            for exception in exceptions:
+                if not isinstance(exception, dict) or not exception.get("reason"):
+                    self.fail("dependency-rules.json: every exception requires a reason.")
+                    continue
+                if exception.get("packageId") not in known_exception_ids:
+                    self.fail(f"dependency-rules.json: exception has unknown packageId {exception.get('packageId')}.")
+                dependency = exception.get("dependency")
+                if dependency is not None and dependency not in registry_ids:
+                    self.fail(f"dependency-rules.json: exception has unknown dependency {dependency}.")
 
     def validate_catalog_sync(self) -> None:
         installer = self.registry_root.parent / "_deucarian_org_audit" / "Package-Installer" / "PackageRegistry.json"

@@ -61,14 +61,23 @@ class AlignmentFixture:
             },
         )
 
-    def write_package(self, repo: str, package_id: str, display_name: str, dependencies: dict[str, str]) -> None:
+    def write_package(
+        self,
+        repo: str,
+        package_id: str,
+        display_name: str,
+        dependencies: dict[str, str],
+        *,
+        version: str = "1.0.0",
+        unity: str = "2021.3",
+    ) -> None:
         write_json(
             self.root / repo / "package.json",
             {
                 "name": package_id,
                 "displayName": display_name,
-                "version": "1.0.0",
-                "unity": "2021.3",
+                "version": version,
+                "unity": unity,
                 "repository": {"type": "git", "url": f"git+https://github.com/Deucarian/{repo}.git"},
                 "dependencies": dependencies,
             },
@@ -127,6 +136,26 @@ class RegistryManifestAlignmentTests(unittest.TestCase):
             fields = {finding["field"] for finding in report["findings"]}
             self.assertIn("name", fields)
             self.assertIn("displayName", fields)
+
+    def test_dependency_versions_must_match_dependency_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = AlignmentFixture(Path(temp))
+            fixture.write_package("Logging", "com.deucarian.logging", "Deucarian Logging", {}, version="1.1.0")
+
+            report = fixture.report()
+
+            self.assertFalse(report["ok"], report)
+            self.assertIn("dependencyVersion:com.deucarian.logging", {item["field"] for item in report["findings"]})
+
+    def test_dependency_unity_floor_cannot_exceed_package_floor(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = AlignmentFixture(Path(temp))
+            fixture.write_package("Logging", "com.deucarian.logging", "Deucarian Logging", {}, unity="2022.3")
+
+            report = fixture.report()
+
+            self.assertFalse(report["ok"], report)
+            self.assertIn("unityFloor:com.deucarian.logging", {item["field"] for item in report["findings"]})
 
 
 if __name__ == "__main__":

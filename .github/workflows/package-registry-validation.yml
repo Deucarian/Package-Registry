@@ -7,19 +7,28 @@ on:
       - develop
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
 
 jobs:
   validate-registry:
     name: Validate registry governance artifacts
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'schedule' && 'develop' || github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Install audit parser
+        shell: bash
+        run: python -m pip install -r Tools/audit-requirements.txt
 
       - name: Run validator and audit tests
         shell: bash
@@ -49,17 +58,15 @@ jobs:
 
       - name: Audit check
         shell: bash
+        env:
+          AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
         run: |
-          if [ ! -d ../_deucarian_org_audit ]; then
-            echo "Skipping audit check: ../_deucarian_org_audit is not present in this runner."
-            exit 0
-          fi
-          python -m pip install -r Tools/audit-requirements.txt
           python Tools/Generate-DeucarianAudit.py \
-            --audit-root ../_deucarian_org_audit \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
             --output-root . \
             --organization Deucarian \
-            --ref ci \
+            --ref "$AUDIT_REF" \
             --authoritative \
             --format all \
+            --provision \
             --check
