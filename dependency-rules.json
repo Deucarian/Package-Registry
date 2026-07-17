@@ -28,6 +28,12 @@
       ]
     },
     {
+      "id": "editor-tooling",
+      "packages": [
+        "com.deucarian.build-pipeline"
+      ]
+    },
+    {
       "id": "runtime-capabilities",
       "packages": [
         "com.deucarian.api",
