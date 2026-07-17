@@ -2,7 +2,7 @@
   "findings": [
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -166,7 +166,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -212,6 +212,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/AttacksMinimal/Deucarian.Attacks.Samples.asmdef",
+          "assembly": "Deucarian.Attacks.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.Attacks.Tests.asmdef",
           "assembly": "Deucarian.Attacks.Tests",
           "autoReferenced": false,
@@ -234,7 +246,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -278,7 +290,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -322,7 +334,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -389,104 +401,8 @@
       "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.IdleProgression",
-      "classification": "SampleOnlyUse",
-      "packageId": "com.deucarian.auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.IdleProgression"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.IdleProgression",
-          "scope": "Sample",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Auto-Defense",
-      "requiredPackage": "com.deucarian.idle-progression"
-    },
-    {
-      "assemblyReference": "Deucarian.Persistence",
-      "classification": "SampleOnlyUse",
-      "packageId": "com.deucarian.auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.Persistence"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Persistence",
-          "scope": "Sample",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Auto-Defense",
-      "requiredPackage": "com.deucarian.persistence"
-    },
-    {
-      "assemblyReference": "Deucarian.Progression",
-      "classification": "SampleOnlyUse",
-      "packageId": "com.deucarian.auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.Progression"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Progression",
-          "scope": "Sample",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Auto-Defense",
-      "requiredPackage": "com.deucarian.progression"
-    },
-    {
-      "assemblyReference": "Deucarian.RunUpgrades",
-      "classification": "SampleOnlyUse",
-      "packageId": "com.deucarian.auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.RunUpgrades"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.RunUpgrades",
-          "scope": "Sample",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Auto-Defense",
-      "requiredPackage": "com.deucarian.run-upgrades"
-    },
-    {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -506,8 +422,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -554,7 +470,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -574,8 +490,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -622,7 +538,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.defense-games",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -642,8 +558,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -676,7 +592,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.encounters",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -696,8 +612,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -744,7 +660,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -764,8 +680,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -812,7 +728,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -832,8 +748,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -880,7 +796,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -900,8 +816,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -948,7 +864,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -968,8 +884,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -1016,7 +932,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.auto-defense",
       "referencedAssemblies": [
@@ -1036,8 +952,8 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
-          "assembly": "Deucarian.AutoDefense.BasicAutoDefenseSample",
+          "asmdef": "Samples~/LeanAutoDefense/Deucarian.AutoDefense.LeanSample.asmdef",
+          "assembly": "Deucarian.AutoDefense.LeanSample",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -1084,161 +1000,371 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Attacks"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.auto-defense",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.AutoDefense"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.AutoDefense",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Combat"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.defense-games",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.DefenseGames"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.DefenseGames",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.encounters",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Encounters"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Encounters",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.GameplayFoundation"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.idle-progression",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.IdleProgression"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.IdleProgression",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.persistence",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Persistence"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Persistence",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.progression",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Progression"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Progression",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.Projectiles"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Projectiles",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.run-upgrades",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.RunUpgrades"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.RunUpgrades",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.WeaponSystems"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WeaponSystems",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.WorldNavigation"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldNavigation",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.auto-defense-suite",
-      "referencedAssemblies": [],
-      "referencedBy": [],
+      "referencedAssemblies": [
+        "Deucarian.WorldSpawning"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/BasicAutoDefense/Deucarian.AutoDefense.BasicAutoDefenseSample.asmdef",
+          "assembly": "Deucarian.AutoDefenseSuite.BasicAutoDefenseSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Auto-Defense-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1280,7 +1406,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1322,7 +1448,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -1364,7 +1490,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.combat",
       "referencedAssemblies": [
@@ -1381,6 +1507,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.GameplayFoundation",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/CombatSandbox/Deucarian.Combat.CombatSandbox.asmdef",
+          "assembly": "Deucarian.Combat.CombatSandbox",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -1406,7 +1544,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.defense-games",
       "referencedAssemblies": [
@@ -1426,6 +1564,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/DefenseGamesMinimal/Deucarian.DefenseGames.Samples.asmdef",
+          "assembly": "Deucarian.DefenseGames.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/PlayMode/Deucarian.DefenseGames.PlayModeTests.asmdef",
           "assembly": "Deucarian.DefenseGames.PlayModeTests",
           "autoReferenced": false,
@@ -1462,7 +1612,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.encounters",
       "packageId": "com.deucarian.defense-games",
       "referencedAssemblies": [
@@ -1482,6 +1632,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/DefenseGamesMinimal/Deucarian.DefenseGames.Samples.asmdef",
+          "assembly": "Deucarian.DefenseGames.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Encounters",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/PlayMode/Deucarian.DefenseGames.PlayModeTests.asmdef",
           "assembly": "Deucarian.DefenseGames.PlayModeTests",
           "autoReferenced": false,
@@ -1518,7 +1680,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.defense-games",
       "referencedAssemblies": [
@@ -1538,6 +1700,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/DefenseGamesMinimal/Deucarian.DefenseGames.Samples.asmdef",
+          "assembly": "Deucarian.DefenseGames.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/PlayMode/Deucarian.DefenseGames.PlayModeTests.asmdef",
           "assembly": "Deucarian.DefenseGames.PlayModeTests",
           "autoReferenced": false,
@@ -1574,7 +1748,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.defense-games",
       "referencedAssemblies": [
@@ -1594,6 +1768,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/DefenseGamesMinimal/Deucarian.DefenseGames.Samples.asmdef",
+          "assembly": "Deucarian.DefenseGames.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldNavigation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/PlayMode/Deucarian.DefenseGames.PlayModeTests.asmdef",
           "assembly": "Deucarian.DefenseGames.PlayModeTests",
           "autoReferenced": false,
@@ -1630,7 +1816,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.defense-games",
       "referencedAssemblies": [
@@ -1647,6 +1833,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.WorldSpawning",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefenseGamesMinimal/Deucarian.DefenseGames.Samples.asmdef",
+          "assembly": "Deucarian.DefenseGames.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -1686,7 +1884,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -1728,7 +1926,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -1782,7 +1980,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.encounters",
       "referencedAssemblies": [
@@ -1799,6 +1997,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.GameplayFoundation",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/EncounterSandbox/Deucarian.Encounters.EncounterSandbox.asmdef",
+          "assembly": "Deucarian.Encounters.EncounterSandbox",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -1824,7 +2034,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -1852,7 +2062,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -1880,7 +2090,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -1924,7 +2134,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.idle-progression",
       "referencedAssemblies": [
@@ -1966,7 +2176,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.progression",
       "packageId": "com.deucarian.idle-progression",
       "referencedAssemblies": [
@@ -2020,7 +2230,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
       "referencedAssemblies": [
@@ -2126,7 +2336,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -2152,7 +2362,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -2178,7 +2388,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection",
       "referencedAssemblies": [
@@ -2216,7 +2426,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.3",
+      "declaredVersion": "1.1.4",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -2236,6 +2446,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/ApiDownloaderSample/Deucarian.ObjectLoading.APIIntegration.Samples.asmdef",
+          "assembly": "Deucarian.ObjectLoading.APIIntegration.Samples",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.API",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/Editor/Deucarian.ObjectLoading.APIIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectLoading.APIIntegration.Tests",
           "autoReferenced": true,
@@ -2256,7 +2478,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.1",
+      "declaredVersion": "1.2.2",
       "dependency": "com.deucarian.object-loading",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -2273,6 +2495,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.ObjectLoading",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/ApiDownloaderSample/Deucarian.ObjectLoading.APIIntegration.Samples.asmdef",
+          "assembly": "Deucarian.ObjectLoading.APIIntegration.Samples",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.ObjectLoading",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -2296,7 +2530,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -2348,7 +2582,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -2386,7 +2620,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "referencedAssemblies": [
@@ -2438,7 +2672,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -2480,7 +2714,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -2522,7 +2756,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.progression",
       "referencedAssemblies": [
@@ -2592,7 +2826,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -2612,6 +2846,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
+          "assembly": "Deucarian.Projectiles.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.Projectiles.Tests.asmdef",
           "assembly": "Deucarian.Projectiles.Tests",
           "autoReferenced": false,
@@ -2634,7 +2880,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -2654,6 +2900,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
+          "assembly": "Deucarian.Projectiles.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.Projectiles.Tests.asmdef",
           "assembly": "Deucarian.Projectiles.Tests",
           "autoReferenced": false,
@@ -2676,7 +2934,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -2696,6 +2954,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
+          "assembly": "Deucarian.Projectiles.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.Projectiles.Tests.asmdef",
           "assembly": "Deucarian.Projectiles.Tests",
           "autoReferenced": false,
@@ -2718,7 +2988,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -2738,6 +3008,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
+          "assembly": "Deucarian.Projectiles.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldNavigation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.Projectiles.Tests.asmdef",
           "assembly": "Deucarian.Projectiles.Tests",
           "autoReferenced": false,
@@ -2760,7 +3042,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -2777,6 +3059,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.WorldSpawning",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
+          "assembly": "Deucarian.Projectiles.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -2802,7 +3096,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -2858,7 +3152,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -2902,7 +3196,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -2946,7 +3240,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -3002,7 +3296,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -3058,7 +3352,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -3084,7 +3378,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.object-selection",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -3110,7 +3404,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.object-selection.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -3136,7 +3430,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -3162,7 +3456,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.ui-binding.core-state-integration",
       "packageId": "com.deucarian.selection-suite",
       "referencedAssemblies": [
@@ -3188,7 +3482,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.session",
       "referencedAssemblies": [
@@ -3226,7 +3520,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.3",
+      "declaredVersion": "1.1.4",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -3278,7 +3572,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.4",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -3329,8 +3623,9 @@
       "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Attacks, Deucarian.Attacks.Authoring, Deucarian.Attacks.Editor",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Attacks",
@@ -3468,11 +3763,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.attacks"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.AutoDefense",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.auto-defense",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.AutoDefense"
@@ -3522,11 +3819,24 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.auto-defense"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Combat",
-      "classification": "MissingHardPackageDependency",
+      "classification": "SuiteComposition",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.auto-defense-suite",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [],
+      "referencedBy": [],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Combat"
@@ -3562,11 +3872,39 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.combat"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.DefenseGames",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateGameIdleAutoDefense.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.defense-games",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.DefenseGames"
@@ -3602,11 +3940,57 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.defense-games"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Encounters",
-      "classification": "MissingHardPackageDependency",
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.3",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.encounters",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Encounters"
@@ -3656,11 +4040,113 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.encounters"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.IdleProgression",
-      "classification": "MissingHardPackageDependency",
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.game-content-authoring",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [
+        "Deucarian.GameContentAuthoring.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.GameContentAuthoring.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.GameContentAuthoring.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.gameplay-foundation",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [
+        "Deucarian.GameplayFoundation"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.TemplateGameIdleAutoDefense.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.idle-progression",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.IdleProgression"
@@ -3710,11 +4196,69 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.idle-progression"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Persistence",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.monetization",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "referencedAssemblies": [
+        "Deucarian.Monetization"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateGameIdleAutoDefense.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Monetization",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.TemplateGameIdleAutoDefense.PlayModeTests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.PlayModeTests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Monetization",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Monetization",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.persistence",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Persistence"
@@ -3734,11 +4278,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.persistence"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Progression",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.progression",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Progression"
@@ -3774,11 +4320,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.progression"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Projectiles",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.Projectiles"
@@ -3814,11 +4362,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.projectiles"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.RunUpgrades, Deucarian.RunUpgrades.Authoring, Deucarian.RunUpgrades.Editor",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.run-upgrades",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.RunUpgrades",
@@ -3956,11 +4506,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.run-upgrades"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.WeaponSystems, Deucarian.WeaponSystems.Authoring, Deucarian.WeaponSystems.Editor",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.WeaponSystems",
@@ -4098,11 +4650,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.weapon-systems"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.WorldNavigation",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.1",
+      "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.WorldNavigation"
@@ -4122,11 +4676,13 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.world-navigation"
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.WorldSpawning",
-      "classification": "MissingHardPackageDependency",
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
         "Deucarian.WorldSpawning"
@@ -4162,222 +4718,12 @@
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",
-      "requiredPackage": "com.deucarian.world-spawning"
-    },
-    {
-      "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
-      "dependency": "com.deucarian.auto-defense-suite",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "referencedAssemblies": [],
-      "referencedBy": [],
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "sourceMentionCount": 0,
-      "sourceMentionsByScope": {}
-    },
-    {
-      "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
-      "dependency": "com.deucarian.editor",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.Editor"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.Editor",
-          "scope": "Editor production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.Editor",
-          "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "sourceMentionCount": 0,
-      "sourceMentionsByScope": {}
-    },
-    {
-      "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
-      "dependency": "com.deucarian.game-content-authoring",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.GameContentAuthoring.Editor"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.GameContentAuthoring.Editor",
-          "scope": "Editor production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.GameContentAuthoring.Editor",
-          "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Template-Game-Idle-Auto-Defense",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
-      "dependency": "com.deucarian.gameplay-foundation",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.GameplayFoundation"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Editor/Deucarian.TemplateGameIdleAutoDefense.Editor.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.GameplayFoundation",
-          "scope": "Editor production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Runtime/Deucarian.TemplateGameIdleAutoDefense.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.GameplayFoundation",
-          "scope": "Runtime production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.GameplayFoundation",
-          "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "sourceMentionCount": 0,
-      "sourceMentionsByScope": {}
-    },
-    {
-      "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
-      "dependency": "com.deucarian.monetization",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "referencedAssemblies": [
-        "Deucarian.Monetization"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Runtime/Deucarian.TemplateGameIdleAutoDefense.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Monetization",
-          "scope": "Runtime production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/PlayMode/Deucarian.TemplateGameIdleAutoDefense.PlayModeTests.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.PlayModeTests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Monetization",
-          "scope": "Test",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.Monetization",
-          "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "sourceMentionCount": 0,
-      "sourceMentionsByScope": {}
-    },
-    {
-      "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -4433,7 +4779,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -4459,7 +4805,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -4503,7 +4849,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -4559,7 +4905,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.run-upgrades",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -4615,7 +4961,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4672,7 +5018,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4728,7 +5074,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4754,7 +5100,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.encounters",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4796,7 +5142,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4840,7 +5186,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4896,7 +5242,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.persistence",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -4965,7 +5311,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.progression",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -5021,7 +5367,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -5063,7 +5409,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.run-upgrades",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -5150,7 +5496,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -5223,7 +5569,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -5265,7 +5611,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -5307,7 +5653,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -5347,7 +5693,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [
@@ -5389,7 +5735,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [
@@ -5431,7 +5777,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.ui-binding",
       "referencedAssemblies": [
@@ -5457,7 +5803,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -5483,7 +5829,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -5561,7 +5907,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.1",
+      "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.core-state",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "referencedAssemblies": [
@@ -5613,7 +5959,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.ui-binding",
       "packageId": "com.deucarian.ui-binding.core-state-integration",
       "referencedAssemblies": [
@@ -5805,7 +6151,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -5864,6 +6210,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicWeaponRuntime/Deucarian.WeaponSystems.Samples.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.WeaponSystems.Tests.asmdef",
           "assembly": "Deucarian.WeaponSystems.Tests",
           "autoReferenced": false,
@@ -5902,7 +6260,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -5946,7 +6304,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -5990,7 +6348,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -6046,7 +6404,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -6078,6 +6436,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/BasicWeaponRuntime/Deucarian.WeaponSystems.Samples.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Projectiles",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.WeaponSystems.Tests.asmdef",
           "assembly": "Deucarian.WeaponSystems.Tests",
           "autoReferenced": false,
@@ -6100,7 +6470,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.world-navigation",
       "referencedAssemblies": [
@@ -6156,7 +6526,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.world-navigation",
       "referencedAssemblies": [
@@ -6173,6 +6543,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.WorldSpawning",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/WorldNavigationSandbox/Deucarian.WorldNavigation.Samples.asmdef",
+          "assembly": "Deucarian.WorldNavigation.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -6254,7 +6636,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.world-spawning",
       "referencedAssemblies": [
@@ -6280,7 +6662,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.world-spawning",
       "referencedAssemblies": [
@@ -6336,7 +6718,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.xr-ui",
       "referencedAssemblies": [
@@ -6362,7 +6744,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.0",
+      "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -6379,6 +6761,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.Theming",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Themed Pressable Controls/Deucarian.XRUI.ThemingIntegration.Samples.asmdef",
+          "assembly": "Deucarian.XRUI.ThemingIntegration.Samples",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -6404,7 +6798,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.xr-ui",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -6421,6 +6815,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.XRUI",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Themed Pressable Controls/Deucarian.XRUI.ThemingIntegration.Samples.asmdef",
+          "assembly": "Deucarian.XRUI.ThemingIntegration.Samples",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.XRUI",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -6447,10 +6853,8 @@
   ],
   "summary": {
     "EditorOnlyUse": 20,
-    "MissingHardPackageDependency": 13,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 78,
-    "SampleOnlyUse": 4,
+    "RequiredAndUsed": 92,
     "SuiteComposition": 20,
     "TestOnlyUse": 11
   }

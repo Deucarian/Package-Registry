@@ -17,12 +17,12 @@ Schema version: 2
 | repository-state | com.deucarian.core-state | Core-State | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite, com.deucarian.ui-binding.core-state-integration |
 | runtime-theming | com.deucarian.theming | Theming | com.deucarian.ui, com.deucarian.xr-ui.theming-integration |
 | session | com.deucarian.session | Session | com.deucarian.session.api-integration |
-| shared-motion-easing | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.object-loading, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.world-spawning, com.deucarian.xr-ui |
+| shared-motion-easing | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.object-loading, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.world-spawning, com.deucarian.xr-ui |
 | ui-binding | com.deucarian.ui-binding | UI-Binding | com.deucarian.selection-suite, com.deucarian.ui-binding.core-state-integration |
 | ui-flow | com.deucarian.ui-flow | UI-FLow | (none) |
 | ui-motion | com.deucarian.ui | UI | (none) |
 | ui-presentation-primitives | com.deucarian.ui | UI | (none) |
-| unity-object-lifetime | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.object-loading, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.world-spawning, com.deucarian.xr-ui |
+| unity-object-lifetime | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.object-loading, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.world-spawning, com.deucarian.xr-ui |
 | world-selection | com.deucarian.object-selection | Object-Selection | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite |
 | xr-world-ui-controls | com.deucarian.xr-ui | XR-UI | com.deucarian.xr-ui.theming-integration |
 
