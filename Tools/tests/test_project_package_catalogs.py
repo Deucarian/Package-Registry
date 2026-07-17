@@ -100,6 +100,7 @@ class PackageCatalogProjectionTests(unittest.TestCase):
             self.assertNotIn("developmentVersion", item)
             self.assertIn("groupId", item)
             self.assertIn("kind", item)
+            self.assertNotIn("iconKey", item)
 
     def test_projection_rejects_missing_dependencies_and_cycles(self) -> None:
         missing = registry_fixture()

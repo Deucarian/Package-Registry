@@ -27,6 +27,7 @@ from project_package_catalogs import (  # noqa: E402
 
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
 PACKAGE_ID_RE = re.compile(r"^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$")
+ICON_KEY_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 GIT_URL_RE = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git#(?P<branch>[A-Za-z0-9._/-]+)$")
 README_VERSION_PATTERNS = (
     re.compile(r"Current package version\s*[:|]\s*`?(\d+\.\d+\.\d+)`?", re.I),
@@ -668,6 +669,7 @@ class Validator:
             group_ids.add(group_id)
             if not group.get("displayName"):
                 self.fail(f"packages.json: group {group_id} requires displayName.")
+            self.validate_icon_key(f"packages.json group {group_id}", group.get("iconKey"))
             parent = group.get("parentGroupId") or ""
             if not isinstance(parent, str):
                 self.fail(f"packages.json: group {group_id} parentGroupId must be a string.")
@@ -718,6 +720,7 @@ class Validator:
             for legacy_field in ("category", "type", "ecosystemGroup"):
                 if not pkg.get(legacy_field):
                     self.fail(f"{package_id}: legacy bridge field {legacy_field} is required for schema v2 rollout.")
+            self.validate_icon_key(str(package_id), pkg.get("iconKey"))
             group_id = pkg.get("groupId")
             if not group_id:
                 self.fail(f"{package_id}: groupId is required.")
@@ -781,6 +784,10 @@ class Validator:
         cycles = self.detect_cycles({pkg["id"]: pkg.get("dependencies") or [] for pkg in data["packages"] if isinstance(pkg, dict) and pkg.get("id")})
         for cycle in cycles:
             self.fail("Dependency cycle detected: " + " -> ".join(cycle))
+
+    def validate_icon_key(self, owner: str, icon_key: Any) -> None:
+        if not isinstance(icon_key, str) or not ICON_KEY_RE.fullmatch(icon_key):
+            self.fail(f"{owner}: iconKey must match {ICON_KEY_RE.pattern}.")
 
     def git_ref_exists(self, url: str) -> bool:
         match = GIT_URL_RE.match(url)
