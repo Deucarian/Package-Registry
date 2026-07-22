@@ -8,6 +8,7 @@ are installed. Authoritative mode fails instead of silently falling back.
 from __future__ import annotations
 
 import argparse
+import difflib
 import hashlib
 import json
 import os
@@ -2533,6 +2534,38 @@ def check_artifacts(args: argparse.Namespace, report: dict[str, Any]) -> int:
                 stale.append(filename)
         if stale:
             print("Audit artifacts are stale:", ", ".join(stale), file=sys.stderr)
+            for filename in stale:
+                expected = tmp_root / filename
+                actual = args.output_root / filename
+                if not expected.exists():
+                    print(f"--- {filename} (committed)\n+++ {filename} (generated)\n<generated artifact is missing>", file=sys.stderr)
+                    continue
+                if not actual.exists():
+                    print(f"--- {filename} (committed)\n+++ {filename} (generated)\n<committed artifact is missing>", file=sys.stderr)
+                    continue
+
+                diff = list(
+                    difflib.unified_diff(
+                        actual.read_text(encoding="utf-8").splitlines(),
+                        expected.read_text(encoding="utf-8").splitlines(),
+                        fromfile=f"{filename} (committed)",
+                        tofile=f"{filename} (generated)",
+                        lineterm="",
+                    )
+                )
+                if not diff:
+                    print(
+                        f"{filename}: byte content differs without a text-line diff "
+                        f"(committed sha256={hashlib.sha256(actual.read_bytes()).hexdigest()}, "
+                        f"generated sha256={hashlib.sha256(expected.read_bytes()).hexdigest()})",
+                        file=sys.stderr,
+                    )
+                    continue
+
+                limit = 240
+                print("\n".join(diff[:limit]), file=sys.stderr)
+                if len(diff) > limit:
+                    print(f"... {len(diff) - limit} additional diff lines omitted", file=sys.stderr)
             return 1
     print("Audit artifacts are up to date.")
     return 0
