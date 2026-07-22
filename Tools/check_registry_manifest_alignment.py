@@ -47,6 +47,11 @@ def strip_url_ref(url: str) -> str:
     return value
 
 
+def repository_web_url(package: dict[str, Any]) -> str:
+    stable_url = str(package.get("stableUrl") or "")
+    return stable_url.removesuffix(".git#main")
+
+
 def normalize_repo_url(url: str) -> str:
     value = strip_url_ref(url)
     if value.startswith("git+"):
@@ -228,6 +233,24 @@ class AlignmentChecker:
 
         self.compare_field(package_id, "name", package_id, str(manifest.get("name") or ""))
         self.compare_field(package_id, "displayName", str(package.get("displayName") or ""), str(manifest.get("displayName") or ""))
+
+        public = package.get("public") if isinstance(package.get("public"), dict) else {}
+        self.compare_field(package_id, "public.unity", str(public.get("unity") or ""), str(manifest.get("unity") or ""))
+        repository_url = repository_web_url(package)
+        public_files = {
+            "documentationUrl": ("README.md", f"{repository_url}/blob/main/README.md"),
+            "licenseUrl": ("LICENSE.md", f"{repository_url}/blob/main/LICENSE.md"),
+        }
+        for field, (file_name, expected_url) in public_files.items():
+            self.compare_field(package_id, f"public.{field}", expected_url, str(public.get(field) or ""))
+            if not (checkout / file_name).is_file():
+                self.add_finding(
+                    package_id,
+                    f"public.{field}",
+                    file_name,
+                    "missing",
+                    f"Public metadata targets {file_name}, but the develop checkout does not contain it.",
+                )
 
         expected_repo_url = normalize_repo_url(strip_url_ref(str(package.get("stableUrl") or package.get("developmentUrl") or "")))
         actual_repo_url = normalize_repo_url(manifest_repo_url(manifest))

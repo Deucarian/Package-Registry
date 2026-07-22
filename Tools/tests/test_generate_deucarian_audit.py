@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import importlib.util
+import io
 import json
 import sys
 import tempfile
@@ -837,6 +839,31 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                 "develop",
                 6,
             )
+
+    def test_check_artifacts_prints_a_bounded_unified_diff(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            output_root = Path(temp)
+            actual = "\n".join(f"committed-{index}" for index in range(300)) + "\n"
+            expected = "\n".join(f"generated-{index}" for index in range(300)) + "\n"
+            write(output_root / "DUPLICATION_REPORT.json", actual)
+            args = argparse.Namespace(output_root=output_root, format="json")
+
+            def write_expected(_report, root, _format):
+                write(root / "DUPLICATION_REPORT.json", expected)
+
+            stderr = io.StringIO()
+            with (
+                mock.patch.object(audit, "write_artifacts", side_effect=write_expected),
+                mock.patch.object(audit, "selected_output_files", return_value=["DUPLICATION_REPORT.json"]),
+                contextlib.redirect_stderr(stderr),
+            ):
+                self.assertEqual(1, audit.check_artifacts(args, {}))
+
+            output = stderr.getvalue()
+            self.assertIn("DUPLICATION_REPORT.json (committed)", output)
+            self.assertIn("DUPLICATION_REPORT.json (generated)", output)
+            self.assertIn("additional diff lines omitted", output)
+            self.assertLessEqual(len(output.splitlines()), 243)
 
     def test_debug_audit_uses_invocations_not_text_mentions(self) -> None:
         report = self.build_fixture_report()

@@ -28,6 +28,7 @@ from project_package_catalogs import (  # noqa: E402
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
 PACKAGE_ID_RE = re.compile(r"^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$")
 ICON_KEY_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+UNITY_VERSION_RE = re.compile(r"^\d{4}\.\d+$")
 GIT_URL_RE = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git#(?P<branch>[A-Za-z0-9._/-]+)$")
 README_VERSION_PATTERNS = (
     re.compile(r"Current package version\s*[:|]\s*`?(\d+\.\d+\.\d+)`?", re.I),
@@ -67,6 +68,8 @@ WORKFLOW_TAG_TRIGGER_RE = re.compile(r"^\s*tags\s*:", re.I | re.M)
 RELEASE_ARTIFACT_RE = re.compile(r"\brelease\b|upload-artifact|git\s+archive|Compress-Archive", re.I)
 RELEASE_WORKFLOW_NAME_RE = re.compile(r"^\s*name\s*:\s*.*\brelease\b", re.I | re.M)
 PACKAGE_KINDS = {"Library", "Tool", "Integration", "Suite", "Template"}
+PUBLIC_PACKAGE_STATUSES = {"active", "preview", "deprecated"}
+PUBLIC_INSTALL_METHODS = {"upm-git"}
 SAMPLE_POLICIES = {"compiled-example", "playable-scene", "tool", "composition", "template"}
 
 
@@ -717,6 +720,10 @@ class Validator:
             kind = pkg.get("kind")
             if kind not in PACKAGE_KINDS:
                 self.fail(f"{package_id}: kind must be one of {sorted(PACKAGE_KINDS)}, got {kind!r}.")
+            if not isinstance(pkg.get("displayName"), str) or not pkg["displayName"].strip():
+                self.fail(f"{package_id}: displayName is required.")
+            if not isinstance(pkg.get("description"), str) or not pkg["description"].strip():
+                self.fail(f"{package_id}: description is required as the public purpose summary.")
             for legacy_field in ("category", "type", "ecosystemGroup"):
                 if not pkg.get(legacy_field):
                     self.fail(f"{package_id}: legacy bridge field {legacy_field} is required for schema v2 rollout.")
@@ -738,6 +745,7 @@ class Validator:
                     self.fail(f"{package_id}: {field} must target #{branch}.")
                 elif self.check_remote_urls and not self.git_ref_exists(url):
                     self.fail(f"{package_id}: {field} does not resolve: {url}.")
+            self.validate_public_package_metadata(str(package_id), pkg)
             dependencies = pkg.get("dependencies") or []
             if not isinstance(dependencies, list) or any(not isinstance(dep, str) or not dep for dep in dependencies):
                 self.fail(f"{package_id}: dependencies must be an array of non-empty package ids.")
@@ -784,6 +792,38 @@ class Validator:
         cycles = self.detect_cycles({pkg["id"]: pkg.get("dependencies") or [] for pkg in data["packages"] if isinstance(pkg, dict) and pkg.get("id")})
         for cycle in cycles:
             self.fail("Dependency cycle detected: " + " -> ".join(cycle))
+
+    def validate_public_package_metadata(self, package_id: str, package: dict[str, Any]) -> None:
+        public = package.get("public")
+        if not isinstance(public, dict):
+            self.fail(f"{package_id}: public metadata is required.")
+            return
+
+        status = public.get("status")
+        if status not in PUBLIC_PACKAGE_STATUSES:
+            self.fail(f"{package_id}: public.status must be one of {sorted(PUBLIC_PACKAGE_STATUSES)}, got {status!r}.")
+
+        install_method = public.get("installMethod")
+        if install_method not in PUBLIC_INSTALL_METHODS:
+            self.fail(
+                f"{package_id}: public.installMethod must be one of {sorted(PUBLIC_INSTALL_METHODS)}, "
+                f"got {install_method!r}."
+            )
+
+        unity = public.get("unity")
+        if not isinstance(unity, str) or not UNITY_VERSION_RE.fullmatch(unity):
+            self.fail(f"{package_id}: public.unity must match {UNITY_VERSION_RE.pattern}.")
+
+        stable_url = str(package.get("stableUrl") or "")
+        repository_url = stable_url.removesuffix(".git#main")
+        expected_urls = {
+            "documentationUrl": f"{repository_url}/blob/main/README.md",
+            "licenseUrl": f"{repository_url}/blob/main/LICENSE.md",
+        }
+        for field, expected in expected_urls.items():
+            value = public.get(field)
+            if value != expected:
+                self.fail(f"{package_id}: public.{field} must be {expected!r}, got {value!r}.")
 
     def validate_icon_key(self, owner: str, icon_key: Any) -> None:
         if not isinstance(icon_key, str) or not ICON_KEY_RE.fullmatch(icon_key):

@@ -1364,7 +1364,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -2672,7 +2672,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
