@@ -1364,7 +1364,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -2672,7 +2672,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -2751,6 +2751,34 @@
         }
       ],
       "repository": "Package-Installer",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.pointer-capture",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.PointerCapture.Editor.asmdef",
+          "assembly": "Deucarian.PointerCapture.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Pointer-Capture",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
     },
@@ -6852,7 +6880,7 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 20,
+    "EditorOnlyUse": 21,
     "OptionalVersionDefinedUse": 1,
     "RequiredAndUsed": 92,
     "SuiteComposition": 20,

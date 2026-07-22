@@ -9,7 +9,7 @@ Schema version: 1
 | Historical changelog reference | 12 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 8 |
-| Review required | 5 |
+| Review required | 7 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -32,6 +32,8 @@ Historical changelog references preserve released history and are not rewrite re
 | Package-Installer | Migration documentation | README.md |  |  |  |
 | Package-Registry | Migration documentation | DOCUMENTATION_DRIFT_DECISIONS.md |  |  |  |
 | Package-Registry | Migration documentation | MIGRATION_PLAN.md |  |  |  |
+| Pointer-Capture | Review required | AGENTS.md |  |  |  |
+| Pointer-Capture | Review required | README.md |  |  |  |
 | Selection-Suite | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
