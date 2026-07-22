@@ -25,6 +25,7 @@
         "com.deucarian.encounters",
         "com.deucarian.game-content-authoring",
         "com.deucarian.logging",
+        "com.deucarian.pointer-capture",
         "com.deucarian.progression",
         "com.deucarian.ui-binding",
         "com.deucarian.world-spawning",
