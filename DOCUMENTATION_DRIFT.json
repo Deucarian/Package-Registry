@@ -85,6 +85,24 @@
       "repository": "Package-Registry"
     },
     {
+      "file": "MIGRATION_PLAN.md",
+      "kind": "MigrationDocumentation",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.pointer-capture",
+      "repository": "Pointer-Capture"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.pointer-capture",
+      "repository": "Pointer-Capture"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.selection-suite",
@@ -154,7 +172,7 @@
   "summary": {
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 7,
-    "ReviewRequired": 5
+    "MigrationDocumentation": 8,
+    "ReviewRequired": 7
   }
 }
