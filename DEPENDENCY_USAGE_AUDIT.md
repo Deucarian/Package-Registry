@@ -6,7 +6,7 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 20 |
+| Editor-only use | 21 |
 | Optional version-defined use | 1 |
 | Required and used | 92 |
 | Suite composition | 20 |
@@ -77,6 +77,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.ObjectSelection; Sample: Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample -> Deucarian.ObjectSelection; Test: Deucarian.ObjectSelection.CoreStateIntegration.Tests -> Deucarian.ObjectSelection | Deucarian.ObjectSelection | 0 |
 | Package-Installer | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Editor; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Package-Installer | com.deucarian.logging | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Logging; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Pointer-Capture | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PointerCapture.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Progression | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.Progression -> Deucarian.GameplayFoundation; Test: Deucarian.Progression.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | Projectiles | com.deucarian.defense-games | Test-only use | Test: Deucarian.Projectiles.Tests -> Deucarian.DefenseGames | Deucarian.DefenseGames |  |
 | Projectiles | com.deucarian.attacks | Required and used | Runtime production: Deucarian.Projectiles -> Deucarian.Attacks; Sample: Deucarian.Projectiles.Samples -> Deucarian.Attacks; Test: Deucarian.Projectiles.Tests -> Deucarian.Attacks | Deucarian.Attacks | 0 |
