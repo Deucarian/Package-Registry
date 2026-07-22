@@ -37,6 +37,15 @@ class ValidatorFixture:
         self._package()
 
     def _registry(self) -> None:
+        def public(repo: str) -> dict:
+            return {
+                "status": "active",
+                "installMethod": "upm-git",
+                "unity": "2021.3",
+                "documentationUrl": f"https://github.com/Deucarian/{repo}/blob/main/README.md",
+                "licenseUrl": f"https://github.com/Deucarian/{repo}/blob/main/LICENSE.md",
+            }
+
         write_json(
             self.registry / "packages.json",
             {
@@ -61,9 +70,11 @@ class ValidatorFixture:
                         "ecosystemGroup": "Core",
                         "iconKey": "sparkles",
                         "groupId": "core",
+                        "description": "Alpha package.",
                         "dependencies": ["com.deucarian.logging"],
                         "stableUrl": "https://github.com/Deucarian/Alpha.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Alpha.git#develop",
+                        "public": public("Alpha"),
                     },
                     {
                         "id": "com.deucarian.logging",
@@ -74,9 +85,11 @@ class ValidatorFixture:
                         "ecosystemGroup": "Core",
                         "iconKey": "scroll-text",
                         "groupId": "core",
+                        "description": "Logging package.",
                         "dependencies": [],
                         "stableUrl": "https://github.com/Deucarian/Logging.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Logging.git#develop",
+                        "public": public("Logging"),
                     },
                     {
                         "id": "com.deucarian.diagnostics",
@@ -87,9 +100,11 @@ class ValidatorFixture:
                         "ecosystemGroup": "Core",
                         "iconKey": "stethoscope",
                         "groupId": "core",
+                        "description": "Diagnostics package.",
                         "dependencies": [],
                         "stableUrl": "https://github.com/Deucarian/Diagnostics.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Diagnostics.git#develop",
+                        "public": public("Diagnostics"),
                     },
                 ],
             },
@@ -378,6 +393,31 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
             validator.validate_registry_schema()
 
             self.assertEqual([], validator.errors)
+
+    def test_registry_rejects_incomplete_or_invented_public_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            registry_path = fixture.registry / "packages.json"
+            registry = json.loads(registry_path.read_text(encoding="utf-8"))
+            alpha = registry["packages"][0]
+            alpha["public"] = {
+                "status": "stable",
+                "installMethod": "npm",
+                "unity": "latest",
+                "documentationUrl": "https://example.com/docs",
+                "licenseUrl": "https://example.com/license",
+            }
+            write_json(registry_path, registry)
+            validator = validator_module.Validator(fixture.registry)
+
+            validator.validate_registry_schema()
+
+            errors = "\n".join(validator.errors)
+            self.assertIn("public.status", errors)
+            self.assertIn("public.installMethod", errors)
+            self.assertIn("public.unity", errors)
+            self.assertIn("public.documentationUrl", errors)
+            self.assertIn("public.licenseUrl", errors)
 
     def test_registry_requires_safe_package_icon_key(self) -> None:
         for icon_key in (None, "", "PackagePlus", "package/plus", "package_plus", "-package", "package-", "package--plus"):

@@ -34,7 +34,7 @@ Schema version: 2
 | com.deucarian.auto-defense-suite | com.deucarian.weapon-systems | 0.1.1 | Auto-Defense-Suite | Weapon-Systems |
 | com.deucarian.auto-defense-suite | com.deucarian.world-navigation | 0.1.1 | Auto-Defense-Suite | World-Navigation |
 | com.deucarian.auto-defense-suite | com.deucarian.world-spawning | 0.2.1 | Auto-Defense-Suite | World-Spawning |
-| com.deucarian.build-pipeline | com.deucarian.editor | 1.0.3 | Build-Pipeline | Editor |
+| com.deucarian.build-pipeline | com.deucarian.editor | 1.0.5 | Build-Pipeline | Editor |
 | com.deucarian.build-pipeline | com.deucarian.logging | 1.0.2 | Build-Pipeline | Logging |
 | com.deucarian.camera-navigation | com.deucarian.common | 0.2.1 | Camera-Navigation | Common |
 | com.deucarian.combat | com.deucarian.gameplay-foundation | 0.1.1 | Combat | Gameplay-Foundation |
@@ -60,7 +60,7 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.0.3 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.editor | 1.0.5 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.2 | Package-Installer | Logging |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
 | com.deucarian.projectiles | com.deucarian.attacks | 0.1.1 | Projectiles | Attacks |
@@ -145,5 +145,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 10
+- Dependency version drift entries: 8
 - Registry dependency drift entries: 0

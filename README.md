@@ -74,10 +74,21 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.
 - `suiteMembers`: Package IDs composed by a Suite package in the Package Installer ecosystem graph.
 - `recommendedWith`: Genuine non-structural recommendations. Reverse Integration and Suite relationships are derived and must not be stored.
+- `public`: Required machine-readable metadata for public catalog consumers.
+- `public.status`: Governance lifecycle status. Supported values are `active`, `preview`, and `deprecated`; every current entry is `active`.
+- `public.installMethod`: Install presentation method. The current Git-only distribution policy uses `upm-git`; the exact stable URL remains `stableUrl`.
+- `public.unity`: Exact minimum Unity editor line copied from the package's `package.json` `unity` field. Consumers should display the recorded value without broadening the compatibility claim.
+- `public.documentationUrl`: Stable-channel README for practical package documentation.
+- `public.licenseUrl`: Stable-channel repository license. Consumers should link to the source terms instead of inferring an SPDX license when the package manifest and license file do not state the same thing.
 
 The `id` value must exactly match the target package's `package.json` `name` value. The Package Installer uses that exact ID for installed-package detection.
 Packages that declare another Deucarian package in their Unity `package.json` dependencies should also list that package here so dependency-first installation works from the installer.
 Integration packages declare every owner package in `integrationTargets` and as a direct dependency. Suite dependencies exactly match `suiteMembers`.
+
+Public metadata is checked against exact package checkouts with
+`Tools/check_registry_manifest_alignment.py`. That check also reports package-owned
+dependency-version drift; Package Registry records the finding but does not edit
+runtime package manifests on behalf of their owning repositories.
 
 ## Capability ownership
 

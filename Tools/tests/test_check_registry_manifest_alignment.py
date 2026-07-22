@@ -32,6 +32,15 @@ class AlignmentFixture:
         self.write_package("Logging", "com.deucarian.logging", "Deucarian Logging", {})
 
     def write_registry(self) -> None:
+        def public(repo: str) -> dict:
+            return {
+                "status": "active",
+                "installMethod": "upm-git",
+                "unity": "2021.3",
+                "documentationUrl": f"https://github.com/Deucarian/{repo}/blob/main/README.md",
+                "licenseUrl": f"https://github.com/Deucarian/{repo}/blob/main/LICENSE.md",
+            }
+
         write_json(
             self.registry / "packages.json",
             {
@@ -42,6 +51,7 @@ class AlignmentFixture:
                         "stableUrl": "https://github.com/Deucarian/Alpha.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Alpha.git#develop",
                         "dependencies": ["com.deucarian.logging"],
+                        "public": public("Alpha"),
                     },
                     {
                         "id": "com.deucarian.logging",
@@ -49,6 +59,7 @@ class AlignmentFixture:
                         "stableUrl": "https://github.com/Deucarian/Logging.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Logging.git#develop",
                         "dependencies": [],
+                        "public": public("Logging"),
                     },
                     {
                         "id": "com.deucarian.missing",
@@ -56,6 +67,7 @@ class AlignmentFixture:
                         "stableUrl": "https://github.com/Deucarian/Missing.git#main",
                         "developmentUrl": "https://github.com/Deucarian/Missing.git#develop",
                         "dependencies": [],
+                        "public": public("Missing"),
                     },
                 ]
             },
@@ -82,6 +94,8 @@ class AlignmentFixture:
                 "dependencies": dependencies,
             },
         )
+        (self.root / repo / "README.md").write_text(f"# {display_name}\n", encoding="utf-8")
+        (self.root / repo / "LICENSE.md").write_text("Repository license.\n", encoding="utf-8")
 
     def report(self, require_checkouts: bool = False) -> dict:
         return alignment.AlignmentChecker(self.registry, self.audit_root, require_checkouts).build_report()
@@ -156,6 +170,22 @@ class RegistryManifestAlignmentTests(unittest.TestCase):
 
             self.assertFalse(report["ok"], report)
             self.assertIn("unityFloor:com.deucarian.logging", {item["field"] for item in report["findings"]})
+
+    def test_public_unity_and_evidence_files_must_match_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = AlignmentFixture(Path(temp))
+            registry_path = fixture.registry / "packages.json"
+            registry = json.loads(registry_path.read_text(encoding="utf-8"))
+            registry["packages"][0]["public"]["unity"] = "2022.3"
+            write_json(registry_path, registry)
+            (fixture.root / "Alpha" / "LICENSE.md").unlink()
+
+            report = fixture.report()
+
+            self.assertFalse(report["ok"], report)
+            fields = {item["field"] for item in report["findings"]}
+            self.assertIn("public.unity", fields)
+            self.assertIn("public.licenseUrl", fields)
 
 
 if __name__ == "__main__":

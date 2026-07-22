@@ -1364,7 +1364,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -2550,18 +2550,6 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
-          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.CoreState",
-          "scope": "Sample",
-          "versionDefines": []
-        },
-        {
           "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
           "autoReferenced": false,
@@ -2600,18 +2588,6 @@
           "reference": "Deucarian.Logging",
           "scope": "Runtime production",
           "versionDefines": []
-        },
-        {
-          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
-          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Logging",
-          "scope": "Sample",
-          "versionDefines": []
         }
       ],
       "repository": "ObjectSelection-CoreState-Integration",
@@ -2640,18 +2616,6 @@
           "versionDefines": []
         },
         {
-          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
-          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.ObjectSelection",
-          "scope": "Sample",
-          "versionDefines": []
-        },
-        {
           "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
           "autoReferenced": false,
@@ -2672,7 +2636,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
