@@ -100,6 +100,11 @@
       "ownerPackageId": "com.deucarian.camera-navigation"
     },
     {
+      "description": "Cross-platform pointer-lock lifecycle, capture permission, input-neutral rearming, WebGL bridge state, and pointer capture diagnostics.",
+      "id": "pointer-capture",
+      "ownerPackageId": "com.deucarian.pointer-capture"
+    },
+    {
       "description": "Diagnostics providers, snapshots, JSON export, overlays, and aggregation.",
       "id": "diagnostics",
       "ownerPackageId": "com.deucarian.diagnostics"
