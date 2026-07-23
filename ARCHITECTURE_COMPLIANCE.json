@@ -102,19 +102,11 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/DeucarianOrbitCameraController.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 553,
+      "lineCount": 562,
       "lineLimit": 500,
       "packageId": "com.deucarian.camera-navigation",
       "repository": "Camera-Navigation",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.camera-navigation.input-system-integration",
-      "repository": "CameraNavigation-InputSystem-Integration"
     },
     {
       "assembly": "Deucarian.Diagnostics.Editor",
@@ -331,18 +323,6 @@
       "packageId": "com.deucarian.game-content-authoring",
       "repository": "Game-Content-Authoring",
       "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.ObjectLoading",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Core/ObjectLoadTypes.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 513,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.object-loading",
-      "repository": "Object-Loading",
-      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.PackageInstaller.Editor",
@@ -1005,18 +985,6 @@
       "scope": "Runtime production"
     },
     {
-      "assembly": "Deucarian.UI",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 527,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.ui",
-      "repository": "UI",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.UIFlow",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1051,18 +1019,6 @@
       "packageId": "com.deucarian.weapon-systems",
       "repository": "Weapon-Systems",
       "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.WorldSpawning",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/WorldSpawningCore.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 572,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.world-spawning",
-      "repository": "World-Spawning",
-      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.XRUI",
@@ -1288,12 +1244,12 @@
         {
           "assembly": "Deucarian.CameraNavigation",
           "file": "Runtime/DeucarianOrbitCameraController.cs",
-          "lineCount": 553,
+          "lineCount": 562,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 10,
+      "productionFileCount": 14,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
@@ -1305,7 +1261,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1314,7 +1270,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "CameraNavigation-InputSystem-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode"
       ]
@@ -1645,20 +1601,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.ObjectLoading",
-          "file": "Runtime/Core/ObjectLoadTypes.cs",
-          "lineCount": 513,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.object-loading",
-      "productionFileCount": 21,
+      "productionFileCount": 22,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Object-Loading",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ObjectLoading.Diagnostics.Tests",
         "Deucarian.ObjectLoading.Tests"
@@ -2312,20 +2261,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.UI",
-          "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
-          "lineCount": 527,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.ui",
-      "productionFileCount": 14,
+      "productionFileCount": 15,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.UI.Tests.EditMode"
       ]
@@ -2443,20 +2385,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.WorldSpawning",
-          "file": "Runtime/WorldSpawningCore.cs",
-          "lineCount": 572,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.world-spawning",
-      "productionFileCount": 1,
+      "productionFileCount": 2,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "World-Spawning",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.WorldSpawning.PlayModeTests",
         "Deucarian.WorldSpawning.Tests"
@@ -2534,14 +2469,12 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 28,
+    "compliantRepositoryCount": 32,
     "findingsByDisposition": {
-      "RefactorBacklog": 93,
-      "SetupRequired": 1
+      "RefactorBacklog": 90
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 1,
-      "ProductionFileExceedsLineLimit": 93
+      "ProductionFileExceedsLineLimit": 90
     },
     "repositoryCount": 48
   }

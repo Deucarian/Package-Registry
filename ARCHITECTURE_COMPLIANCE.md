@@ -13,17 +13,15 @@ once.
 ## Summary
 
 - Repositories: 48
-- Fully compliant repositories: 28
+- Fully compliant repositories: 32
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 93 |
-| SetupRequired | 1 |
+| RefactorBacklog | 90 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 1 |
-| ProductionFileExceedsLineLimit | 93 |
+| ProductionFileExceedsLineLimit | 90 |
 
 ## Repository Status
 
@@ -35,8 +33,8 @@ once.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | RefactorBacklog | Yes | Yes | 10 | 1 | 2 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 10 | 1 | 1 | 0 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | SetupRequired | No | Yes | 7 | 1 | 0 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 7 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
 | Common | com.deucarian.common | Compliant | Yes | Yes | 2 | 3 | 0 | 0 |
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
@@ -49,7 +47,7 @@ once.
 | Idle-Progression | com.deucarian.idle-progression | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Logging | com.deucarian.logging | Compliant | Yes | Yes | 15 | 2 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
-| Object-Loading | com.deucarian.object-loading | RefactorBacklog | Yes | Yes | 21 | 2 | 1 | 0 |
+| Object-Loading | com.deucarian.object-loading | Compliant | Yes | Yes | 22 | 2 | 0 | 0 |
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -68,13 +66,13 @@ once.
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 1 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 63 | 2 | 8 | 0 |
-| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
+| UI | com.deucarian.ui | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 45 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | RefactorBacklog | Yes | Yes | 9 | 1 | 1 | 0 |
 | World-Navigation | com.deucarian.world-navigation | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
-| World-Spawning | com.deucarian.world-spawning | RefactorBacklog | Yes | Yes | 1 | 2 | 1 | 0 |
+| World-Spawning | com.deucarian.world-spawning | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
 | XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 38 | 1 | 5 | 0 |
 | XR-UI-Theming-Integration | com.deucarian.xr-ui.theming-integration | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 
@@ -90,8 +88,7 @@ once.
 | Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBootstrapWindow.cs | 3988 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/BootstrapScopedRegistryManifest.cs | 571 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 892 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| CameraNavigation-InputSystem-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Diagnostics | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DiagnosticsWindow.cs | 646 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbenchGUI.cs | 581 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -110,7 +107,6 @@ once.
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackModels.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackContext.cs | 537 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Object-Loading | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/ObjectLoadTypes.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11367 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 8638 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2888 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -166,11 +162,9 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 622 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianColorPalette.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianIconButtonStyle.cs | 527 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 984 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowNavigator.cs | 966 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Weapon-Systems | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WeaponProviderV2.cs | 878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| World-Spawning | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WorldSpawningCore.cs | 572 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomButtonSettings.cs | 972 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomSelectableFeedback.cs | 930 | 500 | Extract responsibilities until the production file is at most 500 lines. |

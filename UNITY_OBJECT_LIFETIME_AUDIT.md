@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 474 |
+| direct Unity API call | 477 |
 | helper call site | 61 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 536 |
+| Allowed | 539 |
 
 ## Production Semantic Comparison
 
@@ -92,6 +92,8 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Build-Pipeline | Editor/DeucarianBuildProfileUtility.cs | 96 | Editor production | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Disposes the transient non-asset BuildProfile instance returned by Unity's editor-only profile factory. |
 | Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 114 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 152 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationDefaultsTests.cs | 75 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationDefaultsTests.cs | 103 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 33 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 136 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 182 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -277,5 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 308 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 355 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 382 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 404 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Survivors | Runtime/SurvivorsTemplateController.cs | 14425 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
