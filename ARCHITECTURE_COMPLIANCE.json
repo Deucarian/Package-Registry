@@ -1977,6 +1977,40 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.media",
+      "productionFileCount": 11,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Media",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Media.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.media.api-integration",
+      "productionFileCount": 4,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Media-API-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Media.APIIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
@@ -2886,7 +2920,7 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 2,
+    "compliantRepositoryCount": 4,
     "findingsByDisposition": {
       "RefactorBacklog": 93,
       "SetupRequired": 45
@@ -2896,6 +2930,6 @@
       "MissingSharedArchitectureValidation": 2,
       "ProductionFileExceedsLineLimit": 93
     },
-    "repositoryCount": 48
+    "repositoryCount": 50
   }
 }

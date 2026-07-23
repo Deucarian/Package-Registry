@@ -14,6 +14,7 @@
     "helperDefinitionCount": 1,
     "intendedConsumers": [
       "Game-Content-Authoring",
+      "Media",
       "Object-Loading",
       "Template-Game-Idle-Auto-Defense",
       "Template-Game-Movement-FPS",
@@ -30,13 +31,13 @@
       "Editor asset destruction and test fixture cleanup should stay out of the initial runtime API.",
       "Ref-clearing overload is omitted because audited production consumers do not require it."
     ],
-    "runtimeRepositoryCount": 9,
+    "runtimeRepositoryCount": 10,
     "selectedOption": "Completed",
-    "testRepositoryCount": 31,
+    "testRepositoryCount": 32,
     "testingPackageDecision": {
       "decision": "KeepLocal",
       "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
-      "testRepositoryCount": 31
+      "testRepositoryCount": 32
     }
   },
   "occurrences": [
@@ -1752,6 +1753,66 @@
       "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
       "policySeverity": "Info",
       "repository": "Game-Content-Authoring",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Media.Unity",
+      "classification": "Runtime production",
+      "containingSymbol": "UnityVideoPlaybackSession::Dispose",
+      "file": "Runtime/Unity/UnityVideoPlaybackSession.cs",
+      "invocation": "UnityObjectUtility.DestroySafely",
+      "line": 221,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Production code calls the canonical Deucarian.Common lifetime API.",
+      "policySeverity": "Info",
+      "repository": "Media",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.Media.Tests",
+      "classification": "Test",
+      "containingSymbol": "UnityVideoPlaybackSessionTests::PrepareRejectsNonVideoSource",
+      "file": "Tests/Editor/UnityVideoPlaybackSessionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 34,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Media",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Media.Tests",
+      "classification": "Test",
+      "containingSymbol": "UnityVideoPlaybackSessionTests::PrepareRejectsNonVideoSource",
+      "file": "Tests/Editor/UnityVideoPlaybackSessionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 35,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Media",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Media.Tests",
+      "classification": "Test",
+      "containingSymbol": "UnityVideoPlaybackSessionTests::OwnedPlayerIsDestroyedOnDispose",
+      "file": "Tests/Editor/UnityVideoPlaybackSessionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 49,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Media",
       "scope": "Test"
     },
     {
@@ -8251,11 +8312,11 @@
     }
   ],
   "policySummary": {
-    "Allowed": 546
+    "Allowed": 550
   },
   "summary": {
-    "direct Unity API call": 484,
-    "helper call site": 61,
+    "direct Unity API call": 487,
+    "helper call site": 62,
     "helper definition": 1
   }
 }

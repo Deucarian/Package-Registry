@@ -12,15 +12,15 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 484 |
-| helper call site | 61 |
+| direct Unity API call | 487 |
+| helper call site | 62 |
 | helper definition | 1 |
 
 ## Policy Summary
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 546 |
+| Allowed | 550 |
 
 ## Production Semantic Comparison
 
@@ -33,7 +33,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | --- | --- |
 | Decision | KeepLocal |
 | Reasoning | Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction. |
-| Test repositories with direct cleanup | 31 |
+| Test repositories with direct cleanup | 32 |
 
 ## Findings
 
@@ -152,6 +152,10 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Game-Content-Authoring | Editor/GameContentAuthoringEditorAssets.cs | 79 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Game-Content-Authoring | Tests/EditMode/GameContentLibraryEditModeTests.cs | 566 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Game-Content-Authoring | Tests/EditMode/GameContentLibraryEditModeTests.cs | 600 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Media | Runtime/Unity/UnityVideoPlaybackSession.cs | 221 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Media | Tests/Editor/UnityVideoPlaybackSessionTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Media | Tests/Editor/UnityVideoPlaybackSessionTests.cs | 35 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Media | Tests/Editor/UnityVideoPlaybackSessionTests.cs | 49 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Object-Loading | Runtime/Core/ObjectLoadHandle.cs | 71 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Object-Selection | Tests/EditMode/HighlighterHookTests.cs | 31 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Object-Selection | Tests/EditMode/ObjectHoverServiceTests.cs | 40 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -275,7 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 98 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 99 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 112 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 136 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 137 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 155 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 180 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
