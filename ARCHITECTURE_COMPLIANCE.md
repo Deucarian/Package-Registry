@@ -18,11 +18,11 @@ once.
 | Metric | Count |
 | --- | --- |
 | RefactorBacklog | 93 |
-| SetupRequired | 48 |
+| SetupRequired | 46 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 46 |
+| MissingCanonicalArchitectureReference | 44 |
 | MissingSharedArchitectureValidation | 2 |
 | ProductionFileExceedsLineLimit | 93 |
 
@@ -34,7 +34,7 @@ once.
 | Attacks | com.deucarian.attacks | SetupRequired | No | Yes | 30 | 1 | 5 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | SetupRequired | No | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | SetupRequired | No | Yes | 0 | 0 | 0 | 0 |
-| Bootstrap | com.deucarian.bootstrap | SetupRequired | No | Yes | 10 | 1 | 2 | 0 |
+| Bootstrap | com.deucarian.bootstrap | RefactorBacklog | Yes | Yes | 10 | 1 | 2 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | SetupRequired | No | No | 14 | 1 | 1 | 0 |
 | Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 10 | 1 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | SetupRequired | No | Yes | 7 | 1 | 0 | 0 |
@@ -54,7 +54,7 @@ once.
 | Object-Selection | com.deucarian.object-selection | SetupRequired | No | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | SetupRequired | No | Yes | 4 | 1 | 0 | 0 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | SetupRequired | No | Yes | 5 | 1 | 0 | 0 |
-| Package-Installer | com.deucarian.package-installer | SetupRequired | No | Yes | 59 | 1 | 13 | 0 |
+| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 59 | 1 | 13 | 0 |
 | Package-Registry |  | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Persistence | com.deucarian.persistence | SetupRequired | No | Yes | 8 | 1 | 0 | 0 |
 | Pointer-Capture | com.deucarian.pointer-capture | SetupRequired | No | No | 9 | 1 | 0 | 0 |
@@ -92,7 +92,6 @@ once.
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentPreview.cs | 1101 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Auto-Defense | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Auto-Defense-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Bootstrap | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBootstrapWindow.cs | 3988 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/BootstrapScopedRegistryManifest.cs | 571 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
@@ -135,7 +134,6 @@ once.
 | Object-Selection | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | ObjectLoading-API-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | ObjectSelection-CoreState-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Package-Installer | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11367 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 8638 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2888 | 500 | Extract responsibilities until the production file is at most 500 lines. |
