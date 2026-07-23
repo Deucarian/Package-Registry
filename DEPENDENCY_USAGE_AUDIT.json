@@ -2343,6 +2343,175 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.media",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Media.Unity.asmdef",
+          "assembly": "Deucarian.Media.Unity",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Media",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.1.3",
+      "dependency": "com.deucarian.api",
+      "packageId": "com.deucarian.media.api-integration",
+      "referencedAssemblies": [
+        "Deucarian.API"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.Media.APIIntegration.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.API",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/ApiMediaLoaders/Deucarian.Media.APIIntegration.Samples.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.API",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Media.APIIntegration.Tests.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Media-API-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.media",
+      "packageId": "com.deucarian.media.api-integration",
+      "referencedAssemblies": [
+        "Deucarian.Media",
+        "Deucarian.Media.Unity"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.Media.APIIntegration.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.Media.APIIntegration.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/ApiMediaLoaders/Deucarian.Media.APIIntegration.Samples.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/ApiMediaLoaders/Deucarian.Media.APIIntegration.Samples.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Samples",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Media.APIIntegration.Tests.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Media",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Media.APIIntegration.Tests.asmdef",
+          "assembly": "Deucarian.Media.APIIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Media-API-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "assemblyReference": "Deucarian.Diagnostics",
       "classification": "OptionalVersionDefinedUse",
       "packageId": "com.deucarian.object-loading",
@@ -6952,7 +7121,7 @@
   "summary": {
     "EditorOnlyUse": 22,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 93,
+    "RequiredAndUsed": 96,
     "SuiteComposition": 20,
     "TestOnlyUse": 11
   }

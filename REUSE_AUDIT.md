@@ -36,6 +36,8 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | no | clean | (none) | 3 | 131 |
 | Idle-Progression | com.deucarian.idle-progression | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.progression | 3 | 24 |
 | Logging | com.deucarian.logging | 1.0.2 | 2021.3 | no | clean | com.deucarian.editor | 5 | 69 |
+| Media | com.deucarian.media | 0.1.0 | 2021.3 | no | clean | com.deucarian.common, com.unity.modules.audio, com.unity.modules.unitywebrequest, com.unity.modules.unitywebrequestaudio, com.unity.modules.video | 4 | 97 |
+| Media-API-Integration | com.deucarian.media.api-integration | 0.1.0 | 2021.3 | no | clean | com.deucarian.api, com.deucarian.media | 3 | 13 |
 | Monetization | com.deucarian.monetization | 0.1.1 | 6000.3 | no | clean | (none) | 3 | 76 |
 | Object-Loading | com.deucarian.object-loading | 1.2.2 | 2021.3 | no | clean | com.deucarian.common, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 5 | 246 |
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | no | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
@@ -70,21 +72,21 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 
 | Metric | Count |
 | --- | --- |
-| Repositories | 48 |
-| Parsed methods/bodies analyzed | 12699 |
+| Repositories | 50 |
+| Parsed methods/bodies analyzed | 12780 |
 | Exact AST clone groups | 69 |
 | Normalized structural clone groups | 109 |
 | Same-symbol semantic candidates | 29 |
-| Runtime public API symbols | 7369 |
+| Runtime public API symbols | 7479 |
 | Editor public API symbols | 2229 |
-| Test public symbols excluded from production API | 3223 |
-| Sample public symbols excluded from production API | 258 |
-| Internal/private production symbols | 9724 |
-| Public API symbols missing XML documentation | 8100 |
+| Test public symbols excluded from production API | 3260 |
+| Sample public symbols excluded from production API | 268 |
+| Internal/private production symbols | 9764 |
+| Public API symbols missing XML documentation | 8210 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 546 |
+| Unity object lifetime records | 550 |
 | Documentation drift findings | 28 |
-| Dependency usage findings | 147 |
+| Dependency usage findings | 150 |
 | Dependency cycles | 0 |
 
 ## Extraction Position
