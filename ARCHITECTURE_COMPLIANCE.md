@@ -17,11 +17,11 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 87 |
+| RefactorBacklog | 86 |
 
 | Metric | Count |
 | --- | --- |
-| ProductionFileExceedsLineLimit | 87 |
+| ProductionFileExceedsLineLimit | 86 |
 
 ## Repository Status
 
@@ -73,7 +73,7 @@ once.
 | Weapon-Systems | com.deucarian.weapon-systems | RefactorBacklog | Yes | Yes | 9 | 1 | 1 | 0 |
 | World-Navigation | com.deucarian.world-navigation | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | World-Spawning | com.deucarian.world-spawning | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
-| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 38 | 1 | 5 | 0 |
+| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 39 | 1 | 4 | 0 |
 | XR-UI-Theming-Integration | com.deucarian.xr-ui.theming-integration | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 
 ## Findings
@@ -166,4 +166,3 @@ once.
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomButtonSettings.cs | 972 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomSelectableFeedback.cs | 930 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.cs | 826 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/XrUiColorPalette.cs | 536 | 500 | Extract responsibilities until the production file is at most 500 lines. |
