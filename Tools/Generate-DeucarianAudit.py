@@ -1615,6 +1615,17 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         audit_input_sha = ""
         if repo_root.name == "Package-Registry":
             audit_input_sha = registry_audit_input_sha256(output_root)
+        reported_branches = branches
+        if repo_root.name == "Package-Registry":
+            # The registry commits this report into the repository it audits.
+            # Recording that repository's commit would make the artifact stale
+            # as soon as the artifact itself is committed. Its content hash is
+            # the stable provenance signal for this self-audit instead.
+            reported_branches = {
+                **branches,
+                "headCommit": "",
+                "requestedRefCommit": "",
+            }
         repo = {
             "name": repo_root.name,
             "canonicalId": f"{args.organization}/{repo_root.name}",
@@ -1623,7 +1634,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "unity": package_json.get("unity"),
             "displayName": package_json.get("displayName"),
             "repository": package_json.get("repository"),
-            "branches": branches,
+            "branches": reported_branches,
             "dependencies": package_json.get("dependencies", {}) or {},
             "asmdefs": asmdefs,
             "governance": governance,
@@ -1636,7 +1647,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "provenance": {
                 "canonicalUrl": spec.get("canonicalUrl", "") if spec else normalize_git_url(branches.get("origin", "")),
                 "requestedRef": args.ref,
-                "headCommit": branches.get("headCommit", ""),
+                "headCommit": reported_branches.get("headCommit", ""),
                 "manifestSha256": manifest_sha,
                 "governanceConfigSha256": config_sha,
                 "auditInputSha256": audit_input_sha,
