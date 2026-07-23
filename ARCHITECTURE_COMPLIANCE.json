@@ -93,14 +93,6 @@
       "repository": "Auto-Defense-Suite"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.bootstrap",
-      "repository": "Bootstrap"
-    },
-    {
       "assembly": "Deucarian.Bootstrap.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -527,14 +519,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.object-selection.core-state-integration",
       "repository": "ObjectSelection-CoreState-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer"
     },
     {
       "assembly": "Deucarian.PackageInstaller.Editor",
@@ -1603,7 +1587,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1625,7 +1609,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Bootstrap",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Bootstrap.Editor.Tests"
       ]
@@ -2094,7 +2078,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2182,7 +2166,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.PackageInstaller.Editor.Tests"
       ]
@@ -2913,10 +2897,10 @@
     "compliantRepositoryCount": 1,
     "findingsByDisposition": {
       "RefactorBacklog": 93,
-      "SetupRequired": 48
+      "SetupRequired": 46
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 46,
+      "MissingCanonicalArchitectureReference": 44,
       "MissingSharedArchitectureValidation": 2,
       "ProductionFileExceedsLineLimit": 93
     },
