@@ -17,11 +17,11 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 88 |
+| RefactorBacklog | 87 |
 
 | Metric | Count |
 | --- | --- |
-| ProductionFileExceedsLineLimit | 88 |
+| ProductionFileExceedsLineLimit | 87 |
 
 ## Repository Status
 
@@ -40,7 +40,7 @@ once.
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | RefactorBacklog | Yes | Yes | 16 | 1 | 1 | 0 |
-| Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 37 | 2 | 3 | 0 |
+| Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 38 | 2 | 2 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 34 | 1 | 13 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -92,7 +92,6 @@ once.
 | Diagnostics | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DiagnosticsWindow.cs | 646 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbenchGUI.cs | 581 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorDialog.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentEditSessionCoordinator.cs | 1835 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentEditWorkbench.cs | 1752 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentStructuredCollectionEditing.cs | 1280 | 500 | Extract responsibilities until the production file is at most 500 lines. |
