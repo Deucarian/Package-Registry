@@ -1337,6 +1337,21 @@
     {
       "assembly": "Deucarian.ObjectSelection.Tests",
       "classification": "Test",
+      "containingSymbol": "ObjectSelectionCompositionTests::SelectionServiceAcceptsAnAbstractRegistry",
+      "file": "Tests/EditMode/ObjectSelectionCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 26,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.object-selection",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Object-Selection",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.ObjectSelection.Tests",
+      "classification": "Test",
       "containingSymbol": "ObjectSelectionRegistryTests::RegisterWorks",
       "file": "Tests/EditMode/ObjectSelectionRegistryTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -1572,6 +1587,21 @@
       "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
       "policySeverity": "Info",
       "repository": "Object-Selection",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
+      "classification": "Test",
+      "containingSymbol": "CoreStateObjectSelectionAdapterTests::TearDown",
+      "file": "Tests/EditMode/CoreStateObjectSelectionAdapterTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 39,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "ObjectSelection-CoreState-Integration",
       "scope": "Test"
     },
     {
@@ -6380,7 +6410,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandProfilesResolveBuiltInStyleDensity",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 104,
+      "line": 223,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6395,7 +6425,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandProfilesResolveExplicitSemanticDensity",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 143,
+      "line": 262,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6410,7 +6440,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandUsesShapeProfileWithIndependentDensity",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 175,
+      "line": 294,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6425,7 +6455,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandUsesShapeProfileWithIndependentDensity",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 176,
+      "line": 295,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6440,7 +6470,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandUsesConcentricThemeStyleCornerRadii",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 234,
+      "line": 353,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6455,7 +6485,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandSupportsCustomNestedButtonInset",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 257,
+      "line": 376,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -6470,7 +6500,7 @@
       "containingSymbol": "DeucarianUITests::ControlIslandPresetExposesDefaultFrostedControlMetrics",
       "file": "Tests/EditMode/DeucarianUITests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 349,
+      "line": 616,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.ui",
       "policyDisposition": "Allowed",
@@ -7741,10 +7771,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 512
+    "Allowed": 514
   },
   "summary": {
-    "direct Unity API call": 450,
+    "direct Unity API call": 452,
     "helper call site": 61,
     "helper definition": 1
   }
