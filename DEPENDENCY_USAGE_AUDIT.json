@@ -1490,6 +1490,48 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.0",
+      "dependency": "com.deucarian.camera-navigation",
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "referencedAssemblies": [
+        "Deucarian.CameraNavigation"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.CameraNavigation.InputSystemIntegration.asmdef",
+          "assembly": "Deucarian.CameraNavigation.InputSystemIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CameraNavigation",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "CameraNavigation-InputSystem-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.combat",
@@ -6882,7 +6924,7 @@
   "summary": {
     "EditorOnlyUse": 21,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 92,
+    "RequiredAndUsed": 93,
     "SuiteComposition": 20,
     "TestOnlyUse": 11
   }

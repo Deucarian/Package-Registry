@@ -97,6 +97,26 @@
       "scope": "Editor production"
     },
     {
+      "assembly": "Deucarian.CameraNavigation",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/DeucarianOrbitCameraController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 553,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.camera-navigation",
+      "repository": "Camera-Navigation",
+      "scope": "Runtime production"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "repository": "CameraNavigation-InputSystem-Integration"
+    },
+    {
       "assembly": "Deucarian.Diagnostics.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1264,15 +1284,39 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.CameraNavigation",
+          "file": "Runtime/DeucarianOrbitCameraController.cs",
+          "lineCount": 553,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 8,
+      "productionFileCount": 10,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
-      "status": "Compliant",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.CameraNavigation.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "productionFileCount": 7,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "CameraNavigation-InputSystem-Integration",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode"
       ]
     },
     {
@@ -2490,13 +2534,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 29,
+    "compliantRepositoryCount": 28,
     "findingsByDisposition": {
-      "RefactorBacklog": 92
+      "RefactorBacklog": 93,
+      "SetupRequired": 1
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 92
+      "MissingCanonicalArchitectureReference": 1,
+      "ProductionFileExceedsLineLimit": 93
     },
-    "repositoryCount": 47
+    "repositoryCount": 48
   }
 }
