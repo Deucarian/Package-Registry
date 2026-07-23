@@ -1518,7 +1518,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.4",
+      "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.camera-navigation.input-system-integration",
       "referencedAssemblies": [

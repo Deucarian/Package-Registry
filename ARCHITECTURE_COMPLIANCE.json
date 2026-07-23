@@ -1031,18 +1031,6 @@
       "packageId": "com.deucarian.xr-ui",
       "repository": "XR-UI",
       "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.XRUI",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/XrUiColorPalette.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 536,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.xr-ui",
-      "repository": "XR-UI",
-      "scope": "Runtime production"
     }
   ],
   "repositories": [
@@ -2373,16 +2361,10 @@
           "file": "Runtime/Controls/CustomSelectableFeedback.cs",
           "lineCount": 930,
           "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.XRUI",
-          "file": "Runtime/XrUiColorPalette.cs",
-          "lineCount": 536,
-          "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.xr-ui",
-      "productionFileCount": 38,
+      "productionFileCount": 39,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
@@ -2417,10 +2399,10 @@
   "summary": {
     "compliantRepositoryCount": 32,
     "findingsByDisposition": {
-      "RefactorBacklog": 87
+      "RefactorBacklog": 86
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 87
+      "ProductionFileExceedsLineLimit": 86
     },
     "repositoryCount": 48
   }
