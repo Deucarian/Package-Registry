@@ -1,0 +1,2548 @@
+{
+  "findings": [
+    {
+      "assembly": "Deucarian.Attacks.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/AttackProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1434,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Attacks.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/AttackGameContentAuthoringProviders.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1342,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Attacks.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/EnemyProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1175,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Attacks.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/WaveProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1104,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Attacks.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/AttackGameContentPreview.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1101,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Bootstrap.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianBootstrapWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 3988,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Bootstrap.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/BootstrapScopedRegistryManifest.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 571,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.BuildPipeline.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianBuildManagerWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 892,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.build-pipeline",
+      "repository": "Build-Pipeline",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.CameraNavigation",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/DeucarianOrbitCameraController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 553,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.camera-navigation",
+      "repository": "Camera-Navigation",
+      "scope": "Runtime production"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "repository": "CameraNavigation-InputSystem-Integration"
+    },
+    {
+      "assembly": "Deucarian.Diagnostics.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DiagnosticsWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 646,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.diagnostics",
+      "repository": "Diagnostics",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianEditorWorkbench.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1180,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianEditorWorkbenchGUI.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 581,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianEditorDialog.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 513,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianEditorWorkflowControls.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 504,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentEditSessionCoordinator.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1835,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentEditWorkbench.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1752,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentStructuredCollectionEditing.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1280,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentLibraryProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1246,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentAuthoringObjectPreview.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 997,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentEditingModels.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 954,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentAuthoringWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 824,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentPackAwareViews.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 714,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentCollectionEditing.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 713,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentLibraryService.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 634,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentPackBrowser.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 585,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentPackModels.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 553,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentPackContext.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 537,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.ObjectLoading",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Core/ObjectLoadTypes.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 513,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.object-loading",
+      "repository": "Object-Loading",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 11367,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/PackageInstallerWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 8638,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageUpdateCheckService.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2888,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2513,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageInstallService.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1950,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageDependencyInstaller.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1479,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageSampleImportService.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 977,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Models/PackageEcosystemGraph.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 838,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageOperationStateRepository.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 724,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageDetectionService.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 640,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageEcosystemGraphBuilder.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 599,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageRegistryProvider.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 551,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageGraphHierarchyBuilder.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 508,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.RunUpgrades.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/RunUpgradeProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1166,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.run-upgrades",
+      "repository": "Run-Upgrades",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.RunUpgrades.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 575,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.run-upgrades",
+      "repository": "Run-Upgrades",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.RunUpgrades",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/RunUpgradesCore.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 539,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.run-upgrades",
+      "repository": "Run-Upgrades",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/IdleAutoDefenseTemplate.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 6878,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefenseContentPackIndex.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1758,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentSetProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1682,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefenseContentEditingMappings.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1208,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentPackProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1207,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefenseTemplateSetupWizard.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1131,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/IdleAutoDefensePlayerExperienceController.Ui.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1081,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefensePlayableContentAuditMenu.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 761,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefenseContentEditSession.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 739,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/IdleAutoDefenseContentEditingBackend.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 701,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/GameContentSetValidation.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 677,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/GameContentSetGameContentAuthoringProvider.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 648,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/IdleAutoDefensePlayerExperienceController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 640,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/IdleAutoDefenseAuthoredCoreValidation.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 547,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/IdleAutoDefenseRewardDraftCatalog.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 539,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameMovementFps",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Movement/WallrunnerMotor.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 3536,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameMovementFps",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Bootstrap/MovementFpsTemplateController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 922,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameMovementFps",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Actors/MovementFpsPlayerController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 587,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsTemplateController.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 15821,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsContentValidation.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 4485,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/BasicSurvivorsGame.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2707,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsAuthoredContent.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2464,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SurvivorsContentEditSource.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2002,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SurvivorsLosslessJson.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1642,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsWeaponArchetypes.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1309,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SurvivorsContentPackIndex.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1179,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsMetaProgression.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 945,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SurvivorsContentEditSession.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 941,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsUiTheme.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 739,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsPayloadWeapons.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 688,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateGameSurvivors",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/SurvivorsRunFlow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 553,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianThemeManagerWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 2531,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianDefaultThemeAssetFactory.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1978,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianThemingMenuActions.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1795,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 905,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianThemeManagerWorkflow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 818,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Core/DeucarianThemeProvider.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 622,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Core/DeucarianThemingInspectorListFilter.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 582,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.Theming",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Core/DeucarianColorPalette.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 513,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 527,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.ui",
+      "repository": "UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UIFlow",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Navigation/UIFlowHost.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 984,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UIFlow",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Navigation/UIFlowNavigator.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 966,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.WeaponSystems.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/WeaponProviderV2.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 878,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.weapon-systems",
+      "repository": "Weapon-Systems",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.WorldSpawning",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WorldSpawningCore.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 572,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.world-spawning",
+      "repository": "World-Spawning",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Controls/CustomPressableSurface.Hierarchy.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1314,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Controls/CustomButtonSettings.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 972,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Controls/CustomSelectableFeedback.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 930,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Controls/CustomPressableSurface.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 826,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/XrUiColorPalette.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 536,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    }
+  ],
+  "repositories": [
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.api",
+      "productionFileCount": 55,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "API",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.API.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Attacks.Editor",
+          "file": "Editor/AttackGameContentAuthoringProviders.cs",
+          "lineCount": 1342,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Attacks.Editor",
+          "file": "Editor/AttackGameContentPreview.cs",
+          "lineCount": 1101,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Attacks.Editor",
+          "file": "Editor/AttackProviderV2.cs",
+          "lineCount": 1434,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Attacks.Editor",
+          "file": "Editor/EnemyProviderV2.cs",
+          "lineCount": 1175,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Attacks.Editor",
+          "file": "Editor/WaveProviderV2.cs",
+          "lineCount": 1104,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.attacks",
+      "productionFileCount": 30,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Attacks",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.Attacks.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.auto-defense",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Auto-Defense",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.AutoDefense.PlayModeTests",
+        "Deucarian.AutoDefense.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.auto-defense-suite",
+      "productionFileCount": 0,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Auto-Defense-Suite",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": []
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Bootstrap.Editor",
+          "file": "Editor/BootstrapScopedRegistryManifest.cs",
+          "lineCount": 571,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Bootstrap.Editor",
+          "file": "Editor/DeucarianBootstrapWindow.cs",
+          "lineCount": 3988,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.bootstrap",
+      "productionFileCount": 10,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Bootstrap",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.Bootstrap.Editor.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.BuildPipeline.Editor",
+          "file": "Editor/DeucarianBuildManagerWindow.cs",
+          "lineCount": 892,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.build-pipeline",
+      "productionFileCount": 14,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Build-Pipeline",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.BuildPipeline.Editor.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.CameraNavigation",
+          "file": "Runtime/DeucarianOrbitCameraController.cs",
+          "lineCount": 553,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.camera-navigation",
+      "productionFileCount": 10,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Camera-Navigation",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.CameraNavigation.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "productionFileCount": 7,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "CameraNavigation-InputSystem-Integration",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.combat",
+      "productionFileCount": 2,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Combat",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Combat.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.common",
+      "productionFileCount": 2,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Common",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Common.EasingPreview.Tests",
+        "Deucarian.Common.Tests.EditMode",
+        "Deucarian.Common.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.core-state",
+      "productionFileCount": 10,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Core-State",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.CoreState.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.defense-games",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Defense-Games",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.DefenseGames.PlayModeTests",
+        "Deucarian.DefenseGames.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Diagnostics.Editor",
+          "file": "Editor/DiagnosticsWindow.cs",
+          "lineCount": 646,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.diagnostics",
+      "productionFileCount": 16,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Diagnostics",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.Diagnostics.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Editor",
+          "file": "Editor/DeucarianEditorDialog.cs",
+          "lineCount": 513,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Editor",
+          "file": "Editor/DeucarianEditorWorkbench.cs",
+          "lineCount": 1180,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Editor",
+          "file": "Editor/DeucarianEditorWorkbenchGUI.cs",
+          "lineCount": 581,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Editor",
+          "file": "Editor/DeucarianEditorWorkflowControls.cs",
+          "lineCount": 504,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.editor",
+      "productionFileCount": 36,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Editor",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.Editor.EditorShellExample.Tests",
+        "Deucarian.Editor.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.encounters",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Encounters",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Encounters.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentAuthoringObjectPreview.cs",
+          "lineCount": 997,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentAuthoringWindow.cs",
+          "lineCount": 824,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentCollectionEditing.cs",
+          "lineCount": 713,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentEditSessionCoordinator.cs",
+          "lineCount": 1835,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentEditWorkbench.cs",
+          "lineCount": 1752,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentEditingModels.cs",
+          "lineCount": 954,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentLibraryProviderV2.cs",
+          "lineCount": 1246,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentLibraryService.cs",
+          "lineCount": 634,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentPackAwareViews.cs",
+          "lineCount": 714,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentPackBrowser.cs",
+          "lineCount": 585,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentPackContext.cs",
+          "lineCount": 537,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentPackModels.cs",
+          "lineCount": 553,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.GameContentAuthoring.Editor",
+          "file": "Editor/GameContentStructuredCollectionEditing.cs",
+          "lineCount": 1280,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.game-content-authoring",
+      "productionFileCount": 34,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Game-Content-Authoring",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.GameContentAuthoring.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.gameplay-foundation",
+      "productionFileCount": 5,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Gameplay-Foundation",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.GameplayFoundation.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.idle-progression",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Idle-Progression",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.IdleProgression.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.logging",
+      "productionFileCount": 15,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Logging",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Logging.Editor.Tests",
+        "Deucarian.Logging.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.monetization",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Monetization",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Monetization.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.ObjectLoading",
+          "file": "Runtime/Core/ObjectLoadTypes.cs",
+          "lineCount": 513,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.object-loading",
+      "productionFileCount": 21,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Object-Loading",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.ObjectLoading.Diagnostics.Tests",
+        "Deucarian.ObjectLoading.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.object-selection",
+      "productionFileCount": 25,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Object-Selection",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.ObjectSelection.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "productionFileCount": 4,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "ObjectLoading-API-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.ObjectLoading.APIIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "productionFileCount": 5,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "ObjectSelection-CoreState-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.ObjectSelection.CoreStateIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Models/PackageEcosystemGraph.cs",
+          "lineCount": 838,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/PackageInstallerWindow.cs",
+          "lineCount": 8638,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageDependencyInstaller.cs",
+          "lineCount": 1479,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageDetectionService.cs",
+          "lineCount": 640,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageEcosystemGraphBuilder.cs",
+          "lineCount": 599,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
+          "lineCount": 2513,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageGraphHierarchyBuilder.cs",
+          "lineCount": 508,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageInstallService.cs",
+          "lineCount": 1950,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageOperationStateRepository.cs",
+          "lineCount": 724,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageRegistryProvider.cs",
+          "lineCount": 551,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageSampleImportService.cs",
+          "lineCount": 977,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageUpdateCheckService.cs",
+          "lineCount": 2888,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+          "lineCount": 11367,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.package-installer",
+      "productionFileCount": 59,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Package-Installer",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.PackageInstaller.Editor.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "ARCHITECTURE.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": null,
+      "productionFileCount": 0,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Package-Registry",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": []
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.persistence",
+      "productionFileCount": 8,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Persistence",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Persistence.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.pointer-capture",
+      "productionFileCount": 9,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Pointer-Capture",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.PointerCapture.Tests.Editor"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.progression",
+      "productionFileCount": 4,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Progression",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Progression.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.projectiles",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Projectiles",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Projectiles.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.RunUpgrades.Editor",
+          "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
+          "lineCount": 575,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.RunUpgrades.Editor",
+          "file": "Editor/RunUpgradeProviderV2.cs",
+          "lineCount": 1166,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.RunUpgrades",
+          "file": "Runtime/RunUpgradesCore.cs",
+          "lineCount": 539,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.run-upgrades",
+      "productionFileCount": 9,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Run-Upgrades",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.RunUpgrades.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.selection-suite",
+      "productionFileCount": 0,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Selection-Suite",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": []
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.session",
+      "productionFileCount": 15,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Session",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Session.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.session.api-integration",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Session-API-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Session.APIIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/GameContentPackProviderV2.cs",
+          "lineCount": 1207,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/GameContentSetGameContentAuthoringProvider.cs",
+          "lineCount": 648,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/GameContentSetProviderV2.cs",
+          "lineCount": 1682,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefenseContentEditSession.cs",
+          "lineCount": 739,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefenseContentEditingBackend.cs",
+          "lineCount": 701,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefenseContentEditingMappings.cs",
+          "lineCount": 1208,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefenseContentPackIndex.cs",
+          "lineCount": 1758,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefensePlayableContentAuditMenu.cs",
+          "lineCount": 761,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+          "file": "Editor/IdleAutoDefenseTemplateSetupWizard.cs",
+          "lineCount": 1131,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/GameContentSetValidation.cs",
+          "lineCount": 677,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/IdleAutoDefenseAuthoredCoreValidation.cs",
+          "lineCount": 547,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/IdleAutoDefensePlayerExperienceController.Ui.cs",
+          "lineCount": 1081,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/IdleAutoDefensePlayerExperienceController.cs",
+          "lineCount": 640,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/IdleAutoDefenseRewardDraftCatalog.cs",
+          "lineCount": 539,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
+          "file": "Runtime/IdleAutoDefenseTemplate.cs",
+          "lineCount": 6878,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "productionFileCount": 49,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.TemplateGameIdleAutoDefense.PlayModeTests",
+        "Deucarian.TemplateGameIdleAutoDefense.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateGameMovementFps",
+          "file": "Runtime/Actors/MovementFpsPlayerController.cs",
+          "lineCount": 587,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameMovementFps",
+          "file": "Runtime/Bootstrap/MovementFpsTemplateController.cs",
+          "lineCount": 922,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameMovementFps",
+          "file": "Runtime/Movement/WallrunnerMotor.cs",
+          "lineCount": 3536,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "productionFileCount": 19,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Template-Game-Movement-FPS",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.TemplateGameMovementFps.PlayModeTests",
+        "Deucarian.TemplateGameMovementFps.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+          "file": "Editor/SurvivorsContentEditSession.cs",
+          "lineCount": 941,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+          "file": "Editor/SurvivorsContentEditSource.cs",
+          "lineCount": 2002,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+          "file": "Editor/SurvivorsContentPackIndex.cs",
+          "lineCount": 1179,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+          "file": "Editor/SurvivorsLosslessJson.cs",
+          "lineCount": 1642,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/BasicSurvivorsGame.cs",
+          "lineCount": 2707,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsAuthoredContent.cs",
+          "lineCount": 2464,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsContentValidation.cs",
+          "lineCount": 4485,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsMetaProgression.cs",
+          "lineCount": 945,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsPayloadWeapons.cs",
+          "lineCount": 688,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsRunFlow.cs",
+          "lineCount": 553,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsTemplateController.cs",
+          "lineCount": 15821,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsUiTheme.cs",
+          "lineCount": 739,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateGameSurvivors",
+          "file": "Runtime/SurvivorsWeaponArchetypes.cs",
+          "lineCount": 1309,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.template.game.survivors",
+      "productionFileCount": 23,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Template-Game-Survivors",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.TemplateGameSurvivors.PlayModeTests",
+        "Deucarian.TemplateGameSurvivors.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.test-automation",
+      "productionFileCount": 0,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Test-Automation",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.TestAutomation.Editor"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianDefaultThemeAssetFactory.cs",
+          "lineCount": 1978,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianThemeManagerWindow.cs",
+          "lineCount": 2531,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianThemeManagerWorkflow.cs",
+          "lineCount": 818,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
+          "lineCount": 905,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianThemingInspectorListFilter.cs",
+          "lineCount": 582,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming.Editor",
+          "file": "Editor/Core/DeucarianThemingMenuActions.cs",
+          "lineCount": 1795,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Theming",
+          "file": "Runtime/Core/DeucarianColorPalette.cs",
+          "lineCount": 513,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.Theming",
+          "file": "Runtime/Core/DeucarianThemeProvider.cs",
+          "lineCount": 622,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.theming",
+      "productionFileCount": 63,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Theming",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.Theming.Editor.Tests",
+        "Deucarian.Theming.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.UI",
+          "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
+          "lineCount": 527,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.ui",
+      "productionFileCount": 14,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "UI",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.UI.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.ui-binding",
+      "productionFileCount": 12,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "UI-Binding",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.UIBinding.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.UIFlow",
+          "file": "Runtime/Navigation/UIFlowHost.cs",
+          "lineCount": 984,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.UIFlow",
+          "file": "Runtime/Navigation/UIFlowNavigator.cs",
+          "lineCount": 966,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.ui-flow",
+      "productionFileCount": 45,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "UI-FLow",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.UIFlow.Tests.EditMode",
+        "Deucarian.UIFlow.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "productionFileCount": 3,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "UIBinding-CoreState-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.UIBinding.CoreStateIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.WeaponSystems.Editor",
+          "file": "Editor/WeaponProviderV2.cs",
+          "lineCount": 878,
+          "scope": "Editor production"
+        }
+      ],
+      "packageId": "com.deucarian.weapon-systems",
+      "productionFileCount": 9,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Weapon-Systems",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.WeaponSystems.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.world-navigation",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "World-Navigation",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.WorldNavigation.PlayModeTests",
+        "Deucarian.WorldNavigation.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.WorldSpawning",
+          "file": "Runtime/WorldSpawningCore.cs",
+          "lineCount": 572,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.world-spawning",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "World-Spawning",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.WorldSpawning.PlayModeTests",
+        "Deucarian.WorldSpawning.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/Controls/CustomButtonSettings.cs",
+          "lineCount": 972,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/Controls/CustomPressableSurface.Hierarchy.cs",
+          "lineCount": 1314,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/Controls/CustomPressableSurface.cs",
+          "lineCount": 826,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/Controls/CustomSelectableFeedback.cs",
+          "lineCount": 930,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/XrUiColorPalette.cs",
+          "lineCount": 536,
+          "scope": "Runtime production"
+        }
+      ],
+      "packageId": "com.deucarian.xr-ui",
+      "productionFileCount": 38,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "XR-UI",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
+      "testAssemblies": [
+        "Deucarian.XRUI.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "productionFileCount": 1,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "XR-UI-Theming-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.XRUI.ThemingIntegration.Tests.EditMode"
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "standard": {
+    "maxProductionFileLines": 500,
+    "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+  },
+  "summary": {
+    "compliantRepositoryCount": 28,
+    "findingsByDisposition": {
+      "RefactorBacklog": 93,
+      "SetupRequired": 1
+    },
+    "findingsByKind": {
+      "MissingCanonicalArchitectureReference": 1,
+      "ProductionFileExceedsLineLimit": 93
+    },
+    "repositoryCount": 48
+  }
+}
