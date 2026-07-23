@@ -1,22 +1,6 @@
 {
   "findings": [
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.api",
-      "repository": "API"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.attacks",
-      "repository": "Attacks"
-    },
-    {
       "assembly": "Deucarian.Attacks.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -77,30 +61,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.auto-defense",
-      "repository": "Auto-Defense"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.auto-defense-suite",
-      "repository": "Auto-Defense-Suite"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.bootstrap",
-      "repository": "Bootstrap"
-    },
-    {
       "assembly": "Deucarian.Bootstrap.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -125,22 +85,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.build-pipeline",
-      "repository": "Build-Pipeline"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.build-pipeline",
-      "repository": "Build-Pipeline"
-    },
-    {
       "assembly": "Deucarian.BuildPipeline.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -153,54 +97,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.camera-navigation",
-      "repository": "Camera-Navigation"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.combat",
-      "repository": "Combat"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.common",
-      "repository": "Common"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.core-state",
-      "repository": "Core-State"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.defense-games",
-      "repository": "Defense-Games"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.diagnostics",
-      "repository": "Diagnostics"
-    },
-    {
       "assembly": "Deucarian.Diagnostics.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -211,14 +107,6 @@
       "packageId": "com.deucarian.diagnostics",
       "repository": "Diagnostics",
       "scope": "Editor production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.editor",
-      "repository": "Editor"
     },
     {
       "assembly": "Deucarian.Editor",
@@ -267,22 +155,6 @@
       "packageId": "com.deucarian.editor",
       "repository": "Editor",
       "scope": "Editor production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.encounters",
-      "repository": "Encounters"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring"
     },
     {
       "assembly": "Deucarian.GameContentAuthoring.Editor",
@@ -441,46 +313,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.gameplay-foundation",
-      "repository": "Gameplay-Foundation"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.idle-progression",
-      "repository": "Idle-Progression"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.logging",
-      "repository": "Logging"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.monetization",
-      "repository": "Monetization"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.object-loading",
-      "repository": "Object-Loading"
-    },
-    {
       "assembly": "Deucarian.ObjectLoading",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -491,38 +323,6 @@
       "packageId": "com.deucarian.object-loading",
       "repository": "Object-Loading",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.object-selection",
-      "repository": "Object-Selection"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.object-loading.api-integration",
-      "repository": "ObjectLoading-API-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.object-selection.core-state-integration",
-      "repository": "ObjectSelection-CoreState-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer"
     },
     {
       "assembly": "Deucarian.PackageInstaller.Editor",
@@ -681,54 +481,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.persistence",
-      "repository": "Persistence"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.pointer-capture",
-      "repository": "Pointer-Capture"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.pointer-capture",
-      "repository": "Pointer-Capture"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.progression",
-      "repository": "Progression"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.projectiles",
-      "repository": "Projectiles"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.run-upgrades",
-      "repository": "Run-Upgrades"
-    },
-    {
       "assembly": "Deucarian.RunUpgrades.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -763,38 +515,6 @@
       "packageId": "com.deucarian.run-upgrades",
       "repository": "Run-Upgrades",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.selection-suite",
-      "repository": "Selection-Suite"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.session",
-      "repository": "Session"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "repository": "Template-Game-Idle-Auto-Defense"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
@@ -977,14 +697,6 @@
       "scope": "Runtime production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.template.game.movement-fps",
-      "repository": "Template-Game-Movement-FPS"
-    },
-    {
       "assembly": "Deucarian.TemplateGameMovementFps",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1019,14 +731,6 @@
       "packageId": "com.deucarian.template.game.movement-fps",
       "repository": "Template-Game-Movement-FPS",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.template.game.survivors",
-      "repository": "Template-Game-Survivors"
     },
     {
       "assembly": "Deucarian.TemplateGameSurvivors",
@@ -1185,22 +889,6 @@
       "scope": "Runtime production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.test-automation",
-      "repository": "Test-Automation"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming"
-    },
-    {
       "assembly": "Deucarian.Theming.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1297,14 +985,6 @@
       "scope": "Runtime production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.ui",
-      "repository": "UI"
-    },
-    {
       "assembly": "Deucarian.UI",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1315,22 +995,6 @@
       "packageId": "com.deucarian.ui",
       "repository": "UI",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.ui-binding",
-      "repository": "UI-Binding"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.ui-flow",
-      "repository": "UI-FLow"
     },
     {
       "assembly": "Deucarian.UIFlow",
@@ -1357,22 +1021,6 @@
       "scope": "Runtime production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.ui-binding.core-state-integration",
-      "repository": "UIBinding-CoreState-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.weapon-systems",
-      "repository": "Weapon-Systems"
-    },
-    {
       "assembly": "Deucarian.WeaponSystems.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1385,22 +1033,6 @@
       "scope": "Editor production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.world-navigation",
-      "repository": "World-Navigation"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.world-spawning",
-      "repository": "World-Spawning"
-    },
-    {
       "assembly": "Deucarian.WorldSpawning",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1411,14 +1043,6 @@
       "packageId": "com.deucarian.world-spawning",
       "repository": "World-Spawning",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.xr-ui",
-      "repository": "XR-UI"
     },
     {
       "assembly": "Deucarian.XRUI",
@@ -1479,21 +1103,13 @@
       "packageId": "com.deucarian.xr-ui",
       "repository": "XR-UI",
       "scope": "Runtime production"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.xr-ui.theming-integration",
-      "repository": "XR-UI-Theming-Integration"
     }
   ],
   "repositories": [
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1502,7 +1118,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.API.Tests"
       ]
@@ -1510,7 +1126,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1550,7 +1166,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Attacks",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Attacks.Tests"
       ]
@@ -1558,7 +1174,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1567,7 +1183,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Auto-Defense",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.AutoDefense.PlayModeTests",
         "Deucarian.AutoDefense.Tests"
@@ -1576,7 +1192,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1585,13 +1201,13 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Auto-Defense-Suite",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": []
     },
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1613,7 +1229,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Bootstrap",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Bootstrap.Editor.Tests"
       ]
@@ -1621,7 +1237,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1636,8 +1252,8 @@
       "productionFileCount": 14,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Build-Pipeline",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.BuildPipeline.Editor.Tests"
       ]
@@ -1645,7 +1261,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1654,7 +1270,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.CameraNavigation.Tests.EditMode"
       ]
@@ -1662,7 +1278,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1671,7 +1287,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Combat",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Combat.Tests"
       ]
@@ -1679,7 +1295,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1688,7 +1304,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Common",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Common.EasingPreview.Tests",
         "Deucarian.Common.Tests.EditMode",
@@ -1698,7 +1314,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1707,7 +1323,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Core-State",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.CoreState.Tests"
       ]
@@ -1715,7 +1331,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1724,7 +1340,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Defense-Games",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.DefenseGames.PlayModeTests",
         "Deucarian.DefenseGames.Tests"
@@ -1733,7 +1349,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1749,7 +1365,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Diagnostics",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Diagnostics.Tests"
       ]
@@ -1757,7 +1373,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1791,7 +1407,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Editor.EditorShellExample.Tests",
         "Deucarian.Editor.Tests"
@@ -1800,7 +1416,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1809,7 +1425,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Encounters",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Encounters.Tests"
       ]
@@ -1817,7 +1433,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1905,7 +1521,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Game-Content-Authoring",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.GameContentAuthoring.Tests"
       ]
@@ -1913,7 +1529,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1922,7 +1538,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Gameplay-Foundation",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.GameplayFoundation.Tests"
       ]
@@ -1930,7 +1546,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1939,7 +1555,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Idle-Progression",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.IdleProgression.Tests"
       ]
@@ -1947,7 +1563,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1956,7 +1572,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Logging",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Logging.Editor.Tests",
         "Deucarian.Logging.Tests"
@@ -1965,7 +1581,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1974,7 +1590,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Monetization",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Monetization.Tests"
       ]
@@ -1982,7 +1598,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -1998,7 +1614,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Object-Loading",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.ObjectLoading.Diagnostics.Tests",
         "Deucarian.ObjectLoading.Tests"
@@ -2007,7 +1623,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2016,7 +1632,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Object-Selection",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ObjectSelection.Tests"
       ]
@@ -2024,7 +1640,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2033,7 +1649,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "ObjectLoading-API-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ObjectLoading.APIIntegration.Tests"
       ]
@@ -2041,7 +1657,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2050,7 +1666,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "ObjectSelection-CoreState-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ObjectSelection.CoreStateIntegration.Tests"
       ]
@@ -2058,7 +1674,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2146,7 +1762,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.PackageInstaller.Editor.Tests"
       ]
@@ -2169,7 +1785,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2178,7 +1794,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Persistence",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Persistence.Tests"
       ]
@@ -2186,7 +1802,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2194,8 +1810,8 @@
       "productionFileCount": 9,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Pointer-Capture",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.PointerCapture.Tests.Editor"
       ]
@@ -2203,7 +1819,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2212,7 +1828,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Progression",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Progression.Tests"
       ]
@@ -2220,7 +1836,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2229,7 +1845,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Projectiles",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Projectiles.Tests"
       ]
@@ -2237,7 +1853,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2265,7 +1881,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Run-Upgrades",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.RunUpgrades.Tests"
       ]
@@ -2273,7 +1889,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2282,13 +1898,13 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Selection-Suite",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": []
     },
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2297,7 +1913,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.Tests"
       ]
@@ -2305,7 +1921,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2314,7 +1930,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session-API-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.APIIntegration.Tests"
       ]
@@ -2322,7 +1938,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2422,7 +2038,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Idle-Auto-Defense",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.TemplateGameIdleAutoDefense.PlayModeTests",
         "Deucarian.TemplateGameIdleAutoDefense.Tests"
@@ -2431,7 +2047,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2459,7 +2075,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Movement-FPS",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.TemplateGameMovementFps.PlayModeTests",
         "Deucarian.TemplateGameMovementFps.Tests"
@@ -2468,7 +2084,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2556,7 +2172,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Survivors",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.TemplateGameSurvivors.PlayModeTests",
         "Deucarian.TemplateGameSurvivors.Tests"
@@ -2565,7 +2181,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2574,7 +2190,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Test-Automation",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.TestAutomation.Editor"
       ]
@@ -2582,7 +2198,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2640,7 +2256,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Theming.Editor.Tests",
         "Deucarian.Theming.Tests"
@@ -2649,7 +2265,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2665,7 +2281,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.UI.Tests.EditMode"
       ]
@@ -2673,7 +2289,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2682,7 +2298,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-Binding",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.UIBinding.Tests"
       ]
@@ -2690,7 +2306,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2712,7 +2328,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-FLow",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.UIFlow.Tests.EditMode",
         "Deucarian.UIFlow.Tests.PlayMode"
@@ -2721,7 +2337,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2730,7 +2346,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UIBinding-CoreState-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.UIBinding.CoreStateIntegration.Tests"
       ]
@@ -2738,7 +2354,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2754,7 +2370,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Weapon-Systems",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.WeaponSystems.Tests"
       ]
@@ -2762,7 +2378,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2771,7 +2387,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "World-Navigation",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.WorldNavigation.PlayModeTests",
         "Deucarian.WorldNavigation.Tests"
@@ -2780,7 +2396,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2796,7 +2412,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "World-Spawning",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.WorldSpawning.PlayModeTests",
         "Deucarian.WorldSpawning.Tests"
@@ -2805,7 +2421,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
@@ -2845,7 +2461,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.XRUI.Tests.EditMode"
       ]
@@ -2853,7 +2469,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2862,7 +2478,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI-Theming-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.XRUI.ThemingIntegration.Tests.EditMode"
       ]
@@ -2874,14 +2490,11 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 1,
+    "compliantRepositoryCount": 29,
     "findingsByDisposition": {
-      "RefactorBacklog": 92,
-      "SetupRequired": 48
+      "RefactorBacklog": 92
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 46,
-      "MissingSharedArchitectureValidation": 2,
       "ProductionFileExceedsLineLimit": 92
     },
     "repositoryCount": 47
