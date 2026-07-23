@@ -71,18 +71,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 48 |
-| Parsed methods/bodies analyzed | 12710 |
+| Parsed methods/bodies analyzed | 12717 |
 | Exact AST clone groups | 69 |
 | Normalized structural clone groups | 109 |
 | Same-symbol semantic candidates | 29 |
 | Runtime public API symbols | 7369 |
 | Editor public API symbols | 2229 |
-| Test public symbols excluded from production API | 3235 |
+| Test public symbols excluded from production API | 3240 |
 | Sample public symbols excluded from production API | 258 |
-| Internal/private production symbols | 9724 |
+| Internal/private production symbols | 9727 |
 | Public API symbols missing XML documentation | 8100 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 547 |
+| Unity object lifetime records | 548 |
 | Documentation drift findings | 28 |
 | Dependency usage findings | 147 |
 | Dependency cycles | 0 |

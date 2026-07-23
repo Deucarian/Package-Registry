@@ -6767,6 +6767,21 @@
     {
       "assembly": "Deucarian.Theming.Tests",
       "classification": "Test",
+      "containingSymbol": "DeucarianColorPaletteValidationPolicyTests::TearDown",
+      "file": "Tests/Runtime/DeucarianColorPaletteValidationPolicyTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 18,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.theming",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Theming",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Theming.Tests",
+      "classification": "Test",
       "containingSymbol": "DeucarianSelectableThemeColorsTests::TearDown",
       "file": "Tests/Runtime/DeucarianSelectableThemeColorsTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
@@ -8266,10 +8281,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 547
+    "Allowed": 548
   },
   "summary": {
-    "direct Unity API call": 485,
+    "direct Unity API call": 486,
     "helper call site": 61,
     "helper definition": 1
   }

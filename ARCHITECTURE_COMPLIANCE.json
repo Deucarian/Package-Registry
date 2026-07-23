@@ -961,18 +961,6 @@
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.Theming",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Core/DeucarianColorPalette.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 513,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.UIFlow",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -2215,19 +2203,13 @@
         },
         {
           "assembly": "Deucarian.Theming",
-          "file": "Runtime/Core/DeucarianColorPalette.cs",
-          "lineCount": 513,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.Theming",
           "file": "Runtime/Core/DeucarianThemeProvider.cs",
           "lineCount": 622,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 63,
+      "productionFileCount": 64,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -2453,10 +2435,10 @@
   "summary": {
     "compliantRepositoryCount": 32,
     "findingsByDisposition": {
-      "RefactorBacklog": 89
+      "RefactorBacklog": 88
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 89
+      "ProductionFileExceedsLineLimit": 88
     },
     "repositoryCount": 48
   }
