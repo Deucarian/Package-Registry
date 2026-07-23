@@ -46,6 +46,12 @@ architecture-compliance pass.
   definitions whenever their dependency or platform boundaries differ.
 - Package-to-package coupling must be visible in both `package.json` and
   assembly-definition references.
+- Every Deucarian-owned editor window, settings provider, inspector, and tool
+  surface must compose its visual shell, chrome, styles, icons, and shared
+  workflow controls from `com.deucarian.editor`. Domain packages own their
+  editor workflows, not a competing visual system. The only exceptions are
+  `com.deucarian.editor` itself and an exception explicitly recorded in this
+  standard, currently Bootstrap's self-contained setup UI.
 - A production source file must not exceed 500 lines. Files approaching the
   limit should be reviewed for extraction of policy, presentation, storage,
   platform integration, or orchestration responsibilities.
@@ -127,6 +133,8 @@ Architecture reviews must check:
 9. Namespace, folder, and assembly-definition boundaries agree.
 10. Production files stay within the 500-line responsibility limit.
 11. Tests cover contracts, lifecycle/disposal, and important state transitions.
+12. Every Deucarian-owned editor surface uses the shared Editor package rather
+    than package-local chrome, styling, icons, or workflow controls.
 
 ## Logging
 
