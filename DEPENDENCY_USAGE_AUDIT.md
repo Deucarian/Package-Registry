@@ -6,7 +6,7 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 21 |
+| Editor-only use | 22 |
 | Optional version-defined use | 1 |
 | Required and used | 93 |
 | Suite composition | 20 |
@@ -51,6 +51,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Build-Pipeline | com.deucarian.editor | Editor-only use | Editor production: Deucarian.BuildPipeline.Editor -> Deucarian.Editor; Test: Deucarian.BuildPipeline.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Build-Pipeline | com.deucarian.logging | Editor-only use | Editor production: Deucarian.BuildPipeline.Editor -> Deucarian.Logging; Test: Deucarian.BuildPipeline.Editor.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Camera-Navigation | com.deucarian.common | Required and used | Runtime production: Deucarian.CameraNavigation -> Deucarian.Common; Test: Deucarian.CameraNavigation.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
+| Camera-Navigation | com.deucarian.editor | Editor-only use | Editor production: Deucarian.CameraNavigation.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation | Required and used | Runtime production: Deucarian.CameraNavigation.InputSystemIntegration -> Deucarian.CameraNavigation; Test: Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode -> Deucarian.CameraNavigation | Deucarian.CameraNavigation | 0 |
 | Combat | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.Combat -> Deucarian.GameplayFoundation; Sample: Deucarian.Combat.CombatSandbox -> Deucarian.GameplayFoundation; Test: Deucarian.Combat.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | Defense-Games | com.deucarian.combat | Required and used | Runtime production: Deucarian.DefenseGames -> Deucarian.Combat; Sample: Deucarian.DefenseGames.Samples -> Deucarian.Combat; Test: Deucarian.DefenseGames.PlayModeTests -> Deucarian.Combat; Test: Deucarian.DefenseGames.Tests -> Deucarian.Combat | Deucarian.Combat | 0 |

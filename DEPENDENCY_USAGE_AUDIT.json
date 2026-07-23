@@ -1489,8 +1489,36 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.camera-navigation",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CameraNavigation.Editor.asmdef",
+          "assembly": "Deucarian.CameraNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Camera-Navigation",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.2.2",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.camera-navigation.input-system-integration",
       "referencedAssemblies": [
@@ -6922,7 +6950,7 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 21,
+    "EditorOnlyUse": 22,
     "OptionalVersionDefinedUse": 1,
     "RequiredAndUsed": 93,
     "SuiteComposition": 20,
