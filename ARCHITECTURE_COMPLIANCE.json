@@ -145,18 +145,6 @@
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianEditorDialog.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 513,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.editor",
-      "repository": "Editor",
-      "scope": "Editor production"
-    },
-    {
       "assembly": "Deucarian.GameContentAuthoring.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1355,12 +1343,6 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.Editor",
-          "file": "Editor/DeucarianEditorDialog.cs",
-          "lineCount": 513,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Editor",
           "file": "Editor/DeucarianEditorWorkbench.cs",
           "lineCount": 1180,
           "scope": "Editor production"
@@ -1373,7 +1355,7 @@
         }
       ],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 37,
+      "productionFileCount": 38,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -2435,10 +2417,10 @@
   "summary": {
     "compliantRepositoryCount": 32,
     "findingsByDisposition": {
-      "RefactorBacklog": 88
+      "RefactorBacklog": 87
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 88
+      "ProductionFileExceedsLineLimit": 87
     },
     "repositoryCount": 48
   }
