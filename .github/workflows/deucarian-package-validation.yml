@@ -29,7 +29,7 @@ jobs:
         with:
           path: package
 
-      - name: Checkout Package Registry validator
+      - name: Checkout canonical Deucarian governance
         uses: actions/checkout@v6
         with:
           repository: Deucarian/Package-Registry
@@ -41,7 +41,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run shared package validator
+      - name: Run shared architecture and package validator
         shell: bash
         run: |
           python package-registry/Tools/deucarian_package_validator.py \

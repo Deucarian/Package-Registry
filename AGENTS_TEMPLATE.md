@@ -7,6 +7,13 @@ Use this structure when adding or refreshing a repository-level `AGENTS.md`.
 
 Package ID: `<package-id>`
 
+## Canonical Architecture
+
+This package follows the canonical
+[Deucarian Architecture Rules](https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md).
+Package-specific notes below may be stricter but must not duplicate, replace,
+or weaken the shared standard.
+
 ## Ownership
 
 This package owns:

@@ -66,6 +66,9 @@ WORKFLOW_DISPATCH_RE = re.compile(r"^\s*workflow_dispatch\s*:|\bon\s*:\s*\[[^\]]
 WORKFLOW_TAG_TRIGGER_RE = re.compile(r"^\s*tags\s*:", re.I | re.M)
 RELEASE_ARTIFACT_RE = re.compile(r"\brelease\b|upload-artifact|git\s+archive|Compress-Archive", re.I)
 RELEASE_WORKFLOW_NAME_RE = re.compile(r"^\s*name\s*:\s*.*\brelease\b", re.I | re.M)
+CANONICAL_ARCHITECTURE_URL = (
+    "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+)
 PACKAGE_KINDS = {"Library", "Tool", "Integration", "Suite", "Template"}
 SAMPLE_POLICIES = {"compiled-example", "playable-scene", "tool", "composition", "template"}
 
@@ -183,6 +186,16 @@ class Validator:
     def validate_unity_package(self, config: dict[str, Any]) -> None:
         root = self.repository_root
         assert root is not None
+        architecture_path = self.registry_root / "ARCHITECTURE.md"
+        if not architecture_path.exists():
+            self.fail(
+                "Package Registry ARCHITECTURE.md is missing; "
+                "the canonical package standard cannot be resolved."
+            )
+        self.details["architectureStandard"] = {
+            "path": self.display_path(architecture_path),
+            "url": CANONICAL_ARCHITECTURE_URL,
+        }
         required_config = [
             "packageId",
             "displayName",
@@ -649,6 +662,20 @@ class Validator:
         data = self.packages
         if data.get("schemaVersion") != 2:
             self.fail(f"packages.json: schemaVersion must be 2, got {data.get('schemaVersion')!r}.")
+        architecture_standard = data.get("architectureStandard")
+        if not isinstance(architecture_standard, dict):
+            self.fail("packages.json: architectureStandard must be an object.")
+        else:
+            if architecture_standard.get("path") != "ARCHITECTURE.md":
+                self.fail(
+                    "packages.json: architectureStandard.path must be "
+                    "'ARCHITECTURE.md'."
+                )
+            if architecture_standard.get("url") != CANONICAL_ARCHITECTURE_URL:
+                self.fail(
+                    "packages.json: architectureStandard.url must reference "
+                    "the canonical main-branch document."
+                )
         groups = data.get("groups")
         if not isinstance(groups, list):
             self.fail("packages.json: groups must be an array.")
