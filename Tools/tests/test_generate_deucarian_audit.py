@@ -752,7 +752,7 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
             self.assertNotIn("--no-checkout", clone_command)
             self.assertNotIn("--no-hardlinks", clone_command)
 
-    def test_registry_report_records_the_canonical_snapshot_provenance(self) -> None:
+    def test_registry_report_uses_content_provenance_without_a_self_referential_commit(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             audit_root = root / "audit"
@@ -790,9 +790,11 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                 report = audit.build_report(args)
 
             registry = next(repo for repo in report["repositories"] if repo["name"] == "Package-Registry")
-            self.assertEqual(branches, registry["branches"])
-            self.assertEqual("abc123develop", registry["provenance"]["headCommit"])
+            self.assertEqual("", registry["branches"]["headCommit"])
+            self.assertEqual("", registry["branches"]["requestedRefCommit"])
+            self.assertEqual("", registry["provenance"]["headCommit"])
             self.assertEqual("develop", registry["provenance"]["requestedRef"])
+            self.assertTrue(registry["provenance"]["auditInputSha256"])
 
     def test_main_provisions_package_registry_from_the_canonical_ref(self) -> None:
         with tempfile.TemporaryDirectory() as temp:

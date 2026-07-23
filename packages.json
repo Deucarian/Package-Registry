@@ -1,6 +1,10 @@
 {
   "schemaVersion": 2,
   "updatedAt": "2026-07-22",
+  "architectureStandard": {
+    "path": "ARCHITECTURE.md",
+    "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+  },
   "groups": [
     {
       "id": "infrastructure",

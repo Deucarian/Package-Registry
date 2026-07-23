@@ -42,6 +42,10 @@ class ValidatorFixture:
             {
                 "schemaVersion": 2,
                 "updatedAt": "2026-07-17",
+                "architectureStandard": {
+                    "path": "ARCHITECTURE.md",
+                    "url": validator_module.CANONICAL_ARCHITECTURE_URL,
+                },
                 "groups": [
                     {
                         "id": "core",
@@ -132,6 +136,10 @@ class ValidatorFixture:
         write_json(
             self.registry / "UNITY_OBJECT_LIFETIME_AUDIT.json",
             {"conclusion": {"actionableProductionCount": 0}, "occurrences": []},
+        )
+        write(
+            self.registry / "ARCHITECTURE.md",
+            "# Deucarian Architecture Rules",
         )
 
     def _package(self) -> None:
@@ -254,6 +262,26 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
             result = validator.validate_package()
 
             self.assertTrue(result["ok"], result["errors"])
+            self.assertEqual(
+                validator_module.CANONICAL_ARCHITECTURE_URL,
+                result["details"]["architectureStandard"]["url"],
+            )
+
+    def test_package_validation_requires_canonical_architecture_document(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            (fixture.registry / "ARCHITECTURE.md").unlink()
+            validator = validator_module.Validator(fixture.registry, fixture.package)
+
+            result = validator.validate_package()
+
+            self.assertFalse(result["ok"])
+            self.assertTrue(
+                any(
+                    "canonical package standard cannot be resolved" in error
+                    for error in result["errors"]
+                )
+            )
 
     def test_registry_audit_artifact_rejects_non_allowed_debug_finding(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
