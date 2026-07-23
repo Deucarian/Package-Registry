@@ -23,8 +23,8 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 1 | 0 |
 | Bootstrap | com.deucarian.bootstrap | 1.1.5 | 2021.3 | no | clean | (none) | 2 | 1 |
 | Build-Pipeline | com.deucarian.build-pipeline | 0.2.2 | 6000.0 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 53 |
-| Camera-Navigation | com.deucarian.camera-navigation | 0.2.0 | 2022.3 | no | clean | com.deucarian.common | 3 | 105 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.0 | 2022.3 | no | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 58 |
+| Camera-Navigation | com.deucarian.camera-navigation | 0.2.2 | 2022.3 | no | clean | com.deucarian.common, com.deucarian.editor | 4 | 116 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.2 | 2022.3 | no | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 58 |
 | Combat | com.deucarian.combat | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation | 3 | 218 |
 | Common | com.deucarian.common | 0.2.1 | 2021.3 | no | clean | (none) | 5 | 6 |
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | no | clean | (none) | 3 | 41 |
@@ -71,20 +71,20 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Metric | Count |
 | --- | --- |
 | Repositories | 48 |
-| Parsed methods/bodies analyzed | 12669 |
-| Exact AST clone groups | 68 |
-| Normalized structural clone groups | 108 |
+| Parsed methods/bodies analyzed | 12691 |
+| Exact AST clone groups | 69 |
+| Normalized structural clone groups | 109 |
 | Same-symbol semantic candidates | 29 |
-| Runtime public API symbols | 7358 |
-| Editor public API symbols | 2227 |
-| Test public symbols excluded from production API | 3213 |
+| Runtime public API symbols | 7367 |
+| Editor public API symbols | 2229 |
+| Test public symbols excluded from production API | 3217 |
 | Sample public symbols excluded from production API | 258 |
-| Internal/private production symbols | 9697 |
-| Public API symbols missing XML documentation | 8087 |
+| Internal/private production symbols | 9722 |
+| Public API symbols missing XML documentation | 8098 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 536 |
+| Unity object lifetime records | 538 |
 | Documentation drift findings | 28 |
-| Dependency usage findings | 146 |
+| Dependency usage findings | 147 |
 | Dependency cycles | 0 |
 
 ## Extraction Position

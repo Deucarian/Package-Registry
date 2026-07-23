@@ -37,7 +37,8 @@ Schema version: 2
 | com.deucarian.build-pipeline | com.deucarian.editor | 1.0.5 | Build-Pipeline | Editor |
 | com.deucarian.build-pipeline | com.deucarian.logging | 1.0.2 | Build-Pipeline | Logging |
 | com.deucarian.camera-navigation | com.deucarian.common | 0.2.1 | Camera-Navigation | Common |
-| com.deucarian.camera-navigation.input-system-integration | com.deucarian.camera-navigation | 0.2.0 | CameraNavigation-InputSystem-Integration | Camera-Navigation |
+| com.deucarian.camera-navigation | com.deucarian.editor | 1.0.5 | Camera-Navigation | Editor |
+| com.deucarian.camera-navigation.input-system-integration | com.deucarian.camera-navigation | 0.2.2 | CameraNavigation-InputSystem-Integration | Camera-Navigation |
 | com.deucarian.combat | com.deucarian.gameplay-foundation | 0.1.1 | Combat | Gameplay-Foundation |
 | com.deucarian.defense-games | com.deucarian.combat | 0.1.1 | Defense-Games | Combat |
 | com.deucarian.defense-games | com.deucarian.encounters | 0.1.1 | Defense-Games | Encounters |
@@ -148,4 +149,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 8
-- Registry dependency drift entries: 0
+- Registry dependency drift entries: 1
