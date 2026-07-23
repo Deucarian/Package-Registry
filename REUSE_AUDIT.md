@@ -41,7 +41,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | no | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.6 | 2021.3 | no | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 30 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | no | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.81 | 2021.3 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Package-Installer | com.deucarian.package-installer | 1.1.82 | 2021.3 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | no | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.1 | 2021.3 | no | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.2 | 2022.3 | no | clean | com.deucarian.editor | 5 | 57 |
