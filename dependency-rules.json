@@ -121,6 +121,7 @@
     "Every direct package dependency points to a strictly lower rank.",
     "No cyclic package dependencies.",
     "Runtime assemblies must not reference UnityEditor.",
+    "Deucarian-owned editor surfaces consume com.deucarian.editor for shared visual shell, chrome, styles, icons, and workflow controls unless an explicit architecture exception applies.",
     "Common cannot depend on Logging, Editor, or domain packages.",
     "Logging cannot depend on Diagnostics or telemetry.",
     "Integration packages depend on every integration target plus only explicitly used foundations.",
