@@ -2550,6 +2550,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CoreState",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
           "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
           "autoReferenced": false,
@@ -2588,6 +2600,18 @@
           "reference": "Deucarian.Logging",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "ObjectSelection-CoreState-Integration",
@@ -2613,6 +2637,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.ObjectSelection",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+          "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.ObjectSelection",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
