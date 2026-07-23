@@ -1489,6 +1489,40 @@
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.media",
+      "productionFileCount": 11,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Media",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Media.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.media.api-integration",
+      "productionFileCount": 4,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Media-API-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.Media.APIIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.monetization",
       "productionFileCount": 1,
       "productionFilesWithoutAssemblyOwner": [],
@@ -2361,13 +2395,13 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 32,
+    "compliantRepositoryCount": 34,
     "findingsByDisposition": {
       "RefactorBacklog": 84
     },
     "findingsByKind": {
       "ProductionFileExceedsLineLimit": 84
     },
-    "repositoryCount": 48
+    "repositoryCount": 50
   }
 }

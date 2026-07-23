@@ -25,6 +25,7 @@
         "com.deucarian.encounters",
         "com.deucarian.game-content-authoring",
         "com.deucarian.logging",
+        "com.deucarian.media",
         "com.deucarian.pointer-capture",
         "com.deucarian.progression",
         "com.deucarian.ui-binding",
@@ -59,6 +60,7 @@
       "description": "Packages whose longest canonical dependency path has 3 edges.",
       "packages": [
         "com.deucarian.defense-games",
+        "com.deucarian.media.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
         "com.deucarian.projectiles",
