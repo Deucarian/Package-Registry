@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 477 |
+| direct Unity API call | 479 |
 | helper call site | 61 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 539 |
+| Allowed | 541 |
 
 ## Production Semantic Comparison
 
@@ -107,17 +107,19 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 429 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 430 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraNavigationTests.cs | 431 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 48 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 69 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 119 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 120 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 181 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 182 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 183 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 234 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 235 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 299 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 300 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 54 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 75 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 127 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 128 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 160 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 161 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 222 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 223 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 224 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 275 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 276 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 340 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| CameraNavigation-InputSystem-Integration | Tests/EditMode/DeucarianInputSystemNavigationIntegrationTests.cs | 341 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Common | Runtime/UnityObjectUtility.cs | 16 | Runtime production | helper call site | DestroySafely | Allowed | Reviewed exception declared in deucarian-package.json. |
 | Common | Runtime/UnityObjectUtility.cs | 24 | Runtime production | helper definition | DestroySafely | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
 | Common | Runtime/UnityObjectUtility.cs | 33 | Runtime production | direct Unity API call | Object.Destroy | Allowed | Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability. |
@@ -277,5 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 253 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 290 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 308 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 355 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 382 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
