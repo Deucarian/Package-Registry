@@ -1645,7 +1645,7 @@
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 14,
+      "productionFileCount": 15,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
