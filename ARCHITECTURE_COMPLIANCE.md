@@ -17,11 +17,11 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 89 |
+| RefactorBacklog | 88 |
 
 | Metric | Count |
 | --- | --- |
-| ProductionFileExceedsLineLimit | 89 |
+| ProductionFileExceedsLineLimit | 88 |
 
 ## Repository Status
 
@@ -65,7 +65,7 @@ once.
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 1 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 63 | 2 | 8 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 64 | 2 | 7 | 0 |
 | UI | com.deucarian.ui | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 45 | 2 | 2 | 0 |
@@ -160,7 +160,6 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemeManagerWorkflow.cs | 818 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 622 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianColorPalette.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 984 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowNavigator.cs | 966 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Weapon-Systems | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WeaponProviderV2.cs | 878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
