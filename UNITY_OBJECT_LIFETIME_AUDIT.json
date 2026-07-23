@@ -845,6 +845,36 @@
     {
       "assembly": "Deucarian.CameraNavigation.Tests.EditMode",
       "classification": "Test",
+      "containingSymbol": "DeucarianCameraNavigationDefaultsTests::RuntimeDefaultsMatchCompleteLegacyNavigationFeel",
+      "file": "Tests/EditMode/DeucarianCameraNavigationDefaultsTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 75,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.camera-navigation",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Camera-Navigation",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.CameraNavigation.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "DeucarianCameraNavigationDefaultsTests::RestoreDefaultsReappliesLegacyNavigationFeel",
+      "file": "Tests/EditMode/DeucarianCameraNavigationDefaultsTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 103,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.camera-navigation",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Camera-Navigation",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.CameraNavigation.Tests.EditMode",
+      "classification": "Test",
       "containingSymbol": "DeucarianCameraNavigationTests::CameraPoseCaptureAndApplyRoundTripsProjection",
       "file": "Tests/EditMode/DeucarianCameraNavigationTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -8101,10 +8131,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 536
+    "Allowed": 538
   },
   "summary": {
-    "direct Unity API call": 474,
+    "direct Unity API call": 476,
     "helper call site": 61,
     "helper definition": 1
   }
