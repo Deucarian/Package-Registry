@@ -566,6 +566,79 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
             {filename: (fixture.output_root / filename).read_bytes() for filename in audit.OUTPUT_FILES},
         )
 
+    def test_architecture_compliance_separates_setup_gaps_from_refactor_backlog(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            audit_root = Path(temp)
+            alpha_root = audit_root / "Alpha"
+            beta_root = audit_root / "Beta"
+            alpha_root.mkdir()
+            beta_root.mkdir()
+            write(alpha_root / "AGENTS.md", audit.CANONICAL_ARCHITECTURE_URL)
+            write(
+                alpha_root / ".github" / "workflows" / "validation.yml",
+                "python package-registry/Tools/deucarian_package_validator.py --ci",
+            )
+
+            repositories = [
+                {
+                    "name": "Alpha",
+                    "packageId": "com.deucarian.alpha",
+                    "asmdefs": [
+                        {
+                            "name": "Deucarian.Alpha.Tests",
+                            "path": "Tests/Alpha.Tests.asmdef",
+                            "optionalUnityReferences": ["TestAssemblies"],
+                        }
+                    ],
+                },
+                {
+                    "name": "Beta",
+                    "packageId": "com.deucarian.beta",
+                    "asmdefs": [],
+                },
+            ]
+            parsed_files = [
+                audit.ParsedFile(
+                    repo="Alpha",
+                    package_id="com.deucarian.alpha",
+                    repo_root=alpha_root,
+                    path=alpha_root / "Runtime" / "Large.cs",
+                    relative_path="Runtime/Large.cs",
+                    scope="Runtime production",
+                    assembly="Deucarian.Alpha",
+                    text="\n".join("line" for _ in range(501)),
+                ),
+                audit.ParsedFile(
+                    repo="Beta",
+                    package_id="com.deucarian.beta",
+                    repo_root=beta_root,
+                    path=beta_root / "Runtime" / "Unowned.cs",
+                    relative_path="Runtime/Unowned.cs",
+                    scope="Runtime production",
+                    assembly="",
+                    text="namespace Deucarian.Beta {}",
+                ),
+            ]
+
+            compliance = audit.build_architecture_compliance(repositories, parsed_files, audit_root)
+
+            alpha = next(item for item in compliance["repositories"] if item["repository"] == "Alpha")
+            beta = next(item for item in compliance["repositories"] if item["repository"] == "Beta")
+            self.assertEqual("RefactorBacklog", alpha["status"])
+            self.assertEqual("SetupRequired", beta["status"])
+            self.assertEqual(1, len(alpha["oversizedProductionFiles"]))
+            self.assertEqual(["Runtime/Unowned.cs"], beta["productionFilesWithoutAssemblyOwner"])
+            self.assertEqual(
+                {
+                    "MissingCanonicalArchitectureReference": 1,
+                    "MissingSharedArchitectureValidation": 1,
+                    "ProductionFileExceedsLineLimit": 1,
+                    "ProductionFileWithoutAssemblyOwner": 1,
+                    "ProductionPackageWithoutTestAssembly": 1,
+                },
+                compliance["summary"]["findingsByKind"],
+            )
+
     def test_authoritative_repository_inventory_is_derived_from_catalog_plus_special_repositories(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

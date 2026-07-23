@@ -6,7 +6,7 @@ Schema version: 2
 | --- | --- | --- | --- |
 | api-http-client | com.deucarian.api | API | com.deucarian.object-loading.api-integration, com.deucarian.session.api-integration |
 | build-pipeline | com.deucarian.build-pipeline | Build-Pipeline | (none) |
-| camera-navigation | com.deucarian.camera-navigation | Camera-Navigation | (none) |
+| camera-navigation | com.deucarian.camera-navigation | Camera-Navigation | com.deucarian.camera-navigation.input-system-integration |
 | diagnostics | com.deucarian.diagnostics | Diagnostics | (none) |
 | editor-shell | com.deucarian.editor | Editor | com.deucarian.attacks, com.deucarian.build-pipeline, com.deucarian.diagnostics, com.deucarian.game-content-authoring, com.deucarian.logging, com.deucarian.package-installer, com.deucarian.pointer-capture, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.theming, com.deucarian.weapon-systems |
 | game-content-authoring | com.deucarian.game-content-authoring | Game-Content-Authoring | com.deucarian.attacks, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.weapon-systems |
