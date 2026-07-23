@@ -49,6 +49,10 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
   standard inherited by every cataloged Deucarian package through shared
   validation; the package-agent template links here instead of maintaining
   local copies.
+- [ARCHITECTURE_COMPLIANCE.md](ARCHITECTURE_COMPLIANCE.md) is the generated
+  organization-wide evidence report for canonical references, shared CI,
+  assembly ownership, test assemblies, and the 500-line production-file
+  refactor backlog.
 - [CAPABILITY_OWNERSHIP.md](CAPABILITY_OWNERSHIP.md) lists owner packages for shared capabilities.
 - [DISTRIBUTION_POLICY.md](DISTRIBUTION_POLICY.md) defines active Git-only package distribution.
 - [RELEASE_POLICY.md](RELEASE_POLICY.md) defines deferred npm/tag/release policy and workflow requirements.
