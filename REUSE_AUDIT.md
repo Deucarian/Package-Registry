@@ -71,13 +71,13 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 48 |
-| Parsed methods/bodies analyzed | 12725 |
+| Parsed methods/bodies analyzed | 12726 |
 | Exact AST clone groups | 69 |
 | Normalized structural clone groups | 109 |
 | Same-symbol semantic candidates | 29 |
 | Runtime public API symbols | 7369 |
 | Editor public API symbols | 2229 |
-| Test public symbols excluded from production API | 3246 |
+| Test public symbols excluded from production API | 3247 |
 | Sample public symbols excluded from production API | 258 |
 | Internal/private production symbols | 9731 |
 | Public API symbols missing XML documentation | 8100 |

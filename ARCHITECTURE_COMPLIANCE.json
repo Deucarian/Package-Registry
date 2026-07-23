@@ -289,18 +289,6 @@
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentPackContext.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 537,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1439,12 +1427,6 @@
         },
         {
           "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentPackContext.cs",
-          "lineCount": 537,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
           "file": "Editor/GameContentPackModels.cs",
           "lineCount": 553,
           "scope": "Editor production"
@@ -1457,7 +1439,7 @@
         }
       ],
       "packageId": "com.deucarian.game-content-authoring",
-      "productionFileCount": 34,
+      "productionFileCount": 35,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Game-Content-Authoring",
       "sharedValidationPresent": true,
@@ -2399,10 +2381,10 @@
   "summary": {
     "compliantRepositoryCount": 32,
     "findingsByDisposition": {
-      "RefactorBacklog": 86
+      "RefactorBacklog": 85
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 86
+      "ProductionFileExceedsLineLimit": 85
     },
     "repositoryCount": 48
   }

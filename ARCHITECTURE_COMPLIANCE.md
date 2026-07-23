@@ -17,11 +17,11 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 86 |
+| RefactorBacklog | 85 |
 
 | Metric | Count |
 | --- | --- |
-| ProductionFileExceedsLineLimit | 86 |
+| ProductionFileExceedsLineLimit | 85 |
 
 ## Repository Status
 
@@ -42,7 +42,7 @@ once.
 | Diagnostics | com.deucarian.diagnostics | RefactorBacklog | Yes | Yes | 16 | 1 | 1 | 0 |
 | Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 38 | 2 | 2 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
-| Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 34 | 1 | 13 | 0 |
+| Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 35 | 1 | 12 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
 | Idle-Progression | com.deucarian.idle-progression | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Logging | com.deucarian.logging | Compliant | Yes | Yes | 15 | 2 | 0 | 0 |
@@ -104,7 +104,6 @@ once.
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryService.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackModels.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackContext.cs | 537 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11367 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 8638 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2888 | 500 | Extract responsibilities until the production file is at most 500 lines. |
