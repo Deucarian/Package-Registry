@@ -1,6 +1,67 @@
 # Deucarian Architecture Rules
 
-This repository is the governance source for Deucarian Unity package metadata, capability ownership, dependency rules, and validation tooling.
+This is the canonical architecture standard for every Deucarian package.
+Package-specific documentation may add stricter rules, but it must not copy,
+replace, or weaken this document.
+
+Canonical URL:
+`https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md`
+
+Package Registry is the single source of truth for this standard, package
+metadata, capability ownership, dependency rules, and validation tooling.
+Every package consumes the standard through the shared package-validation
+workflow. New or refreshed repository-level `AGENTS.md` files link here
+instead of copying the rules; existing package notes are migrated during the
+architecture-compliance pass.
+
+## Engineering Principles
+
+- Apply SOLID deliberately, with single responsibility judged by reasons to
+  change rather than by class count alone.
+- Prefer composition over inheritance. Inheritance is reserved for genuine
+  substitutability or framework requirements, never merely for code reuse.
+- Depend on abstractions across capability and package boundaries; concrete
+  implementations are selected only in a composition root.
+- Dependency injection is allowed, and constructor injection is required for
+  ordinary C# services. Unity-created objects may use serialized dependencies
+  or one explicit initialization method when Unity controls construction.
+- Prefer pure functions and immutable values for policy, parsing, validation,
+  mapping, and state calculations.
+- Isolate mutations, Unity object ownership, I/O, networking, logging, and
+  other side effects behind narrow adapters.
+- Use Strategy for interchangeable policy and platform behavior.
+- Use Observer-style events or streams for state propagation; consumers must
+  not poll concrete services or maintain duplicate authoritative state.
+- Keep modules independently constructible and test collaborators through
+  their public contracts.
+- Continuous integration validation is required for every package change.
+
+## Source And Assembly Structure
+
+- Namespaces must follow capability ownership and folder structure.
+- Runtime, editor, integration, samples, and tests belong in separate assembly
+  definitions whenever their dependency or platform boundaries differ.
+- Package-to-package coupling must be visible in both `package.json` and
+  assembly-definition references.
+- A production source file must not exceed 500 lines. Files approaching the
+  limit should be reviewed for extraction of policy, presentation, storage,
+  platform integration, or orchestration responsibilities.
+- Generated sources may exceed the limit only when generation is documented
+  and the validator can identify them deterministically.
+- A coordinator may sequence several abstractions, but it must not also own
+  their parsing, storage, rendering, or platform-specific implementations.
+
+## State And Behavior
+
+- Each domain state has one authoritative owner.
+- Commands mutate through an explicit command port; observers consume a
+  read-only state port.
+- Animation presents a state transition and must not create an alternative
+  state path.
+- Resource ownership and disposal must be explicit, idempotent, and covered by
+  tests.
+- Compatibility adapters preserve old callers at boundaries while new domain
+  code depends on the preferred abstraction.
 
 ## Governance Sources
 
@@ -46,6 +107,21 @@ Before adding a helper or local utility:
 7. Do not create a new shared package without audit evidence.
 8. Do not add unrelated APIs to Common.
 9. Treat generated duplication output as candidates; only the reviewed decision ledger authorizes an extraction.
+
+## Review Standard
+
+Architecture reviews must check:
+
+1. The capability belongs to this package according to `capabilities.json`.
+2. Dependencies point toward the declared owner and do not create a cycle.
+3. Public consumers can depend on abstractions rather than concrete services.
+4. Construction is explicit and testable.
+5. Policies are pure where practical and side effects stay at boundaries.
+6. State has one owner and changes are observable.
+7. Strategies replace branching where behavior is genuinely interchangeable.
+8. Namespace, folder, and assembly-definition boundaries agree.
+9. Production files stay within the 500-line responsibility limit.
+10. Tests cover contracts, lifecycle/disposal, and important state transitions.
 
 ## Logging
 

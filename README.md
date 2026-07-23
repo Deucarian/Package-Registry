@@ -45,7 +45,10 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 
 ## Architecture / Contributor Notes
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) defines practical package roles and reuse rules.
+- [ARCHITECTURE.md](ARCHITECTURE.md) is the single canonical architecture
+  standard inherited by every cataloged Deucarian package through shared
+  validation; the package-agent template links here instead of maintaining
+  local copies.
 - [CAPABILITY_OWNERSHIP.md](CAPABILITY_OWNERSHIP.md) lists owner packages for shared capabilities.
 - [DISTRIBUTION_POLICY.md](DISTRIBUTION_POLICY.md) defines active Git-only package distribution.
 - [RELEASE_POLICY.md](RELEASE_POLICY.md) defines deferred npm/tag/release policy and workflow requirements.
