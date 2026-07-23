@@ -13,16 +13,16 @@ once.
 ## Summary
 
 - Repositories: 48
-- Fully compliant repositories: 1
+- Fully compliant repositories: 2
 
 | Metric | Count |
 | --- | --- |
 | RefactorBacklog | 93 |
-| SetupRequired | 46 |
+| SetupRequired | 45 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 44 |
+| MissingCanonicalArchitectureReference | 43 |
 | MissingSharedArchitectureValidation | 2 |
 | ProductionFileExceedsLineLimit | 93 |
 
@@ -36,8 +36,8 @@ once.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | SetupRequired | No | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | RefactorBacklog | Yes | Yes | 10 | 1 | 2 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | SetupRequired | No | No | 14 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 10 | 1 | 1 | 0 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | SetupRequired | No | Yes | 7 | 1 | 0 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 7 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | SetupRequired | No | Yes | 2 | 1 | 0 | 0 |
 | Common | com.deucarian.common | SetupRequired | No | Yes | 2 | 3 | 0 | 0 |
 | Core-State | com.deucarian.core-state | SetupRequired | No | Yes | 10 | 1 | 0 | 0 |
@@ -97,8 +97,7 @@ once.
 | Build-Pipeline | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Build-Pipeline | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 892 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| CameraNavigation-InputSystem-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Combat | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Common | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Core-State | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
