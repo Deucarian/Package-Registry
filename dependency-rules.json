@@ -40,6 +40,7 @@
         "com.deucarian.api",
         "com.deucarian.attacks",
         "com.deucarian.build-pipeline",
+        "com.deucarian.camera-navigation.input-system-integration",
         "com.deucarian.diagnostics",
         "com.deucarian.idle-progression",
         "com.deucarian.object-loading",
