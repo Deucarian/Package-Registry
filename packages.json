@@ -271,7 +271,7 @@
       "ecosystemGroup": "Runtime Services",
       "overviewOrder": 35,
       "description": "Typed media loading, explicit resource leases, latest-request coordination, and Unity audio/video playback adapters.",
-      "iconKey": "clapperboard",
+      "iconKey": "play",
       "stableUrl": "https://github.com/Deucarian/Media.git#main",
       "developmentUrl": "https://github.com/Deucarian/Media.git#develop",
       "dependencies": [
