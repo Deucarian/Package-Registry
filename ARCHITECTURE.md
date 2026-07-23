@@ -29,6 +29,9 @@ architecture-compliance pass.
   mapping, and state calculations.
 - Isolate mutations, Unity object ownership, I/O, networking, logging, and
   other side effects behind narrow adapters.
+- Avoid reflection unless a framework or compatibility boundary requires it
+  and no explicit contract is practical. Isolate unavoidable reflection behind
+  a narrow adapter, document the reason, and cover it with tests.
 - Use Strategy for interchangeable policy and platform behavior.
 - Use Observer-style events or streams for state propagation; consumers must
   not poll concrete services or maintain duplicate authoritative state.
@@ -117,11 +120,13 @@ Architecture reviews must check:
 3. Public consumers can depend on abstractions rather than concrete services.
 4. Construction is explicit and testable.
 5. Policies are pure where practical and side effects stay at boundaries.
-6. State has one owner and changes are observable.
-7. Strategies replace branching where behavior is genuinely interchangeable.
-8. Namespace, folder, and assembly-definition boundaries agree.
-9. Production files stay within the 500-line responsibility limit.
-10. Tests cover contracts, lifecycle/disposal, and important state transitions.
+6. Reflection is absent unless a documented, tested framework or compatibility
+   boundary requires it behind a narrow adapter.
+7. State has one owner and changes are observable.
+8. Strategies replace branching where behavior is genuinely interchangeable.
+9. Namespace, folder, and assembly-definition boundaries agree.
+10. Production files stay within the 500-line responsibility limit.
+11. Tests cover contracts, lifecycle/disposal, and important state transitions.
 
 ## Logging
 
