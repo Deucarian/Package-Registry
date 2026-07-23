@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 22 |
 | Optional version-defined use | 1 |
-| Required and used | 93 |
+| Required and used | 96 |
 | Suite composition | 20 |
 | Test-only use | 11 |
 
@@ -68,6 +68,9 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Idle-Progression | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.IdleProgression -> Deucarian.GameplayFoundation; Test: Deucarian.IdleProgression.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | Idle-Progression | com.deucarian.progression | Required and used | Runtime production: Deucarian.IdleProgression -> Deucarian.Progression; Sample: Deucarian.IdleProgression.OfflineRewardExample -> Deucarian.Progression; Test: Deucarian.IdleProgression.Tests -> Deucarian.Progression | Deucarian.Progression | 0 |
 | Logging | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Logging.Editor -> Deucarian.Editor; Test: Deucarian.Logging.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Media | com.deucarian.common | Required and used | Runtime production: Deucarian.Media.Unity -> Deucarian.Common | Deucarian.Common | 0 |
+| Media-API-Integration | com.deucarian.api | Required and used | Runtime production: Deucarian.Media.APIIntegration -> Deucarian.API; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.API; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.API | Deucarian.API | 0 |
+| Media-API-Integration | com.deucarian.media | Required and used | Runtime production: Deucarian.Media.APIIntegration -> Deucarian.Media; Runtime production: Deucarian.Media.APIIntegration -> Deucarian.Media.Unity; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.Media; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.Media.Unity; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.Media; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.Media.Unity | Deucarian.Media, Deucarian.Media.Unity | 0 |
 | Object-Loading | com.deucarian.diagnostics | Optional version-defined use | Runtime production: Deucarian.ObjectLoading.Diagnostics -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED]; Test: Deucarian.ObjectLoading.Diagnostics.Tests -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED] | Deucarian.Diagnostics |  |
 | Object-Loading | com.deucarian.common | Required and used | Runtime production: Deucarian.ObjectLoading -> Deucarian.Common | Deucarian.Common | 0 |
 | Object-Loading | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectLoading -> Deucarian.Logging | Deucarian.Logging | 0 |

@@ -54,6 +54,9 @@ Schema version: 2
 | com.deucarian.idle-progression | com.deucarian.gameplay-foundation | 0.1.1 | Idle-Progression | Gameplay-Foundation |
 | com.deucarian.idle-progression | com.deucarian.progression | 0.1.1 | Idle-Progression | Progression |
 | com.deucarian.logging | com.deucarian.editor | 1.0.3 | Logging | Editor |
+| com.deucarian.media | com.deucarian.common | 0.2.1 | Media | Common |
+| com.deucarian.media.api-integration | com.deucarian.api | 1.1.3 | Media-API-Integration | API |
+| com.deucarian.media.api-integration | com.deucarian.media | 0.1.0 | Media-API-Integration | Media |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
 | com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.4 | ObjectLoading-API-Integration | API |
@@ -148,5 +151,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 8
+- Dependency version drift entries: 9
 - Registry dependency drift entries: 0

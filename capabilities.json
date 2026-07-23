@@ -55,6 +55,16 @@
       "ownerPackageId": "com.deucarian.object-loading"
     },
     {
+      "description": "Typed image, audio, video, text, and binary loading with explicit resource ownership and latest-request coordination.",
+      "id": "media-loading",
+      "ownerPackageId": "com.deucarian.media"
+    },
+    {
+      "description": "Media playback sessions, preparation lifecycle, playback state observation, and Unity audio/video adapters.",
+      "id": "media-playback",
+      "ownerPackageId": "com.deucarian.media"
+    },
+    {
       "description": "Generic keyed repositories, selection state, and repository primitives.",
       "id": "repository-state",
       "ownerPackageId": "com.deucarian.core-state"
