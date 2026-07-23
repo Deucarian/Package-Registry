@@ -79,6 +79,8 @@ DEBUG_FORBIDDEN_SYMBOLS = [
 COMMON_PACKAGE_ID = "com.deucarian.common"
 COMMON_LIFETIME_API = "Deucarian.Common.UnityObjectUtility.DestroySafely"
 COMMON_LIFETIME_API_SIGNATURE = "UnityObjectUtility.DestroySafely(UnityEngine.Object target)"
+CANONICAL_ARCHITECTURE_URL = "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+MAX_PRODUCTION_FILE_LINES = 500
 ACCEPTED_DEPENDENCY_CLASSIFICATIONS = {
     "RequiredAndUsed",
     "EditorOnlyUse",
@@ -122,6 +124,7 @@ JSON_OUTPUT_FILES = [
     "UNITY_OBJECT_LIFETIME_AUDIT.json",
     "DOCUMENTATION_DRIFT.json",
     "DEPENDENCY_USAGE_AUDIT.json",
+    "ARCHITECTURE_COMPLIANCE.json",
 ]
 MARKDOWN_OUTPUT_FILES = [
     "REUSE_AUDIT.md",
@@ -132,6 +135,7 @@ MARKDOWN_OUTPUT_FILES = [
     "DOCUMENTATION_DRIFT.md",
     "DEPENDENCY_USAGE_AUDIT.md",
     "EXTRACTION_CANDIDATES.md",
+    "ARCHITECTURE_COMPLIANCE.md",
 ]
 OUTPUT_FILES = JSON_OUTPUT_FILES + MARKDOWN_OUTPUT_FILES
 
@@ -1523,6 +1527,8 @@ def registry_audit_input_sha256(repo_root: Path) -> str:
     digest = hashlib.sha256()
     for relative_path in (
         ".github/workflows/package-registry-validation.yml",
+        "AGENTS_TEMPLATE.md",
+        "ARCHITECTURE.md",
         "Tools/Generate-DeucarianAudit.py",
         "capabilities.json",
         "dependency-rules.json",
@@ -1565,6 +1571,177 @@ def validate_repository_snapshot(
         errors.append(f"origin {branches.get('origin')!r} != {spec.get('canonicalUrl')!r}")
     if errors:
         raise RuntimeError(f"Invalid authoritative snapshot {repo_root.name}: " + "; ".join(errors))
+
+
+def build_architecture_compliance(
+    repositories: list[dict[str, Any]],
+    parsed_files: list[ParsedFile],
+    audit_root: Path,
+) -> dict[str, Any]:
+    parsed_by_repository: dict[str, list[ParsedFile]] = defaultdict(list)
+    for parsed in parsed_files:
+        parsed_by_repository[parsed.repo].append(parsed)
+
+    repository_results = []
+    findings = []
+    for repo in repositories:
+        repository_name = repo["name"]
+        repository_root = audit_root / repository_name
+        production_files = sorted(
+            (
+                parsed
+                for parsed in parsed_by_repository.get(repository_name, [])
+                if is_production_scope(parsed.scope) and not parsed.generated
+            ),
+            key=lambda parsed: parsed.relative_path,
+        )
+
+        if repository_name == "Package-Registry":
+            reference_path = repository_root / "ARCHITECTURE.md"
+        else:
+            reference_path = repository_root / "AGENTS.md"
+        reference_text = read_text(reference_path)
+        has_canonical_reference = CANONICAL_ARCHITECTURE_URL in reference_text
+        if not has_canonical_reference:
+            findings.append(
+                {
+                    "repository": repository_name,
+                    "packageId": repo.get("packageId"),
+                    "kind": "MissingCanonicalArchitectureReference",
+                    "disposition": "SetupRequired",
+                    "file": rel(reference_path, repository_root),
+                    "detail": f"Reference {CANONICAL_ARCHITECTURE_URL} from the repository agent guidance.",
+                }
+            )
+
+        workflow_root = repository_root / ".github" / "workflows"
+        workflow_paths = sorted(workflow_root.glob("*.y*ml")) if workflow_root.is_dir() else []
+        workflow_text = "\n".join(read_text(path) for path in workflow_paths).lower()
+        has_shared_validation = (
+            "deucarian_package_validator.py" in workflow_text
+            or "deucarian-package-validation.yml" in workflow_text
+        )
+        if not has_shared_validation:
+            findings.append(
+                {
+                    "repository": repository_name,
+                    "packageId": repo.get("packageId"),
+                    "kind": "MissingSharedArchitectureValidation",
+                    "disposition": "SetupRequired",
+                    "file": ".github/workflows",
+                    "detail": "Run the shared Deucarian package validator in continuous integration.",
+                }
+            )
+
+        oversized_files = []
+        unowned_files = []
+        for parsed in production_files:
+            line_count = len(parsed.text.splitlines())
+            if line_count > MAX_PRODUCTION_FILE_LINES:
+                record = {
+                    "repository": repository_name,
+                    "packageId": repo.get("packageId"),
+                    "kind": "ProductionFileExceedsLineLimit",
+                    "disposition": "RefactorBacklog",
+                    "file": parsed.relative_path,
+                    "scope": parsed.scope,
+                    "assembly": parsed.assembly,
+                    "lineCount": line_count,
+                    "lineLimit": MAX_PRODUCTION_FILE_LINES,
+                    "detail": f"Extract responsibilities until the production file is at most {MAX_PRODUCTION_FILE_LINES} lines.",
+                }
+                findings.append(record)
+                oversized_files.append(
+                    {
+                        "file": parsed.relative_path,
+                        "lineCount": line_count,
+                        "scope": parsed.scope,
+                        "assembly": parsed.assembly,
+                    }
+                )
+            if not parsed.assembly:
+                record = {
+                    "repository": repository_name,
+                    "packageId": repo.get("packageId"),
+                    "kind": "ProductionFileWithoutAssemblyOwner",
+                    "disposition": "SetupRequired",
+                    "file": parsed.relative_path,
+                    "scope": parsed.scope,
+                    "detail": "Place production code beneath an explicit runtime or editor assembly definition.",
+                }
+                findings.append(record)
+                unowned_files.append(parsed.relative_path)
+
+        test_assemblies = sorted(
+            asmdef.get("name", "")
+            for asmdef in repo.get("asmdefs", [])
+            if is_test_asmdef(asmdef) and asmdef.get("name")
+        )
+        has_test_assembly = bool(test_assemblies)
+        if production_files and not has_test_assembly:
+            findings.append(
+                {
+                    "repository": repository_name,
+                    "packageId": repo.get("packageId"),
+                    "kind": "ProductionPackageWithoutTestAssembly",
+                    "disposition": "ReviewRequired",
+                    "file": "deucarian-package.json",
+                    "detail": "Document equivalent contract coverage or add an isolated test assembly.",
+                }
+            )
+
+        repository_findings = [finding for finding in findings if finding["repository"] == repository_name]
+        dispositions = {finding["disposition"] for finding in repository_findings}
+        if "SetupRequired" in dispositions:
+            status = "SetupRequired"
+        elif "RefactorBacklog" in dispositions:
+            status = "RefactorBacklog"
+        elif "ReviewRequired" in dispositions:
+            status = "ReviewRequired"
+        else:
+            status = "Compliant"
+
+        repository_results.append(
+            {
+                "repository": repository_name,
+                "packageId": repo.get("packageId"),
+                "status": status,
+                "canonicalReference": {
+                    "path": rel(reference_path, repository_root),
+                    "url": CANONICAL_ARCHITECTURE_URL,
+                    "present": has_canonical_reference,
+                },
+                "sharedValidationPresent": has_shared_validation,
+                "productionFileCount": len(production_files),
+                "testAssemblies": test_assemblies,
+                "oversizedProductionFiles": oversized_files,
+                "productionFilesWithoutAssemblyOwner": unowned_files,
+            }
+        )
+
+    findings.sort(
+        key=lambda item: (
+            item["repository"],
+            item["kind"],
+            -int(item.get("lineCount", 0)),
+            item.get("file", ""),
+        )
+    )
+    return {
+        "schemaVersion": 1,
+        "standard": {
+            "url": CANONICAL_ARCHITECTURE_URL,
+            "maxProductionFileLines": MAX_PRODUCTION_FILE_LINES,
+        },
+        "summary": {
+            "repositoryCount": len(repository_results),
+            "compliantRepositoryCount": sum(item["status"] == "Compliant" for item in repository_results),
+            "findingsByKind": summarize_by(findings, "kind"),
+            "findingsByDisposition": summarize_by(findings, "disposition"),
+        },
+        "repositories": repository_results,
+        "findings": findings,
+    }
 
 
 def build_report(args: argparse.Namespace) -> dict[str, Any]:
@@ -1740,6 +1917,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
         )
     documentation_records.sort(key=lambda item: (item["repository"], item["kind"], item.get("file", ""), item.get("dependency", "")))
     dependency_usage_records.sort(key=lambda item: (item["repository"], item.get("dependency", item.get("assemblyReference", ""))))
+    architecture_compliance = build_architecture_compliance(repositories, parsed_files, audit_root)
 
     edges = []
     versions_by_pkg = {repo["packageId"]: repo["packageVersion"] for repo in repositories if repo.get("packageId")}
@@ -1850,6 +2028,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "findings": dependency_usage_records,
             "summary": summarize_by(dependency_usage_records, "classification"),
         },
+        "architectureCompliance": architecture_compliance,
         "dependencyGraph": {"edges": sorted(edges, key=lambda e: (e.get("from") or "", e.get("to") or "")), "cycles": detect_cycles(edges)},
         "drift": {"dependencyVersionDrift": sorted(version_drifts, key=lambda x: (x["repo"], x["dependency"])), "registryDependencyDrift": sorted(registry_drifts, key=lambda x: x["repo"])},
         "capabilityMatrix": capability_matrix,
@@ -2232,6 +2411,7 @@ def write_artifacts(report: dict[str, Any], output_root: Path, formats: str = "a
         write_json(output_root / "UNITY_OBJECT_LIFETIME_AUDIT.json", report["unityObjectLifetime"])
         write_json(output_root / "DOCUMENTATION_DRIFT.json", report["documentationDrift"])
         write_json(output_root / "DEPENDENCY_USAGE_AUDIT.json", report["dependencyUsage"])
+        write_json(output_root / "ARCHITECTURE_COMPLIANCE.json", report["architectureCompliance"])
 
     if not md_enabled:
         return
@@ -2244,6 +2424,7 @@ def write_artifacts(report: dict[str, Any], output_root: Path, formats: str = "a
     write_doc_drift_md(report, output_root / "DOCUMENTATION_DRIFT.md")
     write_dependency_usage_md(report, output_root / "DEPENDENCY_USAGE_AUDIT.md")
     write_extraction_candidates_md(report, output_root / "EXTRACTION_CANDIDATES.md")
+    write_architecture_compliance_md(report, output_root / "ARCHITECTURE_COMPLIANCE.md")
 
 
 def write_reuse_audit(report: dict[str, Any], path: Path) -> None:
@@ -2497,6 +2678,69 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
     )
 
 
+def write_architecture_compliance_md(report: dict[str, Any], path: Path) -> None:
+    compliance = report["architectureCompliance"]
+    summary = compliance["summary"]
+    repository_rows = [
+        [
+            item["repository"],
+            item["packageId"] or "",
+            item["status"],
+            "Yes" if item["canonicalReference"]["present"] else "No",
+            "Yes" if item["sharedValidationPresent"] else "No",
+            item["productionFileCount"],
+            len(item["testAssemblies"]),
+            len(item["oversizedProductionFiles"]),
+            len(item["productionFilesWithoutAssemblyOwner"]),
+        ]
+        for item in compliance["repositories"]
+    ]
+    finding_rows = [
+        [
+            finding["repository"],
+            finding["kind"],
+            finding["disposition"],
+            finding.get("file", ""),
+            finding.get("lineCount", ""),
+            finding.get("lineLimit", ""),
+            finding["detail"],
+        ]
+        for finding in compliance["findings"]
+    ]
+    path.write_text(
+        f"""# Architecture Compliance
+
+Schema version: {compliance['schemaVersion']}
+
+Canonical standard: {compliance['standard']['url']}
+
+This report separates required repository setup from the existing refactor
+backlog. Setup findings should be corrected immediately. Existing production
+files above {compliance['standard']['maxProductionFileLines']} lines are
+tracked as refactor work rather than making every current package fail CI at
+once.
+
+## Summary
+
+- Repositories: {summary['repositoryCount']}
+- Fully compliant repositories: {summary['compliantRepositoryCount']}
+
+{metric_table(summary['findingsByDisposition'])}
+
+{metric_table(summary['findingsByKind'])}
+
+## Repository Status
+
+{md_table(['Repository', 'Package', 'Status', 'Architecture reference', 'Shared validation', 'Production files', 'Test assemblies', 'Oversized files', 'Unowned files'], repository_rows)}
+
+## Findings
+
+{md_table(['Repository', 'Kind', 'Disposition', 'File', 'Lines', 'Limit', 'Action'], finding_rows)}
+""",
+        encoding="utf-8",
+    )
+
+
 def write_extraction_candidates_md(report: dict[str, Any], path: Path) -> None:
     rows = [
         [
@@ -2665,6 +2909,7 @@ def main() -> int:
         "lifetimeOccurrences": len(report["unityObjectLifetime"]["occurrences"]),
         "documentationDrift": len(report["documentationDrift"]["findings"]),
         "dependencyUsageFindings": len(report["dependencyUsage"]["findings"]),
+        "architectureFindings": len(report["architectureCompliance"]["findings"]),
         "cycles": len(report["dependencyGraph"]["cycles"]),
     }, indent=2, sort_keys=True))
     return 0
