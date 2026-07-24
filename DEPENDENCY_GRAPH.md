@@ -40,6 +40,13 @@ Schema version: 2
 | com.deucarian.camera-navigation | com.deucarian.editor | 1.0.5 | Camera-Navigation | Editor |
 | com.deucarian.camera-navigation.input-system-integration | com.deucarian.camera-navigation | 0.2.5 | CameraNavigation-InputSystem-Integration | Camera-Navigation |
 | com.deucarian.combat | com.deucarian.gameplay-foundation | 0.1.1 | Combat | Gameplay-Foundation |
+| com.deucarian.command-routing | com.deucarian.diagnostics | 0.1.4 | Command-Routing | Diagnostics |
+| com.deucarian.command-routing | com.deucarian.editor | 1.0.5 | Command-Routing | Editor |
+| com.deucarian.command-routing | com.deucarian.logging | 1.0.2 | Command-Routing | Logging |
+| com.deucarian.command-routing.udp-integration | com.deucarian.command-routing | 0.1.0 | Command-Routing-UDP-Integration | Command-Routing |
+| com.deucarian.command-routing.udp-integration | com.deucarian.diagnostics | 0.1.4 | Command-Routing-UDP-Integration | Diagnostics |
+| com.deucarian.command-routing.udp-integration | com.deucarian.editor | 1.0.5 | Command-Routing-UDP-Integration | Editor |
+| com.deucarian.command-routing.udp-integration | com.deucarian.logging | 1.0.2 | Command-Routing-UDP-Integration | Logging |
 | com.deucarian.defense-games | com.deucarian.combat | 0.1.1 | Defense-Games | Combat |
 | com.deucarian.defense-games | com.deucarian.encounters | 0.1.1 | Defense-Games | Encounters |
 | com.deucarian.defense-games | com.deucarian.gameplay-foundation | 0.1.1 | Defense-Games | Gameplay-Foundation |
@@ -86,7 +93,7 @@ Schema version: 2
 | com.deucarian.selection-suite | com.deucarian.ui-binding.core-state-integration | 1.0.4 | Selection-Suite | UIBinding-CoreState-Integration |
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
 | com.deucarian.session.api-integration | com.deucarian.api | 1.1.4 | Session-API-Integration | API |
-| com.deucarian.session.api-integration | com.deucarian.session | 1.0.5 | Session-API-Integration | Session |
+| com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -151,5 +158,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 9
+- Dependency version drift entries: 10
 - Registry dependency drift entries: 0

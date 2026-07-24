@@ -12,8 +12,8 @@ once.
 
 ## Summary
 
-- Repositories: 50
-- Fully compliant repositories: 34
+- Repositories: 52
+- Fully compliant repositories: 36
 
 | Metric | Count |
 | --- | --- |
@@ -33,9 +33,11 @@ once.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | RefactorBacklog | Yes | Yes | 10 | 1 | 2 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 15 | 1 | 1 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 26 | 1 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 7 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
+| Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 27 | 1 | 0 | 0 |
+| Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Common | com.deucarian.common | Compliant | Yes | Yes | 2 | 3 | 0 | 0 |
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |

@@ -267,6 +267,103 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                 result["details"]["architectureStandard"]["url"],
             )
 
+    def test_production_logging_requires_logging_dependency(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Runtime" / "UsesLogging.cs",
+                """
+                using Deucarian.Logging;
+                public sealed class UsesLogging
+                {
+                    private static readonly DLog Log =
+                        DLog.For("Alpha");
+                }
+                """,
+            )
+            package_path = fixture.package / "package.json"
+            package = json.loads(
+                package_path.read_text(encoding="utf-8")
+            )
+            package["dependencies"] = {}
+            write_json(package_path, package)
+            config_path = (
+                fixture.package / "deucarian-package.json"
+            )
+            config = json.loads(
+                config_path.read_text(encoding="utf-8")
+            )
+            config["requiredDependencies"] = []
+            write_json(config_path, config)
+
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "production logging requires" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_editor_surface_requires_editor_dependency(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Editor" / "AlphaWindow.cs",
+                """
+                using UnityEditor;
+                public sealed class AlphaWindow : EditorWindow {}
+                """,
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "editor surfaces require" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_operational_package_requires_diagnostics_provider(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            config_path = (
+                fixture.package / "deucarian-package.json"
+            )
+            config = json.loads(
+                config_path.read_text(encoding="utf-8")
+            )
+            config["operationalPackage"] = True
+            write_json(config_path, config)
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "operational packages require" in error
+                    for error in result["errors"]
+                )
+            )
+            self.assertTrue(
+                any(
+                    "must implement an IDiagnosticProvider" in error
+                    for error in result["errors"]
+                )
+            )
+
     def test_package_validation_requires_canonical_architecture_document(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))

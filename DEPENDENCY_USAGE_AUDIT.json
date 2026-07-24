@@ -1614,6 +1614,302 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.4",
+      "dependency": "com.deucarian.diagnostics",
+      "packageId": "com.deucarian.command-routing",
+      "referencedAssemblies": [
+        "Deucarian.Diagnostics"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.CommandRouting.asmdef",
+          "assembly": "Deucarian.CommandRouting",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.CommandRouting.Tests.asmdef",
+          "assembly": "Deucarian.CommandRouting.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.command-routing",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.0.2",
+      "dependency": "com.deucarian.logging",
+      "packageId": "com.deucarian.command-routing",
+      "referencedAssemblies": [
+        "Deucarian.Logging"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Logging",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.CommandRouting.asmdef",
+          "assembly": "Deucarian.CommandRouting",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.command-routing",
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "referencedAssemblies": [
+        "Deucarian.CommandRouting"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.UdpIntegration.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.CommandRouting.UdpIntegration.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/UDP Command Host/Deucarian.CommandRouting.UdpIntegration.Samples.Host.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Samples.Host",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.CommandRouting.UdpIntegration.Tests.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing-UDP-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.4",
+      "dependency": "com.deucarian.diagnostics",
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "referencedAssemblies": [
+        "Deucarian.Diagnostics"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.UdpIntegration.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.CommandRouting.UdpIntegration.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.CommandRouting.UdpIntegration.Tests.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing-UDP-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.CommandRouting.UdpIntegration.Editor.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing-UDP-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.0.2",
+      "dependency": "com.deucarian.logging",
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "referencedAssemblies": [
+        "Deucarian.Logging"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.CommandRouting.UdpIntegration.asmdef",
+          "assembly": "Deucarian.CommandRouting.UdpIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Command-Routing-UDP-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.defense-games",
@@ -3839,7 +4135,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.5",
+      "declaredVersion": "1.0.6",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -7119,9 +7415,9 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 22,
+    "EditorOnlyUse": 24,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 96,
+    "RequiredAndUsed": 101,
     "SuiteComposition": 20,
     "TestOnlyUse": 11
   }
