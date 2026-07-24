@@ -71,6 +71,13 @@ CANONICAL_ARCHITECTURE_URL = (
 )
 PACKAGE_KINDS = {"Library", "Tool", "Integration", "Suite", "Template"}
 SAMPLE_POLICIES = {"compiled-example", "playable-scene", "tool", "composition", "template"}
+LOGGING_USAGE_RE = re.compile(
+    r"\b(?:Deucarian\.Logging|DLog|DeucarianLog)\b"
+)
+EDITOR_SURFACE_RE = re.compile(
+    r"\b(?:EditorWindow|SettingsProvider|CustomEditor|MenuItem)\b"
+)
+DIAGNOSTIC_PROVIDER_RE = re.compile(r"\bIDiagnosticProvider\b")
 
 
 class ValidationError(Exception):
@@ -257,6 +264,12 @@ class Validator:
         self.validate_generated_files(root)
         self.validate_release_workflow_policy(root)
         self.validate_architecture_calls(package_id, config, root)
+        self.validate_ecosystem_policy_dependencies(
+            package_id,
+            dependencies,
+            config,
+            root,
+        )
         self.validate_capability_ownership(package_id, config)
         self.validate_registry_entry(package_id, dependencies)
         if package_id == "com.deucarian.common":
@@ -479,6 +492,89 @@ class Validator:
             helper_matches = [m.group("name") for m in HELPER_DEFINITION_RE.finditer(text)]
             if helper_matches and package_id != "com.deucarian.common":
                 self.fail(f"{package_id}: copied lifetime helper {helper_matches[0]} in {relative}.")
+
+    def validate_ecosystem_policy_dependencies(
+        self,
+        package_id: str,
+        dependencies: dict[str, str],
+        config: dict[str, Any],
+        root: Path,
+    ) -> None:
+        dependency_ids = set(dependencies)
+        production_sources: list[tuple[str, str]] = []
+        for path in self.iter_files(root):
+            if path.suffix != ".cs":
+                continue
+            relative = path.relative_to(root).as_posix()
+            if self.path_scope(relative) in {"test", "sample"}:
+                continue
+            production_sources.append(
+                (relative, self.text(path))
+            )
+
+        uses_logging = any(
+            LOGGING_USAGE_RE.search(text)
+            for _, text in production_sources
+        )
+        if (
+            uses_logging
+            and package_id
+            not in {
+                "com.deucarian.bootstrap",
+                "com.deucarian.logging",
+            }
+            and "com.deucarian.logging" not in dependency_ids
+        ):
+            self.fail(
+                f"{package_id}: production logging requires "
+                "com.deucarian.logging as a hard dependency."
+            )
+
+        owns_editor_surface = any(
+            self.path_scope(relative) == "editor"
+            and EDITOR_SURFACE_RE.search(text)
+            for relative, text in production_sources
+        )
+        if (
+            owns_editor_surface
+            and package_id
+            not in {
+                "com.deucarian.bootstrap",
+                "com.deucarian.editor",
+            }
+            and "com.deucarian.editor" not in dependency_ids
+        ):
+            self.fail(
+                f"{package_id}: package-owned editor surfaces require "
+                "com.deucarian.editor as a hard dependency."
+            )
+
+        operational = config.get("operationalPackage")
+        if operational is not None and not isinstance(
+            operational,
+            bool,
+        ):
+            self.fail(
+                f"{package_id}: operationalPackage must be boolean."
+            )
+            return
+        if (
+            operational is True
+            and package_id != "com.deucarian.diagnostics"
+        ):
+            if "com.deucarian.diagnostics" not in dependency_ids:
+                self.fail(
+                    f"{package_id}: operational packages require "
+                    "com.deucarian.diagnostics as a hard dependency."
+                )
+            if not any(
+                DIAGNOSTIC_PROVIDER_RE.search(text)
+                for _, text in production_sources
+            ):
+                self.fail(
+                    f"{package_id}: operational packages must implement "
+                    "an IDiagnosticProvider."
+                )
 
     def path_scope(self, relative: str) -> str:
         if relative.startswith("Tests") or "/Tests/" in f"/{relative}":

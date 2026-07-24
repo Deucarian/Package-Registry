@@ -45,6 +45,21 @@
       "ownerPackageId": "com.deucarian.api"
     },
     {
+      "description": "Transport-independent command envelopes, explicit handler strategies, middleware, dispatch, JSON protocol, secret redaction, bounded command history, and command diagnostics.",
+      "id": "command-routing",
+      "ownerPackageId": "com.deucarian.command-routing"
+    },
+    {
+      "description": "Command protocol codecs, canonical JSON envelope mapping, result encoding, metadata, and secret-safe protocol boundaries.",
+      "id": "command-protocol",
+      "ownerPackageId": "com.deucarian.command-routing"
+    },
+    {
+      "description": "UDP command transport lifecycle, Unity-context delivery, safe responses, and Python interoperability for Deucarian Command Routing.",
+      "id": "command-routing-udp-transport",
+      "ownerPackageId": "com.deucarian.command-routing.udp-integration"
+    },
+    {
       "description": "Authenticated session lifecycle, restore, refresh, logout, and persistence contracts.",
       "id": "session",
       "ownerPackageId": "com.deucarian.session"

@@ -23,9 +23,11 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 1 | 0 |
 | Bootstrap | com.deucarian.bootstrap | 1.1.5 | 2021.3 | no | clean | (none) | 2 | 1 |
 | Build-Pipeline | com.deucarian.build-pipeline | 0.2.2 | 6000.0 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 53 |
-| Camera-Navigation | com.deucarian.camera-navigation | 0.2.5 | 2022.3 | no | clean | com.deucarian.common, com.deucarian.editor | 4 | 117 |
+| Camera-Navigation | com.deucarian.camera-navigation | 0.2.10 | 2022.3 | no | clean | com.deucarian.common, com.deucarian.editor | 4 | 153 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.5 | 2022.3 | no | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 59 |
 | Combat | com.deucarian.combat | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation | 3 | 218 |
+| Command-Routing | com.deucarian.command-routing | 0.1.0 | 2021.3 | no | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 121 |
+| Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | 0.1.1 | 2021.3 | no | clean | com.deucarian.command-routing, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 39 |
 | Common | com.deucarian.common | 0.2.1 | 2021.3 | no | clean | (none) | 5 | 6 |
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | no | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
@@ -51,8 +53,8 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Projectiles | com.deucarian.projectiles | 0.2.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.combat, com.deucarian.attacks, com.deucarian.world-navigation, com.deucarian.world-spawning | 3 | 120 |
 | Run-Upgrades | com.deucarian.run-upgrades | 0.1.1 | 6000.3 | no | clean | com.deucarian.gameplay-foundation, com.deucarian.attacks, com.deucarian.weapon-systems, com.deucarian.editor, com.deucarian.game-content-authoring | 5 | 172 |
 | Selection-Suite | com.deucarian.selection-suite | 1.0.4 | 2021.3 | no | clean | com.deucarian.object-selection.core-state-integration, com.deucarian.core-state, com.deucarian.ui-binding.core-state-integration, com.deucarian.ui-binding, com.deucarian.object-selection | 1 | 0 |
-| Session | com.deucarian.session | 1.0.5 | 2021.3 | no | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 65 |
-| Session-API-Integration | com.deucarian.session.api-integration | 1.0.5 | 2021.3 | no | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
+| Session | com.deucarian.session | 1.0.6 | 2021.3 | no | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 67 |
+| Session-API-Integration | com.deucarian.session.api-integration | 1.0.6 | 2021.3 | no | clean | com.deucarian.api, com.deucarian.session | 3 | 3 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | 0.1.2 | 6000.3 | no | clean | com.deucarian.attacks, com.deucarian.auto-defense, com.deucarian.auto-defense-suite, com.deucarian.combat, com.deucarian.common, com.deucarian.defense-games, com.deucarian.editor, com.deucarian.encounters, com.deucarian.game-content-authoring, com.deucarian.gameplay-foundation, com.deucarian.idle-progression, com.deucarian.monetization, com.deucarian.persistence, com.deucarian.progression, com.deucarian.projectiles, com.deucarian.run-upgrades, com.deucarian.weapon-systems, com.deucarian.world-navigation, com.deucarian.world-spawning, com.unity.modules.particlesystem | 4 | 1068 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | 0.1.1 | 6000.3 | no | clean | com.deucarian.common, com.deucarian.combat, com.deucarian.game-content-authoring, com.deucarian.gameplay-foundation, com.deucarian.run-upgrades, com.unity.inputsystem, com.unity.modules.particlesystem | 5 | 539 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | 0.1.1 | 6000.3 | no | clean | com.deucarian.attacks, com.deucarian.common, com.deucarian.combat, com.deucarian.encounters, com.deucarian.game-content-authoring, com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.projectiles, com.deucarian.run-upgrades, com.deucarian.weapon-systems, com.deucarian.world-spawning, com.unity.modules.particlesystem | 5 | 1153 |
@@ -72,21 +74,21 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 
 | Metric | Count |
 | --- | --- |
-| Repositories | 50 |
-| Parsed methods/bodies analyzed | 12780 |
-| Exact AST clone groups | 69 |
-| Normalized structural clone groups | 109 |
+| Repositories | 52 |
+| Parsed methods/bodies analyzed | 12946 |
+| Exact AST clone groups | 70 |
+| Normalized structural clone groups | 111 |
 | Same-symbol semantic candidates | 29 |
-| Runtime public API symbols | 7479 |
-| Editor public API symbols | 2229 |
-| Test public symbols excluded from production API | 3260 |
-| Sample public symbols excluded from production API | 268 |
-| Internal/private production symbols | 9764 |
-| Public API symbols missing XML documentation | 8210 |
+| Runtime public API symbols | 7673 |
+| Editor public API symbols | 2233 |
+| Test public symbols excluded from production API | 3313 |
+| Sample public symbols excluded from production API | 276 |
+| Internal/private production symbols | 9865 |
+| Public API symbols missing XML documentation | 8406 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 550 |
+| Unity object lifetime records | 560 |
 | Documentation drift findings | 28 |
-| Dependency usage findings | 150 |
+| Dependency usage findings | 157 |
 | Dependency cycles | 0 |
 
 ## Extraction Position
