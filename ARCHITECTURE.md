@@ -138,7 +138,12 @@ Architecture reviews must check:
 
 ## Logging
 
-- Production code outside Logging should use the package-owned logging facade.
+- Any package that emits package-owned production logs must declare
+  `com.deucarian.logging` as a required dependency and route those logs through
+  its facade. Logging is not an optional consumer choice once a package owns
+  log-producing behavior.
+- Packages that do not emit production logs should not add Logging merely for
+  symmetry.
 - Direct Unity Debug calls are forbidden outside approved Logging implementation points.
 - Bootstrap may remain self-contained and local for first-time setup.
 - Diagnostics may observe/report diagnostics locally, but it does not own Logging.
@@ -155,7 +160,29 @@ Architecture reviews must check:
 
 - Diagnostics owns local snapshots, providers, export, overlays, and diagnostics views.
 - Diagnostics does not own telemetry/uploading.
-- Optional diagnostics integration from other packages must remain optional/version-defined unless a hard dependency is explicitly approved.
+- Operational packages must declare `com.deucarian.diagnostics` as a required
+  dependency and automatically register sanitized providers for their live
+  operational instances. Operational packages own runtime state, I/O,
+  networking, async work, connections, queues, caches, resource lifecycles, or
+  other behavior whose health cannot be understood from pure return values
+  alone.
+- Pure policy/value packages, passive data contracts, editor-only authoring
+  packages, integration-free adapters with no owned operational state, and
+  implementation-free Suite packages may omit Diagnostics.
+- Diagnostics must expose health and lifecycle metadata without retaining
+  secrets or application payloads. Registration and disposal are explicit,
+  idempotent, and tested.
+- A package must not offer diagnostics as a consumer-facing toggle when the
+  package itself meets the operational definition above.
+
+## Editor Surfaces
+
+- Any package that owns a custom editor window, settings provider, inspector,
+  wizard, simulator, or diagnostics surface must declare
+  `com.deucarian.editor` as a required dependency.
+- Editor surfaces consume the Editor package's public chrome, workbench,
+  styles, icons, status rows, and workflow controls. They never copy theme
+  values or maintain a second package-local visual language.
 
 ## Adding A Capability
 

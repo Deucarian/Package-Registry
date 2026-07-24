@@ -765,22 +765,6 @@
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.session",
-      "repository": "Session"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "repository": "Template-Game-Idle-Auto-Defense"
     },
@@ -1645,7 +1629,7 @@
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 15,
+      "productionFileCount": 26,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
@@ -1686,6 +1670,40 @@
       "status": "SetupRequired",
       "testAssemblies": [
         "Deucarian.Combat.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.command-routing",
+      "productionFileCount": 27,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Command-Routing",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.CommandRouting.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "productionFileCount": 9,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Command-Routing-UDP-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.CommandRouting.UdpIntegration.Tests"
       ]
     },
     {
@@ -2334,7 +2352,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2343,7 +2361,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.Tests"
       ]
@@ -2351,7 +2369,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2360,7 +2378,7 @@
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session-API-Integration",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.APIIntegration.Tests"
       ]
@@ -2920,16 +2938,16 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 4,
+    "compliantRepositoryCount": 8,
     "findingsByDisposition": {
       "RefactorBacklog": 93,
-      "SetupRequired": 45
+      "SetupRequired": 43
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 43,
+      "MissingCanonicalArchitectureReference": 41,
       "MissingSharedArchitectureValidation": 2,
       "ProductionFileExceedsLineLimit": 93
     },
-    "repositoryCount": 50
+    "repositoryCount": 52
   }
 }
