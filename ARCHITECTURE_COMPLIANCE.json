@@ -1177,7 +1177,7 @@
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 15,
+      "productionFileCount": 26,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
@@ -1218,6 +1218,40 @@
       "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Combat.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.command-routing",
+      "productionFileCount": 27,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Command-Routing",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.CommandRouting.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": true,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "productionFileCount": 9,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Command-Routing-UDP-Integration",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
+      "testAssemblies": [
+        "Deucarian.CommandRouting.UdpIntegration.Tests"
       ]
     },
     {
@@ -2395,13 +2429,13 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 34,
+    "compliantRepositoryCount": 36,
     "findingsByDisposition": {
       "RefactorBacklog": 84
     },
     "findingsByKind": {
       "ProductionFileExceedsLineLimit": 84
     },
-    "repositoryCount": 50
+    "repositoryCount": 52
   }
 }

@@ -36,10 +36,15 @@ Allowed dependency shape:
 
 ## Policies
 
-- Logging: <package-specific rule>
+- Logging: require `com.deucarian.logging` whenever the package emits
+  package-owned production logs; otherwise state that the package emits none.
 - Common: <package-specific rule>
-- Editor UI: <package-specific rule>
-- Diagnostics: <package-specific rule>
+- Editor UI: require `com.deucarian.editor` for every package-owned custom
+  editor surface and consume its public styling/workflow APIs; otherwise state
+  that the package owns no editor surface.
+- Diagnostics: operational packages require `com.deucarian.diagnostics`,
+  automatically register sanitized providers, and dispose registrations
+  explicitly; otherwise state why the package is non-operational.
 - Testing: <package-specific rule>
 
 ## Validation

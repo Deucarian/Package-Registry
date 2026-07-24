@@ -60,6 +60,7 @@
       "description": "Packages whose longest canonical dependency path has 3 edges.",
       "packages": [
         "com.deucarian.defense-games",
+        "com.deucarian.command-routing",
         "com.deucarian.media.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
@@ -74,6 +75,7 @@
       "rank": 4,
       "description": "Packages whose longest canonical dependency path has 4 edges.",
       "packages": [
+        "com.deucarian.command-routing.udp-integration",
         "com.deucarian.selection-suite",
         "com.deucarian.weapon-systems"
       ]
@@ -124,6 +126,8 @@
     "No cyclic package dependencies.",
     "Runtime assemblies must not reference UnityEditor.",
     "Deucarian-owned editor surfaces consume com.deucarian.editor for shared visual shell, chrome, styles, icons, and workflow controls unless an explicit architecture exception applies.",
+    "Packages that emit package-owned production logs require com.deucarian.logging and use its facade.",
+    "Operational packages that own runtime state, I/O, async work, connections, queues, caches, or resource lifecycles require com.deucarian.diagnostics and register sanitized providers.",
     "Common cannot depend on Logging, Editor, or domain packages.",
     "Logging cannot depend on Diagnostics or telemetry.",
     "Integration packages depend on every integration target plus only explicitly used foundations.",

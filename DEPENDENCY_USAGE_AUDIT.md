@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 22 |
+| Editor-only use | 24 |
 | Optional version-defined use | 1 |
-| Required and used | 96 |
+| Required and used | 101 |
 | Suite composition | 20 |
 | Test-only use | 11 |
 
@@ -54,6 +54,13 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Camera-Navigation | com.deucarian.editor | Editor-only use | Editor production: Deucarian.CameraNavigation.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation | Required and used | Runtime production: Deucarian.CameraNavigation.InputSystemIntegration -> Deucarian.CameraNavigation; Test: Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode -> Deucarian.CameraNavigation | Deucarian.CameraNavigation | 0 |
 | Combat | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.Combat -> Deucarian.GameplayFoundation; Sample: Deucarian.Combat.CombatSandbox -> Deucarian.GameplayFoundation; Test: Deucarian.Combat.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
+| Command-Routing | com.deucarian.diagnostics | Required and used | Editor production: Deucarian.CommandRouting.Editor -> Deucarian.Diagnostics; Runtime production: Deucarian.CommandRouting -> Deucarian.Diagnostics; Test: Deucarian.CommandRouting.Tests -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
+| Command-Routing | com.deucarian.editor | Editor-only use | Editor production: Deucarian.CommandRouting.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Command-Routing | com.deucarian.logging | Required and used | Editor production: Deucarian.CommandRouting.Editor -> Deucarian.Logging; Runtime production: Deucarian.CommandRouting -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Command-Routing-UDP-Integration | com.deucarian.command-routing | Required and used | Editor production: Deucarian.CommandRouting.UdpIntegration.Editor -> Deucarian.CommandRouting; Runtime production: Deucarian.CommandRouting.UdpIntegration -> Deucarian.CommandRouting; Sample: Deucarian.CommandRouting.UdpIntegration.Samples.Host -> Deucarian.CommandRouting; Test: Deucarian.CommandRouting.UdpIntegration.Tests -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
+| Command-Routing-UDP-Integration | com.deucarian.diagnostics | Required and used | Editor production: Deucarian.CommandRouting.UdpIntegration.Editor -> Deucarian.Diagnostics; Runtime production: Deucarian.CommandRouting.UdpIntegration -> Deucarian.Diagnostics; Test: Deucarian.CommandRouting.UdpIntegration.Tests -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
+| Command-Routing-UDP-Integration | com.deucarian.editor | Editor-only use | Editor production: Deucarian.CommandRouting.UdpIntegration.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Command-Routing-UDP-Integration | com.deucarian.logging | Required and used | Runtime production: Deucarian.CommandRouting.UdpIntegration -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Defense-Games | com.deucarian.combat | Required and used | Runtime production: Deucarian.DefenseGames -> Deucarian.Combat; Sample: Deucarian.DefenseGames.Samples -> Deucarian.Combat; Test: Deucarian.DefenseGames.PlayModeTests -> Deucarian.Combat; Test: Deucarian.DefenseGames.Tests -> Deucarian.Combat | Deucarian.Combat | 0 |
 | Defense-Games | com.deucarian.encounters | Required and used | Runtime production: Deucarian.DefenseGames -> Deucarian.Encounters; Sample: Deucarian.DefenseGames.Samples -> Deucarian.Encounters; Test: Deucarian.DefenseGames.PlayModeTests -> Deucarian.Encounters; Test: Deucarian.DefenseGames.Tests -> Deucarian.Encounters | Deucarian.Encounters | 0 |
 | Defense-Games | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.DefenseGames -> Deucarian.GameplayFoundation; Sample: Deucarian.DefenseGames.Samples -> Deucarian.GameplayFoundation; Test: Deucarian.DefenseGames.PlayModeTests -> Deucarian.GameplayFoundation; Test: Deucarian.DefenseGames.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
