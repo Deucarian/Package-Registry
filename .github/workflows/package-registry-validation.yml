@@ -56,7 +56,7 @@ jobs:
             --repository-root . \
             --config deucarian-package.json
 
-      - name: Audit check
+      - name: Provision organization snapshots and check canonical audit
         shell: bash
         env:
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
@@ -69,4 +69,16 @@ jobs:
             --authoritative \
             --format all \
             --provision \
+            --check
+
+      - name: Check organization AOT safety inventory
+        shell: bash
+        env:
+          AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
+        run: |
+          python Tools/Generate-DeucarianAotAudit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --output-root . \
+            --organization Deucarian \
+            --ref "$AUDIT_REF" \
             --check
