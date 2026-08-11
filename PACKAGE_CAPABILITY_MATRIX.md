@@ -4,6 +4,7 @@ Schema version: 2
 
 | Capability | Owner package | Owner repository | Current package.json consumers |
 | --- | --- | --- | --- |
+| aot-stripping-safety | com.deucarian.build-pipeline | Build-Pipeline | (none) |
 | api-http-client | com.deucarian.api | API | com.deucarian.media.api-integration, com.deucarian.object-loading.api-integration, com.deucarian.session.api-integration |
 | build-pipeline | com.deucarian.build-pipeline | Build-Pipeline | (none) |
 | camera-navigation | com.deucarian.camera-navigation | Camera-Navigation | com.deucarian.camera-navigation.input-system-integration |
@@ -13,6 +14,7 @@ Schema version: 2
 | diagnostics | com.deucarian.diagnostics | Diagnostics | com.deucarian.command-routing, com.deucarian.command-routing.udp-integration |
 | editor-shell | com.deucarian.editor | Editor | com.deucarian.attacks, com.deucarian.build-pipeline, com.deucarian.camera-navigation, com.deucarian.command-routing, com.deucarian.command-routing.udp-integration, com.deucarian.diagnostics, com.deucarian.game-content-authoring, com.deucarian.logging, com.deucarian.package-installer, com.deucarian.pointer-capture, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.theming, com.deucarian.weapon-systems |
 | game-content-authoring | com.deucarian.game-content-authoring | Game-Content-Authoring | com.deucarian.attacks, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.weapon-systems |
+| generated-json-serialization | (pending) | Package-Registry | (none) |
 | logging | com.deucarian.logging | Logging | com.deucarian.api, com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.udp-integration, com.deucarian.diagnostics, com.deucarian.object-loading, com.deucarian.object-selection, com.deucarian.object-selection.core-state-integration, com.deucarian.package-installer, com.deucarian.session, com.deucarian.theming, com.deucarian.ui-flow |
 | media-loading | com.deucarian.media | Media | com.deucarian.media.api-integration |
 | media-playback | com.deucarian.media | Media | com.deucarian.media.api-integration |

@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 500 |
+| direct Unity API call | 495 |
 | helper call site | 62 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 563 |
+| Allowed | 558 |
 
 ## Production Semantic Comparison
 
@@ -33,7 +33,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | --- | --- |
 | Decision | KeepLocal |
 | Reasoning | Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction. |
-| Test repositories with direct cleanup | 32 |
+| Test repositories with direct cleanup | 31 |
 
 ## Findings
 
@@ -84,14 +84,9 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Auto-Defense-Suite | Samples~/BasicAutoDefense/BasicAutoDefenseSample.cs | 375 | Sample | helper call site | Destroy | Allowed | The imported composition sample owns its transient demonstration prefabs and root object and tears them down when the sample controller is destroyed. |
 | Auto-Defense-Suite | Samples~/BasicAutoDefense/BasicAutoDefenseSample.cs | 376 | Sample | helper call site | Destroy | Allowed | The imported composition sample owns its transient demonstration prefabs and root object and tears them down when the sample controller is destroyed. |
 | Auto-Defense-Suite | Samples~/BasicAutoDefense/BasicAutoDefenseSample.cs | 377 | Sample | helper call site | Destroy | Allowed | The imported composition sample owns its transient demonstration prefabs and root object and tears them down when the sample controller is destroyed. |
-| Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 300 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 324 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 393 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 426 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Bootstrap | Tests/Editor/DeucarianBootstrapTests.cs | 457 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Build-Pipeline | Editor/DeucarianBuildProfileUtility.cs | 96 | Editor production | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Disposes the transient non-asset BuildProfile instance returned by Unity's editor-only profile factory. |
-| Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 114 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 152 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 126 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 164 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraFramingTargetTests.cs | 53 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraFramingTargetTests.cs | 102 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraFramingTargetTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -279,3 +274,8 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Idle-Auto-Defense | Tests/PlayMode/IdleAutoDefenseTemplatePlayModeTests.cs | 690 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Movement-FPS | Runtime/Actors/MovementFpsPickupActor.cs | 49 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Movement-FPS | Runtime/Bootstrap/MovementFpsTemplateController.cs | 300 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Template-Game-Movement-FPS | Runtime/Bootstrap/MovementFpsTemplateController.cs | 805 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Template-Game-Movement-FPS | Runtime/Combat/MovementFpsProjectileActor.cs | 41 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Template-Game-Movement-FPS | Runtime/Combat/MovementFpsProjectileActor.cs | 54 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 37 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Template-Game-Movement-FPS | Tests/PlayMode/MovementFpsTemplatePlayModeTests.cs | 64 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |

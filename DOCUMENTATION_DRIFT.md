@@ -9,7 +9,7 @@ Schema version: 1
 | Historical changelog reference | 12 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 8 |
-| Review required | 7 |
+| Review required | 8 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -19,6 +19,7 @@ Historical changelog references preserve released history and are not rewrite re
 | --- | --- | --- | --- | --- | --- |
 | API | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Bootstrap | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Build-Pipeline | Review required | README.md |  |  |  |
 | Defense-Games | Review required | Documentation~/CrossGenre.md |  |  |  |
 | Diagnostics | Review required | README.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |

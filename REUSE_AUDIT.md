@@ -21,8 +21,8 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Attacks | com.deucarian.attacks | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.combat, com.deucarian.editor, com.deucarian.game-content-authoring | 5 | 389 |
 | Auto-Defense | com.deucarian.auto-defense | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.defense-games, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems | 4 | 112 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 1 | 0 |
-| Bootstrap | com.deucarian.bootstrap | 1.1.5 | 2021.3 | yes | clean | (none) | 2 | 1 |
-| Build-Pipeline | com.deucarian.build-pipeline | 0.2.2 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 53 |
+| Bootstrap | com.deucarian.bootstrap | 1.2.0 | 2021.3 | yes | clean | (none) | 2 | 1 |
+| Build-Pipeline | com.deucarian.build-pipeline | 0.4.0 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 66 |
 | Camera-Navigation | com.deucarian.camera-navigation | 0.2.10 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.editor | 4 | 153 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.5 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 59 |
 | Combat | com.deucarian.combat | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 218 |
@@ -45,7 +45,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.6 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 30 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.82 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Package-Installer | com.deucarian.package-installer | 1.1.83 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.1 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.2 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 57 |
@@ -75,19 +75,19 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 52 |
-| Parsed methods/bodies analyzed | 12974 |
+| Parsed methods/bodies analyzed | 13237 |
 | Exact AST clone groups | 70 |
 | Normalized structural clone groups | 111 |
 | Same-symbol semantic candidates | 29 |
 | Runtime public API symbols | 7673 |
-| Editor public API symbols | 2233 |
-| Test public symbols excluded from production API | 3339 |
+| Editor public API symbols | 2246 |
+| Test public symbols excluded from production API | 3579 |
 | Sample public symbols excluded from production API | 276 |
-| Internal/private production symbols | 9872 |
-| Public API symbols missing XML documentation | 8406 |
+| Internal/private production symbols | 10148 |
+| Public API symbols missing XML documentation | 8413 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 563 |
-| Documentation drift findings | 28 |
+| Unity object lifetime records | 558 |
+| Documentation drift findings | 29 |
 | Dependency usage findings | 157 |
 | Dependency cycles | 0 |
 
