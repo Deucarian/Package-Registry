@@ -30,9 +30,20 @@
       "ownerPackageId": "com.deucarian.editor"
     },
     {
-      "description": "Editor-only build workflow registration, Build Profile policies and drift validation, build execution, artifact manifests, and build-manager presentation.",
+      "description": "Editor-only build workflow registration, Build Profile policy and drift validation, final-player AOT inspection, evidence verification, generated linker input, artifact manifests, and headless CI entry points.",
       "id": "build-pipeline",
       "ownerPackageId": "com.deucarian.build-pipeline"
+    },
+    {
+      "description": "Final-player reachability inspection, runtime reflection and AOT evidence verification, exact generated linker preservation, and strict stripping gates.",
+      "id": "aot-stripping-safety",
+      "ownerPackageId": "com.deucarian.build-pipeline"
+    },
+    {
+      "description": "Reflection-free generated JSON codecs, compile-time contract validation, analyzers, and serialization evidence for Unity player DTOs.",
+      "id": "generated-json-serialization",
+      "ownerPackageId": null,
+      "status": "Proposed owner com.deucarian.serialization; not installable until its repository and release channels exist."
     },
     {
       "description": "Shared game content authoring editor window, provider registration/discovery, validation display, asset path helpers, and creation-result UI.",
@@ -40,7 +51,7 @@
       "ownerPackageId": "com.deucarian.game-content-authoring"
     },
     {
-      "description": "General HTTP/API request construction, transport, serialization, authentication, and cancellation.",
+      "description": "General HTTP/API request construction, transport, authentication, cancellation, response handling, and serializer integration.",
       "id": "api-http-client",
       "ownerPackageId": "com.deucarian.api"
     },
