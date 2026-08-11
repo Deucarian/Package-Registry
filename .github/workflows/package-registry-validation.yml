@@ -51,7 +51,7 @@ jobs:
             --bootstrap-root "$bootstrap_root" \
             --check
 
-      - name: Provision organization snapshots and check canonical audit
+      - name: Provision organization snapshots and regenerate canonical audit
         shell: bash
         env:
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
@@ -64,7 +64,7 @@ jobs:
             --authoritative \
             --format all \
             --provision \
-            --check
+            --write
 
       - name: Generate organization AOT safety inventory
         shell: bash
@@ -78,19 +78,33 @@ jobs:
             --ref "$AUDIT_REF" \
             --write
 
-      - name: Commit feature-branch AOT inventory
+      - name: Commit feature-branch generated audits
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feature/aot-safety-governance'
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- AOT_SAFETY_AUDIT.json AOT_SAFETY_AUDIT.md; then
-            echo 'AOT safety inventory is already current.'
+          generated=(
+            DUPLICATION_REPORT.json
+            UNITY_OBJECT_LIFETIME_AUDIT.json
+            DOCUMENTATION_DRIFT.json
+            ARCHITECTURE_COMPLIANCE.json
+            REUSE_AUDIT.md
+            PACKAGE_CAPABILITY_MATRIX.md
+            UNITY_OBJECT_LIFETIME_AUDIT.md
+            DOCUMENTATION_DRIFT.md
+            EXTRACTION_CANDIDATES.md
+            ARCHITECTURE_COMPLIANCE.md
+            AOT_SAFETY_AUDIT.json
+            AOT_SAFETY_AUDIT.md
+          )
+          if git diff --quiet -- "${generated[@]}"; then
+            echo 'Generated audit artifacts are already current.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add AOT_SAFETY_AUDIT.json AOT_SAFETY_AUDIT.md
-          git commit -m 'Generate organization AOT safety inventory'
+          git add "${generated[@]}"
+          git commit -m 'Refresh canonical and AOT safety audit artifacts'
           git push origin HEAD:feature/aot-safety-governance
 
       - name: Validate Package Registry config
