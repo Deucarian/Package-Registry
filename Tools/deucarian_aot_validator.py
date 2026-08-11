@@ -36,6 +36,7 @@ class Rule:
     description: str
     pattern: re.Pattern[str]
     prerequisite: str = ""
+    source_mode: str = "stripped"
 
 
 @dataclass(frozen=True)
@@ -86,9 +87,9 @@ RULES = (
         "reflection-based-newtonsoft",
         "Newtonsoft object mapping discovers constructors and members through reflection.",
         re.compile(
-            r"\b(?:JsonConvert\s*\.\s*(?:SerializeObject|DeserializeObject|PopulateObject)|"
-            r"JsonSerializer\s*\.\s*(?:Create|Serialize|Deserialize|Populate)|"
-            r"(?:JToken|JObject|JArray)\s*\.\s*(?:ToObject|FromObject))\s*\("
+            r"(?:\bJsonConvert\s*\.\s*(?:SerializeObject|DeserializeObject|PopulateObject)\s*\(|"
+            r"\bJsonSerializer\s*\.\s*(?:Create|Serialize|Deserialize|Populate)\s*\(|"
+            r"\.\s*(?:ToObject|FromObject)\s*(?:<[^>]+>)?\s*\()"
         ),
         "newtonsoft",
     ),
@@ -117,30 +118,28 @@ RULES = (
         "unity-string-dispatch",
         "Unity string-based dispatch hides the target method or component from static reachability.",
         re.compile(
-            r"\.\s*(?:SendMessage|BroadcastMessage|SendMessageUpwards|Invoke|"
-            r"InvokeRepeating|StartCoroutine|StopCoroutine|GetComponent|AddComponent)\s*\("
+            r"(?:\.\s*(?:SendMessage|BroadcastMessage|SendMessageUpwards)\s*\(|"
+            r"\.\s*(?:Invoke|InvokeRepeating|StartCoroutine|StopCoroutine|GetComponent|AddComponent)\s*"
+            r"\(\s*(?:\$@|@\$|\$|@)?\")"
         ),
         "unity",
+        "comments-only",
     ),
 )
 RULES_BY_ID = {rule.id: rule for rule in RULES}
-
-
-class AotValidationError(Exception):
-    pass
 
 
 class AotValidator:
     def __init__(self, repository_root: Path, config_path: Path | None = None):
         self.root = repository_root.resolve()
         self.config_path = (config_path or self.root / "deucarian-package.json").resolve()
-        self.config = self.read_json(self.config_path)
-        self.package_id = str(self.config.get("packageId") or self.root.name)
         self.errors: list[str] = []
         self.warnings: list[str] = []
         self.findings: list[Finding] = []
         self.suppressed: list[Finding] = []
         self.used_exception_indexes: set[int] = set()
+        self.config = self.read_json(self.config_path)
+        self.package_id = str(self.config.get("packageId") or self.root.name)
         self.policy = self.read_policy()
 
     def validate(self) -> dict[str, Any]:
@@ -148,8 +147,7 @@ class AotValidator:
             self.errors.append(f"Repository root does not exist: {self.root}")
             return self.result()
 
-        runtime_files = list(self.runtime_source_files())
-        for path in runtime_files:
+        for path in self.runtime_source_files():
             self.scan_source(path)
         self.scan_linker_files()
         self.apply_exceptions()
@@ -167,7 +165,7 @@ class AotValidator:
             if index not in self.used_exception_indexes:
                 self.warnings.append(
                     f"{self.package_id}: stale AOT exception does not match a finding: "
-                    f"{exception['file']} [{exception['rule']}]."
+                    f"{exception['file']} [{exception['rule']}] {exception['symbol']!r}."
                 )
 
         return self.result()
@@ -198,12 +196,15 @@ class AotValidator:
                 continue
             file_path = normalize_path(str(item.get("file") or ""))
             rule = str(item.get("rule") or "")
+            symbol = normalize_symbol(str(item.get("symbol") or ""))
             strategy = str(item.get("strategy") or "")
             reason = str(item.get("reason") or "").strip()
             if not file_path or any(character in file_path for character in "*?["):
                 self.errors.append(f"{label}.file must be one exact repository-relative path.")
             if rule not in RULES_BY_ID and rule != "manual-link-xml":
                 self.errors.append(f"{label}.rule is unknown: {rule!r}.")
+            if not symbol:
+                self.errors.append(f"{label}.symbol is required and must match the reported symbol exactly.")
             if strategy not in AOT_STRATEGIES:
                 self.errors.append(
                     f"{label}.strategy must be one of {sorted(AOT_STRATEGIES)}."
@@ -236,6 +237,7 @@ class AotValidator:
                 {
                     "file": file_path,
                     "rule": rule,
+                    "symbol": symbol,
                     "strategy": strategy,
                     "reason": reason,
                     "preserveTypes": preserve_types,
@@ -274,35 +276,38 @@ class AotValidator:
     def scan_source(self, path: Path) -> None:
         relative = normalize_path(path.relative_to(self.root).as_posix())
         source = self.text(path)
-        text = strip_comments_and_literals(source)
+        stripped = strip_comments_and_literals(source)
+        comments_only = strip_comments(source)
         prerequisites = {
             "reflection": bool(
                 re.search(
                     r"\busing\s+System\.Reflection\s*;|\b(?:MethodInfo|PropertyInfo|FieldInfo|ConstructorInfo|MemberInfo)\b",
-                    text,
+                    stripped,
                 )
             ),
             "newtonsoft": bool(
-                re.search(r"\busing\s+Newtonsoft\.Json(?:\.Linq)?\s*;|\bNewtonsoft\.Json\.", text)
+                re.search(r"\busing\s+Newtonsoft\.Json(?:\.Linq)?\s*;|\bNewtonsoft\.Json\.", stripped)
             ),
             "system-text-json": bool(
-                re.search(r"\busing\s+System\.Text\.Json\s*;|\bSystem\.Text\.Json\.", text)
+                re.search(r"\busing\s+System\.Text\.Json\s*;|\bSystem\.Text\.Json\.", stripped)
             ),
             "expressions": bool(
-                re.search(r"\busing\s+System\.Linq\.Expressions\s*;|\bSystem\.Linq\.Expressions\.", text)
+                re.search(r"\busing\s+System\.Linq\.Expressions\s*;|\bSystem\.Linq\.Expressions\.", stripped)
             ),
             "unity": bool(
-                re.search(r"\busing\s+UnityEngine\s*;|\bUnityEngine\.", text)
+                re.search(r"\busing\s+UnityEngine\s*;|\bUnityEngine\.", stripped)
             ),
         }
 
-        seen: set[tuple[str, int]] = set()
+        seen: set[tuple[str, int, str]] = set()
         for rule in RULES:
             if rule.prerequisite and not prerequisites.get(rule.prerequisite, False):
                 continue
-            for match in rule.pattern.finditer(text):
-                line = text.count("\n", 0, match.start()) + 1
-                key = (rule.id, line)
+            scan_text = comments_only if rule.source_mode == "comments-only" else stripped
+            for match in rule.pattern.finditer(scan_text):
+                line = scan_text.count("\n", 0, match.start()) + 1
+                symbol = normalize_symbol(match.group(0))
+                key = (rule.id, line, symbol)
                 if key in seen:
                     continue
                 seen.add(key)
@@ -312,7 +317,7 @@ class AotValidator:
                         description=rule.description,
                         file=relative,
                         line=line,
-                        symbol=normalize_symbol(match.group(0)),
+                        symbol=symbol,
                     )
                 )
 
@@ -335,7 +340,11 @@ class AotValidator:
     def apply_exceptions(self) -> None:
         for finding in self.findings:
             for index, exception in enumerate(self.policy["exceptions"]):
-                if exception["file"] == finding.file and exception["rule"] == finding.rule:
+                if (
+                    exception["file"] == finding.file
+                    and exception["rule"] == finding.rule
+                    and exception["symbol"] == finding.symbol
+                ):
                     self.suppressed.append(finding)
                     self.used_exception_indexes.add(index)
                     break
@@ -393,11 +402,15 @@ def is_skipped(path: Path, root: Path) -> bool:
     return any(part in SKIP_DIRS for part in path.relative_to(root).parts)
 
 
-def strip_comments_and_literals(text: str) -> str:
+def strip_comments(text: str) -> str:
     text = re.sub(r"/\*.*?\*/", lambda match: preserve_newlines(match.group(0)), text, flags=re.S)
-    text = re.sub(r"//[^\n]*", " ", text)
+    return re.sub(r"//[^\n]*", " ", text)
+
+
+def strip_comments_and_literals(text: str) -> str:
+    text = strip_comments(text)
     text = re.sub(
-        r'\$?@?"(?:""|\\.|[^"\\])*"',
+        r'(?:\$@|@\$|\$|@)?"(?:""|\\.|[^"\\])*"',
         lambda match: preserve_newlines(match.group(0)),
         text,
         flags=re.S,
@@ -418,8 +431,8 @@ def normalize_symbol(value: str) -> str:
     return re.sub(r"\s+", "", value).rstrip("(")
 
 
-def finding_key(finding: Finding) -> tuple[str, int, str]:
-    return (finding.file, finding.line, finding.rule)
+def finding_key(finding: Finding) -> tuple[str, int, str, str]:
+    return (finding.file, finding.line, finding.rule, finding.symbol)
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
