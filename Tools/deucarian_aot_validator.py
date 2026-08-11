@@ -120,8 +120,8 @@ RULES = (
         "unity-string-dispatch",
         "Unity string-based dispatch hides the target method or component from static reachability.",
         re.compile(
-            r"(?:\.\s*(?:SendMessage|BroadcastMessage|SendMessageUpwards)\s*\(|"
-            r"\.\s*(?:Invoke|InvokeRepeating|StartCoroutine|StopCoroutine|GetComponent|AddComponent)\s*"
+            r"(?:(?:\.\s*|\b)(?:SendMessage|BroadcastMessage|SendMessageUpwards)\s*\(|"
+            r"(?:\.\s*|\b)(?:Invoke|InvokeRepeating|StartCoroutine|StopCoroutine|GetComponent|AddComponent)\s*"
             r"\(\s*(?:\$@|@\$|\$|@)?\")"
         ),
         "unity",
