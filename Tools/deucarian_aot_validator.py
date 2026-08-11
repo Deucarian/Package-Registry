@@ -87,8 +87,10 @@ RULES = (
         "reflection-based-newtonsoft",
         "Newtonsoft object mapping discovers constructors and members through reflection.",
         re.compile(
-            r"(?:\bJsonConvert\s*\.\s*(?:SerializeObject|DeserializeObject|PopulateObject)\s*\(|"
-            r"\bJsonSerializer\s*\.\s*(?:Create|Serialize|Deserialize|Populate)\s*\(|"
+            r"(?:\bJsonConvert\s*\.\s*(?:SerializeObject|DeserializeObject|PopulateObject)"
+            r"\s*(?:<[^>]+>)?\s*\(|"
+            r"\bJsonSerializer\s*\.\s*(?:Create|Serialize|Deserialize|Populate)"
+            r"\s*(?:<[^>]+>)?\s*\(|"
             r"\.\s*(?:ToObject|FromObject)\s*(?:<[^>]+>)?\s*\()"
         ),
         "newtonsoft",
