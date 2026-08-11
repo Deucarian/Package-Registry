@@ -10,6 +10,9 @@ on:
   schedule:
     - cron: "17 3 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   validate-registry:
     name: Validate registry governance artifacts
@@ -19,7 +22,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'schedule' && 'develop' || github.ref }}
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || (github.event_name == 'schedule' && 'develop' || github.ref) }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -47,15 +51,6 @@ jobs:
             --bootstrap-root "$bootstrap_root" \
             --check
 
-      - name: Validate Package Registry config
-        shell: bash
-        run: |
-          python Tools/deucarian_package_validator.py \
-            --ci \
-            --registry-root . \
-            --repository-root . \
-            --config deucarian-package.json
-
       - name: Provision organization snapshots and check canonical audit
         shell: bash
         env:
@@ -70,6 +65,42 @@ jobs:
             --format all \
             --provision \
             --check
+
+      - name: Generate organization AOT safety inventory
+        shell: bash
+        env:
+          AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
+        run: |
+          python Tools/Generate-DeucarianAotAudit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --output-root . \
+            --organization Deucarian \
+            --ref "$AUDIT_REF" \
+            --write
+
+      - name: Commit feature-branch AOT inventory
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feature/aot-safety-governance'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- AOT_SAFETY_AUDIT.json AOT_SAFETY_AUDIT.md; then
+            echo 'AOT safety inventory is already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add AOT_SAFETY_AUDIT.json AOT_SAFETY_AUDIT.md
+          git commit -m 'Generate organization AOT safety inventory'
+          git push origin HEAD:feature/aot-safety-governance
+
+      - name: Validate Package Registry config
+        shell: bash
+        run: |
+          python Tools/deucarian_package_validator.py \
+            --ci \
+            --registry-root . \
+            --repository-root . \
+            --config deucarian-package.json
 
       - name: Check organization AOT safety inventory
         shell: bash
