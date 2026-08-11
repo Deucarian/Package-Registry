@@ -245637,7 +245637,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "455ba8af6d0f9484c156c12a751ca45f11db720f34ccde4c43908265263a5609",
+        "auditInputSha256": "8afd923a3f9606effdbb0561210e969e9b41a6a68df238b99d7927513f24f26e",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
