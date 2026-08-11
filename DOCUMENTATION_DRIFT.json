@@ -13,6 +13,12 @@
       "repository": "Bootstrap"
     },
     {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.build-pipeline",
+      "repository": "Build-Pipeline"
+    },
+    {
       "file": "Documentation~/CrossGenre.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.defense-games",
@@ -173,6 +179,6 @@
     "HistoricalChangelogReference": 12,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 8,
-    "ReviewRequired": 7
+    "ReviewRequired": 8
   }
 }

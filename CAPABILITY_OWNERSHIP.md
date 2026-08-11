@@ -7,7 +7,9 @@
 | Logging facade and Unity console sink | `com.deucarian.logging` |
 | Common Unity object lifetime helper | `com.deucarian.common` |
 | Editor chrome, icons, resources, editor UI helpers | `com.deucarian.editor` |
-| HTTP/API transport, request building, response parsing | `com.deucarian.api` |
+| Build workflows, final-player AOT inspection, generated linker evidence, artifact manifests, headless build APIs | `com.deucarian.build-pipeline` |
+| Reflection-free generated JSON serialization | Proposed `com.deucarian.serialization`; not installable yet |
+| HTTP/API transport, request building, response parsing, serializer integration | `com.deucarian.api` |
 | Session lifecycle and persistence contracts | `com.deucarian.session` |
 | Object/content/AssetBundle loading lifecycle | `com.deucarian.object-loading` |
 | Generic repository and selection state primitives | `com.deucarian.core-state` |
@@ -17,7 +19,7 @@
 | Runtime themes, palettes, and adapters | `com.deucarian.theming` |
 | Local diagnostics providers, snapshots, export, overlays | `com.deucarian.diagnostics` |
 | Package install/update/remove and ecosystem visualization | `com.deucarian.package-installer` |
-| Registry metadata, dependency rules, audit, validation | Package Registry |
+| Registry metadata, dependency rules, AOT evidence governance, audit, validation | Package Registry |
 
 ## Ownership Rules
 
@@ -26,6 +28,35 @@
 - Integration packages may depend on their declared targets and small infrastructure packages they actually use.
 - Suite packages should express composition through dependencies and samples, not copied code.
 - Package Installer graph code is package-specific until an audit proves it belongs elsewhere.
+- Domain packages own source generation for their own runtime capability. Build Pipeline verifies neutral evidence; it does not absorb domain generators.
+- A proposed owner is not installable and must not be added as a dependency until its repository and release channels exist.
+
+## AOT And Stripping Boundary
+
+[AOT_SAFETY.md](AOT_SAFETY.md) defines the canonical runtime-dynamic-code contract.
+
+Build Pipeline owns:
+
+- Inspection of the actual managed player inputs.
+- Verification of package and project AOT evidence.
+- Exact generated linker descriptors.
+- Strict production build failure and manifest evidence.
+
+Build Pipeline does not own JSON codecs, command registries, dependency-injection factories, or other domain-generated runtime code. Those remain with their domain owner.
+
+Application-owned handwritten `link.xml` files are not an accepted architecture. Unavoidable compatibility boundaries declare exact types through the neutral evidence protocol.
+
+## Serialization Boundary
+
+The proposed `com.deucarian.serialization` package will own generated JSON codecs, compile-time contract diagnostics, and serialization AOT evidence.
+
+The first confirmed direct consumers are:
+
+- `com.deucarian.api`
+- `com.deucarian.persistence`
+- `com.deucarian.diagnostics`
+
+Command Routing remains independent while it uses explicit handler composition and low-level token parsing. Object Loading API Integration should move diagnostic export ownership to Diagnostics rather than take a Serialization dependency for one debug helper.
 
 ## Common Boundary
 
