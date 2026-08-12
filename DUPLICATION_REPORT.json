@@ -245651,7 +245651,9 @@
       "samples": [],
       "unity": null,
       "validationScripts": [
+        "Tools/deucarian_aot_validator.py",
         "Tools/deucarian_package_validator.py",
+        "Tools/tests/test_deucarian_aot_validator.py",
         "Tools/tests/test_deucarian_package_validator.py",
         "Tools/validate-deucarian-package.ps1",
         "Tools/validate-deucarian-package.sh"
