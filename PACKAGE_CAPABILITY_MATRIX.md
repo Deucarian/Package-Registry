@@ -8,9 +8,11 @@ Schema version: 2
 | api-http-client | com.deucarian.api | API | com.deucarian.media.api-integration, com.deucarian.object-loading.api-integration, com.deucarian.session.api-integration |
 | build-pipeline | com.deucarian.build-pipeline | Build-Pipeline | (none) |
 | camera-navigation | com.deucarian.camera-navigation | Camera-Navigation | com.deucarian.camera-navigation.input-system-integration |
+| activity-model-visualization | com.deucarian.activity-visualization | Activity-Visualization | (none) |
 | command-protocol | com.deucarian.command-routing | Command-Routing | com.deucarian.command-routing.udp-integration |
 | command-routing | com.deucarian.command-routing | Command-Routing | com.deucarian.command-routing.udp-integration |
 | command-routing-udp-transport | com.deucarian.command-routing.udp-integration | Command-Routing-UDP-Integration | (none) |
+| command-routing-webgl-transport | com.deucarian.command-routing.webgl-integration | Command-Routing-WebGL-Integration | (none) |
 | diagnostics | com.deucarian.diagnostics | Diagnostics | com.deucarian.command-routing, com.deucarian.command-routing.udp-integration |
 | editor-shell | com.deucarian.editor | Editor | com.deucarian.attacks, com.deucarian.build-pipeline, com.deucarian.camera-navigation, com.deucarian.command-routing, com.deucarian.command-routing.udp-integration, com.deucarian.diagnostics, com.deucarian.game-content-authoring, com.deucarian.logging, com.deucarian.package-installer, com.deucarian.pointer-capture, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.theming, com.deucarian.weapon-systems |
 | game-content-authoring | com.deucarian.game-content-authoring | Game-Content-Authoring | com.deucarian.attacks, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.weapon-systems |
@@ -32,6 +34,7 @@ Schema version: 2
 | ui-presentation-primitives | com.deucarian.ui | UI | (none) |
 | unity-object-lifetime | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.media, com.deucarian.object-loading, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.world-spawning, com.deucarian.xr-ui |
 | world-selection | com.deucarian.object-selection | Object-Selection | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite |
+| viewer-navigation-experience | com.deucarian.viewer-navigation | Viewer-Navigation | (none) |
 | xr-world-ui-controls | com.deucarian.xr-ui | XR-UI | com.deucarian.xr-ui.theming-integration |
 
 ## Notes
