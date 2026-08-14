@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-14",
   "architectureStandard": {
     "path": "ARCHITECTURE.md",
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
@@ -499,7 +499,7 @@
       "kind": "Library",
       "ecosystemGroup": "Experience & Interaction",
       "overviewOrder": 24,
-      "description": "Backend-neutral, deterministic Activity and Step membership planning with authoritative revision and visibility state.",
+      "description": "Backend-neutral, deterministic flat Activity membership planning with authoritative revision and visibility state.",
       "iconKey": "scan-eye",
       "stableUrl": "https://github.com/Deucarian/Activity-Visualization.git#main",
       "developmentUrl": "https://github.com/Deucarian/Activity-Visualization.git#develop",
@@ -1318,6 +1318,7 @@
       "dependencies": [
         "com.deucarian.api",
         "com.deucarian.build-pipeline",
+        "com.deucarian.camera-navigation",
         "com.deucarian.command-routing",
         "com.deucarian.command-routing.webgl-integration",
         "com.deucarian.common",

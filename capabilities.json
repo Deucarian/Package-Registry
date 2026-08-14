@@ -130,7 +130,7 @@
       "ownerPackageId": "com.deucarian.camera-navigation"
     },
     {
-      "description": "Deterministic Activity and Step membership planning, revision supersession, baseline restoration, and authoritative model-visibility state.",
+      "description": "Deterministic flat Activity membership planning, revision supersession, baseline restoration, and authoritative model-visibility state.",
       "id": "activity-model-visualization",
       "ownerPackageId": "com.deucarian.activity-visualization"
     },
