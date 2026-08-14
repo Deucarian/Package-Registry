@@ -15,6 +15,14 @@ from typing import Any, Sequence
 INSTALLER_PACKAGE_ID = "com.deucarian.package-installer"
 INSTALLER_CATALOG_PATH = Path("PackageRegistry.json")
 BOOTSTRAP_CATALOG_PATH = Path("Editor") / "PackageCatalogFallback.json"
+BOOTSTRAP_PACKAGE_IDS = (
+    INSTALLER_PACKAGE_ID,
+    "com.deucarian.activity-visualization",
+    "com.deucarian.command-routing.webgl-integration",
+    "com.deucarian.viewer-navigation",
+    "com.deucarian.web-viewer-suite",
+    "com.deucarian.template.viewer.web",
+)
 BOOTSTRAP_PACKAGE_FIELDS = (
     "id",
     "displayName",
@@ -115,9 +123,9 @@ def dependency_first_closure(
 
 def project_bootstrap_catalog(
     registry: dict[str, Any],
-    target_package_id: str = INSTALLER_PACKAGE_ID,
+    target_package_ids: Sequence[str] = BOOTSTRAP_PACKAGE_IDS,
 ) -> dict[str, Any]:
-    """Return Bootstrap's minimal dependency-first installer setup catalog."""
+    """Return Bootstrap's dependency-first setup and review-entry catalog."""
 
     if not isinstance(registry, dict):
         raise CatalogProjectionError("packages.json root must be an object.")
@@ -127,7 +135,15 @@ def project_bootstrap_catalog(
         raise CatalogProjectionError("packages.json must contain updatedAt.")
 
     packages_by_id = package_index(registry)
-    closure = dependency_first_closure(packages_by_id, target_package_id)
+    closure: list[dict[str, Any]] = []
+    included_ids: set[str] = set()
+    for target_package_id in target_package_ids:
+        for package in dependency_first_closure(packages_by_id, target_package_id):
+            package_id = package["id"]
+            if package_id in included_ids:
+                continue
+            included_ids.add(package_id)
+            closure.append(package)
     projected_packages: list[dict[str, Any]] = []
     for package in closure:
         package_id = package["id"]
