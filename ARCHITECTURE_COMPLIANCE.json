@@ -1,6 +1,14 @@
 {
   "findings": [
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.activity-visualization",
+      "repository": "Activity-Visualization"
+    },
+    {
       "assembly": "Deucarian.Attacks.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -95,6 +103,14 @@
       "packageId": "com.deucarian.camera-navigation",
       "repository": "Camera-Navigation",
       "scope": "Runtime production"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.command-routing.webgl-integration",
+      "repository": "Command-Routing-WebGL-Integration"
     },
     {
       "assembly": "Deucarian.Diagnostics.Editor",
@@ -829,6 +845,14 @@
       "scope": "Runtime production"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web"
+    },
+    {
       "assembly": "Deucarian.Theming.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -937,6 +961,14 @@
       "scope": "Runtime production"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.viewer-navigation",
+      "repository": "Viewer-Navigation"
+    },
+    {
       "assembly": "Deucarian.WeaponSystems.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -947,6 +979,14 @@
       "packageId": "com.deucarian.weapon-systems",
       "repository": "Weapon-Systems",
       "scope": "Editor production"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "repository": "Web-Viewer-Suite"
     },
     {
       "assembly": "Deucarian.XRUI",
@@ -998,6 +1038,23 @@
     }
   ],
   "repositories": [
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.activity-visualization",
+      "productionFileCount": 24,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Activity-Visualization",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.ActivityVisualization.Tests"
+      ]
+    },
     {
       "canonicalReference": {
         "path": "AGENTS.md",
@@ -1175,7 +1232,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.camera-navigation.input-system-integration",
-      "productionFileCount": 7,
+      "productionFileCount": 9,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "CameraNavigation-InputSystem-Integration",
       "sharedValidationPresent": true,
@@ -1233,6 +1290,23 @@
       "status": "Compliant",
       "testAssemblies": [
         "Deucarian.CommandRouting.UdpIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.command-routing.webgl-integration",
+      "productionFileCount": 11,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Command-Routing-WebGL-Integration",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.CommandRouting.WebGLIntegration.Tests"
       ]
     },
     {
@@ -2127,6 +2201,24 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.template.viewer.web",
+      "productionFileCount": 15,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Template-Viewer-Web",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "Deucarian.TemplateViewerWeb.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
@@ -2287,6 +2379,24 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.viewer-navigation",
+      "productionFileCount": 16,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Viewer-Navigation",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.ViewerNavigation.Tests.EditMode",
+        "Deucarian.ViewerNavigation.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
@@ -2307,6 +2417,21 @@
       "testAssemblies": [
         "Deucarian.WeaponSystems.Tests"
       ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.web-viewer-suite",
+      "productionFileCount": 0,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Web-Viewer-Suite",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": []
     },
     {
       "canonicalReference": {
@@ -2412,11 +2537,13 @@
   "summary": {
     "compliantRepositoryCount": 37,
     "findingsByDisposition": {
-      "RefactorBacklog": 83
+      "RefactorBacklog": 83,
+      "SetupRequired": 5
     },
     "findingsByKind": {
+      "MissingCanonicalArchitectureReference": 5,
       "ProductionFileExceedsLineLimit": 83
     },
-    "repositoryCount": 52
+    "repositoryCount": 57
   }
 }

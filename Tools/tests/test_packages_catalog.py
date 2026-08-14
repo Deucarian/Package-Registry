@@ -51,7 +51,6 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.camera-navigation",
                 "com.deucarian.command-routing",
                 "com.deucarian.command-routing.webgl-integration",
-                "com.deucarian.common",
                 "com.deucarian.diagnostics",
                 "com.deucarian.logging",
                 "com.deucarian.object-loading",
