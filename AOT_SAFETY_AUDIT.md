@@ -6,10 +6,10 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 ## Summary
 
-- Repositories scanned: **51**
-- Repositories with findings: **15**
-- Clean repositories: **36**
-- Unresolved findings: **53**
+- Repositories scanned: **56**
+- Repositories with findings: **17**
+- Clean repositories: **39**
+- Unresolved findings: **60**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -17,14 +17,15 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 | Rule | Count |
 | --- | ---: |
-| `reflection-based-newtonsoft` | 9 |
+| `reflection-based-newtonsoft` | 11 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 34 |
+| `runtime-type-discovery` | 39 |
 
 ## Repository Status
 
 | Package | Repository | Mode | Findings | Suppressed | Status |
 | --- | --- | --- | ---: | ---: | --- |
+| `com.deucarian.activity-visualization` | `Activity-Visualization` | `Audit` | 5 | 0 | Valid |
 | `com.deucarian.api` | `API` | `Audit` | 3 | 0 | Valid |
 | `com.deucarian.attacks` | `Attacks` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.auto-defense` | `Auto-Defense` | `Audit` | 0 | 0 | Valid |
@@ -36,6 +37,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.combat` | `Combat` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.command-routing` | `Command-Routing` | `Audit` | 3 | 0 | Valid |
 | `com.deucarian.command-routing.udp-integration` | `Command-Routing-UDP-Integration` | `Audit` | 2 | 0 | Valid |
+| `com.deucarian.command-routing.webgl-integration` | `Command-Routing-WebGL-Integration` | `Audit` | 2 | 0 | Valid |
 | `com.deucarian.common` | `Common` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.core-state` | `Core-State` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.defense-games` | `Defense-Games` | `Audit` | 0 | 0 | Valid |
@@ -65,19 +67,33 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
+| `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
 | `com.deucarian.ui` | `UI` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding` | `UI-Binding` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding.core-state-integration` | `UIBinding-CoreState-Integration` | `Audit` | 7 | 0 | Valid |
 | `com.deucarian.ui-flow` | `UI-FLow` | `Audit` | 2 | 0 | Valid |
+| `com.deucarian.viewer-navigation` | `Viewer-Navigation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.weapon-systems` | `Weapon-Systems` | `Audit` | 0 | 0 | Valid |
+| `com.deucarian.web-viewer-suite` | `Web-Viewer-Suite` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.world-navigation` | `World-Navigation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.world-spawning` | `World-Spawning` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.xr-ui` | `XR-UI` | `Audit` | 13 | 0 | Valid |
 | `com.deucarian.xr-ui.theming-integration` | `XR-UI-Theming-Integration` | `Audit` | 0 | 0 | Valid |
 
 ## Findings
+
+### `com.deucarian.activity-visualization`
+
+Repository: `Activity-Visualization`  
+Mode: `Audit`
+
+- `runtime-type-discovery` — `.GetType` at `Runtime/ActivityVisualizationStateOwner.Events.cs`:90 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ActivityVisualizationStateOwner.Events.cs`:187 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ActivityVisualizationStateOwner.cs`:185 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ActivityVisualizationStateOwner.cs`:254 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ActivityVisualizationStateOwner.cs`:290 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.api`
 
@@ -95,7 +111,7 @@ Mode: `Audit`
 
 - `runtime-type-discovery` — `.GetType` at `Runtime/CommandDispatcher.cs`:138 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.ToObject<T>` at `Runtime/CommandEnvelope.cs`:50 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/CommandTransportBridge.cs`:135 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/CommandTransportBridge.cs`:191 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.command-routing.udp-integration`
 
@@ -104,6 +120,14 @@ Mode: `Audit`
 
 - `runtime-type-discovery` — `.GetType` at `Runtime/UdpCommandTransport.cs`:249 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/UdpCommandTransport.cs`:252 (`Runtime type/member discovery must be generated or explicitly composed.`)
+
+### `com.deucarian.command-routing.webgl-integration`
+
+Repository: `Command-Routing-WebGL-Integration`  
+Mode: `Audit`
+
+- `reflection-based-newtonsoft` — `JsonConvert.DeserializeObject<WebGlInboundMessage>` at `Runtime/WebGlCommandTransport.cs`:165 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
+- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/WebGlCommandTransport.cs`:217 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 
 ### `com.deucarian.diagnostics`
 

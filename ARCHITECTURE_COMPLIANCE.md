@@ -12,21 +12,24 @@ once.
 
 ## Summary
 
-- Repositories: 52
+- Repositories: 57
 - Fully compliant repositories: 37
 
 | Metric | Count |
 | --- | --- |
 | RefactorBacklog | 83 |
+| SetupRequired | 5 |
 
 | Metric | Count |
 | --- | --- |
+| MissingCanonicalArchitectureReference | 5 |
 | ProductionFileExceedsLineLimit | 83 |
 
 ## Repository Status
 
 | Repository | Package | Status | Architecture reference | Shared validation | Production files | Test assemblies | Oversized files | Unowned files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
 | API | com.deucarian.api | Compliant | Yes | Yes | 55 | 1 | 0 | 0 |
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 30 | 1 | 5 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
@@ -34,10 +37,11 @@ once.
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 35 | 1 | 0 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 22 | 1 | 2 | 0 |
 | Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 26 | 1 | 1 | 0 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 7 | 1 | 0 | 0 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
 | Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 27 | 1 | 0 | 0 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
+| Command-Routing-WebGL-Integration | com.deucarian.command-routing.webgl-integration | SetupRequired | No | Yes | 11 | 1 | 0 | 0 |
 | Common | com.deucarian.common | Compliant | Yes | Yes | 2 | 3 | 0 | 0 |
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
@@ -68,13 +72,16 @@ once.
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 49 | 2 | 15 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
+| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 15 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 1 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 64 | 2 | 7 | 0 |
 | UI | com.deucarian.ui | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 45 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 16 | 2 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | RefactorBacklog | Yes | Yes | 9 | 1 | 1 | 0 |
+| Web-Viewer-Suite | com.deucarian.web-viewer-suite | SetupRequired | No | Yes | 0 | 0 | 0 | 0 |
 | World-Navigation | com.deucarian.world-navigation | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | World-Spawning | com.deucarian.world-spawning | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
 | XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 39 | 1 | 4 | 0 |
@@ -84,6 +91,7 @@ once.
 
 | Repository | Kind | Disposition | File | Lines | Limit | Action |
 | --- | --- | --- | --- | --- | --- | --- |
+| Activity-Visualization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackProviderV2.cs | 1434 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1342 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/EnemyProviderV2.cs | 1175 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -92,6 +100,7 @@ once.
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 952 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs | 594 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Command-Routing-WebGL-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Diagnostics | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DiagnosticsWindow.cs | 646 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbenchGUI.cs | 581 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -153,6 +162,7 @@ once.
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsUiTheme.cs | 739 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsPayloadWeapons.cs | 688 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsRunFlow.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Template-Viewer-Web | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemeManagerWindow.cs | 2531 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianDefaultThemeAssetFactory.cs | 1978 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingMenuActions.cs | 1795 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -162,7 +172,9 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 984 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowNavigator.cs | 966 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Viewer-Navigation | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Weapon-Systems | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WeaponProviderV2.cs | 878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomButtonSettings.cs | 972 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomSelectableFeedback.cs | 930 | 500 | Extract responsibilities until the production file is at most 500 lines. |

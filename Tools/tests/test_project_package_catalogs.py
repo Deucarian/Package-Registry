@@ -58,6 +58,24 @@ def registry_fixture() -> dict:
             package("com.deucarian.unrelated", []),
             package("com.deucarian.logging", ["com.deucarian.editor"]),
             package("com.deucarian.editor", []),
+            package("com.deucarian.activity-visualization", []),
+            package(
+                "com.deucarian.command-routing.webgl-integration",
+                ["com.deucarian.logging"],
+            ),
+            package("com.deucarian.viewer-navigation", ["com.deucarian.editor"]),
+            package(
+                "com.deucarian.web-viewer-suite",
+                [
+                    "com.deucarian.activity-visualization",
+                    "com.deucarian.command-routing.webgl-integration",
+                    "com.deucarian.viewer-navigation",
+                ],
+            ),
+            package(
+                "com.deucarian.template.viewer.web",
+                ["com.deucarian.web-viewer-suite"],
+            ),
         ],
     }
 
@@ -79,10 +97,10 @@ class PackageCatalogProjectionTests(unittest.TestCase):
 
         self.assertEqual(registry, projected)
         self.assertIsNot(registry, projected)
-        self.assertEqual(4, len(projected["packages"]))
+        self.assertEqual(9, len(projected["packages"]))
         self.assertIn("groups", projected)
 
-    def test_bootstrap_projection_is_exact_dependency_first_installer_closure(self) -> None:
+    def test_bootstrap_projection_contains_dependency_first_setup_and_viewer_entries(self) -> None:
         projected = projection.project_bootstrap_catalog(registry_fixture())
 
         self.assertEqual(
@@ -90,6 +108,11 @@ class PackageCatalogProjectionTests(unittest.TestCase):
                 "com.deucarian.editor",
                 "com.deucarian.logging",
                 projection.INSTALLER_PACKAGE_ID,
+                "com.deucarian.activity-visualization",
+                "com.deucarian.command-routing.webgl-integration",
+                "com.deucarian.viewer-navigation",
+                "com.deucarian.web-viewer-suite",
+                "com.deucarian.template.viewer.web",
             ],
             [item["id"] for item in projected["packages"]],
         )
@@ -175,14 +198,14 @@ class PackageCatalogProjectionTests(unittest.TestCase):
 
         projected = projection.project_bootstrap_catalog(registry)
 
-        self.assertEqual(
-            [
-                "com.deucarian.editor",
-                "com.deucarian.logging",
-                projection.INSTALLER_PACKAGE_ID,
-            ],
-            [item["id"] for item in projected["packages"]],
-        )
+        package_ids = [item["id"] for item in projected["packages"]]
+        for expected_package_id in projection.BOOTSTRAP_PACKAGE_IDS:
+            self.assertIn(expected_package_id, package_ids)
+
+        package_positions = {package_id: index for index, package_id in enumerate(package_ids)}
+        for item in projected["packages"]:
+            for dependency_id in item["dependencies"]:
+                self.assertLess(package_positions[dependency_id], package_positions[item["id"]])
 
 
 if __name__ == "__main__":

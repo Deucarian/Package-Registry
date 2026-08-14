@@ -19,6 +19,7 @@ if str(TOOLS_ROOT) not in sys.path:
     sys.path.insert(0, str(TOOLS_ROOT))
 
 from project_package_catalogs import (  # noqa: E402
+    BOOTSTRAP_PACKAGE_IDS,
     CatalogProjectionError,
     project_bootstrap_catalog,
     project_installer_catalog,

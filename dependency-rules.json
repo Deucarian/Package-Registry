@@ -61,6 +61,7 @@
       "packages": [
         "com.deucarian.defense-games",
         "com.deucarian.command-routing",
+        "com.deucarian.activity-visualization",
         "com.deucarian.media.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
@@ -76,6 +77,8 @@
       "description": "Packages whose longest canonical dependency path has 4 edges.",
       "packages": [
         "com.deucarian.command-routing.udp-integration",
+        "com.deucarian.command-routing.webgl-integration",
+        "com.deucarian.viewer-navigation",
         "com.deucarian.selection-suite",
         "com.deucarian.weapon-systems"
       ]
@@ -86,6 +89,7 @@
       "description": "Packages whose longest canonical dependency path has 5 edges.",
       "packages": [
         "com.deucarian.auto-defense",
+        "com.deucarian.web-viewer-suite",
         "com.deucarian.run-upgrades"
       ]
     },
@@ -96,7 +100,8 @@
       "packages": [
         "com.deucarian.auto-defense-suite",
         "com.deucarian.template.game.movement-fps",
-        "com.deucarian.template.game.survivors"
+        "com.deucarian.template.game.survivors",
+        "com.deucarian.template.viewer.web"
       ]
     },
     {
@@ -132,7 +137,7 @@
     "Logging cannot depend on Diagnostics or telemetry.",
     "Integration packages depend on every integration target plus only explicitly used foundations.",
     "Suite package dependencies exactly match suiteMembers and suites remain implementation-free.",
-    "Package Registry dependencies match package.json direct Deucarian dependencies and versions.",
+    "Package Registry dependency ids match package.json direct Deucarian dependencies; cross-manifest audit enforces exact versions.",
     "Production and sample assembly references match direct package dependencies."
   ]
 }

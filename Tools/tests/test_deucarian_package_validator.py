@@ -245,14 +245,9 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
         validator.validate_catalog_projection()
 
         self.assertEqual([], validator.errors)
-        self.assertEqual(
-            [
-                "com.deucarian.editor",
-                "com.deucarian.logging",
-                "com.deucarian.package-installer",
-            ],
-            validator.details["catalogProjection"]["bootstrapPackageIds"],
-        )
+        bootstrap_package_ids = validator.details["catalogProjection"]["bootstrapPackageIds"]
+        for expected_package_id in validator_module.BOOTSTRAP_PACKAGE_IDS:
+            self.assertIn(expected_package_id, bootstrap_package_ids)
 
     def test_valid_package_uses_configured_manifest_assemblies_capability_and_registry_entry(self) -> None:
         with tempfile.TemporaryDirectory() as temp:

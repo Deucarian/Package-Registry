@@ -4,6 +4,56 @@
   "repositories": [
     {
       "categories": {
+        "runtime-type-discovery": 5
+      },
+      "errors": [],
+      "findingCount": 5,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ActivityVisualizationStateOwner.Events.cs",
+          "line": 90,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ActivityVisualizationStateOwner.Events.cs",
+          "line": 187,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ActivityVisualizationStateOwner.cs",
+          "line": 185,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ActivityVisualizationStateOwner.cs",
+          "line": 254,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ActivityVisualizationStateOwner.cs",
+          "line": 290,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.activity-visualization",
+      "repository": "Activity-Visualization",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
         "reflection-based-newtonsoft": 3
       },
       "errors": [],
@@ -159,7 +209,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/CommandTransportBridge.cs",
-          "line": 135,
+          "line": 191,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }
@@ -197,6 +247,35 @@
       "ok": true,
       "packageId": "com.deucarian.command-routing.udp-integration",
       "repository": "Command-Routing-UDP-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 2
+      },
+      "errors": [],
+      "findingCount": 2,
+      "findings": [
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/WebGlCommandTransport.cs",
+          "line": 165,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.DeserializeObject<WebGlInboundMessage>"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/WebGlCommandTransport.cs",
+          "line": 217,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.command-routing.webgl-integration",
+      "repository": "Command-Routing-WebGL-Integration",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
     },
@@ -716,6 +795,18 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.test-automation",
       "repository": "Test-Automation",
       "suppressedFindingCount": 0,
@@ -889,8 +980,32 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.viewer-navigation",
+      "repository": "Viewer-Navigation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.weapon-systems",
       "repository": "Weapon-Systems",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.web-viewer-suite",
+      "repository": "Web-Viewer-Suite",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
     },
@@ -1041,17 +1156,17 @@
   "schemaVersion": 1,
   "summary": {
     "categoryCounts": {
-      "reflection-based-newtonsoft": 9,
+      "reflection-based-newtonsoft": 11,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 34
+      "runtime-type-discovery": 39
     },
-    "cleanRepositoryCount": 36,
+    "cleanRepositoryCount": 39,
     "modeCounts": {
-      "Audit": 51
+      "Audit": 56
     },
-    "repositoriesWithFindings": 15,
-    "repositoryCount": 51,
-    "totalFindingCount": 53,
+    "repositoriesWithFindings": 17,
+    "repositoryCount": 56,
+    "totalFindingCount": 60,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }
