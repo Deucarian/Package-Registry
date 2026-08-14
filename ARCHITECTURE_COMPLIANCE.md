@@ -13,15 +13,15 @@ once.
 ## Summary
 
 - Repositories: 52
-- Fully compliant repositories: 36
+- Fully compliant repositories: 37
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 84 |
+| RefactorBacklog | 83 |
 
 | Metric | Count |
 | --- | --- |
-| ProductionFileExceedsLineLimit | 84 |
+| ProductionFileExceedsLineLimit | 83 |
 
 ## Repository Status
 
@@ -31,8 +31,8 @@ once.
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 30 | 1 | 5 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
-| Bootstrap | com.deucarian.bootstrap | RefactorBacklog | Yes | Yes | 10 | 1 | 2 | 0 |
-| Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 14 | 1 | 1 | 0 |
+| Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 35 | 1 | 0 | 0 |
+| Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 22 | 1 | 2 | 0 |
 | Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 26 | 1 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 7 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
@@ -89,9 +89,8 @@ once.
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/EnemyProviderV2.cs | 1175 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WaveProviderV2.cs | 1104 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentPreview.cs | 1101 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBootstrapWindow.cs | 3988 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Bootstrap | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/BootstrapScopedRegistryManifest.cs | 571 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 892 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 952 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs | 594 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Diagnostics | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DiagnosticsWindow.cs | 646 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |

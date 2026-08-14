@@ -33,11 +33,11 @@
     ],
     "runtimeRepositoryCount": 10,
     "selectedOption": "Completed",
-    "testRepositoryCount": 32,
+    "testRepositoryCount": 31,
     "testingPackageDecision": {
       "decision": "KeepLocal",
       "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
-      "testRepositoryCount": 32
+      "testRepositoryCount": 31
     }
   },
   "occurrences": [
@@ -723,81 +723,6 @@
       "scope": "Sample"
     },
     {
-      "assembly": "Deucarian.Bootstrap.Editor.Tests",
-      "classification": "Bootstrap exception",
-      "containingSymbol": "DeucarianBootstrapTests::StatusCardsProvideCompactLabelValueAndSubtext",
-      "file": "Tests/Editor/DeucarianBootstrapTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 300,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.bootstrap",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Bootstrap",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Bootstrap.Editor.Tests",
-      "classification": "Bootstrap exception",
-      "containingSymbol": "DeucarianBootstrapTests::StatusCardDrawingAcceptsNullAndEmptyModels",
-      "file": "Tests/Editor/DeucarianBootstrapTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 324,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.bootstrap",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Bootstrap",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Bootstrap.Editor.Tests",
-      "classification": "Bootstrap exception",
-      "containingSymbol": "DeucarianBootstrapTests::HeroPrimaryButtonLabelsFollowSetupState",
-      "file": "Tests/Editor/DeucarianBootstrapTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 393,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.bootstrap",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Bootstrap",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Bootstrap.Editor.Tests",
-      "classification": "Bootstrap exception",
-      "containingSymbol": "DeucarianBootstrapTests::UnknownRemoteRevisionOffersRefreshInsteadOfRepair",
-      "file": "Tests/Editor/DeucarianBootstrapTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 426,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.bootstrap",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Bootstrap",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Bootstrap.Editor.Tests",
-      "classification": "Bootstrap exception",
-      "containingSymbol": "DeucarianBootstrapTests::ReloadCleanupDiscardsStalePackageManagerRequests",
-      "file": "Tests/Editor/DeucarianBootstrapTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 457,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.bootstrap",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Bootstrap",
-      "scope": "Test"
-    },
-    {
       "assembly": "Deucarian.BuildPipeline.Editor",
       "classification": "Editor production",
       "configuredExceptionReason": "Disposes the transient non-asset BuildProfile instance returned by Unity's editor-only profile factory.",
@@ -819,7 +744,7 @@
       "containingSymbol": "DeucarianBuildManagerTests::WorkbenchContainsStableToolbarContentAndFooter",
       "file": "Tests/Editor/DeucarianBuildManagerTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 114,
+      "line": 126,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.build-pipeline",
       "policyDisposition": "Allowed",
@@ -834,7 +759,7 @@
       "containingSymbol": "DeucarianBuildManagerTests::ProjectChangesAreDebouncedAndCancelledWithWindowLifecycle",
       "file": "Tests/Editor/DeucarianBuildManagerTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 152,
+      "line": 164,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.build-pipeline",
       "policyDisposition": "Allowed",
@@ -8507,10 +8432,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 563
+    "Allowed": 558
   },
   "summary": {
-    "direct Unity API call": 500,
+    "direct Unity API call": 495,
     "helper call site": 62,
     "helper definition": 1
   }

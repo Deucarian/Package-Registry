@@ -1,0 +1,1058 @@
+{
+  "organization": "Deucarian",
+  "ref": "develop",
+  "repositories": [
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 3
+      },
+      "errors": [],
+      "findingCount": 3,
+      "findings": [
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
+          "line": 23,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
+          "line": 28,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.DeserializeObject<T>"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
+          "line": 33,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.DeserializeObject"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.api",
+      "repository": "API",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.attacks",
+      "repository": "Attacks",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.auto-defense",
+      "repository": "Auto-Defense",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.auto-defense-suite",
+      "repository": "Auto-Defense-Suite",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.build-pipeline",
+      "repository": "Build-Pipeline",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.camera-navigation",
+      "repository": "Camera-Navigation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.camera-navigation.input-system-integration",
+      "repository": "CameraNavigation-InputSystem-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.combat",
+      "repository": "Combat",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 1,
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 3,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/CommandDispatcher.cs",
+          "line": 138,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/CommandEnvelope.cs",
+          "line": 50,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": ".ToObject<T>"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/CommandTransportBridge.cs",
+          "line": 135,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.command-routing",
+      "repository": "Command-Routing",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 2,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UdpCommandTransport.cs",
+          "line": 249,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UdpCommandTransport.cs",
+          "line": 252,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.command-routing.udp-integration",
+      "repository": "Command-Routing-UDP-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.common",
+      "repository": "Common",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.core-state",
+      "repository": "Core-State",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.defense-games",
+      "repository": "Defense-Games",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 1,
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 3,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/DeucarianLoggingDiagnosticProvider.cs",
+          "line": 73,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/DiagnosticReportBuilder.cs",
+          "line": 70,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/DiagnosticsJsonExporter.cs",
+          "line": 17,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.diagnostics",
+      "repository": "Diagnostics",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.encounters",
+      "repository": "Encounters",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.gameplay-foundation",
+      "repository": "Gameplay-Foundation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.idle-progression",
+      "repository": "Idle-Progression",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 2,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/DeucarianLog.cs",
+          "line": 252,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/DeucarianLog.cs",
+          "line": 253,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.logging",
+      "repository": "Logging",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflective-invocation": 2,
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 3,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Unity/UnityVideoPlaybackSession.cs",
+          "line": 47,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetProperty"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Unity/UnityVideoPlaybackSession.cs",
+          "line": 328,
+          "rule": "reflective-invocation",
+          "symbol": ".Invoke"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Unity/UnityVideoPlaybackSession.cs",
+          "line": 372,
+          "rule": "reflective-invocation",
+          "symbol": ".SetValue"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.media",
+      "repository": "Media",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.media.api-integration",
+      "repository": "Media-API-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.monetization",
+      "repository": "Monetization",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 1,
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 3,
+      "findings": [
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Core/ObjectLoadRequest.cs",
+          "line": 169,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Pipeline/DefaultObjectDiagnostics.cs",
+          "line": 176,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Pipeline/ObjectLoadingPipeline.cs",
+          "line": 281,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.object-loading",
+      "repository": "Object-Loading",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Core/ApiObjectDownloadMapper.cs",
+          "line": 252,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.object-loading.api-integration",
+      "repository": "ObjectLoading-API-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.object-selection",
+      "repository": "Object-Selection",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.object-selection.core-state-integration",
+      "repository": "ObjectSelection-CoreState-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 2
+      },
+      "errors": [],
+      "findingCount": 2,
+      "findings": [
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Serialization/Serialization.cs",
+          "line": 41,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.SerializeObject"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Serialization/Serialization.cs",
+          "line": 44,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": "JsonConvert.DeserializeObject<T>"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.persistence",
+      "repository": "Persistence",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/DeucarianPointerCaptureController.cs",
+          "line": 484,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.pointer-capture",
+      "repository": "Pointer-Capture",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.progression",
+      "repository": "Progression",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.projectiles",
+      "repository": "Projectiles",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.run-upgrades",
+      "repository": "Run-Upgrades",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.selection-suite",
+      "repository": "Selection-Suite",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.session",
+      "repository": "Session",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflective-invocation": 2,
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 4,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SurvivorsAuthoredContent.cs",
+          "line": 2453,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetFields"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SurvivorsContentValidation.cs",
+          "line": 2421,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetFields"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/SurvivorsContentValidation.cs",
+          "line": 2427,
+          "rule": "reflective-invocation",
+          "symbol": ".GetValue"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/SurvivorsContentValidation.cs",
+          "line": 2432,
+          "rule": "reflective-invocation",
+          "symbol": ".GetValue"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.template.game.survivors",
+      "repository": "Template-Game-Survivors",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.test-automation",
+      "repository": "Test-Automation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 4
+      },
+      "errors": [],
+      "findingCount": 4,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UIToolkit/DeucarianUIToolkitThemeUtility.cs",
+          "line": 218,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UIToolkit/DeucarianUIToolkitThemeUtility.cs",
+          "line": 219,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UIToolkit/DeucarianUIToolkitThemeUtility.cs",
+          "line": 239,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UIToolkit/DeucarianUIToolkitThemeUtility.cs",
+          "line": 240,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.ui",
+      "repository": "UI",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.ui-binding",
+      "repository": "UI-Binding",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflective-invocation": 3,
+        "runtime-type-discovery": 4
+      },
+      "errors": [],
+      "findingCount": 7,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 100,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 101,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetProperty"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 105,
+          "rule": "reflective-invocation",
+          "symbol": ".GetValue"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 112,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetMethod"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 121,
+          "rule": "reflective-invocation",
+          "symbol": ".Invoke"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 125,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetMethod"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/SelectionUIBinding.cs",
+          "line": 134,
+          "rule": "reflective-invocation",
+          "symbol": ".Invoke"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.ui-binding.core-state-integration",
+      "repository": "UIBinding-CoreState-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 2,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Navigation/UIFlowContext.cs",
+          "line": 63,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Navigation/UIFlowPresentationState.cs",
+          "line": 104,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.ui-flow",
+      "repository": "UI-FLow",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.weapon-systems",
+      "repository": "Weapon-Systems",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.world-navigation",
+      "repository": "World-Navigation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.world-spawning",
+      "repository": "World-Spawning",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflective-invocation": 3,
+        "runtime-type-discovery": 10
+      },
+      "errors": [],
+      "findingCount": 13,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 216,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetProperty"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 230,
+          "rule": "reflective-invocation",
+          "symbol": ".GetValue"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 243,
+          "rule": "reflective-invocation",
+          "symbol": ".SetValue"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 71,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 205,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 230,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetMethod"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 230,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 239,
+          "rule": "reflective-invocation",
+          "symbol": ".Invoke"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
+          "line": 246,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/XR/XrUiPokeAffordanceInstaller.cs",
+          "line": 121,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/XR/XrUiPokeAffordanceInstaller.cs",
+          "line": 142,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/XR/XrUiPokeAffordanceInstaller.cs",
+          "line": 158,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/XrUiControlExclusionRegistry.cs",
+          "line": 94,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    }
+  ],
+  "schemaVersion": 1,
+  "summary": {
+    "categoryCounts": {
+      "reflection-based-newtonsoft": 9,
+      "reflective-invocation": 10,
+      "runtime-type-discovery": 34
+    },
+    "cleanRepositoryCount": 36,
+    "modeCounts": {
+      "Audit": 51
+    },
+    "repositoriesWithFindings": 15,
+    "repositoryCount": 51,
+    "totalFindingCount": 53,
+    "totalSuppressedFindingCount": 0,
+    "validationFailureCount": 0
+  }
+}

@@ -61,36 +61,24 @@
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.Bootstrap.Editor",
+      "assembly": "Deucarian.BuildPipeline.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianBootstrapWindow.cs",
+      "file": "Editor/DeucarianBuildManagerWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 3988,
+      "lineCount": 952,
       "lineLimit": 500,
-      "packageId": "com.deucarian.bootstrap",
-      "repository": "Bootstrap",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Bootstrap.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/BootstrapScopedRegistryManifest.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 571,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.bootstrap",
-      "repository": "Bootstrap",
+      "packageId": "com.deucarian.build-pipeline",
+      "repository": "Build-Pipeline",
       "scope": "Editor production"
     },
     {
       "assembly": "Deucarian.BuildPipeline.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianBuildManagerWindow.cs",
+      "file": "Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 892,
+      "lineCount": 594,
       "lineLimit": 500,
       "packageId": "com.deucarian.build-pipeline",
       "repository": "Build-Pipeline",
@@ -1114,26 +1102,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.Bootstrap.Editor",
-          "file": "Editor/BootstrapScopedRegistryManifest.cs",
-          "lineCount": 571,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Bootstrap.Editor",
-          "file": "Editor/DeucarianBootstrapWindow.cs",
-          "lineCount": 3988,
-          "scope": "Editor production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.bootstrap",
-      "productionFileCount": 10,
+      "productionFileCount": 35,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Bootstrap",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Bootstrap.Editor.Tests"
       ]
@@ -1148,12 +1123,18 @@
         {
           "assembly": "Deucarian.BuildPipeline.Editor",
           "file": "Editor/DeucarianBuildManagerWindow.cs",
-          "lineCount": 892,
+          "lineCount": 952,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.BuildPipeline.Editor",
+          "file": "Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs",
+          "lineCount": 594,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.build-pipeline",
-      "productionFileCount": 14,
+      "productionFileCount": 22,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Build-Pipeline",
       "sharedValidationPresent": true,
@@ -2429,12 +2410,12 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 36,
+    "compliantRepositoryCount": 37,
     "findingsByDisposition": {
-      "RefactorBacklog": 84
+      "RefactorBacklog": 83
     },
     "findingsByKind": {
-      "ProductionFileExceedsLineLimit": 84
+      "ProductionFileExceedsLineLimit": 83
     },
     "repositoryCount": 52
   }

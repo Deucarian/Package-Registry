@@ -49,3 +49,11 @@ jobs:
             --registry-root package-registry \
             --repository-root "package/${{ inputs.package-root }}" \
             --config "package/${{ inputs.package-root }}/${{ inputs.package-config }}"
+
+      - name: Audit runtime AOT and stripping safety
+        shell: bash
+        run: |
+          python package-registry/Tools/deucarian_aot_validator.py \
+            --ci \
+            --repository-root "package/${{ inputs.package-root }}" \
+            --config "package/${{ inputs.package-root }}/${{ inputs.package-config }}"
