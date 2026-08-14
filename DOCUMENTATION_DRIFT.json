@@ -13,6 +13,24 @@
       "repository": "Bootstrap"
     },
     {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.build-pipeline",
+      "repository": "Build-Pipeline"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.command-routing",
+      "repository": "Command-Routing"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.command-routing.webgl-integration",
+      "repository": "Command-Routing-WebGL-Integration"
+    },
+    {
       "file": "Documentation~/CrossGenre.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.defense-games",
@@ -163,6 +181,12 @@
       "repository": "UIBinding-CoreState-Integration"
     },
     {
+      "file": "Documentation~/index.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "repository": "Web-Viewer-Suite"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
@@ -170,9 +194,9 @@
     }
   ],
   "summary": {
-    "HistoricalChangelogReference": 12,
+    "HistoricalChangelogReference": 14,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 8,
-    "ReviewRequired": 7
+    "ReviewRequired": 9
   }
 }

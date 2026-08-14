@@ -6,10 +6,10 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Historical changelog reference | 12 |
+| Historical changelog reference | 14 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 8 |
-| Review required | 7 |
+| Review required | 9 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -19,6 +19,9 @@ Historical changelog references preserve released history and are not rewrite re
 | --- | --- | --- | --- | --- | --- |
 | API | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Bootstrap | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Build-Pipeline | Review required | README.md |  |  |  |
+| Command-Routing | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Command-Routing-WebGL-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Defense-Games | Review required | Documentation~/CrossGenre.md |  |  |  |
 | Diagnostics | Review required | README.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |
@@ -44,4 +47,5 @@ Historical changelog references preserve released history and are not rewrite re
 | UI-Binding | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Migration documentation | README.md |  |  |  |
+| Web-Viewer-Suite | Review required | Documentation~/index.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | AGENTS.md |  |  |  |

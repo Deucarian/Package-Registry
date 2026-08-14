@@ -151,7 +151,7 @@ Catalog follow-up completed in this pass:
 
 Catalog modeling decision:
 
-- Bootstrap remains setup-only outside `packages.json`. Its job is to get Package Installer and install Package Installer dependencies; it should not become an installable Package Registry entry or make Package Installer own bootstrap setup behavior.
+- Bootstrap remains setup-only outside `packages.json`. Its operation still installs only Editor, Logging, and Package Installer. The bundled fallback may additionally carry dependency-first review metadata for explicitly governed ecosystem entry points without turning Bootstrap into a second package browser or an installable Package Registry entry.
 
 ## Registry Alignment Checker
 

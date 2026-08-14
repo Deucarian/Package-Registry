@@ -29,9 +29,12 @@ architecture-compliance pass.
   mapping, and state calculations.
 - Isolate mutations, Unity object ownership, I/O, networking, logging, and
   other side effects behind narrow adapters.
-- Avoid reflection unless a framework or compatibility boundary requires it
-  and no explicit contract is practical. Isolate unavoidable reflection behind
-  a narrow adapter, document the reason, and cover it with tests.
+- Deucarian-owned player code must not use unbounded runtime reflection,
+  dynamic construction, runtime assembly scanning, or reflection-based object
+  mapping. Generate or explicitly compose runtime paths instead.
+- Unavoidable external framework or compatibility reflection must be isolated,
+  exact, documented, tested, and represented through the canonical AOT
+  evidence protocol in `AOT_SAFETY.md`.
 - Use Strategy for interchangeable policy and platform behavior.
 - Use Observer-style events or streams for state propagation; consumers must
   not poll concrete services or maintain duplicate authoritative state.
@@ -72,11 +75,32 @@ architecture-compliance pass.
 - Compatibility adapters preserve old callers at boundaries while new domain
   code depends on the preferred abstraction.
 
+## AOT And Stripping Safety
+
+- `AOT_SAFETY.md` is the canonical player-reachability and evidence protocol.
+- Runtime-dynamic behavior must be generated, explicitly composed, exactly
+  declared, or owned by a narrowly audited external framework boundary.
+- Domain packages own generation for their own runtime capability. Build
+  Pipeline verifies evidence and final player assemblies; it does not absorb
+  domain generators.
+- Runtime packages do not depend on Build Pipeline merely to emit evidence.
+  Evidence uses neutral assembly metadata.
+- Application-owned `Assets/**/link.xml` files are forbidden in enforced
+  builds. Generated linker descriptors under `Library` are build intermediates,
+  not source-controlled architecture.
+- Exact declarations identify individual assemblies and types. Wildcards,
+  broad assembly preservation, and undocumented exceptions are forbidden.
+- Editor-only reflection is allowed when it remains in an Editor assembly and
+  never enters player code.
+- Production CI must use enforced AOT inspection after migration findings are
+  classified and resolved.
+
 ## Governance Sources
 
 - `packages.json` defines installable packages, canonical functional groups, artifact kinds, dependencies, Integration targets, and Suite members.
 - `capabilities.json` defines which package owns each reusable capability.
 - `dependency-rules.json` defines the allowed package layering model.
+- `AOT_SAFETY.md` defines runtime-dynamic-code policy, evidence metadata, and stripping gates.
 - `DISTRIBUTION_POLICY.md` defines active stable/development Git channels.
 - `RELEASE_POLICY.md` defines deferred npm/tag/release workflow policy.
 - `Tools/deucarian_package_validator.py` enforces package manifests, asmdefs, documentation, audit policy, and registry/catalog consistency.
@@ -96,7 +120,8 @@ architecture-compliance pass.
 - Common owns tiny dependency-free runtime primitives only. It currently exposes only `Deucarian.Common.UnityObjectUtility.DestroySafely(UnityEngine.Object target)`.
 - Logging owns the package logging facade and Unity console sink. Direct `UnityEngine.Debug` calls are allowed only in the approved Logging sink/fallback locations.
 - Editor owns shared editor chrome, icons, editor resources, and editor-only UI Toolkit helpers. It must not own runtime theming or package installation logic.
-- Package Registry owns metadata, capability ownership, dependency rules, and audit/validation tools. It must not contain runtime package code or editor UI implementation.
+- Build Pipeline owns Build Profile policy, final-player AOT inspection, evidence verification, generated linker input, artifact manifests, and headless build entry points. It must not own domain serialization, command routing, DI, or other runtime generators.
+- Package Registry owns metadata, capability ownership, dependency rules, AOT evidence governance, and audit/validation tools. It must not contain runtime package code or editor UI implementation.
 - Package Installer owns package installation, registry channel selection, dependency-first installation, and package-specific ecosystem visualization. It must not become a generic graph or UI framework.
 - Integration packages own adapter code between declared target packages only. They must not duplicate target-package logic or introduce independent frameworks.
 - Suite packages own dependency composition, samples, and installable bundles only. They must not duplicate implementation logic.
@@ -126,15 +151,14 @@ Architecture reviews must check:
 3. Public consumers can depend on abstractions rather than concrete services.
 4. Construction is explicit and testable.
 5. Policies are pure where practical and side effects stay at boundaries.
-6. Reflection is absent unless a documented, tested framework or compatibility
-   boundary requires it behind a narrow adapter.
+6. Runtime reflection is absent, generated away, explicitly composed, or represented by exact canonical AOT evidence.
 7. State has one owner and changes are observable.
 8. Strategies replace branching where behavior is genuinely interchangeable.
 9. Namespace, folder, and assembly-definition boundaries agree.
 10. Production files stay within the 500-line responsibility limit.
 11. Tests cover contracts, lifecycle/disposal, and important state transitions.
-11. Every Deucarian-owned editor surface uses the shared Editor package rather
-    than package-local chrome, styling, icons, or workflow controls.
+12. Every Deucarian-owned editor surface uses the shared Editor package rather than package-local chrome, styling, icons, or workflow controls.
+13. Player builds do not depend on handwritten application `link.xml` files.
 
 ## Logging
 
