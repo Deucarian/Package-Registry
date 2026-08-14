@@ -6,6 +6,8 @@ Schema version: 2
 
 | From package | To package | Declared version | From repo | To repo |
 | --- | --- | --- | --- | --- |
+| com.deucarian.activity-visualization | com.deucarian.diagnostics | 0.1.4 | Activity-Visualization | Diagnostics |
+| com.deucarian.activity-visualization | com.deucarian.logging | 1.0.2 | Activity-Visualization | Logging |
 | com.deucarian.api | com.deucarian.logging | 1.0.2 | API | Logging |
 | com.deucarian.attacks | com.deucarian.combat | 0.1.1 | Attacks | Combat |
 | com.deucarian.attacks | com.deucarian.editor | 1.0.3 | Attacks | Editor |
@@ -47,6 +49,10 @@ Schema version: 2
 | com.deucarian.command-routing.udp-integration | com.deucarian.diagnostics | 0.1.4 | Command-Routing-UDP-Integration | Diagnostics |
 | com.deucarian.command-routing.udp-integration | com.deucarian.editor | 1.0.5 | Command-Routing-UDP-Integration | Editor |
 | com.deucarian.command-routing.udp-integration | com.deucarian.logging | 1.0.2 | Command-Routing-UDP-Integration | Logging |
+| com.deucarian.command-routing.webgl-integration | com.deucarian.command-routing | 0.1.1 | Command-Routing-WebGL-Integration | Command-Routing |
+| com.deucarian.command-routing.webgl-integration | com.deucarian.diagnostics | 0.1.4 | Command-Routing-WebGL-Integration | Diagnostics |
+| com.deucarian.command-routing.webgl-integration | com.deucarian.editor | 1.0.5 | Command-Routing-WebGL-Integration | Editor |
+| com.deucarian.command-routing.webgl-integration | com.deucarian.logging | 1.0.2 | Command-Routing-WebGL-Integration | Logging |
 | com.deucarian.defense-games | com.deucarian.combat | 0.1.1 | Defense-Games | Combat |
 | com.deucarian.defense-games | com.deucarian.encounters | 0.1.1 | Defense-Games | Encounters |
 | com.deucarian.defense-games | com.deucarian.gameplay-foundation | 0.1.1 | Defense-Games | Gameplay-Foundation |
@@ -130,6 +136,19 @@ Schema version: 2
 | com.deucarian.template.game.survivors | com.deucarian.run-upgrades | 0.1.1 | Template-Game-Survivors | Run-Upgrades |
 | com.deucarian.template.game.survivors | com.deucarian.weapon-systems | 0.1.1 | Template-Game-Survivors | Weapon-Systems |
 | com.deucarian.template.game.survivors | com.deucarian.world-spawning | 0.2.1 | Template-Game-Survivors | World-Spawning |
+| com.deucarian.template.viewer.web | com.deucarian.api | 1.1.4 | Template-Viewer-Web | API |
+| com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.4.0 | Template-Viewer-Web | Build-Pipeline |
+| com.deucarian.template.viewer.web | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer-Web | Camera-Navigation |
+| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.1.1 | Template-Viewer-Web | Command-Routing |
+| com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
+| com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
+| com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
+| com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
+| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.5 | Template-Viewer-Web | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.3 | Template-Viewer-Web | Theming |
+| com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.1 | Template-Viewer-Web | UI |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.2 | Template-Viewer-Web | Viewer-Navigation |
+| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.2 | Template-Viewer-Web | Web-Viewer-Suite |
 | com.deucarian.theming | com.deucarian.editor | 1.0.3 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.2 | Theming | Logging |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -139,11 +158,33 @@ Schema version: 2
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
 | com.deucarian.ui-flow | com.deucarian.common | 0.2.1 | UI-FLow | Common |
 | com.deucarian.ui-flow | com.deucarian.logging | 1.0.2 | UI-FLow | Logging |
+| com.deucarian.viewer-navigation | com.deucarian.camera-navigation | 0.2.10 | Viewer-Navigation | Camera-Navigation |
+| com.deucarian.viewer-navigation | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Viewer-Navigation | CameraNavigation-InputSystem-Integration |
+| com.deucarian.viewer-navigation | com.deucarian.common | 0.2.1 | Viewer-Navigation | Common |
+| com.deucarian.viewer-navigation | com.deucarian.diagnostics | 0.1.4 | Viewer-Navigation | Diagnostics |
+| com.deucarian.viewer-navigation | com.deucarian.editor | 1.0.5 | Viewer-Navigation | Editor |
+| com.deucarian.viewer-navigation | com.deucarian.logging | 1.0.2 | Viewer-Navigation | Logging |
+| com.deucarian.viewer-navigation | com.deucarian.pointer-capture | 0.1.2 | Viewer-Navigation | Pointer-Capture |
+| com.deucarian.viewer-navigation | com.deucarian.theming | 1.0.3 | Viewer-Navigation | Theming |
+| com.deucarian.viewer-navigation | com.deucarian.ui | 0.2.1 | Viewer-Navigation | UI |
 | com.deucarian.weapon-systems | com.deucarian.attacks | 0.1.1 | Weapon-Systems | Attacks |
 | com.deucarian.weapon-systems | com.deucarian.editor | 1.0.3 | Weapon-Systems | Editor |
 | com.deucarian.weapon-systems | com.deucarian.game-content-authoring | 0.1.1 | Weapon-Systems | Game-Content-Authoring |
 | com.deucarian.weapon-systems | com.deucarian.gameplay-foundation | 0.1.1 | Weapon-Systems | Gameplay-Foundation |
 | com.deucarian.weapon-systems | com.deucarian.projectiles | 0.2.1 | Weapon-Systems | Projectiles |
+| com.deucarian.web-viewer-suite | com.deucarian.api | 1.1.4 | Web-Viewer-Suite | API |
+| com.deucarian.web-viewer-suite | com.deucarian.build-pipeline | 0.4.0 | Web-Viewer-Suite | Build-Pipeline |
+| com.deucarian.web-viewer-suite | com.deucarian.camera-navigation | 0.2.10 | Web-Viewer-Suite | Camera-Navigation |
+| com.deucarian.web-viewer-suite | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Web-Viewer-Suite | CameraNavigation-InputSystem-Integration |
+| com.deucarian.web-viewer-suite | com.deucarian.command-routing | 0.1.1 | Web-Viewer-Suite | Command-Routing |
+| com.deucarian.web-viewer-suite | com.deucarian.command-routing.webgl-integration | 0.1.1 | Web-Viewer-Suite | Command-Routing-WebGL-Integration |
+| com.deucarian.web-viewer-suite | com.deucarian.diagnostics | 0.1.4 | Web-Viewer-Suite | Diagnostics |
+| com.deucarian.web-viewer-suite | com.deucarian.object-loading | 1.2.2 | Web-Viewer-Suite | Object-Loading |
+| com.deucarian.web-viewer-suite | com.deucarian.object-loading.api-integration | 0.2.5 | Web-Viewer-Suite | ObjectLoading-API-Integration |
+| com.deucarian.web-viewer-suite | com.deucarian.pointer-capture | 0.1.2 | Web-Viewer-Suite | Pointer-Capture |
+| com.deucarian.web-viewer-suite | com.deucarian.theming | 1.0.3 | Web-Viewer-Suite | Theming |
+| com.deucarian.web-viewer-suite | com.deucarian.ui | 0.2.1 | Web-Viewer-Suite | UI |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.2 | Web-Viewer-Suite | Viewer-Navigation |
 | com.deucarian.world-navigation | com.deucarian.gameplay-foundation | 0.1.1 | World-Navigation | Gameplay-Foundation |
 | com.deucarian.world-navigation | com.deucarian.world-spawning | 0.2.1 | World-Navigation | World-Spawning |
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
@@ -158,5 +199,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 10
+- Dependency version drift entries: 13
 - Registry dependency drift entries: 0
