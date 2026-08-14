@@ -7972,6 +7972,18 @@
             "versionDefines": []
           },
           {
+            "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.CoreState",
+            "scope": "Sample",
+            "versionDefines": []
+          },
+          {
             "asmdef": "Tests/EditMode/Deucarian.ObjectSelection.CoreStateIntegration.Tests.asmdef",
             "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Tests",
             "autoReferenced": false,
@@ -8010,6 +8022,18 @@
             "reference": "Deucarian.Logging",
             "scope": "Runtime production",
             "versionDefines": []
+          },
+          {
+            "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.Logging",
+            "scope": "Sample",
+            "versionDefines": []
           }
         ],
         "repository": "ObjectSelection-CoreState-Integration",
@@ -8035,6 +8059,18 @@
             "includePlatforms": [],
             "reference": "Deucarian.ObjectSelection",
             "scope": "Runtime production",
+            "versionDefines": []
+          },
+          {
+            "asmdef": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.ObjectSelection",
+            "scope": "Sample",
             "versionDefines": []
           },
           {
@@ -14688,7 +14724,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -15741,7 +15777,7 @@
         "groupKey": "9a5e145e2a5d32ff005b99e00717316d84a92071e77940a6acf46b4510c3190e",
         "occurrences": [
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSampleHighlighter",
             "dependenciesUsed": [],
@@ -15826,7 +15862,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -16147,7 +16183,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -16448,7 +16484,7 @@
         "groupKey": "6c39c301d1e205a96f5486b21d3a8f5a626878a26cc8277c88cc8dbd9a3aec2a",
         "occurrences": [
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -21792,7 +21828,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -23700,7 +23736,7 @@
         "groupKey": "9a5e145e2a5d32ff005b99e00717316d84a92071e77940a6acf46b4510c3190e",
         "occurrences": [
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSampleHighlighter",
             "dependenciesUsed": [],
@@ -23998,7 +24034,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -24701,7 +24737,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -25344,7 +25380,7 @@
         "groupKey": "6c39c301d1e205a96f5486b21d3a8f5a626878a26cc8277c88cc8dbd9a3aec2a",
         "occurrences": [
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -29759,7 +29795,7 @@
             "throws": false
           },
           {
-            "assembly": "",
+            "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
             "async": false,
             "containingType": "CoreStateIntegrationSample",
             "dependenciesUsed": [],
@@ -37973,7 +38009,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.CameraNavigation.InputSystemIntegration.Samples.ReadyRig",
         "containingType": "",
         "file": "Samples~/Ready-to-use Navigation Rig/DeucarianReadyRigExample.cs",
         "fullSignature": "[DisallowMultipleComponent] [RequireComponent(typeof(DeucarianInputSystemCameraNavigationRig))] public sealed class DeucarianReadyRigExample : MonoBehaviour",
@@ -39128,7 +39164,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSample.cs",
         "fullSignature": "public sealed class CoreStateIntegrationSample : MonoBehaviour",
@@ -39143,7 +39179,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleData.cs",
         "fullSignature": "public sealed class CoreStateIntegrationSampleData : IIdentifiable<string>",
@@ -39158,7 +39194,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "CoreStateIntegrationSampleData",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleData.cs",
         "fullSignature": "public CoreStateIntegrationSampleData(string id, string label)",
@@ -39173,7 +39209,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "CoreStateIntegrationSampleData",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleData.cs",
         "fullSignature": "public string Id",
@@ -39188,7 +39224,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "CoreStateIntegrationSampleData",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleData.cs",
         "fullSignature": "public string Label",
@@ -39203,7 +39239,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleHighlighter.cs",
         "fullSignature": "public sealed class CoreStateIntegrationSampleHighlighter : MonoBehaviour, IObjectSelectionHighlighter<string>",
@@ -39218,7 +39254,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "CoreStateIntegrationSampleHighlighter",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleHighlighter.cs",
         "fullSignature": "public void OnSelectionChanged(SelectionChangedEventArgs<string> args)",
@@ -39233,7 +39269,7 @@
         "xmlDocumentation": false
       },
       {
-        "assembly": "",
+        "assembly": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
         "containingType": "",
         "file": "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleRaycastController.cs",
         "fullSignature": "public sealed class CoreStateIntegrationSampleRaycastController : RaycastSelectionController<string>",
@@ -253621,14 +253657,16 @@
           "versionDefines": []
         },
         {
-          "autoReferenced": true,
+          "autoReferenced": false,
           "defineConstraints": [],
           "excludePlatforms": [],
           "includePlatforms": [],
-          "name": "",
+          "name": "Deucarian.CameraNavigation.InputSystemIntegration.Samples.ReadyRig",
           "optionalUnityReferences": [],
           "path": "Samples~/Ready-to-use Navigation Rig/Deucarian.CameraNavigation.InputSystemIntegration.Samples.ReadyRig.asmdef",
-          "references": [],
+          "references": [
+            "Deucarian.CameraNavigation.InputSystemIntegration"
+          ],
           "scope": "Sample",
           "versionDefines": []
         },
@@ -253721,6 +253759,8 @@
         "url": "git+https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git"
       },
       "samples": [
+        "Samples~/Ready-to-use Navigation Rig/Deucarian.CameraNavigation.InputSystemIntegration.Samples.ReadyRig.asmdef",
+        "Samples~/Ready-to-use Navigation Rig/Deucarian.CameraNavigation.InputSystemIntegration.Samples.ReadyRig.asmdef.meta",
         "Samples~/Ready-to-use Navigation Rig/DeucarianReadyRigExample.cs",
         "Samples~/Ready-to-use Navigation Rig/DeucarianReadyRigExample.cs.meta",
         "Samples~/Ready-to-use Navigation Rig/README.md"
@@ -256644,10 +256684,15 @@
           "defineConstraints": [],
           "excludePlatforms": [],
           "includePlatforms": [],
-          "name": "",
+          "name": "Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample",
           "optionalUnityReferences": [],
           "path": "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
-          "references": [],
+          "references": [
+            "Deucarian.CoreState",
+            "Deucarian.Logging",
+            "Deucarian.ObjectSelection",
+            "Deucarian.ObjectSelection.CoreStateIntegration"
+          ],
           "scope": "Sample",
           "versionDefines": []
         },
@@ -256755,6 +256800,8 @@
         "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleHighlighter.cs.meta",
         "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleRaycastController.cs",
         "Samples~/CoreStateIntegrationSample/CoreStateIntegrationSampleRaycastController.cs.meta",
+        "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef",
+        "Samples~/CoreStateIntegrationSample/Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample.asmdef.meta",
         "Samples~/CoreStateIntegrationSample/README.md",
         "Samples~/CoreStateIntegrationSample/README.md.meta"
       ],
