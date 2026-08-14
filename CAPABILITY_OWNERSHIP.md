@@ -16,7 +16,7 @@
 | Collection-to-UI synchronization | `com.deucarian.ui-binding` |
 | UI navigation, routing, screens, channels, and guards | `com.deucarian.ui-flow` |
 | World-object selection, hover, raycast adapters | `com.deucarian.object-selection` |
-| Activity/Step membership planning, revisions, baseline restoration, model visibility state | `com.deucarian.activity-visualization` |
+| Flat Activity membership planning, revisions, baseline restoration, model visibility state | `com.deucarian.activity-visualization` |
 | Viewer navigation toolbar/action state, reference/origin wiring, input gating, view cube UX | `com.deucarian.viewer-navigation` |
 | Secure browser/WebGL command transport, iframe origin/source validation, host handshake | `com.deucarian.command-routing.webgl-integration` |
 | Runtime themes, palettes, and adapters | `com.deucarian.theming` |

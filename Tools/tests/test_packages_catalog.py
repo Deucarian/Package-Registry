@@ -4,6 +4,72 @@ from pathlib import Path
 
 
 class PackagesCatalogTests(unittest.TestCase):
+    def test_web_viewer_ecosystem_catalog_dependencies_match_direct_contracts(self):
+        registry_root = Path(__file__).resolve().parents[2]
+        packages = json.loads((registry_root / "packages.json").read_text(encoding="utf-8"))["packages"]
+        packages_by_id = {package["id"]: package for package in packages}
+        expected_dependencies = {
+            "com.deucarian.viewer-navigation": [
+                "com.deucarian.camera-navigation",
+                "com.deucarian.camera-navigation.input-system-integration",
+                "com.deucarian.common",
+                "com.deucarian.diagnostics",
+                "com.deucarian.editor",
+                "com.deucarian.logging",
+                "com.deucarian.pointer-capture",
+                "com.deucarian.theming",
+                "com.deucarian.ui",
+            ],
+            "com.deucarian.command-routing.webgl-integration": [
+                "com.deucarian.command-routing",
+                "com.deucarian.diagnostics",
+                "com.deucarian.editor",
+                "com.deucarian.logging",
+            ],
+            "com.deucarian.activity-visualization": [
+                "com.deucarian.diagnostics",
+                "com.deucarian.logging",
+            ],
+            "com.deucarian.web-viewer-suite": [
+                "com.deucarian.api",
+                "com.deucarian.build-pipeline",
+                "com.deucarian.camera-navigation",
+                "com.deucarian.camera-navigation.input-system-integration",
+                "com.deucarian.command-routing",
+                "com.deucarian.command-routing.webgl-integration",
+                "com.deucarian.diagnostics",
+                "com.deucarian.object-loading",
+                "com.deucarian.object-loading.api-integration",
+                "com.deucarian.pointer-capture",
+                "com.deucarian.theming",
+                "com.deucarian.ui",
+                "com.deucarian.viewer-navigation",
+            ],
+            "com.deucarian.template.viewer.web": [
+                "com.deucarian.api",
+                "com.deucarian.build-pipeline",
+                "com.deucarian.camera-navigation",
+                "com.deucarian.command-routing",
+                "com.deucarian.command-routing.webgl-integration",
+                "com.deucarian.common",
+                "com.deucarian.diagnostics",
+                "com.deucarian.logging",
+                "com.deucarian.object-loading",
+                "com.deucarian.object-loading.api-integration",
+                "com.deucarian.theming",
+                "com.deucarian.ui",
+                "com.deucarian.viewer-navigation",
+                "com.deucarian.web-viewer-suite",
+            ],
+        }
+
+        for package_id, dependencies in expected_dependencies.items():
+            with self.subTest(package_id=package_id):
+                self.assertEqual(dependencies, packages_by_id[package_id]["dependencies"])
+
+        suite = packages_by_id["com.deucarian.web-viewer-suite"]
+        self.assertEqual(suite["dependencies"], suite["suiteMembers"])
+
     def test_idle_auto_defense_template_declares_every_direct_assembly_dependency(self):
         registry_root = Path(__file__).resolve().parents[2]
         packages = json.loads((registry_root / "packages.json").read_text(encoding="utf-8"))["packages"]

@@ -137,7 +137,7 @@
     "Logging cannot depend on Diagnostics or telemetry.",
     "Integration packages depend on every integration target plus only explicitly used foundations.",
     "Suite package dependencies exactly match suiteMembers and suites remain implementation-free.",
-    "Package Registry dependencies match package.json direct Deucarian dependencies and versions.",
+    "Package Registry dependency ids match package.json direct Deucarian dependencies; cross-manifest audit enforces exact versions.",
     "Production and sample assembly references match direct package dependencies."
   ]
 }
