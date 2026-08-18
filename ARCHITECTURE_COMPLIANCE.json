@@ -1010,7 +1010,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/ViewerAuthenticationWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1062,
+      "lineCount": 1131,
       "lineLimit": 500,
       "packageId": "com.deucarian.viewer-authentication",
       "repository": "Viewer-Authentication",
@@ -2493,12 +2493,12 @@
         {
           "assembly": "Deucarian.ViewerAuthentication.Editor",
           "file": "Editor/ViewerAuthenticationWindow.cs",
-          "lineCount": 1062,
+          "lineCount": 1131,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 38,
+      "productionFileCount": 39,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
