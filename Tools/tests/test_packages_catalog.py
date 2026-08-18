@@ -30,6 +30,18 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.diagnostics",
                 "com.deucarian.logging",
             ],
+            "com.deucarian.viewer-rendering": [
+                "com.deucarian.common",
+                "com.deucarian.diagnostics",
+                "com.deucarian.logging",
+                "com.deucarian.theming",
+            ],
+            "com.deucarian.viewer-shell": [
+                "com.deucarian.common",
+                "com.deucarian.theming",
+                "com.deucarian.ui",
+                "com.deucarian.viewer-rendering",
+            ],
             "com.deucarian.web-viewer-suite": [
                 "com.deucarian.api",
                 "com.deucarian.build-pipeline",
@@ -44,6 +56,8 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.theming",
                 "com.deucarian.ui",
                 "com.deucarian.viewer-navigation",
+                "com.deucarian.viewer-rendering",
+                "com.deucarian.viewer-shell",
             ],
             "com.deucarian.template.viewer.web": [
                 "com.deucarian.api",
@@ -58,6 +72,8 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.theming",
                 "com.deucarian.ui",
                 "com.deucarian.viewer-navigation",
+                "com.deucarian.viewer-rendering",
+                "com.deucarian.viewer-shell",
                 "com.deucarian.web-viewer-suite",
             ],
         }
