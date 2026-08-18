@@ -6726,7 +6726,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -6869,7 +6869,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -7037,7 +7037,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.11",
+      "declaredVersion": "0.1.12",
       "dependency": "com.deucarian.web-viewer-suite",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [],
@@ -7456,6 +7456,20 @@
       ],
       "referencedBy": [
         {
+          "asmdef": "Editor/Deucarian.ViewerAuthentication.Editor.asmdef",
+          "assembly": "Deucarian.ViewerAuthentication.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Runtime/Deucarian.ViewerAuthentication.asmdef",
           "assembly": "Deucarian.ViewerAuthentication",
           "autoReferenced": true,
@@ -7616,7 +7630,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.viewer-authentication",
       "referencedAssemblies": [
@@ -9005,7 +9019,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.1.0",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [],
@@ -9038,7 +9052,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [
