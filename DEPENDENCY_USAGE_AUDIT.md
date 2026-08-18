@@ -6,10 +6,10 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 27 |
+| Editor-only use | 28 |
 | Optional version-defined use | 1 |
-| Required and used | 125 |
-| Suite composition | 34 |
+| Required and used | 139 |
+| Suite composition | 36 |
 | Test-only use | 11 |
 
 Findings marked `apparently unused` are review prompts, not removal recommendations.
@@ -90,9 +90,9 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Object-Selection | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectSelection -> Deucarian.Logging; Sample: Deucarian.ObjectSelection.Samples.PrimitiveSelection -> Deucarian.Logging | Deucarian.Logging | 0 |
 | ObjectLoading-API-Integration | com.deucarian.api | Required and used | Runtime production: Deucarian.ObjectLoading.APIIntegration -> Deucarian.API; Sample: Deucarian.ObjectLoading.APIIntegration.Samples -> Deucarian.API; Test: Deucarian.ObjectLoading.APIIntegration.Tests -> Deucarian.API | Deucarian.API | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.ObjectLoading.APIIntegration -> Deucarian.ObjectLoading; Sample: Deucarian.ObjectLoading.APIIntegration.Samples -> Deucarian.ObjectLoading; Test: Deucarian.ObjectLoading.APIIntegration.Tests -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
-| ObjectSelection-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.CoreState; Sample: Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample -> Deucarian.CoreState; Test: Deucarian.ObjectSelection.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
-| ObjectSelection-CoreState-Integration | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.Logging; Sample: Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample -> Deucarian.Logging | Deucarian.Logging | 0 |
-| ObjectSelection-CoreState-Integration | com.deucarian.object-selection | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.ObjectSelection; Sample: Deucarian.ObjectSelection.CoreStateIntegration.Samples.CoreStateIntegrationSample -> Deucarian.ObjectSelection; Test: Deucarian.ObjectSelection.CoreStateIntegration.Tests -> Deucarian.ObjectSelection | Deucarian.ObjectSelection | 0 |
+| ObjectSelection-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.CoreState; Test: Deucarian.ObjectSelection.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
+| ObjectSelection-CoreState-Integration | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.Logging | Deucarian.Logging | 0 |
+| ObjectSelection-CoreState-Integration | com.deucarian.object-selection | Required and used | Runtime production: Deucarian.ObjectSelection.CoreStateIntegration -> Deucarian.ObjectSelection; Test: Deucarian.ObjectSelection.CoreStateIntegration.Tests -> Deucarian.ObjectSelection | Deucarian.ObjectSelection | 0 |
 | Package-Installer | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Editor; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Package-Installer | com.deucarian.logging | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Logging; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Pointer-Capture | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PointerCapture.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
@@ -161,9 +161,11 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.logging | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
-| Template-Viewer-Web | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Theming | Deucarian.Theming | 0 |
-| Template-Viewer-Web | com.deucarian.ui | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.UI | Deucarian.UI | 0 |
+| Template-Viewer-Web | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Theming; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
+| Template-Viewer-Web | com.deucarian.ui | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
 | Template-Viewer-Web | com.deucarian.viewer-navigation | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerNavigation; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
+| Template-Viewer-Web | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
+| Template-Viewer-Web | com.deucarian.viewer-shell | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerShell | Deucarian.ViewerShell | 0 |
 | Template-Viewer-Web | com.deucarian.web-viewer-suite | Suite composition |  |  | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
@@ -174,6 +176,11 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | UI-FLow | com.deucarian.logging | Required and used | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Logging; Runtime production: Deucarian.UIFlow -> Deucarian.Logging; Runtime production: Deucarian.UIFlow.UGUI -> Deucarian.Logging; Sample: Deucarian.UIFlow.Samples.BasicFlow -> Deucarian.Logging; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.CoreState; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.CoreState; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.UIBinding; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.UIBinding; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.UIBinding | Deucarian.UIBinding | 0 |
+| Viewer-Authentication | com.deucarian.api | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.API; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.API | Deucarian.API | 0 |
+| Viewer-Authentication | com.deucarian.command-routing | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.CommandRouting; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
+| Viewer-Authentication | com.deucarian.editor | Editor-only use | Editor production: Deucarian.ViewerAuthentication.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Viewer-Authentication | com.deucarian.session | Required and used | Editor production: Deucarian.ViewerAuthentication.Editor -> Deucarian.Session; Runtime production: Deucarian.ViewerAuthentication -> Deucarian.Session; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
+| Viewer-Authentication | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Viewer-Navigation | com.deucarian.camera-navigation | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.CameraNavigation; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.CameraNavigation; Test: Deucarian.ViewerNavigation.Tests.PlayMode -> Deucarian.CameraNavigation | Deucarian.CameraNavigation | 0 |
 | Viewer-Navigation | com.deucarian.camera-navigation.input-system-integration | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.CameraNavigation.InputSystemIntegration; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.CameraNavigation.InputSystemIntegration; Test: Deucarian.ViewerNavigation.Tests.PlayMode -> Deucarian.CameraNavigation.InputSystemIntegration | Deucarian.CameraNavigation.InputSystemIntegration | 0 |
 | Viewer-Navigation | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Common | Deucarian.Common | 0 |
@@ -181,8 +188,16 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Navigation | com.deucarian.editor | Editor-only use | Editor production: Deucarian.ViewerNavigation.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Viewer-Navigation | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Viewer-Navigation | com.deucarian.pointer-capture | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.PointerCapture; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.PointerCapture | Deucarian.PointerCapture | 0 |
-| Viewer-Navigation | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Theming | Deucarian.Theming | 0 |
-| Viewer-Navigation | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.UI | Deucarian.UI | 0 |
+| Viewer-Navigation | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Theming; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
+| Viewer-Navigation | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.UI; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.UI; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
+| Viewer-Rendering | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Common | Deucarian.Common | 0 |
+| Viewer-Rendering | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
+| Viewer-Rendering | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Viewer-Rendering | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.EditMode -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.PlayMode -> Deucarian.Theming | Deucarian.Theming | 0 |
+| Viewer-Shell | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Common; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
+| Viewer-Shell | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Theming; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
+| Viewer-Shell | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
+| Viewer-Shell | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.ViewerRendering; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Weapon-Systems | com.deucarian.combat | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.Combat | Deucarian.Combat |  |
 | Weapon-Systems | com.deucarian.defense-games | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.DefenseGames | Deucarian.DefenseGames |  |
 | Weapon-Systems | com.deucarian.encounters | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.Encounters | Deucarian.Encounters |  |
@@ -206,6 +221,8 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Web-Viewer-Suite | com.deucarian.theming | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.ui | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-navigation | Suite composition | Sample: Deucarian.WebViewerSuite.Samples.Stack -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
+| Web-Viewer-Suite | com.deucarian.viewer-rendering | Suite composition |  |  | 0 |
+| Web-Viewer-Suite | com.deucarian.viewer-shell | Suite composition |  |  | 0 |
 | World-Navigation | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | World-Navigation | com.deucarian.world-spawning | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.WorldSpawning; Sample: Deucarian.WorldNavigation.Samples -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.Tests -> Deucarian.WorldSpawning | Deucarian.WorldSpawning | 0 |
 | World-Spawning | com.deucarian.encounters | Test-only use | Test: Deucarian.WorldSpawning.PlayModeTests -> Deucarian.Encounters; Test: Deucarian.WorldSpawning.Tests -> Deucarian.Encounters | Deucarian.Encounters |  |
