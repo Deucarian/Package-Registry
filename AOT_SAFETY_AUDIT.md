@@ -6,10 +6,10 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 ## Summary
 
-- Repositories scanned: **56**
-- Repositories with findings: **17**
-- Clean repositories: **39**
-- Unresolved findings: **60**
+- Repositories scanned: **59**
+- Repositories with findings: **18**
+- Clean repositories: **41**
+- Unresolved findings: **61**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -19,7 +19,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | --- | ---: |
 | `reflection-based-newtonsoft` | 11 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 39 |
+| `runtime-type-discovery` | 40 |
 
 ## Repository Status
 
@@ -74,7 +74,10 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.ui-binding` | `UI-Binding` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding.core-state-integration` | `UIBinding-CoreState-Integration` | `Audit` | 7 | 0 | Valid |
 | `com.deucarian.ui-flow` | `UI-FLow` | `Audit` | 2 | 0 | Valid |
-| `com.deucarian.viewer-navigation` | `Viewer-Navigation` | `Audit` | 0 | 0 | Valid |
+| `com.deucarian.viewer-authentication` | `Viewer-Authentication` | `Audit` | 0 | 0 | Valid |
+| `com.deucarian.viewer-navigation` | `Viewer-Navigation` | `Audit` | 1 | 0 | Valid |
+| `com.deucarian.viewer-rendering` | `Viewer-Rendering` | `Audit` | 0 | 0 | Valid |
+| `com.deucarian.viewer-shell` | `Viewer-Shell` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.weapon-systems` | `Weapon-Systems` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.web-viewer-suite` | `Web-Viewer-Suite` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.world-navigation` | `World-Navigation` | `Audit` | 0 | 0 | Valid |
@@ -169,7 +172,7 @@ Mode: `Audit`
 Repository: `ObjectLoading-API-Integration`  
 Mode: `Audit`
 
-- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ApiObjectDownloadMapper.cs`:252 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
+- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ApiObjectDownloadMapper.cs`:288 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 
 ### `com.deucarian.persistence`
 
@@ -226,6 +229,13 @@ Mode: `Audit`
 
 - `runtime-type-discovery` — `.GetType` at `Runtime/Navigation/UIFlowContext.cs`:63 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Navigation/UIFlowPresentationState.cs`:104 (`Runtime type/member discovery must be generated or explicitly composed.`)
+
+### `com.deucarian.viewer-navigation`
+
+Repository: `Viewer-Navigation`  
+Mode: `Audit`
+
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerNavigationUiInputBlocker.cs`:102 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.xr-ui`
 
