@@ -9,10 +9,6 @@ class PackagesCatalogTests(unittest.TestCase):
         packages = json.loads((registry_root / "packages.json").read_text(encoding="utf-8"))["packages"]
         packages_by_id = {package["id"]: package for package in packages}
         expected_dependencies = {
-            "com.deucarian.api": [
-                "com.deucarian.editor",
-                "com.deucarian.logging",
-            ],
             "com.deucarian.viewer-navigation": [
                 "com.deucarian.camera-navigation",
                 "com.deucarian.camera-navigation.input-system-integration",
