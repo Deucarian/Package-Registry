@@ -1265,24 +1265,40 @@
       "scope": "Runtime production"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
+      "assembly": "Deucarian.UI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/UIToolkit/DeucarianMorphingMenu.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1029,
+      "lineLimit": 500,
       "packageId": "com.deucarian.ui",
-      "repository": "UI"
+      "repository": "UI",
+      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.UI",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
+      "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 527,
+      "lineCount": 704,
       "lineLimit": 500,
       "packageId": "com.deucarian.ui",
       "repository": "UI",
       "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.UI.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/DeucarianUILayeringArchitectureValidator.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 618,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.ui",
+      "repository": "UI",
+      "scope": "Editor production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1337,8 +1353,48 @@
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.viewer-authentication",
+      "repository": "Viewer-Authentication"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.viewer-navigation",
       "repository": "Viewer-Navigation"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.viewer-rendering",
+      "repository": "Viewer-Rendering"
+    },
+    {
+      "detail": "Run the shared Deucarian package validator in continuous integration.",
+      "disposition": "SetupRequired",
+      "file": ".github/workflows",
+      "kind": "MissingSharedArchitectureValidation",
+      "packageId": "com.deucarian.viewer-rendering",
+      "repository": "Viewer-Rendering"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.viewer-shell",
+      "repository": "Viewer-Shell"
+    },
+    {
+      "detail": "Run the shared Deucarian package validator in continuous integration.",
+      "disposition": "SetupRequired",
+      "file": ".github/workflows",
+      "kind": "MissingSharedArchitectureValidation",
+      "packageId": "com.deucarian.viewer-shell",
+      "repository": "Viewer-Shell"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -2757,7 +2813,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 63,
+      "productionFileCount": 65,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -2770,23 +2826,35 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [
         {
+          "assembly": "Deucarian.UI.Editor",
+          "file": "Editor/DeucarianUILayeringArchitectureValidator.cs",
+          "lineCount": 618,
+          "scope": "Editor production"
+        },
+        {
           "assembly": "Deucarian.UI",
-          "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
-          "lineCount": 527,
+          "file": "Runtime/UIToolkit/DeucarianMorphingMenu.cs",
+          "lineCount": 1029,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.UI",
+          "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
+          "lineCount": 704,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.ui",
-      "productionFileCount": 14,
+      "productionFileCount": 36,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI",
       "sharedValidationPresent": true,
-      "status": "SetupRequired",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.UI.Tests.EditMode"
       ]
@@ -2863,8 +2931,25 @@
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.viewer-authentication",
+      "productionFileCount": 19,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Viewer-Authentication",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.ViewerAuthentication.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 16,
+      "productionFileCount": 26,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2872,6 +2957,41 @@
       "testAssemblies": [
         "Deucarian.ViewerNavigation.Tests.EditMode",
         "Deucarian.ViewerNavigation.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.viewer-rendering",
+      "productionFileCount": 16,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Viewer-Rendering",
+      "sharedValidationPresent": false,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.ViewerRendering.Tests.EditMode",
+        "Deucarian.ViewerRendering.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.viewer-shell",
+      "productionFileCount": 17,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Viewer-Shell",
+      "sharedValidationPresent": false,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.ViewerShell.Tests.EditMode"
       ]
     },
     {
@@ -3030,14 +3150,14 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 92,
-      "SetupRequired": 46
+      "RefactorBacklog": 94,
+      "SetupRequired": 50
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 45,
-      "MissingSharedArchitectureValidation": 1,
-      "ProductionFileExceedsLineLimit": 92
+      "MissingCanonicalArchitectureReference": 47,
+      "MissingSharedArchitectureValidation": 3,
+      "ProductionFileExceedsLineLimit": 94
     },
-    "repositoryCount": 57
+    "repositoryCount": 60
   }
 }

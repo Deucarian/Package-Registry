@@ -145,19 +145,26 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
 | com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
 | com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.5 | Template-Viewer-Web | ObjectLoading-API-Integration |
-| com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.3 | Template-Viewer-Web | Theming |
-| com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.1 | Template-Viewer-Web | UI |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.2 | Template-Viewer-Web | Viewer-Navigation |
-| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.2 | Template-Viewer-Web | Web-Viewer-Suite |
+| com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.5 | Template-Viewer-Web | Theming |
+| com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
+| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.9 | Template-Viewer-Web | Web-Viewer-Suite |
 | com.deucarian.theming | com.deucarian.editor | 1.0.3 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.2 | Theming | Logging |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
-| com.deucarian.ui | com.deucarian.theming | 1.0.3 | UI | Theming |
+| com.deucarian.ui | com.deucarian.theming | 1.0.5 | UI | Theming |
 | com.deucarian.ui-binding | com.deucarian.common | 0.2.1 | UI-Binding | Common |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.core-state | 1.0.2 | UIBinding-CoreState-Integration | Core-State |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
 | com.deucarian.ui-flow | com.deucarian.common | 0.2.1 | UI-FLow | Common |
 | com.deucarian.ui-flow | com.deucarian.logging | 1.0.2 | UI-FLow | Logging |
+| com.deucarian.viewer-authentication | com.deucarian.api | 1.1.4 | Viewer-Authentication | API |
+| com.deucarian.viewer-authentication | com.deucarian.command-routing | 0.1.1 | Viewer-Authentication | Command-Routing |
+| com.deucarian.viewer-authentication | com.deucarian.editor | 1.0.5 | Viewer-Authentication | Editor |
+| com.deucarian.viewer-authentication | com.deucarian.session | 1.0.6 | Viewer-Authentication | Session |
+| com.deucarian.viewer-authentication | com.deucarian.session.api-integration | 1.0.6 | Viewer-Authentication | Session-API-Integration |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation | 0.2.10 | Viewer-Navigation | Camera-Navigation |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Viewer-Navigation | CameraNavigation-InputSystem-Integration |
 | com.deucarian.viewer-navigation | com.deucarian.common | 0.2.1 | Viewer-Navigation | Common |
@@ -165,8 +172,16 @@ Schema version: 2
 | com.deucarian.viewer-navigation | com.deucarian.editor | 1.0.5 | Viewer-Navigation | Editor |
 | com.deucarian.viewer-navigation | com.deucarian.logging | 1.0.2 | Viewer-Navigation | Logging |
 | com.deucarian.viewer-navigation | com.deucarian.pointer-capture | 0.1.2 | Viewer-Navigation | Pointer-Capture |
-| com.deucarian.viewer-navigation | com.deucarian.theming | 1.0.3 | Viewer-Navigation | Theming |
-| com.deucarian.viewer-navigation | com.deucarian.ui | 0.2.1 | Viewer-Navigation | UI |
+| com.deucarian.viewer-navigation | com.deucarian.theming | 1.0.5 | Viewer-Navigation | Theming |
+| com.deucarian.viewer-navigation | com.deucarian.ui | 0.2.7 | Viewer-Navigation | UI |
+| com.deucarian.viewer-rendering | com.deucarian.common | 0.2.1 | Viewer-Rendering | Common |
+| com.deucarian.viewer-rendering | com.deucarian.diagnostics | 0.1.4 | Viewer-Rendering | Diagnostics |
+| com.deucarian.viewer-rendering | com.deucarian.logging | 1.0.2 | Viewer-Rendering | Logging |
+| com.deucarian.viewer-rendering | com.deucarian.theming | 1.0.5 | Viewer-Rendering | Theming |
+| com.deucarian.viewer-shell | com.deucarian.common | 0.2.1 | Viewer-Shell | Common |
+| com.deucarian.viewer-shell | com.deucarian.theming | 1.0.5 | Viewer-Shell | Theming |
+| com.deucarian.viewer-shell | com.deucarian.ui | 0.2.7 | Viewer-Shell | UI |
+| com.deucarian.viewer-shell | com.deucarian.viewer-rendering | 0.1.0 | Viewer-Shell | Viewer-Rendering |
 | com.deucarian.weapon-systems | com.deucarian.attacks | 0.1.1 | Weapon-Systems | Attacks |
 | com.deucarian.weapon-systems | com.deucarian.editor | 1.0.3 | Weapon-Systems | Editor |
 | com.deucarian.weapon-systems | com.deucarian.game-content-authoring | 0.1.1 | Weapon-Systems | Game-Content-Authoring |
@@ -182,9 +197,11 @@ Schema version: 2
 | com.deucarian.web-viewer-suite | com.deucarian.object-loading | 1.2.2 | Web-Viewer-Suite | Object-Loading |
 | com.deucarian.web-viewer-suite | com.deucarian.object-loading.api-integration | 0.2.5 | Web-Viewer-Suite | ObjectLoading-API-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.pointer-capture | 0.1.2 | Web-Viewer-Suite | Pointer-Capture |
-| com.deucarian.web-viewer-suite | com.deucarian.theming | 1.0.3 | Web-Viewer-Suite | Theming |
-| com.deucarian.web-viewer-suite | com.deucarian.ui | 0.2.1 | Web-Viewer-Suite | UI |
-| com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.2 | Web-Viewer-Suite | Viewer-Navigation |
+| com.deucarian.web-viewer-suite | com.deucarian.theming | 1.0.5 | Web-Viewer-Suite | Theming |
+| com.deucarian.web-viewer-suite | com.deucarian.ui | 0.2.7 | Web-Viewer-Suite | UI |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.10 | Web-Viewer-Suite | Viewer-Navigation |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-rendering | 0.1.0 | Web-Viewer-Suite | Viewer-Rendering |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-shell | 0.1.0 | Web-Viewer-Suite | Viewer-Shell |
 | com.deucarian.world-navigation | com.deucarian.gameplay-foundation | 0.1.1 | World-Navigation | Gameplay-Foundation |
 | com.deucarian.world-navigation | com.deucarian.world-spawning | 0.2.1 | World-Navigation | World-Spawning |
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
@@ -199,5 +216,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 13
-- Registry dependency drift entries: 0
+- Dependency version drift entries: 14
+- Registry dependency drift entries: 2

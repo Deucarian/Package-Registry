@@ -549,7 +549,7 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/ApiObjectDownloadMapper.cs",
-          "line": 252,
+          "line": 288,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         }
@@ -980,8 +980,54 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.viewer-authentication",
+      "repository": "Viewer-Authentication",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerNavigationUiInputBlocker.cs",
+          "line": 102,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.viewer-navigation",
       "repository": "Viewer-Navigation",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.viewer-rendering",
+      "repository": "Viewer-Rendering",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.viewer-shell",
+      "repository": "Viewer-Shell",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
     },
@@ -1158,15 +1204,15 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 11,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 39
+      "runtime-type-discovery": 40
     },
-    "cleanRepositoryCount": 39,
+    "cleanRepositoryCount": 41,
     "modeCounts": {
-      "Audit": 56
+      "Audit": 59
     },
-    "repositoriesWithFindings": 17,
-    "repositoryCount": 56,
-    "totalFindingCount": 60,
+    "repositoriesWithFindings": 18,
+    "repositoryCount": 59,
+    "totalFindingCount": 61,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

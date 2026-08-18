@@ -12,19 +12,19 @@ once.
 
 ## Summary
 
-- Repositories: 57
+- Repositories: 60
 - Fully compliant repositories: 9
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 92 |
-| SetupRequired | 46 |
+| RefactorBacklog | 94 |
+| SetupRequired | 50 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 45 |
-| MissingSharedArchitectureValidation | 1 |
-| ProductionFileExceedsLineLimit | 92 |
+| MissingCanonicalArchitectureReference | 47 |
+| MissingSharedArchitectureValidation | 3 |
+| ProductionFileExceedsLineLimit | 94 |
 
 ## Repository Status
 
@@ -75,12 +75,15 @@ once.
 | Template-Game-Survivors | com.deucarian.template.game.survivors | SetupRequired | No | Yes | 23 | 2 | 13 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 15 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | SetupRequired | No | Yes | 0 | 1 | 0 | 0 |
-| Theming | com.deucarian.theming | SetupRequired | No | Yes | 63 | 2 | 8 | 0 |
-| UI | com.deucarian.ui | SetupRequired | No | Yes | 14 | 1 | 1 | 0 |
+| Theming | com.deucarian.theming | SetupRequired | No | Yes | 65 | 2 | 8 | 0 |
+| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | SetupRequired | No | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | SetupRequired | No | Yes | 45 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | SetupRequired | No | Yes | 3 | 1 | 0 | 0 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 16 | 2 | 0 | 0 |
+| Viewer-Authentication | com.deucarian.viewer-authentication | SetupRequired | No | Yes | 19 | 1 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 26 | 2 | 0 | 0 |
+| Viewer-Rendering | com.deucarian.viewer-rendering | SetupRequired | No | No | 16 | 2 | 0 | 0 |
+| Viewer-Shell | com.deucarian.viewer-shell | SetupRequired | No | No | 17 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | SetupRequired | No | Yes | 9 | 1 | 1 | 0 |
 | Web-Viewer-Suite | com.deucarian.web-viewer-suite | SetupRequired | No | Yes | 0 | 0 | 0 | 0 |
 | World-Navigation | com.deucarian.world-navigation | SetupRequired | No | Yes | 1 | 2 | 0 | 0 |
@@ -209,14 +212,20 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 622 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianColorPalette.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| UI | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianIconButtonStyle.cs | 527 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 704 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianUILayeringArchitectureValidator.cs | 618 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-Binding | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | UI-FLow | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 984 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowNavigator.cs | 966 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UIBinding-CoreState-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Viewer-Authentication | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Viewer-Navigation | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Viewer-Rendering | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Viewer-Rendering | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
+| Viewer-Shell | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Viewer-Shell | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
 | Weapon-Systems | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Weapon-Systems | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WeaponProviderV2.cs | 878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
