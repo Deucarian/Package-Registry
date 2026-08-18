@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Historical changelog reference | 14 |
 | Legitimate generic bridge term | 1 |
-| Migration documentation | 8 |
+| Migration documentation | 7 |
 | Review required | 10 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
@@ -41,7 +41,6 @@ Historical changelog references preserve released history and are not rewrite re
 | Selection-Suite | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
-| Session-API-Integration | Migration documentation | README.md |  |  |  |
 | Template-Game-Survivors | Migration documentation | Documentation~/validation.md |  |  |  |
 | Template-Game-Survivors | Review required | Documentation~/game-content-authoring.md |  |  |  |
 | Test-Automation | Review required | Documentation~/lifecycle.md |  |  |  |

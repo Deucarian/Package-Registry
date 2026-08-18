@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 28 |
+| Editor-only use | 29 |
 | Optional version-defined use | 1 |
-| Required and used | 141 |
+| Required and used | 142 |
 | Suite composition | 39 |
 | Test-only use | 11 |
 
@@ -16,6 +16,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 
 | Repository | Dependency/Reference | Classification | Evidence | Referenced assemblies | Source mentions |
 | --- | --- | --- | --- | --- | --- |
+| API | com.deucarian.editor | Editor-only use | Editor production: Deucarian.API.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | API | com.deucarian.logging | Required and used | Editor production: Deucarian.API.Editor -> Deucarian.Logging; Runtime production: Deucarian.API -> Deucarian.Logging; Sample: Deucarian.API.Samples -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Activity-Visualization | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.ActivityVisualization -> Deucarian.Diagnostics; Test: Deucarian.ActivityVisualization.Tests -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Activity-Visualization | com.deucarian.logging | Required and used | Runtime production: Deucarian.ActivityVisualization -> Deucarian.Logging | Deucarian.Logging | 0 |
@@ -162,6 +163,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.session | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session | Deucarian.Session | 0 |
+| Template-Viewer-Web | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session.APIIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Theming; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Template-Viewer-Web | com.deucarian.ui | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
 | Template-Viewer-Web | com.deucarian.viewer-authentication | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerAuthentication; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerAuthentication | Deucarian.ViewerAuthentication | 0 |
@@ -182,7 +184,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Authentication | com.deucarian.command-routing | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.CommandRouting; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
 | Viewer-Authentication | com.deucarian.editor | Editor-only use | Editor production: Deucarian.ViewerAuthentication.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Viewer-Authentication | com.deucarian.session | Required and used | Editor production: Deucarian.ViewerAuthentication.Editor -> Deucarian.Session; Runtime production: Deucarian.ViewerAuthentication -> Deucarian.Session; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
-| Viewer-Authentication | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
+| Viewer-Authentication | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.ViewerAuthentication -> Deucarian.Session.APIIntegration; Test: Deucarian.ViewerAuthentication.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Viewer-Navigation | com.deucarian.camera-navigation | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.CameraNavigation; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.CameraNavigation; Test: Deucarian.ViewerNavigation.Tests.PlayMode -> Deucarian.CameraNavigation | Deucarian.CameraNavigation | 0 |
 | Viewer-Navigation | com.deucarian.camera-navigation.input-system-integration | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.CameraNavigation.InputSystemIntegration; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.CameraNavigation.InputSystemIntegration; Test: Deucarian.ViewerNavigation.Tests.PlayMode -> Deucarian.CameraNavigation.InputSystemIntegration | Deucarian.CameraNavigation.InputSystemIntegration | 0 |
 | Viewer-Navigation | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Common | Deucarian.Common | 0 |
