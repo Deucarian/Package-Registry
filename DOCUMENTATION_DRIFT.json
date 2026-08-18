@@ -109,6 +109,12 @@
       "repository": "Package-Registry"
     },
     {
+      "file": "EXTRACTION_DECISIONS.md",
+      "kind": "ReviewRequired",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.pointer-capture",
@@ -197,6 +203,6 @@
     "HistoricalChangelogReference": 14,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 8,
-    "ReviewRequired": 9
+    "ReviewRequired": 10
   }
 }
