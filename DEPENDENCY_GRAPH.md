@@ -144,13 +144,15 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
 | com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
 | com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
-| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.5 | Template-Viewer-Web | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.7 | Template-Viewer-Web | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer.web | com.deucarian.session | 1.0.6 | Template-Viewer-Web | Session |
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.5 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.1.0 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
-| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.9 | Template-Viewer-Web | Web-Viewer-Suite |
+| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.10 | Template-Viewer-Web | Web-Viewer-Suite |
 | com.deucarian.theming | com.deucarian.editor | 1.0.3 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.2 | Theming | Logging |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -195,10 +197,13 @@ Schema version: 2
 | com.deucarian.web-viewer-suite | com.deucarian.command-routing.webgl-integration | 0.1.1 | Web-Viewer-Suite | Command-Routing-WebGL-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.diagnostics | 0.1.4 | Web-Viewer-Suite | Diagnostics |
 | com.deucarian.web-viewer-suite | com.deucarian.object-loading | 1.2.2 | Web-Viewer-Suite | Object-Loading |
-| com.deucarian.web-viewer-suite | com.deucarian.object-loading.api-integration | 0.2.5 | Web-Viewer-Suite | ObjectLoading-API-Integration |
+| com.deucarian.web-viewer-suite | com.deucarian.object-loading.api-integration | 0.2.7 | Web-Viewer-Suite | ObjectLoading-API-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.pointer-capture | 0.1.2 | Web-Viewer-Suite | Pointer-Capture |
+| com.deucarian.web-viewer-suite | com.deucarian.session | 1.0.6 | Web-Viewer-Suite | Session |
+| com.deucarian.web-viewer-suite | com.deucarian.session.api-integration | 1.0.6 | Web-Viewer-Suite | Session-API-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.theming | 1.0.5 | Web-Viewer-Suite | Theming |
 | com.deucarian.web-viewer-suite | com.deucarian.ui | 0.2.7 | Web-Viewer-Suite | UI |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-authentication | 0.1.0 | Web-Viewer-Suite | Viewer-Authentication |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.10 | Web-Viewer-Suite | Viewer-Navigation |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-rendering | 0.1.0 | Web-Viewer-Suite | Viewer-Rendering |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-shell | 0.1.0 | Web-Viewer-Suite | Viewer-Shell |
@@ -216,5 +221,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 14
-- Registry dependency drift entries: 2
+- Dependency version drift entries: 12
+- Registry dependency drift entries: 0
