@@ -35,21 +35,51 @@
     ],
     "runtimeRepositoryCount": 12,
     "selectedOption": "Completed",
-    "testRepositoryCount": 35,
+    "testRepositoryCount": 36,
     "testingPackageDecision": {
       "decision": "KeepLocal",
       "reasoning": "Repeated test findings are mostly explicit Object.DestroyImmediate(testObject) cleanup, not a higher-level fixture ownership abstraction.",
-      "testRepositoryCount": 35
+      "testRepositoryCount": 36
     }
   },
   "occurrences": [
     {
       "assembly": "Deucarian.API.Tests",
       "classification": "Test",
+      "containingSymbol": "ApiClientTests::ApiClient_SuppressesAllLoggingForSensitiveRequest",
+      "file": "Tests/Editor/ApiClientTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 317,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.API.Tests",
+      "classification": "Test",
+      "containingSymbol": "ApiClientTests::ApiClient_SuppressesSensitiveFailureLogging",
+      "file": "Tests/Editor/ApiClientTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 356,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.API.Tests",
+      "classification": "Test",
       "containingSymbol": "ApiClientTests::ApiClient_ReturnsTextureResponsesAsTextures",
       "file": "Tests/Editor/ApiClientTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 384,
+      "line": 465,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.api",
       "policyDisposition": "Allowed",
@@ -2820,6 +2850,21 @@
       "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
       "policySeverity": "Info",
       "repository": "Run-Upgrades",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Session.APIIntegration.Tests",
+      "classification": "Test",
+      "containingSymbol": "SessionTokenEndpointTests::ProfileCreatesCredentialFreeRuntimeSnapshot",
+      "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 40,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.session.api-integration",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Session-API-Integration",
       "scope": "Test"
     },
     {
@@ -6695,6 +6740,51 @@
     {
       "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
       "classification": "Test",
+      "containingSymbol": "WebViewerAuthenticationCompositionTests::BootstrapComposesTheSharedEndpointProviderFromItsProfile",
+      "file": "Tests/EditMode/WebViewerAuthenticationCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 73,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer.web",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer-Web",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "WebViewerAuthenticationCompositionTests::BootstrapComposesTheSharedEndpointProviderFromItsProfile",
+      "file": "Tests/EditMode/WebViewerAuthenticationCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 78,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer.web",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer-Web",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "WebViewerAuthenticationCompositionTests::BootstrapComposesTheSharedEndpointProviderFromItsProfile",
+      "file": "Tests/EditMode/WebViewerAuthenticationCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 81,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer.web",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer-Web",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+      "classification": "Test",
       "containingSymbol": "WebViewerElementIndexTests::RejectsDuplicateStableIdentifiers",
       "file": "Tests/EditMode/WebViewerElementIndexTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -10504,10 +10594,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 696
+    "Allowed": 702
   },
   "summary": {
-    "direct Unity API call": 627,
+    "direct Unity API call": 633,
     "helper call site": 68,
     "helper definition": 1
   }

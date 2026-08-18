@@ -1,6 +1,34 @@
 {
   "findings": [
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.api",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.API.Editor.asmdef",
+          "assembly": "Deucarian.API.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "API",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
@@ -4297,7 +4325,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.1.5",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.session.api-integration",
       "referencedAssemblies": [
@@ -6388,7 +6416,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.1.5",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -6698,6 +6726,48 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "1.1.0",
+      "dependency": "com.deucarian.session.api-integration",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.Session.APIIntegration"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Session.APIIntegration",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session.APIIntegration",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.template.viewer.web",
@@ -6799,7 +6869,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -6967,7 +7037,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.10",
+      "declaredVersion": "0.1.11",
       "dependency": "com.deucarian.web-viewer-suite",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [],
@@ -7378,7 +7448,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.1.5",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.viewer-authentication",
       "referencedAssemblies": [
@@ -7546,7 +7616,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.6",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.viewer-authentication",
       "referencedAssemblies": [
@@ -7563,6 +7633,22 @@
           "includePlatforms": [],
           "reference": "Deucarian.Session.APIIntegration",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.ViewerAuthentication.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session.APIIntegration",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -8723,7 +8809,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.1.5",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [
@@ -8919,7 +9005,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "1.0.6",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [],
@@ -8952,7 +9038,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [
@@ -9408,9 +9494,9 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 28,
+    "EditorOnlyUse": 29,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 141,
+    "RequiredAndUsed": 142,
     "SuiteComposition": 39,
     "TestOnlyUse": 11
   }
