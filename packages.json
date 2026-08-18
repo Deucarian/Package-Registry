@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-18",
   "architectureStandard": {
     "path": "ARCHITECTURE.md",
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
@@ -439,6 +439,26 @@
       "groupId": "ui-presentation"
     },
     {
+      "id": "com.deucarian.viewer-shell",
+      "displayName": "Deucarian Viewer Shell",
+      "category": "UI",
+      "type": "Core",
+      "kind": "Library",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 20,
+      "description": "Reusable reference viewer status, diagnostics, display-settings chrome, responsive layout, menu coordination, theming, and input-boundary composition.",
+      "iconKey": "panel-top",
+      "stableUrl": "https://github.com/Deucarian/Viewer-Shell.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Viewer-Shell.git#develop",
+      "dependencies": [
+        "com.deucarian.common",
+        "com.deucarian.theming",
+        "com.deucarian.ui",
+        "com.deucarian.viewer-rendering"
+      ],
+      "groupId": "ui-presentation"
+    },
+    {
       "id": "com.deucarian.theming",
       "displayName": "Deucarian Theming",
       "category": "UI",
@@ -531,6 +551,26 @@
         "com.deucarian.pointer-capture",
         "com.deucarian.theming",
         "com.deucarian.ui"
+      ],
+      "groupId": "world-xr-interaction"
+    },
+    {
+      "id": "com.deucarian.viewer-rendering",
+      "displayName": "Deucarian Viewer Rendering",
+      "category": "World",
+      "type": "Core",
+      "kind": "Library",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 29,
+      "description": "Reusable reference viewer camera, lighting, URP quality, post-processing, reflection, themed environment, and display-settings composition.",
+      "iconKey": "sparkles",
+      "stableUrl": "https://github.com/Deucarian/Viewer-Rendering.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Viewer-Rendering.git#develop",
+      "dependencies": [
+        "com.deucarian.common",
+        "com.deucarian.diagnostics",
+        "com.deucarian.logging",
+        "com.deucarian.theming"
       ],
       "groupId": "world-xr-interaction"
     },
@@ -810,7 +850,7 @@
       "type": "Suite",
       "kind": "Suite",
       "overviewOrder": 20,
-      "description": "Implementation-free curated bundle of the reusable Deucarian WebGL viewer stack and its Report Viewer-proven navigation preset, with a compiled reference-composition sample.",
+      "description": "Implementation-free bundle of the reusable Deucarian WebGL viewer stack, including the shared reference rendering, shell, and navigation composition.",
       "iconKey": "panels-top-left",
       "stableUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git#main",
       "developmentUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git#develop",
@@ -827,7 +867,9 @@
         "com.deucarian.pointer-capture",
         "com.deucarian.theming",
         "com.deucarian.ui",
-        "com.deucarian.viewer-navigation"
+        "com.deucarian.viewer-navigation",
+        "com.deucarian.viewer-rendering",
+        "com.deucarian.viewer-shell"
       ],
       "suiteMembers": [
         "com.deucarian.api",
@@ -842,7 +884,9 @@
         "com.deucarian.pointer-capture",
         "com.deucarian.theming",
         "com.deucarian.ui",
-        "com.deucarian.viewer-navigation"
+        "com.deucarian.viewer-navigation",
+        "com.deucarian.viewer-rendering",
+        "com.deucarian.viewer-shell"
       ],
       "groupId": "world-xr-interaction",
       "ecosystemGroup": "Suites",
@@ -854,7 +898,9 @@
         "suite",
         "viewer",
         "webgl",
-        "navigation"
+        "navigation",
+        "rendering",
+        "shell"
       ]
     },
     {
@@ -1328,6 +1374,8 @@
         "com.deucarian.theming",
         "com.deucarian.ui",
         "com.deucarian.viewer-navigation",
+        "com.deucarian.viewer-rendering",
+        "com.deucarian.viewer-shell",
         "com.deucarian.web-viewer-suite"
       ],
       "searchAliases": [
