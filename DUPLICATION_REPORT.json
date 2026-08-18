@@ -14733,7 +14733,62 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.api",
+        "packageJsonDependencies": [
+          "com.deucarian.logging"
+        ],
+        "registryDependencies": [
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "repo": "API"
+      },
+      {
+        "packageId": "com.deucarian.template.viewer.web",
+        "packageJsonDependencies": [
+          "com.deucarian.api",
+          "com.deucarian.build-pipeline",
+          "com.deucarian.camera-navigation",
+          "com.deucarian.command-routing",
+          "com.deucarian.command-routing.webgl-integration",
+          "com.deucarian.diagnostics",
+          "com.deucarian.logging",
+          "com.deucarian.object-loading",
+          "com.deucarian.object-loading.api-integration",
+          "com.deucarian.session",
+          "com.deucarian.theming",
+          "com.deucarian.ui",
+          "com.deucarian.viewer-authentication",
+          "com.deucarian.viewer-navigation",
+          "com.deucarian.viewer-rendering",
+          "com.deucarian.viewer-shell",
+          "com.deucarian.web-viewer-suite"
+        ],
+        "registryDependencies": [
+          "com.deucarian.api",
+          "com.deucarian.build-pipeline",
+          "com.deucarian.camera-navigation",
+          "com.deucarian.command-routing",
+          "com.deucarian.command-routing.webgl-integration",
+          "com.deucarian.diagnostics",
+          "com.deucarian.logging",
+          "com.deucarian.object-loading",
+          "com.deucarian.object-loading.api-integration",
+          "com.deucarian.session",
+          "com.deucarian.session.api-integration",
+          "com.deucarian.theming",
+          "com.deucarian.ui",
+          "com.deucarian.viewer-authentication",
+          "com.deucarian.viewer-navigation",
+          "com.deucarian.viewer-rendering",
+          "com.deucarian.viewer-shell",
+          "com.deucarian.web-viewer-suite"
+        ],
+        "repo": "Template-Viewer-Web"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -38946,7 +39001,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "2eedceb785b653b5af71399a147ee9d8b093a12e5d98f9d0eee108655b8fb946",
       "dependencyRulesSha256": "41b2e35e7a4f2fcec1afa29a76584ce46330ee4bfbe54e7040df870b7cfe38f7",
-      "packagesSha256": "8335e28a3211af5b893b881da87eb399a79bf0c79e1c3d384da7cbf8fb202c64"
+      "packagesSha256": "775cb5f4ff7d74731799c1cc62631a5a93c0fc7cf913c585111e97cfa7a474a2"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -268114,6 +268169,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.editor",
         "com.deucarian.logging"
       ],
       "registryGroupId": "runtime-services",
@@ -268718,10 +268774,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "9930c7cdcc07a505006f8c379d48ee5b1aca31b3",
+        "headCommit": "431b19ad204fe3831facb25cdb55d347801536ae",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "9930c7cdcc07a505006f8c379d48ee5b1aca31b3"
+        "requestedRefCommit": "431b19ad204fe3831facb25cdb55d347801536ae"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -268753,13 +268809,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.2",
+      "packageVersion": "1.2.3",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "9930c7cdcc07a505006f8c379d48ee5b1aca31b3",
-        "manifestSha256": "2be4725fd43a1a333c177187a411cd06b8535187ab02fadd8c31f72b23a362c5",
+        "headCommit": "431b19ad204fe3831facb25cdb55d347801536ae",
+        "manifestSha256": "029c0c472d6763862d92034efdf066c7ecc9c15b20774bf2c404d553e156f434",
         "requestedRef": "develop"
       },
       "registryDependencies": null,
@@ -272257,10 +272313,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "706ad16e4f1ca223f5d5db60597c463c64c91282",
+        "headCommit": "60735be5f5874726a61890f4eefd1e332bc966cc",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "706ad16e4f1ca223f5d5db60597c463c64c91282"
+        "requestedRefCommit": "60735be5f5874726a61890f4eefd1e332bc966cc"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -272300,13 +272356,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.1.86",
+      "packageVersion": "1.1.87",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "706ad16e4f1ca223f5d5db60597c463c64c91282",
-        "manifestSha256": "8e17c5babcd9dc2dedf6a22ffd1b39fa34a5e8155c8c22ff44475df308ee1586",
+        "headCommit": "60735be5f5874726a61890f4eefd1e332bc966cc",
+        "manifestSha256": "8107dd65c14ef51aa203dcfed2427bc01f67962a231e673235f061932924e7c1",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -272366,7 +272422,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "7b8cb3d4c6570dd0784151f8cb2cad147ee7b023b5fc5148da766f32deb0fdd5",
+        "auditInputSha256": "52ddba04ff4b9840756332b605e92c5fd20b1f7cd73f64e5eacb9b27abfe86b2",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -274546,6 +274602,7 @@
         "com.deucarian.object-loading",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.session",
+        "com.deucarian.session.api-integration",
         "com.deucarian.theming",
         "com.deucarian.ui",
         "com.deucarian.viewer-navigation",
