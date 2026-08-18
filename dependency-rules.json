@@ -68,6 +68,7 @@
         "com.deucarian.projectiles",
         "com.deucarian.session.api-integration",
         "com.deucarian.ui",
+        "com.deucarian.viewer-rendering",
         "com.deucarian.xr-ui.theming-integration"
       ]
     },
@@ -79,6 +80,7 @@
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
         "com.deucarian.viewer-navigation",
+        "com.deucarian.viewer-shell",
         "com.deucarian.selection-suite",
         "com.deucarian.weapon-systems"
       ]
