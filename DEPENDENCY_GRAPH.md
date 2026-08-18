@@ -8,6 +8,7 @@ Schema version: 2
 | --- | --- | --- | --- | --- |
 | com.deucarian.activity-visualization | com.deucarian.diagnostics | 0.1.4 | Activity-Visualization | Diagnostics |
 | com.deucarian.activity-visualization | com.deucarian.logging | 1.0.2 | Activity-Visualization | Logging |
+| com.deucarian.api | com.deucarian.editor | 1.0.5 | API | Editor |
 | com.deucarian.api | com.deucarian.logging | 1.0.2 | API | Logging |
 | com.deucarian.attacks | com.deucarian.combat | 0.1.1 | Attacks | Combat |
 | com.deucarian.attacks | com.deucarian.editor | 1.0.3 | Attacks | Editor |
@@ -98,7 +99,7 @@ Schema version: 2
 | com.deucarian.selection-suite | com.deucarian.ui-binding | 1.1.1 | Selection-Suite | UI-Binding |
 | com.deucarian.selection-suite | com.deucarian.ui-binding.core-state-integration | 1.0.4 | Selection-Suite | UIBinding-CoreState-Integration |
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
-| com.deucarian.session.api-integration | com.deucarian.api | 1.1.4 | Session-API-Integration | API |
+| com.deucarian.session.api-integration | com.deucarian.api | 1.1.5 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
@@ -136,7 +137,7 @@ Schema version: 2
 | com.deucarian.template.game.survivors | com.deucarian.run-upgrades | 0.1.1 | Template-Game-Survivors | Run-Upgrades |
 | com.deucarian.template.game.survivors | com.deucarian.weapon-systems | 0.1.1 | Template-Game-Survivors | Weapon-Systems |
 | com.deucarian.template.game.survivors | com.deucarian.world-spawning | 0.2.1 | Template-Game-Survivors | World-Spawning |
-| com.deucarian.template.viewer.web | com.deucarian.api | 1.1.4 | Template-Viewer-Web | API |
+| com.deucarian.template.viewer.web | com.deucarian.api | 1.1.5 | Template-Viewer-Web | API |
 | com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.4.0 | Template-Viewer-Web | Build-Pipeline |
 | com.deucarian.template.viewer.web | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer-Web | Camera-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.1.1 | Template-Viewer-Web | Command-Routing |
@@ -146,13 +147,14 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
 | com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.7 | Template-Viewer-Web | ObjectLoading-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.session | 1.0.6 | Template-Viewer-Web | Session |
+| com.deucarian.template.viewer.web | com.deucarian.session.api-integration | 1.1.0 | Template-Viewer-Web | Session-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.5 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.1.0 | Template-Viewer-Web | Viewer-Authentication |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.2.0 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
-| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.10 | Template-Viewer-Web | Web-Viewer-Suite |
+| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.11 | Template-Viewer-Web | Web-Viewer-Suite |
 | com.deucarian.theming | com.deucarian.editor | 1.0.3 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.2 | Theming | Logging |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -162,11 +164,11 @@ Schema version: 2
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
 | com.deucarian.ui-flow | com.deucarian.common | 0.2.1 | UI-FLow | Common |
 | com.deucarian.ui-flow | com.deucarian.logging | 1.0.2 | UI-FLow | Logging |
-| com.deucarian.viewer-authentication | com.deucarian.api | 1.1.4 | Viewer-Authentication | API |
+| com.deucarian.viewer-authentication | com.deucarian.api | 1.1.5 | Viewer-Authentication | API |
 | com.deucarian.viewer-authentication | com.deucarian.command-routing | 0.1.1 | Viewer-Authentication | Command-Routing |
 | com.deucarian.viewer-authentication | com.deucarian.editor | 1.0.5 | Viewer-Authentication | Editor |
 | com.deucarian.viewer-authentication | com.deucarian.session | 1.0.6 | Viewer-Authentication | Session |
-| com.deucarian.viewer-authentication | com.deucarian.session.api-integration | 1.0.6 | Viewer-Authentication | Session-API-Integration |
+| com.deucarian.viewer-authentication | com.deucarian.session.api-integration | 1.1.0 | Viewer-Authentication | Session-API-Integration |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation | 0.2.10 | Viewer-Navigation | Camera-Navigation |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Viewer-Navigation | CameraNavigation-InputSystem-Integration |
 | com.deucarian.viewer-navigation | com.deucarian.common | 0.2.1 | Viewer-Navigation | Common |
@@ -189,7 +191,7 @@ Schema version: 2
 | com.deucarian.weapon-systems | com.deucarian.game-content-authoring | 0.1.1 | Weapon-Systems | Game-Content-Authoring |
 | com.deucarian.weapon-systems | com.deucarian.gameplay-foundation | 0.1.1 | Weapon-Systems | Gameplay-Foundation |
 | com.deucarian.weapon-systems | com.deucarian.projectiles | 0.2.1 | Weapon-Systems | Projectiles |
-| com.deucarian.web-viewer-suite | com.deucarian.api | 1.1.4 | Web-Viewer-Suite | API |
+| com.deucarian.web-viewer-suite | com.deucarian.api | 1.1.5 | Web-Viewer-Suite | API |
 | com.deucarian.web-viewer-suite | com.deucarian.build-pipeline | 0.4.0 | Web-Viewer-Suite | Build-Pipeline |
 | com.deucarian.web-viewer-suite | com.deucarian.camera-navigation | 0.2.10 | Web-Viewer-Suite | Camera-Navigation |
 | com.deucarian.web-viewer-suite | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Web-Viewer-Suite | CameraNavigation-InputSystem-Integration |
@@ -200,10 +202,10 @@ Schema version: 2
 | com.deucarian.web-viewer-suite | com.deucarian.object-loading.api-integration | 0.2.7 | Web-Viewer-Suite | ObjectLoading-API-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.pointer-capture | 0.1.2 | Web-Viewer-Suite | Pointer-Capture |
 | com.deucarian.web-viewer-suite | com.deucarian.session | 1.0.6 | Web-Viewer-Suite | Session |
-| com.deucarian.web-viewer-suite | com.deucarian.session.api-integration | 1.0.6 | Web-Viewer-Suite | Session-API-Integration |
+| com.deucarian.web-viewer-suite | com.deucarian.session.api-integration | 1.1.0 | Web-Viewer-Suite | Session-API-Integration |
 | com.deucarian.web-viewer-suite | com.deucarian.theming | 1.0.5 | Web-Viewer-Suite | Theming |
 | com.deucarian.web-viewer-suite | com.deucarian.ui | 0.2.7 | Web-Viewer-Suite | UI |
-| com.deucarian.web-viewer-suite | com.deucarian.viewer-authentication | 0.1.0 | Web-Viewer-Suite | Viewer-Authentication |
+| com.deucarian.web-viewer-suite | com.deucarian.viewer-authentication | 0.2.0 | Web-Viewer-Suite | Viewer-Authentication |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.10 | Web-Viewer-Suite | Viewer-Navigation |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-rendering | 0.1.0 | Web-Viewer-Suite | Viewer-Rendering |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-shell | 0.1.0 | Web-Viewer-Suite | Viewer-Shell |
@@ -221,5 +223,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 12
+- Dependency version drift entries: 17
 - Registry dependency drift entries: 0
