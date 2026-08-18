@@ -2282,7 +2282,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 15,
+      "productionFileCount": 17,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,

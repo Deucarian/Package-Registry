@@ -6406,6 +6406,22 @@
           "reference": "Deucarian.API",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Viewer-Web",
@@ -6630,7 +6646,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "0.2.7",
       "dependency": "com.deucarian.object-loading.api-integration",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -6646,6 +6662,32 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.ObjectLoading.APIIntegration",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.0.6",
+      "dependency": "com.deucarian.session",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.Session"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Session",
           "scope": "Runtime production",
           "versionDefines": []
         }
@@ -6747,6 +6789,48 @@
             "Editor"
           ],
           "reference": "Deucarian.UI.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.viewer-authentication",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.ViewerAuthentication"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.ViewerAuthentication",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.ViewerAuthentication",
           "scope": "Test",
           "versionDefines": []
         }
@@ -6883,7 +6967,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.9",
+      "declaredVersion": "0.1.10",
       "dependency": "com.deucarian.web-viewer-suite",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [],
@@ -8787,7 +8871,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.2.5",
+      "declaredVersion": "0.2.7",
       "dependency": "com.deucarian.object-loading.api-integration",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [
@@ -8824,6 +8908,28 @@
     },
     {
       "classification": "SuiteComposition",
+      "declaredVersion": "1.0.6",
+      "dependency": "com.deucarian.session",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "referencedAssemblies": [],
+      "referencedBy": [],
+      "repository": "Web-Viewer-Suite",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "SuiteComposition",
+      "declaredVersion": "1.0.6",
+      "dependency": "com.deucarian.session.api-integration",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "referencedAssemblies": [],
+      "referencedBy": [],
+      "repository": "Web-Viewer-Suite",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "SuiteComposition",
       "declaredVersion": "1.0.5",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.web-viewer-suite",
@@ -8840,6 +8946,32 @@
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [],
       "referencedBy": [],
+      "repository": "Web-Viewer-Suite",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "SuiteComposition",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.viewer-authentication",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "referencedAssemblies": [
+        "Deucarian.ViewerAuthentication"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/Web Viewer Stack/Deucarian.WebViewerSuite.Samples.Stack.asmdef",
+          "assembly": "Deucarian.WebViewerSuite.Samples.Stack",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.ViewerAuthentication",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
       "repository": "Web-Viewer-Suite",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
@@ -9278,8 +9410,8 @@
   "summary": {
     "EditorOnlyUse": 28,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 139,
-    "SuiteComposition": 36,
+    "RequiredAndUsed": 141,
+    "SuiteComposition": 39,
     "TestOnlyUse": 11
   }
 }
