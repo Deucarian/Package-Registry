@@ -123,6 +123,7 @@ architecture-compliance pass.
 - Build Pipeline owns Build Profile policy, final-player AOT inspection, evidence verification, generated linker input, artifact manifests, and headless build entry points. It must not own domain serialization, command routing, DI, or other runtime generators.
 - Package Registry owns metadata, capability ownership, dependency rules, AOT evidence governance, and audit/validation tools. It must not contain runtime package code or editor UI implementation.
 - Package Installer owns package installation, registry channel selection, dependency-first installation, and package-specific ecosystem visualization. It must not become a generic graph or UI framework.
+- Viewer Authentication owns reusable viewer session composition, token lifecycle commands, sanitized authentication status, and viewer development authentication tooling. Backend sign-in and refresh endpoints remain application-specific adapters.
 - Integration packages own adapter code between declared target packages only. They must not duplicate target-package logic or introduce independent frameworks.
 - Suite packages own dependency composition, samples, and installable bundles only. They must not duplicate implementation logic.
 - Functional groups answer where a package belongs; `kind` answers what is shipped. Integration and Suite are artifact kinds, not top-level domains.

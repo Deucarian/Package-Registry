@@ -35,12 +35,13 @@ Tools > Deucarian > Package Installer
 | --- | --- | --- |
 | First-time setup | Package Installer | Editor, Logging |
 | API and networking | API | Session API Integration, Object Loading API Integration |
-| Authenticated sessions | Session | API, Session API Integration |
+| Authenticated sessions | Session | API, Session API Integration, Viewer Authentication for viewer applications |
 | Object and scene loading | Object Loading | API, Object Loading API Integration |
 | UI binding | UI Binding | Core State, UI Binding Core State Integration |
 | UI navigation and presentation | UI Flow, UI, Theming | XR UI, XR UI Theming Integration |
 | Object selection | Object Selection | Core State, Object Selection Core State Integration, Selection Suite |
 | Diagnostics | Diagnostics | Logging |
+| Browser-hosted 3D viewers | Web Viewer Template | Web Viewer Suite, Viewer Authentication |
 | Gameplay foundations | Gameplay Foundation | Persistence, Progression, Run Upgrades |
 | Auto-defense games | Auto Defense Suite | Idle Auto Defense template |
 | Starter projects | Template Game packages | Game Content Authoring |

@@ -459,6 +459,27 @@
       "groupId": "ui-presentation"
     },
     {
+      "id": "com.deucarian.viewer-authentication",
+      "displayName": "Deucarian Viewer Authentication",
+      "category": "Core",
+      "type": "Core",
+      "kind": "Library",
+      "ecosystemGroup": "Runtime Services",
+      "overviewOrder": 24,
+      "description": "Reusable viewer session composition, live API authentication, secure auth commands, sanitized status, and shared development authentication tooling.",
+      "iconKey": "key-round",
+      "stableUrl": "https://github.com/Deucarian/Viewer-Authentication.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Viewer-Authentication.git#develop",
+      "dependencies": [
+        "com.deucarian.api",
+        "com.deucarian.command-routing",
+        "com.deucarian.editor",
+        "com.deucarian.session",
+        "com.deucarian.session.api-integration"
+      ],
+      "groupId": "runtime-services"
+    },
+    {
       "id": "com.deucarian.theming",
       "displayName": "Deucarian Theming",
       "category": "UI",
@@ -865,11 +886,14 @@
         "com.deucarian.object-loading",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.pointer-capture",
+        "com.deucarian.session",
+        "com.deucarian.session.api-integration",
         "com.deucarian.theming",
         "com.deucarian.ui",
         "com.deucarian.viewer-navigation",
         "com.deucarian.viewer-rendering",
-        "com.deucarian.viewer-shell"
+        "com.deucarian.viewer-shell",
+        "com.deucarian.viewer-authentication"
       ],
       "suiteMembers": [
         "com.deucarian.api",
@@ -882,11 +906,14 @@
         "com.deucarian.object-loading",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.pointer-capture",
+        "com.deucarian.session",
+        "com.deucarian.session.api-integration",
         "com.deucarian.theming",
         "com.deucarian.ui",
         "com.deucarian.viewer-navigation",
         "com.deucarian.viewer-rendering",
-        "com.deucarian.viewer-shell"
+        "com.deucarian.viewer-shell",
+        "com.deucarian.viewer-authentication"
       ],
       "groupId": "world-xr-interaction",
       "ecosystemGroup": "Suites",
@@ -1376,6 +1403,7 @@
         "com.deucarian.viewer-navigation",
         "com.deucarian.viewer-rendering",
         "com.deucarian.viewer-shell",
+        "com.deucarian.viewer-authentication",
         "com.deucarian.web-viewer-suite"
       ],
       "searchAliases": [

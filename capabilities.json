@@ -161,6 +161,11 @@
       "ownerPackageId": "com.deucarian.viewer-shell"
     },
     {
+      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, and shared development authentication tooling.",
+      "id": "viewer-authentication",
+      "ownerPackageId": "com.deucarian.viewer-authentication"
+    },
+    {
       "description": "Cross-platform pointer-lock lifecycle, capture permission, input-neutral rearming, WebGL bridge state, and pointer capture diagnostics.",
       "id": "pointer-capture",
       "ownerPackageId": "com.deucarian.pointer-capture"
