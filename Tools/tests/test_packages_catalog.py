@@ -79,6 +79,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.logging",
                 "com.deucarian.object-loading",
                 "com.deucarian.object-loading.api-integration",
+                "com.deucarian.session",
                 "com.deucarian.theming",
                 "com.deucarian.ui",
                 "com.deucarian.viewer-navigation",
