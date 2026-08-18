@@ -750,18 +750,6 @@
         "repository": "Selection-Suite"
       },
       {
-        "assembly": "Deucarian.Session.APIIntegration",
-        "detail": "Extract responsibilities until the production file is at most 500 lines.",
-        "disposition": "RefactorBacklog",
-        "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
-        "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 504,
-        "lineLimit": 500,
-        "packageId": "com.deucarian.session.api-integration",
-        "repository": "Session-API-Integration",
-        "scope": "Runtime production"
-      },
-      {
         "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
         "disposition": "SetupRequired",
         "file": "AGENTS.md",
@@ -1375,7 +1363,7 @@
         "disposition": "RefactorBacklog",
         "file": "Editor/ViewerAuthenticationWindow.cs",
         "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 581,
+        "lineCount": 1062,
         "lineLimit": 500,
         "packageId": "com.deucarian.viewer-authentication",
         "repository": "Viewer-Authentication",
@@ -2492,20 +2480,13 @@
           "present": true,
           "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
         },
-        "oversizedProductionFiles": [
-          {
-            "assembly": "Deucarian.Session.APIIntegration",
-            "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
-            "lineCount": 504,
-            "scope": "Runtime production"
-          }
-        ],
+        "oversizedProductionFiles": [],
         "packageId": "com.deucarian.session.api-integration",
-        "productionFileCount": 12,
+        "productionFileCount": 13,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Session-API-Integration",
         "sharedValidationPresent": true,
-        "status": "RefactorBacklog",
+        "status": "Compliant",
         "testAssemblies": [
           "Deucarian.Session.APIIntegration.Tests"
         ]
@@ -2966,12 +2947,12 @@
           {
             "assembly": "Deucarian.ViewerAuthentication.Editor",
             "file": "Editor/ViewerAuthenticationWindow.cs",
-            "lineCount": 581,
+            "lineCount": 1062,
             "scope": "Editor production"
           }
         ],
         "packageId": "com.deucarian.viewer-authentication",
-        "productionFileCount": 27,
+        "productionFileCount": 38,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Viewer-Authentication",
         "sharedValidationPresent": true,
@@ -3187,15 +3168,15 @@
       "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
     },
     "summary": {
-      "compliantRepositoryCount": 8,
+      "compliantRepositoryCount": 9,
       "findingsByDisposition": {
-        "RefactorBacklog": 96,
+        "RefactorBacklog": 95,
         "SetupRequired": 50
       },
       "findingsByKind": {
         "MissingCanonicalArchitectureReference": 47,
         "MissingSharedArchitectureValidation": 3,
-        "ProductionFileExceedsLineLimit": 96
+        "ProductionFileExceedsLineLimit": 95
       },
       "repositoryCount": 60
     }
@@ -5060,7 +5041,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.session.api-integration",
         "toRepo": "Session-API-Integration",
-        "version": "1.1.0"
+        "version": "1.1.1"
       },
       {
         "from": "com.deucarian.template.viewer.web",
@@ -5081,7 +5062,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.viewer-authentication",
         "toRepo": "Viewer-Authentication",
-        "version": "0.2.0"
+        "version": "0.3.0"
       },
       {
         "from": "com.deucarian.template.viewer.web",
@@ -5109,7 +5090,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.web-viewer-suite",
         "toRepo": "Web-Viewer-Suite",
-        "version": "0.1.11"
+        "version": "0.1.12"
       },
       {
         "from": "com.deucarian.theming",
@@ -5207,7 +5188,7 @@
         "fromRepo": "Viewer-Authentication",
         "to": "com.deucarian.session.api-integration",
         "toRepo": "Session-API-Integration",
-        "version": "1.1.0"
+        "version": "1.1.1"
       },
       {
         "from": "com.deucarian.viewer-navigation",
@@ -5445,7 +5426,7 @@
         "fromRepo": "Web-Viewer-Suite",
         "to": "com.deucarian.session.api-integration",
         "toRepo": "Session-API-Integration",
-        "version": "1.1.0"
+        "version": "1.1.1"
       },
       {
         "from": "com.deucarian.web-viewer-suite",
@@ -5466,7 +5447,7 @@
         "fromRepo": "Web-Viewer-Suite",
         "to": "com.deucarian.viewer-authentication",
         "toRepo": "Viewer-Authentication",
-        "version": "0.2.0"
+        "version": "0.3.0"
       },
       {
         "from": "com.deucarian.web-viewer-suite",
@@ -12268,7 +12249,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "1.1.0",
+        "declaredVersion": "1.1.1",
         "dependency": "com.deucarian.session.api-integration",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [
@@ -12411,7 +12392,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "0.2.0",
+        "declaredVersion": "0.3.0",
         "dependency": "com.deucarian.viewer-authentication",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [
@@ -12579,7 +12560,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.1.11",
+        "declaredVersion": "0.1.12",
         "dependency": "com.deucarian.web-viewer-suite",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [],
@@ -12998,6 +12979,20 @@
         ],
         "referencedBy": [
           {
+            "asmdef": "Editor/Deucarian.ViewerAuthentication.Editor.asmdef",
+            "assembly": "Deucarian.ViewerAuthentication.Editor",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [
+              "Editor"
+            ],
+            "reference": "Deucarian.API",
+            "scope": "Editor production",
+            "versionDefines": []
+          },
+          {
             "asmdef": "Runtime/Deucarian.ViewerAuthentication.asmdef",
             "assembly": "Deucarian.ViewerAuthentication",
             "autoReferenced": true,
@@ -13158,7 +13153,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "1.1.0",
+        "declaredVersion": "1.1.1",
         "dependency": "com.deucarian.session.api-integration",
         "packageId": "com.deucarian.viewer-authentication",
         "referencedAssemblies": [
@@ -14547,7 +14542,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "1.1.0",
+        "declaredVersion": "1.1.1",
         "dependency": "com.deucarian.session.api-integration",
         "packageId": "com.deucarian.web-viewer-suite",
         "referencedAssemblies": [],
@@ -14580,7 +14575,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.2.0",
+        "declaredVersion": "0.3.0",
         "dependency": "com.deucarian.viewer-authentication",
         "packageId": "com.deucarian.web-viewer-suite",
         "referencedAssemblies": [
@@ -20957,7 +20952,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 14493,
+    "methodCountAnalyzed": 14566,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -23278,7 +23273,7 @@
             "editorApi": false,
             "file": "Runtime/ViewerAuthenticationTargetRegistry.cs",
             "iterator": false,
-            "line": 99,
+            "line": 119,
             "lineCount": 13,
             "namespace": "Deucarian.ViewerAuthentication",
             "normalizedHash": "480aa05280368278a590287189a8dfa88c1585b675c3e7082f9ba04023c73cb1",
@@ -26460,6 +26455,92 @@
         "dependenciesUsed": [],
         "estimatedDuplicatedLines": 13,
         "extractionConfidence": "needs design review",
+        "groupKey": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API",
+            "async": false,
+            "containingType": "ApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Runtime/Core/ApiClient.cs",
+            "iterator": false,
+            "line": 120,
+            "lineCount": 5,
+            "namespace": "Deucarian.API.Core",
+            "normalizedHash": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Runtime production",
+            "signature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
+            "symbol": "GetAsync",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationInteractiveAcquisitionTests.TokenEndpointApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs",
+            "iterator": false,
+            "line": 172,
+            "lineCount": 8,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "GetAsync",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+            "iterator": false,
+            "line": 194,
+            "lineCount": 9,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "GetAsync",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "needs capability-owner review",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Viewer-Authentication"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Runtime production",
+          "Test"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 13,
+        "extractionConfidence": "needs design review",
         "groupKey": "20d69a91512ca458a793ca07e238db173a28c4fd86028bcce1a3b13cbbffba52",
         "occurrences": [
           {
@@ -26517,6 +26598,92 @@
         "repositoryCount": 2,
         "scopes": [
           "Sample"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 13,
+        "extractionConfidence": "needs design review",
+        "groupKey": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API",
+            "async": false,
+            "containingType": "ApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Runtime/Core/ApiClient.cs",
+            "iterator": false,
+            "line": 147,
+            "lineCount": 5,
+            "namespace": "Deucarian.API.Core",
+            "normalizedHash": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Runtime production",
+            "signature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
+            "symbol": "DeleteAsync",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationInteractiveAcquisitionTests.TokenEndpointApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs",
+            "iterator": false,
+            "line": 217,
+            "lineCount": 8,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "DeleteAsync",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+            "iterator": false,
+            "line": 243,
+            "lineCount": 9,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "DeleteAsync",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "needs capability-owner review",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Viewer-Authentication"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Runtime production",
+          "Test"
         ]
       },
       {
@@ -28553,6 +28720,70 @@
         "dependenciesUsed": [],
         "estimatedDuplicatedLines": 8,
         "extractionConfidence": "needs design review",
+        "groupKey": "bff32f32857ac9ced177011946df7c76bf05b58a7bdb70a0034fe05d61a608d1",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.Session.APIIntegration.Tests",
+            "async": false,
+            "containingType": "SessionAuthProviderTests.RecordingRefreshService",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/Editor/SessionAuthProviderTests.cs",
+            "iterator": false,
+            "line": 158,
+            "lineCount": 8,
+            "namespace": "Deucarian.Session.APIIntegration.Tests",
+            "normalizedHash": "bff32f32857ac9ced177011946df7c76bf05b58a7bdb70a0034fe05d61a608d1",
+            "packageId": "com.deucarian.session.api-integration",
+            "repository": "Session-API-Integration",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<SessionResult> RefreshAsync( SessionData currentSession, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "RefreshAsync",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationMenuModelTests.RecordingValidationProvider",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+            "iterator": false,
+            "line": 187,
+            "lineCount": 9,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "bff32f32857ac9ced177011946df7c76bf05b58a7bdb70a0034fe05d61a608d1",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "public Task<ViewerAuthenticationValidationResult> ValidateAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+            "symbol": "ValidateAsync",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "needs capability-owner review",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "Session-API-Integration",
+          "Viewer-Authentication"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Test"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 8,
+        "extractionConfidence": "needs design review",
         "groupKey": "c61df98f70ede1ace7a05b76b8ca60ba134521bcc20ef4b8d88e934d76f90f1f",
         "occurrences": [
           {
@@ -29237,6 +29468,70 @@
         "dependenciesUsed": [],
         "estimatedDuplicatedLines": 7,
         "extractionConfidence": "needs design review",
+        "groupKey": "8d637ea0e74ea94f44bf7e14a37aa095d15e19ce987da06389d6836c7463aa30",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.Session.APIIntegration.Tests",
+            "async": false,
+            "containingType": "SessionTokenEndpointTests",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+            "iterator": false,
+            "line": 487,
+            "lineCount": 7,
+            "namespace": "Deucarian.Session.APIIntegration.Tests",
+            "normalizedHash": "8d637ea0e74ea94f44bf7e14a37aa095d15e19ce987da06389d6836c7463aa30",
+            "packageId": "com.deucarian.session.api-integration",
+            "repository": "Session-API-Integration",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "private static string ToBase64Url(string value)",
+            "symbol": "ToBase64Url",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+            "async": false,
+            "containingType": "ViewerAuthenticationExpiryIntegrationTests",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Tests/EditMode/ViewerAuthenticationJwtMetadataTests.cs",
+            "iterator": false,
+            "line": 71,
+            "lineCount": 7,
+            "namespace": "Deucarian.ViewerAuthentication.Tests",
+            "normalizedHash": "8d637ea0e74ea94f44bf7e14a37aa095d15e19ce987da06389d6836c7463aa30",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Test",
+            "signature": "private static string Base64Url(string value)",
+            "symbol": "Base64Url",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "needs capability-owner review",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "Session-API-Integration",
+          "Viewer-Authentication"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Test"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 7,
+        "extractionConfidence": "needs design review",
         "groupKey": "8f4fb4eb6dad04b446a52d46a75ca31c8ab95498ab5166fd3071b976f84401df",
         "occurrences": [
           {
@@ -29751,71 +30046,6 @@
         "dependenciesUsed": [],
         "estimatedDuplicatedLines": 5,
         "extractionConfidence": "needs design review",
-        "groupKey": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
-        "occurrences": [
-          {
-            "assembly": "Deucarian.API",
-            "async": false,
-            "containingType": "ApiClient",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Runtime/Core/ApiClient.cs",
-            "iterator": false,
-            "line": 120,
-            "lineCount": 5,
-            "namespace": "Deucarian.API.Core",
-            "normalizedHash": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
-            "packageId": "com.deucarian.api",
-            "repository": "API",
-            "runtimeUnityApi": false,
-            "scope": "Runtime production",
-            "signature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
-            "symbol": "GetAsync",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
-            "async": false,
-            "containingType": "ViewerAuthenticationInteractiveAcquisitionTests.TokenEndpointApiClient",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs",
-            "iterator": false,
-            "line": 172,
-            "lineCount": 8,
-            "namespace": "Deucarian.ViewerAuthentication.Tests",
-            "normalizedHash": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
-            "packageId": "com.deucarian.viewer-authentication",
-            "repository": "Viewer-Authentication",
-            "runtimeUnityApi": false,
-            "scope": "Test",
-            "signature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
-            "symbol": "GetAsync",
-            "symbolKind": "method",
-            "throws": false
-          }
-        ],
-        "proposedOwner": "needs capability-owner review",
-        "reasonsNotToExtract": [
-          "Does not cross the production extraction threshold without manual semantic review."
-        ],
-        "reasonsToExtract": [],
-        "repositories": [
-          "API",
-          "Viewer-Authentication"
-        ],
-        "repositoryCount": 2,
-        "scopes": [
-          "Runtime production",
-          "Test"
-        ]
-      },
-      {
-        "category": "normalized structural clone",
-        "dependenciesUsed": [],
-        "estimatedDuplicatedLines": 5,
-        "extractionConfidence": "needs design review",
         "groupKey": "3ecb7f9c76e267d78ac86f33c50eae0ea2555be877ed73488fede6c5823687df",
         "occurrences": [
           {
@@ -29873,71 +30103,6 @@
         "repositoryCount": 2,
         "scopes": [
           "Runtime production"
-        ]
-      },
-      {
-        "category": "normalized structural clone",
-        "dependenciesUsed": [],
-        "estimatedDuplicatedLines": 5,
-        "extractionConfidence": "needs design review",
-        "groupKey": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
-        "occurrences": [
-          {
-            "assembly": "Deucarian.API",
-            "async": false,
-            "containingType": "ApiClient",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Runtime/Core/ApiClient.cs",
-            "iterator": false,
-            "line": 147,
-            "lineCount": 5,
-            "namespace": "Deucarian.API.Core",
-            "normalizedHash": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
-            "packageId": "com.deucarian.api",
-            "repository": "API",
-            "runtimeUnityApi": false,
-            "scope": "Runtime production",
-            "signature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
-            "symbol": "DeleteAsync",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
-            "async": false,
-            "containingType": "ViewerAuthenticationInteractiveAcquisitionTests.TokenEndpointApiClient",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs",
-            "iterator": false,
-            "line": 217,
-            "lineCount": 8,
-            "namespace": "Deucarian.ViewerAuthentication.Tests",
-            "normalizedHash": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
-            "packageId": "com.deucarian.viewer-authentication",
-            "repository": "Viewer-Authentication",
-            "runtimeUnityApi": false,
-            "scope": "Test",
-            "signature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
-            "symbol": "DeleteAsync",
-            "symbolKind": "method",
-            "throws": false
-          }
-        ],
-        "proposedOwner": "needs capability-owner review",
-        "reasonsNotToExtract": [
-          "Does not cross the production extraction threshold without manual semantic review."
-        ],
-        "reasonsToExtract": [],
-        "repositories": [
-          "API",
-          "Viewer-Authentication"
-        ],
-        "repositoryCount": 2,
-        "scopes": [
-          "Runtime production",
-          "Test"
         ]
       },
       {
@@ -31422,7 +31587,7 @@
         "dependenciesUsed": [
           "UnityEngine.Object.DestroyImmediate"
         ],
-        "estimatedDuplicatedLines": 732,
+        "estimatedDuplicatedLines": 747,
         "extractionConfidence": "medium",
         "groupKey": "dispose",
         "occurrences": [
@@ -32458,6 +32623,27 @@
             "throws": false
           },
           {
+            "assembly": "Deucarian.ViewerAuthentication.Editor",
+            "async": false,
+            "containingType": "ViewerAuthenticationEditModeWorkspace",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ViewerAuthenticationEditModeWorkspace.cs",
+            "iterator": false,
+            "line": 60,
+            "lineCount": 15,
+            "namespace": "Deucarian.ViewerAuthentication.Editor",
+            "normalizedHash": "0464629d447b91b06f239e6b6c4320d6035f31601abbb3e08470e442b97c128d",
+            "packageId": "com.deucarian.viewer-authentication",
+            "repository": "Viewer-Authentication",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public void Dispose()",
+            "symbol": "Dispose",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
             "assembly": "Deucarian.ViewerAuthentication",
             "async": false,
             "containingType": "ViewerAuthenticationTargetRegistry.Registration",
@@ -32465,7 +32651,7 @@
             "editorApi": false,
             "file": "Runtime/ViewerAuthenticationTargetRegistry.cs",
             "iterator": false,
-            "line": 147,
+            "line": 167,
             "lineCount": 13,
             "namespace": "Deucarian.ViewerAuthentication",
             "normalizedHash": "2a838d28212a2c9a8a17238da04a6723f089d3b32dbd6aa3aefdfc797f87a641",
@@ -37220,31 +37406,6 @@
       "symbols": []
     },
     {
-      "candidate": "02e18e9b81ca74593ca002bae3495fd7706a7cda24ff1934e2d1ed4963c3f26c",
-      "candidateOwner": "needs capability-owner review",
-      "category": "ExactAstClone",
-      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
-      "differences": "Same signature shape; scopes: Test.",
-      "existingCapabilityOwner": "needs capability-owner review",
-      "files": [
-        "Attacks:Tests/EditMode/AttacksEditModeTests.cs:2231",
-        "Template-Game-Idle-Auto-Defense:Tests/EditMode/IdleAutoDefenseTemplateEditModeTests.cs:3241"
-      ],
-      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
-      "repositories": [
-        "Attacks",
-        "Template-Game-Idle-Auto-Defense"
-      ],
-      "scopes": [
-        "Test"
-      ],
-      "suggestedDisposition": "TestOnlyReuse",
-      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: FindIssue.",
-      "symbols": [
-        "FindIssue"
-      ]
-    },
-    {
       "candidate": "065f0dc449d05714c942a2e3c821e03543360e8730b8b5f9f54b26444b9b018a",
       "candidateOwner": "com.deucarian.editor",
       "category": "ExactAstClone",
@@ -37828,31 +37989,6 @@
       ]
     },
     {
-      "candidate": "e697db27d48dd8dd0d47042129fb9ac8979c3b9d6b36c37bb623249d6533d857",
-      "candidateOwner": "needs capability-owner review",
-      "category": "ExactAstClone",
-      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
-      "differences": "Same signature shape; scopes: Test.",
-      "existingCapabilityOwner": "needs capability-owner review",
-      "files": [
-        "Command-Routing-UDP-Integration:Tests/Editor/UdpCommandIntegrationTests.cs:156",
-        "Command-Routing:Tests/Editor/CommandRoutingTests.cs:358"
-      ],
-      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
-      "repositories": [
-        "Command-Routing",
-        "Command-Routing-UDP-Integration"
-      ],
-      "scopes": [
-        "Test"
-      ],
-      "suggestedDisposition": "TestOnlyReuse",
-      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: WithTimeout.",
-      "symbols": [
-        "WithTimeout"
-      ]
-    },
-    {
       "candidate": "f3143e6799187eb5cbd0c2698e24d7e05ac3a6f6061f9719a8c7f4fe7b8fc73f",
       "candidateOwner": "com.deucarian.editor",
       "category": "ExactAstClone",
@@ -37961,6 +38097,33 @@
       "symbols": [
         "DurableBenchmark_WritesAttackEvaluationMeasurements",
         "DurableBenchmark_WritesDefenseLifecycleMeasurements"
+      ]
+    },
+    {
+      "candidate": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
+      "candidateOwner": "needs capability-owner review",
+      "category": "NormalizedStructuralClone",
+      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
+      "differences": "Different signatures or local names; scopes: Runtime production, Test.",
+      "existingCapabilityOwner": "needs capability-owner review",
+      "files": [
+        "API:Runtime/Core/ApiClient.cs:120",
+        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs:172",
+        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationValidationTests.cs:194"
+      ],
+      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
+      "repositories": [
+        "API",
+        "Viewer-Authentication"
+      ],
+      "scopes": [
+        "Runtime production",
+        "Test"
+      ],
+      "suggestedDisposition": "KeepLocal",
+      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: GetAsync.",
+      "symbols": [
+        "GetAsync"
       ]
     },
     {
@@ -38101,7 +38264,7 @@
         "Activity-Visualization:Runtime/ActivityVisibilityCollection.cs:9",
         "Build-Pipeline:Editor/DeucarianBuildManagerApi.cs:165",
         "Build-Pipeline:Editor/DeucarianBuildManagerApi.cs:45",
-        "Viewer-Authentication:Runtime/ViewerAuthenticationTargetRegistry.cs:99"
+        "Viewer-Authentication:Runtime/ViewerAuthenticationTargetRegistry.cs:119"
       ],
       "reasoning": "Same parsed implementation appears in at least three repositories.",
       "repositories": [
@@ -38149,6 +38312,33 @@
       "symbols": [
         "Copy",
         "CopyValues"
+      ]
+    },
+    {
+      "candidate": "5bc481d28e5855b1e778804a32bf02623f6644fb7c2477e5b2152e974c365a45",
+      "candidateOwner": "needs capability-owner review",
+      "category": "NormalizedStructuralClone",
+      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
+      "differences": "Different signatures or local names; scopes: Runtime production, Test.",
+      "existingCapabilityOwner": "needs capability-owner review",
+      "files": [
+        "API:Runtime/Core/ApiClient.cs:147",
+        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs:217",
+        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationValidationTests.cs:243"
+      ],
+      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
+      "repositories": [
+        "API",
+        "Viewer-Authentication"
+      ],
+      "scopes": [
+        "Runtime production",
+        "Test"
+      ],
+      "suggestedDisposition": "KeepLocal",
+      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: DeleteAsync.",
+      "symbols": [
+        "DeleteAsync"
       ]
     },
     {
@@ -40041,7 +40231,7 @@
         "missingXmlDocumentationCount": 0,
         "packageId": "com.deucarian.session.api-integration",
         "repository": "Session-API-Integration",
-        "runtimePublicCount": 57
+        "runtimePublicCount": 59
       },
       {
         "editorPublicCount": 60,
@@ -40118,7 +40308,7 @@
         "missingXmlDocumentationCount": 1,
         "packageId": "com.deucarian.viewer-authentication",
         "repository": "Viewer-Authentication",
-        "runtimePublicCount": 68
+        "runtimePublicCount": 92
       },
       {
         "editorPublicCount": 2,
@@ -40185,9 +40375,9 @@
       }
     ],
     "editorProductionCount": 2276,
-    "internalPrivateProductionCount": 10956,
+    "internalPrivateProductionCount": 11006,
     "missingXmlDocumentationCount": 9285,
-    "runtimeProductionCount": 8785,
+    "runtimeProductionCount": 8811,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples",
@@ -124045,6 +124235,36 @@
       {
         "assembly": "Deucarian.Session.APIIntegration",
         "containingType": "",
+        "file": "Runtime/TokenEndpoints/SessionAccessTokenExpiryResolver.cs",
+        "fullSignature": "public static class SessionAccessTokenExpiryResolver",
+        "line": 13,
+        "namespace": "Deucarian.Session.APIIntegration",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Runtime production",
+        "symbol": "SessionAccessTokenExpiryResolver",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration",
+        "containingType": "SessionAccessTokenExpiryResolver",
+        "file": "Runtime/TokenEndpoints/SessionAccessTokenExpiryResolver.cs",
+        "fullSignature": "public static bool TryResolveJwtExpiry( string accessToken, out DateTimeOffset expiresAtUtc)",
+        "line": 27,
+        "namespace": "Deucarian.Session.APIIntegration",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Runtime production",
+        "symbol": "TryResolveJwtExpiry",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration",
+        "containingType": "",
         "file": "Runtime/TokenEndpoints/SessionTokenEndpointConfig.cs",
         "fullSignature": "public sealed class SessionTokenEndpointConfig",
         "line": 8,
@@ -124182,7 +124402,7 @@
         "containingType": "",
         "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
         "fullSignature": "public sealed class SessionTokenEndpointExecutor",
-        "line": 18,
+        "line": 17,
         "namespace": "Deucarian.Session.APIIntegration",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -124197,7 +124417,7 @@
         "containingType": "SessionTokenEndpointExecutor",
         "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
         "fullSignature": "public SessionTokenEndpointExecutor(IApiClient apiClient) : this(apiClient, null)",
-        "line": 24,
+        "line": 23,
         "namespace": "Deucarian.Session.APIIntegration",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -124212,7 +124432,7 @@
         "containingType": "SessionTokenEndpointExecutor",
         "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
         "fullSignature": "public async Task<SessionResult> ExecuteAsync( SessionTokenEndpointConfig config, SessionTokenEndpointInputValues inputValues, SessionData currentSession = null, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 40,
+        "line": 39,
         "namespace": "Deucarian.Session.APIIntegration",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -191937,7 +192157,7 @@
         "containingType": "ViewerAuthenticationWindow",
         "file": "Editor/ViewerAuthenticationWindow.cs",
         "fullSignature": "[MenuItem(MenuPath)] public static void Open()",
-        "line": 31,
+        "line": 42,
         "namespace": "Deucarian.ViewerAuthentication.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192160,6 +192380,21 @@
       {
         "assembly": "Deucarian.ViewerAuthentication",
         "containingType": "",
+        "file": "Runtime/IViewerAuthenticationValidationProvider.cs",
+        "fullSignature": "public interface IViewerAuthenticationValidationProvider",
+        "line": 11,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "IViewerAuthenticationValidationProvider",
+        "symbolKind": "interface",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
         "file": "Runtime/ViewerAccessTokenInput.cs",
         "fullSignature": "public static class ViewerAccessTokenInput",
         "line": 10,
@@ -192192,7 +192427,7 @@
         "containingType": "",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public sealed class ViewerAuthenticationEndpointProvider : IInteractiveViewerAuthenticationAcquisitionProvider",
-        "line": 15,
+        "line": 16,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192207,7 +192442,7 @@
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public ViewerAuthenticationEndpointProvider( IApiClient apiClient, SessionTokenEndpointProfile profile) : this( apiClient, profile == null ? throw new ArgumentNullException(nameof(profile)) : profile.CreateConfig())",
-        "line": 24,
+        "line": 25,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192222,7 +192457,7 @@
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public ViewerAuthenticationEndpointProvider( IApiClient apiClient, SessionTokenEndpointConfig endpointConfig)",
-        "line": 36,
+        "line": 37,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192237,7 +192472,7 @@
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public string DisplayName",
-        "line": 54,
+        "line": 55,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192252,7 +192487,7 @@
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public IReadOnlyList<ViewerAuthenticationInputDescriptor> InputDescriptors",
-        "line": 60,
+        "line": 61,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192266,8 +192501,38 @@
         "assembly": "Deucarian.ViewerAuthentication",
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
+        "fullSignature": "public string EndpointTemplate",
+        "line": 68,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "EndpointTemplate",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
+        "fullSignature": "public HttpMethod Method",
+        "line": 74,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Method",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public Task<SessionResult> AcquireAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 67,
+        "line": 80,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192282,7 +192547,7 @@
         "containingType": "ViewerAuthenticationEndpointProvider",
         "file": "Runtime/ViewerAuthenticationEndpointProvider.cs",
         "fullSignature": "public async Task<SessionResult> AcquireAsync( ISessionService sessionService, ViewerAuthenticationInputValues inputValues, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 78,
+        "line": 91,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192334,6 +192599,111 @@
         "repository": "Viewer-Authentication",
         "scope": "Runtime production",
         "symbol": "TryCreateFromResources",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationEndpointValidationProvider : IViewerAuthenticationValidationProvider",
+        "line": 16,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationEndpointValidationProvider",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public ViewerAuthenticationEndpointValidationProvider( IApiClient apiClient, SessionTokenEndpointProfile profile) : this( apiClient, profile == null ? throw new ArgumentNullException(nameof(profile)) : profile.CreateConfig())",
+        "line": 23,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationEndpointValidationProvider",
+        "symbolKind": "constructor",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public ViewerAuthenticationEndpointValidationProvider( IApiClient apiClient, SessionTokenEndpointConfig endpointConfig)",
+        "line": 35,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationEndpointValidationProvider",
+        "symbolKind": "constructor",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public string DisplayName",
+        "line": 57,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "DisplayName",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public string EndpointTemplate",
+        "line": 63,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "EndpointTemplate",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public HttpMethod Method",
+        "line": 69,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Method",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationEndpointValidationProvider",
+        "file": "Runtime/ViewerAuthenticationEndpointValidationProvider.cs",
+        "fullSignature": "public async Task<ViewerAuthenticationValidationResult> ValidateAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 75,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ValidateAsync",
         "symbolKind": "method",
         "xmlDocumentation": true
       },
@@ -192687,7 +193057,7 @@
         "containingType": "ViewerAuthenticationSession",
         "file": "Runtime/ViewerAuthenticationSession.cs",
         "fullSignature": "public Task<SessionResult> RefreshAsync( CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 140,
+        "line": 149,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192702,7 +193072,7 @@
         "containingType": "ViewerAuthenticationSession",
         "file": "Runtime/ViewerAuthenticationSession.cs",
         "fullSignature": "public Task<SessionResult> ClearAsync( CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 147,
+        "line": 156,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192837,7 +193207,7 @@
         "containingType": "ViewerAuthenticationTarget",
         "file": "Runtime/ViewerAuthenticationTarget.cs",
         "fullSignature": "public string Id",
-        "line": 24,
+        "line": 26,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192852,7 +193222,7 @@
         "containingType": "ViewerAuthenticationTarget",
         "file": "Runtime/ViewerAuthenticationTarget.cs",
         "fullSignature": "public string DisplayName",
-        "line": 27,
+        "line": 29,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192867,7 +193237,7 @@
         "containingType": "ViewerAuthenticationTarget",
         "file": "Runtime/ViewerAuthenticationTarget.cs",
         "fullSignature": "public IViewerAuthenticationSession Session",
-        "line": 30,
+        "line": 32,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192882,13 +193252,28 @@
         "containingType": "ViewerAuthenticationTarget",
         "file": "Runtime/ViewerAuthenticationTarget.cs",
         "fullSignature": "public IViewerAuthenticationAcquisitionProvider AcquisitionProvider",
-        "line": 33,
+        "line": 35,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
         "repository": "Viewer-Authentication",
         "scope": "Runtime production",
         "symbol": "AcquisitionProvider",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationTarget",
+        "file": "Runtime/ViewerAuthenticationTarget.cs",
+        "fullSignature": "public IViewerAuthenticationValidationProvider ValidationProvider",
+        "line": 41,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ValidationProvider",
         "symbolKind": "property",
         "xmlDocumentation": true
       },
@@ -192956,8 +193341,23 @@
         "assembly": "Deucarian.ViewerAuthentication",
         "containingType": "ViewerAuthenticationTargetRegistry",
         "file": "Runtime/ViewerAuthenticationTargetRegistry.cs",
+        "fullSignature": "public static IDisposable Register( string id, string displayName, IViewerAuthenticationSession session, IViewerAuthenticationAcquisitionProvider provider, IViewerAuthenticationValidationProvider validationProvider)",
+        "line": 54,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Register",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationTargetRegistry",
+        "file": "Runtime/ViewerAuthenticationTargetRegistry.cs",
         "fullSignature": "public static bool TryGet( string id, out ViewerAuthenticationTarget target)",
-        "line": 76,
+        "line": 96,
         "namespace": "Deucarian.ViewerAuthentication",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -192965,6 +193365,186 @@
         "scope": "Runtime production",
         "symbol": "TryGet",
         "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
+        "file": "Runtime/ViewerAuthenticationTokenExpiryAssessment.cs",
+        "fullSignature": "public static class ViewerAuthenticationTokenExpiryAssessment",
+        "line": 13,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationTokenExpiryAssessment",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationTokenExpiryAssessment",
+        "file": "Runtime/ViewerAuthenticationTokenExpiryAssessment.cs",
+        "fullSignature": "public static async Task<bool> TryApplyIfMissingAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 19,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "TryApplyIfMissingAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
+        "file": "Runtime/ViewerAuthenticationValidationProviderFactory.cs",
+        "fullSignature": "public static class ViewerAuthenticationValidationProviderFactory",
+        "line": 12,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationValidationProviderFactory",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationProviderFactory",
+        "file": "Runtime/ViewerAuthenticationValidationProviderFactory.cs",
+        "fullSignature": "public static ViewerAuthenticationEndpointValidationProvider Create( SessionTokenEndpointProfile profile, IApiClient apiClient = null)",
+        "line": 19,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Create",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationProviderFactory",
+        "file": "Runtime/ViewerAuthenticationValidationProviderFactory.cs",
+        "fullSignature": "public static bool TryCreateFromResources( out ViewerAuthenticationEndpointValidationProvider provider, IApiClient apiClient = null, string resourcePath = DefaultProfileResourcePath)",
+        "line": 37,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "TryCreateFromResources",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationValidationResult",
+        "line": 9,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationValidationResult",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationResult",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public ViewerAuthenticationValidationStatus Status",
+        "line": 22,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Status",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationResult",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public DateTimeOffset? ExpiresAtUtc",
+        "line": 28,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ExpiresAtUtc",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationResult",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public static ViewerAuthenticationValidationResult Verified( DateTimeOffset? expiresAtUtc = null)",
+        "line": 31,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Verified",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationResult",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public static ViewerAuthenticationValidationResult Rejected()",
+        "line": 40,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Rejected",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "ViewerAuthenticationValidationResult",
+        "file": "Runtime/ViewerAuthenticationValidationResult.cs",
+        "fullSignature": "public static ViewerAuthenticationValidationResult Inconclusive()",
+        "line": 51,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "Inconclusive",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication",
+        "containingType": "",
+        "file": "Runtime/ViewerAuthenticationValidationStatus.cs",
+        "fullSignature": "public enum ViewerAuthenticationValidationStatus",
+        "line": 4,
+        "namespace": "Deucarian.ViewerAuthentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Runtime production",
+        "symbol": "ViewerAuthenticationValidationStatus",
+        "symbolKind": "enum",
         "xmlDocumentation": true
       },
       {
@@ -248653,8 +249233,53 @@
         "assembly": "Deucarian.Session.APIIntegration.Tests",
         "containingType": "SessionTokenEndpointTests",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+        "fullSignature": "[Test] public void PublicJwtExpiryResolverAcceptsIntegerNumericDates()",
+        "line": 143,
+        "namespace": "Deucarian.Session.APIIntegration.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Test",
+        "symbol": "PublicJwtExpiryResolverAcceptsIntegerNumericDates",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration.Tests",
+        "containingType": "SessionTokenEndpointTests",
+        "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+        "fullSignature": "[Test] public void PublicJwtExpiryResolverAcceptsNumericStrings()",
+        "line": 162,
+        "namespace": "Deucarian.Session.APIIntegration.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Test",
+        "symbol": "PublicJwtExpiryResolverAcceptsNumericStrings",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration.Tests",
+        "containingType": "SessionTokenEndpointTests",
+        "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+        "fullSignature": "[TestCase(\"\\\"NaN\\\"\")] [TestCase(\"\\\"Infinity\\\"\")] [TestCase(\"true\")] [TestCase(\"\\\"9999999999999999999999999999\\\"\")] public void PublicJwtExpiryResolverRejectsInvalidNumericDates( string expiryJson)",
+        "line": 185,
+        "namespace": "Deucarian.Session.APIIntegration.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Test",
+        "symbol": "PublicJwtExpiryResolverRejectsInvalidNumericDates",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration.Tests",
+        "containingType": "SessionTokenEndpointTests",
+        "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "[Test] public void ExplicitRefreshEndpointUsesReservedSessionValues()",
-        "line": 138,
+        "line": 201,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248669,7 +249294,7 @@
         "containingType": "SessionTokenEndpointTests",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "[Test] public void ApiFailureReturnsOnlySanitizedSessionError()",
-        "line": 181,
+        "line": 244,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248683,8 +249308,23 @@
         "assembly": "Deucarian.Session.APIIntegration.Tests",
         "containingType": "SessionTokenEndpointTests",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
+        "fullSignature": "[TestCase( 401L, SessionTokenEndpointErrorCodes.AuthenticationRejected)] [TestCase( 403L, SessionTokenEndpointErrorCodes.AuthenticationRejected)] [TestCase( 500L, SessionTokenEndpointErrorCodes.RequestFailed)] public void ApiFailuresPreserveSanitizedStatusClassification( long statusCode, string expectedCode)",
+        "line": 288,
+        "namespace": "Deucarian.Session.APIIntegration.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.session.api-integration",
+        "repository": "Session-API-Integration",
+        "scope": "Test",
+        "symbol": "ApiFailuresPreserveSanitizedStatusClassification",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Session.APIIntegration.Tests",
+        "containingType": "SessionTokenEndpointTests",
+        "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "[Test] public void NonStringAccessTokenIsRejected()",
-        "line": 225,
+        "line": 338,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248699,7 +249339,7 @@
         "containingType": "SessionTokenEndpointTests",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "[Test] public void UnresolvedEndpointPlaceholderIsRejectedBeforeTransport()",
-        "line": 249,
+        "line": 362,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248714,7 +249354,7 @@
         "containingType": "SessionTokenEndpointTests",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "[Test] public void MissingRequiredInputReturnsSanitizedErrorBeforeTransport()",
-        "line": 280,
+        "line": 393,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248729,7 +249369,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiRequest request, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 404,
+        "line": 517,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248744,7 +249384,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 427,
+        "line": 540,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248759,7 +249399,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 434,
+        "line": 547,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248774,7 +249414,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 442,
+        "line": 555,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248789,7 +249429,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PostAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 449,
+        "line": 562,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248804,7 +249444,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PutAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 457,
+        "line": 570,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248819,7 +249459,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PatchAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 465,
+        "line": 578,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -248834,7 +249474,7 @@
         "containingType": "SessionTokenEndpointTests.RecordingApiClient",
         "file": "Tests/Editor/SessionTokenEndpointTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 473,
+        "line": 586,
         "namespace": "Deucarian.Session.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.session.api-integration",
@@ -265947,6 +266587,231 @@
       {
         "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
         "containingType": "",
+        "file": "Tests/EditMode/ViewerAuthenticationJwtMetadataTests.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationExpiryIntegrationTests",
+        "line": 10,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ViewerAuthenticationExpiryIntegrationTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationExpiryIntegrationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationJwtMetadataTests.cs",
+        "fullSignature": "[Test] public void FractionalNumericDateIsReadWithoutSignatureValidation()",
+        "line": 12,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "FractionalNumericDateIsReadWithoutSignatureValidation",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationExpiryIntegrationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationJwtMetadataTests.cs",
+        "fullSignature": "[TestCase(null)] [TestCase(\"\")] [TestCase(\"opaque-token\")] [TestCase(\"header.invalid-base64.signature\")] [TestCase(\"header.e30.signature\")] [TestCase(\"header.eyJleHAiOiJub3QtbnVtZXJpYyJ9.signature\")] public void OpaqueOrMalformedTokenHasUnknownExpiry(string token)",
+        "line": 29,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "OpaqueOrMalformedTokenHasUnknownExpiry",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationExpiryIntegrationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationJwtMetadataTests.cs",
+        "fullSignature": "[Test] public async Task ManualReplacementAppliesReadableJwtExpiry()",
+        "line": 44,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ManualReplacementAppliesReadableJwtExpiry",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationMenuModelTests",
+        "line": 11,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ViewerAuthenticationMenuModelTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "[TestCase(0, false)] [TestCase(1, false)] [TestCase(2, true)] [TestCase(4, true)] public void SelectorAppearsOnlyForMultipleConfigurations( int configurationCount, bool expected)",
+        "line": 13,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SelectorAppearsOnlyForMultipleConfigurations",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "[Test] public void OnlyVerifiedSessionIsEligibleForLocalRemembering()",
+        "line": 27,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "OnlyVerifiedSessionIsEligibleForLocalRemembering",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "[Test] public void EditModeWorkspaceIsEphemeralAndNotGloballyRegistered()",
+        "line": 61,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "EditModeWorkspaceIsEphemeralAndNotGloballyRegistered",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "[Test] public async Task AutomaticAssessmentIsThrottledAcrossOpenAndFocus()",
+        "line": 88,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "AutomaticAssessmentIsThrottledAcrossOpenAndFocus",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "[Test] public async Task CancelledAssessmentLeavesNoStaleResultOrBusyState()",
+        "line": 136,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "CancelledAssessmentLeavesNoStaleResultOrBusyState",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests.RecordingValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public int CallCount",
+        "line": 180,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "CallCount",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests.RecordingValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public string DisplayName",
+        "line": 182,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "DisplayName",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests.RecordingValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public Task<ViewerAuthenticationValidationResult> ValidateAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 187,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ValidateAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests.CancellingValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public string DisplayName",
+        "line": 201,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "DisplayName",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationMenuModelTests.CancellingValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationMenuModelTests.cs",
+        "fullSignature": "public Task<ViewerAuthenticationValidationResult> ValidateAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 206,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ValidateAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "",
         "file": "Tests/EditMode/ViewerAuthenticationSessionTests.cs",
         "fullSignature": "public sealed class ViewerAuthenticationSessionTests",
         "line": 9,
@@ -266099,7 +266964,7 @@
         "containingType": "ViewerAuthenticationTargetRegistryTests",
         "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
         "fullSignature": "[Test] public void DuplicateLiveIdIsRejectedWithoutReplacingTarget()",
-        "line": 41,
+        "line": 44,
         "namespace": "Deucarian.ViewerAuthentication.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -266114,7 +266979,7 @@
         "containingType": "ViewerAuthenticationTargetRegistryTests",
         "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
         "fullSignature": "[Test] public async Task RegisteredSessionChangesNotifyUntilRegistrationIsDisposed()",
-        "line": 70,
+        "line": 73,
         "namespace": "Deucarian.ViewerAuthentication.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -266129,7 +266994,7 @@
         "containingType": "ViewerAuthenticationTargetRegistryTests.StubAcquisitionProvider",
         "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
         "fullSignature": "public string DisplayName",
-        "line": 116,
+        "line": 119,
         "namespace": "Deucarian.ViewerAuthentication.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
@@ -266144,13 +267009,253 @@
         "containingType": "ViewerAuthenticationTargetRegistryTests.StubAcquisitionProvider",
         "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
         "fullSignature": "public Task<SessionResult> AcquireAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
-        "line": 121,
+        "line": 124,
         "namespace": "Deucarian.ViewerAuthentication.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-authentication",
         "repository": "Viewer-Authentication",
         "scope": "Test",
         "symbol": "AcquireAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationTargetRegistryTests.StubValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
+        "fullSignature": "public string DisplayName",
+        "line": 139,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "DisplayName",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationTargetRegistryTests.StubValidationProvider",
+        "file": "Tests/EditMode/ViewerAuthenticationTargetRegistryTests.cs",
+        "fullSignature": "public Task<ViewerAuthenticationValidationResult> ValidateAsync( ISessionService sessionService, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 144,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ValidateAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationValidationTests",
+        "line": 13,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ViewerAuthenticationValidationTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "[Test] public async Task SuccessfulEndpointProbeIsServerVerified()",
+        "line": 15,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SuccessfulEndpointProbeIsServerVerified",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "[TestCase(401)] [TestCase(403)] public async Task AuthorizationFailureIsRejectedWithoutClearingSession( long statusCode)",
+        "line": 40,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "AuthorizationFailureIsRejectedWithoutClearingSession",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "[Test] public async Task ServerFailureIsInconclusiveWithoutClearingSession()",
+        "line": 62,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ServerFailureIsInconclusiveWithoutClearingSession",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "[Test] public void ValidationProfileMustUseCurrentTokenAsBearer()",
+        "line": 83,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ValidationProfileMustUseCurrentTokenAsBearer",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "[Test] public void MissingConventionalValidationProfileIsOptional()",
+        "line": 99,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "MissingConventionalValidationProfileIsOptional",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiRequest request, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 137,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SendAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 174,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SendAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 184,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SendAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 194,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "GetAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> PostAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 204,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "PostAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> PutAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 217,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "PutAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> PatchAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 230,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "PatchAsync",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationValidationTests.ValidationApiClient",
+        "file": "Tests/EditMode/ViewerAuthenticationValidationTests.cs",
+        "fullSignature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default(CancellationToken))",
+        "line": 243,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "DeleteAsync",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -270160,7 +271265,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 3975
+    "testsPublicCount": 4010
   },
   "repositories": [
     {
@@ -271043,10 +272148,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "9f9fe5282493cd2f40e7fa5c0fc3aaffb5843731",
+        "headCommit": "2abc5851bbca2897eb4a19ed47f055d2a5d5e193",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "main",
-        "requestedRefCommit": "9f9fe5282493cd2f40e7fa5c0fc3aaffb5843731"
+        "requestedRefCommit": "2abc5851bbca2897eb4a19ed47f055d2a5d5e193"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -271078,13 +272183,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.3",
+      "packageVersion": "1.2.4",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "9f9fe5282493cd2f40e7fa5c0fc3aaffb5843731",
-        "manifestSha256": "029c0c472d6763862d92034efdf066c7ecc9c15b20774bf2c404d553e156f434",
+        "headCommit": "2abc5851bbca2897eb4a19ed47f055d2a5d5e193",
+        "manifestSha256": "ea948b934747b741d19b7f040b54630189cbab52954e412abefb46e802f7265b",
         "requestedRef": "main"
       },
       "registryDependencies": null,
@@ -274582,10 +275687,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "9f8b81ab41c12c9e70b62755ef9cb643c9318cfa",
+        "headCommit": "b6c4582f714f563463704d7891e2ea2b4fdd4bc7",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "main",
-        "requestedRefCommit": "9f8b81ab41c12c9e70b62755ef9cb643c9318cfa"
+        "requestedRefCommit": "b6c4582f714f563463704d7891e2ea2b4fdd4bc7"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -274625,13 +275730,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.1.87",
+      "packageVersion": "1.1.88",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "9f8b81ab41c12c9e70b62755ef9cb643c9318cfa",
-        "manifestSha256": "8107dd65c14ef51aa203dcfed2427bc01f67962a231e673235f061932924e7c1",
+        "headCommit": "b6c4582f714f563463704d7891e2ea2b4fdd4bc7",
+        "manifestSha256": "ad6af551f2d5e6370d3b8981f1d7b3db93332e14bb53c5c8d386e54b4f1432fa",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -275798,10 +276903,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "3a3ebc92f9abc6ab42ed7c5d532d6a2c585068d0",
+        "headCommit": "425a377b39b1da259cccd54acbf529cda76cf2c0",
         "origin": "https://github.com/Deucarian/Session-API-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "3a3ebc92f9abc6ab42ed7c5d532d6a2c585068d0"
+        "requestedRefCommit": "425a377b39b1da259cccd54acbf529cda76cf2c0"
       },
       "canonicalId": "Deucarian/Session-API-Integration",
       "ciWorkflows": [
@@ -275842,13 +276947,13 @@
       },
       "name": "Session-API-Integration",
       "packageId": "com.deucarian.session.api-integration",
-      "packageVersion": "1.1.0",
+      "packageVersion": "1.1.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Session-API-Integration.git",
         "governanceConfigSha256": "b712b9399cdc14f48a67b05add403f625b8e58e52c495eb086a3ee0e02b64ed6",
-        "headCommit": "3a3ebc92f9abc6ab42ed7c5d532d6a2c585068d0",
-        "manifestSha256": "f61f272625b61a86696a441875b629d554c9187e2f1a284103089694c2e9d2e3",
+        "headCommit": "425a377b39b1da259cccd54acbf529cda76cf2c0",
+        "manifestSha256": "74c996806dccda1348ba3e832b9298bb155370bebfcad4051325e3fc1ff960a5",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -276777,10 +277882,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "335c99e9562173607a6662663245d466e54ad944",
+        "headCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "requestedRef": "main",
-        "requestedRefCommit": "335c99e9562173607a6662663245d466e54ad944"
+        "requestedRefCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
@@ -276797,14 +277902,14 @@
         "com.deucarian.object-loading": "1.2.2",
         "com.deucarian.object-loading.api-integration": "0.2.7",
         "com.deucarian.session": "1.0.6",
-        "com.deucarian.session.api-integration": "1.1.0",
+        "com.deucarian.session.api-integration": "1.1.1",
         "com.deucarian.theming": "1.0.5",
         "com.deucarian.ui": "0.2.7",
-        "com.deucarian.viewer-authentication": "0.2.0",
+        "com.deucarian.viewer-authentication": "0.3.0",
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
-        "com.deucarian.web-viewer-suite": "0.1.11",
+        "com.deucarian.web-viewer-suite": "0.1.12",
         "com.unity.modules.uielements": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
@@ -276857,13 +277962,13 @@
       },
       "name": "Template-Viewer-Web",
       "packageId": "com.deucarian.template.viewer.web",
-      "packageVersion": "0.1.13",
+      "packageVersion": "0.1.14",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "governanceConfigSha256": "482e79b52346cbe70fc46cbc1ec68b04836da2b0ac736524c3226f30e5ac1b13",
-        "headCommit": "335c99e9562173607a6662663245d466e54ad944",
-        "manifestSha256": "149c0665ba43411da671ec7947feb12c29821748bfaa02ea76f6ec9bf3e27407",
+        "headCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6",
+        "manifestSha256": "c9dd382562f973493c3461b2684dd4159a203db4cfff99e992c934bd654ec56f",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -277861,6 +278966,7 @@
           "optionalUnityReferences": [],
           "path": "Editor/Deucarian.ViewerAuthentication.Editor.asmdef",
           "references": [
+            "Deucarian.API",
             "Deucarian.Editor",
             "Deucarian.Session",
             "Deucarian.ViewerAuthentication"
@@ -277919,10 +279025,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "d34d99d04d1ab24123e474fb08475e2ddcea116b",
+        "headCommit": "15b76fed060203d42b383d153e975a6efc8a4085",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
         "requestedRef": "main",
-        "requestedRefCommit": "d34d99d04d1ab24123e474fb08475e2ddcea116b"
+        "requestedRefCommit": "15b76fed060203d42b383d153e975a6efc8a4085"
       },
       "canonicalId": "Deucarian/Viewer-Authentication",
       "ciWorkflows": [
@@ -277933,7 +279039,7 @@
         "com.deucarian.command-routing": "0.1.1",
         "com.deucarian.editor": "1.0.5",
         "com.deucarian.session": "1.0.6",
-        "com.deucarian.session.api-integration": "1.1.0",
+        "com.deucarian.session.api-integration": "1.1.1",
         "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
       "displayName": "Deucarian Viewer Authentication",
@@ -277970,13 +279076,13 @@
       },
       "name": "Viewer-Authentication",
       "packageId": "com.deucarian.viewer-authentication",
-      "packageVersion": "0.2.0",
+      "packageVersion": "0.3.0",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Authentication.git",
         "governanceConfigSha256": "5485864948b62ac57f75b81e44c51f5a352db041ece3e61380567b608f11def1",
-        "headCommit": "d34d99d04d1ab24123e474fb08475e2ddcea116b",
-        "manifestSha256": "f4352c2e2cdb7400603a335d2d474d0f5af13a8d868334735abf026a1a071806",
+        "headCommit": "15b76fed060203d42b383d153e975a6efc8a4085",
+        "manifestSha256": "be33713d864df13b2b1a8da7be49c2d057e3d80d0466cc1e0344b7e5ef3d4c8e",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -278718,10 +279824,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "c9bae765524015b01534e756b4ba5eaaeba5ff16",
+        "headCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "requestedRef": "main",
-        "requestedRefCommit": "c9bae765524015b01534e756b4ba5eaaeba5ff16"
+        "requestedRefCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da"
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
       "ciWorkflows": [
@@ -278739,10 +279845,10 @@
         "com.deucarian.object-loading.api-integration": "0.2.7",
         "com.deucarian.pointer-capture": "0.1.2",
         "com.deucarian.session": "1.0.6",
-        "com.deucarian.session.api-integration": "1.1.0",
+        "com.deucarian.session.api-integration": "1.1.1",
         "com.deucarian.theming": "1.0.5",
         "com.deucarian.ui": "0.2.7",
-        "com.deucarian.viewer-authentication": "0.2.0",
+        "com.deucarian.viewer-authentication": "0.3.0",
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
@@ -278788,13 +279894,13 @@
       },
       "name": "Web-Viewer-Suite",
       "packageId": "com.deucarian.web-viewer-suite",
-      "packageVersion": "0.1.11",
+      "packageVersion": "0.1.12",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "governanceConfigSha256": "86c11124c2775e75841fa8e468f4ec641dcb18f49a3a248a0118db0cd8e81b39",
-        "headCommit": "c9bae765524015b01534e756b4ba5eaaeba5ff16",
-        "manifestSha256": "75fa0e17150c0c38b9c778199c6198adf6cad2b3154a3a2e706f718b22dc1c4f",
+        "headCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da",
+        "manifestSha256": "1c329968d389b564b088c3615e1d5c67607daec867643c0efafcec99b379308f",
         "requestedRef": "main"
       },
       "registryDependencies": [
