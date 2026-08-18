@@ -145,12 +145,6 @@
       "repository": "Session-API-Integration"
     },
     {
-      "file": "README.md",
-      "kind": "MigrationDocumentation",
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration"
-    },
-    {
       "file": "Documentation~/validation.md",
       "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.template.game.survivors",
@@ -202,7 +196,7 @@
   "summary": {
     "HistoricalChangelogReference": 14,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 8,
+    "MigrationDocumentation": 7,
     "ReviewRequired": 10
   }
 }

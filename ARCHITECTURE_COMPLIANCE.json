@@ -473,6 +473,18 @@
       "scope": "Runtime production"
     },
     {
+      "assembly": "Deucarian.Session.APIIntegration",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 504,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.session.api-integration",
+      "repository": "Session-API-Integration",
+      "scope": "Runtime production"
+    },
+    {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1003,6 +1015,18 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.viewer-authentication",
       "repository": "Viewer-Authentication"
+    },
+    {
+      "assembly": "Deucarian.ViewerAuthentication.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/ViewerAuthenticationWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 581,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.viewer-authentication",
+      "repository": "Viewer-Authentication",
+      "scope": "Editor production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -2020,13 +2044,20 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Session.APIIntegration",
+          "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
+          "lineCount": 504,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.session.api-integration",
-      "productionFileCount": 1,
+      "productionFileCount": 12,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session-API-Integration",
       "sharedValidationPresent": true,
-      "status": "Compliant",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.Session.APIIntegration.Tests"
       ]
@@ -2477,9 +2508,16 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.ViewerAuthentication.Editor",
+          "file": "Editor/ViewerAuthenticationWindow.cs",
+          "lineCount": 581,
+          "scope": "Editor production"
+        }
+      ],
       "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 19,
+      "productionFileCount": 27,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -2682,15 +2720,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 36,
+    "compliantRepositoryCount": 35,
     "findingsByDisposition": {
-      "RefactorBacklog": 86,
+      "RefactorBacklog": 88,
       "SetupRequired": 10
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 8,
       "MissingSharedArchitectureValidation": 2,
-      "ProductionFileExceedsLineLimit": 86
+      "ProductionFileExceedsLineLimit": 88
     },
     "repositoryCount": 60
   }
