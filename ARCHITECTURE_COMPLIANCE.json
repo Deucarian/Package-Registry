@@ -473,18 +473,6 @@
       "scope": "Runtime production"
     },
     {
-      "assembly": "Deucarian.Session.APIIntegration",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 504,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.session.api-integration",
-      "repository": "Session-API-Integration",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1022,7 +1010,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/ViewerAuthenticationWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 581,
+      "lineCount": 1062,
       "lineLimit": 500,
       "packageId": "com.deucarian.viewer-authentication",
       "repository": "Viewer-Authentication",
@@ -2044,20 +2032,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.Session.APIIntegration",
-          "file": "Runtime/TokenEndpoints/SessionTokenEndpointExecutor.cs",
-          "lineCount": 504,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.session.api-integration",
-      "productionFileCount": 12,
+      "productionFileCount": 13,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session-API-Integration",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.APIIntegration.Tests"
       ]
@@ -2512,12 +2493,12 @@
         {
           "assembly": "Deucarian.ViewerAuthentication.Editor",
           "file": "Editor/ViewerAuthenticationWindow.cs",
-          "lineCount": 581,
+          "lineCount": 1062,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 27,
+      "productionFileCount": 38,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -2720,15 +2701,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 35,
+    "compliantRepositoryCount": 36,
     "findingsByDisposition": {
-      "RefactorBacklog": 88,
+      "RefactorBacklog": 87,
       "SetupRequired": 10
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 8,
       "MissingSharedArchitectureValidation": 2,
-      "ProductionFileExceedsLineLimit": 88
+      "ProductionFileExceedsLineLimit": 87
     },
     "repositoryCount": 60
   }
