@@ -1363,7 +1363,7 @@
         "disposition": "RefactorBacklog",
         "file": "Editor/ViewerAuthenticationWindow.cs",
         "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 1062,
+        "lineCount": 1131,
         "lineLimit": 500,
         "packageId": "com.deucarian.viewer-authentication",
         "repository": "Viewer-Authentication",
@@ -2947,12 +2947,12 @@
           {
             "assembly": "Deucarian.ViewerAuthentication.Editor",
             "file": "Editor/ViewerAuthenticationWindow.cs",
-            "lineCount": 1062,
+            "lineCount": 1131,
             "scope": "Editor production"
           }
         ],
         "packageId": "com.deucarian.viewer-authentication",
-        "productionFileCount": 38,
+        "productionFileCount": 39,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Viewer-Authentication",
         "sharedValidationPresent": true,
@@ -5062,7 +5062,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.viewer-authentication",
         "toRepo": "Viewer-Authentication",
-        "version": "0.3.0"
+        "version": "0.3.1"
       },
       {
         "from": "com.deucarian.template.viewer.web",
@@ -5090,7 +5090,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.web-viewer-suite",
         "toRepo": "Web-Viewer-Suite",
-        "version": "0.1.12"
+        "version": "0.1.13"
       },
       {
         "from": "com.deucarian.theming",
@@ -5447,7 +5447,7 @@
         "fromRepo": "Web-Viewer-Suite",
         "to": "com.deucarian.viewer-authentication",
         "toRepo": "Viewer-Authentication",
-        "version": "0.3.0"
+        "version": "0.3.1"
       },
       {
         "from": "com.deucarian.web-viewer-suite",
@@ -12392,7 +12392,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "0.3.0",
+        "declaredVersion": "0.3.1",
         "dependency": "com.deucarian.viewer-authentication",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [
@@ -12560,7 +12560,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.1.12",
+        "declaredVersion": "0.1.13",
         "dependency": "com.deucarian.web-viewer-suite",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [],
@@ -14575,7 +14575,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.3.0",
+        "declaredVersion": "0.3.1",
         "dependency": "com.deucarian.viewer-authentication",
         "packageId": "com.deucarian.web-viewer-suite",
         "referencedAssemblies": [
@@ -20952,7 +20952,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 14566,
+    "methodCountAnalyzed": 14584,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -40375,7 +40375,7 @@
       }
     ],
     "editorProductionCount": 2276,
-    "internalPrivateProductionCount": 11006,
+    "internalPrivateProductionCount": 11026,
     "missingXmlDocumentationCount": 9285,
     "runtimeProductionCount": 8811,
     "samples": [
@@ -266377,6 +266377,126 @@
       {
         "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
         "containingType": "",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "public sealed class ViewerAuthenticationEndpointTargetSummaryTests",
+        "line": 6,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void SameOriginIsShownOnceWithExactEndpointValues()",
+        "line": 8,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "SameOriginIsShownOnceWithExactEndpointValues",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void DifferentOriginsRemainExplicitAndRaiseMismatch()",
+        "line": 33,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "DifferentOriginsRemainExplicitAndRaiseMismatch",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void EquivalentDefaultPortAndHostCaseShareOneOrigin()",
+        "line": 53,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "EquivalentDefaultPortAndHostCaseShareOneOrigin",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void NonAbsoluteTemplateStillShowsTheExactConfiguredValue()",
+        "line": 69,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "NonAbsoluteTemplateStillShowsTheExactConfiguredValue",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void MixedResolvedAndRelativeTemplatesDoNotImplySharedHost()",
+        "line": 88,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "MixedResolvedAndRelativeTemplatesDoNotImplySharedHost",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void NonHttpAndMultilineTemplatesRemainSafeToDisplay()",
+        "line": 102,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "NonHttpAndMultilineTemplatesRemainSafeToDisplay",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "ViewerAuthenticationEndpointTargetSummaryTests",
+        "file": "Tests/EditMode/ViewerAuthenticationEndpointTargetSummaryTests.cs",
+        "fullSignature": "[Test] public void UserInfoQueryAndFragmentValuesAreNeverDisplayed()",
+        "line": 118,
+        "namespace": "Deucarian.ViewerAuthentication.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-authentication",
+        "repository": "Viewer-Authentication",
+        "scope": "Test",
+        "symbol": "UserInfoQueryAndFragmentValuesAreNeverDisplayed",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerAuthentication.Tests.EditMode",
+        "containingType": "",
         "file": "Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs",
         "fullSignature": "public sealed class ViewerAuthenticationInteractiveAcquisitionTests",
         "line": 16,
@@ -271265,7 +271385,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 4010
+    "testsPublicCount": 4018
   },
   "repositories": [
     {
@@ -277882,10 +278002,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6",
+        "headCommit": "1a820de029a9c5d4aedbe95871d43c668bb4fa28",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "requestedRef": "main",
-        "requestedRefCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6"
+        "requestedRefCommit": "1a820de029a9c5d4aedbe95871d43c668bb4fa28"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
@@ -277905,11 +278025,11 @@
         "com.deucarian.session.api-integration": "1.1.1",
         "com.deucarian.theming": "1.0.5",
         "com.deucarian.ui": "0.2.7",
-        "com.deucarian.viewer-authentication": "0.3.0",
+        "com.deucarian.viewer-authentication": "0.3.1",
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
-        "com.deucarian.web-viewer-suite": "0.1.12",
+        "com.deucarian.web-viewer-suite": "0.1.13",
         "com.unity.modules.uielements": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
@@ -277962,13 +278082,13 @@
       },
       "name": "Template-Viewer-Web",
       "packageId": "com.deucarian.template.viewer.web",
-      "packageVersion": "0.1.14",
+      "packageVersion": "0.1.15",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "governanceConfigSha256": "482e79b52346cbe70fc46cbc1ec68b04836da2b0ac736524c3226f30e5ac1b13",
-        "headCommit": "8531cb2e63231635ec2dbbbed3d9466ad5f24ce6",
-        "manifestSha256": "c9dd382562f973493c3461b2684dd4159a203db4cfff99e992c934bd654ec56f",
+        "headCommit": "1a820de029a9c5d4aedbe95871d43c668bb4fa28",
+        "manifestSha256": "30430ddcb5b7875319da4efe8c95e1d737d34759dec73e4501ff35a843b65a69",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -279025,10 +279145,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "15b76fed060203d42b383d153e975a6efc8a4085",
+        "headCommit": "76cb4e9860a9f337048844a420d18be2e5328d99",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
         "requestedRef": "main",
-        "requestedRefCommit": "15b76fed060203d42b383d153e975a6efc8a4085"
+        "requestedRefCommit": "76cb4e9860a9f337048844a420d18be2e5328d99"
       },
       "canonicalId": "Deucarian/Viewer-Authentication",
       "ciWorkflows": [
@@ -279076,13 +279196,13 @@
       },
       "name": "Viewer-Authentication",
       "packageId": "com.deucarian.viewer-authentication",
-      "packageVersion": "0.3.0",
+      "packageVersion": "0.3.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Authentication.git",
         "governanceConfigSha256": "5485864948b62ac57f75b81e44c51f5a352db041ece3e61380567b608f11def1",
-        "headCommit": "15b76fed060203d42b383d153e975a6efc8a4085",
-        "manifestSha256": "be33713d864df13b2b1a8da7be49c2d057e3d80d0466cc1e0344b7e5ef3d4c8e",
+        "headCommit": "76cb4e9860a9f337048844a420d18be2e5328d99",
+        "manifestSha256": "01344aee9ca67a7194cf7bf71f548b77fc0dae0e29fc6a8561b3b6e04e6c5ad9",
         "requestedRef": "main"
       },
       "registryDependencies": [
@@ -279824,10 +279944,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da",
+        "headCommit": "d4ab5fd1bf5d28d1d7b601f1df40417e3cbf8cc4",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "requestedRef": "main",
-        "requestedRefCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da"
+        "requestedRefCommit": "d4ab5fd1bf5d28d1d7b601f1df40417e3cbf8cc4"
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
       "ciWorkflows": [
@@ -279848,7 +279968,7 @@
         "com.deucarian.session.api-integration": "1.1.1",
         "com.deucarian.theming": "1.0.5",
         "com.deucarian.ui": "0.2.7",
-        "com.deucarian.viewer-authentication": "0.3.0",
+        "com.deucarian.viewer-authentication": "0.3.1",
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
@@ -279894,13 +280014,13 @@
       },
       "name": "Web-Viewer-Suite",
       "packageId": "com.deucarian.web-viewer-suite",
-      "packageVersion": "0.1.12",
+      "packageVersion": "0.1.13",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "governanceConfigSha256": "86c11124c2775e75841fa8e468f4ec641dcb18f49a3a248a0118db0cd8e81b39",
-        "headCommit": "0c0eb9f9dbb3b3b228dfa48c771e6384331439da",
-        "manifestSha256": "1c329968d389b564b088c3615e1d5c67607daec867643c0efafcec99b379308f",
+        "headCommit": "d4ab5fd1bf5d28d1d7b601f1df40417e3cbf8cc4",
+        "manifestSha256": "fe13fd8eb544f0ce57c238f907385d91c2b37fd19699711beea1aa6056774540",
         "requestedRef": "main"
       },
       "registryDependencies": [
