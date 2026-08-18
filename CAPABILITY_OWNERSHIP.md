@@ -20,6 +20,7 @@
 | Viewer navigation toolbar/action state, reference/origin wiring, input gating, view cube UX | `com.deucarian.viewer-navigation` |
 | Viewer camera, lighting, URP quality, post-processing, reflection, environment, and display settings | `com.deucarian.viewer-rendering` |
 | Viewer status, diagnostics, display-settings chrome, responsive layout, menu coordination, theming, and input boundaries | `com.deucarian.viewer-shell` |
+| Viewer session composition, live token commands, sanitized auth status, and development authentication tooling | `com.deucarian.viewer-authentication` |
 | Secure browser/WebGL command transport, iframe origin/source validation, host handshake | `com.deucarian.command-routing.webgl-integration` |
 | Runtime themes, palettes, and adapters | `com.deucarian.theming` |
 | Local diagnostics providers, snapshots, export, overlays | `com.deucarian.diagnostics` |
