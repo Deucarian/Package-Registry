@@ -82,6 +82,7 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `dependencies`: Package IDs that must also exist in this registry and should be installed first by the Package Installer.
 - `overviewOrder`: Optional positive integer used to order packages within their semantic overview sector.
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.
+- `compositionPresets`: Named Template setups. Each preset contains an `id`, `displayName`, optional `description`, package IDs whose `recommendedWith` includes that Template, and at most one `recommended` preset. The Installer derives the Template's optional companions from those forward relations.
 - `suiteMembers`: Package IDs composed by a Suite package in the Package Installer ecosystem graph.
 - `recommendedWith`: Genuine non-structural recommendations. Reverse Integration and Suite relationships are derived and must not be stored.
 

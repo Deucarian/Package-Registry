@@ -92,6 +92,7 @@
       "description": "Packages whose longest canonical dependency path has 5 edges.",
       "packages": [
         "com.deucarian.auto-defense",
+        "com.deucarian.simultria-api",
         "com.deucarian.web-viewer-suite",
         "com.deucarian.run-upgrades"
       ]
@@ -102,6 +103,7 @@
       "description": "Packages whose longest canonical dependency path has 6 edges.",
       "packages": [
         "com.deucarian.auto-defense-suite",
+        "com.deucarian.simultria-viewer-connection",
         "com.deucarian.template.game.movement-fps",
         "com.deucarian.template.game.survivors",
         "com.deucarian.template.viewer.web"

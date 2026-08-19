@@ -51,9 +51,19 @@
       "ownerPackageId": "com.deucarian.game-content-authoring"
     },
     {
-      "description": "General HTTP/API request construction, transport, authentication, cancellation, response handling, and serializer integration.",
+      "description": "General HTTP/API request construction, explicit environment/client/catalog composition, layered policy resolution, transport, authentication, cancellation, response handling, and serializer integration.",
       "id": "api-http-client",
       "ownerPackageId": "com.deucarian.api"
+    },
+    {
+      "description": "Simultria environment and endpoint definitions, typed lookups, viewer authentication provider, and deterministic viewer-model resolution.",
+      "id": "simultria-api-integration",
+      "ownerPackageId": "com.deucarian.simultria-api"
+    },
+    {
+      "description": "Credential-free Simultria viewer profiles, stable editor/runtime authentication handoff, trusted API-client composition, sanitized connection status, and command-routed development auto-load tooling.",
+      "id": "simultria-viewer-development-connection",
+      "ownerPackageId": "com.deucarian.simultria-viewer-connection"
     },
     {
       "description": "Transport-independent command envelopes, explicit handler strategies, middleware, dispatch, JSON protocol, secret redaction, bounded command history, and command diagnostics.",
@@ -161,7 +171,7 @@
       "ownerPackageId": "com.deucarian.viewer-shell"
     },
     {
-      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, and shared development authentication tooling.",
+      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, shared development authentication tooling, and an optional runtime connection-provider seam.",
       "id": "viewer-authentication",
       "ownerPackageId": "com.deucarian.viewer-authentication"
     },
