@@ -541,6 +541,18 @@
       "repository": "Simultria-Viewer-Connection"
     },
     {
+      "assembly": "Deucarian.SimultriaViewerConnection",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 651,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Runtime production"
+    },
+    {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -2166,7 +2178,14 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.SimultriaViewerConnection",
+          "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
+          "lineCount": 651,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.simultria-viewer-connection",
       "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
@@ -2844,13 +2863,13 @@
   "summary": {
     "compliantRepositoryCount": 35,
     "findingsByDisposition": {
-      "RefactorBacklog": 91,
+      "RefactorBacklog": 92,
       "SetupRequired": 14
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 10,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 91
+      "ProductionFileExceedsLineLimit": 92
     },
     "repositoryCount": 62
   }
