@@ -53,6 +53,20 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",
             ],
+            "com.deucarian.simultria-api": [
+                "com.deucarian.api",
+                "com.deucarian.session",
+                "com.deucarian.session.api-integration",
+                "com.deucarian.viewer-authentication",
+            ],
+            "com.deucarian.simultria-viewer-connection": [
+                "com.deucarian.api",
+                "com.deucarian.command-routing",
+                "com.deucarian.editor",
+                "com.deucarian.logging",
+                "com.deucarian.simultria-api",
+                "com.deucarian.viewer-authentication",
+            ],
             "com.deucarian.web-viewer-suite": [
                 "com.deucarian.api",
                 "com.deucarian.build-pipeline",
@@ -101,6 +115,24 @@ class PackagesCatalogTests(unittest.TestCase):
 
         suite = packages_by_id["com.deucarian.web-viewer-suite"]
         self.assertEqual(suite["dependencies"], suite["suiteMembers"])
+
+        template = packages_by_id["com.deucarian.template.viewer.web"]
+        self.assertEqual(
+            ["com.deucarian.template.viewer.web"],
+            packages_by_id["com.deucarian.viewer-authentication"]["recommendedWith"],
+        )
+        self.assertEqual(
+            ["com.deucarian.template.viewer.web"],
+            packages_by_id["com.deucarian.simultria-viewer-connection"]["recommendedWith"],
+        )
+        self.assertEqual(
+            ["core", "authenticated", "simultria"],
+            [preset["id"] for preset in template["compositionPresets"]],
+        )
+        self.assertEqual(
+            ["com.deucarian.simultria-viewer-connection"],
+            template["compositionPresets"][2]["packageIds"],
+        )
 
     def test_idle_auto_defense_template_declares_every_direct_assembly_dependency(self):
         registry_root = Path(__file__).resolve().parents[2]

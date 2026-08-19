@@ -51,9 +51,19 @@
       "ownerPackageId": "com.deucarian.game-content-authoring"
     },
     {
-      "description": "General HTTP/API request construction, transport, authentication, cancellation, response handling, and serializer integration.",
+      "description": "General HTTP/API request construction, explicit environment/client/catalog composition, layered policy resolution, transport, authentication, cancellation, response handling, and serializer integration.",
       "id": "api-http-client",
       "ownerPackageId": "com.deucarian.api"
+    },
+    {
+      "description": "Simultria environment and endpoint definitions, typed lookups, viewer authentication provider, and deterministic viewer-model resolution.",
+      "id": "simultria-api-integration",
+      "ownerPackageId": "com.deucarian.simultria-api"
+    },
+    {
+      "description": "Credential-free Simultria viewer development profiles, sanitized connection status, and command-routed development auto-load tooling.",
+      "id": "simultria-viewer-development-connection",
+      "ownerPackageId": "com.deucarian.simultria-viewer-connection"
     },
     {
       "description": "Transport-independent command envelopes, explicit handler strategies, middleware, dispatch, JSON protocol, secret redaction, bounded command history, and command diagnostics.",
