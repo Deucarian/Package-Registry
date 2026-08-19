@@ -101,6 +101,16 @@ Schema version: 2
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
 | com.deucarian.session.api-integration | com.deucarian.api | 1.1.5 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
+| com.deucarian.simultria-api | com.deucarian.api | 1.2.0 | Simultria-API | API |
+| com.deucarian.simultria-api | com.deucarian.session | 1.0.6 | Simultria-API | Session |
+| com.deucarian.simultria-api | com.deucarian.session.api-integration | 1.1.1 | Simultria-API | Session-API-Integration |
+| com.deucarian.simultria-api | com.deucarian.viewer-authentication | 0.4.0 | Simultria-API | Viewer-Authentication |
+| com.deucarian.simultria-viewer-connection | com.deucarian.api | 1.2.0 | Simultria-Viewer-Connection | API |
+| com.deucarian.simultria-viewer-connection | com.deucarian.command-routing | 0.1.2 | Simultria-Viewer-Connection | Command-Routing |
+| com.deucarian.simultria-viewer-connection | com.deucarian.editor | 1.0.5 | Simultria-Viewer-Connection | Editor |
+| com.deucarian.simultria-viewer-connection | com.deucarian.logging | 1.0.2 | Simultria-Viewer-Connection | Logging |
+| com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.1.0 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.4.0 | Simultria-Viewer-Connection | Viewer-Authentication |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -137,10 +147,10 @@ Schema version: 2
 | com.deucarian.template.game.survivors | com.deucarian.run-upgrades | 0.1.1 | Template-Game-Survivors | Run-Upgrades |
 | com.deucarian.template.game.survivors | com.deucarian.weapon-systems | 0.1.1 | Template-Game-Survivors | Weapon-Systems |
 | com.deucarian.template.game.survivors | com.deucarian.world-spawning | 0.2.1 | Template-Game-Survivors | World-Spawning |
-| com.deucarian.template.viewer.web | com.deucarian.api | 1.1.5 | Template-Viewer-Web | API |
+| com.deucarian.template.viewer.web | com.deucarian.api | 1.2.0 | Template-Viewer-Web | API |
 | com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.4.0 | Template-Viewer-Web | Build-Pipeline |
 | com.deucarian.template.viewer.web | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer-Web | Camera-Navigation |
-| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.1.1 | Template-Viewer-Web | Command-Routing |
+| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.1.2 | Template-Viewer-Web | Command-Routing |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
 | com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
@@ -223,5 +233,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 17
+- Dependency version drift entries: 19
 - Registry dependency drift entries: 0
