@@ -4429,13 +4429,27 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
         "Deucarian.API"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Simultria.API.Editor.asmdef",
+          "assembly": "Deucarian.Simultria.API.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.Simultria.API.asmdef",
           "assembly": "Deucarian.Simultria.API",
@@ -4460,6 +4474,34 @@
           ],
           "reference": "Deucarian.API",
           "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Simultria-API",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.0.5",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.simultria-api",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Simultria.API.Editor.asmdef",
+          "assembly": "Deucarian.Simultria.API.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
           "versionDefines": []
         }
       ],
@@ -10025,7 +10067,7 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 31,
+    "EditorOnlyUse": 32,
     "OptionalVersionDefinedUse": 1,
     "RequiredAndUsed": 151,
     "SuiteComposition": 39,
