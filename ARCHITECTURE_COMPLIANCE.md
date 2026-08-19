@@ -17,14 +17,14 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 91 |
+| RefactorBacklog | 92 |
 | SetupRequired | 14 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 10 |
 | MissingSharedArchitectureValidation | 4 |
-| ProductionFileExceedsLineLimit | 91 |
+| ProductionFileExceedsLineLimit | 92 |
 
 ## Repository Status
 
@@ -71,7 +71,7 @@ once.
 | Session | com.deucarian.session | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | No | 26 | 1 | 1 | 0 |
-| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-connection | SetupRequired | No | No | 18 | 1 | 0 | 0 |
+| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-connection | SetupRequired | No | No | 18 | 1 | 1 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 49 | 2 | 15 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
@@ -144,6 +144,7 @@ once.
 | Simultria-API | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Configuration/SimultriaApiProfileAssetFactory.cs | 540 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-Viewer-Connection | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Simultria-Viewer-Connection | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
+| Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs | 651 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseTemplate.cs | 6878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentPackIndex.cs | 1758 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentSetProviderV2.cs | 1682 | 500 | Extract responsibilities until the production file is at most 500 lines. |

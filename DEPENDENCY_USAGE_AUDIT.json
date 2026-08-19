@@ -4643,7 +4643,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.4.2",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
@@ -4861,7 +4861,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
