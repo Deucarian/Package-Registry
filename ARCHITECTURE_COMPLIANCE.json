@@ -885,6 +885,18 @@
       "repository": "Template-Viewer-Web"
     },
     {
+      "assembly": "Deucarian.TemplateViewerWeb",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WebViewerBootstrap.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 621,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web",
+      "scope": "Runtime production"
+    },
+    {
       "assembly": "Deucarian.Theming.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1785,7 +1797,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.object-loading.api-integration",
-      "productionFileCount": 4,
+      "productionFileCount": 5,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "ObjectLoading-API-Integration",
       "sharedValidationPresent": true,
@@ -2100,7 +2112,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-viewer-connection",
-      "productionFileCount": 14,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
@@ -2358,9 +2370,16 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "file": "Runtime/WebViewerBootstrap.cs",
+          "lineCount": 621,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 17,
+      "productionFileCount": 16,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
@@ -2564,7 +2583,7 @@
         }
       ],
       "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 40,
+      "productionFileCount": 42,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -2769,13 +2788,13 @@
   "summary": {
     "compliantRepositoryCount": 36,
     "findingsByDisposition": {
-      "RefactorBacklog": 87,
+      "RefactorBacklog": 88,
       "SetupRequired": 14
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 10,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 87
+      "ProductionFileExceedsLineLimit": 88
     },
     "repositoryCount": 62
   }

@@ -3203,7 +3203,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.4",
+      "declaredVersion": "1.2.0",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.object-loading.api-integration",
       "referencedAssemblies": [
@@ -4753,6 +4753,60 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "1.0.6",
+      "dependency": "com.deucarian.session",
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "referencedAssemblies": [
+        "Deucarian.Session"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.SimultriaViewerConnection.Editor.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.SimultriaViewerConnection.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Session",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.SimultriaViewerConnection.Tests.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Simultria-Viewer-Connection",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.1.0",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-connection",
@@ -4785,6 +4839,20 @@
           "reference": "Deucarian.Simultria.API",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.SimultriaViewerConnection.Tests.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Simultria.API",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Simultria-Viewer-Connection",
@@ -4793,11 +4861,12 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.4.0",
+      "declaredVersion": "0.5.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
-        "Deucarian.ViewerAuthentication"
+        "Deucarian.ViewerAuthentication",
+        "Deucarian.ViewerAuthentication.Editor"
       ],
       "referencedBy": [
         {
@@ -4815,6 +4884,20 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Editor/Deucarian.SimultriaViewerConnection.Editor.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.ViewerAuthentication.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Runtime/Deucarian.SimultriaViewerConnection.asmdef",
           "assembly": "Deucarian.SimultriaViewerConnection",
           "autoReferenced": true,
@@ -4824,6 +4907,20 @@
           "includePlatforms": [],
           "reference": "Deucarian.ViewerAuthentication",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.SimultriaViewerConnection.Tests.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.ViewerAuthentication",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -7078,7 +7175,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.7",
+      "declaredVersion": "0.2.8",
       "dependency": "com.deucarian.object-loading.api-integration",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -7095,6 +7192,22 @@
           "includePlatforms": [],
           "reference": "Deucarian.ObjectLoading.APIIntegration",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.ObjectLoading.APIIntegration",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -7273,7 +7386,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.4.0",
+      "declaredVersion": "0.5.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -9914,7 +10027,7 @@
   "summary": {
     "EditorOnlyUse": 31,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 150,
+    "RequiredAndUsed": 151,
     "SuiteComposition": 39,
     "TestOnlyUse": 11
   }

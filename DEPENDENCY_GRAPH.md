@@ -73,7 +73,7 @@ Schema version: 2
 | com.deucarian.media.api-integration | com.deucarian.media | 0.1.0 | Media-API-Integration | Media |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
-| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.1.4 | ObjectLoading-API-Integration | API |
+| com.deucarian.object-loading.api-integration | com.deucarian.api | 1.2.0 | ObjectLoading-API-Integration | API |
 | com.deucarian.object-loading.api-integration | com.deucarian.object-loading | 1.2.2 | ObjectLoading-API-Integration | Object-Loading |
 | com.deucarian.object-selection | com.deucarian.logging | 1.0.2 | Object-Selection | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
@@ -109,8 +109,9 @@ Schema version: 2
 | com.deucarian.simultria-viewer-connection | com.deucarian.command-routing | 0.1.2 | Simultria-Viewer-Connection | Command-Routing |
 | com.deucarian.simultria-viewer-connection | com.deucarian.editor | 1.0.5 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-connection | com.deucarian.logging | 1.0.2 | Simultria-Viewer-Connection | Logging |
+| com.deucarian.simultria-viewer-connection | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
 | com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.1.0 | Simultria-Viewer-Connection | Simultria-API |
-| com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.4.0 | Simultria-Viewer-Connection | Viewer-Authentication |
+| com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.5.0 | Simultria-Viewer-Connection | Viewer-Authentication |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -155,12 +156,12 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
 | com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
 | com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
-| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.7 | Template-Viewer-Web | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer-Web | ObjectLoading-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.session | 1.0.6 | Template-Viewer-Web | Session |
 | com.deucarian.template.viewer.web | com.deucarian.session.api-integration | 1.1.1 | Template-Viewer-Web | Session-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.5 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.4.0 | Template-Viewer-Web | Viewer-Authentication |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.0 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
@@ -233,5 +234,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 19
-- Registry dependency drift entries: 0
+- Dependency version drift entries: 21
+- Registry dependency drift entries: 1
