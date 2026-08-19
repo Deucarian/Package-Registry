@@ -817,6 +817,18 @@
       "repository": "Simultria-Viewer-Connection"
     },
     {
+      "assembly": "Deucarian.SimultriaViewerConnection",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 651,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Runtime production"
+    },
+    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -2613,7 +2625,14 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.SimultriaViewerConnection",
+          "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
+          "lineCount": 651,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.simultria-viewer-connection",
       "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
@@ -3310,13 +3329,13 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 99,
+      "RefactorBacklog": 100,
       "SetupRequired": 54
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 49,
       "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 99
+      "ProductionFileExceedsLineLimit": 100
     },
     "repositoryCount": 62
   }
