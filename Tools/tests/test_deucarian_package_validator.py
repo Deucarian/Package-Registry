@@ -224,6 +224,30 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
         self.assertTrue(any("kind must be one of" in error for error in validator.errors))
         self.assertTrue(any("derived reverse relation" in error for error in validator.errors))
 
+    def test_registry_rejects_template_preset_without_forward_recommendation(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        template = next(
+            package
+            for package in validator.packages["packages"]
+            if package["id"] == "com.deucarian.template.viewer.web"
+        )
+        template["compositionPresets"] = [
+            {
+                "id": "invalid",
+                "displayName": "Invalid",
+                "packageIds": ["com.deucarian.api"],
+                "recommended": True,
+            }
+        ]
+
+        validator.validate_registry_schema()
+
+        self.assertTrue(any(
+            "may only select optional companions derived from recommendedWith" in error
+            for error in validator.errors
+        ))
+
     def test_playable_scene_policy_requires_scene(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))

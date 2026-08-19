@@ -9,7 +9,9 @@
 | Editor chrome, icons, resources, editor UI helpers | `com.deucarian.editor` |
 | Build workflows, final-player AOT inspection, generated linker evidence, artifact manifests, headless build APIs | `com.deucarian.build-pipeline` |
 | Reflection-free generated JSON serialization | Proposed `com.deucarian.serialization`; not installable yet |
-| HTTP/API transport, request building, response parsing, serializer integration | `com.deucarian.api` |
+| HTTP/API transport, explicit environment/client/catalog composition, request building, response parsing, serializer integration | `com.deucarian.api` |
+| Simultria environment and endpoint definitions, typed lookups, viewer auth adapter, deterministic viewer-model resolution | `com.deucarian.simultria-api` |
+| Credential-free Simultria viewer development profiles and command-routed auto-load tooling | `com.deucarian.simultria-viewer-connection` |
 | Session lifecycle and persistence contracts | `com.deucarian.session` |
 | Object/content/AssetBundle loading lifecycle | `com.deucarian.object-loading` |
 | Generic repository and selection state primitives | `com.deucarian.core-state` |

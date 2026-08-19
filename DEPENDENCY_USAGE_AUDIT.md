@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 29 |
+| Editor-only use | 31 |
 | Optional version-defined use | 1 |
-| Required and used | 142 |
+| Required and used | 151 |
 | Suite composition | 39 |
 | Test-only use | 11 |
 
@@ -117,6 +117,17 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Session | com.deucarian.logging | Required and used | Runtime production: Deucarian.Session -> Deucarian.Logging; Sample: Deucarian.Session.Samples -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Session-API-Integration | com.deucarian.api | Required and used | Runtime production: Deucarian.Session.APIIntegration -> Deucarian.API; Sample: Deucarian.Session.APIIntegration.Samples -> Deucarian.API; Test: Deucarian.Session.APIIntegration.Tests -> Deucarian.API | Deucarian.API | 0 |
 | Session-API-Integration | com.deucarian.session | Required and used | Runtime production: Deucarian.Session.APIIntegration -> Deucarian.Session; Sample: Deucarian.Session.APIIntegration.Samples -> Deucarian.Session; Test: Deucarian.Session.APIIntegration.Tests -> Deucarian.Session | Deucarian.Session | 0 |
+| Simultria-API | com.deucarian.api | Required and used | Runtime production: Deucarian.Simultria.API -> Deucarian.API; Test: Deucarian.Simultria.API.Tests.EditMode -> Deucarian.API | Deucarian.API | 0 |
+| Simultria-API | com.deucarian.session | Required and used | Runtime production: Deucarian.Simultria.API -> Deucarian.Session; Test: Deucarian.Simultria.API.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
+| Simultria-API | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.Simultria.API -> Deucarian.Session.APIIntegration; Test: Deucarian.Simultria.API.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
+| Simultria-API | com.deucarian.viewer-authentication | Required and used | Runtime production: Deucarian.Simultria.API -> Deucarian.ViewerAuthentication; Test: Deucarian.Simultria.API.Tests.EditMode -> Deucarian.ViewerAuthentication | Deucarian.ViewerAuthentication | 0 |
+| Simultria-Viewer-Connection | com.deucarian.api | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.API; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.API; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.API | Deucarian.API | 0 |
+| Simultria-Viewer-Connection | com.deucarian.command-routing | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.CommandRouting; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.CommandRouting; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
+| Simultria-Viewer-Connection | com.deucarian.editor | Editor-only use | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Simultria-Viewer-Connection | com.deucarian.logging | Editor-only use | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Simultria-Viewer-Connection | com.deucarian.session | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Session; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.Session; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.Session | Deucarian.Session | 0 |
+| Simultria-Viewer-Connection | com.deucarian.simultria-api | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Simultria.API; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.Simultria.API; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.Simultria.API | Deucarian.Simultria.API | 0 |
+| Simultria-Viewer-Connection | com.deucarian.viewer-authentication | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.ViewerAuthentication; Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.ViewerAuthentication.Editor; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.ViewerAuthentication; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.ViewerAuthentication | Deucarian.ViewerAuthentication, Deucarian.ViewerAuthentication.Editor | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.attacks | Required and used | Editor production: Deucarian.TemplateGameIdleAutoDefense.Editor -> Deucarian.Attacks.Authoring; Editor production: Deucarian.TemplateGameIdleAutoDefense.Editor -> Deucarian.Attacks.Editor; Runtime production: Deucarian.TemplateGameIdleAutoDefense -> Deucarian.Attacks; Runtime production: Deucarian.TemplateGameIdleAutoDefense -> Deucarian.Attacks.Authoring; Test: Deucarian.TemplateGameIdleAutoDefense.PlayModeTests -> Deucarian.Attacks; Test: Deucarian.TemplateGameIdleAutoDefense.PlayModeTests -> Deucarian.Attacks.Authoring; Test: Deucarian.TemplateGameIdleAutoDefense.Tests -> Deucarian.Attacks; Test: Deucarian.TemplateGameIdleAutoDefense.Tests -> Deucarian.Attacks.Authoring; Test: Deucarian.TemplateGameIdleAutoDefense.Tests -> Deucarian.Attacks.Editor | Deucarian.Attacks, Deucarian.Attacks.Authoring, Deucarian.Attacks.Editor | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.auto-defense | Required and used | Runtime production: Deucarian.TemplateGameIdleAutoDefense -> Deucarian.AutoDefense; Test: Deucarian.TemplateGameIdleAutoDefense.PlayModeTests -> Deucarian.AutoDefense; Test: Deucarian.TemplateGameIdleAutoDefense.Tests -> Deucarian.AutoDefense | Deucarian.AutoDefense | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.auto-defense-suite | Suite composition |  |  | 0 |
@@ -161,7 +172,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Template-Viewer-Web | com.deucarian.logging | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
-| Template-Viewer-Web | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
+| Template-Viewer-Web | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading.APIIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.session | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session | Deucarian.Session | 0 |
 | Template-Viewer-Web | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session.APIIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Theming; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |

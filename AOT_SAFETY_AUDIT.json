@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "main",
+  "ref": "develop",
   "repositories": [
     {
       "categories": {
@@ -727,6 +727,62 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.simultria-api",
+      "repository": "Simultria-API",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "reflection-based-newtonsoft": 2,
+        "runtime-type-discovery": 2
+      },
+      "errors": [],
+      "findingCount": 4,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
+          "line": 196,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
+          "line": 123,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Initialization/SimultriaViewerInitializationCommand.cs",
+          "line": 32,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": ".FromObject"
+        },
+        {
+          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
+          "file": "Runtime/Initialization/SimultriaViewerInitializationCommand.cs",
+          "line": 57,
+          "rule": "reflection-based-newtonsoft",
+          "symbol": ".FromObject"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "repository": "Template-Game-Idle-Auto-Defense",
       "suppressedFindingCount": 0,
@@ -974,10 +1030,20 @@
       "suppressedFindings": []
     },
     {
-      "categories": {},
+      "categories": {
+        "runtime-type-discovery": 1
+      },
       "errors": [],
-      "findingCount": 0,
-      "findings": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerRuntimeConnectionProviderRegistry.cs",
+          "line": 155,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
       "mode": "Audit",
       "ok": true,
       "packageId": "com.deucarian.viewer-authentication",
@@ -1202,17 +1268,17 @@
   "schemaVersion": 1,
   "summary": {
     "categoryCounts": {
-      "reflection-based-newtonsoft": 11,
+      "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 40
+      "runtime-type-discovery": 43
     },
     "cleanRepositoryCount": 41,
     "modeCounts": {
-      "Audit": 59
+      "Audit": 61
     },
-    "repositoriesWithFindings": 18,
-    "repositoryCount": 59,
-    "totalFindingCount": 61,
+    "repositoriesWithFindings": 20,
+    "repositoryCount": 61,
+    "totalFindingCount": 66,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

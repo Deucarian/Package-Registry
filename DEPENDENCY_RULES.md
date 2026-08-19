@@ -28,7 +28,7 @@ Before adding a dependency:
 ## Required Vs Optional
 
 - Hard dependencies go in Unity `package.json`, registry `dependencies`, asmdef references, and package config.
-- `recommendedWith` is a non-structural recommendation only. It does not imply install order or auto-install behavior.
+- `recommendedWith` is a non-structural recommendation only. For Templates it also defines the optional-companion list that named `compositionPresets` may select; nothing is installed until the developer selects and runs that setup.
 - Reverse Integration and Suite relationships are derived from `integrationTargets` and `suiteMembers`.
 - Optional diagnostics hooks should use version-defined asmdefs or guarded code.
 - Integration package dependencies are hard requirements for that Integration package.
