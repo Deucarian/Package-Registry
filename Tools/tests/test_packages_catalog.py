@@ -55,6 +55,7 @@ class PackagesCatalogTests(unittest.TestCase):
             ],
             "com.deucarian.simultria-api": [
                 "com.deucarian.api",
+                "com.deucarian.editor",
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",
                 "com.deucarian.viewer-authentication",

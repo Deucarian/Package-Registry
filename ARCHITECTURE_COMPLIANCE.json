@@ -1,6 +1,18 @@
 {
   "findings": [
     {
+      "assembly": "Deucarian.API",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Core/ApiComposition.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 512,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.api",
+      "repository": "API",
+      "scope": "Runtime production"
+    },
+    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -298,7 +310,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/PackageInstallerWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 8638,
+      "lineCount": 9005,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -416,9 +428,21 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageRegistryValidator.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 597,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
       "file": "Editor/Services/PackageRegistryProvider.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 551,
+      "lineCount": 592,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -1193,13 +1217,20 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.API",
+          "file": "Runtime/Core/ApiComposition.cs",
+          "lineCount": 512,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 60,
+      "productionFileCount": 61,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
-      "status": "Compliant",
+      "status": "RefactorBacklog",
       "testAssemblies": [
         "Deucarian.API.Tests"
       ]
@@ -1839,7 +1870,7 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/PackageInstallerWindow.cs",
-          "lineCount": 8638,
+          "lineCount": 9005,
           "scope": "Editor production"
         },
         {
@@ -1887,7 +1918,13 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/Services/PackageRegistryProvider.cs",
-          "lineCount": 551,
+          "lineCount": 592,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageRegistryValidator.cs",
+          "lineCount": 597,
           "scope": "Editor production"
         },
         {
@@ -1910,7 +1947,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 59,
+      "productionFileCount": 61,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -2095,7 +2132,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 19,
+      "productionFileCount": 23,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": false,
@@ -2786,15 +2823,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 36,
+    "compliantRepositoryCount": 35,
     "findingsByDisposition": {
-      "RefactorBacklog": 88,
+      "RefactorBacklog": 90,
       "SetupRequired": 14
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 10,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 88
+      "ProductionFileExceedsLineLimit": 90
     },
     "repositoryCount": 62
   }

@@ -13,25 +13,25 @@ once.
 ## Summary
 
 - Repositories: 62
-- Fully compliant repositories: 36
+- Fully compliant repositories: 35
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 88 |
+| RefactorBacklog | 90 |
 | SetupRequired | 14 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 10 |
 | MissingSharedArchitectureValidation | 4 |
-| ProductionFileExceedsLineLimit | 88 |
+| ProductionFileExceedsLineLimit | 90 |
 
 ## Repository Status
 
 | Repository | Package | Status | Architecture reference | Shared validation | Production files | Test assemblies | Oversized files | Unowned files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
-| API | com.deucarian.api | Compliant | Yes | Yes | 60 | 1 | 0 | 0 |
+| API | com.deucarian.api | RefactorBacklog | Yes | Yes | 61 | 1 | 1 | 0 |
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 30 | 1 | 5 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
@@ -60,7 +60,7 @@ once.
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
-| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 59 | 1 | 13 | 0 |
+| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 61 | 1 | 14 | 0 |
 | Package-Registry |  | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Persistence | com.deucarian.persistence | Compliant | Yes | Yes | 8 | 1 | 0 | 0 |
 | Pointer-Capture | com.deucarian.pointer-capture | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
@@ -70,7 +70,7 @@ once.
 | Selection-Suite | com.deucarian.selection-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Session | com.deucarian.session | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
-| Simultria-API | com.deucarian.simultria-api | SetupRequired | No | No | 19 | 1 | 0 | 0 |
+| Simultria-API | com.deucarian.simultria-api | SetupRequired | No | No | 23 | 1 | 0 | 0 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-viewer-connection | SetupRequired | No | No | 18 | 1 | 0 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 49 | 2 | 15 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
@@ -97,6 +97,7 @@ once.
 
 | Repository | Kind | Disposition | File | Lines | Limit | Action |
 | --- | --- | --- | --- | --- | --- | --- |
+| API | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/ApiComposition.cs | 512 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Activity-Visualization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackProviderV2.cs | 1434 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1342 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -122,7 +123,7 @@ once.
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryService.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11367 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 8638 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 9005 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2888 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageEcosystemGraphLayout.cs | 2513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageInstallService.cs | 1950 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -132,7 +133,8 @@ once.
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageOperationStateRepository.cs | 724 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageDetectionService.cs | 640 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageEcosystemGraphBuilder.cs | 599 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageRegistryProvider.cs | 551 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageRegistryValidator.cs | 597 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageRegistryProvider.cs | 592 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageGraphHierarchyBuilder.cs | 508 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/RunUpgradeProviderV2.cs | 1166 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/RunUpgradeGameContentAuthoringProvider.cs | 575 | 500 | Extract responsibilities until the production file is at most 500 lines. |
