@@ -101,7 +101,7 @@ Schema version: 2
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
 | com.deucarian.session.api-integration | com.deucarian.api | 1.1.5 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
-| com.deucarian.simultria-api | com.deucarian.api | 1.3.0 | Simultria-API | API |
+| com.deucarian.simultria-api | com.deucarian.api | 1.4.2 | Simultria-API | API |
 | com.deucarian.simultria-api | com.deucarian.editor | 1.0.5 | Simultria-API | Editor |
 | com.deucarian.simultria-api | com.deucarian.session | 1.0.6 | Simultria-API | Session |
 | com.deucarian.simultria-api | com.deucarian.session.api-integration | 1.1.1 | Simultria-API | Session-API-Integration |
@@ -236,4 +236,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 26
-- Registry dependency drift entries: 1
+- Registry dependency drift entries: 0
