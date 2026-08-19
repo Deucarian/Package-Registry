@@ -518,7 +518,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/PackageInstallerWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 8638,
+      "lineCount": 9005,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -636,9 +636,21 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
+      "file": "Editor/Services/PackageRegistryValidator.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 597,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
       "file": "Editor/Services/PackageRegistryProvider.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 551,
+      "lineCount": 592,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -747,6 +759,38 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.selection-suite",
       "repository": "Selection-Suite"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.simultria-api",
+      "repository": "Simultria-API"
+    },
+    {
+      "detail": "Run the shared Deucarian package validator in continuous integration.",
+      "disposition": "SetupRequired",
+      "file": ".github/workflows",
+      "kind": "MissingSharedArchitectureValidation",
+      "packageId": "com.deucarian.simultria-api",
+      "repository": "Simultria-API"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection"
+    },
+    {
+      "detail": "Run the shared Deucarian package validator in continuous integration.",
+      "disposition": "SetupRequired",
+      "file": ".github/workflows",
+      "kind": "MissingSharedArchitectureValidation",
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1151,6 +1195,18 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WebViewerBootstrap.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 621,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web",
+      "scope": "Runtime production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1567,7 +1623,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 55,
+      "productionFileCount": 60,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
@@ -1770,7 +1826,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.command-routing",
-      "productionFileCount": 27,
+      "productionFileCount": 29,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Command-Routing",
       "sharedValidationPresent": true,
@@ -2200,7 +2256,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.object-loading.api-integration",
-      "productionFileCount": 4,
+      "productionFileCount": 5,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "ObjectLoading-API-Integration",
       "sharedValidationPresent": true,
@@ -2242,7 +2298,7 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/PackageInstallerWindow.cs",
-          "lineCount": 8638,
+          "lineCount": 9005,
           "scope": "Editor production"
         },
         {
@@ -2290,7 +2346,13 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/Services/PackageRegistryProvider.cs",
-          "lineCount": 551,
+          "lineCount": 592,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/Services/PackageRegistryValidator.cs",
+          "lineCount": 597,
           "scope": "Editor production"
         },
         {
@@ -2313,7 +2375,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 59,
+      "productionFileCount": 61,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -2488,6 +2550,40 @@
       "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Session.APIIntegration.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.simultria-api",
+      "productionFileCount": 19,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Simultria-API",
+      "sharedValidationPresent": false,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.Simultria.API.Tests.EditMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "productionFileCount": 18,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Simultria-Viewer-Connection",
+      "sharedValidationPresent": false,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.SimultriaViewerConnection.Tests"
       ]
     },
     {
@@ -2739,9 +2835,16 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "file": "Runtime/WebViewerBootstrap.cs",
+          "lineCount": 621,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 17,
+      "productionFileCount": 16,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
@@ -2951,7 +3054,7 @@
         }
       ],
       "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 40,
+      "productionFileCount": 42,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -3169,14 +3272,14 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 95,
-      "SetupRequired": 50
+      "RefactorBacklog": 97,
+      "SetupRequired": 54
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 47,
-      "MissingSharedArchitectureValidation": 3,
-      "ProductionFileExceedsLineLimit": 95
+      "MissingCanonicalArchitectureReference": 49,
+      "MissingSharedArchitectureValidation": 5,
+      "ProductionFileExceedsLineLimit": 97
     },
-    "repositoryCount": 60
+    "repositoryCount": 62
   }
 }

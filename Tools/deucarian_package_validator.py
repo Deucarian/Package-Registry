@@ -905,9 +905,64 @@ class Validator:
             overlap = sorted(structural & set(recommended))
             if overlap:
                 self.fail(f"{package_id}: recommendedWith duplicates structural relations: {overlap}.")
+            self.validate_composition_presets(pkg, data["packages"])
         cycles = self.detect_cycles({pkg["id"]: pkg.get("dependencies") or [] for pkg in data["packages"] if isinstance(pkg, dict) and pkg.get("id")})
         for cycle in cycles:
             self.fail("Dependency cycle detected: " + " -> ".join(cycle))
+
+    def validate_composition_presets(self, package: dict[str, Any], packages: list[Any]) -> None:
+        package_id = package.get("id", "<unknown>")
+        presets = package.get("compositionPresets") or []
+        if not isinstance(presets, list):
+            self.fail(f"{package_id}: compositionPresets must be an array.")
+            return
+        if not presets:
+            return
+        if package.get("kind") != "Template":
+            self.fail(f"{package_id}: only Template packages may declare compositionPresets.")
+            return
+
+        optional_companions = {
+            candidate.get("id")
+            for candidate in packages
+            if isinstance(candidate, dict)
+            and isinstance(candidate.get("recommendedWith"), list)
+            and package_id in candidate.get("recommendedWith", [])
+        }
+        preset_ids: set[str] = set()
+        recommended_count = 0
+        for preset in presets:
+            if not isinstance(preset, dict):
+                self.fail(f"{package_id}: every composition preset must be an object.")
+                continue
+            preset_id = preset.get("id")
+            if not isinstance(preset_id, str) or not preset_id.strip():
+                self.fail(f"{package_id}: every composition preset requires a non-empty id.")
+                continue
+            if preset_id in preset_ids:
+                self.fail(f"{package_id}: duplicate composition preset id {preset_id}.")
+            preset_ids.add(preset_id)
+            if not isinstance(preset.get("displayName"), str) or not preset["displayName"].strip():
+                self.fail(f"{package_id}: composition preset {preset_id} requires displayName.")
+            if preset.get("recommended") is True:
+                recommended_count += 1
+            selected = preset.get("packageIds") or []
+            if not isinstance(selected, list) or any(not isinstance(value, str) or not value for value in selected):
+                self.fail(f"{package_id}: composition preset {preset_id} packageIds must be an array of non-empty package ids.")
+                continue
+            if len(selected) != len(set(selected)):
+                self.fail(f"{package_id}: composition preset {preset_id} packageIds must not contain duplicates.")
+            unknown = sorted(set(selected) - set(self.registry_packages_by_id))
+            if unknown:
+                self.fail(f"{package_id}: composition preset {preset_id} references unknown packages: {unknown}.")
+            invalid = sorted(set(selected) - optional_companions)
+            if invalid:
+                self.fail(
+                    f"{package_id}: composition preset {preset_id} may only select optional companions "
+                    f"derived from recommendedWith: {invalid}."
+                )
+        if recommended_count > 1:
+            self.fail(f"{package_id}: at most one composition preset may be recommended.")
 
     def validate_icon_key(self, owner: str, icon_key: Any) -> None:
         if not isinstance(icon_key, str) or not ICON_KEY_RE.fullmatch(icon_key):
