@@ -9,6 +9,18 @@
       "repository": "API"
     },
     {
+      "assembly": "Deucarian.API",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Core/ApiComposition.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 512,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.api",
+      "repository": "API",
+      "scope": "Runtime production"
+    },
+    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -1621,9 +1633,16 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.API",
+          "file": "Runtime/Core/ApiComposition.cs",
+          "lineCount": 512,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 60,
+      "productionFileCount": 61,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
@@ -2560,7 +2579,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 19,
+      "productionFileCount": 23,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": false,
@@ -3272,13 +3291,13 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 97,
+      "RefactorBacklog": 98,
       "SetupRequired": 54
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 49,
       "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 97
+      "ProductionFileExceedsLineLimit": 98
     },
     "repositoryCount": 62
   }

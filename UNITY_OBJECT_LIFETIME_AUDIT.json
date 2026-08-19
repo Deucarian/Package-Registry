@@ -2915,9 +2915,69 @@
     {
       "assembly": "Deucarian.Simultria.API.Tests.EditMode",
       "classification": "Test",
+      "containingSymbol": "SimultriaApiProfileTests::BlankKnownProfileIsUnconfiguredWithoutBlockingDevelopment",
+      "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 168,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.simultria-api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Simultria-API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "SimultriaApiProfileTests::BlankKnownProfileIsUnconfiguredWithoutBlockingDevelopment",
+      "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 169,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.simultria-api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Simultria-API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "SimultriaApiProfileTests::NonEmptyInvalidHostFailsClosed",
+      "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 193,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.simultria-api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Simultria-API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "SimultriaApiProfileTests::NonEmptyInvalidHostFailsClosed",
+      "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 194,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.simultria-api",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Simultria-API",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+      "classification": "Test",
       "containingSymbol": "SimultriaTestComposition::Dispose",
       "file": "Tests/EditMode/SimultriaTestComposition.cs",
-      "invocation": "Object.DestroyImmediate",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
       "line": 82,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.simultria-api",
@@ -2932,7 +2992,7 @@
       "classification": "Test",
       "containingSymbol": "SimultriaTestComposition::Dispose",
       "file": "Tests/EditMode/SimultriaTestComposition.cs",
-      "invocation": "Object.DestroyImmediate",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
       "line": 83,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.simultria-api",
@@ -2947,7 +3007,7 @@
       "classification": "Test",
       "containingSymbol": "SimultriaTestComposition::Dispose",
       "file": "Tests/EditMode/SimultriaTestComposition.cs",
-      "invocation": "Object.DestroyImmediate",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
       "line": 84,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.simultria-api",
@@ -10819,10 +10879,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 717
+    "Allowed": 721
   },
   "summary": {
-    "direct Unity API call": 648,
+    "direct Unity API call": 652,
     "helper call site": 68,
     "helper definition": 1
   }
