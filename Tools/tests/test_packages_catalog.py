@@ -119,7 +119,7 @@ class PackagesCatalogTests(unittest.TestCase):
         template = packages_by_id["com.deucarian.template.viewer.web"]
         self.assertEqual(
             ["com.deucarian.template.viewer.web"],
-            packages_by_id["com.deucarian.viewer-authentication"]["recommendedWith"],
+            packages_by_id["com.deucarian.simultria-api"]["recommendedWith"],
         )
         self.assertEqual(
             ["com.deucarian.template.viewer.web"],

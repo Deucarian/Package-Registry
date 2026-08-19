@@ -3098,7 +3098,7 @@
     },
     {
       "currentConsumers": [],
-      "description": "Credential-free Simultria viewer development profiles, sanitized connection status, and command-routed development auto-load tooling.",
+      "description": "Credential-free Simultria viewer profiles, stable editor/runtime authentication handoff, trusted API-client composition, sanitized connection status, and command-routed development auto-load tooling.",
       "id": "simultria-viewer-development-connection",
       "ownerPackageId": "com.deucarian.simultria-viewer-connection",
       "ownerRepository": "Simultria-Viewer-Connection"
@@ -3174,7 +3174,7 @@
         "com.deucarian.template.viewer.web",
         "com.deucarian.web-viewer-suite"
       ],
-      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, and shared development authentication tooling.",
+      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, shared development authentication tooling, and an optional runtime connection-provider seam.",
       "id": "viewer-authentication",
       "ownerPackageId": "com.deucarian.viewer-authentication",
       "ownerRepository": "Viewer-Authentication"
@@ -40285,9 +40285,9 @@
     },
     "generatedAtUtc": "not-recorded-deterministic-output",
     "inputSignatures": {
-      "capabilitiesSha256": "65695bc00b1f1f5011455575423bac486be25fa6342af889060808fcfa5bea96",
+      "capabilitiesSha256": "fbcdcab5fcef43a22dce4e5c44a507f9fa6c8cd7bf4545e38d9be99deeead756",
       "dependencyRulesSha256": "d83a2e172c152251f553d6cc6761ef5d9f4d7d7d6047a3b0f60ea2ccfe8496ad",
-      "packagesSha256": "32ac41493a7de3fe30aea5b5a84dc3ea7fae20b269df2a5c6642c13b72eda723"
+      "packagesSha256": "62aae7f9520c5e9d03649044296e031508c8f389b71bff07c7787ebf3ca4c81d"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -283340,7 +283340,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "23c8ee52af31fe09e289bfb96a163920cf60278ce977fb712d5eaae1814a2842",
+        "auditInputSha256": "e35c56da96975d00781697445d2d722448c2a525b39893dc3898f2d4244ddbf6",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",

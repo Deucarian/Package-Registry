@@ -61,7 +61,7 @@
       "ownerPackageId": "com.deucarian.simultria-api"
     },
     {
-      "description": "Credential-free Simultria viewer development profiles, sanitized connection status, and command-routed development auto-load tooling.",
+      "description": "Credential-free Simultria viewer profiles, stable editor/runtime authentication handoff, trusted API-client composition, sanitized connection status, and command-routed development auto-load tooling.",
       "id": "simultria-viewer-development-connection",
       "ownerPackageId": "com.deucarian.simultria-viewer-connection"
     },
@@ -171,7 +171,7 @@
       "ownerPackageId": "com.deucarian.viewer-shell"
     },
     {
-      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, and shared development authentication tooling.",
+      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, shared development authentication tooling, and an optional runtime connection-provider seam.",
       "id": "viewer-authentication",
       "ownerPackageId": "com.deucarian.viewer-authentication"
     },
