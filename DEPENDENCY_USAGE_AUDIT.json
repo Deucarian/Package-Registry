@@ -4429,7 +4429,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.4.2",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -4460,6 +4460,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.API",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Simultria API Starter Assets/Deucarian.Simultria.API.Samples.StarterAssets.asmdef",
+          "assembly": "Deucarian.Simultria.API.Samples.StarterAssets",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.API",
+          "scope": "Sample",
           "versionDefines": []
         },
         {

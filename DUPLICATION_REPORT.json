@@ -514,6 +514,18 @@
         "repository": "Simultria-API"
       },
       {
+        "assembly": "Deucarian.Simultria.API.Editor",
+        "detail": "Extract responsibilities until the production file is at most 500 lines.",
+        "disposition": "RefactorBacklog",
+        "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+        "kind": "ProductionFileExceedsLineLimit",
+        "lineCount": 540,
+        "lineLimit": 500,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Editor production"
+      },
+      {
         "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
         "disposition": "SetupRequired",
         "file": "AGENTS.md",
@@ -1227,7 +1239,7 @@
           }
         ],
         "packageId": "com.deucarian.api",
-        "productionFileCount": 61,
+        "productionFileCount": 65,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "API",
         "sharedValidationPresent": true,
@@ -2131,9 +2143,16 @@
           "present": false,
           "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
         },
-        "oversizedProductionFiles": [],
+        "oversizedProductionFiles": [
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "lineCount": 540,
+            "scope": "Editor production"
+          }
+        ],
         "packageId": "com.deucarian.simultria-api",
-        "productionFileCount": 23,
+        "productionFileCount": 26,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Simultria-API",
         "sharedValidationPresent": false,
@@ -2826,13 +2845,13 @@
     "summary": {
       "compliantRepositoryCount": 35,
       "findingsByDisposition": {
-        "RefactorBacklog": 90,
+        "RefactorBacklog": 91,
         "SetupRequired": 14
       },
       "findingsByKind": {
         "MissingCanonicalArchitectureReference": 10,
         "MissingSharedArchitectureValidation": 4,
-        "ProductionFileExceedsLineLimit": 90
+        "ProductionFileExceedsLineLimit": 91
       },
       "repositoryCount": 62
     }
@@ -4402,7 +4421,7 @@
         "fromRepo": "Simultria-API",
         "to": "com.deucarian.api",
         "toRepo": "API",
-        "version": "1.3.0"
+        "version": "1.4.2"
       },
       {
         "from": "com.deucarian.simultria-api",
@@ -9719,7 +9738,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "1.3.0",
+        "declaredVersion": "1.4.2",
         "dependency": "com.deucarian.api",
         "packageId": "com.deucarian.simultria-api",
         "referencedAssemblies": [
@@ -9750,6 +9769,18 @@
             "includePlatforms": [],
             "reference": "Deucarian.API",
             "scope": "Runtime production",
+            "versionDefines": []
+          },
+          {
+            "asmdef": "Samples~/Simultria API Starter Assets/Deucarian.Simultria.API.Samples.StarterAssets.asmdef",
+            "assembly": "Deucarian.Simultria.API.Samples.StarterAssets",
+            "autoReferenced": false,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.API",
+            "scope": "Sample",
             "versionDefines": []
           },
           {
@@ -15620,14 +15651,14 @@
       {
         "declaredVersion": "1.1.3",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.media.api-integration",
         "repo": "Media-API-Integration"
       },
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.object-loading.api-integration",
         "repo": "ObjectLoading-API-Integration"
       },
@@ -15641,7 +15672,7 @@
       {
         "declaredVersion": "1.1.5",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.session.api-integration",
         "repo": "Session-API-Integration"
       },
@@ -15655,14 +15686,14 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.simultria-viewer-connection",
         "repo": "Simultria-Viewer-Connection"
       },
       {
         "declaredVersion": "0.1.0",
         "dependency": "com.deucarian.simultria-api",
-        "ownerDevelopVersion": "0.2.0",
+        "ownerDevelopVersion": "0.3.0",
         "packageId": "com.deucarian.simultria-viewer-connection",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -15676,7 +15707,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.template.viewer.web",
         "repo": "Template-Viewer-Web"
       },
@@ -15697,7 +15728,7 @@
       {
         "declaredVersion": "1.1.5",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.viewer-authentication",
         "repo": "Viewer-Authentication"
       },
@@ -15718,7 +15749,7 @@
       {
         "declaredVersion": "1.1.5",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "1.3.0",
+        "ownerDevelopVersion": "1.4.2",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -15751,29 +15782,7 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": [
-      {
-        "packageId": "com.deucarian.simultria-viewer-connection",
-        "packageJsonDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.command-routing",
-          "com.deucarian.editor",
-          "com.deucarian.logging",
-          "com.deucarian.session",
-          "com.deucarian.simultria-api",
-          "com.deucarian.viewer-authentication"
-        ],
-        "registryDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.command-routing",
-          "com.deucarian.editor",
-          "com.deucarian.logging",
-          "com.deucarian.simultria-api",
-          "com.deucarian.viewer-authentication"
-        ],
-        "repo": "Simultria-Viewer-Connection"
-      }
-    ]
+    "registryDependencyDrift": []
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -17233,6 +17242,70 @@
       {
         "category": "exact AST clone",
         "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 27,
+        "extractionConfidence": "needs design review",
+        "groupKey": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 172,
+            "lineCount": 27,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static string ResolveSelectedProjectDirectory()",
+            "symbol": "ResolveSelectedProjectDirectory",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 504,
+            "lineCount": 27,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static string ResolveSelectedProjectDirectory()",
+            "symbol": "ResolveSelectedProjectDirectory",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
+        ]
+      },
+      {
+        "category": "exact AST clone",
+        "dependenciesUsed": [],
         "estimatedDuplicatedLines": 26,
         "extractionConfidence": "needs design review",
         "groupKey": "b593a2727bdc25c65c9f4bd17a078eec39e791f5ea12dbf701b074f2e150b1f8",
@@ -17827,6 +17900,70 @@
         "repositories": [
           "Bootstrap",
           "Package-Installer"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
+        ]
+      },
+      {
+        "category": "exact AST clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 19,
+        "extractionConfidence": "needs design review",
+        "groupKey": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileEditor.cs",
+            "iterator": false,
+            "line": 327,
+            "lineCount": 19,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static ApiEnvironmentProfile FindEnvironment( IReadOnlyList<ApiEnvironmentProfile> environments, ApiEnvironmentId environmentId)",
+            "symbol": "FindEnvironment",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileEditor.cs",
+            "iterator": false,
+            "line": 444,
+            "lineCount": 19,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static ApiEnvironmentProfile FindEnvironment( IReadOnlyList<ApiEnvironmentProfile> environments, ApiEnvironmentId environmentId)",
+            "symbol": "FindEnvironment",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
         ],
         "repositoryCount": 2,
         "scopes": [
@@ -19563,6 +19700,70 @@
         "repositoryCount": 2,
         "scopes": [
           "Test"
+        ]
+      },
+      {
+        "category": "exact AST clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 7,
+        "extractionConfidence": "needs design review",
+        "groupKey": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 200,
+            "lineCount": 7,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 532,
+            "lineCount": 7,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
         ]
       },
       {
@@ -21363,7 +21564,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 15040,
+    "methodCountAnalyzed": 15118,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -25283,6 +25484,70 @@
       {
         "category": "normalized structural clone",
         "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 27,
+        "extractionConfidence": "needs design review",
+        "groupKey": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 172,
+            "lineCount": 27,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static string ResolveSelectedProjectDirectory()",
+            "symbol": "ResolveSelectedProjectDirectory",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 504,
+            "lineCount": 27,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static string ResolveSelectedProjectDirectory()",
+            "symbol": "ResolveSelectedProjectDirectory",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
         "estimatedDuplicatedLines": 26,
         "extractionConfidence": "needs design review",
         "groupKey": "b593a2727bdc25c65c9f4bd17a078eec39e791f5ea12dbf701b074f2e150b1f8",
@@ -26263,6 +26528,70 @@
         "repositoryCount": 2,
         "scopes": [
           "Runtime production"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 19,
+        "extractionConfidence": "needs design review",
+        "groupKey": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileEditor.cs",
+            "iterator": false,
+            "line": 327,
+            "lineCount": 19,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static ApiEnvironmentProfile FindEnvironment( IReadOnlyList<ApiEnvironmentProfile> environments, ApiEnvironmentId environmentId)",
+            "symbol": "FindEnvironment",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileEditor.cs",
+            "iterator": false,
+            "line": 444,
+            "lineCount": 19,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static ApiEnvironmentProfile FindEnvironment( IReadOnlyList<ApiEnvironmentProfile> environments, ApiEnvironmentId environmentId)",
+            "symbol": "FindEnvironment",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
         ]
       },
       {
@@ -29836,6 +30165,70 @@
         "dependenciesUsed": [],
         "estimatedDuplicatedLines": 7,
         "extractionConfidence": "needs design review",
+        "groupKey": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 200,
+            "lineCount": 7,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 532,
+            "lineCount": 7,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 7,
+        "extractionConfidence": "needs design review",
         "groupKey": "7e9fd69573faa62f9c83a082ef22932090211810c4dffb71e39b68500c6fb6ea",
         "occurrences": [
           {
@@ -30406,6 +30799,70 @@
         "repositoryCount": 2,
         "scopes": [
           "Test"
+        ]
+      },
+      {
+        "category": "normalized structural clone",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 6,
+        "extractionConfidence": "needs design review",
+        "groupKey": "c90ea02c8b956be56c93b9501a0e2dba609889aae8bbf3aa2b5e29c98597d63b",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileEditor.cs",
+            "iterator": false,
+            "line": 420,
+            "lineCount": 7,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "c90ea02c8b956be56c93b9501a0e2dba609889aae8bbf3aa2b5e29c98597d63b",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static bool IsProjectOwned(UnityEngine.Object value)",
+            "symbol": "IsProjectOwned",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileEditor",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileEditor.cs",
+            "iterator": false,
+            "line": 437,
+            "lineCount": 6,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "c90ea02c8b956be56c93b9501a0e2dba609889aae8bbf3aa2b5e29c98597d63b",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static bool IsProjectOwned(UnityEngine.Object asset)",
+            "symbol": "IsProjectOwned",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [
+          "Does not cross the production extraction threshold without manual semantic review."
+        ],
+        "reasonsToExtract": [],
+        "repositories": [
+          "API",
+          "Simultria-API"
+        ],
+        "repositoryCount": 2,
+        "scopes": [
+          "Editor production"
         ]
       },
       {
@@ -35855,6 +36312,221 @@
       },
       {
         "category": "same-symbol semantic candidate",
+        "dependenciesUsed": [],
+        "estimatedDuplicatedLines": 60,
+        "extractionConfidence": "medium",
+        "groupKey": "destroytransient",
+        "occurrences": [
+          {
+            "assembly": "Deucarian.API.Editor",
+            "async": false,
+            "containingType": "ApiConnectionProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/ApiConnectionProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 200,
+            "lineCount": 7,
+            "namespace": "Deucarian.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.api",
+            "repository": "API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Attacks.Editor",
+            "async": false,
+            "containingType": "AttackRecipeAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/AttackGameContentAuthoringProviders.cs",
+            "iterator": false,
+            "line": 647,
+            "lineCount": 15,
+            "namespace": "Deucarian.Attacks.Editor",
+            "normalizedHash": "aef41d111da8e5751c08b188992c3ebd3fcd1d51acae489968ce6d5967c43dcd",
+            "packageId": "com.deucarian.attacks",
+            "repository": "Attacks",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(AttackDefinitionAsset recipe)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Attacks.Editor",
+            "async": false,
+            "containingType": "EnemyDefinitionAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/AttackGameContentAuthoringProviders.cs",
+            "iterator": false,
+            "line": 1005,
+            "lineCount": 9,
+            "namespace": "Deucarian.Attacks.Editor",
+            "normalizedHash": "9fd964c74da3c2b4bee1c5187107d96e24db69f0c89f8144ac2edc9877342abe",
+            "packageId": "com.deucarian.attacks",
+            "repository": "Attacks",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(EnemyDefinitionAsset recipe)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Attacks.Editor",
+            "async": false,
+            "containingType": "WaveDefinitionAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/AttackGameContentAuthoringProviders.cs",
+            "iterator": false,
+            "line": 1241,
+            "lineCount": 9,
+            "namespace": "Deucarian.Attacks.Editor",
+            "normalizedHash": "3c1481966227e06dd81f90d0869bb86e201a6ca186079d8d70f0a4f02af983de",
+            "packageId": "com.deucarian.attacks",
+            "repository": "Attacks",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(WaveDefinitionAsset recipe)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.RunUpgrades.Editor",
+            "async": false,
+            "containingType": "RunUpgradeDefinitionAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
+            "iterator": false,
+            "line": 456,
+            "lineCount": 9,
+            "namespace": "Deucarian.RunUpgrades.Editor",
+            "normalizedHash": "2002abe13b074849dddac50eb53a6a22a9f1e0b2836c6c414f338ae8b95241e8",
+            "packageId": "com.deucarian.run-upgrades",
+            "repository": "Run-Upgrades",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(RunUpgradeDefinitionAsset recipe)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Simultria.API.Editor",
+            "async": false,
+            "containingType": "SimultriaApiProfileAssetFactory",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+            "iterator": false,
+            "line": 532,
+            "lineCount": 7,
+            "namespace": "Deucarian.Simultria.API.Editor",
+            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
+            "packageId": "com.deucarian.simultria-api",
+            "repository": "Simultria-API",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+            "async": false,
+            "containingType": "GameContentPackAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/GameContentPackAssetCreator.cs",
+            "iterator": false,
+            "line": 162,
+            "lineCount": 5,
+            "namespace": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+            "normalizedHash": "6ab1b91da70d2fede572e53b55dd55cdf5cb956c8339d8a2d9da4baf17f58b73",
+            "packageId": "com.deucarian.template.game.idle-auto-defense",
+            "repository": "Template-Game-Idle-Auto-Defense",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(GameContentPackAsset asset)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+            "async": false,
+            "containingType": "GameContentSetAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/GameContentSetGameContentAuthoringProvider.cs",
+            "iterator": false,
+            "line": 608,
+            "lineCount": 5,
+            "namespace": "Deucarian.TemplateGameIdleAutoDefense.Editor",
+            "normalizedHash": "6ab1b91da70d2fede572e53b55dd55cdf5cb956c8339d8a2d9da4baf17f58b73",
+            "packageId": "com.deucarian.template.game.idle-auto-defense",
+            "repository": "Template-Game-Idle-Auto-Defense",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(GameContentSetAsset asset)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.WeaponSystems.Editor",
+            "async": false,
+            "containingType": "WeaponDefinitionAssetCreator",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/WeaponGameContentAuthoringProvider.cs",
+            "iterator": false,
+            "line": 397,
+            "lineCount": 9,
+            "namespace": "Deucarian.WeaponSystems.Editor",
+            "normalizedHash": "715b67483d3d4a20dbd3651fc5078a706bcda2d9494093d4a2fb42ffac4e1480",
+            "packageId": "com.deucarian.weapon-systems",
+            "repository": "Weapon-Systems",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public static void DestroyTransient(WeaponDefinitionAsset recipe)",
+            "symbol": "DestroyTransient",
+            "symbolKind": "method",
+            "throws": false
+          }
+        ],
+        "proposedOwner": "com.deucarian.editor",
+        "reasonsNotToExtract": [],
+        "reasonsToExtract": [
+          "Same parsed implementation appears in at least three repositories."
+        ],
+        "repositories": [
+          "API",
+          "Attacks",
+          "Run-Upgrades",
+          "Simultria-API",
+          "Template-Game-Idle-Auto-Defense",
+          "Weapon-Systems"
+        ],
+        "repositoryCount": 6,
+        "scopes": [
+          "Editor production"
+        ]
+      },
+      {
+        "category": "same-symbol semantic candidate",
         "dependenciesUsed": [
           "System.Globalization.CultureInfo.InvariantCulture"
         ],
@@ -36124,199 +36796,6 @@
         "scopes": [
           "Runtime production",
           "Sample"
-        ]
-      },
-      {
-        "category": "same-symbol semantic candidate",
-        "dependenciesUsed": [],
-        "estimatedDuplicatedLines": 53,
-        "extractionConfidence": "medium",
-        "groupKey": "destroytransient",
-        "occurrences": [
-          {
-            "assembly": "Deucarian.Attacks.Editor",
-            "async": false,
-            "containingType": "AttackRecipeAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/AttackGameContentAuthoringProviders.cs",
-            "iterator": false,
-            "line": 647,
-            "lineCount": 15,
-            "namespace": "Deucarian.Attacks.Editor",
-            "normalizedHash": "aef41d111da8e5751c08b188992c3ebd3fcd1d51acae489968ce6d5967c43dcd",
-            "packageId": "com.deucarian.attacks",
-            "repository": "Attacks",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(AttackDefinitionAsset recipe)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.Attacks.Editor",
-            "async": false,
-            "containingType": "EnemyDefinitionAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/AttackGameContentAuthoringProviders.cs",
-            "iterator": false,
-            "line": 1005,
-            "lineCount": 9,
-            "namespace": "Deucarian.Attacks.Editor",
-            "normalizedHash": "9fd964c74da3c2b4bee1c5187107d96e24db69f0c89f8144ac2edc9877342abe",
-            "packageId": "com.deucarian.attacks",
-            "repository": "Attacks",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(EnemyDefinitionAsset recipe)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.Attacks.Editor",
-            "async": false,
-            "containingType": "WaveDefinitionAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/AttackGameContentAuthoringProviders.cs",
-            "iterator": false,
-            "line": 1241,
-            "lineCount": 9,
-            "namespace": "Deucarian.Attacks.Editor",
-            "normalizedHash": "3c1481966227e06dd81f90d0869bb86e201a6ca186079d8d70f0a4f02af983de",
-            "packageId": "com.deucarian.attacks",
-            "repository": "Attacks",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(WaveDefinitionAsset recipe)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.RunUpgrades.Editor",
-            "async": false,
-            "containingType": "RunUpgradeDefinitionAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
-            "iterator": false,
-            "line": 456,
-            "lineCount": 9,
-            "namespace": "Deucarian.RunUpgrades.Editor",
-            "normalizedHash": "2002abe13b074849dddac50eb53a6a22a9f1e0b2836c6c414f338ae8b95241e8",
-            "packageId": "com.deucarian.run-upgrades",
-            "repository": "Run-Upgrades",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(RunUpgradeDefinitionAsset recipe)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.Simultria.API.Editor",
-            "async": false,
-            "containingType": "SimultriaApiProfileAssetFactory",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
-            "iterator": false,
-            "line": 214,
-            "lineCount": 7,
-            "namespace": "Deucarian.Simultria.API.Editor",
-            "normalizedHash": "3da448fd70103a28142ffbfc5ebf140a29c9c889ac1824513a7953585dce06c2",
-            "packageId": "com.deucarian.simultria-api",
-            "repository": "Simultria-API",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "private static void DestroyTransient(UnityEngine.Object value)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-            "async": false,
-            "containingType": "GameContentPackAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/GameContentPackAssetCreator.cs",
-            "iterator": false,
-            "line": 162,
-            "lineCount": 5,
-            "namespace": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-            "normalizedHash": "6ab1b91da70d2fede572e53b55dd55cdf5cb956c8339d8a2d9da4baf17f58b73",
-            "packageId": "com.deucarian.template.game.idle-auto-defense",
-            "repository": "Template-Game-Idle-Auto-Defense",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(GameContentPackAsset asset)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-            "async": false,
-            "containingType": "GameContentSetAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/GameContentSetGameContentAuthoringProvider.cs",
-            "iterator": false,
-            "line": 608,
-            "lineCount": 5,
-            "namespace": "Deucarian.TemplateGameIdleAutoDefense.Editor",
-            "normalizedHash": "6ab1b91da70d2fede572e53b55dd55cdf5cb956c8339d8a2d9da4baf17f58b73",
-            "packageId": "com.deucarian.template.game.idle-auto-defense",
-            "repository": "Template-Game-Idle-Auto-Defense",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(GameContentSetAsset asset)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          },
-          {
-            "assembly": "Deucarian.WeaponSystems.Editor",
-            "async": false,
-            "containingType": "WeaponDefinitionAssetCreator",
-            "dependenciesUsed": [],
-            "editorApi": false,
-            "file": "Editor/WeaponGameContentAuthoringProvider.cs",
-            "iterator": false,
-            "line": 397,
-            "lineCount": 9,
-            "namespace": "Deucarian.WeaponSystems.Editor",
-            "normalizedHash": "715b67483d3d4a20dbd3651fc5078a706bcda2d9494093d4a2fb42ffac4e1480",
-            "packageId": "com.deucarian.weapon-systems",
-            "repository": "Weapon-Systems",
-            "runtimeUnityApi": false,
-            "scope": "Editor production",
-            "signature": "public static void DestroyTransient(WeaponDefinitionAsset recipe)",
-            "symbol": "DestroyTransient",
-            "symbolKind": "method",
-            "throws": false
-          }
-        ],
-        "proposedOwner": "com.deucarian.editor",
-        "reasonsNotToExtract": [],
-        "reasonsToExtract": [
-          "Same parsed implementation appears in at least three repositories."
-        ],
-        "repositories": [
-          "Attacks",
-          "Run-Upgrades",
-          "Simultria-API",
-          "Template-Game-Idle-Auto-Defense",
-          "Weapon-Systems"
-        ],
-        "repositoryCount": 5,
-        "scopes": [
-          "Editor production"
         ]
       },
       {
@@ -38236,31 +38715,6 @@
       ]
     },
     {
-      "candidate": "20d69a91512ca458a793ca07e238db173a28c4fd86028bcce1a3b13cbbffba52",
-      "candidateOwner": "needs capability-owner review",
-      "category": "ExactAstClone",
-      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
-      "differences": "Same signature shape; scopes: Sample.",
-      "existingCapabilityOwner": "needs capability-owner review",
-      "files": [
-        "Object-Selection:Samples~/PrimitiveSelection/PrimitiveSelectionSample.cs:118",
-        "ObjectSelection-CoreState-Integration:Samples~/CoreStateIntegrationSample/CoreStateIntegrationSample.cs:153"
-      ],
-      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
-      "repositories": [
-        "Object-Selection",
-        "ObjectSelection-CoreState-Integration"
-      ],
-      "scopes": [
-        "Sample"
-      ],
-      "suggestedDisposition": "KeepLocal",
-      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: EnsureCamera.",
-      "symbols": [
-        "EnsureCamera"
-      ]
-    },
-    {
       "candidate": "2b1da837cb46212a00075be72bc42550636da874b7191714b2d90d88da1b891e",
       "candidateOwner": "needs capability-owner review",
       "category": "ExactAstClone",
@@ -38457,6 +38911,31 @@
       "summarizedBehavior": "Parsed method bodies with matching normalized structure across 4 repositories: IsValid.",
       "symbols": [
         "IsValid"
+      ]
+    },
+    {
+      "candidate": "4d0ba29210c0ebc999c6e3dee059459865806634cb2bd917890ad06c3dcccd3b",
+      "candidateOwner": "com.deucarian.editor",
+      "category": "ExactAstClone",
+      "dependencyImpact": "Would require consumers to depend on com.deucarian.editor; not applied in this audit wave.",
+      "differences": "Same signature shape; scopes: Editor production.",
+      "existingCapabilityOwner": "com.deucarian.editor",
+      "files": [
+        "API:Editor/ApiConnectionProfileEditor.cs:327",
+        "Simultria-API:Editor/Configuration/SimultriaApiProfileEditor.cs:444"
+      ],
+      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
+      "repositories": [
+        "API",
+        "Simultria-API"
+      ],
+      "scopes": [
+        "Editor production"
+      ],
+      "suggestedDisposition": "EditorOnlyReuse",
+      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: FindEnvironment.",
+      "symbols": [
+        "FindEnvironment"
       ]
     },
     {
@@ -38787,6 +39266,31 @@
       ]
     },
     {
+      "candidate": "e31770b4da525f199f4aa3a2b4c3931a2b9a0f48d36b93e1e87769b4e9323913",
+      "candidateOwner": "com.deucarian.editor",
+      "category": "ExactAstClone",
+      "dependencyImpact": "Would require consumers to depend on com.deucarian.editor; not applied in this audit wave.",
+      "differences": "Same signature shape; scopes: Editor production.",
+      "existingCapabilityOwner": "com.deucarian.editor",
+      "files": [
+        "API:Editor/ApiConnectionProfileAssetFactory.cs:172",
+        "Simultria-API:Editor/Configuration/SimultriaApiProfileAssetFactory.cs:504"
+      ],
+      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
+      "repositories": [
+        "API",
+        "Simultria-API"
+      ],
+      "scopes": [
+        "Editor production"
+      ],
+      "suggestedDisposition": "EditorOnlyReuse",
+      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: ResolveSelectedProjectDirectory.",
+      "symbols": [
+        "ResolveSelectedProjectDirectory"
+      ]
+    },
+    {
       "candidate": "f3143e6799187eb5cbd0c2698e24d7e05ac3a6f6061f9719a8c7f4fe7b8fc73f",
       "candidateOwner": "com.deucarian.editor",
       "category": "ExactAstClone",
@@ -38895,33 +39399,6 @@
       "symbols": [
         "DurableBenchmark_WritesAttackEvaluationMeasurements",
         "DurableBenchmark_WritesDefenseLifecycleMeasurements"
-      ]
-    },
-    {
-      "candidate": "168084cbf6e8cc8966c819a48f8c4c2ce0835f37dd17636eb8814f94b21252ea",
-      "candidateOwner": "needs capability-owner review",
-      "category": "NormalizedStructuralClone",
-      "dependencyImpact": "Dependency owner unresolved; no package dependency changes are applied.",
-      "differences": "Different signatures or local names; scopes: Runtime production, Test.",
-      "existingCapabilityOwner": "needs capability-owner review",
-      "files": [
-        "API:Runtime/Core/ApiClient.cs:120",
-        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationInteractiveAcquisitionTests.cs:172",
-        "Viewer-Authentication:Tests/EditMode/ViewerAuthenticationValidationTests.cs:194"
-      ],
-      "reasoning": "Does not cross the production extraction threshold without manual semantic review.",
-      "repositories": [
-        "API",
-        "Viewer-Authentication"
-      ],
-      "scopes": [
-        "Runtime production",
-        "Test"
-      ],
-      "suggestedDisposition": "KeepLocal",
-      "summarizedBehavior": "Parsed method bodies with matching normalized structure across 2 repositories: GetAsync.",
-      "symbols": [
-        "GetAsync"
       ]
     },
     {
@@ -39918,17 +40395,19 @@
       "differences": "Requires human review of call sites, lifecycle, and ownership.",
       "existingCapabilityOwner": "com.deucarian.editor",
       "files": [
+        "API:Editor/ApiConnectionProfileAssetFactory.cs:200",
         "Attacks:Editor/AttackGameContentAuthoringProviders.cs:1005",
         "Attacks:Editor/AttackGameContentAuthoringProviders.cs:1241",
         "Attacks:Editor/AttackGameContentAuthoringProviders.cs:647",
         "Run-Upgrades:Editor/RunUpgradeGameContentAuthoringProvider.cs:456",
-        "Simultria-API:Editor/Configuration/SimultriaApiProfileAssetFactory.cs:214",
+        "Simultria-API:Editor/Configuration/SimultriaApiProfileAssetFactory.cs:532",
         "Template-Game-Idle-Auto-Defense:Editor/GameContentPackAssetCreator.cs:162",
         "Template-Game-Idle-Auto-Defense:Editor/GameContentSetGameContentAuthoringProvider.cs:608",
         "Weapon-Systems:Editor/WeaponGameContentAuthoringProvider.cs:397"
       ],
       "reasoning": "Same symbol names are not enough to extract; review semantics and owner capability.",
       "repositories": [
+        "API",
         "Attacks",
         "Run-Upgrades",
         "Simultria-API",
@@ -40759,7 +41238,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "fbcdcab5fcef43a22dce4e5c44a507f9fa6c8cd7bf4545e38d9be99deeead756",
       "dependencyRulesSha256": "d83a2e172c152251f553d6cc6761ef5d9f4d7d7d6047a3b0f60ea2ccfe8496ad",
-      "packagesSha256": "a870ecb05c9e700d60bb9e0c1649f8f199130b8a80e499652ef0feb1e1b55cf2"
+      "packagesSha256": "a89494bc6d1859b3d6aff10a4bc17d280adabd91aedcf2e62bcc9990337abc99"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -40797,7 +41276,7 @@
         "missingXmlDocumentationCount": 24,
         "packageId": "com.deucarian.api",
         "repository": "API",
-        "runtimePublicCount": 312
+        "runtimePublicCount": 326
       },
       {
         "editorPublicCount": 59,
@@ -41067,10 +41546,10 @@
       },
       {
         "editorPublicCount": 0,
-        "missingXmlDocumentationCount": 118,
+        "missingXmlDocumentationCount": 123,
         "packageId": "com.deucarian.simultria-api",
         "repository": "Simultria-API",
-        "runtimePublicCount": 148
+        "runtimePublicCount": 156
       },
       {
         "editorPublicCount": 13,
@@ -41221,9 +41700,9 @@
       }
     ],
     "editorProductionCount": 2290,
-    "internalPrivateProductionCount": 11319,
-    "missingXmlDocumentationCount": 9500,
-    "runtimeProductionCount": 9198,
+    "internalPrivateProductionCount": 11364,
+    "missingXmlDocumentationCount": 9505,
+    "runtimeProductionCount": 9220,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples",
@@ -45972,8 +46451,8 @@
         "assembly": "Deucarian.API",
         "containingType": "",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
-        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Client Config\", fileName = \"ApiClientConfig\")] public sealed class ApiClientConfig : ScriptableObject",
-        "line": 20,
+        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Advanced/Building Blocks/Client Config\", fileName = \"ApiClientConfig\")] public sealed class ApiClientConfig : ScriptableObject",
+        "line": 21,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -45988,7 +46467,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public string BaseUrl",
-        "line": 60,
+        "line": 61,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46003,7 +46482,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public List<ApiKeyValuePair> DefaultHeaders",
-        "line": 69,
+        "line": 70,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46018,7 +46497,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public int TimeoutSeconds",
-        "line": 74,
+        "line": 75,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46033,7 +46512,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiAuthenticationMode AuthenticationMode",
-        "line": 83,
+        "line": 84,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46048,7 +46527,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiAuthProviderAsset AuthProvider",
-        "line": 92,
+        "line": 93,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46063,7 +46542,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiJsonSerializerOptions JsonSerializerSettings",
-        "line": 101,
+        "line": 102,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46078,7 +46557,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiResponseFormat DefaultResponseFormat",
-        "line": 114,
+        "line": 115,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46093,7 +46572,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiCertificateHandlingMode CertificateHandlingMode",
-        "line": 123,
+        "line": 124,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46108,7 +46587,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public ApiLoggingMode LoggingMode",
-        "line": 132,
+        "line": 133,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46123,7 +46602,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public bool LogRawJson",
-        "line": 141,
+        "line": 142,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46138,7 +46617,7 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public Dictionary<string, string> GetDefaultHeaderDictionary()",
-        "line": 151,
+        "line": 152,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -46153,13 +46632,223 @@
         "containingType": "ApiClientConfig",
         "file": "Runtime/Configuration/ApiClientConfig.cs",
         "fullSignature": "public static ApiClientConfig CreateRuntimeDefault()",
-        "line": 163,
+        "line": 164,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.api",
         "repository": "API",
         "scope": "Runtime production",
         "symbol": "CreateRuntimeDefault",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "[Serializable] public sealed class ApiEnvironmentDescriptorDefinition",
+        "line": 13,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "ApiEnvironmentDescriptorDefinition",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiEnvironmentDescriptorDefinition",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public string EnvironmentId",
+        "line": 26,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "EnvironmentId",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiEnvironmentDescriptorDefinition",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public ApiEnvironmentStage Stage",
+        "line": 33,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "Stage",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiEnvironmentDescriptorDefinition",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public string DisplayName",
+        "line": 40,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "DisplayName",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiEnvironmentDescriptorDefinition",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public bool TryCreateDescriptor( out ApiEnvironmentDescriptor descriptor, out string message)",
+        "line": 47,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "TryCreateDescriptor",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiEnvironmentDescriptorDefinition",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public static ApiEnvironmentDescriptorDefinition FromDescriptor( ApiEnvironmentDescriptor descriptor)",
+        "line": 73,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "FromDescriptor",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public sealed class ApiConnectionProfile : ScriptableObject",
+        "line": 95,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "ApiConnectionProfile",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public IReadOnlyList<ApiEnvironmentProfile> Environments",
+        "line": 110,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "Environments",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public ApiEndpointCatalog EndpointCatalog",
+        "line": 113,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "EndpointCatalog",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public IReadOnlyList<ApiEnvironmentDescriptorDefinition> KnownEnvironmentDefinitions",
+        "line": 120,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "KnownEnvironmentDefinitions",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public ApiComposition CreateComposition()",
+        "line": 127,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "CreateComposition",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public bool TryCreateComposition( out ApiComposition composition, out string message)",
+        "line": 144,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "TryCreateComposition",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public static ApiConnectionProfile CreateTransient( IEnumerable<ApiEnvironmentProfile> environmentProfiles, ApiEndpointCatalog catalog, IEnumerable<ApiEnvironmentDescriptor> knownDescriptors = null)",
+        "line": 172,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "CreateTransient",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiConnectionProfile",
+        "file": "Runtime/Configuration/ApiConnectionProfile.cs",
+        "fullSignature": "public bool TryGetKnownEnvironmentDescriptors( out IReadOnlyList<ApiEnvironmentDescriptor> descriptors, out string message)",
+        "line": 199,
+        "namespace": "Deucarian.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "TryGetKnownEnvironmentDescriptors",
         "symbolKind": "method",
         "xmlDocumentation": true
       },
@@ -46332,7 +47021,7 @@
         "assembly": "Deucarian.API",
         "containingType": "",
         "file": "Runtime/Configuration/ApiEndpointCatalog.cs",
-        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Endpoint Catalog\", fileName = \"ApiEndpointCatalog\")] public sealed class ApiEndpointCatalog : ScriptableObject",
+        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Advanced/Building Blocks/Endpoint Catalog\", fileName = \"ApiEndpointCatalog\")] public sealed class ApiEndpointCatalog : ScriptableObject",
         "line": 129,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
@@ -46437,7 +47126,7 @@
         "assembly": "Deucarian.API",
         "containingType": "",
         "file": "Runtime/Configuration/ApiEndpointDefinition.cs",
-        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Endpoint Definition\", fileName = \"ApiEndpointDefinition\")] public sealed class ApiEndpointDefinition : ScriptableObject",
+        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Advanced/Building Blocks/Endpoint Definition\", fileName = \"ApiEndpointDefinition\")] public sealed class ApiEndpointDefinition : ScriptableObject",
         "line": 17,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
@@ -46707,7 +47396,7 @@
         "assembly": "Deucarian.API",
         "containingType": "",
         "file": "Runtime/Configuration/ApiEnvironmentProfile.cs",
-        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Environment Profile\", fileName = \"ApiEnvironmentProfile\")] public sealed class ApiEnvironmentProfile : ScriptableObject",
+        "fullSignature": "[CreateAssetMenu(menuName = \"Deucarian/API/Advanced/Building Blocks/Environment Profile\", fileName = \"ApiEnvironmentProfile\")] public sealed class ApiEnvironmentProfile : ScriptableObject",
         "line": 93,
         "namespace": "Deucarian.API.Configuration",
         "obsolete": false,
@@ -128473,7 +129162,7 @@
         "containingType": "",
         "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
         "fullSignature": "public static class SimultriaViewerAuthenticationProviderFactory",
-        "line": 9,
+        "line": 10,
         "namespace": "Deucarian.Simultria.API.Authentication",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128488,7 +129177,7 @@
         "containingType": "SimultriaViewerAuthenticationProviderFactory",
         "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
         "fullSignature": "public static SimultriaViewerAuthenticationProvider Create( ApiComposition composition, ApiEnvironmentId environmentId, IApiClient apiClient)",
-        "line": 11,
+        "line": 12,
         "namespace": "Deucarian.Simultria.API.Authentication",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128503,7 +129192,22 @@
         "containingType": "SimultriaViewerAuthenticationProviderFactory",
         "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
         "fullSignature": "public static SimultriaViewerAuthenticationProvider Create( SimultriaApiProfile profile, ApiEnvironmentId environmentId, IApiClient apiClient)",
-        "line": 22,
+        "line": 23,
+        "namespace": "Deucarian.Simultria.API.Authentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "Create",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaViewerAuthenticationProviderFactory",
+        "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
+        "fullSignature": "public static SimultriaViewerAuthenticationProvider Create( ApiConnectionProfile profile, ApiEnvironmentId environmentId, IApiClient apiClient)",
+        "line": 39,
         "namespace": "Deucarian.Simultria.API.Authentication",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128518,7 +129222,7 @@
         "containingType": "SimultriaViewerAuthenticationProviderFactory",
         "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
         "fullSignature": "public static SimultriaViewerAuthenticationProvider Create( ApiEnvironmentId environmentId, IApiClient apiClient)",
-        "line": 38,
+        "line": 50,
         "namespace": "Deucarian.Simultria.API.Authentication",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128533,7 +129237,22 @@
         "containingType": "SimultriaViewerAuthenticationProviderFactory",
         "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
         "fullSignature": "public static bool TryCreate( SimultriaApiProfile profile, ApiEnvironmentId environmentId, IApiClient apiClient, out SimultriaViewerAuthenticationProvider provider, out ApiEnvironmentStatus status, out string message)",
-        "line": 52,
+        "line": 64,
+        "namespace": "Deucarian.Simultria.API.Authentication",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "TryCreate",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaViewerAuthenticationProviderFactory",
+        "file": "Runtime/Authentication/SimultriaViewerAuthenticationProviderFactory.cs",
+        "fullSignature": "public static bool TryCreate( ApiConnectionProfile profile, ApiEnvironmentId environmentId, IApiClient apiClient, out SimultriaViewerAuthenticationProvider provider, out ApiEnvironmentStatus status, out string message)",
+        "line": 105,
         "namespace": "Deucarian.Simultria.API.Authentication",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128546,9 +129265,84 @@
       {
         "assembly": "Deucarian.Simultria.API",
         "containingType": "",
+        "file": "Runtime/Configuration/SimultriaApiConnectionProfileAdapter.cs",
+        "fullSignature": "public static class SimultriaApiConnectionProfileAdapter",
+        "line": 13,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "SimultriaApiConnectionProfileAdapter",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaApiConnectionProfileAdapter",
+        "file": "Runtime/Configuration/SimultriaApiConnectionProfileAdapter.cs",
+        "fullSignature": "public static ApiComposition CreateComposition( ApiConnectionProfile profile)",
+        "line": 15,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "CreateComposition",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaApiConnectionProfileAdapter",
+        "file": "Runtime/Configuration/SimultriaApiConnectionProfileAdapter.cs",
+        "fullSignature": "public static bool TryCreateComposition( ApiConnectionProfile profile, out ApiComposition composition, out string message)",
+        "line": 33,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "TryCreateComposition",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaApiConnectionProfileAdapter",
+        "file": "Runtime/Configuration/SimultriaApiConnectionProfileAdapter.cs",
+        "fullSignature": "public static bool IsCompatibleProfile( ApiConnectionProfile profile, out string message)",
+        "line": 53,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "IsCompatibleProfile",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaApiConnectionProfileAdapter",
+        "file": "Runtime/Configuration/SimultriaApiConnectionProfileAdapter.cs",
+        "fullSignature": "public static bool IsCompatibleCatalog( ApiEndpointCatalog endpointCatalog, out string message)",
+        "line": 116,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "IsCompatibleCatalog",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "",
         "file": "Runtime/Configuration/SimultriaApiIdentifiers.cs",
         "fullSignature": "public static class SimultriaEnvironmentIds",
-        "line": 6,
+        "line": 8,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128563,7 +129357,7 @@
         "containingType": "",
         "file": "Runtime/Configuration/SimultriaApiIdentifiers.cs",
         "fullSignature": "public static class SimultriaClientIds",
-        "line": 28,
+        "line": 30,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128578,7 +129372,7 @@
         "containingType": "",
         "file": "Runtime/Configuration/SimultriaApiIdentifiers.cs",
         "fullSignature": "public static class SimultriaCatalogIds",
-        "line": 35,
+        "line": 37,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128593,7 +129387,7 @@
         "containingType": "",
         "file": "Runtime/Configuration/SimultriaApiIdentifiers.cs",
         "fullSignature": "public static class SimultriaEndpointIds",
-        "line": 42,
+        "line": 44,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128601,6 +129395,21 @@
         "scope": "Runtime production",
         "symbol": "SimultriaEndpointIds",
         "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Simultria.API",
+        "containingType": "SimultriaEndpointIds",
+        "file": "Runtime/Configuration/SimultriaApiIdentifiers.cs",
+        "fullSignature": "public static IReadOnlyList<ApiEndpointId> Stable",
+        "line": 92,
+        "namespace": "Deucarian.Simultria.API.Configuration",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "Stable",
+        "symbolKind": "property",
         "xmlDocumentation": true
       },
       {
@@ -128668,7 +129477,7 @@
         "containingType": "SimultriaApiProfile",
         "file": "Runtime/Configuration/SimultriaApiProfile.cs",
         "fullSignature": "public bool TryCreateComposition( out ApiComposition composition, out string message)",
-        "line": 34,
+        "line": 41,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128683,7 +129492,7 @@
         "containingType": "SimultriaApiProfile",
         "file": "Runtime/Configuration/SimultriaApiProfile.cs",
         "fullSignature": "public bool TryGetEnvironmentStatus( ApiEnvironmentId environmentId, out ApiEnvironmentStatus status, out string message)",
-        "line": 52,
+        "line": 59,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -128698,7 +129507,7 @@
         "containingType": "SimultriaApiProfile",
         "file": "Runtime/Configuration/SimultriaApiProfile.cs",
         "fullSignature": "public static SimultriaApiProfile CreateTransient( IEnumerable<ApiEnvironmentProfile> environmentProfiles, ApiEndpointCatalog catalog)",
-        "line": 69,
+        "line": 76,
         "namespace": "Deucarian.Simultria.API.Configuration",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -219161,6 +219970,186 @@
         "xmlDocumentation": false
       },
       {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "public sealed class ApiConnectionProfileTests",
+        "line": 13,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "ApiConnectionProfileTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[SetUp] public void SetUp()",
+        "line": 22,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "SetUp",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[TearDown] public void TearDown()",
+        "line": 31,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "TearDown",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Factory_CreatesOneRootWithFourBlankStandardEnvironmentSlots()",
+        "line": 38,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Factory_CreatesOneRootWithFourBlankStandardEnvironmentSlots",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Profile_RoundTripsAndComposesManualCatalogAndHostOverrides()",
+        "line": 91,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Profile_RoundTripsAndComposesManualCatalogAndHostOverrides",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Profile_ExplainsMissingCatalogWithoutResolvingTraffic()",
+        "line": 140,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Profile_ExplainsMissingCatalogWithoutResolvingTraffic",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void DescriptorDefinitions_AreValidatedAndPreserveStageMetadata()",
+        "line": 158,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "DescriptorDefinitions_AreValidatedAndPreserveStageMetadata",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void CatalogOwnership_DistinguishesProjectMissingAndTransientAssets()",
+        "line": 187,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "CatalogOwnership_DistinguishesProjectMissingAndTransientAssets",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Inspector_UsesConfiguredNamedClientsWithoutAssumingPrimary()",
+        "line": 213,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Inspector_UsesConfiguredNamedClientsWithoutAssumingPrimary",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Inspector_NeverEditsReferencedNonProjectEnvironments()",
+        "line": 262,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Inspector_NeverEditsReferencedNonProjectEnvironments",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void CreationMenus_ExposeOneNormalWorkflowAndAdvancedRawAssets()",
+        "line": 295,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "CreationMenus_ExposeOneNormalWorkflowAndAdvancedRawAssets",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiConnectionProfileTests",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "fullSignature": "[Test] public void Factory_RejectsPathsOutsideProjectAssets()",
+        "line": 311,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "Factory_RejectsPathsOutsideProjectAssets",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
         "assembly": "Deucarian.ActivityVisualization.Tests",
         "containingType": "",
         "file": "Tests/EditMode/ActivityVisibilityPlannerTests.cs",
@@ -257355,7 +258344,7 @@
         "containingType": "SimultriaApiProfileAssetFactoryTests",
         "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
         "fullSignature": "[SetUp] public void SetUp()",
-        "line": 17,
+        "line": 18,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257370,7 +258359,7 @@
         "containingType": "SimultriaApiProfileAssetFactoryTests",
         "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
         "fullSignature": "[TearDown] public void TearDown()",
-        "line": 24,
+        "line": 27,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257385,7 +258374,7 @@
         "containingType": "SimultriaApiProfileAssetFactoryTests",
         "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
         "fullSignature": "[Test] public void CreatesProjectProfileWithFourBlankOrderedSubAssets()",
-        "line": 33,
+        "line": 41,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257399,8 +258388,38 @@
         "assembly": "Deucarian.Simultria.API.Tests.EditMode",
         "containingType": "SimultriaApiProfileAssetFactoryTests",
         "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
+        "fullSignature": "[Test] public void CreatesGenericConnectionProfileForNewAuthoring()",
+        "line": 109,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "CreatesGenericConnectionProfileForNewAuthoring",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileAssetFactoryTests",
+        "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
+        "fullSignature": "[Test] public void NormalCreationMenuKeepsExpertActionsUnderAdvanced()",
+        "line": 161,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "NormalCreationMenuKeepsExpertActionsUnderAdvanced",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileAssetFactoryTests",
+        "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
         "fullSignature": "[Test] public void RejectsProjectAssetThatWouldShadowPackageResource()",
-        "line": 101,
+        "line": 176,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257412,10 +258431,55 @@
       },
       {
         "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileAssetFactoryTests",
+        "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
+        "fullSignature": "[Test] public void RejectsCatalogOverrideThatWouldShadowPackageResource()",
+        "line": 195,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "RejectsCatalogOverrideThatWouldShadowPackageResource",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileAssetFactoryTests",
+        "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
+        "fullSignature": "[Test] public void CreatesExplicitProjectOwnedCatalogOverrideWithoutEditingPackage()",
+        "line": 214,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "CreatesExplicitProjectOwnedCatalogOverrideWithoutEditingPackage",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileAssetFactoryTests",
+        "file": "Tests/EditMode/SimultriaApiProfileAssetFactoryTests.cs",
+        "fullSignature": "[Test] public void RejectsOverrideThatEnablesSensitiveAuthLogging()",
+        "line": 266,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "RejectsOverrideThatEnablesSensitiveAuthLogging",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
         "containingType": "",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "public sealed class SimultriaApiProfileTests",
-        "line": 11,
+        "line": 12,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257430,7 +258494,7 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void StandardDescriptorsAreStableAndCanonicallyOrdered()",
-        "line": 13,
+        "line": 14,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257445,7 +258509,7 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void DevelopmentIdResolvesDocumentedEnvironmentWithoutSelectionState()",
-        "line": 41,
+        "line": 42,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257460,7 +258524,7 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void ProfileReturnsSanitizedStatusWithoutApiOrigin()",
-        "line": 58,
+        "line": 59,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257475,7 +258539,7 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void PackageDefaultProfileContainsNoDeploymentUrl()",
-        "line": 74,
+        "line": 75,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257489,8 +258553,23 @@
         "assembly": "Deucarian.Simultria.API.Tests.EditMode",
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "fullSignature": "[Test] public void PackageCatalogCoversEveryOperationInPinnedSnapshot()",
+        "line": 108,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "PackageCatalogCoversEveryOperationInPinnedSnapshot",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileTests",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void FutureEnvironmentIdsDoNotInventDeploymentUrls()",
-        "line": 104,
+        "line": 184,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257505,7 +258584,7 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void BlankKnownProfileIsUnconfiguredWithoutBlockingDevelopment()",
-        "line": 131,
+        "line": 211,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257520,13 +258599,43 @@
         "containingType": "SimultriaApiProfileTests",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "fullSignature": "[Test] public void NonEmptyInvalidHostFailsClosed()",
-        "line": 174,
+        "line": 254,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
         "repository": "Simultria-API",
         "scope": "Test",
         "symbol": "NonEmptyInvalidHostFailsClosed",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileTests",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "fullSignature": "[Test] public void GenericDefaultProfileFailsBeforeEndpointResolution()",
+        "line": 279,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "GenericDefaultProfileFailsBeforeEndpointResolution",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaApiProfileTests",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "fullSignature": "[Test] public void SimultriaGenericProfileRequiresSimultriaPrimaryClient()",
+        "line": 334,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "SimultriaGenericProfileRequiresSimultriaPrimaryClient",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -257805,7 +258914,7 @@
         "containingType": "",
         "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
         "fullSignature": "public sealed class SimultriaViewerAuthenticationProviderTests",
-        "line": 8,
+        "line": 14,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257820,7 +258929,7 @@
         "containingType": "SimultriaViewerAuthenticationProviderTests",
         "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
         "fullSignature": "[Test] public void ProviderOwnsOnlySimultriaEndpointAndInputSemantics()",
-        "line": 10,
+        "line": 16,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
@@ -257835,13 +258944,73 @@
         "containingType": "SimultriaViewerAuthenticationProviderTests",
         "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
         "fullSignature": "[Test] public void FactoryResolvesIdWithoutAConsumerOwnedUrl()",
-        "line": 41,
+        "line": 47,
         "namespace": "Deucarian.Simultria.API.Tests.EditMode",
         "obsolete": false,
         "packageId": "com.deucarian.simultria-api",
         "repository": "Simultria-API",
         "scope": "Test",
         "symbol": "FactoryResolvesIdWithoutAConsumerOwnedUrl",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaViewerAuthenticationProviderTests",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "fullSignature": "[Test] public void LoginConfigurationConsumesResolvedCatalogRequestMetadata()",
+        "line": 69,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "LoginConfigurationConsumesResolvedCatalogRequestMetadata",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaViewerAuthenticationProviderTests",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "fullSignature": "[Test] public void ValidationConfigurationConsumesDisabledAuthentication()",
+        "line": 102,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "ValidationConfigurationConsumesDisabledAuthentication",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaViewerAuthenticationProviderTests",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "fullSignature": "[Test] public void TokenConfigurationRejectsAmbiguousCatalogAuthentication()",
+        "line": 129,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "TokenConfigurationRejectsAmbiguousCatalogAuthentication",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaViewerAuthenticationProviderTests",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "fullSignature": "[Test] public void FactoryAcceptsCompatibleGenericConnectionProfile()",
+        "line": 149,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "FactoryAcceptsCompatibleGenericConnectionProfile",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -281201,7 +282370,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 4215
+    "testsPublicCount": 4239
   },
   "repositories": [
     {
@@ -281397,7 +282566,8 @@
           ],
           "path": "Tests/Editor/Deucarian.API.Tests.asmdef",
           "references": [
-            "Deucarian.API"
+            "Deucarian.API",
+            "Deucarian.API.Editor"
           ],
           "scope": "Test",
           "versionDefines": []
@@ -281409,10 +282579,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "b48f3bd91ef181fa12fe02773cacc8cd46f6db94",
+        "headCommit": "e36cdb58540405e443d95012c5922d21b4e83830",
         "origin": "https://github.com/Deucarian/API.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "b48f3bd91ef181fa12fe02773cacc8cd46f6db94"
+        "requestedRefCommit": "e36cdb58540405e443d95012c5922d21b4e83830"
       },
       "canonicalId": "Deucarian/API",
       "ciWorkflows": [
@@ -281469,13 +282639,13 @@
       },
       "name": "API",
       "packageId": "com.deucarian.api",
-      "packageVersion": "1.3.0",
+      "packageVersion": "1.4.2",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/API.git",
         "governanceConfigSha256": "608b746b6b23053c05aec6a98f3158d05f3bf7b01f8c1e2adb9b334f04bd3109",
-        "headCommit": "b48f3bd91ef181fa12fe02773cacc8cd46f6db94",
-        "manifestSha256": "156263615ee33d2022ec637e56a61181afd864042961bec3d50a442a05ed9011",
+        "headCommit": "e36cdb58540405e443d95012c5922d21b4e83830",
+        "manifestSha256": "17c0abc30091e0372e78be963be251697a761d9196f6484c29c3ef72fce0edfe",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -285623,10 +286793,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "6eac4a9cff14a5f6c17fc6e2017c586785b1e2cc",
+        "headCommit": "972dd06bb214276ec3580be0eacd56bcfd3e45bd",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "6eac4a9cff14a5f6c17fc6e2017c586785b1e2cc"
+        "requestedRefCommit": "972dd06bb214276ec3580be0eacd56bcfd3e45bd"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -285666,13 +286836,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.1.89",
+      "packageVersion": "1.1.90",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "6eac4a9cff14a5f6c17fc6e2017c586785b1e2cc",
-        "manifestSha256": "f309da1d89bb39275b65f4af7fdcfcca8debe970201b3e09f154fa48bdd7ec73",
+        "headCommit": "972dd06bb214276ec3580be0eacd56bcfd3e45bd",
+        "manifestSha256": "baf69e33924851fd921e55666310f2c2764d1c791a3640fa4cd3c4e2a4e75518",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -285732,7 +286902,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "a6b4ba678b497bfda5b9020a9c3a03b85aab965bd6b0d761b982ae0840efb4c3",
+        "auditInputSha256": "b49fb15151c597e13afd10d6140253b89796ed43df056319a031fbdaf06c34d7",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -286956,6 +288126,21 @@
           "versionDefines": []
         },
         {
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "excludePlatforms": [],
+          "includePlatforms": [],
+          "name": "Deucarian.Simultria.API.Samples.StarterAssets",
+          "optionalUnityReferences": [],
+          "path": "Samples~/Simultria API Starter Assets/Deucarian.Simultria.API.Samples.StarterAssets.asmdef",
+          "references": [
+            "Deucarian.API",
+            "Deucarian.Simultria.API"
+          ],
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "autoReferenced": true,
           "defineConstraints": [],
           "excludePlatforms": [],
@@ -286986,15 +288171,15 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "5f6a115e36674b9a80d8bc5554f52947b426f132",
+        "headCommit": "7ecb6f3afe43b61f6f579067cc9f68bcd01708b0",
         "origin": "https://github.com/Deucarian/Simultria-API.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "5f6a115e36674b9a80d8bc5554f52947b426f132"
+        "requestedRefCommit": "7ecb6f3afe43b61f6f579067cc9f68bcd01708b0"
       },
       "canonicalId": "Deucarian/Simultria-API",
       "ciWorkflows": [],
       "dependencies": {
-        "com.deucarian.api": "1.3.0",
+        "com.deucarian.api": "1.4.2",
         "com.deucarian.editor": "1.0.5",
         "com.deucarian.session": "1.0.6",
         "com.deucarian.session.api-integration": "1.1.1",
@@ -287009,7 +288194,7 @@
         "editorAssemblies": [
           "Deucarian.Simultria.API.Editor"
         ],
-        "expectedSamplesRoot": "",
+        "expectedSamplesRoot": "Samples~",
         "operationalPackage": false,
         "optionalVersionDefinedDependencies": [],
         "ownedCapabilities": [
@@ -287027,7 +288212,9 @@
         "runtimeAssemblies": [
           "Deucarian.Simultria.API"
         ],
-        "sampleAssemblies": [],
+        "sampleAssemblies": [
+          "Deucarian.Simultria.API.Samples.StarterAssets"
+        ],
         "samplePolicy": "tool",
         "testAssemblies": [
           "Deucarian.Simultria.API.Tests.EditMode"
@@ -287035,13 +288222,13 @@
       },
       "name": "Simultria-API",
       "packageId": "com.deucarian.simultria-api",
-      "packageVersion": "0.2.0",
+      "packageVersion": "0.3.0",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-API.git",
-        "governanceConfigSha256": "69c09b3692b300112dc7ce852f115e4fa48d248c606a97930afd03222daebc7a",
-        "headCommit": "5f6a115e36674b9a80d8bc5554f52947b426f132",
-        "manifestSha256": "d219180cd562701d886b282f7802dedd78388e8601c7debb6eedd9824c55649a",
+        "governanceConfigSha256": "d229e4d4128f38a376cf80057240a4131cc378b2f4bf7ea7da007b5acf604378",
+        "headCommit": "7ecb6f3afe43b61f6f579067cc9f68bcd01708b0",
+        "manifestSha256": "7086aece1ee6b88744ba1e17e7209cc935072e1338c58a24ae28a0f2d55335e1",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -287057,7 +288244,16 @@
         "type": "git",
         "url": "git+https://github.com/Deucarian/Simultria-API.git"
       },
-      "samples": [],
+      "samples": [
+        "Samples~/Simultria API Starter Assets/Deucarian.Simultria.API.Samples.StarterAssets.asmdef",
+        "Samples~/Simultria API Starter Assets/Deucarian.Simultria.API.Samples.StarterAssets.asmdef.meta",
+        "Samples~/Simultria API Starter Assets/README.md",
+        "Samples~/Simultria API Starter Assets/README.md.meta",
+        "Samples~/Simultria API Starter Assets/SimultriaApiConnectionProfile.asset",
+        "Samples~/Simultria API Starter Assets/SimultriaApiConnectionProfile.asset.meta",
+        "Samples~/Simultria API Starter Assets/SimultriaApiStarterAssetsSample.cs",
+        "Samples~/Simultria API Starter Assets/SimultriaApiStarterAssetsSample.cs.meta"
+      ],
       "unity": "2021.3",
       "validationScripts": []
     },
@@ -287205,6 +288401,7 @@
         "com.deucarian.command-routing",
         "com.deucarian.editor",
         "com.deucarian.logging",
+        "com.deucarian.session",
         "com.deucarian.simultria-api",
         "com.deucarian.viewer-authentication"
       ],
@@ -290910,6 +292107,51 @@
         "scope": "Test"
       },
       {
+        "assembly": "Deucarian.API.Tests",
+        "classification": "Test",
+        "containingSymbol": "ApiConnectionProfileTests::CatalogOwnership_DistinguishesProjectMissingAndTransientAssets",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 209,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "classification": "Test",
+        "containingSymbol": "ApiConnectionProfileTests::Inspector_UsesConfiguredNamedClientsWithoutAssumingPrimary",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 258,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "classification": "Test",
+        "containingSymbol": "ApiConnectionProfileTests::Inspector_NeverEditsReferencedNonProjectEnvironments",
+        "file": "Tests/Editor/ApiConnectionProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 291,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Test"
+      },
+      {
         "assembly": "Deucarian.Attacks.Tests",
         "classification": "Test",
         "containingSymbol": "AttacksEditModeTests::AttackRecipeValidation_RequiresProjectilePrefabForAssetCreation",
@@ -293724,7 +294966,7 @@
         "containingSymbol": "SimultriaApiProfileTests::BlankKnownProfileIsUnconfiguredWithoutBlockingDevelopment",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 168,
+        "line": 248,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.simultria-api",
         "policyDisposition": "Allowed",
@@ -293739,7 +294981,7 @@
         "containingSymbol": "SimultriaApiProfileTests::BlankKnownProfileIsUnconfiguredWithoutBlockingDevelopment",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 169,
+        "line": 249,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.simultria-api",
         "policyDisposition": "Allowed",
@@ -293754,7 +294996,7 @@
         "containingSymbol": "SimultriaApiProfileTests::NonEmptyInvalidHostFailsClosed",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 193,
+        "line": 273,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.simultria-api",
         "policyDisposition": "Allowed",
@@ -293769,7 +295011,67 @@
         "containingSymbol": "SimultriaApiProfileTests::NonEmptyInvalidHostFailsClosed",
         "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 194,
+        "line": 274,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaApiProfileTests::GenericDefaultProfileFailsBeforeEndpointResolution",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 326,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaApiProfileTests::GenericDefaultProfileFailsBeforeEndpointResolution",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 329,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaApiProfileTests::SimultriaGenericProfileRequiresSimultriaPrimaryClient",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 367,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaApiProfileTests::SimultriaGenericProfileRequiresSimultriaPrimaryClient",
+        "file": "Tests/EditMode/SimultriaApiProfileTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 370,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.simultria-api",
         "policyDisposition": "Allowed",
@@ -293815,6 +295117,66 @@
         "file": "Tests/EditMode/SimultriaTestComposition.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
         "line": 84,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaViewerAuthenticationProviderTests::FactoryAcceptsCompatibleGenericConnectionProfile",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 191,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaViewerAuthenticationProviderTests::FactoryAcceptsCompatibleGenericConnectionProfile",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 192,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaViewerAuthenticationProviderTests::FactoryAcceptsCompatibleGenericConnectionProfile",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 193,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.simultria-api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Simultria-API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "SimultriaViewerAuthenticationProviderTests::FactoryAcceptsCompatibleGenericConnectionProfile",
+        "file": "Tests/EditMode/SimultriaViewerAuthenticationProviderTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 194,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.simultria-api",
         "policyDisposition": "Allowed",
@@ -301730,10 +303092,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 724
+      "Allowed": 735
     },
     "summary": {
-      "direct Unity API call": 655,
+      "direct Unity API call": 666,
       "helper call site": 68,
       "helper definition": 1
     }
