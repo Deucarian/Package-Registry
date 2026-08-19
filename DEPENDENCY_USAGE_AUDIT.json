@@ -6869,7 +6869,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.3.1",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -7037,7 +7037,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.13",
+      "declaredVersion": "0.1.14",
       "dependency": "com.deucarian.web-viewer-suite",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [],
@@ -9052,7 +9052,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.3.1",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [
