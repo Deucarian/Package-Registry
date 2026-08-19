@@ -65,6 +65,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.command-routing",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
+                "com.deucarian.session",
                 "com.deucarian.simultria-api",
                 "com.deucarian.viewer-authentication",
             ],

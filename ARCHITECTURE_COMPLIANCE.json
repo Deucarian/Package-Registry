@@ -789,6 +789,18 @@
       "repository": "Simultria-API"
     },
     {
+      "assembly": "Deucarian.Simultria.API.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 540,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-api",
+      "repository": "Simultria-API",
+      "scope": "Editor production"
+    },
+    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -1642,7 +1654,7 @@
         }
       ],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 61,
+      "productionFileCount": 65,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
@@ -2577,9 +2589,16 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.Simultria.API.Editor",
+          "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
+          "lineCount": 540,
+          "scope": "Editor production"
+        }
+      ],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 23,
+      "productionFileCount": 26,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": false,
@@ -3291,13 +3310,13 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 98,
+      "RefactorBacklog": 99,
       "SetupRequired": 54
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 49,
       "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 98
+      "ProductionFileExceedsLineLimit": 99
     },
     "repositoryCount": 62
   }
