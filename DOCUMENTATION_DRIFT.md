@@ -6,10 +6,10 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Historical changelog reference | 14 |
+| Historical changelog reference | 15 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 7 |
-| Review required | 10 |
+| Review required | 12 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -48,4 +48,7 @@ Historical changelog references preserve released history and are not rewrite re
 | UIBinding-CoreState-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Migration documentation | README.md |  |  |  |
 | Web-Viewer-Suite | Review required | Documentation~/index.md |  |  |  |
+| WebGL-Template | Historical changelog reference | CHANGELOG.md |  |  |  |
+| WebGL-Template | Review required | AGENTS.md |  |  |  |
+| WebGL-Template | Review required | README.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | AGENTS.md |  |  |  |

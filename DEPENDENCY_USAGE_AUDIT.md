@@ -6,7 +6,7 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 32 |
+| Editor-only use | 33 |
 | Optional version-defined use | 1 |
 | Required and used | 151 |
 | Suite composition | 39 |
@@ -174,7 +174,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.logging | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
 | Template-Viewer-Web | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ObjectLoading.APIIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
-| Template-Viewer-Web | com.deucarian.session | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session | Deucarian.Session | 0 |
+| Template-Viewer-Web | com.deucarian.session | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
 | Template-Viewer-Web | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Session.APIIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Theming; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Template-Viewer-Web | com.deucarian.ui | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
@@ -242,6 +242,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Web-Viewer-Suite | com.deucarian.viewer-navigation | Suite composition | Sample: Deucarian.WebViewerSuite.Samples.Stack -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-rendering | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-shell | Suite composition |  |  | 0 |
+| WebGL-Template | com.deucarian.build-pipeline | Editor-only use | Editor production: Deucarian.WebGLTemplate.Editor -> Deucarian.BuildPipeline.Editor; Test: Deucarian.WebGLTemplate.Editor.Tests -> Deucarian.BuildPipeline.Editor | Deucarian.BuildPipeline.Editor | 0 |
 | World-Navigation | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | World-Navigation | com.deucarian.world-spawning | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.WorldSpawning; Sample: Deucarian.WorldNavigation.Samples -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.Tests -> Deucarian.WorldSpawning | Deucarian.WorldSpawning | 0 |
 | World-Spawning | com.deucarian.encounters | Test-only use | Test: Deucarian.WorldSpawning.PlayModeTests -> Deucarian.Encounters; Test: Deucarian.WorldSpawning.Tests -> Deucarian.Encounters | Deucarian.Encounters |  |
