@@ -33502,7 +33502,7 @@
             "editorApi": false,
             "file": "Editor/DeucarianBuildProfileUtility.cs",
             "iterator": false,
-            "line": 225,
+            "line": 243,
             "lineCount": 13,
             "namespace": "Deucarian.BuildPipeline",
             "normalizedHash": "4da39af94fb7349915dc42f24b346746c822595f4d2c6918233f1d08d4103fb0",
@@ -41283,7 +41283,7 @@
         "Auto-Defense:Tests/EditMode/AutoDefenseTests.cs:346",
         "Bootstrap:Editor/Infrastructure/BootstrapRemoteText.cs:69",
         "Build-Pipeline:Editor/DeucarianBuildExecutionScope.cs:24",
-        "Build-Pipeline:Editor/DeucarianBuildProfileUtility.cs:225",
+        "Build-Pipeline:Editor/DeucarianBuildProfileUtility.cs:243",
         "Build-Pipeline:Tests/Editor/NewtonsoftLinking/CecilAssemblyFixture.cs:202",
         "Command-Routing-UDP-Integration:Runtime/UdpCommandRoutingHost.cs:99",
         "Command-Routing-UDP-Integration:Runtime/UdpCommandTransport.cs:184",
@@ -287139,10 +287139,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "8f3cb9b12f4268e45bad6d909b42c266fbe28440",
+        "headCommit": "f1846bbe7e5d00df388e4b1b669515a8e544c891",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
         "requestedRef": "main",
-        "requestedRefCommit": "8f3cb9b12f4268e45bad6d909b42c266fbe28440"
+        "requestedRefCommit": "f1846bbe7e5d00df388e4b1b669515a8e544c891"
       },
       "canonicalId": "Deucarian/Build-Pipeline",
       "ciWorkflows": [
@@ -287192,7 +287192,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Build-Pipeline.git",
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
-        "headCommit": "8f3cb9b12f4268e45bad6d909b42c266fbe28440",
+        "headCommit": "f1846bbe7e5d00df388e4b1b669515a8e544c891",
         "manifestSha256": "b6d57aa8b69276b0ddd6e95a3d773aea24c29a156518a6fdfe04d2e5dd74f95a",
         "requestedRef": "main"
       },
