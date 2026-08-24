@@ -7013,7 +7013,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.4.0",
+      "declaredVersion": "0.5.0",
       "dependency": "com.deucarian.build-pipeline",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -7624,11 +7624,52 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.1.14",
+      "declaredVersion": "0.1.15",
       "dependency": "com.deucarian.web-viewer-suite",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [],
       "referencedBy": [],
+      "repository": "Template-Viewer-Web",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.webgl-template",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.WebGLTemplate",
+        "Deucarian.WebGLTemplate.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WebGLTemplate.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WebGLTemplate",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
       "repository": "Template-Viewer-Web",
       "sourceMentionCount": 0,
       "sourceMentionsByScope": {}
@@ -9436,7 +9477,7 @@
     },
     {
       "classification": "SuiteComposition",
-      "declaredVersion": "0.4.0",
+      "declaredVersion": "0.5.0",
       "dependency": "com.deucarian.build-pipeline",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [],
@@ -9704,6 +9745,17 @@
       "classification": "SuiteComposition",
       "declaredVersion": "0.1.0",
       "dependency": "com.deucarian.viewer-shell",
+      "packageId": "com.deucarian.web-viewer-suite",
+      "referencedAssemblies": [],
+      "referencedBy": [],
+      "repository": "Web-Viewer-Suite",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "SuiteComposition",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.webgl-template",
       "packageId": "com.deucarian.web-viewer-suite",
       "referencedAssemblies": [],
       "referencedBy": [],
@@ -10139,8 +10191,8 @@
   "summary": {
     "EditorOnlyUse": 33,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 151,
-    "SuiteComposition": 39,
+    "RequiredAndUsed": 152,
+    "SuiteComposition": 40,
     "TestOnlyUse": 11
   }
 }

@@ -8,8 +8,8 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 33 |
 | Optional version-defined use | 1 |
-| Required and used | 151 |
-| Suite composition | 39 |
+| Required and used | 152 |
+| Suite composition | 40 |
 | Test-only use | 11 |
 
 Findings marked `apparently unused` are review prompts, not removal recommendations.
@@ -183,6 +183,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Template-Viewer-Web | com.deucarian.viewer-shell | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.ViewerShell | Deucarian.ViewerShell | 0 |
 | Template-Viewer-Web | com.deucarian.web-viewer-suite | Suite composition |  |  | 0 |
+| Template-Viewer-Web | com.deucarian.webgl-template | Required and used | Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.WebGLTemplate.Editor; Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.WebGLTemplate | Deucarian.WebGLTemplate, Deucarian.WebGLTemplate.Editor | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
@@ -242,6 +243,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Web-Viewer-Suite | com.deucarian.viewer-navigation | Suite composition | Sample: Deucarian.WebViewerSuite.Samples.Stack -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-rendering | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-shell | Suite composition |  |  | 0 |
+| Web-Viewer-Suite | com.deucarian.webgl-template | Suite composition |  |  | 0 |
 | WebGL-Template | com.deucarian.build-pipeline | Editor-only use | Editor production: Deucarian.WebGLTemplate.Editor -> Deucarian.BuildPipeline.Editor; Test: Deucarian.WebGLTemplate.Editor.Tests -> Deucarian.BuildPipeline.Editor | Deucarian.BuildPipeline.Editor | 0 |
 | World-Navigation | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.GameplayFoundation; Test: Deucarian.WorldNavigation.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | World-Navigation | com.deucarian.world-spawning | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.WorldSpawning; Sample: Deucarian.WorldNavigation.Samples -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.Tests -> Deucarian.WorldSpawning | Deucarian.WorldSpawning | 0 |
