@@ -4861,7 +4861,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.3.0",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
@@ -7289,6 +7289,22 @@
           "reference": "Deucarian.Session",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Viewer-Web",
@@ -7339,7 +7355,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.5",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -9696,6 +9712,48 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "0.5.0",
+      "dependency": "com.deucarian.build-pipeline",
+      "packageId": "com.deucarian.webgl-template",
+      "referencedAssemblies": [
+        "Deucarian.BuildPipeline.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.WebGLTemplate.Editor.asmdef",
+          "assembly": "Deucarian.WebGLTemplate.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.BuildPipeline.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.WebGLTemplate.Editor.Tests.asmdef",
+          "assembly": "Deucarian.WebGLTemplate.Editor.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.BuildPipeline.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "WebGL-Template",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.gameplay-foundation",
@@ -10079,7 +10137,7 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 32,
+    "EditorOnlyUse": 33,
     "OptionalVersionDefinedUse": 1,
     "RequiredAndUsed": 151,
     "SuiteComposition": 39,

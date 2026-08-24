@@ -187,6 +187,24 @@
       "repository": "Web-Viewer-Suite"
     },
     {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
@@ -194,9 +212,9 @@
     }
   ],
   "summary": {
-    "HistoricalChangelogReference": 14,
+    "HistoricalChangelogReference": 15,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 7,
-    "ReviewRequired": 10
+    "ReviewRequired": 12
   }
 }
