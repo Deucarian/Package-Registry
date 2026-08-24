@@ -5,9 +5,9 @@ Schema version: 2
 | Capability | Owner package | Owner repository | Current package.json consumers |
 | --- | --- | --- | --- |
 | activity-model-visualization | com.deucarian.activity-visualization | Activity-Visualization | (none) |
-| aot-stripping-safety | com.deucarian.build-pipeline | Build-Pipeline | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
+| aot-stripping-safety | com.deucarian.build-pipeline | Build-Pipeline | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite, com.deucarian.webgl-template |
 | api-http-client | com.deucarian.api | API | com.deucarian.media.api-integration, com.deucarian.object-loading.api-integration, com.deucarian.session.api-integration, com.deucarian.simultria-api, com.deucarian.simultria-viewer-connection, com.deucarian.template.viewer.web, com.deucarian.viewer-authentication, com.deucarian.web-viewer-suite |
-| build-pipeline | com.deucarian.build-pipeline | Build-Pipeline | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
+| build-pipeline | com.deucarian.build-pipeline | Build-Pipeline | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite, com.deucarian.webgl-template |
 | camera-navigation | com.deucarian.camera-navigation | Camera-Navigation | com.deucarian.camera-navigation.input-system-integration, com.deucarian.template.viewer.web, com.deucarian.viewer-navigation, com.deucarian.web-viewer-suite |
 | command-protocol | com.deucarian.command-routing | Command-Routing | com.deucarian.command-routing.udp-integration, com.deucarian.command-routing.webgl-integration, com.deucarian.simultria-viewer-connection, com.deucarian.template.viewer.web, com.deucarian.viewer-authentication, com.deucarian.web-viewer-suite |
 | command-routing | com.deucarian.command-routing | Command-Routing | com.deucarian.command-routing.udp-integration, com.deucarian.command-routing.webgl-integration, com.deucarian.simultria-viewer-connection, com.deucarian.template.viewer.web, com.deucarian.viewer-authentication, com.deucarian.web-viewer-suite |
@@ -39,6 +39,7 @@ Schema version: 2
 | viewer-navigation-experience | com.deucarian.viewer-navigation | Viewer-Navigation | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
 | viewer-rendering-environment | com.deucarian.viewer-rendering | Viewer-Rendering | com.deucarian.template.viewer.web, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
 | viewer-shell-experience | com.deucarian.viewer-shell | Viewer-Shell | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
+| webgl-browser-template | com.deucarian.webgl-template | WebGL-Template | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
 | world-selection | com.deucarian.object-selection | Object-Selection | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite |
 | xr-world-ui-controls | com.deucarian.xr-ui | XR-UI | com.deucarian.xr-ui.theming-integration |
 

@@ -822,11 +822,35 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 651,
+      "lineCount": 722,
       "lineLimit": 500,
       "packageId": "com.deucarian.simultria-viewer-connection",
       "repository": "Simultria-Viewer-Connection",
       "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SimultriaViewerConnectionWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 711,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 681,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Editor production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1238,7 +1262,19 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/WebViewerBootstrap.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 621,
+      "lineCount": 698,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WebViewerApplication.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 609,
       "lineLimit": 500,
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web",
@@ -1533,6 +1569,22 @@
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "detail": "Run the shared Deucarian package validator in continuous integration.",
+      "disposition": "SetupRequired",
+      "file": ".github/workflows",
+      "kind": "MissingSharedArchitectureValidation",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.world-navigation",
       "repository": "World-Navigation"
     },
@@ -1666,7 +1718,7 @@
         }
       ],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 65,
+      "productionFileCount": 66,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
@@ -1794,7 +1846,7 @@
         }
       ],
       "packageId": "com.deucarian.build-pipeline",
-      "productionFileCount": 22,
+      "productionFileCount": 23,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Build-Pipeline",
       "sharedValidationPresent": true,
@@ -2610,7 +2662,7 @@
         }
       ],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 26,
+      "productionFileCount": 29,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": false,
@@ -2627,14 +2679,26 @@
       },
       "oversizedProductionFiles": [
         {
+          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+          "file": "Editor/SimultriaViewerConnectionWindow.cs",
+          "lineCount": 711,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+          "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
+          "lineCount": 681,
+          "scope": "Editor production"
+        },
+        {
           "assembly": "Deucarian.SimultriaViewerConnection",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "lineCount": 651,
+          "lineCount": 722,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.simultria-viewer-connection",
-      "productionFileCount": 18,
+      "productionFileCount": 20,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
@@ -2895,13 +2959,19 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.TemplateViewerWeb",
+          "file": "Runtime/WebViewerApplication.cs",
+          "lineCount": 609,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateViewerWeb",
           "file": "Runtime/WebViewerBootstrap.cs",
-          "lineCount": 621,
+          "lineCount": 698,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 16,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
@@ -2985,7 +3055,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 65,
+      "productionFileCount": 70,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -3219,6 +3289,23 @@
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.webgl-template",
+      "productionFileCount": 2,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "WebGL-Template",
+      "sharedValidationPresent": false,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.WebGLTemplate.Editor.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.world-navigation",
       "productionFileCount": 1,
       "productionFilesWithoutAssemblyOwner": [],
@@ -3329,14 +3416,14 @@
   "summary": {
     "compliantRepositoryCount": 9,
     "findingsByDisposition": {
-      "RefactorBacklog": 100,
-      "SetupRequired": 54
+      "RefactorBacklog": 103,
+      "SetupRequired": 56
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 49,
-      "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 100
+      "MissingCanonicalArchitectureReference": 50,
+      "MissingSharedArchitectureValidation": 6,
+      "ProductionFileExceedsLineLimit": 103
     },
-    "repositoryCount": 62
+    "repositoryCount": 63
   }
 }

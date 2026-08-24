@@ -88,6 +88,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.viewer-rendering",
                 "com.deucarian.viewer-shell",
                 "com.deucarian.viewer-authentication",
+                "com.deucarian.webgl-template",
             ],
             "com.deucarian.template.viewer.web": [
                 "com.deucarian.api",
@@ -108,6 +109,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.viewer-shell",
                 "com.deucarian.viewer-authentication",
                 "com.deucarian.web-viewer-suite",
+                "com.deucarian.webgl-template",
             ],
         }
 

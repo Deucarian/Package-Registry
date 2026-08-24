@@ -62,21 +62,21 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
-          "line": 23,
+          "line": 29,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         },
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
-          "line": 28,
+          "line": 36,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.DeserializeObject<T>"
         },
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/NewtonsoftApiSerializer.cs",
-          "line": 33,
+          "line": 44,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.DeserializeObject"
         }
@@ -735,15 +735,15 @@
     {
       "categories": {
         "reflection-based-newtonsoft": 2,
-        "runtime-type-discovery": 2
+        "runtime-type-discovery": 3
       },
       "errors": [],
-      "findingCount": 4,
+      "findingCount": 5,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "line": 334,
+          "line": 405,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -751,6 +751,13 @@
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
           "line": 137,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
+          "line": 179,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -1128,6 +1135,18 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.world-navigation",
       "repository": "World-Navigation",
       "suppressedFindingCount": 0,
@@ -1270,15 +1289,15 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 43
+      "runtime-type-discovery": 44
     },
-    "cleanRepositoryCount": 41,
+    "cleanRepositoryCount": 42,
     "modeCounts": {
-      "Audit": 61
+      "Audit": 62
     },
     "repositoriesWithFindings": 20,
-    "repositoryCount": 61,
-    "totalFindingCount": 66,
+    "repositoryCount": 62,
+    "totalFindingCount": 67,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

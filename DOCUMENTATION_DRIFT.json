@@ -157,6 +157,18 @@
       "repository": "Template-Game-Survivors"
     },
     {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web"
+    },
+    {
       "file": "Documentation~/lifecycle.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.test-automation",
@@ -187,6 +199,24 @@
       "repository": "Web-Viewer-Suite"
     },
     {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.webgl-template",
+      "repository": "WebGL-Template"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
@@ -194,9 +224,9 @@
     }
   ],
   "summary": {
-    "HistoricalChangelogReference": 14,
+    "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 7,
-    "ReviewRequired": 10
+    "ReviewRequired": 13
   }
 }

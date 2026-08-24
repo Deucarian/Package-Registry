@@ -30,9 +30,14 @@
       "ownerPackageId": "com.deucarian.editor"
     },
     {
-      "description": "Editor-only build workflow registration, Build Profile policy and drift validation, final-player AOT inspection, evidence verification, generated linker input, artifact manifests, and headless CI entry points.",
+      "description": "Editor-only build workflow registration, Build Profile policy, package-owned WebGL template synchronization and selection, drift validation, final-player AOT inspection, evidence verification, generated linker input, artifact manifests, and headless CI entry points.",
       "id": "build-pipeline",
       "ownerPackageId": "com.deucarian.build-pipeline"
+    },
+    {
+      "description": "Reusable Unity WebGL browser page, responsive canvas host, loading, ready and failure presentation, fullscreen controls, theme synchronization, and lifecycle/progress bridge.",
+      "id": "webgl-browser-template",
+      "ownerPackageId": "com.deucarian.webgl-template"
     },
     {
       "description": "Final-player reachability inspection, runtime reflection and AOT evidence verification, exact generated linker preservation, and strict stripping gates.",
