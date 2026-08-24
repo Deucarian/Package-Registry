@@ -69,6 +69,7 @@
         "com.deucarian.session.api-integration",
         "com.deucarian.ui",
         "com.deucarian.viewer-rendering",
+        "com.deucarian.webgl-template",
         "com.deucarian.xr-ui.theming-integration"
       ]
     },

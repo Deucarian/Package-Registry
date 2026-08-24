@@ -111,7 +111,7 @@ Schema version: 2
 | com.deucarian.simultria-viewer-connection | com.deucarian.editor | 1.0.5 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-connection | com.deucarian.logging | 1.0.2 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-connection | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.3.0 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.4.0 | Simultria-Viewer-Connection | Simultria-API |
 | com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.5.0 | Simultria-Viewer-Connection | Viewer-Authentication |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
@@ -160,7 +160,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer-Web | ObjectLoading-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.session | 1.0.6 | Template-Viewer-Web | Session |
 | com.deucarian.template.viewer.web | com.deucarian.session.api-integration | 1.1.1 | Template-Viewer-Web | Session-API-Integration |
-| com.deucarian.template.viewer.web | com.deucarian.theming | 1.0.5 | Template-Viewer-Web | Theming |
+| com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.0 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.0 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
@@ -221,6 +221,7 @@ Schema version: 2
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-navigation | 0.1.10 | Web-Viewer-Suite | Viewer-Navigation |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-rendering | 0.1.0 | Web-Viewer-Suite | Viewer-Rendering |
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-shell | 0.1.0 | Web-Viewer-Suite | Viewer-Shell |
+| com.deucarian.webgl-template | com.deucarian.build-pipeline | 0.5.0 | WebGL-Template | Build-Pipeline |
 | com.deucarian.world-navigation | com.deucarian.gameplay-foundation | 0.1.1 | World-Navigation | Gameplay-Foundation |
 | com.deucarian.world-navigation | com.deucarian.world-spawning | 0.2.1 | World-Navigation | World-Spawning |
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
@@ -235,5 +236,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 24
-- Registry dependency drift entries: 0
+- Dependency version drift entries: 33
+- Registry dependency drift entries: 2
