@@ -963,7 +963,19 @@
         "disposition": "RefactorBacklog",
         "file": "Runtime/WebViewerBootstrap.cs",
         "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 629,
+        "lineCount": 698,
+        "lineLimit": 500,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production"
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "detail": "Extract responsibilities until the production file is at most 500 lines.",
+        "disposition": "RefactorBacklog",
+        "file": "Runtime/WebViewerApplication.cs",
+        "kind": "ProductionFileExceedsLineLimit",
+        "lineCount": 609,
         "lineLimit": 500,
         "packageId": "com.deucarian.template.viewer.web",
         "repository": "Template-Viewer-Web",
@@ -2501,13 +2513,19 @@
         "oversizedProductionFiles": [
           {
             "assembly": "Deucarian.TemplateViewerWeb",
+            "file": "Runtime/WebViewerApplication.cs",
+            "lineCount": 609,
+            "scope": "Runtime production"
+          },
+          {
+            "assembly": "Deucarian.TemplateViewerWeb",
             "file": "Runtime/WebViewerBootstrap.cs",
-            "lineCount": 629,
+            "lineCount": 698,
             "scope": "Runtime production"
           }
         ],
         "packageId": "com.deucarian.template.viewer.web",
-        "productionFileCount": 16,
+        "productionFileCount": 18,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Template-Viewer-Web",
         "sharedValidationPresent": true,
@@ -2933,13 +2951,13 @@
     "summary": {
       "compliantRepositoryCount": 35,
       "findingsByDisposition": {
-        "RefactorBacklog": 94,
+        "RefactorBacklog": 95,
         "SetupRequired": 16
       },
       "findingsByKind": {
         "MissingCanonicalArchitectureReference": 11,
         "MissingSharedArchitectureValidation": 5,
-        "ProductionFileExceedsLineLimit": 94
+        "ProductionFileExceedsLineLimit": 95
       },
       "repositoryCount": 63
     }
@@ -3378,7 +3396,10 @@
       "ownerRepository": "Viewer-Shell"
     },
     {
-      "currentConsumers": [],
+      "currentConsumers": [
+        "com.deucarian.template.viewer.web",
+        "com.deucarian.web-viewer-suite"
+      ],
       "description": "Reusable Unity WebGL browser page, responsive canvas host, loading, ready and failure presentation, fullscreen controls, theme synchronization, and lifecycle/progress bridge.",
       "id": "webgl-browser-template",
       "ownerPackageId": "com.deucarian.webgl-template",
@@ -4861,7 +4882,7 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.build-pipeline",
         "toRepo": "Build-Pipeline",
-        "version": "0.4.0"
+        "version": "0.5.0"
       },
       {
         "from": "com.deucarian.template.viewer.web",
@@ -4973,7 +4994,14 @@
         "fromRepo": "Template-Viewer-Web",
         "to": "com.deucarian.web-viewer-suite",
         "toRepo": "Web-Viewer-Suite",
-        "version": "0.1.14"
+        "version": "0.1.15"
+      },
+      {
+        "from": "com.deucarian.template.viewer.web",
+        "fromRepo": "Template-Viewer-Web",
+        "to": "com.deucarian.webgl-template",
+        "toRepo": "WebGL-Template",
+        "version": "0.1.0"
       },
       {
         "from": "com.deucarian.theming",
@@ -5239,7 +5267,7 @@
         "fromRepo": "Web-Viewer-Suite",
         "to": "com.deucarian.build-pipeline",
         "toRepo": "Build-Pipeline",
-        "version": "0.4.0"
+        "version": "0.5.0"
       },
       {
         "from": "com.deucarian.web-viewer-suite",
@@ -5351,6 +5379,13 @@
         "fromRepo": "Web-Viewer-Suite",
         "to": "com.deucarian.viewer-shell",
         "toRepo": "Viewer-Shell",
+        "version": "0.1.0"
+      },
+      {
+        "from": "com.deucarian.web-viewer-suite",
+        "fromRepo": "Web-Viewer-Suite",
+        "to": "com.deucarian.webgl-template",
+        "toRepo": "WebGL-Template",
         "version": "0.1.0"
       },
       {
@@ -12426,7 +12461,7 @@
       },
       {
         "classification": "EditorOnlyUse",
-        "declaredVersion": "0.4.0",
+        "declaredVersion": "0.5.0",
         "dependency": "com.deucarian.build-pipeline",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [
@@ -13037,11 +13072,52 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.1.14",
+        "declaredVersion": "0.1.15",
         "dependency": "com.deucarian.web-viewer-suite",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [],
         "referencedBy": [],
+        "repository": "Template-Viewer-Web",
+        "sourceMentionCount": 0,
+        "sourceMentionsByScope": {}
+      },
+      {
+        "classification": "RequiredAndUsed",
+        "declaredVersion": "0.1.0",
+        "dependency": "com.deucarian.webgl-template",
+        "packageId": "com.deucarian.template.viewer.web",
+        "referencedAssemblies": [
+          "Deucarian.WebGLTemplate",
+          "Deucarian.WebGLTemplate.Editor"
+        ],
+        "referencedBy": [
+          {
+            "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+            "assembly": "Deucarian.TemplateViewerWeb.Editor",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [
+              "Editor"
+            ],
+            "reference": "Deucarian.WebGLTemplate.Editor",
+            "scope": "Editor production",
+            "versionDefines": []
+          },
+          {
+            "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
+            "assembly": "Deucarian.TemplateViewerWeb",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.WebGLTemplate",
+            "scope": "Runtime production",
+            "versionDefines": []
+          }
+        ],
         "repository": "Template-Viewer-Web",
         "sourceMentionCount": 0,
         "sourceMentionsByScope": {}
@@ -14849,7 +14925,7 @@
       },
       {
         "classification": "SuiteComposition",
-        "declaredVersion": "0.4.0",
+        "declaredVersion": "0.5.0",
         "dependency": "com.deucarian.build-pipeline",
         "packageId": "com.deucarian.web-viewer-suite",
         "referencedAssemblies": [],
@@ -15117,6 +15193,17 @@
         "classification": "SuiteComposition",
         "declaredVersion": "0.1.0",
         "dependency": "com.deucarian.viewer-shell",
+        "packageId": "com.deucarian.web-viewer-suite",
+        "referencedAssemblies": [],
+        "referencedBy": [],
+        "repository": "Web-Viewer-Suite",
+        "sourceMentionCount": 0,
+        "sourceMentionsByScope": {}
+      },
+      {
+        "classification": "SuiteComposition",
+        "declaredVersion": "0.1.0",
+        "dependency": "com.deucarian.webgl-template",
         "packageId": "com.deucarian.web-viewer-suite",
         "referencedAssemblies": [],
         "referencedBy": [],
@@ -15552,8 +15639,8 @@
     "summary": {
       "EditorOnlyUse": 33,
       "OptionalVersionDefinedUse": 1,
-      "RequiredAndUsed": 151,
-      "SuiteComposition": 39,
+      "RequiredAndUsed": 152,
+      "SuiteComposition": 40,
       "TestOnlyUse": 11
     }
   },
@@ -15716,6 +15803,18 @@
         "repository": "Template-Game-Survivors"
       },
       {
+        "file": "CHANGELOG.md",
+        "kind": "HistoricalChangelogReference",
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web"
+      },
+      {
+        "file": "README.md",
+        "kind": "ReviewRequired",
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web"
+      },
+      {
         "file": "Documentation~/lifecycle.md",
         "kind": "ReviewRequired",
         "packageId": "com.deucarian.test-automation",
@@ -15771,10 +15870,10 @@
       }
     ],
     "summary": {
-      "HistoricalChangelogReference": 15,
+      "HistoricalChangelogReference": 16,
       "LegitimateGenericBridgeTerm": 1,
       "MigrationDocumentation": 7,
-      "ReviewRequired": 12
+      "ReviewRequired": 13
     }
   },
   "drift": {
@@ -15892,13 +15991,6 @@
         "repo": "Template-Viewer-Web"
       },
       {
-        "declaredVersion": "0.4.0",
-        "dependency": "com.deucarian.build-pipeline",
-        "ownerDevelopVersion": "0.5.0",
-        "packageId": "com.deucarian.template.viewer.web",
-        "repo": "Template-Viewer-Web"
-      },
-      {
         "declaredVersion": "0.2.8",
         "dependency": "com.deucarian.object-loading.api-integration",
         "ownerDevelopVersion": "0.2.9",
@@ -15969,13 +16061,6 @@
         "repo": "Web-Viewer-Suite"
       },
       {
-        "declaredVersion": "0.4.0",
-        "dependency": "com.deucarian.build-pipeline",
-        "ownerDevelopVersion": "0.5.0",
-        "packageId": "com.deucarian.web-viewer-suite",
-        "repo": "Web-Viewer-Suite"
-      },
-      {
         "declaredVersion": "0.1.1",
         "dependency": "com.deucarian.command-routing",
         "ownerDevelopVersion": "0.1.2",
@@ -16011,98 +16096,7 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": [
-      {
-        "packageId": "com.deucarian.template.viewer.web",
-        "packageJsonDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.build-pipeline",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.command-routing",
-          "com.deucarian.command-routing.webgl-integration",
-          "com.deucarian.diagnostics",
-          "com.deucarian.logging",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-authentication",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell",
-          "com.deucarian.web-viewer-suite"
-        ],
-        "registryDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.build-pipeline",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.command-routing",
-          "com.deucarian.command-routing.webgl-integration",
-          "com.deucarian.diagnostics",
-          "com.deucarian.logging",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-authentication",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell",
-          "com.deucarian.web-viewer-suite",
-          "com.deucarian.webgl-template"
-        ],
-        "repo": "Template-Viewer-Web"
-      },
-      {
-        "packageId": "com.deucarian.web-viewer-suite",
-        "packageJsonDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.build-pipeline",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.camera-navigation.input-system-integration",
-          "com.deucarian.command-routing",
-          "com.deucarian.command-routing.webgl-integration",
-          "com.deucarian.diagnostics",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.pointer-capture",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-authentication",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell"
-        ],
-        "registryDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.build-pipeline",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.camera-navigation.input-system-integration",
-          "com.deucarian.command-routing",
-          "com.deucarian.command-routing.webgl-integration",
-          "com.deucarian.diagnostics",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.pointer-capture",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-authentication",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell",
-          "com.deucarian.webgl-template"
-        ],
-        "repo": "Web-Viewer-Suite"
-      }
-    ]
+    "registryDependencyDrift": []
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -21884,7 +21878,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 15284,
+    "methodCountAnalyzed": 15292,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -32946,7 +32940,7 @@
         "dependenciesUsed": [
           "UnityEngine.Object.DestroyImmediate"
         ],
-        "estimatedDuplicatedLines": 824,
+        "estimatedDuplicatedLines": 834,
         "extractionConfidence": "medium",
         "groupKey": "dispose",
         "occurrences": [
@@ -33042,7 +33036,7 @@
             "editorApi": false,
             "file": "Editor/DeucarianBuildProfileUtility.cs",
             "iterator": false,
-            "line": 225,
+            "line": 243,
             "lineCount": 13,
             "namespace": "Deucarian.BuildPipeline",
             "normalizedHash": "4da39af94fb7349915dc42f24b346746c822595f4d2c6918233f1d08d4103fb0",
@@ -33944,12 +33938,33 @@
           {
             "assembly": "Deucarian.TemplateViewerWeb",
             "async": false,
+            "containingType": "GenericWebViewerVisibilityFeature",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Runtime/Selection/GenericWebViewerVisibilityFeature.cs",
+            "iterator": false,
+            "line": 46,
+            "lineCount": 10,
+            "namespace": "Deucarian.TemplateViewerWeb.Selection",
+            "normalizedHash": "2287f9a0dae90677fa85f2b3ea4dba69221d76e3ca1df7bc734fa31b0e805611",
+            "packageId": "com.deucarian.template.viewer.web",
+            "repository": "Template-Viewer-Web",
+            "runtimeUnityApi": false,
+            "scope": "Runtime production",
+            "signature": "public void Dispose()",
+            "symbol": "Dispose",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.TemplateViewerWeb",
+            "async": false,
             "containingType": "WebViewerShellStatusAdapter",
             "dependenciesUsed": [],
             "editorApi": false,
             "file": "Runtime/WebViewerShellStatusAdapter.cs",
             "iterator": false,
-            "line": 32,
+            "line": 33,
             "lineCount": 11,
             "namespace": "Deucarian.TemplateViewerWeb",
             "normalizedHash": "628df4bbab2ab5ad4de4f78ffd060d208467dd8fc7d000296bd9cc118a8842ba",
@@ -40802,7 +40817,7 @@
         "Auto-Defense:Tests/EditMode/AutoDefenseTests.cs:346",
         "Bootstrap:Editor/Infrastructure/BootstrapRemoteText.cs:69",
         "Build-Pipeline:Editor/DeucarianBuildExecutionScope.cs:24",
-        "Build-Pipeline:Editor/DeucarianBuildProfileUtility.cs:225",
+        "Build-Pipeline:Editor/DeucarianBuildProfileUtility.cs:243",
         "Build-Pipeline:Tests/Editor/NewtonsoftLinking/CecilAssemblyFixture.cs:202",
         "Command-Routing-UDP-Integration:Runtime/UdpCommandRoutingHost.cs:99",
         "Command-Routing-UDP-Integration:Runtime/UdpCommandTransport.cs:184",
@@ -41951,10 +41966,10 @@
       },
       {
         "editorPublicCount": 7,
-        "missingXmlDocumentationCount": 139,
+        "missingXmlDocumentationCount": 152,
         "packageId": "com.deucarian.template.viewer.web",
         "repository": "Template-Viewer-Web",
-        "runtimePublicCount": 133
+        "runtimePublicCount": 149
       },
       {
         "editorPublicCount": 0,
@@ -42077,9 +42092,9 @@
       }
     ],
     "editorProductionCount": 2302,
-    "internalPrivateProductionCount": 11459,
-    "missingXmlDocumentationCount": 9588,
-    "runtimeProductionCount": 9340,
+    "internalPrivateProductionCount": 11474,
+    "missingXmlDocumentationCount": 9601,
+    "runtimeProductionCount": 9356,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples",
@@ -175079,7 +175094,7 @@
         "containingType": "",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public sealed class WebViewerBuildManagerProvider : IDeucarianBuildManagerProvider",
-        "line": 12,
+        "line": 13,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175094,7 +175109,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public string Id",
-        "line": 24,
+        "line": 25,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175109,7 +175124,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public string DisplayName",
-        "line": 25,
+        "line": 26,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175124,7 +175139,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public int Order",
-        "line": 26,
+        "line": 27,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175139,7 +175154,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public bool CanSynchronize",
-        "line": 27,
+        "line": 28,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175154,7 +175169,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public IReadOnlyList<DeucarianBuildManagerTarget> GetTargets()",
-        "line": 29,
+        "line": 30,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175169,7 +175184,7 @@
         "containingType": "WebViewerBuildManagerProvider",
         "file": "Editor/WebViewerBuildManagerProvider.cs",
         "fullSignature": "public void Synchronize()",
-        "line": 50,
+        "line": 51,
         "namespace": "Deucarian.TemplateViewerWeb.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175393,7 +175408,7 @@
         "assembly": "Deucarian.TemplateViewerWeb",
         "containingType": "WebViewerCommandHandlers",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
-        "fullSignature": "public static IReadOnlyList<ICommandHandler<WebViewerApplication>> Create( IViewerAuthenticationEventPublisher authenticationEventPublisher = null)",
+        "fullSignature": "public static IReadOnlyList<ICommandHandler<WebViewerApplication>> Create( IViewerAuthenticationEventPublisher authenticationEventPublisher = null, bool includeGenericVisibilityCommands = true)",
         "line": 11,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
@@ -175409,7 +175424,7 @@
         "containingType": "",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public sealed class InitializeWebViewerCommandHandler : ICommandHandler<WebViewerApplication>",
-        "line": 26,
+        "line": 32,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175424,7 +175439,7 @@
         "containingType": "InitializeWebViewerCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public IReadOnlyList<string> CommandNames",
-        "line": 32,
+        "line": 38,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175439,7 +175454,7 @@
         "containingType": "InitializeWebViewerCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public async Task<CommandResult> HandleAsync( CommandExecutionContext<WebViewerApplication> context, CancellationToken cancellationToken)",
-        "line": 34,
+        "line": 40,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175454,7 +175469,7 @@
         "containingType": "",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public sealed class SelectWebViewerElementsCommandHandler : ICommandHandler<WebViewerApplication>",
-        "line": 54,
+        "line": 60,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175469,7 +175484,7 @@
         "containingType": "SelectWebViewerElementsCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public IReadOnlyList<string> CommandNames",
-        "line": 60,
+        "line": 66,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175484,7 +175499,7 @@
         "containingType": "SelectWebViewerElementsCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public async Task<CommandResult> HandleAsync( CommandExecutionContext<WebViewerApplication> context, CancellationToken cancellationToken)",
-        "line": 62,
+        "line": 68,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175499,7 +175514,7 @@
         "containingType": "",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public sealed class ClearWebViewerSelectionCommandHandler : ICommandHandler<WebViewerApplication>",
-        "line": 81,
+        "line": 87,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175514,7 +175529,7 @@
         "containingType": "ClearWebViewerSelectionCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public IReadOnlyList<string> CommandNames",
-        "line": 87,
+        "line": 93,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175529,7 +175544,7 @@
         "containingType": "ClearWebViewerSelectionCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public async Task<CommandResult> HandleAsync( CommandExecutionContext<WebViewerApplication> context, CancellationToken cancellationToken)",
-        "line": 89,
+        "line": 95,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175544,7 +175559,7 @@
         "containingType": "",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public sealed class DisposeWebViewerCommandHandler : ICommandHandler<WebViewerApplication>",
-        "line": 108,
+        "line": 114,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175559,7 +175574,7 @@
         "containingType": "DisposeWebViewerCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public IReadOnlyList<string> CommandNames",
-        "line": 114,
+        "line": 120,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -175574,7 +175589,7 @@
         "containingType": "DisposeWebViewerCommandHandler",
         "file": "Runtime/Commands/WebViewerCommandHandlers.cs",
         "fullSignature": "public async Task<CommandResult> HandleAsync( CommandExecutionContext<WebViewerApplication> context, CancellationToken cancellationToken)",
-        "line": 116,
+        "line": 122,
         "namespace": "Deucarian.TemplateViewerWeb.Commands",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176218,8 +176233,8 @@
         "assembly": "Deucarian.TemplateViewerWeb",
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
-        "fullSignature": "public WebViewerApplication( IWebViewerModelDescriptorResolver resolver, IWebViewerModelLoader loader, ViewerNavigationInstaller navigationInstaller, IWebViewerEventPublisher publisher, GameObject embeddedReferenceModel = null, IViewerAuthenticationSession viewerAuthentication = null)",
-        "line": 29,
+        "fullSignature": "public WebViewerApplication( IWebViewerModelDescriptorResolver resolver, IWebViewerModelLoader loader, ViewerNavigationInstaller navigationInstaller, IWebViewerEventPublisher publisher, GameObject embeddedReferenceModel = null, IViewerAuthenticationSession viewerAuthentication = null, IWebViewerVisibilityFeatureFactory customVisibilityFeatureFactory = null)",
+        "line": 32,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176234,7 +176249,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public event Action<WebViewerLifecycleState> LifecycleChanged",
-        "line": 53,
+        "line": 58,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176249,7 +176264,37 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public event Action<float, string> LoadingProgressChanged",
-        "line": 54,
+        "line": 59,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "event",
+        "symbolKind": "event",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerApplication",
+        "file": "Runtime/WebViewerApplication.cs",
+        "fullSignature": "public event Action<WebViewerModelContext> ModelReady",
+        "line": 60,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "event",
+        "symbolKind": "event",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerApplication",
+        "file": "Runtime/WebViewerApplication.cs",
+        "fullSignature": "public event Action<WebViewerModelContext> ModelUnloading",
+        "line": 61,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176264,7 +176309,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public WebViewerLifecycleState Lifecycle",
-        "line": 56,
+        "line": 63,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176279,7 +176324,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public long LatestRevision",
-        "line": 57,
+        "line": 64,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176294,7 +176339,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public int IndexedElementCount",
-        "line": 58,
+        "line": 65,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176309,7 +176354,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public int SelectedElementCount",
-        "line": 59,
+        "line": 67,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176323,8 +176368,23 @@
         "assembly": "Deucarian.TemplateViewerWeb",
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
+        "fullSignature": "public WebViewerModelContext CurrentModel",
+        "line": 69,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "CurrentModel",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerApplication",
+        "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public IViewerAuthenticationSession AuthenticationSession",
-        "line": 60,
+        "line": 70,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176339,7 +176399,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public async Task<CommandOperationResult> InitializeAsync( WebViewerInitializeRequest request, string remoteEndpoint, CancellationToken cancellationToken)",
-        "line": 63,
+        "line": 73,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176354,7 +176414,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public async Task<CommandOperationResult> SelectAsync( WebViewerSelectionRequest request, string remoteEndpoint, CancellationToken cancellationToken)",
-        "line": 218,
+        "line": 234,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176369,7 +176429,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public async Task<CommandOperationResult> ClearAsync( WebViewerRevisionRequest request, string remoteEndpoint, CancellationToken cancellationToken)",
-        "line": 253,
+        "line": 269,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176384,7 +176444,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public async Task<CommandOperationResult> DisposeViewerAsync( WebViewerRevisionRequest request, string remoteEndpoint, CancellationToken cancellationToken)",
-        "line": 286,
+        "line": 302,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176399,7 +176459,7 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public void ReportLoadingProgress(float normalized, string message)",
-        "line": 314,
+        "line": 330,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176414,13 +176474,28 @@
         "containingType": "WebViewerApplication",
         "file": "Runtime/WebViewerApplication.cs",
         "fullSignature": "public void Dispose()",
-        "line": 319,
+        "line": 335,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
         "repository": "Template-Viewer-Web",
         "scope": "Runtime production",
         "symbol": "Dispose",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerApplication",
+        "file": "Runtime/WebViewerApplication.cs",
+        "fullSignature": "public bool TryRecordRevision(long revision)",
+        "line": 411,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "TryRecordRevision",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -176444,7 +176519,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public bool IframeMode",
-        "line": 72,
+        "line": 74,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176459,7 +176534,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public string ParentOrigin",
-        "line": 73,
+        "line": 75,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176474,7 +176549,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public WebViewerApplication Application",
-        "line": 74,
+        "line": 76,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176489,7 +176564,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationReferenceCompositionProfile ResolvedNavigationComposition",
-        "line": 75,
+        "line": 77,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176504,7 +176579,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationSettings ResolvedNavigationSettings",
-        "line": 77,
+        "line": 79,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176519,7 +176594,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerRenderingReferenceCompositionProfile ResolvedRenderingComposition",
-        "line": 79,
+        "line": 81,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176534,7 +176609,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerShellReferenceProfile ResolvedShellProfile",
-        "line": 81,
+        "line": 83,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176549,7 +176624,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationInstaller NavigationInstaller",
-        "line": 83,
+        "line": 85,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176564,7 +176639,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerRenderingInstaller RenderingInstaller",
-        "line": 85,
+        "line": 87,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176579,7 +176654,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public ViewerShellPresenter ShellPresenter",
-        "line": 87,
+        "line": 89,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176594,7 +176669,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public DeucarianThemeProvider ThemeProvider",
-        "line": 88,
+        "line": 90,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176609,7 +176684,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public DeucarianViewerReferenceThemeRuntime ThemeRuntime",
-        "line": 93,
+        "line": 95,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176624,7 +176699,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public DeucarianTheme CurrentTheme",
-        "line": 95,
+        "line": 97,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176639,7 +176714,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public SessionTokenEndpointProfile ResolvedAuthenticationTokenEndpointProfile",
-        "line": 99,
+        "line": 101,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176654,7 +176729,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public IViewerAuthenticationAcquisitionProvider AuthenticationAcquisitionProvider",
-        "line": 105,
+        "line": 107,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176669,7 +176744,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public CommandRoutePortBehaviour LocalCommandPort",
-        "line": 108,
+        "line": 110,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -176684,7 +176759,7 @@
         "containingType": "WebViewerBootstrap",
         "file": "Runtime/WebViewerBootstrap.cs",
         "fullSignature": "public bool TryValidateConfiguration( bool production, out string issue)",
-        "line": 129,
+        "line": 131,
         "namespace": "Deucarian.TemplateViewerWeb",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -177172,6 +177247,186 @@
         "scope": "Runtime production",
         "symbol": "IWebViewerEventPublisher",
         "symbolKind": "interface",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public sealed class WebViewerModelContext",
+        "line": 8,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "WebViewerModelContext",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerModelContext",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public WebViewerModelContext( GameObject referenceRoot, WebViewerModelDescriptor descriptor, long initialRevision)",
+        "line": 10,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "WebViewerModelContext",
+        "symbolKind": "constructor",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerModelContext",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public GameObject ReferenceRoot",
+        "line": 21,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "ReferenceRoot",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerModelContext",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public WebViewerModelDescriptor Descriptor",
+        "line": 22,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "Descriptor",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerModelContext",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public long InitialRevision",
+        "line": 23,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "InitialRevision",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public interface IWebViewerVisibilityFeature : IDisposable",
+        "line": 30,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "IWebViewerVisibilityFeature",
+        "symbolKind": "interface",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public interface IWebViewerVisibilityFeatureFactory",
+        "line": 36,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "IWebViewerVisibilityFeatureFactory",
+        "symbolKind": "interface",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public abstract class WebViewerFeatureBehaviour : MonoBehaviour",
+        "line": 48,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "WebViewerFeatureBehaviour",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerFeatureBehaviour",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public virtual IWebViewerVisibilityFeatureFactory VisibilityFeatureFactory",
+        "line": 50,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "VisibilityFeatureFactory",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerFeatureBehaviour",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public virtual IReadOnlyList<ICommandHandler<WebViewerApplication>> CreateCommandHandlers()",
+        "line": 53,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "CreateCommandHandlers",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerFeatureBehaviour",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public virtual void Attach(WebViewerApplication application)",
+        "line": 57,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "Attach",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb",
+        "containingType": "WebViewerFeatureBehaviour",
+        "file": "Runtime/WebViewerFeatures.cs",
+        "fullSignature": "public virtual void Detach(WebViewerApplication application)",
+        "line": 61,
+        "namespace": "Deucarian.TemplateViewerWeb",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Runtime production",
+        "symbol": "Detach",
+        "symbolKind": "method",
         "xmlDocumentation": false
       },
       {
@@ -271440,8 +271695,23 @@
         "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
         "containingType": "WebViewerCommandHandlerTests",
         "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
-        "fullSignature": "[Test] public async Task AuthenticationOutcomesUseTheExistingSanitizedPublisher()",
+        "fullSignature": "[Test] public void ProductVisibilityCanReplaceGenericSelectionCommands()",
         "line": 48,
+        "namespace": "Deucarian.TemplateViewerWeb.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Test",
+        "symbol": "ProductVisibilityCanReplaceGenericSelectionCommands",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "containingType": "WebViewerCommandHandlerTests",
+        "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
+        "fullSignature": "[Test] public async Task AuthenticationOutcomesUseTheExistingSanitizedPublisher()",
+        "line": 62,
         "namespace": "Deucarian.TemplateViewerWeb.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -271456,7 +271726,7 @@
         "containingType": "WebViewerCommandHandlerTests.RecordingEventPublisher",
         "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
         "fullSignature": "public string EventName",
-        "line": 103,
+        "line": 117,
         "namespace": "Deucarian.TemplateViewerWeb.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -271471,7 +271741,7 @@
         "containingType": "WebViewerCommandHandlerTests.RecordingEventPublisher",
         "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
         "fullSignature": "public JObject Payload",
-        "line": 104,
+        "line": 118,
         "namespace": "Deucarian.TemplateViewerWeb.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -271486,7 +271756,7 @@
         "containingType": "WebViewerCommandHandlerTests.RecordingEventPublisher",
         "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
         "fullSignature": "public string RemoteEndpoint",
-        "line": 105,
+        "line": 119,
         "namespace": "Deucarian.TemplateViewerWeb.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -271501,7 +271771,7 @@
         "containingType": "WebViewerCommandHandlerTests.RecordingEventPublisher",
         "file": "Tests/EditMode/WebViewerCommandHandlerTests.cs",
         "fullSignature": "public Task PublishAsync( string eventName, JObject payload, string remoteEndpoint, CancellationToken cancellationToken = default)",
-        "line": 107,
+        "line": 121,
         "namespace": "Deucarian.TemplateViewerWeb.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer.web",
@@ -285762,7 +286032,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 4308
+    "testsPublicCount": 4309
   },
   "repositories": [
     {
@@ -286647,10 +286917,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "c6818c300a92ac8a3bda892c12ea0a203ea8c1eb",
+        "headCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "c6818c300a92ac8a3bda892c12ea0a203ea8c1eb"
+        "requestedRefCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -286687,7 +286957,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "c6818c300a92ac8a3bda892c12ea0a203ea8c1eb",
+        "headCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156",
         "manifestSha256": "cd41484ea971d7139d68a8dd9b3ba2804a5ab079bd7fb18ec11617816b1ca510",
         "requestedRef": "develop"
       },
@@ -286748,10 +287018,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "4e4b05ef20296c88ad5ce08ead7bd17c208b7d31",
+        "headCommit": "008a4fab062c026354f7b543fcf62400affc84a0",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "4e4b05ef20296c88ad5ce08ead7bd17c208b7d31"
+        "requestedRefCommit": "008a4fab062c026354f7b543fcf62400affc84a0"
       },
       "canonicalId": "Deucarian/Build-Pipeline",
       "ciWorkflows": [
@@ -286801,7 +287071,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Build-Pipeline.git",
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
-        "headCommit": "4e4b05ef20296c88ad5ce08ead7bd17c208b7d31",
+        "headCommit": "008a4fab062c026354f7b543fcf62400affc84a0",
         "manifestSha256": "b6d57aa8b69276b0ddd6e95a3d773aea24c29a156518a6fdfe04d2e5dd74f95a",
         "requestedRef": "develop"
       },
@@ -290187,10 +290457,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "9ce4fa493c2fe6b45062c597243905213c5530cb",
+        "headCommit": "3643fbaf7f6bbe76b9873144f895bc0f4b216d6e",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "9ce4fa493c2fe6b45062c597243905213c5530cb"
+        "requestedRefCommit": "3643fbaf7f6bbe76b9873144f895bc0f4b216d6e"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -290235,7 +290505,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "9ce4fa493c2fe6b45062c597243905213c5530cb",
+        "headCommit": "3643fbaf7f6bbe76b9873144f895bc0f4b216d6e",
         "manifestSha256": "45990d83209db3670a57250a0b0aef1f981358df99c3c62ff2e97e5743fc6b25",
         "requestedRef": "develop"
       },
@@ -292604,7 +292874,8 @@
           "path": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
           "references": [
             "Deucarian.BuildPipeline.Editor",
-            "Deucarian.TemplateViewerWeb"
+            "Deucarian.TemplateViewerWeb",
+            "Deucarian.WebGLTemplate.Editor"
           ],
           "scope": "Editor production",
           "versionDefines": []
@@ -292634,6 +292905,7 @@
             "Deucarian.ViewerNavigation",
             "Deucarian.ViewerRendering",
             "Deucarian.ViewerShell",
+            "Deucarian.WebGLTemplate",
             "Newtonsoft.Json",
             "UnityEngine.UIElementsModule"
           ],
@@ -292714,10 +292986,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "d066f92c8749091ae05198edd1a33ffd7f45fce9",
+        "headCommit": "6a05ff0ca1266537c0c9d9eef73d9373631c466e",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "d066f92c8749091ae05198edd1a33ffd7f45fce9"
+        "requestedRefCommit": "6a05ff0ca1266537c0c9d9eef73d9373631c466e"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
@@ -292725,7 +292997,7 @@
       ],
       "dependencies": {
         "com.deucarian.api": "1.2.0",
-        "com.deucarian.build-pipeline": "0.4.0",
+        "com.deucarian.build-pipeline": "0.5.0",
         "com.deucarian.camera-navigation": "0.2.10",
         "com.deucarian.command-routing": "0.1.2",
         "com.deucarian.command-routing.webgl-integration": "0.1.1",
@@ -292741,7 +293013,8 @@
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
-        "com.deucarian.web-viewer-suite": "0.1.14",
+        "com.deucarian.web-viewer-suite": "0.1.15",
+        "com.deucarian.webgl-template": "0.1.0",
         "com.unity.modules.uielements": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
@@ -292777,6 +293050,7 @@
           "com.deucarian.viewer-shell",
           "com.deucarian.viewer-authentication",
           "com.deucarian.web-viewer-suite",
+          "com.deucarian.webgl-template",
           "com.unity.nuget.newtonsoft-json",
           "com.unity.modules.uielements"
         ],
@@ -292794,13 +293068,13 @@
       },
       "name": "Template-Viewer-Web",
       "packageId": "com.deucarian.template.viewer.web",
-      "packageVersion": "0.1.20",
+      "packageVersion": "0.2.0",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
-        "governanceConfigSha256": "482e79b52346cbe70fc46cbc1ec68b04836da2b0ac736524c3226f30e5ac1b13",
-        "headCommit": "d066f92c8749091ae05198edd1a33ffd7f45fce9",
-        "manifestSha256": "594b07a467c60c8b7745d232c30e9f9cc2e64a33634b2734bbaa31dfd36ea603",
+        "governanceConfigSha256": "24f05d5755d6b114aed98a0bb93484562c0b430f9b0d78abe0fbd3756f9e7d94",
+        "headCommit": "6a05ff0ca1266537c0c9d9eef73d9373631c466e",
+        "manifestSha256": "cb199cb3f63aee8ac8d23a68577dff556389112fab74b9c925dc02f77820bfe2",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -294657,10 +294931,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "926422bf3003648d2e8691e8199a7b3ba5bd5502",
+        "headCommit": "53b05027f3cf6cbadaa55dcbbf34171295ebf2a9",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "926422bf3003648d2e8691e8199a7b3ba5bd5502"
+        "requestedRefCommit": "53b05027f3cf6cbadaa55dcbbf34171295ebf2a9"
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
       "ciWorkflows": [
@@ -294668,7 +294942,7 @@
       ],
       "dependencies": {
         "com.deucarian.api": "1.1.5",
-        "com.deucarian.build-pipeline": "0.4.0",
+        "com.deucarian.build-pipeline": "0.5.0",
         "com.deucarian.camera-navigation": "0.2.10",
         "com.deucarian.camera-navigation.input-system-integration": "0.1.7",
         "com.deucarian.command-routing": "0.1.1",
@@ -294685,6 +294959,7 @@
         "com.deucarian.viewer-navigation": "0.1.10",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
+        "com.deucarian.webgl-template": "0.1.0",
         "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
       "displayName": "Deucarian Web Viewer Suite",
@@ -294716,6 +294991,7 @@
           "com.deucarian.viewer-rendering",
           "com.deucarian.viewer-shell",
           "com.deucarian.viewer-authentication",
+          "com.deucarian.webgl-template",
           "com.unity.nuget.newtonsoft-json"
         ],
         "runtimeAssemblies": [],
@@ -294727,13 +295003,13 @@
       },
       "name": "Web-Viewer-Suite",
       "packageId": "com.deucarian.web-viewer-suite",
-      "packageVersion": "0.1.14",
+      "packageVersion": "0.1.15",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git",
-        "governanceConfigSha256": "86c11124c2775e75841fa8e468f4ec641dcb18f49a3a248a0118db0cd8e81b39",
-        "headCommit": "926422bf3003648d2e8691e8199a7b3ba5bd5502",
-        "manifestSha256": "0f87395c46f26a12b555488bad18f7367ca7bff3a589a85782ce9d02b61a18e1",
+        "governanceConfigSha256": "cce7f89af397444cf9589ad79956461a14208c9fd6d747613b9215870380751f",
+        "headCommit": "53b05027f3cf6cbadaa55dcbbf34171295ebf2a9",
+        "manifestSha256": "0484bbc0087c82d0c98e49c0fb8a199c1c1cb9452f68410e103649b1a5a2c1b4",
         "requestedRef": "develop"
       },
       "registryDependencies": [

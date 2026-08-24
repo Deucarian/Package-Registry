@@ -962,7 +962,19 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/WebViewerBootstrap.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 629,
+      "lineCount": 698,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewerWeb",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WebViewerApplication.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 609,
       "lineLimit": 500,
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web",
@@ -2500,13 +2512,19 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.TemplateViewerWeb",
+          "file": "Runtime/WebViewerApplication.cs",
+          "lineCount": 609,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.TemplateViewerWeb",
           "file": "Runtime/WebViewerBootstrap.cs",
-          "lineCount": 629,
+          "lineCount": 698,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 16,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
@@ -2932,13 +2950,13 @@
   "summary": {
     "compliantRepositoryCount": 35,
     "findingsByDisposition": {
-      "RefactorBacklog": 94,
+      "RefactorBacklog": 95,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 11,
       "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 94
+      "ProductionFileExceedsLineLimit": 95
     },
     "repositoryCount": 63
   }

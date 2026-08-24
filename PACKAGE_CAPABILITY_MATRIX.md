@@ -39,7 +39,7 @@ Schema version: 2
 | viewer-navigation-experience | com.deucarian.viewer-navigation | Viewer-Navigation | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
 | viewer-rendering-environment | com.deucarian.viewer-rendering | Viewer-Rendering | com.deucarian.template.viewer.web, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
 | viewer-shell-experience | com.deucarian.viewer-shell | Viewer-Shell | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
-| webgl-browser-template | com.deucarian.webgl-template | WebGL-Template | (none) |
+| webgl-browser-template | com.deucarian.webgl-template | WebGL-Template | com.deucarian.template.viewer.web, com.deucarian.web-viewer-suite |
 | world-selection | com.deucarian.object-selection | Object-Selection | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite |
 | xr-world-ui-controls | com.deucarian.xr-ui | XR-UI | com.deucarian.xr-ui.theming-integration |
 
