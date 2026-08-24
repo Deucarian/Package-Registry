@@ -17,14 +17,14 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 94 |
+| RefactorBacklog | 95 |
 | SetupRequired | 16 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 11 |
 | MissingSharedArchitectureValidation | 5 |
-| ProductionFileExceedsLineLimit | 94 |
+| ProductionFileExceedsLineLimit | 95 |
 
 ## Repository Status
 
@@ -75,7 +75,7 @@ once.
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 49 | 2 | 15 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
-| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 16 | 2 | 1 | 0 |
+| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 18 | 2 | 2 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 1 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 71 | 2 | 7 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
@@ -180,7 +180,8 @@ once.
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsPayloadWeapons.cs | 688 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsRunFlow.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Viewer-Web | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerBootstrap.cs | 629 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerBootstrap.cs | 698 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerApplication.cs | 609 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemeManagerWindow.cs | 2531 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianDefaultThemeAssetFactory.cs | 1978 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingMenuActions.cs | 1795 | 500 | Extract responsibilities until the production file is at most 500 lines. |
