@@ -735,15 +735,15 @@
     {
       "categories": {
         "reflection-based-newtonsoft": 2,
-        "runtime-type-discovery": 3
+        "runtime-type-discovery": 5
       },
       "errors": [],
-      "findingCount": 5,
+      "findingCount": 7,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "line": 405,
+          "line": 407,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -756,8 +756,22 @@
         },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
+          "line": 68,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
+          "line": 107,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
-          "line": 179,
+          "line": 441,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -1289,7 +1303,7 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 44
+      "runtime-type-discovery": 46
     },
     "cleanRepositoryCount": 42,
     "modeCounts": {
@@ -1297,7 +1311,7 @@
     },
     "repositoriesWithFindings": 20,
     "repositoryCount": 62,
-    "totalFindingCount": 67,
+    "totalFindingCount": 69,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

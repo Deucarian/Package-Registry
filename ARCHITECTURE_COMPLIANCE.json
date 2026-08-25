@@ -558,7 +558,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 733,
+      "lineCount": 736,
       "lineLimit": 500,
       "packageId": "com.deucarian.simultria-viewer-connection",
       "repository": "Simultria-Viewer-Connection",
@@ -570,7 +570,7 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 722,
+      "lineCount": 726,
       "lineLimit": 500,
       "packageId": "com.deucarian.simultria-viewer-connection",
       "repository": "Simultria-Viewer-Connection",
@@ -587,6 +587,18 @@
       "packageId": "com.deucarian.simultria-viewer-connection",
       "repository": "Simultria-Viewer-Connection",
       "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.SimultriaViewerConnection",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 580,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-connection",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
@@ -2259,18 +2271,24 @@
         {
           "assembly": "Deucarian.SimultriaViewerConnection.Editor",
           "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
-          "lineCount": 733,
+          "lineCount": 736,
           "scope": "Editor production"
         },
         {
           "assembly": "Deucarian.SimultriaViewerConnection",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "lineCount": 722,
+          "lineCount": 726,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.SimultriaViewerConnection",
+          "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
+          "lineCount": 580,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.simultria-viewer-connection",
-      "productionFileCount": 22,
+      "productionFileCount": 27,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
@@ -2969,13 +2987,13 @@
   "summary": {
     "compliantRepositoryCount": 34,
     "findingsByDisposition": {
-      "RefactorBacklog": 96,
+      "RefactorBacklog": 97,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 11,
       "MissingSharedArchitectureValidation": 5,
-      "ProductionFileExceedsLineLimit": 96
+      "ProductionFileExceedsLineLimit": 97
     },
     "repositoryCount": 63
   }
