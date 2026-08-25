@@ -28,7 +28,9 @@ Schema version: 2
 | runtime-theming | com.deucarian.theming | Theming | com.deucarian.template.viewer.web, com.deucarian.ui, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite, com.deucarian.xr-ui.theming-integration |
 | session | com.deucarian.session | Session | com.deucarian.session.api-integration, com.deucarian.simultria-api, com.deucarian.simultria-viewer-connection, com.deucarian.template.viewer.web, com.deucarian.viewer-authentication, com.deucarian.web-viewer-suite |
 | shared-motion-easing | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.media, com.deucarian.object-loading, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.world-spawning, com.deucarian.xr-ui |
+| simultria-activity-model-integration | com.deucarian.activity-visualization.simultria | (pending) | (none) |
 | simultria-api-integration | com.deucarian.simultria-api | Simultria-API | com.deucarian.simultria-viewer-connection |
+| simultria-model-rendering | com.deucarian.simultria.rendering | (pending) | (none) |
 | simultria-viewer-development-connection | com.deucarian.simultria-viewer-connection | Simultria-Viewer-Connection | (none) |
 | ui-binding | com.deucarian.ui-binding | UI-Binding | com.deucarian.selection-suite, com.deucarian.ui-binding.core-state-integration |
 | ui-flow | com.deucarian.ui-flow | UI-FLow | (none) |

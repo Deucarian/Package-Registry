@@ -13,18 +13,18 @@ once.
 ## Summary
 
 - Repositories: 63
-- Fully compliant repositories: 35
+- Fully compliant repositories: 34
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 95 |
+| RefactorBacklog | 96 |
 | SetupRequired | 16 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 11 |
 | MissingSharedArchitectureValidation | 5 |
-| ProductionFileExceedsLineLimit | 95 |
+| ProductionFileExceedsLineLimit | 96 |
 
 ## Repository Status
 
@@ -40,7 +40,7 @@ once.
 | Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 26 | 1 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
-| Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 29 | 1 | 0 | 0 |
+| Command-Routing | com.deucarian.command-routing | RefactorBacklog | Yes | Yes | 30 | 1 | 1 | 0 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Command-Routing-WebGL-Integration | com.deucarian.command-routing.webgl-integration | SetupRequired | No | Yes | 11 | 1 | 0 | 0 |
 | Common | com.deucarian.common | Compliant | Yes | Yes | 2 | 3 | 0 | 0 |
@@ -71,18 +71,18 @@ once.
 | Session | com.deucarian.session | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | No | 29 | 1 | 1 | 0 |
-| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-connection | SetupRequired | No | No | 20 | 1 | 3 | 0 |
+| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-connection | SetupRequired | No | No | 22 | 1 | 3 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 49 | 2 | 15 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 19 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 23 | 2 | 13 | 0 |
-| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 18 | 2 | 2 | 0 |
+| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 21 | 2 | 2 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 1 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 71 | 2 | 7 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 45 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
-| Viewer-Authentication | com.deucarian.viewer-authentication | SetupRequired | No | Yes | 42 | 1 | 1 | 0 |
+| Viewer-Authentication | com.deucarian.viewer-authentication | SetupRequired | No | Yes | 43 | 1 | 1 | 0 |
 | Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 26 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | SetupRequired | No | No | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | SetupRequired | No | No | 17 | 1 | 0 | 0 |
@@ -108,6 +108,7 @@ once.
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianBuildManagerWindow.cs | 952 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs | 594 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Command-Routing | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/CommandRoutingEditorWindow.cs | 923 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Command-Routing-WebGL-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Diagnostics | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DiagnosticsWindow.cs | 646 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -124,8 +125,8 @@ once.
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryService.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11367 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 9005 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2888 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/PackageInstallerWindow.cs | 9000 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageUpdateCheckService.cs | 2931 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageEcosystemGraphLayout.cs | 2513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageInstallService.cs | 1950 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageDependencyInstaller.cs | 1479 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -145,9 +146,9 @@ once.
 | Simultria-API | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Configuration/SimultriaApiProfileAssetFactory.cs | 540 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-Viewer-Connection | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Simultria-Viewer-Connection | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
+| Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/SimultriaViewerEditorAuthenticationWorkspace.cs | 733 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs | 722 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/SimultriaViewerConnectionWindow.cs | 711 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/SimultriaViewerEditorAuthenticationWorkspace.cs | 681 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseTemplate.cs | 6878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentPackIndex.cs | 1758 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentSetProviderV2.cs | 1682 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -180,8 +181,8 @@ once.
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsPayloadWeapons.cs | 688 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsRunFlow.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Viewer-Web | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerBootstrap.cs | 698 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerApplication.cs | 609 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerBootstrap.cs | 704 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Template-Viewer-Web | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/WebViewerApplication.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemeManagerWindow.cs | 2531 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianDefaultThemeAssetFactory.cs | 1978 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingMenuActions.cs | 1795 | 500 | Extract responsibilities until the production file is at most 500 lines. |

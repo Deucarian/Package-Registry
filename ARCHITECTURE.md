@@ -105,6 +105,7 @@ architecture-compliance pass.
 - `RELEASE_POLICY.md` defines deferred npm/tag/release workflow policy.
 - `Tools/deucarian_package_validator.py` enforces package manifests, asmdefs, documentation, audit policy, and registry/catalog consistency.
 - Generated audit artifacts (`*_AUDIT.json`, `DUPLICATION_REPORT.json`) describe current organization state and must stay in sync.
+- The authoritative organization source audit provisions public catalog repositories. Packages marked `sourceVisibility: private` remain governed by registry metadata and their own package-validation workflow but are excluded from credential-free cross-repository source provisioning.
 
 ## Distribution And Release
 

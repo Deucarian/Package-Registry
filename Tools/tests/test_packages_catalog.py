@@ -34,6 +34,18 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.diagnostics",
                 "com.deucarian.logging",
             ],
+            "com.deucarian.simultria.rendering": [],
+            "com.deucarian.activity-visualization.simultria": [
+                "com.deucarian.activity-visualization",
+                "com.deucarian.api",
+                "com.deucarian.command-routing",
+                "com.deucarian.diagnostics",
+                "com.deucarian.session",
+                "com.deucarian.simultria-api",
+                "com.deucarian.simultria.rendering",
+                "com.deucarian.template.viewer.web",
+                "com.deucarian.viewer-authentication",
+            ],
             "com.deucarian.viewer-rendering": [
                 "com.deucarian.common",
                 "com.deucarian.diagnostics",
@@ -130,12 +142,38 @@ class PackagesCatalogTests(unittest.TestCase):
             packages_by_id["com.deucarian.simultria-viewer-connection"]["recommendedWith"],
         )
         self.assertEqual(
-            ["core", "authenticated", "simultria"],
+            ["com.deucarian.template.viewer.web"],
+            packages_by_id["com.deucarian.simultria.rendering"]["recommendedWith"],
+        )
+        self.assertEqual(
+            ["com.deucarian.template.viewer.web"],
+            packages_by_id["com.deucarian.activity-visualization.simultria"]["recommendedWith"],
+        )
+        self.assertEqual(
+            "private",
+            packages_by_id["com.deucarian.simultria.rendering"]["sourceVisibility"],
+        )
+        self.assertEqual(
+            "private",
+            packages_by_id["com.deucarian.activity-visualization.simultria"]["sourceVisibility"],
+        )
+        self.assertEqual(
+            ["core", "authenticated", "simultria", "simultria-activity"],
             [preset["id"] for preset in template["compositionPresets"]],
         )
         self.assertEqual(
-            ["com.deucarian.simultria-viewer-connection"],
+            [
+                "com.deucarian.simultria-viewer-connection",
+                "com.deucarian.simultria.rendering",
+            ],
             template["compositionPresets"][2]["packageIds"],
+        )
+        self.assertEqual(
+            [
+                "com.deucarian.activity-visualization.simultria",
+                "com.deucarian.simultria-viewer-connection",
+            ],
+            template["compositionPresets"][3]["packageIds"],
         )
 
     def test_idle_auto_defense_template_declares_every_direct_assembly_dependency(self):
