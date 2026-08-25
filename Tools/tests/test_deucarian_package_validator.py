@@ -224,6 +224,19 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
         self.assertTrue(any("kind must be one of" in error for error in validator.errors))
         self.assertTrue(any("derived reverse relation" in error for error in validator.errors))
 
+    def test_registry_rejects_unknown_source_visibility(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        package = validator.packages["packages"][0]
+        package["sourceVisibility"] = "secret"
+
+        validator.validate_registry_schema()
+
+        self.assertTrue(any(
+            "sourceVisibility must be 'public' or 'private'" in error
+            for error in validator.errors
+        ))
+
     def test_registry_rejects_template_preset_without_forward_recommendation(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)

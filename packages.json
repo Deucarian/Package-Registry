@@ -670,6 +670,7 @@
       "iconKey": "palette",
       "stableUrl": "https://github.com/Deucarian/Simultria-Rendering.git#main",
       "developmentUrl": "https://github.com/Deucarian/Simultria-Rendering.git#develop",
+      "sourceVisibility": "private",
       "dependencies": [],
       "recommendedWith": [
         "com.deucarian.template.viewer.web"
@@ -688,6 +689,7 @@
       "iconKey": "scan-eye",
       "stableUrl": "https://github.com/Deucarian/Simultria-Activity-Visualization.git#main",
       "developmentUrl": "https://github.com/Deucarian/Simultria-Activity-Visualization.git#develop",
+      "sourceVisibility": "private",
       "dependencies": [
         "com.deucarian.activity-visualization",
         "com.deucarian.api",

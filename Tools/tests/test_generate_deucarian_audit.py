@@ -649,6 +649,11 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                         {
                             "id": "com.deucarian.alpha",
                             "developmentUrl": "https://github.com/Deucarian/Alpha.git#develop",
+                        },
+                        {
+                            "id": "com.deucarian.private",
+                            "developmentUrl": "https://github.com/Deucarian/Private.git#develop",
+                            "sourceVisibility": "private",
                         }
                     ]
                 },

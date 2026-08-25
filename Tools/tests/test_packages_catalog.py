@@ -150,6 +150,14 @@ class PackagesCatalogTests(unittest.TestCase):
             packages_by_id["com.deucarian.activity-visualization.simultria"]["recommendedWith"],
         )
         self.assertEqual(
+            "private",
+            packages_by_id["com.deucarian.simultria.rendering"]["sourceVisibility"],
+        )
+        self.assertEqual(
+            "private",
+            packages_by_id["com.deucarian.activity-visualization.simultria"]["sourceVisibility"],
+        )
+        self.assertEqual(
             ["core", "authenticated", "simultria", "simultria-activity"],
             [preset["id"] for preset in template["compositionPresets"]],
         )

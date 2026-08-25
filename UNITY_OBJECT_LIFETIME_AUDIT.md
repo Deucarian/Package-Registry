@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 679 |
+| direct Unity API call | 686 |
 | helper call site | 68 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 748 |
+| Allowed | 755 |
 
 ## Production Semantic Comparison
 
@@ -254,17 +254,19 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 121 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 177 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 178 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 260 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 368 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 414 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 415 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 444 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 561 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 263 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 403 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 449 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 450 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 479 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerAuthenticationWorkspaceTests.cs | 596 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerConnectionEditorContractTests.cs | 72 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerConnectionEditorContractTests.cs | 73 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerDevelopmentProfileTests.cs | 29 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerDevelopmentProfileTests.cs | 110 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerDevelopmentProfileTests.cs | 111 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerDevelopmentProfileTests.cs | 133 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerDevelopmentProfileTests.cs | 134 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerEnvironmentResolverTests.cs | 49 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerInitializationCommandTests.cs | 71 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerInitializationCommandTests.cs | 73 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4153 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4164 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4209 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
@@ -277,5 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6410 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6412 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6413 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6414 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6415 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |

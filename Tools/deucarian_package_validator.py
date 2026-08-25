@@ -853,6 +853,12 @@ class Validator:
             for reverse_field in ("optionalCompanions", "optionalIntegrations"):
                 if reverse_field in pkg:
                     self.fail(f"{package_id}: {reverse_field} is a derived reverse relation and must not be stored in schema v2.")
+            source_visibility = pkg.get("sourceVisibility", "public")
+            if source_visibility not in {"public", "private"}:
+                self.fail(
+                    f"{package_id}: sourceVisibility must be 'public' or "
+                    f"'private', got {source_visibility!r}."
+                )
             for field, branch in (("stableUrl", "main"), ("developmentUrl", "develop")):
                 url = pkg.get(field, "")
                 match = GIT_URL_RE.match(str(url))
