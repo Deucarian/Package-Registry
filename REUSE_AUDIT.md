@@ -2,7 +2,7 @@
 
 Schema version: 2
 
-This is the hardened organization-wide audit snapshot for `Deucarian` at `develop`. It uses `tree-sitter-c-sharp` for C# parsing and records the current package sources and governance state.
+This is the hardened organization-wide audit snapshot for `Deucarian` at `main`. It uses `tree-sitter-c-sharp` for C# parsing and records the current package sources and governance state.
 
 ## Weaknesses Fixed From The Original Audit
 
