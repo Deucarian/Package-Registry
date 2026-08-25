@@ -530,7 +530,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 11367,
+      "lineCount": 11377,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -2424,7 +2424,7 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
-          "lineCount": 11367,
+          "lineCount": 11377,
           "scope": "Editor production"
         }
       ],
