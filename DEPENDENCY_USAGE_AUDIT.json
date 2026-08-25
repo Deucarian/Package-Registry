@@ -4778,7 +4778,7 @@
       "sourceMentionsByScope": {}
     },
     {
-      "classification": "EditorOnlyUse",
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.2",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.simultria-viewer-connection",
@@ -4798,6 +4798,18 @@
           ],
           "reference": "Deucarian.Logging",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Deucarian.SimultriaViewerConnection.asmdef",
+          "assembly": "Deucarian.SimultriaViewerConnection",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Logging",
+          "scope": "Runtime production",
           "versionDefines": []
         }
       ],
@@ -10264,9 +10276,9 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 33,
+    "EditorOnlyUse": 32,
     "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 152,
+    "RequiredAndUsed": 153,
     "SuiteComposition": 40,
     "TestOnlyUse": 11
   }

@@ -3458,7 +3458,7 @@
       "containingSymbol": "SimultriaViewerEnvironmentResolverTests::TearDown",
       "file": "Tests/Editor/SimultriaViewerEnvironmentResolverTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 49,
+      "line": 50,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "policyDisposition": "Allowed",
