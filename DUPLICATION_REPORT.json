@@ -289086,10 +289086,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156",
+        "headCommit": "9395b98842884058831dfad6329fff4fe960a637",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156"
+        "requestedRefCommit": "9395b98842884058831dfad6329fff4fe960a637"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -289121,13 +289121,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.5",
+      "packageVersion": "1.2.6",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "ae565d6ad2d93ff0b159dceb4b3950d8e38a7156",
-        "manifestSha256": "cd41484ea971d7139d68a8dd9b3ba2804a5ab079bd7fb18ec11617816b1ca510",
+        "headCommit": "9395b98842884058831dfad6329fff4fe960a637",
+        "manifestSha256": "b394316c25918a4c56b6ec0f1addc7a11ecfc5cfc36a036613fada019b4868d2",
         "requestedRef": "develop"
       },
       "registryDependencies": null,
