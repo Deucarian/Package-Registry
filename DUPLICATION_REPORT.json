@@ -42242,7 +42242,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "fcd04c925e8c27b6ccaeed9a2bc1df16c47727916d71c3b0f4cbc4f7f2fbb342",
       "dependencyRulesSha256": "698ff761bc11a16f4baee78e8312d30e28b4abdbe9f59056658ca6ad88ad458a",
-      "packagesSha256": "6ce376fffad67639c2c4c96158076cd59f46b201ad23aa6b312d1bd10a533663"
+      "packagesSha256": "e28ea2919e126cc391c0a321088e8d531b5dfb95c827dc14aa600f5c8951c9a4"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -289156,10 +289156,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "23165f5aaee19d9c0e3b49571ab379db3046393f",
+        "headCommit": "0ac54b0a4642e4204508dd8b674b675ec65f73ae",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "main",
-        "requestedRefCommit": "23165f5aaee19d9c0e3b49571ab379db3046393f"
+        "requestedRefCommit": "0ac54b0a4642e4204508dd8b674b675ec65f73ae"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -289191,13 +289191,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.5",
+      "packageVersion": "1.2.6",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "23165f5aaee19d9c0e3b49571ab379db3046393f",
-        "manifestSha256": "cd41484ea971d7139d68a8dd9b3ba2804a5ab079bd7fb18ec11617816b1ca510",
+        "headCommit": "0ac54b0a4642e4204508dd8b674b675ec65f73ae",
+        "manifestSha256": "b394316c25918a4c56b6ec0f1addc7a11ecfc5cfc36a036613fada019b4868d2",
         "requestedRef": "main"
       },
       "registryDependencies": null,
@@ -292806,7 +292806,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "364e104f4896af6f97f8a050558a03f07a6c4fa44ae3e73925f8ada176907584",
+        "auditInputSha256": "2d039f3054dcb373b2129c01c6e215d30b8bb4034702e6c6650be49140b6059c",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
