@@ -79,6 +79,7 @@ Package Registry is the source of truth for `stableUrl` and `developmentUrl`. Pa
 - `description`: Short explanation of what the package provides.
 - `stableUrl`: GitHub HTTPS Unity Package Manager URL for the stable install channel. Mature packages normally use `#main`; pre-stable bootstrap packages may temporarily point this at a verified development branch when `main` does not exist yet.
 - `developmentUrl`: GitHub HTTPS Unity Package Manager URL for the development install channel.
+- `sourceVisibility`: Optional source access policy. `public` is the default. `private` keeps the package installable for authorized users but excludes its source checkout from the credential-free organization audit; the package's own validation workflow remains mandatory.
 - `dependencies`: Package IDs that must also exist in this registry and should be installed first by the Package Installer.
 - `overviewOrder`: Optional positive integer used to order packages within their semantic overview sector.
 - `integrationTargets`: Package IDs connected by an Integration package in the Package Installer ecosystem graph.

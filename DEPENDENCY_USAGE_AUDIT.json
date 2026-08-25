@@ -4861,7 +4861,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.4.0",
+      "declaredVersion": "0.4.1",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
@@ -4915,7 +4915,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.5.0",
+      "declaredVersion": "0.5.1",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.simultria-viewer-connection",
       "referencedAssemblies": [
@@ -7083,13 +7083,42 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.2",
+      "declaredVersion": "0.2.2",
       "dependency": "com.deucarian.command-routing",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
-        "Deucarian.CommandRouting"
+        "Deucarian.CommandRouting",
+        "Deucarian.CommandRouting.Editor"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
           "assembly": "Deucarian.TemplateViewerWeb",
@@ -7117,6 +7146,22 @@
           "reference": "Deucarian.CommandRouting",
           "scope": "Test",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting.Editor",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Viewer-Web",
@@ -7142,6 +7187,22 @@
           "includePlatforms": [],
           "reference": "Deucarian.CommandRouting.WebGLIntegration",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting.WebGLIntegration",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -7456,13 +7517,27 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.5.0",
+      "declaredVersion": "0.5.1",
       "dependency": "com.deucarian.viewer-authentication",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
         "Deucarian.ViewerAuthentication"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.ViewerAuthentication",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.TemplateViewerWeb.asmdef",
           "assembly": "Deucarian.TemplateViewerWeb",

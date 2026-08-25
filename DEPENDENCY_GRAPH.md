@@ -111,8 +111,8 @@ Schema version: 2
 | com.deucarian.simultria-viewer-connection | com.deucarian.editor | 1.0.5 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-connection | com.deucarian.logging | 1.0.2 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-connection | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.4.0 | Simultria-Viewer-Connection | Simultria-API |
-| com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.5.0 | Simultria-Viewer-Connection | Viewer-Authentication |
+| com.deucarian.simultria-viewer-connection | com.deucarian.simultria-api | 0.4.1 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-connection | com.deucarian.viewer-authentication | 0.5.1 | Simultria-Viewer-Connection | Viewer-Authentication |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -152,7 +152,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.api | 1.2.0 | Template-Viewer-Web | API |
 | com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.5.0 | Template-Viewer-Web | Build-Pipeline |
 | com.deucarian.template.viewer.web | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer-Web | Camera-Navigation |
-| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.1.2 | Template-Viewer-Web | Command-Routing |
+| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.2 | Template-Viewer-Web | Command-Routing |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
 | com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
@@ -162,7 +162,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.session.api-integration | 1.1.1 | Template-Viewer-Web | Session-API-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.0 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.0 | Template-Viewer-Web | Viewer-Authentication |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.1 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
@@ -238,5 +238,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 31
+- Dependency version drift entries: 33
 - Registry dependency drift entries: 0

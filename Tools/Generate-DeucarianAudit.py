@@ -1370,6 +1370,8 @@ def expected_repository_specs(registry_document: dict[str, Any], organization: s
     specs: list[dict[str, Any]] = []
     url_field = "stableUrl" if ref == "main" else "developmentUrl"
     for package in sorted(registry_document.get("packages", []), key=lambda item: item.get("id", "")):
+        if package.get("sourceVisibility", "public") == "private":
+            continue
         package_id = package.get("id")
         url = package.get(url_field) or package.get("developmentUrl") or package.get("stableUrl")
         if not package_id or not url:
