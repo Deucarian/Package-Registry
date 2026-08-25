@@ -19,6 +19,8 @@
 | UI navigation, routing, screens, channels, and guards | `com.deucarian.ui-flow` |
 | World-object selection, hover, raycast adapters | `com.deucarian.object-selection` |
 | Flat Activity membership planning, revisions, baseline restoration, model visibility state | `com.deucarian.activity-visualization` |
+| Canonical Simultria shaders, neutral material rebinding, WebGL shader-inclusion validation | `com.deucarian.simultria.rendering` |
+| Simultria Activity metadata and Processor relationship integration with visibility commands and test scenarios | `com.deucarian.activity-visualization.simultria` |
 | Viewer navigation toolbar/action state, reference/origin wiring, input gating, view cube UX | `com.deucarian.viewer-navigation` |
 | Viewer camera, lighting, URP quality, post-processing, reflection, environment, and display settings | `com.deucarian.viewer-rendering` |
 | Viewer status, diagnostics, display-settings chrome, responsive layout, menu coordination, theming, and input boundaries | `com.deucarian.viewer-shell` |

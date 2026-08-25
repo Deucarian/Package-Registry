@@ -161,6 +161,16 @@
       "ownerPackageId": "com.deucarian.activity-visualization"
     },
     {
+      "description": "Canonical Simultria model shaders, neutral material rebinding, and deterministic WebGL shader-inclusion validation for AssetBundle-loaded models.",
+      "id": "simultria-model-rendering",
+      "ownerPackageId": "com.deucarian.simultria.rendering"
+    },
+    {
+      "description": "Integration of Simultria Activity metadata and embedded Processor model relationships with Activity visibility, viewer commands, and generated command-test scenarios.",
+      "id": "simultria-activity-model-integration",
+      "ownerPackageId": "com.deucarian.activity-visualization.simultria"
+    },
+    {
       "description": "Canonical viewer navigation action/state coordination, reference bounds and origin wiring, input blocking, toolbar presentation, and view cube UX.",
       "id": "viewer-navigation-experience",
       "ownerPackageId": "com.deucarian.viewer-navigation"
