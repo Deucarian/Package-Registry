@@ -9,7 +9,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 - Repositories scanned: **62**
 - Repositories with findings: **20**
 - Clean repositories: **42**
-- Unresolved findings: **67**
+- Unresolved findings: **69**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -19,7 +19,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | --- | ---: |
 | `reflection-based-newtonsoft` | 13 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 44 |
+| `runtime-type-discovery` | 46 |
 
 ## Repository Status
 
@@ -65,7 +65,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.session` | `Session` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.session.api-integration` | `Session-API-Integration` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.simultria-api` | `Simultria-API` | `Audit` | 0 | 0 | Valid |
-| `com.deucarian.simultria-viewer-connection` | `Simultria-Viewer-Connection` | `Audit` | 5 | 0 | Valid |
+| `com.deucarian.simultria-viewer-connection` | `Simultria-Viewer-Connection` | `Audit` | 7 | 0 | Valid |
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
@@ -197,9 +197,11 @@ Mode: `Audit`
 Repository: `Simultria-Viewer-Connection`  
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs`:405 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs`:407 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs`:165 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerEnvironmentResolver.cs`:179 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:68 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:107 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerEnvironmentResolver.cs`:441 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.FromObject` at `Runtime/Initialization/SimultriaViewerInitializationCommand.cs`:32 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `reflection-based-newtonsoft` — `.FromObject` at `Runtime/Initialization/SimultriaViewerInitializationCommand.cs`:57 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 
