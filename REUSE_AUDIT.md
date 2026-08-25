@@ -22,7 +22,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Attacks | com.deucarian.attacks | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.combat, com.deucarian.editor, com.deucarian.game-content-authoring | 5 | 389 |
 | Auto-Defense | com.deucarian.auto-defense | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.defense-games, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems | 4 | 112 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 1 | 0 |
-| Bootstrap | com.deucarian.bootstrap | 1.2.6 | 2021.3 | yes | clean | (none) | 2 | 1 |
+| Bootstrap | com.deucarian.bootstrap | 1.2.7 | 2021.3 | yes | clean | (none) | 2 | 1 |
 | Build-Pipeline | com.deucarian.build-pipeline | 0.5.0 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 72 |
 | Camera-Navigation | com.deucarian.camera-navigation | 0.2.10 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.editor | 4 | 153 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 81 |
@@ -47,7 +47,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.9 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 48 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.92 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Package-Installer | com.deucarian.package-installer | 1.1.94 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.1 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.2 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 57 |
@@ -94,7 +94,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Editor public API symbols | 2338 |
 | Test public symbols excluded from production API | 4382 |
 | Sample public symbols excluded from production API | 295 |
-| Internal/private production symbols | 11528 |
+| Internal/private production symbols | 11530 |
 | Public API symbols missing XML documentation | 9646 |
 | Debug invocation records | 25 |
 | Unity object lifetime records | 755 |
