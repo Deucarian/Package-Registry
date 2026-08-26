@@ -331,7 +331,8 @@ class Validator:
             return "test"
         if relative.startswith("Samples~"):
             return "sample"
-        if "Editor" in (asmdef.get("includePlatforms") or []) or relative.startswith("Editor"):
+        include_platforms = set(asmdef.get("includePlatforms") or [])
+        if relative.startswith("Editor") or include_platforms == {"Editor"}:
             return "editor"
         return "runtime"
 
