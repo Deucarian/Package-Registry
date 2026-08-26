@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 33 |
+| Editor-only use | 32 |
 | Optional version-defined use | 1 |
-| Required and used | 152 |
+| Required and used | 153 |
 | Suite composition | 40 |
 | Test-only use | 11 |
 
@@ -125,7 +125,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Simultria-Viewer-Connection | com.deucarian.api | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.API; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.API; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.API | Deucarian.API | 0 |
 | Simultria-Viewer-Connection | com.deucarian.command-routing | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.CommandRouting; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.CommandRouting; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
 | Simultria-Viewer-Connection | com.deucarian.editor | Editor-only use | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
-| Simultria-Viewer-Connection | com.deucarian.logging | Editor-only use | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Simultria-Viewer-Connection | com.deucarian.logging | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Logging; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Simultria-Viewer-Connection | com.deucarian.session | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Session; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.Session; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.Session | Deucarian.Session | 0 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-api | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.Simultria.API; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.Simultria.API; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.Simultria.API | Deucarian.Simultria.API | 0 |
 | Simultria-Viewer-Connection | com.deucarian.viewer-authentication | Required and used | Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.ViewerAuthentication; Editor production: Deucarian.SimultriaViewerConnection.Editor -> Deucarian.ViewerAuthentication.Editor; Runtime production: Deucarian.SimultriaViewerConnection -> Deucarian.ViewerAuthentication; Test: Deucarian.SimultriaViewerConnection.Tests -> Deucarian.ViewerAuthentication | Deucarian.ViewerAuthentication, Deucarian.ViewerAuthentication.Editor | 0 |

@@ -43,6 +43,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.session",
                 "com.deucarian.simultria-api",
                 "com.deucarian.simultria.rendering",
+                "com.deucarian.simultria-viewer-connection",
                 "com.deucarian.template.viewer.web",
                 "com.deucarian.viewer-authentication",
             ],
