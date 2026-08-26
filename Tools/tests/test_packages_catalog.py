@@ -126,6 +126,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.command-routing.webgl-integration",
                 "com.deucarian.diagnostics",
                 "com.deucarian.template.viewer",
+                "com.deucarian.viewer-authentication",
                 "com.deucarian.webgl-template",
             ],
         }
