@@ -163,7 +163,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.0 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.1 | Template-Viewer-Web | Viewer-Authentication |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.10 | Template-Viewer-Web | Viewer-Navigation |
+| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.11 | Template-Viewer-Web | Viewer-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
 | com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.15 | Template-Viewer-Web | Web-Viewer-Suite |
@@ -238,5 +238,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 33
+- Dependency version drift entries: 34
 - Registry dependency drift entries: 0
