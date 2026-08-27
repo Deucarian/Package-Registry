@@ -146,7 +146,7 @@
     },
     {
       "file": "Documentation~/index.md",
-      "kind": "MigrationDocumentation",
+      "kind": "ReviewRequired",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
     },
@@ -232,7 +232,7 @@
   "summary": {
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 8,
-    "ReviewRequired": 13
+    "MigrationDocumentation": 7,
+    "ReviewRequired": 14
   }
 }
