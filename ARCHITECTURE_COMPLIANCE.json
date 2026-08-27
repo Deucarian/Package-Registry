@@ -981,30 +981,6 @@
       "repository": "Template-Viewer-Web"
     },
     {
-      "assembly": "Deucarian.TemplateViewerWeb",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/WebViewerBootstrap.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 705,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.viewer.web",
-      "repository": "Template-Viewer-Web",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateViewerWeb",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/WebViewerApplication.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 676,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.viewer.web",
-      "repository": "Template-Viewer-Web",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.Theming.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -2555,7 +2531,8 @@
       "status": "SetupRequired",
       "testAssemblies": [
         "Deucarian.TemplateViewer.Tests.EditMode",
-        "Deucarian.TemplateViewer.Tests.PlayMode"
+        "Deucarian.TemplateViewer.Tests.PlayMode",
+        "Deucarian.TemplateViewer.Tests.Support"
       ]
     },
     {
@@ -2564,29 +2541,15 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.TemplateViewerWeb",
-          "file": "Runtime/WebViewerApplication.cs",
-          "lineCount": 676,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateViewerWeb",
-          "file": "Runtime/WebViewerBootstrap.cs",
-          "lineCount": 705,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 23,
+      "productionFileCount": 10,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
       "status": "SetupRequired",
       "testAssemblies": [
-        "Deucarian.TemplateViewerWeb.Tests.EditMode",
-        "Deucarian.TemplateViewerWeb.Tests.PlayMode"
+        "Deucarian.TemplateViewerWeb.Tests.EditMode"
       ]
     },
     {
@@ -3005,13 +2968,13 @@
   "summary": {
     "compliantRepositoryCount": 34,
     "findingsByDisposition": {
-      "RefactorBacklog": 97,
+      "RefactorBacklog": 95,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 12,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 97
+      "ProductionFileExceedsLineLimit": 95
     },
     "repositoryCount": 64
   }
