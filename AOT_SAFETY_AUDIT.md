@@ -6,10 +6,10 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 ## Summary
 
-- Repositories scanned: **62**
-- Repositories with findings: **20**
+- Repositories scanned: **63**
+- Repositories with findings: **21**
 - Clean repositories: **42**
-- Unresolved findings: **69**
+- Unresolved findings: **70**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -19,7 +19,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | --- | ---: |
 | `reflection-based-newtonsoft` | 13 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 46 |
+| `runtime-type-discovery` | 47 |
 
 ## Repository Status
 
@@ -69,6 +69,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
+| `com.deucarian.template.viewer` | `Template-Viewer` | `Audit` | 1 | 0 | Valid |
 | `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
@@ -214,6 +215,13 @@ Mode: `Audit`
 - `runtime-type-discovery` — `.GetFields` at `Runtime/SurvivorsContentValidation.cs`:2421 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflective-invocation` — `.GetValue` at `Runtime/SurvivorsContentValidation.cs`:2427 (`Reflection member invocation/access is not allowed in player code.`)
 - `reflective-invocation` — `.GetValue` at `Runtime/SurvivorsContentValidation.cs`:2432 (`Reflection member invocation/access is not allowed in player code.`)
+
+### `com.deucarian.template.viewer`
+
+Repository: `Template-Viewer`  
+Mode: `Audit`
+
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.cs`:150 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.theming`
 
