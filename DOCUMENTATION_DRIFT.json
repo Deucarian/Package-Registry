@@ -169,7 +169,7 @@
       "repository": "Template-Viewer-Web"
     },
     {
-      "file": "README.md",
+      "file": "Documentation~/architecture.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web"
