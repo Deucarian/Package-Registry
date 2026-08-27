@@ -12,5 +12,23 @@
     "DEBUG_API_AUDIT.json",
     "UNITY_OBJECT_LIFETIME_AUDIT.json",
     "DEPENDENCY_USAGE_AUDIT.json"
-  ]
+  ],
+  "acknowledgedOrganizationAuditBaseline": {
+    "dependencyUsage": [
+      {
+        "packageId": "com.deucarian.template.game.idle-auto-defense",
+        "classification": "MissingHardPackageDependency",
+        "count": 13,
+        "reason": "Pre-existing dependency declarations outside the platform migration scope; any count change fails validation."
+      }
+    ],
+    "unityObjectLifetime": [
+      {
+        "packageId": "com.deucarian.template.game.idle-auto-defense",
+        "policyDisposition": "Migrate",
+        "count": 4,
+        "reason": "Pre-existing lifetime-policy debt outside the platform migration scope; any count change fails validation."
+      }
+    ]
+  }
 }

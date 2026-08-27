@@ -558,9 +558,77 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
             self.assertEqual(
                 [
-                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha -> "
-                    "com.deucarian.missing is MissingHardPackageDependency."
+                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha "
+                    "MissingHardPackageDependency count 1 does not match "
+                    "acknowledged baseline 0."
                 ],
+                validator.errors,
+            )
+
+    def test_exact_acknowledged_organization_baseline_warns_and_count_drift_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write_json(
+                fixture.registry / "DEPENDENCY_USAGE_AUDIT.json",
+                {
+                    "findings": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.missing",
+                            "classification": "MissingHardPackageDependency",
+                        }
+                    ]
+                },
+            )
+            write_json(
+                fixture.registry / "UNITY_OBJECT_LIFETIME_AUDIT.json",
+                {
+                    "conclusion": {"actionableProductionCount": 1},
+                    "occurrences": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "policyDisposition": "Migrate",
+                        }
+                    ],
+                },
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+            validator.acknowledged_audit_baseline = {
+                "dependencyUsage": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "classification": "MissingHardPackageDependency",
+                        "count": 1,
+                        "reason": "Reviewed inherited baseline.",
+                    }
+                ],
+                "unityObjectLifetime": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "policyDisposition": "Migrate",
+                        "count": 1,
+                        "reason": "Reviewed inherited baseline.",
+                    }
+                ],
+            }
+
+            validator.validate_authoritative_audit_artifacts()
+
+            self.assertEqual([], validator.errors)
+            self.assertEqual(2, len(validator.warnings))
+
+            validator.errors.clear()
+            validator.acknowledged_audit_baseline["dependencyUsage"][0][
+                "count"
+            ] = 2
+            validator.validate_authoritative_audit_artifacts()
+            self.assertIn(
+                "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha "
+                "MissingHardPackageDependency count 1 does not match "
+                "acknowledged baseline 2.",
                 validator.errors,
             )
 

@@ -120,6 +120,7 @@ class Validator:
         self.errors: list[str] = []
         self.warnings: list[str] = []
         self.details: dict[str, Any] = {}
+        self.acknowledged_audit_baseline: dict[str, Any] = {}
         self.packages = self.read_json(self.registry_root / "packages.json", required=False) or {"packages": []}
         self.capabilities = self.read_json(self.registry_root / "capabilities.json", required=False) or {"capabilities": []}
         self.dependency_rules = self.read_json(self.registry_root / "dependency-rules.json", required=False) or {}
@@ -313,6 +314,14 @@ class Validator:
     def validate_registry_repository_config(self, config: dict[str, Any]) -> None:
         if config.get("repositoryName") != "Package-Registry":
             self.fail("Package Registry config must use repositoryName Package-Registry.")
+        baseline = config.get("acknowledgedOrganizationAuditBaseline") or {}
+        if not isinstance(baseline, dict):
+            self.fail(
+                "deucarian-package.json: "
+                "acknowledgedOrganizationAuditBaseline must be an object."
+            )
+            baseline = {}
+        self.acknowledged_audit_baseline = baseline
         self.validate_registry()
         for required in ("packages.json", "capabilities.json", "dependency-rules.json"):
             if not (self.registry_root / required).exists():
@@ -793,12 +802,22 @@ class Validator:
             "OptionalVersionDefinedUse",
             "SuiteComposition",
         }
+        dependency_findings: dict[tuple[str, str], int] = defaultdict(int)
         for finding in self.dependency_usage_audit.get("findings", []):
             classification = finding.get("classification")
             if classification not in accepted_dependency_classifications:
                 package_id = finding.get("packageId", "<unknown>")
-                dependency = finding.get("dependency", "<unknown>")
-                self.fail(f"DEPENDENCY_USAGE_AUDIT.json: {package_id} -> {dependency} is {classification}.")
+                dependency_findings[(package_id, classification)] += 1
+
+        acknowledged_dependencies = self.audit_baseline_counts(
+            "dependencyUsage",
+            "classification",
+        )
+        self.validate_audit_baseline_counts(
+            "DEPENDENCY_USAGE_AUDIT.json",
+            dependency_findings,
+            acknowledged_dependencies,
+        )
 
         for invocation in self.debug_audit.get("invocations", []):
             if invocation.get("policyDisposition") != "Allowed":
@@ -807,16 +826,101 @@ class Validator:
                 line = invocation.get("line", "?")
                 self.fail(f"DEBUG_API_AUDIT.json: {package_id} {file_path}:{line} is not Allowed.")
 
-        conclusion = self.lifetime_audit.get("conclusion") or {}
-        actionable = int(conclusion.get("actionableProductionCount") or 0)
-        if actionable:
-            self.fail(f"UNITY_OBJECT_LIFETIME_AUDIT.json: {actionable} actionable production lifetime call(s) remain.")
+        lifetime_findings: dict[tuple[str, str], int] = defaultdict(int)
         for occurrence in self.lifetime_audit.get("occurrences", []):
             if occurrence.get("policyDisposition") != "Allowed":
                 package_id = occurrence.get("packageId", "<unknown>")
-                file_path = occurrence.get("file", "<unknown>")
-                line = occurrence.get("line", "?")
-                self.fail(f"UNITY_OBJECT_LIFETIME_AUDIT.json: {package_id} {file_path}:{line} is not Allowed.")
+                disposition = occurrence.get("policyDisposition", "<unknown>")
+                lifetime_findings[(package_id, disposition)] += 1
+        acknowledged_lifetime = self.audit_baseline_counts(
+            "unityObjectLifetime",
+            "policyDisposition",
+        )
+        self.validate_audit_baseline_counts(
+            "UNITY_OBJECT_LIFETIME_AUDIT.json",
+            lifetime_findings,
+            acknowledged_lifetime,
+        )
+
+        conclusion = self.lifetime_audit.get("conclusion") or {}
+        actionable = int(conclusion.get("actionableProductionCount") or 0)
+        counted_actionable = sum(lifetime_findings.values())
+        if actionable != counted_actionable:
+            self.fail(
+                "UNITY_OBJECT_LIFETIME_AUDIT.json: actionable production "
+                f"count {actionable} does not match {counted_actionable} "
+                "non-Allowed occurrence(s)."
+            )
+
+    def audit_baseline_counts(
+        self,
+        section: str,
+        classification_field: str,
+    ) -> dict[tuple[str, str], int]:
+        counts: dict[tuple[str, str], int] = {}
+        entries = self.acknowledged_audit_baseline.get(section) or []
+        if not isinstance(entries, list):
+            self.fail(
+                "deucarian-package.json: acknowledgedOrganizationAuditBaseline."
+                f"{section} must be an array."
+            )
+            return counts
+        for entry in entries:
+            if not isinstance(entry, dict):
+                self.fail(
+                    "deucarian-package.json: acknowledged audit baseline "
+                    f"{section} entries must be objects."
+                )
+                continue
+            package_id = str(entry.get("packageId") or "")
+            classification = str(entry.get(classification_field) or "")
+            count = entry.get("count")
+            reason = str(entry.get("reason") or "").strip()
+            if (
+                not package_id
+                or not classification
+                or not isinstance(count, int)
+                or count <= 0
+                or not reason
+            ):
+                self.fail(
+                    "deucarian-package.json: acknowledged audit baseline "
+                    f"{section} entries require packageId, "
+                    f"{classification_field}, positive count, and reason."
+                )
+                continue
+            key = (package_id, classification)
+            if key in counts:
+                self.fail(
+                    "deucarian-package.json: duplicate acknowledged audit "
+                    f"baseline entry for {package_id} {classification}."
+                )
+                continue
+            counts[key] = count
+        return counts
+
+    def validate_audit_baseline_counts(
+        self,
+        artifact: str,
+        actual: dict[tuple[str, str], int],
+        acknowledged: dict[tuple[str, str], int],
+    ) -> None:
+        for key in sorted(set(actual) | set(acknowledged)):
+            actual_count = actual.get(key, 0)
+            expected_count = acknowledged.get(key, 0)
+            package_id, classification = key
+            if actual_count != expected_count:
+                self.fail(
+                    f"{artifact}: {package_id} {classification} count "
+                    f"{actual_count} does not match acknowledged baseline "
+                    f"{expected_count}."
+                )
+            elif actual_count:
+                self.warn(
+                    f"{artifact}: acknowledged baseline retains "
+                    f"{actual_count} {classification} finding(s) for "
+                    f"{package_id}."
+                )
 
     def validate_registry_schema(self) -> None:
         data = self.packages
