@@ -79,6 +79,32 @@ EDITOR_SURFACE_RE = re.compile(
     r"\b(?:EditorWindow|SettingsProvider|CustomEditor|MenuItem)\b"
 )
 DIAGNOSTIC_PROVIDER_RE = re.compile(r"\bIDiagnosticProvider\b")
+LEGACY_API_PROFILE_MARKERS = (
+    ("legacy Simultria API settings type", "SimultriaApi" + "Profile"),
+    ("legacy effective API settings property", "EffectiveApi" + "Profile"),
+    ("legacy serialized API settings field", "api" + "ProfileReference"),
+    (
+        "legacy Simultria API settings script GUID",
+        "98c59614849544b4" + "9d34f059afc91fb5",
+    ),
+)
+HARDCODED_PACKAGE_FOOTER_VERSION_RE = re.compile(
+    r'DrawFooterVersion\s*\(\s*"[^"]+"\s*,\s*'
+    r'"\d+\.\d+\.\d+(?:-[^"]+)?"\s*\)',
+    re.S,
+)
+LEGACY_API_SCAN_SUFFIXES = {
+    ".asmdef",
+    ".asmref",
+    ".asset",
+    ".cs",
+    ".json",
+    ".meta",
+    ".prefab",
+    ".unity",
+    ".uss",
+    ".uxml",
+}
 
 
 class ValidationError(Exception):
@@ -263,6 +289,8 @@ class Validator:
         self.validate_asmdef_dependencies(package_id, dependencies, config, asmdefs)
         self.validate_samples(root, config, asmdefs)
         self.validate_generated_files(root)
+        self.validate_legacy_api_profile_absence(package_id, root)
+        self.validate_package_footer_versions(package_id, root)
         self.validate_release_workflow_policy(root)
         self.validate_architecture_calls(package_id, config, root)
         self.validate_ecosystem_policy_dependencies(
@@ -473,6 +501,40 @@ class Validator:
                     if guid in meta_guids:
                         self.fail(f"Duplicate Unity .meta GUID {guid}: {meta_guids[guid]} and {relative}.")
                     meta_guids[guid] = relative
+
+    def validate_legacy_api_profile_absence(
+        self,
+        package_id: str,
+        root: Path,
+    ) -> None:
+        for path in self.iter_files(root):
+            if path.suffix.lower() not in LEGACY_API_SCAN_SUFFIXES:
+                continue
+            relative = path.relative_to(root).as_posix()
+            content = self.text(path)
+            for label, marker in LEGACY_API_PROFILE_MARKERS:
+                if marker in content:
+                    self.fail(
+                        f"{package_id}: {label} is forbidden in {relative}."
+                    )
+
+    def validate_package_footer_versions(
+        self,
+        package_id: str,
+        root: Path,
+    ) -> None:
+        for path in self.iter_files(root):
+            if path.suffix != ".cs":
+                continue
+            relative = path.relative_to(root).as_posix()
+            if self.path_scope(relative) in {"test", "sample"}:
+                continue
+            if HARDCODED_PACKAGE_FOOTER_VERSION_RE.search(self.text(path)):
+                self.fail(
+                    f"{package_id}: hardcoded package footer version is "
+                    f"forbidden in {relative}; resolve installed package "
+                    "metadata instead."
+                )
 
     def validate_architecture_calls(self, package_id: str, config: dict[str, Any], root: Path) -> None:
         allowed_debug_files = {item.get("file", "").replace("\\", "/") for item in config.get("allowedDirectDebugCalls") or []}

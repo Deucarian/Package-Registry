@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "develop",
+  "ref": "platform-migration-working-tree",
   "repositories": [
     {
       "categories": {
@@ -97,6 +97,28 @@
       "ok": true,
       "packageId": "com.deucarian.attacks",
       "repository": "Attacks",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerIntegration/ViewerRuntimeConnectionProviderRegistry.cs",
+          "line": 155,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.authentication",
+      "repository": "Viewer-Authentication",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
     },
@@ -513,7 +535,7 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/ObjectLoadRequest.cs",
-          "line": 169,
+          "line": 167,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         },
@@ -549,7 +571,7 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/ApiObjectDownloadMapper.cs",
-          "line": 288,
+          "line": 248,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         }
@@ -721,10 +743,20 @@
       "suppressedFindings": []
     },
     {
-      "categories": {},
+      "categories": {
+        "runtime-type-discovery": 1
+      },
       "errors": [],
-      "findingCount": 0,
-      "findings": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs",
+          "line": 112,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
       "mode": "Audit",
       "ok": true,
       "packageId": "com.deucarian.simultria-api",
@@ -735,22 +767,22 @@
     {
       "categories": {
         "reflection-based-newtonsoft": 2,
-        "runtime-type-discovery": 5
+        "runtime-type-discovery": 4
       },
       "errors": [],
-      "findingCount": 7,
+      "findingCount": 6,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "line": 407,
+          "line": 309,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
-          "line": 165,
+          "line": 131,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -765,13 +797,6 @@
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
           "line": 107,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        },
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
-          "line": 441,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -792,7 +817,7 @@
       ],
       "mode": "Audit",
       "ok": true,
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
@@ -1059,28 +1084,6 @@
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/ViewerRuntimeConnectionProviderRegistry.cs",
-          "line": 155,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        }
-      ],
-      "mode": "Audit",
-      "ok": true,
-      "packageId": "com.deucarian.viewer-authentication",
-      "repository": "Viewer-Authentication",
-      "suppressedFindingCount": 0,
-      "suppressedFindings": []
-    },
-    {
-      "categories": {
-        "runtime-type-discovery": 1
-      },
-      "errors": [],
-      "findingCount": 1,
-      "findings": [
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/ViewerNavigationUiInputBlocker.cs",
           "line": 102,
           "rule": "runtime-type-discovery",
@@ -1180,33 +1183,12 @@
     },
     {
       "categories": {
-        "reflective-invocation": 3,
-        "runtime-type-discovery": 10
+        "reflective-invocation": 1,
+        "runtime-type-discovery": 9
       },
       "errors": [],
-      "findingCount": 13,
+      "findingCount": 10,
       "findings": [
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
-          "line": 216,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetProperty"
-        },
-        {
-          "description": "Reflection member invocation/access is not allowed in player code.",
-          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
-          "line": 230,
-          "rule": "reflective-invocation",
-          "symbol": ".GetValue"
-        },
-        {
-          "description": "Reflection member invocation/access is not allowed in player code.",
-          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
-          "line": 243,
-          "rule": "reflective-invocation",
-          "symbol": ".SetValue"
-        },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
@@ -1302,16 +1284,16 @@
   "summary": {
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
-      "reflective-invocation": 10,
-      "runtime-type-discovery": 46
+      "reflective-invocation": 8,
+      "runtime-type-discovery": 45
     },
-    "cleanRepositoryCount": 42,
+    "cleanRepositoryCount": 41,
     "modeCounts": {
       "Audit": 62
     },
-    "repositoriesWithFindings": 20,
+    "repositoriesWithFindings": 21,
     "repositoryCount": 62,
-    "totalFindingCount": 69,
+    "totalFindingCount": 66,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

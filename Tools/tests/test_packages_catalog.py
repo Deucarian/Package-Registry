@@ -43,9 +43,9 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.session",
                 "com.deucarian.simultria-api",
                 "com.deucarian.simultria.rendering",
-                "com.deucarian.simultria-viewer-connection",
+                "com.deucarian.simultria-viewer-integration",
                 "com.deucarian.template.viewer.web",
-                "com.deucarian.viewer-authentication",
+                "com.deucarian.authentication",
             ],
             "com.deucarian.viewer-rendering": [
                 "com.deucarian.common",
@@ -59,7 +59,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.ui",
                 "com.deucarian.viewer-rendering",
             ],
-            "com.deucarian.viewer-authentication": [
+            "com.deucarian.authentication": [
                 "com.deucarian.api",
                 "com.deucarian.command-routing",
                 "com.deucarian.editor",
@@ -71,16 +71,16 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.editor",
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",
-                "com.deucarian.viewer-authentication",
+                "com.deucarian.authentication",
             ],
-            "com.deucarian.simultria-viewer-connection": [
+            "com.deucarian.simultria-viewer-integration": [
                 "com.deucarian.api",
                 "com.deucarian.command-routing",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
                 "com.deucarian.session",
                 "com.deucarian.simultria-api",
-                "com.deucarian.viewer-authentication",
+                "com.deucarian.authentication",
             ],
             "com.deucarian.web-viewer-suite": [
                 "com.deucarian.api",
@@ -100,7 +100,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.viewer-navigation",
                 "com.deucarian.viewer-rendering",
                 "com.deucarian.viewer-shell",
-                "com.deucarian.viewer-authentication",
+                "com.deucarian.authentication",
                 "com.deucarian.webgl-template",
             ],
             "com.deucarian.template.viewer.web": [
@@ -120,7 +120,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.viewer-navigation",
                 "com.deucarian.viewer-rendering",
                 "com.deucarian.viewer-shell",
-                "com.deucarian.viewer-authentication",
+                "com.deucarian.authentication",
                 "com.deucarian.web-viewer-suite",
                 "com.deucarian.webgl-template",
             ],
@@ -140,7 +140,7 @@ class PackagesCatalogTests(unittest.TestCase):
         )
         self.assertEqual(
             ["com.deucarian.template.viewer.web"],
-            packages_by_id["com.deucarian.simultria-viewer-connection"]["recommendedWith"],
+            packages_by_id["com.deucarian.simultria-viewer-integration"]["recommendedWith"],
         )
         self.assertEqual(
             ["com.deucarian.template.viewer.web"],
@@ -164,7 +164,7 @@ class PackagesCatalogTests(unittest.TestCase):
         )
         self.assertEqual(
             [
-                "com.deucarian.simultria-viewer-connection",
+                "com.deucarian.simultria-viewer-integration",
                 "com.deucarian.simultria.rendering",
             ],
             template["compositionPresets"][2]["packageIds"],
@@ -172,7 +172,7 @@ class PackagesCatalogTests(unittest.TestCase):
         self.assertEqual(
             [
                 "com.deucarian.activity-visualization.simultria",
-                "com.deucarian.simultria-viewer-connection",
+                "com.deucarian.simultria-viewer-integration",
             ],
             template["compositionPresets"][3]["packageIds"],
         )

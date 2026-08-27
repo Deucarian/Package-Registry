@@ -299,6 +299,80 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                 result["details"]["architectureStandard"]["url"],
             )
 
+    def test_legacy_api_settings_type_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Runtime" / "LegacySettings.cs",
+                "public sealed class SimultriaApi" + "Profile {}",
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "legacy Simultria API settings type" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_legacy_api_settings_script_guid_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Runtime" / "LegacySettings.asset",
+                "m_Script: {guid: " +
+                "98c59614849544b4" + "9d34f059afc91fb5}",
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "legacy Simultria API settings script GUID" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_hardcoded_package_footer_version_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Editor" / "LegacyFooter.cs",
+                """
+                public sealed class LegacyFooter
+                {
+                    public void Draw()
+                    {
+                        DeucarianEditorChrome.DrawFooterVersion(
+                            "com.deucarian.example",
+                            "1.2.3");
+                    }
+                }
+                """,
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "hardcoded package footer version" in error
+                    for error in result["errors"]
+                )
+            )
+
     def test_production_logging_requires_logging_dependency(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))
