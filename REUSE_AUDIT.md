@@ -47,7 +47,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.5 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.83 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Package-Installer | com.deucarian.package-installer | 1.1.84 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | dirty | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.0 | 2021.3 | yes | dirty | com.unity.nuget.newtonsoft-json | 4 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.3 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 57 |
@@ -69,7 +69,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | UI-Binding | com.deucarian.ui-binding | 1.1.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui | 3 | 75 |
 | UI-FLow | com.deucarian.ui-flow | 0.4.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging | 6 | 341 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.3 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
-| Viewer-Authentication | com.deucarian.authentication | 1.0.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.command-routing, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 4 | 146 |
+| Viewer-Authentication | com.deucarian.authentication | 1.0.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 4 | 146 |
 | Viewer-Navigation | com.deucarian.viewer-navigation | 0.1.12 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements | 5 | 164 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.theming, com.unity.render-pipelines.universal | 4 | 179 |
 | Viewer-Shell | com.deucarian.viewer-shell | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-rendering, com.unity.modules.uielements | 2 | 90 |

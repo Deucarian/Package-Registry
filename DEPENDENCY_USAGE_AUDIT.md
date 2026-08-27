@@ -8,8 +8,8 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 32 |
 | Missing hard package dependency | 13 |
-| Optional version-defined use | 1 |
-| Required and used | 139 |
+| Optional version-defined use | 2 |
+| Required and used | 138 |
 | Sample-only use | 4 |
 | Suite composition | 40 |
 | Test-only use | 11 |
@@ -198,8 +198,8 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | UI-FLow | com.deucarian.logging | Required and used | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Logging; Runtime production: Deucarian.UIFlow -> Deucarian.Logging; Runtime production: Deucarian.UIFlow.UGUI -> Deucarian.Logging; Sample: Deucarian.UIFlow.Samples.BasicFlow -> Deucarian.Logging; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.CoreState; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.CoreState; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.UIBinding; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.UIBinding; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.UIBinding | Deucarian.UIBinding | 0 |
+| Viewer-Authentication | com.deucarian.command-routing | Optional version-defined use | Runtime production: Deucarian.Authentication.ViewerIntegration -> Deucarian.CommandRouting [versionDefine com.deucarian.command-routing => DEUCARIAN_COMMAND_ROUTING_INSTALLED]; Test: Deucarian.Authentication.Tests.EditMode -> Deucarian.CommandRouting [versionDefine com.deucarian.command-routing => DEUCARIAN_COMMAND_ROUTING_INSTALLED] | Deucarian.CommandRouting |  |
 | Viewer-Authentication | com.deucarian.api | Required and used | Editor production: Deucarian.Authentication.Editor -> Deucarian.API; Runtime production: Deucarian.Authentication -> Deucarian.API; Runtime production: Deucarian.Authentication.ViewerIntegration -> Deucarian.API; Test: Deucarian.Authentication.Tests.EditMode -> Deucarian.API | Deucarian.API | 0 |
-| Viewer-Authentication | com.deucarian.command-routing | Required and used | Runtime production: Deucarian.Authentication.ViewerIntegration -> Deucarian.CommandRouting; Test: Deucarian.Authentication.Tests.EditMode -> Deucarian.CommandRouting | Deucarian.CommandRouting | 0 |
 | Viewer-Authentication | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Authentication.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Viewer-Authentication | com.deucarian.session | Required and used | Editor production: Deucarian.Authentication.Editor -> Deucarian.Session; Runtime production: Deucarian.Authentication -> Deucarian.Session; Runtime production: Deucarian.Authentication.ViewerIntegration -> Deucarian.Session; Test: Deucarian.Authentication.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
 | Viewer-Authentication | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.Authentication -> Deucarian.Session.APIIntegration; Test: Deucarian.Authentication.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |

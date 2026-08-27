@@ -61,7 +61,6 @@ class PackagesCatalogTests(unittest.TestCase):
             ],
             "com.deucarian.authentication": [
                 "com.deucarian.api",
-                "com.deucarian.command-routing",
                 "com.deucarian.editor",
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",

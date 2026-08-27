@@ -7952,6 +7952,69 @@
       "sourceMentionsByScope": {}
     },
     {
+      "assemblyReference": "Deucarian.CommandRouting",
+      "classification": "OptionalVersionDefinedUse",
+      "packageId": "com.deucarian.authentication",
+      "referencedAssemblies": [
+        "Deucarian.CommandRouting"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
+          "assembly": "Deucarian.Authentication.ViewerIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+            "expression": "0.2.4",
+            "name": "com.deucarian.command-routing"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.Authentication.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+            "expression": "0.2.4",
+            "name": "com.deucarian.command-routing"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CommandRouting",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
+        }
+      ],
+      "repository": "Viewer-Authentication",
+      "requiredPackage": "com.deucarian.command-routing"
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "2.0.0",
       "dependency": "com.deucarian.api",
@@ -7990,19 +8053,28 @@
           "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
           "assembly": "Deucarian.Authentication.ViewerIntegration",
           "autoReferenced": true,
-          "defineConstraints": [],
+          "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+          ],
           "guardEvidence": null,
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.API",
           "scope": "Runtime production",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
           "assembly": "Deucarian.Authentication.Tests.EditMode",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
             "UNITY_INCLUDE_TESTS"
           ],
           "guardEvidence": null,
@@ -8012,49 +8084,13 @@
           ],
           "reference": "Deucarian.API",
           "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Viewer-Authentication",
-      "sourceMentionCount": 0,
-      "sourceMentionsByScope": {}
-    },
-    {
-      "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.4",
-      "dependency": "com.deucarian.command-routing",
-      "packageId": "com.deucarian.authentication",
-      "referencedAssemblies": [
-        "Deucarian.CommandRouting"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
-          "assembly": "Deucarian.Authentication.ViewerIntegration",
-          "autoReferenced": true,
-          "defineConstraints": [],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.CommandRouting",
-          "scope": "Runtime production",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
-          "assembly": "Deucarian.Authentication.Tests.EditMode",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.CommandRouting",
-          "scope": "Test",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         }
       ],
       "repository": "Viewer-Authentication",
@@ -8128,19 +8164,28 @@
           "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
           "assembly": "Deucarian.Authentication.ViewerIntegration",
           "autoReferenced": true,
-          "defineConstraints": [],
+          "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+          ],
           "guardEvidence": null,
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Session",
           "scope": "Runtime production",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
           "assembly": "Deucarian.Authentication.Tests.EditMode",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
             "UNITY_INCLUDE_TESTS"
           ],
           "guardEvidence": null,
@@ -8150,7 +8195,13 @@
           ],
           "reference": "Deucarian.Session",
           "scope": "Test",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         }
       ],
       "repository": "Viewer-Authentication",
@@ -8183,6 +8234,7 @@
           "assembly": "Deucarian.Authentication.Tests.EditMode",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
             "UNITY_INCLUDE_TESTS"
           ],
           "guardEvidence": null,
@@ -8192,7 +8244,13 @@
           ],
           "reference": "Deucarian.Session.APIIntegration",
           "scope": "Test",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         }
       ],
       "repository": "Viewer-Authentication",
@@ -10011,8 +10069,8 @@
   "summary": {
     "EditorOnlyUse": 32,
     "MissingHardPackageDependency": 13,
-    "OptionalVersionDefinedUse": 1,
-    "RequiredAndUsed": 139,
+    "OptionalVersionDefinedUse": 2,
+    "RequiredAndUsed": 138,
     "SampleOnlyUse": 4,
     "SuiteComposition": 40,
     "TestOnlyUse": 11

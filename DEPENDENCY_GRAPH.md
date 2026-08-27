@@ -15,7 +15,6 @@ Schema version: 2
 | com.deucarian.attacks | com.deucarian.game-content-authoring | 0.1.0 | Attacks | Game-Content-Authoring |
 | com.deucarian.attacks | com.deucarian.gameplay-foundation | 0.1.0 | Attacks | Gameplay-Foundation |
 | com.deucarian.authentication | com.deucarian.api | 2.0.0 | Viewer-Authentication | API |
-| com.deucarian.authentication | com.deucarian.command-routing | 0.2.4 | Viewer-Authentication | Command-Routing |
 | com.deucarian.authentication | com.deucarian.editor | 1.1.0 | Viewer-Authentication | Editor |
 | com.deucarian.authentication | com.deucarian.session | 1.0.6 | Viewer-Authentication | Session |
 | com.deucarian.authentication | com.deucarian.session.api-integration | 1.2.0 | Viewer-Authentication | Session-API-Integration |

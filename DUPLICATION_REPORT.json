@@ -3327,7 +3327,6 @@
     },
     {
       "currentConsumers": [
-        "com.deucarian.authentication",
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
         "com.deucarian.simultria-viewer-integration",
@@ -3341,7 +3340,6 @@
     },
     {
       "currentConsumers": [
-        "com.deucarian.authentication",
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
         "com.deucarian.simultria-viewer-integration",
@@ -4245,13 +4243,6 @@
         "to": "com.deucarian.api",
         "toRepo": "API",
         "version": "2.0.0"
-      },
-      {
-        "from": "com.deucarian.authentication",
-        "fromRepo": "Viewer-Authentication",
-        "to": "com.deucarian.command-routing",
-        "toRepo": "Command-Routing",
-        "version": "0.2.4"
       },
       {
         "from": "com.deucarian.authentication",
@@ -13616,6 +13607,69 @@
         "sourceMentionsByScope": {}
       },
       {
+        "assemblyReference": "Deucarian.CommandRouting",
+        "classification": "OptionalVersionDefinedUse",
+        "packageId": "com.deucarian.authentication",
+        "referencedAssemblies": [
+          "Deucarian.CommandRouting"
+        ],
+        "referencedBy": [
+          {
+            "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
+            "assembly": "Deucarian.Authentication.ViewerIntegration",
+            "autoReferenced": true,
+            "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+            ],
+            "guardEvidence": {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            },
+            "guardKind": "VersionDefine",
+            "includePlatforms": [],
+            "reference": "Deucarian.CommandRouting",
+            "scope": "Runtime production",
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
+          },
+          {
+            "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
+            "assembly": "Deucarian.Authentication.Tests.EditMode",
+            "autoReferenced": false,
+            "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "UNITY_INCLUDE_TESTS"
+            ],
+            "guardEvidence": {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            },
+            "guardKind": "VersionDefine",
+            "includePlatforms": [
+              "Editor"
+            ],
+            "reference": "Deucarian.CommandRouting",
+            "scope": "Test",
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
+          }
+        ],
+        "repository": "Viewer-Authentication",
+        "requiredPackage": "com.deucarian.command-routing"
+      },
+      {
         "classification": "RequiredAndUsed",
         "declaredVersion": "2.0.0",
         "dependency": "com.deucarian.api",
@@ -13654,19 +13708,28 @@
             "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
             "assembly": "Deucarian.Authentication.ViewerIntegration",
             "autoReferenced": true,
-            "defineConstraints": [],
+            "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+            ],
             "guardEvidence": null,
             "guardKind": "",
             "includePlatforms": [],
             "reference": "Deucarian.API",
             "scope": "Runtime production",
-            "versionDefines": []
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
           },
           {
             "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
             "assembly": "Deucarian.Authentication.Tests.EditMode",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
               "UNITY_INCLUDE_TESTS"
             ],
             "guardEvidence": null,
@@ -13676,49 +13739,13 @@
             ],
             "reference": "Deucarian.API",
             "scope": "Test",
-            "versionDefines": []
-          }
-        ],
-        "repository": "Viewer-Authentication",
-        "sourceMentionCount": 0,
-        "sourceMentionsByScope": {}
-      },
-      {
-        "classification": "RequiredAndUsed",
-        "declaredVersion": "0.2.4",
-        "dependency": "com.deucarian.command-routing",
-        "packageId": "com.deucarian.authentication",
-        "referencedAssemblies": [
-          "Deucarian.CommandRouting"
-        ],
-        "referencedBy": [
-          {
-            "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
-            "assembly": "Deucarian.Authentication.ViewerIntegration",
-            "autoReferenced": true,
-            "defineConstraints": [],
-            "guardEvidence": null,
-            "guardKind": "",
-            "includePlatforms": [],
-            "reference": "Deucarian.CommandRouting",
-            "scope": "Runtime production",
-            "versionDefines": []
-          },
-          {
-            "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
-            "assembly": "Deucarian.Authentication.Tests.EditMode",
-            "autoReferenced": false,
-            "defineConstraints": [
-              "UNITY_INCLUDE_TESTS"
-            ],
-            "guardEvidence": null,
-            "guardKind": "",
-            "includePlatforms": [
-              "Editor"
-            ],
-            "reference": "Deucarian.CommandRouting",
-            "scope": "Test",
-            "versionDefines": []
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
           }
         ],
         "repository": "Viewer-Authentication",
@@ -13792,19 +13819,28 @@
             "asmdef": "Runtime/ViewerIntegration/Deucarian.Authentication.ViewerIntegration.asmdef",
             "assembly": "Deucarian.Authentication.ViewerIntegration",
             "autoReferenced": true,
-            "defineConstraints": [],
+            "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+            ],
             "guardEvidence": null,
             "guardKind": "",
             "includePlatforms": [],
             "reference": "Deucarian.Session",
             "scope": "Runtime production",
-            "versionDefines": []
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
           },
           {
             "asmdef": "Tests/EditMode/Deucarian.Authentication.Tests.EditMode.asmdef",
             "assembly": "Deucarian.Authentication.Tests.EditMode",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
               "UNITY_INCLUDE_TESTS"
             ],
             "guardEvidence": null,
@@ -13814,7 +13850,13 @@
             ],
             "reference": "Deucarian.Session",
             "scope": "Test",
-            "versionDefines": []
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
           }
         ],
         "repository": "Viewer-Authentication",
@@ -13847,6 +13889,7 @@
             "assembly": "Deucarian.Authentication.Tests.EditMode",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
               "UNITY_INCLUDE_TESTS"
             ],
             "guardEvidence": null,
@@ -13856,7 +13899,13 @@
             ],
             "reference": "Deucarian.Session.APIIntegration",
             "scope": "Test",
-            "versionDefines": []
+            "versionDefines": [
+              {
+                "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+                "expression": "0.2.4",
+                "name": "com.deucarian.command-routing"
+              }
+            ]
           }
         ],
         "repository": "Viewer-Authentication",
@@ -15675,8 +15724,8 @@
     "summary": {
       "EditorOnlyUse": 32,
       "MissingHardPackageDependency": 13,
-      "OptionalVersionDefinedUse": 1,
-      "RequiredAndUsed": 139,
+      "OptionalVersionDefinedUse": 2,
+      "RequiredAndUsed": 138,
       "SampleOnlyUse": 4,
       "SuiteComposition": 40,
       "TestOnlyUse": 11
@@ -42196,7 +42245,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "b8f85030dd54e670b0dd9d9f70b5761700b01d072be00bb379fcfbe5a817b9d6",
       "dependencyRulesSha256": "9e4429cc59931d627415505630070996f55fca9410d1260fe0e128b89af76f22",
-      "packagesSha256": "a96eff1ea38e4370ff33f4e1e3bb2ec936805854ee894aee5f39de16e3024cfb"
+      "packagesSha256": "7e23faedb83c0eac375bd414ec72ac928869bc29b4a652bfa508a2db912639cb"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -285480,7 +285529,7 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "0e239aa4ee675cb537806e4016efc71c2420dc65",
+        "headCommit": "25d54a80f288231b507215853e3fdbf60b6b73b1",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
@@ -285520,7 +285569,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "0e239aa4ee675cb537806e4016efc71c2420dc65",
+        "headCommit": "25d54a80f288231b507215853e3fdbf60b6b73b1",
         "manifestSha256": "5a1db68e5ff85316c08867beebd25053c32b628c957d25aaed8022e36a9c716f",
         "requestedRef": "platform-migration-exact-commits"
       },
@@ -288827,7 +288876,7 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "61e1b82690b6fa61d87fc400a933cd1c5c97fb20",
+        "headCommit": "b3d0a905349c8f7d65ddd3bcf6c6eff3805bf00e",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
@@ -288870,13 +288919,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.1.83",
+      "packageVersion": "1.1.84",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "61e1b82690b6fa61d87fc400a933cd1c5c97fb20",
-        "manifestSha256": "f6bacc9318964361f30e16eeed16b9a4ce4a3d50eb7c57c63be87413020ad4dc",
+        "headCommit": "b3d0a905349c8f7d65ddd3bcf6c6eff3805bf00e",
+        "manifestSha256": "8ef2900e1f9af18ead7e2cda8ae7074cac533bf90ec1996cc58773c7495109f2",
         "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
@@ -288936,7 +288985,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "2b9227622e1ea68bc26afefd79d8e0eb742c474e96874a103f47c97577e6b209",
+        "auditInputSha256": "4180e58f7b2651585a3f01269b027f6754c056077248f1e5f650ff283cbde501",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -290139,7 +290188,7 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "897e2535df20e430ad57129f2d17e08d190dde3c",
+        "headCommit": "49e38cd2f139317e987d77bf89f59ad01b734561",
         "origin": "https://github.com/Deucarian/Simultria-API.git",
         "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
@@ -290199,7 +290248,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-API.git",
         "governanceConfigSha256": "cbd782faa0549b81e15777baeb2179626957330b18ca5afa2816989c0fe514e3",
-        "headCommit": "897e2535df20e430ad57129f2d17e08d190dde3c",
+        "headCommit": "49e38cd2f139317e987d77bf89f59ad01b734561",
         "manifestSha256": "d397c458813874bead35da350f391f5c6f1fc9a92049aa8dfc51a0f53ffb510e",
         "requestedRef": "platform-migration-exact-commits"
       },
@@ -292362,7 +292411,9 @@
         },
         {
           "autoReferenced": true,
-          "defineConstraints": [],
+          "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED"
+          ],
           "excludePlatforms": [],
           "includePlatforms": [],
           "name": "Deucarian.Authentication.ViewerIntegration",
@@ -292376,11 +292427,18 @@
             "Newtonsoft.Json"
           ],
           "scope": "Runtime production",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         },
         {
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
             "UNITY_INCLUDE_TESTS"
           ],
           "excludePlatforms": [],
@@ -292403,7 +292461,13 @@
             "Newtonsoft.Json"
           ],
           "scope": "Test",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_COMMAND_ROUTING_INSTALLED",
+              "expression": "0.2.4",
+              "name": "com.deucarian.command-routing"
+            }
+          ]
         }
       ],
       "branches": {
@@ -292412,7 +292476,7 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "6812f542f23696979ec2451d9f2b84131d1c7dc3",
+        "headCommit": "ce6f30d1014938a8a14e820bd812207c37894875",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
         "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
@@ -292423,7 +292487,6 @@
       ],
       "dependencies": {
         "com.deucarian.api": "2.0.0",
-        "com.deucarian.command-routing": "0.2.4",
         "com.deucarian.editor": "1.1.0",
         "com.deucarian.session": "1.0.6",
         "com.deucarian.session.api-integration": "1.2.0",
@@ -292439,14 +292502,15 @@
         ],
         "expectedSamplesRoot": "",
         "operationalPackage": false,
-        "optionalVersionDefinedDependencies": [],
+        "optionalVersionDefinedDependencies": [
+          "com.deucarian.command-routing"
+        ],
         "ownedCapabilities": [
           "authentication"
         ],
         "packageId": "com.deucarian.authentication",
         "requiredDependencies": [
           "com.deucarian.api",
-          "com.deucarian.command-routing",
           "com.deucarian.editor",
           "com.deucarian.session",
           "com.deucarian.session.api-integration",
@@ -292468,14 +292532,13 @@
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Authentication.git",
-        "governanceConfigSha256": "2b8446af612e3f68b6938304a2a3bc229db42fbad36527b515ab4a07b15a44bc",
-        "headCommit": "6812f542f23696979ec2451d9f2b84131d1c7dc3",
-        "manifestSha256": "d38ff731c04e20dbaac91c1355feb65bea18d678a6035505b4f5582334d40962",
+        "governanceConfigSha256": "03bcc59201dfd587decba6d1d48c7393f7035e35fbbd2fcbfdb3a2d5a8956fbe",
+        "headCommit": "ce6f30d1014938a8a14e820bd812207c37894875",
+        "manifestSha256": "1dcd3a6457c990d324a9f773c6a6efae1934ba89a4ffd8babb6595191076c2e4",
         "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
-        "com.deucarian.command-routing",
         "com.deucarian.editor",
         "com.deucarian.session",
         "com.deucarian.session.api-integration"
