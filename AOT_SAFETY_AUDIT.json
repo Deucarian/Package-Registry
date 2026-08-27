@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "platform-migration-exact-commits",
+  "ref": "develop",
   "repositories": [
     {
       "categories": {
@@ -535,7 +535,7 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/ObjectLoadRequest.cs",
-          "line": 167,
+          "line": 169,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         },
@@ -571,7 +571,7 @@
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
           "file": "Runtime/Core/ApiObjectDownloadMapper.cs",
-          "line": 248,
+          "line": 288,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.SerializeObject"
         }
@@ -891,6 +891,28 @@
       "suppressedFindings": []
     },
     {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerBootstrap.cs",
+          "line": 147,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.template.viewer",
+      "repository": "Template-Viewer",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
       "categories": {},
       "errors": [],
       "findingCount": 0,
@@ -1183,12 +1205,33 @@
     },
     {
       "categories": {
-        "reflective-invocation": 1,
-        "runtime-type-discovery": 9
+        "reflective-invocation": 3,
+        "runtime-type-discovery": 10
       },
       "errors": [],
-      "findingCount": 10,
+      "findingCount": 13,
       "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 216,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetProperty"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 230,
+          "rule": "reflective-invocation",
+          "symbol": ".GetValue"
+        },
+        {
+          "description": "Reflection member invocation/access is not allowed in player code.",
+          "file": "Runtime/Controls/CustomInputFieldPressTarget.cs",
+          "line": 243,
+          "rule": "reflective-invocation",
+          "symbol": ".SetValue"
+        },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Controls/CustomSelectableFeedbackInstaller.cs",
@@ -1284,16 +1327,16 @@
   "summary": {
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
-      "reflective-invocation": 8,
-      "runtime-type-discovery": 45
+      "reflective-invocation": 10,
+      "runtime-type-discovery": 47
     },
     "cleanRepositoryCount": 41,
     "modeCounts": {
-      "Audit": 62
+      "Audit": 63
     },
-    "repositoriesWithFindings": 21,
-    "repositoryCount": 62,
-    "totalFindingCount": 66,
+    "repositoriesWithFindings": 22,
+    "repositoryCount": 63,
+    "totalFindingCount": 70,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

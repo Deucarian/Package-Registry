@@ -1,15 +1,15 @@
 # Deucarian AOT Safety Audit
 
-Authoritative runtime reflection and linker inventory for `Deucarian` at `platform-migration-exact-commits`.
+Authoritative runtime reflection and linker inventory for `Deucarian` at `develop`.
 
 This report inventories current package-owned player-code findings. Editor-only reflection is excluded. Audit findings are migration work; an `Enforce` package with an unresolved finding fails validation.
 
 ## Summary
 
-- Repositories scanned: **62**
-- Repositories with findings: **21**
+- Repositories scanned: **63**
+- Repositories with findings: **22**
 - Clean repositories: **41**
-- Unresolved findings: **66**
+- Unresolved findings: **70**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -18,8 +18,8 @@ This report inventories current package-owned player-code findings. Editor-only 
 | Rule | Count |
 | --- | ---: |
 | `reflection-based-newtonsoft` | 13 |
-| `reflective-invocation` | 8 |
-| `runtime-type-discovery` | 45 |
+| `reflective-invocation` | 10 |
+| `runtime-type-discovery` | 47 |
 
 ## Repository Status
 
@@ -70,6 +70,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
+| `com.deucarian.template.viewer` | `Template-Viewer` | `Audit` | 1 | 0 | Valid |
 | `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
@@ -85,7 +86,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.webgl-template` | `WebGL-Template` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.world-navigation` | `World-Navigation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.world-spawning` | `World-Spawning` | `Audit` | 0 | 0 | Valid |
-| `com.deucarian.xr-ui` | `XR-UI` | `Audit` | 10 | 0 | Valid |
+| `com.deucarian.xr-ui` | `XR-UI` | `Audit` | 13 | 0 | Valid |
 | `com.deucarian.xr-ui.theming-integration` | `XR-UI-Theming-Integration` | `Audit` | 0 | 0 | Valid |
 
 ## Findings
@@ -173,7 +174,7 @@ Mode: `Audit`
 Repository: `Object-Loading`
 Mode: `Audit`
 
-- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ObjectLoadRequest.cs`:167 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
+- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ObjectLoadRequest.cs`:169 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/DefaultObjectDiagnostics.cs`:176 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/ObjectLoadingPipeline.cs`:281 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
@@ -182,7 +183,7 @@ Mode: `Audit`
 Repository: `ObjectLoading-API-Integration`
 Mode: `Audit`
 
-- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ApiObjectDownloadMapper.cs`:248 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
+- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ApiObjectDownloadMapper.cs`:288 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 
 ### `com.deucarian.persistence`
 
@@ -228,6 +229,13 @@ Mode: `Audit`
 - `reflective-invocation` — `.GetValue` at `Runtime/SurvivorsContentValidation.cs`:2427 (`Reflection member invocation/access is not allowed in player code.`)
 - `reflective-invocation` — `.GetValue` at `Runtime/SurvivorsContentValidation.cs`:2432 (`Reflection member invocation/access is not allowed in player code.`)
 
+### `com.deucarian.template.viewer`
+
+Repository: `Template-Viewer`
+Mode: `Audit`
+
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.cs`:147 (`Runtime type/member discovery must be generated or explicitly composed.`)
+
 ### `com.deucarian.theming`
 
 Repository: `Theming`
@@ -271,6 +279,9 @@ Mode: `Audit`
 Repository: `XR-UI`
 Mode: `Audit`
 
+- `runtime-type-discovery` — `.GetProperty` at `Runtime/Controls/CustomInputFieldPressTarget.cs`:216 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `reflective-invocation` — `.GetValue` at `Runtime/Controls/CustomInputFieldPressTarget.cs`:230 (`Reflection member invocation/access is not allowed in player code.`)
+- `reflective-invocation` — `.SetValue` at `Runtime/Controls/CustomInputFieldPressTarget.cs`:243 (`Reflection member invocation/access is not allowed in player code.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Controls/CustomSelectableFeedbackInstaller.cs`:71 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Controls/CustomSelectableFeedbackInstaller.cs`:205 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetMethod` at `Runtime/Controls/CustomSelectableFeedbackInstaller.cs`:230 (`Runtime type/member discovery must be generated or explicitly composed.`)
