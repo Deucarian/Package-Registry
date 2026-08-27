@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "main",
+  "ref": "develop",
   "repositories": [
     {
       "categories": {
@@ -866,6 +866,28 @@
       "suppressedFindings": []
     },
     {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerBootstrap.cs",
+          "line": 150,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.template.viewer",
+      "repository": "Template-Viewer",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
       "categories": {},
       "errors": [],
       "findingCount": 0,
@@ -1303,15 +1325,15 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 46
+      "runtime-type-discovery": 47
     },
     "cleanRepositoryCount": 42,
     "modeCounts": {
-      "Audit": 62
+      "Audit": 63
     },
-    "repositoriesWithFindings": 20,
-    "repositoryCount": 62,
-    "totalFindingCount": 69,
+    "repositoriesWithFindings": 21,
+    "repositoryCount": 63,
+    "totalFindingCount": 70,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

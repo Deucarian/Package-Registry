@@ -202,6 +202,25 @@ class ValidatorFixture:
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_runtime_asmdef_may_include_editor_and_player_platform(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+
+        self.assertEqual(
+            "runtime",
+            validator.asmdef_scope(
+                "Runtime/ViewerWeb.asmdef",
+                {"includePlatforms": ["Editor", "WebGL"]},
+            ),
+        )
+        self.assertEqual(
+            "editor",
+            validator.asmdef_scope(
+                "Runtime/EditorOnly.asmdef",
+                {"includePlatforms": ["Editor"]},
+            ),
+        )
+
     def test_canonical_registry_policy_schemas_are_complete(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)

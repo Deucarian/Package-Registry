@@ -145,6 +145,12 @@
       "repository": "Session-API-Integration"
     },
     {
+      "file": "Documentation~/index.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.simultria-api",
+      "repository": "Simultria-API"
+    },
+    {
       "file": "Documentation~/validation.md",
       "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.template.game.survivors",
@@ -163,7 +169,7 @@
       "repository": "Template-Viewer-Web"
     },
     {
-      "file": "README.md",
+      "file": "Documentation~/architecture.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web"
@@ -226,7 +232,7 @@
   "summary": {
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 7,
+    "MigrationDocumentation": 8,
     "ReviewRequired": 13
   }
 }

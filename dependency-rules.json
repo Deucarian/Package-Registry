@@ -95,6 +95,7 @@
       "packages": [
         "com.deucarian.auto-defense",
         "com.deucarian.simultria-api",
+        "com.deucarian.template.viewer",
         "com.deucarian.web-viewer-suite",
         "com.deucarian.run-upgrades"
       ]

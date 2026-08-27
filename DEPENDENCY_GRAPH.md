@@ -149,24 +149,27 @@ Schema version: 2
 | com.deucarian.template.game.survivors | com.deucarian.run-upgrades | 0.1.1 | Template-Game-Survivors | Run-Upgrades |
 | com.deucarian.template.game.survivors | com.deucarian.weapon-systems | 0.1.1 | Template-Game-Survivors | Weapon-Systems |
 | com.deucarian.template.game.survivors | com.deucarian.world-spawning | 0.2.1 | Template-Game-Survivors | World-Spawning |
-| com.deucarian.template.viewer.web | com.deucarian.api | 1.2.0 | Template-Viewer-Web | API |
+| com.deucarian.template.viewer | com.deucarian.api | 1.2.0 | Template-Viewer | API |
+| com.deucarian.template.viewer | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer | Camera-Navigation |
+| com.deucarian.template.viewer | com.deucarian.command-routing | 0.2.2 | Template-Viewer | Command-Routing |
+| com.deucarian.template.viewer | com.deucarian.diagnostics | 0.1.4 | Template-Viewer | Diagnostics |
+| com.deucarian.template.viewer | com.deucarian.logging | 1.0.2 | Template-Viewer | Logging |
+| com.deucarian.template.viewer | com.deucarian.object-loading | 1.2.2 | Template-Viewer | Object-Loading |
+| com.deucarian.template.viewer | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer | com.deucarian.session | 1.0.6 | Template-Viewer | Session |
+| com.deucarian.template.viewer | com.deucarian.session.api-integration | 1.1.1 | Template-Viewer | Session-API-Integration |
+| com.deucarian.template.viewer | com.deucarian.theming | 1.1.1 | Template-Viewer | Theming |
+| com.deucarian.template.viewer | com.deucarian.ui | 0.2.7 | Template-Viewer | UI |
+| com.deucarian.template.viewer | com.deucarian.viewer-authentication | 0.5.1 | Template-Viewer | Viewer-Authentication |
+| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.1.11 | Template-Viewer | Viewer-Navigation |
+| com.deucarian.template.viewer | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer | Viewer-Rendering |
+| com.deucarian.template.viewer | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer | Viewer-Shell |
 | com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.5.0 | Template-Viewer-Web | Build-Pipeline |
-| com.deucarian.template.viewer.web | com.deucarian.camera-navigation | 0.2.10 | Template-Viewer-Web | Camera-Navigation |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.2 | Template-Viewer-Web | Command-Routing |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
-| com.deucarian.template.viewer.web | com.deucarian.logging | 1.0.2 | Template-Viewer-Web | Logging |
-| com.deucarian.template.viewer.web | com.deucarian.object-loading | 1.2.2 | Template-Viewer-Web | Object-Loading |
-| com.deucarian.template.viewer.web | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer-Web | ObjectLoading-API-Integration |
-| com.deucarian.template.viewer.web | com.deucarian.session | 1.0.6 | Template-Viewer-Web | Session |
-| com.deucarian.template.viewer.web | com.deucarian.session.api-integration | 1.1.1 | Template-Viewer-Web | Session-API-Integration |
-| com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.0 | Template-Viewer-Web | Theming |
-| com.deucarian.template.viewer.web | com.deucarian.ui | 0.2.7 | Template-Viewer-Web | UI |
+| com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.1.0 | Template-Viewer-Web | Template-Viewer |
 | com.deucarian.template.viewer.web | com.deucarian.viewer-authentication | 0.5.1 | Template-Viewer-Web | Viewer-Authentication |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-navigation | 0.1.11 | Template-Viewer-Web | Viewer-Navigation |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer-Web | Viewer-Rendering |
-| com.deucarian.template.viewer.web | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer-Web | Viewer-Shell |
-| com.deucarian.template.viewer.web | com.deucarian.web-viewer-suite | 0.1.15 | Template-Viewer-Web | Web-Viewer-Suite |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.0 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.theming | com.deucarian.editor | 1.0.3 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.2 | Theming | Logging |
@@ -238,5 +241,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 34
+- Dependency version drift entries: 36
 - Registry dependency drift entries: 0

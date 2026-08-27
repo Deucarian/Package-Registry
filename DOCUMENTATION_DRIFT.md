@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Historical changelog reference | 16 |
 | Legitimate generic bridge term | 1 |
-| Migration documentation | 7 |
+| Migration documentation | 8 |
 | Review required | 13 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
@@ -41,10 +41,11 @@ Historical changelog references preserve released history and are not rewrite re
 | Selection-Suite | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Simultria-API | Migration documentation | Documentation~/index.md |  |  |  |
 | Template-Game-Survivors | Migration documentation | Documentation~/validation.md |  |  |  |
 | Template-Game-Survivors | Review required | Documentation~/game-content-authoring.md |  |  |  |
 | Template-Viewer-Web | Historical changelog reference | CHANGELOG.md |  |  |  |
-| Template-Viewer-Web | Review required | README.md |  |  |  |
+| Template-Viewer-Web | Review required | Documentation~/architecture.md |  |  |  |
 | Test-Automation | Review required | Documentation~/lifecycle.md |  |  |  |
 | UI-Binding | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
