@@ -122,7 +122,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/CommandRoutingEditorWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 923,
+      "lineCount": 922,
       "lineLimit": 500,
       "packageId": "com.deucarian.command-routing",
       "repository": "Command-Routing",
@@ -517,23 +517,11 @@
       "repository": "Simultria-API"
     },
     {
-      "assembly": "Deucarian.Simultria.API.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 540,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-api",
-      "repository": "Simultria-API",
-      "scope": "Editor production"
-    },
-    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection"
     },
     {
@@ -541,54 +529,42 @@
       "disposition": "SetupRequired",
       "file": ".github/workflows",
       "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection"
     },
     {
-      "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+      "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/SimultriaViewerDevelopmentWindow.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 720,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.simultria-viewer-integration",
+      "repository": "Simultria-Viewer-Connection",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
       "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 736,
+      "lineCount": 680,
       "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection",
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.SimultriaViewerConnection",
+      "assembly": "Deucarian.SimultriaViewerIntegration",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
       "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 726,
+      "lineCount": 612,
       "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-connection",
-      "repository": "Simultria-Viewer-Connection",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.SimultriaViewerConnection.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/SimultriaViewerConnectionWindow.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 711,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-connection",
-      "repository": "Simultria-Viewer-Connection",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.SimultriaViewerConnection",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 580,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection",
       "scope": "Runtime production"
     },
@@ -973,6 +949,18 @@
       "repository": "Template-Viewer"
     },
     {
+      "assembly": "Deucarian.TemplateViewer",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/ViewerApplication.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 507,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.template.viewer",
+      "repository": "Template-Viewer",
+      "scope": "Runtime production"
+    },
+    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -1129,18 +1117,18 @@
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.viewer-authentication",
+      "packageId": "com.deucarian.authentication",
       "repository": "Viewer-Authentication"
     },
     {
-      "assembly": "Deucarian.ViewerAuthentication.Editor",
+      "assembly": "Deucarian.Authentication.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/ViewerAuthenticationWindow.cs",
+      "file": "Editor/AuthenticationWindow.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1396,
+      "lineCount": 1390,
       "lineLimit": 500,
-      "packageId": "com.deucarian.viewer-authentication",
+      "packageId": "com.deucarian.authentication",
       "repository": "Viewer-Authentication",
       "scope": "Editor production"
     },
@@ -1302,7 +1290,7 @@
         }
       ],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 66,
+      "productionFileCount": 69,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
@@ -1507,7 +1495,7 @@
         {
           "assembly": "Deucarian.CommandRouting.Editor",
           "file": "Editor/CommandRoutingEditorWindow.cs",
-          "lineCount": 923,
+          "lineCount": 922,
           "scope": "Editor production"
         }
       ],
@@ -1654,7 +1642,7 @@
         }
       ],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 38,
+      "productionFileCount": 40,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -2213,14 +2201,7 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.Simultria.API.Editor",
-          "file": "Editor/Configuration/SimultriaApiProfileAssetFactory.cs",
-          "lineCount": 540,
-          "scope": "Editor production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-api",
       "productionFileCount": 36,
       "productionFilesWithoutAssemblyOwner": [],
@@ -2239,38 +2220,32 @@
       },
       "oversizedProductionFiles": [
         {
-          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
-          "file": "Editor/SimultriaViewerConnectionWindow.cs",
-          "lineCount": 711,
+          "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
+          "file": "Editor/SimultriaViewerDevelopmentWindow.cs",
+          "lineCount": 720,
           "scope": "Editor production"
         },
         {
-          "assembly": "Deucarian.SimultriaViewerConnection.Editor",
+          "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
           "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
-          "lineCount": 736,
+          "lineCount": 680,
           "scope": "Editor production"
         },
         {
-          "assembly": "Deucarian.SimultriaViewerConnection",
+          "assembly": "Deucarian.SimultriaViewerIntegration",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "lineCount": 726,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.SimultriaViewerConnection",
-          "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
-          "lineCount": 580,
+          "lineCount": 612,
           "scope": "Runtime production"
         }
       ],
-      "packageId": "com.deucarian.simultria-viewer-connection",
-      "productionFileCount": 28,
+      "packageId": "com.deucarian.simultria-viewer-integration",
+      "productionFileCount": 29,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
       "status": "SetupRequired",
       "testAssemblies": [
-        "Deucarian.SimultriaViewerConnection.Tests"
+        "Deucarian.SimultriaViewerIntegration.Tests"
       ]
     },
     {
@@ -2522,7 +2497,14 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [],
+      "oversizedProductionFiles": [
+        {
+          "assembly": "Deucarian.TemplateViewer",
+          "file": "Runtime/ViewerApplication.cs",
+          "lineCount": 507,
+          "scope": "Runtime production"
+        }
+      ],
       "packageId": "com.deucarian.template.viewer",
       "productionFileCount": 25,
       "productionFilesWithoutAssemblyOwner": [],
@@ -2739,20 +2721,20 @@
       },
       "oversizedProductionFiles": [
         {
-          "assembly": "Deucarian.ViewerAuthentication.Editor",
-          "file": "Editor/ViewerAuthenticationWindow.cs",
-          "lineCount": 1396,
+          "assembly": "Deucarian.Authentication.Editor",
+          "file": "Editor/AuthenticationWindow.cs",
+          "lineCount": 1390,
           "scope": "Editor production"
         }
       ],
-      "packageId": "com.deucarian.viewer-authentication",
-      "productionFileCount": 43,
+      "packageId": "com.deucarian.authentication",
+      "productionFileCount": 46,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
       "status": "SetupRequired",
       "testAssemblies": [
-        "Deucarian.ViewerAuthentication.Tests.EditMode"
+        "Deucarian.Authentication.Tests.EditMode"
       ]
     },
     {
@@ -2968,13 +2950,13 @@
   "summary": {
     "compliantRepositoryCount": 34,
     "findingsByDisposition": {
-      "RefactorBacklog": 95,
+      "RefactorBacklog": 94,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 12,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 95
+      "ProductionFileExceedsLineLimit": 94
     },
     "repositoryCount": 64
   }

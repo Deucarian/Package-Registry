@@ -318,6 +318,80 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
                 result["details"]["architectureStandard"]["url"],
             )
 
+    def test_legacy_api_settings_type_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Runtime" / "LegacySettings.cs",
+                "public sealed class SimultriaApi" + "Profile {}",
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "legacy Simultria API settings type" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_legacy_api_settings_script_guid_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Runtime" / "LegacySettings.asset",
+                "m_Script: {guid: " +
+                "98c59614849544b4" + "9d34f059afc91fb5}",
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "legacy Simultria API settings script GUID" in error
+                    for error in result["errors"]
+                )
+            )
+
+    def test_hardcoded_package_footer_version_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write(
+                fixture.package / "Editor" / "LegacyFooter.cs",
+                """
+                public sealed class LegacyFooter
+                {
+                    public void Draw()
+                    {
+                        DeucarianEditorChrome.DrawFooterVersion(
+                            "com.deucarian.example",
+                            "1.2.3");
+                    }
+                }
+                """,
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+
+            result = validator.validate_package()
+
+            self.assertTrue(
+                any(
+                    "hardcoded package footer version" in error
+                    for error in result["errors"]
+                )
+            )
+
     def test_production_logging_requires_logging_dependency(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             fixture = ValidatorFixture(Path(temp))
@@ -484,9 +558,77 @@ class DeucarianPackageValidatorTests(unittest.TestCase):
 
             self.assertEqual(
                 [
-                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha -> "
-                    "com.deucarian.missing is MissingHardPackageDependency."
+                    "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha "
+                    "MissingHardPackageDependency count 1 does not match "
+                    "acknowledged baseline 0."
                 ],
+                validator.errors,
+            )
+
+    def test_exact_acknowledged_organization_baseline_warns_and_count_drift_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = ValidatorFixture(Path(temp))
+            write_json(
+                fixture.registry / "DEPENDENCY_USAGE_AUDIT.json",
+                {
+                    "findings": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "dependency": "com.deucarian.missing",
+                            "classification": "MissingHardPackageDependency",
+                        }
+                    ]
+                },
+            )
+            write_json(
+                fixture.registry / "UNITY_OBJECT_LIFETIME_AUDIT.json",
+                {
+                    "conclusion": {"actionableProductionCount": 1},
+                    "occurrences": [
+                        {
+                            "packageId": "com.deucarian.alpha",
+                            "policyDisposition": "Migrate",
+                        }
+                    ],
+                },
+            )
+            validator = validator_module.Validator(
+                fixture.registry,
+                fixture.package,
+            )
+            validator.acknowledged_audit_baseline = {
+                "dependencyUsage": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "classification": "MissingHardPackageDependency",
+                        "count": 1,
+                        "reason": "Reviewed inherited baseline.",
+                    }
+                ],
+                "unityObjectLifetime": [
+                    {
+                        "packageId": "com.deucarian.alpha",
+                        "policyDisposition": "Migrate",
+                        "count": 1,
+                        "reason": "Reviewed inherited baseline.",
+                    }
+                ],
+            }
+
+            validator.validate_authoritative_audit_artifacts()
+
+            self.assertEqual([], validator.errors)
+            self.assertEqual(2, len(validator.warnings))
+
+            validator.errors.clear()
+            validator.acknowledged_audit_baseline["dependencyUsage"][0][
+                "count"
+            ] = 2
+            validator.validate_authoritative_audit_artifacts()
+            self.assertIn(
+                "DEPENDENCY_USAGE_AUDIT.json: com.deucarian.alpha "
+                "MissingHardPackageDependency count 1 does not match "
+                "acknowledged baseline 2.",
                 validator.errors,
             )
 
