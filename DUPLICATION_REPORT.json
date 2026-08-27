@@ -22204,7 +22204,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 15205,
+    "methodCountAnalyzed": 15207,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -42200,7 +42200,7 @@
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
-    "ref": "platform-migration-working-tree",
+    "ref": "platform-migration-exact-commits",
     "schemaVersion": 2
   },
   "parseFailures": [],
@@ -42507,7 +42507,7 @@
         "missingXmlDocumentationCount": 126,
         "packageId": "com.deucarian.simultria-api",
         "repository": "Simultria-API",
-        "runtimePublicCount": 167
+        "runtimePublicCount": 168
       },
       {
         "editorPublicCount": 14,
@@ -42667,7 +42667,7 @@
     "editorProductionCount": 2330,
     "internalPrivateProductionCount": 11557,
     "missingXmlDocumentationCount": 9553,
-    "runtimeProductionCount": 9222,
+    "runtimeProductionCount": 9223,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples",
@@ -132656,6 +132656,21 @@
         "symbol": "ResolveAsync",
         "symbolKind": "method",
         "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.UnityBuildRouting",
+        "containingType": "SimultriaUnityBuildRoutingService",
+        "file": "Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs",
+        "fullSignature": "public SimultriaUnityBuildRoutingResult EvaluateResponse( string buildVersionValue, string productValue, SimultriaUnityBuildVersionDto response)",
+        "line": 138,
+        "namespace": "Deucarian.Simultria.UnityBuildRouting",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Runtime production",
+        "symbol": "EvaluateResponse",
+        "symbolKind": "method",
+        "xmlDocumentation": true
       },
       {
         "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
@@ -260086,6 +260101,21 @@
       },
       {
         "assembly": "Deucarian.Simultria.API.Tests.EditMode",
+        "containingType": "SimultriaUnityBuildRoutingServiceTests",
+        "file": "Tests/EditMode/SimultriaUnityBuildRoutingServiceTests.cs",
+        "fullSignature": "[Test] public void EvaluatesTransportIndependentResponseWithSameRoutingPolicy()",
+        "line": 135,
+        "namespace": "Deucarian.Simultria.API.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.simultria-api",
+        "repository": "Simultria-API",
+        "scope": "Test",
+        "symbol": "EvaluatesTransportIndependentResponseWithSameRoutingPolicy",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Simultria.API.Tests.EditMode",
         "containingType": "",
         "file": "Tests/EditMode/SimultriaUnityBuildVersionLookupTests.cs",
         "fullSignature": "public sealed class SimultriaUnityBuildVersionLookupTests",
@@ -284625,7 +284655,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 4308
+    "testsPublicCount": 4309
   },
   "repositories": [
     {
@@ -284687,7 +284717,7 @@
         "hasMain": false,
         "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
         "origin": "https://github.com/Deucarian/Activity-Visualization.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Activity-Visualization",
@@ -284735,7 +284765,7 @@
         "governanceConfigSha256": "6ef572df872cec08415c5051faac183d820b7caf72a912ae8fca2ca5b11297ad",
         "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
         "manifestSha256": "9d53762610520c31ac587882e4d67e1fdae15ba0a8aaf7acff59ccaf7e135005",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -284837,7 +284867,7 @@
         "hasMain": true,
         "headCommit": "21a85429a7edeac4e50c631298273364582c5e25",
         "origin": "https://github.com/Deucarian/API.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/API",
@@ -284902,7 +284932,7 @@
         "governanceConfigSha256": "608b746b6b23053c05aec6a98f3158d05f3bf7b01f8c1e2adb9b334f04bd3109",
         "headCommit": "21a85429a7edeac4e50c631298273364582c5e25",
         "manifestSha256": "56e725ac2c97ac2093aea1ca9d743bdf5bae1de27027d58daafd3e9ffd67bd16",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -285031,7 +285061,7 @@
         "hasMain": true,
         "headCommit": "8086a705ac9fd1302aa5d9f960cfafddac9030fc",
         "origin": "https://github.com/Deucarian/Attacks.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Attacks",
@@ -285080,7 +285110,7 @@
         "governanceConfigSha256": "9a98d32b1d465cdbf2a1c9ad2b2829ecdc626344b71b26752a2f9e23b8badced",
         "headCommit": "8086a705ac9fd1302aa5d9f960cfafddac9030fc",
         "manifestSha256": "4012e6654b734ac211f2864f080538f74c0dd90a1987af85b1dd4b76e3ace5b8",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -285218,7 +285248,7 @@
         "hasMain": true,
         "headCommit": "863fe2c7321ff32f426516b7e97314f4dd1a4c39",
         "origin": "https://github.com/Deucarian/Auto-Defense.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Auto-Defense",
@@ -285282,7 +285312,7 @@
         "governanceConfigSha256": "0103f831fb3a309e42f2f50ee33c02b86886617320c6992fde1ed83dd8144809",
         "headCommit": "863fe2c7321ff32f426516b7e97314f4dd1a4c39",
         "manifestSha256": "b401a8041f084aa20f9d8e4b7ce4c18c1d75a5e186e3e4392ae66a4b8816fc27",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -285319,7 +285349,7 @@
         "hasMain": true,
         "headCommit": "120132b7c2c4459534a40aff7267c5b027542c5e",
         "origin": "https://github.com/Deucarian/Auto-Defense-Suite.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Auto-Defense-Suite",
@@ -285381,7 +285411,7 @@
         "governanceConfigSha256": "8c22bb9d072a21e47a320f0573821664b982a1f2e48d1ed0d5f86bd4cc98840d",
         "headCommit": "120132b7c2c4459534a40aff7267c5b027542c5e",
         "manifestSha256": "88c000f09f3f0d89de1bcdb44d80df6ba8a4747c85e9bcfd5ce225b96263f569",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -285447,12 +285477,12 @@
       "branches": {
         "atRequestedRef": false,
         "currentBranch": "codex/platform-bootstrap-catalog",
-        "dirty": true,
+        "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "af101549931370bf4c229a5c3b3359429a750e09",
+        "headCommit": "0e239aa4ee675cb537806e4016efc71c2420dc65",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Bootstrap",
@@ -285490,9 +285520,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "af101549931370bf4c229a5c3b3359429a750e09",
+        "headCommit": "0e239aa4ee675cb537806e4016efc71c2420dc65",
         "manifestSha256": "5a1db68e5ff85316c08867beebd25053c32b628c957d25aaed8022e36a9c716f",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": null,
       "registryGroupId": null,
@@ -285553,7 +285583,7 @@
         "hasMain": true,
         "headCommit": "008a4fab062c026354f7b543fcf62400affc84a0",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Build-Pipeline",
@@ -285606,7 +285636,7 @@
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
         "headCommit": "008a4fab062c026354f7b543fcf62400affc84a0",
         "manifestSha256": "b6d57aa8b69276b0ddd6e95a3d773aea24c29a156518a6fdfe04d2e5dd74f95a",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -285700,7 +285730,7 @@
         "hasMain": true,
         "headCommit": "ecf6208b3611bf1639a0a5995c3b28ab1705bfb5",
         "origin": "https://github.com/Deucarian/Camera-Navigation.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Camera-Navigation",
@@ -285749,7 +285779,7 @@
         "governanceConfigSha256": "cba7c54be4eece4c10db9114dd5ae1b0721eb966e2254dde04a6bb050b7fc1e0",
         "headCommit": "ecf6208b3611bf1639a0a5995c3b28ab1705bfb5",
         "manifestSha256": "9a6a151e6ce0e8ad446cf8c08cab620e25585097c9dbb05c996ed42128e0d4ab",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -285835,7 +285865,7 @@
         "hasMain": true,
         "headCommit": "0062e390c31b1f8457b6aec8afa8e7ccaac63370",
         "origin": "https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/CameraNavigation-InputSystem-Integration",
@@ -285880,7 +285910,7 @@
         "governanceConfigSha256": "d5e0ca3ee4583a798f553b09b4f6eae97ecf724b09d223f0069c3fe22427ba69",
         "headCommit": "0062e390c31b1f8457b6aec8afa8e7ccaac63370",
         "manifestSha256": "0c9ed5373876383c9f0c75de23c7a83a2da401d447ab507f1eb7ec59dce75d66",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.camera-navigation"
@@ -285947,7 +285977,7 @@
         "hasMain": true,
         "headCommit": "d296d80de4caf01e372a2900f6ce49792a06f6cd",
         "origin": "https://github.com/Deucarian/Combat.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Combat",
@@ -285987,7 +286017,7 @@
         "governanceConfigSha256": "00dc8f7d761e46f7ce95ea09c88f85a86a4ef9a89489c7102574ba9156296d55",
         "headCommit": "d296d80de4caf01e372a2900f6ce49792a06f6cd",
         "manifestSha256": "f4f31d8ba0e14b8f2a5e619d313e07ede4de8a5f709af827ecfeb0335ff23584",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation"
@@ -286087,7 +286117,7 @@
         "hasMain": true,
         "headCommit": "195d41eb781510c4023a658a80de54adc4d3e18c",
         "origin": "https://github.com/Deucarian/Command-Routing.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Command-Routing",
@@ -286142,7 +286172,7 @@
         "governanceConfigSha256": "50c291932b63278b68d293339fdb8cdac080d70c8635936f36c7b254c9c0856a",
         "headCommit": "195d41eb781510c4023a658a80de54adc4d3e18c",
         "manifestSha256": "aeceaabbf1857dd624e58527877d0525dafaa5d88596c614953eb4e1a6427a23",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -286251,7 +286281,7 @@
         "hasMain": true,
         "headCommit": "12be076e65e57af3bae887cc5876390e353984a2",
         "origin": "https://github.com/Deucarian/Command-Routing-UDP-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Command-Routing-UDP-Integration",
@@ -286307,7 +286337,7 @@
         "governanceConfigSha256": "aacc132d20e937a4685b99a1b16d491d2586a02586e421d5811065341e17a6a8",
         "headCommit": "12be076e65e57af3bae887cc5876390e353984a2",
         "manifestSha256": "e367414eb349a2fbed3fe7290beefec1e4bc5ed065a86c023f54474dc1e5e000",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.command-routing",
@@ -286413,7 +286443,7 @@
         "hasMain": false,
         "headCommit": "ecd72497de6aebf3586c69eae3482f9a1a258720",
         "origin": "https://github.com/Deucarian/Command-Routing-WebGL-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Command-Routing-WebGL-Integration",
@@ -286469,7 +286499,7 @@
         "governanceConfigSha256": "9903cf8746eeb24271160977b722f8b1bc9892c2f0e31a01b2ecd04f3d003666",
         "headCommit": "ecd72497de6aebf3586c69eae3482f9a1a258720",
         "manifestSha256": "2280c26d6ca41820c7f2ab3b30ae24b1dde151ac6f20d44f66c4bb2e12e0a11c",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.command-routing",
@@ -286556,7 +286586,7 @@
         "hasMain": true,
         "headCommit": "cb839435db4ccd41bda3ec3e82feee7194077bea",
         "origin": "https://github.com/Deucarian/Common.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Common",
@@ -286601,7 +286631,7 @@
         "governanceConfigSha256": "253d6a15210adcaf4ca6498fe2d6fac352dfc8f4d4ca6dea32b810bc3bb4c77c",
         "headCommit": "cb839435db4ccd41bda3ec3e82feee7194077bea",
         "manifestSha256": "4888870a51604b8ac1e3ae3123b2e070661f3b7e0ac4a7780eefd16f7e9e40da",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "infrastructure",
@@ -286669,7 +286699,7 @@
         "hasMain": true,
         "headCommit": "827c1b320cd6ef3f04144292966f0f0c6538ffc4",
         "origin": "https://github.com/JorisHoef/Core-State.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Core-State",
@@ -286712,7 +286742,7 @@
         "governanceConfigSha256": "83e0fe480b367fbf30abe0d90c278e5f9ea4b6d7602baa2c2ce3533a9671bca6",
         "headCommit": "827c1b320cd6ef3f04144292966f0f0c6538ffc4",
         "manifestSha256": "ef01066cbb484ac43b859a90be4a548721002ac4dbe4c432d537defc5f464476",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "state-data",
@@ -286813,7 +286843,7 @@
         "hasMain": true,
         "headCommit": "e655e78c3a1515b00fe23e13957aadef31fbb25b",
         "origin": "https://github.com/Deucarian/Defense-Games.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Defense-Games",
@@ -286862,7 +286892,7 @@
         "governanceConfigSha256": "ac5f706b2b861dea2b08da2860783cf35a2123c5108795374a5e959d81ae6583",
         "headCommit": "e655e78c3a1515b00fe23e13957aadef31fbb25b",
         "manifestSha256": "dd2e5139869765ced53f88f6c6c7348d8c09cc7cdfa1257d6534f1721a09f66b",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -286963,7 +286993,7 @@
         "hasMain": true,
         "headCommit": "81c833703772aaae697a5e40b937b39720aa49bc",
         "origin": "https://github.com/Deucarian/Diagnostics.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Diagnostics",
@@ -287014,7 +287044,7 @@
         "governanceConfigSha256": "6f2293f199d36bdfdab28fb9ccd1a3709a6074058f1d0dab6a4ab05e8ca4831e",
         "headCommit": "81c833703772aaae697a5e40b937b39720aa49bc",
         "manifestSha256": "57b7b1e19d0454b6713852e34ea4c9fb9a4f81a6dde27e061c0bf720409e2a4d",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -287119,7 +287149,7 @@
         "hasMain": true,
         "headCommit": "2c355d3dbb0200c82b50739ffed98ac7368546c7",
         "origin": "https://github.com/Deucarian/Editor.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Editor",
@@ -287163,7 +287193,7 @@
         "governanceConfigSha256": "588cd3644ee20e8846c4f28f53d988e37950525befb224e5720e6ee6a80fd44c",
         "headCommit": "2c355d3dbb0200c82b50739ffed98ac7368546c7",
         "manifestSha256": "297102d69cc7dd6415564626bd66500ff95fb8550a75de49d06c7f42d5888bae",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "infrastructure",
@@ -287230,7 +287260,7 @@
         "hasMain": true,
         "headCommit": "537d8ce7740432d4e0462f7032c7c62808a152d2",
         "origin": "https://github.com/Deucarian/Encounters.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Encounters",
@@ -287270,7 +287300,7 @@
         "governanceConfigSha256": "ac4e518b28f7a8f865ab379108d4fadca9323efb157886060b89c026d0ce73bd",
         "headCommit": "537d8ce7740432d4e0462f7032c7c62808a152d2",
         "manifestSha256": "0e329e12b32974aeb2ed5f01ace9b92f40183d8c8d33e6e17d2a91c06fff3a01",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation"
@@ -287337,7 +287367,7 @@
         "hasMain": true,
         "headCommit": "df2908fb870cdae193bc5b1df4d276180419c86e",
         "origin": "https://github.com/Deucarian/Game-Content-Authoring.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Game-Content-Authoring",
@@ -287388,7 +287418,7 @@
         "governanceConfigSha256": "52bd5735bab819e2cebb3a585acfd05ed8f84585f89a0b6643536ce9ec78dabc",
         "headCommit": "df2908fb870cdae193bc5b1df4d276180419c86e",
         "manifestSha256": "4672e390cc297de69b1184a7dc0e1f31571717aa4076f03596db1d3868005bc6",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -287446,7 +287476,7 @@
         "hasMain": true,
         "headCommit": "69a1d875ea9d3a3fe206d330a2251b4af10a191c",
         "origin": "https://github.com/Deucarian/Gameplay-Foundation.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Gameplay-Foundation",
@@ -287482,7 +287512,7 @@
         "governanceConfigSha256": "50b2de859ed370c4b903c6e72ae92856b20ace17d164d0d29293d2ea3e1a9031",
         "headCommit": "69a1d875ea9d3a3fe206d330a2251b4af10a191c",
         "manifestSha256": "f52cee939e096b062abfa9137562e329b3a3a7d65a8fad0774d72568ac37ecb0",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "gameplay-foundations",
@@ -287560,7 +287590,7 @@
         "hasMain": true,
         "headCommit": "6048186c38e453e3bcdfe06172af858f773aa8ed",
         "origin": "https://github.com/Deucarian/Idle-Progression.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Idle-Progression",
@@ -287604,7 +287634,7 @@
         "governanceConfigSha256": "e11876352e51cd1467d19491c4f1c67dad5e22054cdd94c74bd7d9cf68bf3842",
         "headCommit": "6048186c38e453e3bcdfe06172af858f773aa8ed",
         "manifestSha256": "881032de183a58c48141a64b6ace6f1b64cf32098bad22e247a42d4a91391c10",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -287717,7 +287747,7 @@
         "hasMain": true,
         "headCommit": "d61046f045c281baeb5e520320f367762cc6dadd",
         "origin": "https://github.com/Deucarian/Logging.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Logging",
@@ -287775,7 +287805,7 @@
         "governanceConfigSha256": "6f38aa4aefe0bd0923a8e2333642e8e5cd5a630341cc688ad1933157499f8c0c",
         "headCommit": "d61046f045c281baeb5e520320f367762cc6dadd",
         "manifestSha256": "a107b272199d7254f78ba4d0b027a7a1e971f1d5b41c85a5a2779a3c68ce765b",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -287873,7 +287903,7 @@
         "hasMain": true,
         "headCommit": "e01d6b727482402b87ae9f3cda88a72fdc38b8ba",
         "origin": "https://github.com/Deucarian/Media.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Media",
@@ -287929,7 +287959,7 @@
         "governanceConfigSha256": "92537a5477cf7ed4116a9dbe2bc4454b2bb2b79b991ecb0b846b6dedabe90080",
         "headCommit": "e01d6b727482402b87ae9f3cda88a72fdc38b8ba",
         "manifestSha256": "2bd4e687e5e199705002441bd21c73eeca62d4c5dfadb083afe9e79db5173817",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common"
@@ -288016,7 +288046,7 @@
         "hasMain": true,
         "headCommit": "bf22e6aa14dc2f62f1df501451635a3a6d2772bc",
         "origin": "https://github.com/Deucarian/Media-API-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Media-API-Integration",
@@ -288062,7 +288092,7 @@
         "governanceConfigSha256": "d3e7ff03f6e1e178fabf232e1d2eb853751ee1742d20e53c25454cecf31a7bd9",
         "headCommit": "bf22e6aa14dc2f62f1df501451635a3a6d2772bc",
         "manifestSha256": "b1efc0632c47ec67802500c762a632b153f90812791f61f23b86b657edf8e2a6",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -288127,7 +288157,7 @@
         "hasMain": true,
         "headCommit": "294fbf149e25cebdecf6bfcfe654927773903669",
         "origin": "https://github.com/Deucarian/Monetization.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Monetization",
@@ -288164,7 +288194,7 @@
         "governanceConfigSha256": "e334fde6b4d942c34caa3306810a572f19cf8440a0f43cfe94b179a618cdc72d",
         "headCommit": "294fbf149e25cebdecf6bfcfe654927773903669",
         "manifestSha256": "684ba4ced61f1077964ef2eb35cb3e5bb36f9e98b6fa9a5fa26434afa1ba6e7f",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "runtime-services",
@@ -288273,7 +288303,7 @@
         "hasMain": true,
         "headCommit": "52a0c7dadcc36190e121a2c040a424e51cdb2e62",
         "origin": "https://github.com/JorisHoef/Object-Loading.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Object-Loading",
@@ -288325,7 +288355,7 @@
         "governanceConfigSha256": "fa9d7777a110bc2e7d82e4281d567c1f0d9628e0f74581dd70839f43d8064ff8",
         "headCommit": "52a0c7dadcc36190e121a2c040a424e51cdb2e62",
         "manifestSha256": "eb54834ec498416c4bc9304126de076b1e259d4669c62054bca13dbdf0945f35",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -288405,7 +288435,7 @@
         "hasMain": true,
         "headCommit": "e60257e69774e19622e932c2b7ec83f59fdfa26e",
         "origin": "https://github.com/Deucarian/Object-Selection.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Object-Selection",
@@ -288456,7 +288486,7 @@
         "governanceConfigSha256": "3373e96590a7662b5c1c3403ec3639ade8bcc6a5f2ecc74b75638076fa93425c",
         "headCommit": "e60257e69774e19622e932c2b7ec83f59fdfa26e",
         "manifestSha256": "07cc352389d09103cca851e237c26830e8d1b742750419a5b86cd97f8325db28",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.logging"
@@ -288536,7 +288566,7 @@
         "hasMain": true,
         "headCommit": "03cdc4537eb95035214901240cf800aca07ff6f3",
         "origin": "https://github.com/Deucarian/ObjectLoading-API-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/ObjectLoading-API-Integration",
@@ -288582,7 +288612,7 @@
         "governanceConfigSha256": "7c5c71c055c5f2f0643d07ec8c3aeccd8736c67cb37748e685002d16d0d0a613",
         "headCommit": "03cdc4537eb95035214901240cf800aca07ff6f3",
         "manifestSha256": "f95a8bc727583f4a0571a9288dc57edd54bff689818fc7b09e6777047f4b066e",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -288665,7 +288695,7 @@
         "hasMain": true,
         "headCommit": "28752b1294e2feadddb00c236504540b77afcd94",
         "origin": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/ObjectSelection-CoreState-Integration",
@@ -288716,7 +288746,7 @@
         "governanceConfigSha256": "521a7f68d86f56d1dc942e40724c141f2ec5183716d00749d6f7b0588f804a2d",
         "headCommit": "28752b1294e2feadddb00c236504540b77afcd94",
         "manifestSha256": "a190188640d1374d2667f817d71c504a239125f8c83021ef987f4a18680bdae7",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.object-selection",
@@ -288794,12 +288824,12 @@
       "branches": {
         "atRequestedRef": false,
         "currentBranch": "codex/platform-package-installer-catalog",
-        "dirty": true,
+        "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "bbb208222134a853ca25b005cf1151cd3633956f",
+        "headCommit": "61e1b82690b6fa61d87fc400a933cd1c5c97fb20",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Package-Installer",
@@ -288845,9 +288875,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "bbb208222134a853ca25b005cf1151cd3633956f",
+        "headCommit": "61e1b82690b6fa61d87fc400a933cd1c5c97fb20",
         "manifestSha256": "f6bacc9318964361f30e16eeed16b9a4ce4a3d50eb7c57c63be87413020ad4dc",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -288873,7 +288903,7 @@
         "hasMain": true,
         "headCommit": "",
         "origin": "https://github.com/Deucarian/Package-Registry.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Package-Registry",
@@ -288911,7 +288941,7 @@
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
         "manifestSha256": "",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": null,
       "registryGroupId": null,
@@ -289007,7 +289037,7 @@
         "hasMain": true,
         "headCommit": "027420bf57d5d2504be1955b171c329f37d45a42",
         "origin": "https://github.com/Deucarian/Persistence.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Persistence",
@@ -289050,7 +289080,7 @@
         "governanceConfigSha256": "4847103d56944dc424f0faf2c5a3e87ea872ff6dddfd2032ba4199a530a03b1d",
         "headCommit": "027420bf57d5d2504be1955b171c329f37d45a42",
         "manifestSha256": "4d5c977a5f259700c8fc459fcc95a8fdacc7d6f050b9ae4aa0f9d452a8725361",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "state-data",
@@ -289165,7 +289195,7 @@
         "hasMain": true,
         "headCommit": "8947c718d7d86c6710cc5086820a76ed21b0ebff",
         "origin": "https://github.com/Deucarian/Pointer-Capture.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Pointer-Capture",
@@ -289215,7 +289245,7 @@
         "governanceConfigSha256": "d9c17ad7dc856ec50888c7691aba554b90fae725280fd7208a68c0a1db326a4a",
         "headCommit": "8947c718d7d86c6710cc5086820a76ed21b0ebff",
         "manifestSha256": "a5a1dd8762496bda18690b08c5d1a4cc66e411d150b1736bf7110a0b2dda329b",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -289283,7 +289313,7 @@
         "hasMain": true,
         "headCommit": "e14049918546b7e7bb6285c99c58812be7fb96e5",
         "origin": "https://github.com/Deucarian/Progression.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Progression",
@@ -289323,7 +289353,7 @@
         "governanceConfigSha256": "55899614dd960cda21f6c622f62eeee153e7726391c84ccee44bff45d502ced0",
         "headCommit": "e14049918546b7e7bb6285c99c58812be7fb96e5",
         "manifestSha256": "40d41819a79f37828c7f7df8a1a54340176605f877ab3b8428a71d80f3b5f5f3",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation"
@@ -289396,7 +289426,7 @@
         "hasMain": true,
         "headCommit": "bdbea5108caaa74c661a8d339d001df5fe1446c5",
         "origin": "https://github.com/Deucarian/Projectiles.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Projectiles",
@@ -289444,7 +289474,7 @@
         "governanceConfigSha256": "0990c1e1fdf9b85e274317ef8e9272f0fa3c48cf5f7bea732b3a4c113100281f",
         "headCommit": "bdbea5108caaa74c661a8d339d001df5fe1446c5",
         "manifestSha256": "221f235558ab59a185d6e8ee136c4b2ef6b5f66d572efdb980307716197576b7",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -289555,7 +289585,7 @@
         "hasMain": true,
         "headCommit": "4a2fc7872a34675e7bb4d034edfa2f953c1996e0",
         "origin": "https://github.com/Deucarian/Run-Upgrades.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Run-Upgrades",
@@ -289606,7 +289636,7 @@
         "governanceConfigSha256": "985112bf14bcae1f0ce25d23d65562f26a22e9319066f2b88b801f64e021cdc7",
         "headCommit": "4a2fc7872a34675e7bb4d034edfa2f953c1996e0",
         "manifestSha256": "38f6a0a563c7123c8436e2508ae8e41d5ebb10f3d73ce0d667ae4a92f0af2bf6",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -289654,7 +289684,7 @@
         "hasMain": true,
         "headCommit": "d52a935e0ecc0de9f9d3dfd95cb1ba2863206eb4",
         "origin": "https://github.com/Deucarian/Selection-Suite.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Selection-Suite",
@@ -289702,7 +289732,7 @@
         "governanceConfigSha256": "0827945d814cc504ea8e71a66842018ea4ae8db1101573d33ede10aa7a61fcb9",
         "headCommit": "d52a935e0ecc0de9f9d3dfd95cb1ba2863206eb4",
         "manifestSha256": "422cb84b0bc3e1688232c374fe561b075833985791626120f84548521a83082c",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.core-state",
@@ -289791,7 +289821,7 @@
         "hasMain": true,
         "headCommit": "4e0d9dbe10811e483b9758b6b14cc78c14a06731",
         "origin": "https://github.com/Deucarian/Session.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Session",
@@ -289840,7 +289870,7 @@
         "governanceConfigSha256": "2b84825f44811ba3816467012f582a072247175ee26b7d7376d1e5e988509512",
         "headCommit": "4e0d9dbe10811e483b9758b6b14cc78c14a06731",
         "manifestSha256": "3c85e76f7c922a9cc316e0609d3167913ffe1aa547030540903a176d26d4ed19",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.logging"
@@ -289934,7 +289964,7 @@
         "hasMain": true,
         "headCommit": "8d9c9a571588eda05a605c23acbd61c7d48791c9",
         "origin": "https://github.com/Deucarian/Session-API-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Session-API-Integration",
@@ -289983,7 +290013,7 @@
         "governanceConfigSha256": "b712b9399cdc14f48a67b05add403f625b8e58e52c495eb086a3ee0e02b64ed6",
         "headCommit": "8d9c9a571588eda05a605c23acbd61c7d48791c9",
         "manifestSha256": "672ec295e159d82df5dad46594f0977c1cc34bba5c33364a0a717532c4b1dfbd",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.session",
@@ -290109,9 +290139,9 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": true,
-        "headCommit": "c2cc42131eddcda497655168dcbe35bbb9d545d0",
+        "headCommit": "897e2535df20e430ad57129f2d17e08d190dde3c",
         "origin": "https://github.com/Deucarian/Simultria-API.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Simultria-API",
@@ -290169,9 +290199,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-API.git",
         "governanceConfigSha256": "cbd782faa0549b81e15777baeb2179626957330b18ca5afa2816989c0fe514e3",
-        "headCommit": "c2cc42131eddcda497655168dcbe35bbb9d545d0",
+        "headCommit": "897e2535df20e430ad57129f2d17e08d190dde3c",
         "manifestSha256": "d397c458813874bead35da350f391f5c6f1fc9a92049aa8dfc51a0f53ffb510e",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -290286,7 +290316,7 @@
         "hasMain": true,
         "headCommit": "48bcaec3772441020fd3c3fbf0228849404a1782",
         "origin": "https://github.com/Deucarian/Simultria-Viewer-Connection.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Simultria-Viewer-Connection",
@@ -290343,7 +290373,7 @@
         "governanceConfigSha256": "449665461969d8daa2f54f59c65deb4ef38aaf9ceec5e82c4befe4d79d0ae849",
         "headCommit": "48bcaec3772441020fd3c3fbf0228849404a1782",
         "manifestSha256": "f80272b29861e0803bd4efdb1549bcfc1423b702ef365b178bd85bc26a9c2915",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -290501,7 +290531,7 @@
         "hasMain": true,
         "headCommit": "69d184fc051112f62c6358c4508b33af3e25e6d3",
         "origin": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Template-Game-Idle-Auto-Defense",
@@ -290560,7 +290590,7 @@
         "governanceConfigSha256": "a5db2ae8403c2cfb9e7cb5e95a4186c995e1a1bd0844c6be78a64a331e8936f4",
         "headCommit": "69d184fc051112f62c6358c4508b33af3e25e6d3",
         "manifestSha256": "20df5e1c17f5ff3fe5ee5dbcb8d787754c7c81477cd9c4ec552389b27ff9fc24",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -290699,7 +290729,7 @@
         "hasMain": true,
         "headCommit": "bdd1eae9bfc00032cd0dbed4457420de0ad6a039",
         "origin": "https://github.com/Deucarian/Template-Game-Movement-FPS.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Template-Game-Movement-FPS",
@@ -290759,7 +290789,7 @@
         "governanceConfigSha256": "cd0981e52aed86f3e4ef44e45c1d25cf8ed576ddf0c1401936fd8f730e4e707b",
         "headCommit": "bdd1eae9bfc00032cd0dbed4457420de0ad6a039",
         "manifestSha256": "74e80a9d203fb1d662e8af52fab1f69f19b4555d63c287e438f741f36171ec4b",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -290921,7 +290951,7 @@
         "hasMain": true,
         "headCommit": "b1e50a8b832ffae511f6bb10c0f48ecfd7ceafd2",
         "origin": "https://github.com/Deucarian/Template-Game-Survivors.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Template-Game-Survivors",
@@ -290993,7 +291023,7 @@
         "governanceConfigSha256": "6258ec704fd125e071dee88554c744e5793d977bdd7d0a48e828f564e8eef97e",
         "headCommit": "b1e50a8b832ffae511f6bb10c0f48ecfd7ceafd2",
         "manifestSha256": "1d5942d34394875c3d4794aa005ffa3726b333bde22925c70fb57fe5b1aa05e8",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -291245,7 +291275,7 @@
         "hasMain": true,
         "headCommit": "7fa294ea13ab13294e5457ddb07b25c92107363e",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
@@ -291332,7 +291362,7 @@
         "governanceConfigSha256": "67034bc1af1af9a6bcd9bfe109c4730f781938b283f9e1464023c5a09c1f34c9",
         "headCommit": "7fa294ea13ab13294e5457ddb07b25c92107363e",
         "manifestSha256": "f61d271a6df25a1e81ab8e3cc711b9c26893f7f98798ee000e1329aabda45a66",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -291401,7 +291431,7 @@
         "hasMain": true,
         "headCommit": "19ce081891112cb57cfac7abb9a280eddb6009fe",
         "origin": "https://github.com/Deucarian/Test-Automation.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Test-Automation",
@@ -291436,7 +291466,7 @@
         "governanceConfigSha256": "859998623405050500d86b8dbfd7b1e0e01a6ef4ec137e8eb7ce8a6e37a40c4d",
         "headCommit": "19ce081891112cb57cfac7abb9a280eddb6009fe",
         "manifestSha256": "ee439b066fa595edaa68c807e01741573301a0cb1978bc0ff27f9c60069cd82d",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [],
       "registryGroupId": "tools-quality",
@@ -291568,7 +291598,7 @@
         "hasMain": true,
         "headCommit": "35ce1b47d1c569bba8c63f4dabab4b4fb91723ed",
         "origin": "https://github.com/Deucarian/Theming.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Theming",
@@ -291627,7 +291657,7 @@
         "governanceConfigSha256": "607a927ca7632d1b4bce63dff0f6d92cf32a93b65b88712ea5be85cecf2504c4",
         "headCommit": "35ce1b47d1c569bba8c63f4dabab4b4fb91723ed",
         "manifestSha256": "21f98ed5cf457283cb2b9c48a579165d00ce352db480934b586820867940c370",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -291721,7 +291751,7 @@
         "hasMain": true,
         "headCommit": "5f5821b0672212506414ae30131edf960da2a835",
         "origin": "https://github.com/Deucarian/UI.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/UI",
@@ -291773,7 +291803,7 @@
         "governanceConfigSha256": "0d3f5c199645170bad32b2c53c4eb17fd6d1840849b3107680f2f26a805306a9",
         "headCommit": "5f5821b0672212506414ae30131edf960da2a835",
         "manifestSha256": "14dc456947ee6caa52f3fdd32f95f1739253a2c22693a435c6f8d0d6a683591c",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -291857,7 +291887,7 @@
         "hasMain": true,
         "headCommit": "eeb1178e6ceb6072864d8d1e65f64b7041ee3e86",
         "origin": "https://github.com/Deucarian/UI-Binding.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/UI-Binding",
@@ -291906,7 +291936,7 @@
         "governanceConfigSha256": "a22162513633605e03fd620b2118e5d5e5b38ecdfb77fafbce63db8e0de77bb8",
         "headCommit": "eeb1178e6ceb6072864d8d1e65f64b7041ee3e86",
         "manifestSha256": "4004840186f20a8a9dbd50c965a5d3848f74df74581d901980c292fed698d709",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common"
@@ -292063,7 +292093,7 @@
         "hasMain": true,
         "headCommit": "13fcff378de8ce0090075c2f1533f5c36b30f19c",
         "origin": "https://github.com/Deucarian/UI-FLow.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/UI-FLow",
@@ -292115,7 +292145,7 @@
         "governanceConfigSha256": "13d7b56ff39fd3b0190d15001c25098930cf64cb5dc7438608f9d749999b9991",
         "headCommit": "13fcff378de8ce0090075c2f1533f5c36b30f19c",
         "manifestSha256": "2f77e1d367e82c1ba4cdd80ff1a6d60f223781f505a733ea1091ab6a67f56f71",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -292217,7 +292247,7 @@
         "hasMain": true,
         "headCommit": "ef2649e66f41aca17ceba2df33c80c4ea3295115",
         "origin": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/UIBinding-CoreState-Integration",
@@ -292263,7 +292293,7 @@
         "governanceConfigSha256": "008b9038fe1eb9d3b5ef7bad3e9d0edb2f184cb8013c751b0b08f006d44aaaec",
         "headCommit": "ef2649e66f41aca17ceba2df33c80c4ea3295115",
         "manifestSha256": "b87311660e7a1099894c4e10af5b63e2dcf0b8871a57622b46bef58ee58048f7",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.ui-binding",
@@ -292384,7 +292414,7 @@
         "hasMain": true,
         "headCommit": "6812f542f23696979ec2451d9f2b84131d1c7dc3",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Viewer-Authentication",
@@ -292441,7 +292471,7 @@
         "governanceConfigSha256": "2b8446af612e3f68b6938304a2a3bc229db42fbad36527b515ab4a07b15a44bc",
         "headCommit": "6812f542f23696979ec2451d9f2b84131d1c7dc3",
         "manifestSha256": "d38ff731c04e20dbaac91c1355feb65bea18d678a6035505b4f5582334d40962",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -292574,7 +292604,7 @@
         "hasMain": true,
         "headCommit": "dc0d9455197ed757be13f4c044e421e3d69d043d",
         "origin": "https://github.com/Deucarian/Viewer-Navigation.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Viewer-Navigation",
@@ -292643,7 +292673,7 @@
         "governanceConfigSha256": "486f6073a864a483fd2e0b46bfbd38a83b0d5b0ba7c33b1523fca8fbca000622",
         "headCommit": "dc0d9455197ed757be13f4c044e421e3d69d043d",
         "manifestSha256": "7c94b00b2467be073cc850abf3fea34ffa46a5d0581a8a6c0249de130a160a6d",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.camera-navigation",
@@ -292758,7 +292788,7 @@
         "hasMain": true,
         "headCommit": "4c7d970d07c356ef7a21bc01593e08921df9a243",
         "origin": "https://github.com/Deucarian/Viewer-Rendering.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Viewer-Rendering",
@@ -292811,7 +292841,7 @@
         "governanceConfigSha256": "dd1270da8e19b674e4ed4756ff4199642642c7a269c5175f460fe17c63d65a94",
         "headCommit": "4c7d970d07c356ef7a21bc01593e08921df9a243",
         "manifestSha256": "087fc3788d6a9477a7cbdc08ea536f7851367e3beb203f286725400531226989",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -292892,7 +292922,7 @@
         "hasMain": true,
         "headCommit": "b7728ba487a652ff003d0c5b3afe82bffb8e0207",
         "origin": "https://github.com/Deucarian/Viewer-Shell.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Viewer-Shell",
@@ -292942,7 +292972,7 @@
         "governanceConfigSha256": "e0d7301184a874a26004e56342770d98a5fe2a38fcaab9b9bcd0103c050be59c",
         "headCommit": "b7728ba487a652ff003d0c5b3afe82bffb8e0207",
         "manifestSha256": "c9559fc75ee34e873040ec5a23fa383c303abdc05c1eaedaddb5b14d06c5847e",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -293058,7 +293088,7 @@
         "hasMain": true,
         "headCommit": "e562ddd9334cd4c22cca2dac9ce78def3e43f2c8",
         "origin": "https://github.com/Deucarian/Weapon-Systems.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Weapon-Systems",
@@ -293109,7 +293139,7 @@
         "governanceConfigSha256": "a93a0ed9f7f500b980ef3346e3d3efff241b4b2c513c8c33eb8aea87d3bd29b0",
         "headCommit": "e562ddd9334cd4c22cca2dac9ce78def3e43f2c8",
         "manifestSha256": "5d16fcd5cb4dd804a7f1e00cd658210ecc6669493a7b2b7b8fc4e16e64b91b6a",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -293164,7 +293194,7 @@
         "hasMain": true,
         "headCommit": "4c5d227ad2605d6029f9004e476566b2d4f1be59",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
@@ -293241,7 +293271,7 @@
         "governanceConfigSha256": "9a61fc6db588d516fdd9fa7bb7403058a3a7487a653aa89159c30277a925f541",
         "headCommit": "4c5d227ad2605d6029f9004e476566b2d4f1be59",
         "manifestSha256": "0174833ef8b95482c82ed2eef9742b5ed59f5152ff3c42708393af8daed6a3a4",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -293342,7 +293372,7 @@
         "hasMain": true,
         "headCommit": "cadfee92cd93114085e1084ed045854713155fd1",
         "origin": "https://github.com/Deucarian/WebGL-Template.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/WebGL-Template",
@@ -293387,7 +293417,7 @@
         "governanceConfigSha256": "d76b09f14be2bc8e44e9ba76f9a7f401c65a58e23f5e6d0233f92f300dd20ae4",
         "headCommit": "cadfee92cd93114085e1084ed045854713155fd1",
         "manifestSha256": "91f15837ce4db8e91dd994ef0d15f1d9a42ab55c5bee855c2782d615d5778450",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.build-pipeline"
@@ -293470,7 +293500,7 @@
         "hasMain": true,
         "headCommit": "a6c059fa5e4b92e12aab6a0707a1deb731a6e8d8",
         "origin": "https://github.com/Deucarian/World-Navigation.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/World-Navigation",
@@ -293513,7 +293543,7 @@
         "governanceConfigSha256": "3716bf2906fc9de6cc0fb49f0b5ede7383ce350b2f330f317e5a2d80084c43b4",
         "headCommit": "a6c059fa5e4b92e12aab6a0707a1deb731a6e8d8",
         "manifestSha256": "fc41bdcd6670b73e9ce93c3a95507896ed0dffee6d06b8cea4606bd49ec43da8",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -293600,7 +293630,7 @@
         "hasMain": true,
         "headCommit": "f8d67340b800b09cc167ade4325f858696c99198",
         "origin": "https://github.com/Deucarian/World-Spawning.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/World-Spawning",
@@ -293643,7 +293673,7 @@
         "governanceConfigSha256": "8a12b75020efdf26ae40c5955b49ac63408c487388f806e196b3676d77ab10bc",
         "headCommit": "f8d67340b800b09cc167ade4325f858696c99198",
         "manifestSha256": "24e14a4b93e546a9f9f794100e3bbbfc0e830e2a38f36ff7caaf03975330d584",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -293730,7 +293760,7 @@
         "hasMain": true,
         "headCommit": "00cc2a864030807608ca82cb3eaa360da1eced52",
         "origin": "https://github.com/Deucarian/XR-UI.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/XR-UI",
@@ -293784,7 +293814,7 @@
         "governanceConfigSha256": "fb640b26fbc5b051e89bd70d1753a9e8e625b7473d1d01319a88428c405e3913",
         "headCommit": "00cc2a864030807608ca82cb3eaa360da1eced52",
         "manifestSha256": "7fa17b4a65e6194fd61bee4e8f64d4589405e4c4168fd61b16931e4462b227b9",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.common"
@@ -293858,7 +293888,7 @@
         "hasMain": true,
         "headCommit": "edf581e55ccb51201cde56deb3893e2927b761ef",
         "origin": "https://github.com/Deucarian/XR-UI-Theming-Integration.git",
-        "requestedRef": "platform-migration-working-tree",
+        "requestedRef": "platform-migration-exact-commits",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/XR-UI-Theming-Integration",
@@ -293900,7 +293930,7 @@
         "governanceConfigSha256": "97f620a117042d49c15c17badf8a115f7c8e59b846ab2c55541e1f87d32be9f4",
         "headCommit": "edf581e55ccb51201cde56deb3893e2927b761ef",
         "manifestSha256": "c6939a34a7b305c9599501bad9ba621e1e36bf4c0c9df5ed356fbf2e633d175c",
-        "requestedRef": "platform-migration-working-tree"
+        "requestedRef": "platform-migration-exact-commits"
       },
       "registryDependencies": [
         "com.deucarian.xr-ui",

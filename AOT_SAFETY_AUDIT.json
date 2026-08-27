@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "platform-migration-working-tree",
+  "ref": "platform-migration-exact-commits",
   "repositories": [
     {
       "categories": {

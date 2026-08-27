@@ -1,6 +1,6 @@
 # Deucarian AOT Safety Audit
 
-Authoritative runtime reflection and linker inventory for `Deucarian` at `platform-migration-working-tree`.
+Authoritative runtime reflection and linker inventory for `Deucarian` at `platform-migration-exact-commits`.
 
 This report inventories current package-owned player-code findings. Editor-only reflection is excluded. Audit findings are migration work; an `Enforce` package with an unresolved finding fails validation.
 

@@ -2,7 +2,7 @@
 
 Schema version: 2
 
-This is the hardened organization-wide audit snapshot for `Deucarian` at `platform-migration-working-tree`. It uses `tree-sitter-c-sharp` for C# parsing and records the current package sources and governance state.
+This is the hardened organization-wide audit snapshot for `Deucarian` at `platform-migration-exact-commits`. It uses `tree-sitter-c-sharp` for C# parsing and records the current package sources and governance state.
 
 ## Weaknesses Fixed From The Original Audit
 
@@ -22,7 +22,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | Attacks | com.deucarian.attacks | 0.1.0 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.combat, com.deucarian.editor, com.deucarian.game-content-authoring | 4 | 389 |
 | Auto-Defense | com.deucarian.auto-defense | 0.1.0 | 6000.3 | yes | dirty | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.defense-games, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems | 4 | 112 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.0 | 6000.3 | yes | dirty | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 0 | 0 |
-| Bootstrap | com.deucarian.bootstrap | 1.2.7 | 2021.3 | yes | dirty | (none) | 2 | 1 |
+| Bootstrap | com.deucarian.bootstrap | 1.2.7 | 2021.3 | yes | clean | (none) | 2 | 1 |
 | Build-Pipeline | com.deucarian.build-pipeline | 0.5.0 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 72 |
 | Camera-Navigation | com.deucarian.camera-navigation | 0.2.11 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.editor | 4 | 153 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 81 |
@@ -47,7 +47,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.5 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 2 | 30 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.83 | 2021.3 | yes | dirty | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
+| Package-Installer | com.deucarian.package-installer | 1.1.83 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 0 |
 | Package-Registry | (none) | (none) | (none) | yes | dirty | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.0 | 2021.3 | yes | dirty | com.unity.nuget.newtonsoft-json | 4 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.3 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 57 |
@@ -57,7 +57,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | Selection-Suite | com.deucarian.selection-suite | 1.0.3 | 2021.3 | yes | clean | com.deucarian.object-selection.core-state-integration, com.deucarian.core-state, com.deucarian.ui-binding.core-state-integration, com.deucarian.ui-binding, com.deucarian.object-selection | 1 | 0 |
 | Session | com.deucarian.session | 1.0.6 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.jsonserialize | 3 | 67 |
 | Session-API-Integration | com.deucarian.session.api-integration | 1.2.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.session, com.unity.nuget.newtonsoft-json | 3 | 59 |
-| Simultria-API | com.deucarian.simultria-api | 1.0.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.deucarian.authentication, com.unity.nuget.newtonsoft-json | 5 | 167 |
+| Simultria-API | com.deucarian.simultria-api | 1.0.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.deucarian.authentication, com.unity.nuget.newtonsoft-json | 5 | 168 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | 1.0.0 | 6000.0 | yes | clean | com.deucarian.api, com.deucarian.command-routing, com.deucarian.editor, com.deucarian.logging, com.deucarian.session, com.deucarian.simultria-api, com.deucarian.authentication, com.unity.nuget.newtonsoft-json | 3 | 144 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | 0.1.1 | 6000.3 | yes | clean | com.deucarian.auto-defense-suite, com.deucarian.editor, com.deucarian.game-content-authoring, com.deucarian.gameplay-foundation, com.deucarian.monetization | 4 | 1068 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | 0.1.0 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.combat, com.deucarian.game-content-authoring, com.deucarian.gameplay-foundation, com.deucarian.run-upgrades, com.unity.inputsystem | 5 | 539 |
@@ -86,13 +86,13 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `platfo
 | Metric | Count |
 | --- | --- |
 | Repositories | 63 |
-| Parsed methods/bodies analyzed | 15205 |
+| Parsed methods/bodies analyzed | 15207 |
 | Exact AST clone groups | 74 |
 | Normalized structural clone groups | 126 |
 | Same-symbol semantic candidates | 31 |
-| Runtime public API symbols | 9222 |
+| Runtime public API symbols | 9223 |
 | Editor public API symbols | 2330 |
-| Test public symbols excluded from production API | 4308 |
+| Test public symbols excluded from production API | 4309 |
 | Sample public symbols excluded from production API | 270 |
 | Internal/private production symbols | 11557 |
 | Public API symbols missing XML documentation | 9553 |
