@@ -57,3 +57,11 @@ jobs:
             --ci \
             --repository-root "package/${{ inputs.package-root }}" \
             --config "package/${{ inputs.package-root }}/${{ inputs.package-config }}"
+
+      - name: Audit Deucarian menu policy
+        shell: bash
+        run: |
+          python package-registry/Tools/deucarian_menu_audit.py \
+            --audit-root "package/${{ inputs.package-root }}" \
+            --policy package-registry/menu-policy.json \
+            --output-root "$RUNNER_TEMP/deucarian-menu-audit"

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "root": "Tools/Deucarian",
+  "controlCenterAreas": [
+    "overview",
+    "project",
+    "connections",
+    "experience",
+    "communication",
+    "build-and-packages",
+    "authoring",
+    "diagnostics",
+    "developer"
+  ],
+  "knownConstants": {
+    "DeucarianEditorUxStandards.MenuRoot": "Tools/Deucarian"
+  },
+  "approvedPaths": {
+    "Tools/Deucarian/Control Center...": "com.deucarian.editor",
+    "Tools/Deucarian/Set Up or Repair...": "com.deucarian.bootstrap",
+    "Tools/Deucarian/Package Installer...": "com.deucarian.package-installer",
+    "Tools/Deucarian/Build Manager...": "com.deucarian.build-pipeline",
+    "Tools/Deucarian/Diagnostics...": "com.deucarian.diagnostics",
+    "Tools/Deucarian/Authoring/Game Content...": "com.deucarian.game-content-authoring",
+    "Tools/Deucarian/Advanced/Developer Tools...": "com.deucarian.editor",
+    "Tools/Deucarian/Advanced/Legacy Shortcuts...": "com.deucarian.editor"
+  },
+  "prohibitedFragments": [
+    "Infrastructure",
+    "Runtime Services",
+    "Experience and Interaction",
+    "Tools and Quality"
+  ],
+  "permittedCrossPackageMenuBridges": [
+    {
+      "callerPackageId": "com.deucarian.bootstrap",
+      "path": "Tools/Deucarian/Package Installer...",
+      "reason": "Bootstrap is the approved dependency-free setup boundary."
+    }
+  ],
+  "staleProjectSetupExclusions": [
+    "CHANGELOG.md",
+    "Tests/",
+    "Tools/tests/",
+    "DUPLICATION_REPORT.json",
+    "DUPLICATION_REPORT.md",
+    "MENU_AUDIT.json",
+    "MENU_AUDIT.md"
+  ],
+  "policy": [
+    "Packages without meaningful editor tooling expose no global menu.",
+    "Debug, documentation, reset, test, audit, and generation actions belong in Control Center Developer, Diagnostics, or Authoring areas.",
+    "Cross-package navigation uses stable tool IDs or public Open APIs, except the audited Bootstrap bridge."
+  ]
+}
