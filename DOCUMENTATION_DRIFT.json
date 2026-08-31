@@ -13,6 +13,22 @@
       "repository": "Bootstrap"
     },
     {
+      "dependency": "com.deucarian.editor",
+      "kind": "DependencyVersionDrift",
+      "packageId": "com.deucarian.build-pipeline",
+      "packageJsonVersion": "1.2.0",
+      "readmeVersion": "1.0.5",
+      "repository": "Build-Pipeline"
+    },
+    {
+      "dependency": "com.deucarian.logging",
+      "kind": "DependencyVersionDrift",
+      "packageId": "com.deucarian.build-pipeline",
+      "packageJsonVersion": "1.0.4",
+      "readmeVersion": "1.0.2",
+      "repository": "Build-Pipeline"
+    },
+    {
       "file": "README.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.build-pipeline",
@@ -146,7 +162,7 @@
     },
     {
       "file": "Documentation~/index.md",
-      "kind": "MigrationDocumentation",
+      "kind": "ReviewRequired",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
     },
@@ -230,9 +246,10 @@
     }
   ],
   "summary": {
+    "DependencyVersionDrift": 2,
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 8,
-    "ReviewRequired": 13
+    "MigrationDocumentation": 7,
+    "ReviewRequired": 14
   }
 }
