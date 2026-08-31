@@ -892,15 +892,22 @@
     },
     {
       "categories": {
-        "runtime-type-discovery": 1
+        "runtime-type-discovery": 2
       },
       "errors": [],
-      "findingCount": 1,
+      "findingCount": 2,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/ViewerBootstrap.cs",
-          "line": 147,
+          "file": "Runtime/ViewerBootstrap.Composition.cs",
+          "line": 123,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerBootstrap.Composition.cs",
+          "line": 126,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }
@@ -1328,7 +1335,7 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 47
+      "runtime-type-discovery": 48
     },
     "cleanRepositoryCount": 41,
     "modeCounts": {
@@ -1336,7 +1343,7 @@
     },
     "repositoriesWithFindings": 22,
     "repositoryCount": 63,
-    "totalFindingCount": 70,
+    "totalFindingCount": 71,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }
