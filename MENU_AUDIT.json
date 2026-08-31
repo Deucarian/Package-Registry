@@ -1,0 +1,78 @@
+{
+  "auditRoot": ".",
+  "entries": [
+    {
+      "file": "Editor/DeucarianControlCenterWindow.cs",
+      "line": 41,
+      "packageId": "com.deucarian.editor",
+      "path": "Tools/Deucarian/Advanced/Developer Tools...",
+      "repository": "Editor",
+      "validator": false
+    },
+    {
+      "file": "Editor/DeucarianControlCenterWindow.cs",
+      "line": 47,
+      "packageId": "com.deucarian.editor",
+      "path": "Tools/Deucarian/Advanced/Legacy Shortcuts...",
+      "repository": "Editor",
+      "validator": false
+    },
+    {
+      "file": "Editor/GameContentAuthoringWindow.cs",
+      "line": 30,
+      "packageId": "com.deucarian.game-content-authoring",
+      "path": "Tools/Deucarian/Authoring/Game Content...",
+      "repository": "Game-Content-Authoring",
+      "validator": false
+    },
+    {
+      "file": "Editor/DeucarianBuildManagerWindow.Part01.cs",
+      "line": 16,
+      "packageId": "com.deucarian.build-pipeline",
+      "path": "Tools/Deucarian/Build Manager...",
+      "repository": "Build-Pipeline",
+      "validator": false
+    },
+    {
+      "file": "Editor/DeucarianControlCenterWindow.cs",
+      "line": 35,
+      "packageId": "com.deucarian.editor",
+      "path": "Tools/Deucarian/Control Center...",
+      "repository": "Editor",
+      "validator": false
+    },
+    {
+      "file": "Editor/DiagnosticsMenu.cs",
+      "line": 9,
+      "packageId": "com.deucarian.diagnostics",
+      "path": "Tools/Deucarian/Diagnostics...",
+      "repository": "Diagnostics",
+      "validator": false
+    },
+    {
+      "file": "Editor/PackageInstallerWindow.Part01.cs",
+      "line": 116,
+      "packageId": "com.deucarian.package-installer",
+      "path": "Tools/Deucarian/Package Installer...",
+      "repository": "Package-Installer",
+      "validator": false
+    },
+    {
+      "file": "Editor/DeucarianBootstrapWindow.cs",
+      "line": 26,
+      "packageId": "com.deucarian.bootstrap",
+      "path": "Tools/Deucarian/Set Up or Repair...",
+      "repository": "Bootstrap",
+      "validator": false
+    }
+  ],
+  "findings": [],
+  "policySchemaVersion": 1,
+  "schemaVersion": 1,
+  "summary": {
+    "entryCount": 8,
+    "findingCount": 0,
+    "ok": true,
+    "userFacingPathCount": 8
+  }
+}
