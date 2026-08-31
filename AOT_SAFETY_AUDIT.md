@@ -9,7 +9,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 - Repositories scanned: **63**
 - Repositories with findings: **22**
 - Clean repositories: **41**
-- Unresolved findings: **70**
+- Unresolved findings: **71**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -19,7 +19,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | --- | ---: |
 | `reflection-based-newtonsoft` | 13 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 47 |
+| `runtime-type-discovery` | 48 |
 
 ## Repository Status
 
@@ -70,7 +70,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
-| `com.deucarian.template.viewer` | `Template-Viewer` | `Audit` | 1 | 0 | Valid |
+| `com.deucarian.template.viewer` | `Template-Viewer` | `Audit` | 2 | 0 | Valid |
 | `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
@@ -234,7 +234,8 @@ Mode: `Audit`
 Repository: `Template-Viewer`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.cs`:147 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:123 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:126 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.theming`
 

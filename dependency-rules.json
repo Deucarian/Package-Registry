@@ -12,8 +12,7 @@
         "com.deucarian.gameplay-foundation",
         "com.deucarian.monetization",
         "com.deucarian.persistence",
-        "com.deucarian.simultria.rendering",
-        "com.deucarian.test-automation"
+        "com.deucarian.simultria.rendering"
       ]
     },
     {
@@ -21,6 +20,7 @@
       "rank": 1,
       "description": "Packages whose longest canonical dependency path has 1 edge.",
       "packages": [
+        "com.deucarian.test-automation",
         "com.deucarian.camera-navigation",
         "com.deucarian.combat",
         "com.deucarian.encounters",
