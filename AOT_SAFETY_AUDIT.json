@@ -101,6 +101,28 @@
       "suppressedFindings": []
     },
     {
+      "categories": {
+        "runtime-type-discovery": 1
+      },
+      "errors": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerIntegration/ViewerRuntimeConnectionProviderRegistry.cs",
+          "line": 155,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.authentication",
+      "repository": "Viewer-Authentication",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
       "categories": {},
       "errors": [],
       "findingCount": 0,
@@ -721,10 +743,20 @@
       "suppressedFindings": []
     },
     {
-      "categories": {},
+      "categories": {
+        "runtime-type-discovery": 1
+      },
       "errors": [],
-      "findingCount": 0,
-      "findings": [],
+      "findingCount": 1,
+      "findings": [
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs",
+          "line": 112,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        }
+      ],
       "mode": "Audit",
       "ok": true,
       "packageId": "com.deucarian.simultria-api",
@@ -735,22 +767,22 @@
     {
       "categories": {
         "reflection-based-newtonsoft": 2,
-        "runtime-type-discovery": 5
+        "runtime-type-discovery": 4
       },
       "errors": [],
-      "findingCount": 7,
+      "findingCount": 6,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "line": 407,
+          "line": 309,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
-          "line": 165,
+          "line": 131,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -765,13 +797,6 @@
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
           "line": 107,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        },
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/Development/SimultriaViewerEnvironmentResolver.cs",
-          "line": 441,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -792,7 +817,7 @@
       ],
       "mode": "Audit",
       "ok": true,
-      "packageId": "com.deucarian.simultria-viewer-connection",
+      "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
@@ -867,15 +892,22 @@
     },
     {
       "categories": {
-        "runtime-type-discovery": 1
+        "runtime-type-discovery": 2
       },
       "errors": [],
-      "findingCount": 1,
+      "findingCount": 2,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/ViewerBootstrap.cs",
-          "line": 150,
+          "file": "Runtime/ViewerBootstrap.Composition.cs",
+          "line": 123,
+          "rule": "runtime-type-discovery",
+          "symbol": ".GetType"
+        },
+        {
+          "description": "Runtime type/member discovery must be generated or explicitly composed.",
+          "file": "Runtime/ViewerBootstrap.Composition.cs",
+          "line": 126,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }
@@ -1069,28 +1101,6 @@
       "ok": true,
       "packageId": "com.deucarian.ui-flow",
       "repository": "UI-FLow",
-      "suppressedFindingCount": 0,
-      "suppressedFindings": []
-    },
-    {
-      "categories": {
-        "runtime-type-discovery": 1
-      },
-      "errors": [],
-      "findingCount": 1,
-      "findings": [
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/ViewerRuntimeConnectionProviderRegistry.cs",
-          "line": 155,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        }
-      ],
-      "mode": "Audit",
-      "ok": true,
-      "packageId": "com.deucarian.viewer-authentication",
-      "repository": "Viewer-Authentication",
       "suppressedFindingCount": 0,
       "suppressedFindings": []
     },
@@ -1325,15 +1335,15 @@
     "categoryCounts": {
       "reflection-based-newtonsoft": 13,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 47
+      "runtime-type-discovery": 48
     },
-    "cleanRepositoryCount": 42,
+    "cleanRepositoryCount": 41,
     "modeCounts": {
       "Audit": 63
     },
-    "repositoriesWithFindings": 21,
+    "repositoriesWithFindings": 22,
     "repositoryCount": 63,
-    "totalFindingCount": 70,
+    "totalFindingCount": 71,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }

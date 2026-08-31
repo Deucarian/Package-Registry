@@ -61,14 +61,19 @@
       "ownerPackageId": "com.deucarian.api"
     },
     {
-      "description": "Simultria environment and endpoint definitions, typed lookups, viewer authentication provider, and deterministic viewer-model resolution.",
+      "description": "Simultria environment and endpoint definitions, typed lookups, authentication provider, and deterministic model resolution.",
       "id": "simultria-api-integration",
       "ownerPackageId": "com.deucarian.simultria-api"
     },
     {
-      "description": "Credential-free Simultria viewer profiles, stable editor/runtime authentication handoff, trusted API-client composition, sanitized connection status, and command-routed development auto-load tooling.",
-      "id": "simultria-viewer-development-connection",
-      "ownerPackageId": "com.deucarian.simultria-viewer-connection"
+      "description": "Credential-free Simultria Unity build-directory lookup, exact product/version validation, canonical typed environment mapping, and no-fallback routing diagnostics.",
+      "id": "simultria-unity-build-routing",
+      "ownerPackageId": "com.deucarian.simultria-api"
+    },
+    {
+      "description": "Explicit Simultria viewer development contexts, stable editor/runtime authentication handoff, trusted API-client composition, sanitized connection status, and command-routed development auto-load tooling.",
+      "id": "simultria-viewer-integration",
+      "ownerPackageId": "com.deucarian.simultria-viewer-integration"
     },
     {
       "description": "Transport-independent command envelopes, explicit handler strategies, middleware, dispatch, JSON protocol, secret redaction, bounded command history, and command diagnostics.",
@@ -186,9 +191,9 @@
       "ownerPackageId": "com.deucarian.viewer-shell"
     },
     {
-      "description": "Canonical viewer session composition, live access-token replacement and refresh commands, sanitized auth status, shared development authentication tooling, and an optional runtime connection-provider seam.",
-      "id": "viewer-authentication",
-      "ownerPackageId": "com.deucarian.viewer-authentication"
+      "description": "Generic authentication session composition, secure local persistence, restore and refresh lifecycle, sanitized status, and optional viewer integration tooling.",
+      "id": "authentication",
+      "ownerPackageId": "com.deucarian.authentication"
     },
     {
       "description": "Cross-platform pointer-lock lifecycle, capture permission, input-neutral rearming, WebGL bridge state, and pointer capture diagnostics.",

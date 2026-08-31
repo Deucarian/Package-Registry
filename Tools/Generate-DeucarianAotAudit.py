@@ -177,7 +177,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
             [
                 f"### `{escape(repository['packageId'])}`",
                 "",
-                f"Repository: `{escape(repository['repository'])}`  ",
+                f"Repository: `{escape(repository['repository'])}`",
                 f"Mode: `{escape(repository['mode'])}`",
                 "",
             ]

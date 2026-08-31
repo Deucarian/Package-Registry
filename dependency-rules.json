@@ -12,8 +12,7 @@
         "com.deucarian.gameplay-foundation",
         "com.deucarian.monetization",
         "com.deucarian.persistence",
-        "com.deucarian.simultria.rendering",
-        "com.deucarian.test-automation"
+        "com.deucarian.simultria.rendering"
       ]
     },
     {
@@ -21,6 +20,7 @@
       "rank": 1,
       "description": "Packages whose longest canonical dependency path has 1 edge.",
       "packages": [
+        "com.deucarian.test-automation",
         "com.deucarian.camera-navigation",
         "com.deucarian.combat",
         "com.deucarian.encounters",
@@ -81,7 +81,7 @@
       "packages": [
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
-        "com.deucarian.viewer-authentication",
+        "com.deucarian.authentication",
         "com.deucarian.viewer-navigation",
         "com.deucarian.viewer-shell",
         "com.deucarian.selection-suite",
@@ -106,7 +106,7 @@
       "description": "Packages whose longest canonical dependency path has 6 edges.",
       "packages": [
         "com.deucarian.auto-defense-suite",
-        "com.deucarian.simultria-viewer-connection",
+        "com.deucarian.simultria-viewer-integration",
         "com.deucarian.template.game.movement-fps",
         "com.deucarian.template.game.survivors",
         "com.deucarian.template.viewer.web"
