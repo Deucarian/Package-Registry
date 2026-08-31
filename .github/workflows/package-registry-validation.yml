@@ -85,3 +85,12 @@ jobs:
             --organization Deucarian \
             --ref "$AUDIT_REF" \
             --check
+
+      - name: Check compact Deucarian menu governance
+        shell: bash
+        run: |
+          python Tools/deucarian_menu_audit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --policy menu-policy.json \
+            --output-root . \
+            --check
