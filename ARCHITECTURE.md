@@ -219,3 +219,26 @@ Architecture reviews must check:
 5. Update affected `deucarian-package.json` files.
 6. Update `packages.json` and fallback catalogs only when package dependencies or Installer-visible metadata change.
 7. Run shared validation and the authoritative audit.
+
+## Editor navigation and Control Center policy
+
+`com.deucarian.editor` owns the Deucarian Control Center shell, stable tool
+navigation contracts, contribution registries, area IDs, and ordinary menu
+policy. Domain packages continue to own their state, validation, actions, and
+standalone specialist windows. Contributions expose only bounded, sanitized
+local snapshots and register explicitly from editor assemblies; runtime
+assembly scanning is not a discovery mechanism.
+
+The approved global menu paths and their owners are defined in
+`menu-policy.json`. Installing a runtime package does not create a menu branch.
+Low-frequency debugging, documentation, reset, test, audit, and generation
+actions belong in the Control Center Developer, Diagnostics, or Authoring
+areas. Cross-package navigation uses stable tool IDs or a public `Open` API.
+Bootstrap's single audited Package Installer bridge is the only dependency-free
+literal-menu exception.
+
+`Tools/deucarian_menu_audit.py` scans organization source and user-facing text assets for declarations,
+duplicates, unauthorized owners and paths, technical taxonomy, stale Project
+Setup strings, and hard-coded cross-package menu calls. It emits deterministic
+`MENU_AUDIT.json` and `MENU_AUDIT.md` artifacts and runs in both registry and
+shared package-validation CI.

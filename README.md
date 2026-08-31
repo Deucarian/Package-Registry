@@ -136,3 +136,10 @@ Schema v2 retains legacy `category`, `type`, and `ecosystemGroup` values for one
 ## License
 
 MIT. See [LICENSE.md](LICENSE.md).
+
+## Menu governance
+
+`menu-policy.json` is the canonical allowlist for the compact task-oriented
+`Tools/Deucarian` menu and the stable Control Center area IDs.
+`Tools/deucarian_menu_audit.py` validates a package checkout or a complete
+organization snapshot and produces readable and JSON inventory reports.
