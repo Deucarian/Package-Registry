@@ -83,8 +83,8 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.0.5 | Package-Installer | Editor |
-| com.deucarian.package-installer | com.deucarian.logging | 1.0.2 | Package-Installer | Logging |
+| com.deucarian.package-installer | com.deucarian.editor | 1.2.0 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.2.0 | Pointer-Capture | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
 | com.deucarian.projectiles | com.deucarian.attacks | 0.1.1 | Projectiles | Attacks |
@@ -138,12 +138,14 @@ Schema version: 2
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.world-spawning | 0.2.1 | Template-Game-Idle-Auto-Defense | World-Spawning |
 | com.deucarian.template.game.movement-fps | com.deucarian.combat | 0.1.1 | Template-Game-Movement-FPS | Combat |
 | com.deucarian.template.game.movement-fps | com.deucarian.common | 0.2.1 | Template-Game-Movement-FPS | Common |
+| com.deucarian.template.game.movement-fps | com.deucarian.editor | 1.2.0 | Template-Game-Movement-FPS | Editor |
 | com.deucarian.template.game.movement-fps | com.deucarian.game-content-authoring | 0.1.1 | Template-Game-Movement-FPS | Game-Content-Authoring |
 | com.deucarian.template.game.movement-fps | com.deucarian.gameplay-foundation | 0.1.1 | Template-Game-Movement-FPS | Gameplay-Foundation |
 | com.deucarian.template.game.movement-fps | com.deucarian.run-upgrades | 0.1.1 | Template-Game-Movement-FPS | Run-Upgrades |
 | com.deucarian.template.game.survivors | com.deucarian.attacks | 0.1.1 | Template-Game-Survivors | Attacks |
 | com.deucarian.template.game.survivors | com.deucarian.combat | 0.1.1 | Template-Game-Survivors | Combat |
 | com.deucarian.template.game.survivors | com.deucarian.common | 0.2.1 | Template-Game-Survivors | Common |
+| com.deucarian.template.game.survivors | com.deucarian.editor | 1.2.0 | Template-Game-Survivors | Editor |
 | com.deucarian.template.game.survivors | com.deucarian.encounters | 0.1.1 | Template-Game-Survivors | Encounters |
 | com.deucarian.template.game.survivors | com.deucarian.game-content-authoring | 0.1.1 | Template-Game-Survivors | Game-Content-Authoring |
 | com.deucarian.template.game.survivors | com.deucarian.gameplay-foundation | 0.1.1 | Template-Game-Survivors | Gameplay-Foundation |
@@ -175,6 +177,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
 | com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.2.1 | Template-Viewer-Web | Template-Viewer |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.0 | Template-Viewer-Web | WebGL-Template |
+| com.deucarian.test-automation | com.deucarian.editor | 1.2.0 | Test-Automation | Editor |
 | com.deucarian.theming | com.deucarian.editor | 1.2.0 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -183,7 +186,8 @@ Schema version: 2
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.core-state | 1.0.2 | UIBinding-CoreState-Integration | Core-State |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
 | com.deucarian.ui-flow | com.deucarian.common | 0.2.1 | UI-FLow | Common |
-| com.deucarian.ui-flow | com.deucarian.logging | 1.0.2 | UI-FLow | Logging |
+| com.deucarian.ui-flow | com.deucarian.editor | 1.2.0 | UI-FLow | Editor |
+| com.deucarian.ui-flow | com.deucarian.logging | 1.0.4 | UI-FLow | Logging |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation | 0.2.12 | Viewer-Navigation | Camera-Navigation |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Viewer-Navigation | CameraNavigation-InputSystem-Integration |
 | com.deucarian.viewer-navigation | com.deucarian.common | 0.2.1 | Viewer-Navigation | Common |
@@ -231,6 +235,7 @@ Schema version: 2
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
 | com.deucarian.world-spawning | com.deucarian.gameplay-foundation | 0.1.1 | World-Spawning | Gameplay-Foundation |
 | com.deucarian.xr-ui | com.deucarian.common | 0.2.1 | XR-UI | Common |
+| com.deucarian.xr-ui | com.deucarian.editor | 1.2.0 | XR-UI | Editor |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.theming | 1.0.3 | XR-UI-Theming-Integration | Theming |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.xr-ui | 0.1.1 | XR-UI-Theming-Integration | XR-UI |
 
@@ -240,5 +245,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 47
-- Registry dependency drift entries: 5
+- Dependency version drift entries: 44
+- Registry dependency drift entries: 0

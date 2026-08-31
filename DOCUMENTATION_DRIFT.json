@@ -13,6 +13,12 @@
       "repository": "Bootstrap"
     },
     {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.bootstrap",
+      "repository": "Bootstrap"
+    },
+    {
       "dependency": "com.deucarian.editor",
       "kind": "DependencyVersionDrift",
       "packageId": "com.deucarian.build-pipeline",
@@ -249,7 +255,7 @@
     "DependencyVersionDrift": 2,
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 7,
+    "MigrationDocumentation": 8,
     "ReviewRequired": 14
   }
 }

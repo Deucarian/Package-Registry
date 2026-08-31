@@ -6,11 +6,11 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 33 |
+| Editor-only use | 37 |
 | Optional version-defined use | 2 |
 | Required and used | 155 |
 | Suite composition | 39 |
-| Test-only use | 11 |
+| Test-only use | 12 |
 
 Findings marked `apparently unused` are review prompts, not removal recommendations.
 
@@ -150,12 +150,14 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Game-Idle-Auto-Defense | com.deucarian.world-spawning | Required and used | Runtime production: Deucarian.TemplateGameIdleAutoDefense -> Deucarian.WorldSpawning; Test: Deucarian.TemplateGameIdleAutoDefense.Tests -> Deucarian.WorldSpawning | Deucarian.WorldSpawning | 0 |
 | Template-Game-Movement-FPS | com.deucarian.combat | Required and used | Runtime production: Deucarian.TemplateGameMovementFps -> Deucarian.Combat; Test: Deucarian.TemplateGameMovementFps.PlayModeTests -> Deucarian.Combat; Test: Deucarian.TemplateGameMovementFps.Tests -> Deucarian.Combat | Deucarian.Combat | 0 |
 | Template-Game-Movement-FPS | com.deucarian.common | Required and used | Runtime production: Deucarian.TemplateGameMovementFps -> Deucarian.Common | Deucarian.Common | 0 |
+| Template-Game-Movement-FPS | com.deucarian.editor | Editor-only use | Editor production: Deucarian.TemplateGameMovementFps.Editor -> Deucarian.Editor; Test: Deucarian.TemplateGameMovementFps.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Template-Game-Movement-FPS | com.deucarian.game-content-authoring | Editor-only use | Editor production: Deucarian.TemplateGameMovementFps.Editor -> Deucarian.GameContentAuthoring.Editor; Test: Deucarian.TemplateGameMovementFps.Tests -> Deucarian.GameContentAuthoring.Editor | Deucarian.GameContentAuthoring.Editor | 0 |
 | Template-Game-Movement-FPS | com.deucarian.gameplay-foundation | Required and used | Editor production: Deucarian.TemplateGameMovementFps.Editor -> Deucarian.GameplayFoundation; Runtime production: Deucarian.TemplateGameMovementFps -> Deucarian.GameplayFoundation; Test: Deucarian.TemplateGameMovementFps.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
 | Template-Game-Movement-FPS | com.deucarian.run-upgrades | Required and used | Runtime production: Deucarian.TemplateGameMovementFps -> Deucarian.RunUpgrades; Test: Deucarian.TemplateGameMovementFps.PlayModeTests -> Deucarian.RunUpgrades; Test: Deucarian.TemplateGameMovementFps.Tests -> Deucarian.RunUpgrades | Deucarian.RunUpgrades | 0 |
 | Template-Game-Survivors | com.deucarian.attacks | Required and used | Editor production: Deucarian.TemplateGameSurvivors.Editor -> Deucarian.Attacks.Editor; Runtime production: Deucarian.TemplateGameSurvivors -> Deucarian.Attacks; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.Attacks.Editor | Deucarian.Attacks, Deucarian.Attacks.Editor | 0 |
 | Template-Game-Survivors | com.deucarian.combat | Required and used | Runtime production: Deucarian.TemplateGameSurvivors -> Deucarian.Combat; Test: Deucarian.TemplateGameSurvivors.PlayModeTests -> Deucarian.Combat; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.Combat | Deucarian.Combat | 0 |
 | Template-Game-Survivors | com.deucarian.common | Required and used | Runtime production: Deucarian.TemplateGameSurvivors -> Deucarian.Common | Deucarian.Common | 0 |
+| Template-Game-Survivors | com.deucarian.editor | Editor-only use | Editor production: Deucarian.TemplateGameSurvivors.Editor -> Deucarian.Editor; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Template-Game-Survivors | com.deucarian.encounters | Required and used | Runtime production: Deucarian.TemplateGameSurvivors -> Deucarian.Encounters; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.Encounters | Deucarian.Encounters | 0 |
 | Template-Game-Survivors | com.deucarian.game-content-authoring | Editor-only use | Editor production: Deucarian.TemplateGameSurvivors.Editor -> Deucarian.GameContentAuthoring.Editor; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.GameContentAuthoring.Editor | Deucarian.GameContentAuthoring.Editor | 0 |
 | Template-Game-Survivors | com.deucarian.gameplay-foundation | Required and used | Editor production: Deucarian.TemplateGameSurvivors.Editor -> Deucarian.GameplayFoundation; Runtime production: Deucarian.TemplateGameSurvivors -> Deucarian.GameplayFoundation; Test: Deucarian.TemplateGameSurvivors.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
@@ -187,12 +189,14 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer-Web | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer | Required and used | Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.TemplateViewer; Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.TemplateViewer; Sample: Deucarian.TemplateViewerWeb.Samples.WebViewer -> Deucarian.TemplateViewer; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.TemplateViewer | Deucarian.TemplateViewer | 0 |
 | Template-Viewer-Web | com.deucarian.webgl-template | Required and used | Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.WebGLTemplate.Editor; Runtime production: Deucarian.TemplateViewerWeb -> Deucarian.WebGLTemplate | Deucarian.WebGLTemplate, Deucarian.WebGLTemplate.Editor | 0 |
+| Test-Automation | com.deucarian.editor | Test-only use | Test: Deucarian.TestAutomation.Editor -> Deucarian.Editor; Test: Deucarian.TestAutomation.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | UI | com.deucarian.theming | Required and used | Runtime production: Deucarian.UI -> Deucarian.Theming; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | UI-Binding | com.deucarian.common | Required and used | Runtime production: Deucarian.UIBinding -> Deucarian.Common | Deucarian.Common | 0 |
 | UI-FLow | com.deucarian.common | Required and used | Runtime production: Deucarian.UIFlow -> Deucarian.Common | Deucarian.Common | 0 |
+| UI-FLow | com.deucarian.editor | Editor-only use | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Editor; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Editor | Deucarian.Editor | 0 |
 | UI-FLow | com.deucarian.logging | Required and used | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Logging; Runtime production: Deucarian.UIFlow -> Deucarian.Logging; Runtime production: Deucarian.UIFlow.UGUI -> Deucarian.Logging; Sample: Deucarian.UIFlow.Samples.BasicFlow -> Deucarian.Logging; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Logging | Deucarian.Logging | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.core-state | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.CoreState; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.CoreState; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.CoreState | Deucarian.CoreState | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding | Required and used | Runtime production: Deucarian.UIBinding.CoreStateIntegration -> Deucarian.UIBinding; Sample: Deucarian.UIBinding.CoreStateIntegration.Samples.BasicUsage -> Deucarian.UIBinding; Test: Deucarian.UIBinding.CoreStateIntegration.Tests -> Deucarian.UIBinding | Deucarian.UIBinding | 0 |
@@ -252,7 +256,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | World-Navigation | com.deucarian.world-spawning | Required and used | Runtime production: Deucarian.WorldNavigation -> Deucarian.WorldSpawning; Sample: Deucarian.WorldNavigation.Samples -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.PlayModeTests -> Deucarian.WorldSpawning; Test: Deucarian.WorldNavigation.Tests -> Deucarian.WorldSpawning | Deucarian.WorldSpawning | 0 |
 | World-Spawning | com.deucarian.encounters | Test-only use | Test: Deucarian.WorldSpawning.PlayModeTests -> Deucarian.Encounters; Test: Deucarian.WorldSpawning.Tests -> Deucarian.Encounters | Deucarian.Encounters |  |
 | World-Spawning | com.deucarian.common | Required and used | Runtime production: Deucarian.WorldSpawning -> Deucarian.Common | Deucarian.Common | 0 |
-| World-Spawning | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.WorldSpawning -> Deucarian.GameplayFoundation; Test: Deucarian.WorldSpawning.PlayModeTests -> Deucarian.GameplayFoundation; Test: Deucarian.WorldSpawning.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
-| XR-UI | com.deucarian.common | Required and used | Runtime production: Deucarian.XRUI -> Deucarian.Common | Deucarian.Common | 0 |
-| XR-UI-Theming-Integration | com.deucarian.theming | Required and used | Runtime production: Deucarian.XRUI.ThemingIntegration -> Deucarian.Theming; Sample: Deucarian.XRUI.ThemingIntegration.Samples -> Deucarian.Theming; Test: Deucarian.XRUI.ThemingIntegration.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
-| XR-UI-Theming-Integration | com.deucarian.xr-ui | Required and used | Runtime production: Deucarian.XRUI.ThemingIntegration -> Deucarian.XRUI; Sample: Deucarian.XRUI.ThemingIntegration.Samples -> Deucarian.XRUI; Test: Deucarian.XRUI.ThemingIntegration.Tests.EditMode -> Deucarian.XRUI | Deucarian.XRUI | 0 |

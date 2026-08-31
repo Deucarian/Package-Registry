@@ -3555,7 +3555,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.5",
+      "declaredVersion": "1.2.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -3597,7 +3597,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -6437,6 +6437,50 @@
     },
     {
       "classification": "EditorOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateGameMovementFps.Editor.asmdef",
+          "assembly": "Deucarian.TemplateGameMovementFps.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameMovementFps.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameMovementFps.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Movement-FPS",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
       "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.template.game.movement-fps",
@@ -6723,6 +6767,50 @@
           "includePlatforms": [],
           "reference": "Deucarian.Common",
           "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Game-Survivors",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.template.game.survivors",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateGameSurvivors.Editor.asmdef",
+          "assembly": "Deucarian.TemplateGameSurvivors.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameSurvivors.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameSurvivors.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -8297,6 +8385,50 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "TestOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.test-automation",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TestAutomation.Editor.asmdef",
+          "assembly": "Deucarian.TestAutomation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TestAutomation.Tests.asmdef",
+          "assembly": "Deucarian.TestAutomation.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Test-Automation",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "EditorOnlyUse",
       "declaredVersion": "1.2.0",
       "dependency": "com.deucarian.editor",
@@ -8515,8 +8647,50 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.ui-flow",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.UIFlow.Editor.asmdef",
+          "assembly": "Deucarian.UIFlow.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.UIFlow.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.UIFlow.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "UI-FLow",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.2",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -10836,6 +11010,50 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.xr-ui",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.XRUI.Editor.asmdef",
+          "assembly": "Deucarian.XRUI.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.XRUI.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.XRUI.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "XR-UI",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.3",
       "dependency": "com.deucarian.theming",
@@ -10945,10 +11163,10 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 33,
+    "EditorOnlyUse": 37,
     "OptionalVersionDefinedUse": 2,
     "RequiredAndUsed": 155,
     "SuiteComposition": 39,
-    "TestOnlyUse": 11
+    "TestOnlyUse": 12
   }
 }

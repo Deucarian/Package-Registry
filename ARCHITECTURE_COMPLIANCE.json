@@ -272,45 +272,9 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/PackageInstallerWindow.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 9000,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.PackageInstaller.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageUpdateCheckService.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 2931,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.PackageInstaller.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 2513,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.PackageInstaller.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageInstallService.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1950,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -368,18 +332,6 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageDetectionService.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 640,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.PackageInstaller.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/Services/PackageEcosystemGraphBuilder.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 599,
@@ -395,18 +347,6 @@
       "file": "Editor/Services/PackageRegistryValidator.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 597,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.package-installer",
-      "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.PackageInstaller.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageRegistryProvider.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 592,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -1280,7 +1220,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.bootstrap",
-      "productionFileCount": 35,
+      "productionFileCount": 36,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Bootstrap",
       "sharedValidationPresent": true,
@@ -1806,20 +1746,8 @@
         },
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
-          "file": "Editor/PackageInstallerWindow.cs",
-          "lineCount": 9000,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/Services/PackageDependencyInstaller.cs",
           "lineCount": 1479,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.PackageInstaller.Editor",
-          "file": "Editor/Services/PackageDetectionService.cs",
-          "lineCount": 640,
           "scope": "Editor production"
         },
         {
@@ -1842,20 +1770,8 @@
         },
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
-          "file": "Editor/Services/PackageInstallService.cs",
-          "lineCount": 1950,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/Services/PackageOperationStateRepository.cs",
           "lineCount": 724,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.PackageInstaller.Editor",
-          "file": "Editor/Services/PackageRegistryProvider.cs",
-          "lineCount": 592,
           "scope": "Editor production"
         },
         {
@@ -1872,19 +1788,13 @@
         },
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
-          "file": "Editor/Services/PackageUpdateCheckService.cs",
-          "lineCount": 2931,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
           "lineCount": 11377,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 61,
+      "productionFileCount": 105,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -2232,7 +2142,7 @@
         }
       ],
       "packageId": "com.deucarian.template.game.movement-fps",
-      "productionFileCount": 19,
+      "productionFileCount": 21,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Movement-FPS",
       "sharedValidationPresent": true,
@@ -2329,7 +2239,7 @@
         }
       ],
       "packageId": "com.deucarian.template.game.survivors",
-      "productionFileCount": 23,
+      "productionFileCount": 24,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Survivors",
       "sharedValidationPresent": true,
@@ -2396,7 +2306,8 @@
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.TestAutomation.Editor"
+        "Deucarian.TestAutomation.Editor",
+        "Deucarian.TestAutomation.Tests"
       ]
     },
     {
@@ -2528,7 +2439,7 @@
         }
       ],
       "packageId": "com.deucarian.ui-flow",
-      "productionFileCount": 45,
+      "productionFileCount": 46,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-FLow",
       "sharedValidationPresent": true,
@@ -2750,7 +2661,7 @@
         }
       ],
       "packageId": "com.deucarian.xr-ui",
-      "productionFileCount": 39,
+      "productionFileCount": 40,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
@@ -2785,13 +2696,13 @@
   "summary": {
     "compliantRepositoryCount": 36,
     "findingsByDisposition": {
-      "RefactorBacklog": 85,
+      "RefactorBacklog": 80,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 12,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 85
+      "ProductionFileExceedsLineLimit": 80
     },
     "repositoryCount": 64
   }

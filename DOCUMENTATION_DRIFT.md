@@ -9,7 +9,7 @@ Schema version: 1
 | Dependency version drift | 2 |
 | Historical changelog reference | 16 |
 | Legitimate generic bridge term | 1 |
-| Migration documentation | 7 |
+| Migration documentation | 8 |
 | Review required | 14 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
@@ -20,6 +20,7 @@ Historical changelog references preserve released history and are not rewrite re
 | --- | --- | --- | --- | --- | --- |
 | API | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Bootstrap | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Bootstrap | Migration documentation | README.md |  |  |  |
 | Build-Pipeline | Dependency version drift |  | com.deucarian.editor | 1.2.0 | 1.0.5 |
 | Build-Pipeline | Dependency version drift |  | com.deucarian.logging | 1.0.4 | 1.0.2 |
 | Build-Pipeline | Review required | README.md |  |  |  |
