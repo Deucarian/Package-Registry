@@ -17091,7 +17091,92 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.template.game.movement-fps",
+        "packageJsonDependencies": [
+          "com.deucarian.combat",
+          "com.deucarian.common",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.run-upgrades"
+        ],
+        "registryDependencies": [
+          "com.deucarian.combat",
+          "com.deucarian.common",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.run-upgrades"
+        ],
+        "repo": "Template-Game-Movement-FPS"
+      },
+      {
+        "packageId": "com.deucarian.template.game.survivors",
+        "packageJsonDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.combat",
+          "com.deucarian.common",
+          "com.deucarian.encounters",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.persistence",
+          "com.deucarian.progression",
+          "com.deucarian.projectiles",
+          "com.deucarian.run-upgrades",
+          "com.deucarian.weapon-systems",
+          "com.deucarian.world-spawning"
+        ],
+        "registryDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.combat",
+          "com.deucarian.common",
+          "com.deucarian.editor",
+          "com.deucarian.encounters",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.persistence",
+          "com.deucarian.progression",
+          "com.deucarian.projectiles",
+          "com.deucarian.run-upgrades",
+          "com.deucarian.weapon-systems",
+          "com.deucarian.world-spawning"
+        ],
+        "repo": "Template-Game-Survivors"
+      },
+      {
+        "packageId": "com.deucarian.test-automation",
+        "packageJsonDependencies": [],
+        "registryDependencies": [
+          "com.deucarian.editor"
+        ],
+        "repo": "Test-Automation"
+      },
+      {
+        "packageId": "com.deucarian.ui-flow",
+        "packageJsonDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.logging"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "repo": "UI-FLow"
+      },
+      {
+        "packageId": "com.deucarian.xr-ui",
+        "packageJsonDependencies": [
+          "com.deucarian.common"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.editor"
+        ],
+        "repo": "XR-UI"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -43241,8 +43326,8 @@
     "generatedAtUtc": "not-recorded-deterministic-output",
     "inputSignatures": {
       "capabilitiesSha256": "b8f85030dd54e670b0dd9d9f70b5761700b01d072be00bb379fcfbe5a817b9d6",
-      "dependencyRulesSha256": "050404813627dab82e3ceb7b580e46b4832219e34bd2159582c3b065ad96d490",
-      "packagesSha256": "8f71e17e484d21ac80a231b953844688339fff3c3432fca32c97f5e4a53e791d"
+      "dependencyRulesSha256": "bc79f1d26b862911f330ccfd699d41f25b28df253dcd0ff03100f13ee63ee4b7",
+      "packagesSha256": "a4a1c15bc8eb66d87dd76a723383c78329a9fc24178a75349d2ea0a4a224e4fb"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -298973,7 +299058,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "35125b273883850b84354672244f68dfb01c3efee68481d491719888c1d4545b",
+        "auditInputSha256": "8387200e67671d512e73379d9c7dfffd8076a185254bc05e9773c60dd3e6cc28",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -300947,6 +301032,7 @@
       "registryDependencies": [
         "com.deucarian.common",
         "com.deucarian.combat",
+        "com.deucarian.editor",
         "com.deucarian.game-content-authoring",
         "com.deucarian.gameplay-foundation",
         "com.deucarian.run-upgrades"
@@ -301185,6 +301271,7 @@
         "com.deucarian.attacks",
         "com.deucarian.common",
         "com.deucarian.combat",
+        "com.deucarian.editor",
         "com.deucarian.encounters",
         "com.deucarian.game-content-authoring",
         "com.deucarian.gameplay-foundation",
@@ -301774,7 +301861,9 @@
         "manifestSha256": "ee439b066fa595edaa68c807e01741573301a0cb1978bc0ff27f9c60069cd82d",
         "requestedRef": "main"
       },
-      "registryDependencies": [],
+      "registryDependencies": [
+        "com.deucarian.editor"
+      ],
       "registryGroupId": "tools-quality",
       "registryKind": "Tool",
       "repository": {
@@ -302474,6 +302563,7 @@
       },
       "registryDependencies": [
         "com.deucarian.common",
+        "com.deucarian.editor",
         "com.deucarian.logging"
       ],
       "registryGroupId": "ui-presentation",
@@ -304256,7 +304346,8 @@
         "requestedRef": "main"
       },
       "registryDependencies": [
-        "com.deucarian.common"
+        "com.deucarian.common",
+        "com.deucarian.editor"
       ],
       "registryGroupId": "world-xr-interaction",
       "registryKind": "Library",
