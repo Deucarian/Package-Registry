@@ -45,6 +45,7 @@ SKIP_DIRS = {
     ".idea",
     "Logs",
     "UserSettings",
+    "__pycache__",
 }
 TEXT_EXTS = {".cs", ".json", ".asmdef", ".asmref", ".md", ".yml", ".yaml", ".ps1", ".sh", ".xml"}
 PACKAGE_ID_BOUNDARY_CHARS = r"A-Za-z0-9_.-"
@@ -188,6 +189,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true", help="Regenerate into a temporary directory and fail if committed artifacts differ.")
     mode.add_argument("--write", action="store_true", help="Write deterministic generated artifacts to --output-root.")
+    mode.add_argument(
+        "--provision-only",
+        action="store_true",
+        help="Provision the exact repository snapshot without generating or checking artifacts; requires --provision.",
+    )
     parser.add_argument("--provision", action="store_true", help="Clone the exact registry repository set into an empty --audit-root before auditing.")
     parser.add_argument("--clone-workers", type=int, default=6, help="Maximum concurrent clones used with --provision.")
     return parser
@@ -1821,7 +1827,13 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "registryGroupId": (registry.get(package_json.get("name")) or {}).get("groupId") if package_json.get("name") else None,
             "registryKind": ((registry.get(package_json.get("name")) or {}).get("kind") or (registry.get(package_json.get("name")) or {}).get("type")) if package_json.get("name") else None,
             "ciWorkflows": sorted(rel(p, repo_root) for p in (repo_root / ".github" / "workflows").glob("*.y*ml")) if (repo_root / ".github" / "workflows").exists() else [],
-            "validationScripts": sorted(rel(p, repo_root) for p in repo_root.glob("Tools/**/*") if p.is_file() and "validat" in p.name.lower()),
+            "validationScripts": sorted(
+                rel(path, repo_root)
+                for path in repo_root.glob("Tools/**/*")
+                if path.is_file()
+                and "validat" in path.name.lower()
+                and not any(part in SKIP_DIRS for part in rel(path, repo_root).split("/"))
+            ),
             "samples": sorted(rel(p, repo_root) for p in repo_root.glob("Samples~/**/*") if p.is_file()),
             "provenance": {
                 "canonicalUrl": spec.get("canonicalUrl", "") if spec else normalize_git_url(branches.get("origin", "")),
@@ -2887,6 +2899,8 @@ def main() -> int:
     if args.audit_root is None:
         args.audit_root = repo_root_default(args.output_root)
     args.audit_root = args.audit_root.resolve()
+    if args.provision_only and not args.provision:
+        parser.error("--provision-only requires --provision")
     if args.provision:
         registry_document = load_registry_document(args.output_root)
         specs = expected_repository_specs(registry_document, args.organization, args.ref)
@@ -2896,6 +2910,8 @@ def main() -> int:
             args.ref,
             args.clone_workers,
         )
+    if args.provision_only:
+        return 0
     report = build_report(args)
     validate_authoritative_report(report)
     if args.check:

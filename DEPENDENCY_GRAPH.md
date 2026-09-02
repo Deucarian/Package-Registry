@@ -105,18 +105,19 @@ Schema version: 2
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
 | com.deucarian.session.api-integration | com.deucarian.api | 2.0.0 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
-| com.deucarian.simultria-api | com.deucarian.api | 2.0.1 | Simultria-API | API |
+| com.deucarian.simultria-api | com.deucarian.api | 2.0.2 | Simultria-API | API |
 | com.deucarian.simultria-api | com.deucarian.authentication | 1.0.1 | Simultria-API | Viewer-Authentication |
 | com.deucarian.simultria-api | com.deucarian.editor | 1.2.0 | Simultria-API | Editor |
 | com.deucarian.simultria-api | com.deucarian.session | 1.0.6 | Simultria-API | Session |
 | com.deucarian.simultria-api | com.deucarian.session.api-integration | 1.2.0 | Simultria-API | Session-API-Integration |
-| com.deucarian.simultria-viewer-integration | com.deucarian.api | 2.0.1 | Simultria-Viewer-Connection | API |
-| com.deucarian.simultria-viewer-integration | com.deucarian.authentication | 1.0.1 | Simultria-Viewer-Connection | Viewer-Authentication |
+| com.deucarian.simultria-viewer-integration | com.deucarian.api | 2.0.2 | Simultria-Viewer-Connection | API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.authentication | 1.0.2 | Simultria-Viewer-Connection | Viewer-Authentication |
+| com.deucarian.simultria-viewer-integration | com.deucarian.build-pipeline | 0.6.0 | Simultria-Viewer-Connection | Build-Pipeline |
 | com.deucarian.simultria-viewer-integration | com.deucarian.command-routing | 0.2.5 | Simultria-Viewer-Connection | Command-Routing |
 | com.deucarian.simultria-viewer-integration | com.deucarian.editor | 1.2.0 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-integration | com.deucarian.logging | 1.0.4 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-integration | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.0.2 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.0.4 | Simultria-Viewer-Connection | Simultria-API |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -157,25 +158,27 @@ Schema version: 2
 | com.deucarian.template.game.survivors | com.deucarian.world-spawning | 0.2.1 | Template-Game-Survivors | World-Spawning |
 | com.deucarian.template.viewer | com.deucarian.api | 2.0.0 | Template-Viewer | API |
 | com.deucarian.template.viewer | com.deucarian.authentication | 1.0.0 | Template-Viewer | Viewer-Authentication |
-| com.deucarian.template.viewer | com.deucarian.camera-navigation | 0.2.11 | Template-Viewer | Camera-Navigation |
-| com.deucarian.template.viewer | com.deucarian.command-routing | 0.2.4 | Template-Viewer | Command-Routing |
-| com.deucarian.template.viewer | com.deucarian.diagnostics | 0.1.5 | Template-Viewer | Diagnostics |
-| com.deucarian.template.viewer | com.deucarian.logging | 1.0.3 | Template-Viewer | Logging |
+| com.deucarian.template.viewer | com.deucarian.camera-navigation | 0.2.12 | Template-Viewer | Camera-Navigation |
+| com.deucarian.template.viewer | com.deucarian.command-routing | 0.2.6 | Template-Viewer | Command-Routing |
+| com.deucarian.template.viewer | com.deucarian.common | 0.2.1 | Template-Viewer | Common |
+| com.deucarian.template.viewer | com.deucarian.diagnostics | 0.1.6 | Template-Viewer | Diagnostics |
+| com.deucarian.template.viewer | com.deucarian.logging | 1.0.4 | Template-Viewer | Logging |
 | com.deucarian.template.viewer | com.deucarian.object-loading | 1.2.2 | Template-Viewer | Object-Loading |
 | com.deucarian.template.viewer | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer | ObjectLoading-API-Integration |
 | com.deucarian.template.viewer | com.deucarian.session | 1.0.6 | Template-Viewer | Session |
 | com.deucarian.template.viewer | com.deucarian.session.api-integration | 1.2.0 | Template-Viewer | Session-API-Integration |
-| com.deucarian.template.viewer | com.deucarian.theming | 1.1.1 | Template-Viewer | Theming |
+| com.deucarian.template.viewer | com.deucarian.theming | 1.1.2 | Template-Viewer | Theming |
 | com.deucarian.template.viewer | com.deucarian.ui | 0.2.7 | Template-Viewer | UI |
-| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.1.12 | Template-Viewer | Viewer-Navigation |
+| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.1.14 | Template-Viewer | Viewer-Navigation |
 | com.deucarian.template.viewer | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer | Viewer-Rendering |
 | com.deucarian.template.viewer | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer | Viewer-Shell |
 | com.deucarian.template.viewer.web | com.deucarian.authentication | 1.0.0 | Template-Viewer-Web | Viewer-Authentication |
-| com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.5.0 | Template-Viewer-Web | Build-Pipeline |
-| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.2 | Template-Viewer-Web | Command-Routing |
+| com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.6.0 | Template-Viewer-Web | Build-Pipeline |
+| com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.6 | Template-Viewer-Web | Command-Routing |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
-| com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.2.1 | Template-Viewer-Web | Template-Viewer |
+| com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.3.1 | Template-Viewer-Web | Template-Viewer |
+| com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.2 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.0 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.test-automation | com.deucarian.editor | 1.2.0 | Test-Automation | Editor |
 | com.deucarian.theming | com.deucarian.editor | 1.2.0 | Theming | Editor |
@@ -245,5 +248,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 44
+- Dependency version drift entries: 41
 - Registry dependency drift entries: 0
