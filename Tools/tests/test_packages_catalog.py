@@ -74,6 +74,7 @@ class PackagesCatalogTests(unittest.TestCase):
             ],
             "com.deucarian.simultria-viewer-integration": [
                 "com.deucarian.api",
+                "com.deucarian.build-pipeline",
                 "com.deucarian.command-routing",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
@@ -106,6 +107,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.api",
                 "com.deucarian.camera-navigation",
                 "com.deucarian.command-routing",
+                "com.deucarian.common",
                 "com.deucarian.diagnostics",
                 "com.deucarian.logging",
                 "com.deucarian.object-loading",
@@ -125,6 +127,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.command-routing.webgl-integration",
                 "com.deucarian.diagnostics",
                 "com.deucarian.template.viewer",
+                "com.deucarian.theming",
                 "com.deucarian.authentication",
                 "com.deucarian.webgl-template",
             ],
