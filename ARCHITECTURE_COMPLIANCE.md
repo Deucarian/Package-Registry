@@ -13,25 +13,25 @@ once.
 ## Summary
 
 - Repositories: 64
-- Fully compliant repositories: 36
+- Fully compliant repositories: 37
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 80 |
+| RefactorBacklog | 77 |
 | SetupRequired | 16 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 12 |
 | MissingSharedArchitectureValidation | 4 |
-| ProductionFileExceedsLineLimit | 80 |
+| ProductionFileExceedsLineLimit | 77 |
 
 ## Repository Status
 
 | Repository | Package | Status | Architecture reference | Shared validation | Production files | Test assemblies | Oversized files | Unowned files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
-| API | com.deucarian.api | RefactorBacklog | Yes | Yes | 70 | 1 | 1 | 0 |
+| API | com.deucarian.api | Compliant | Yes | Yes | 71 | 1 | 0 | 0 |
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 31 | 1 | 5 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
@@ -71,7 +71,7 @@ once.
 | Session | com.deucarian.session | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 37 | 1 | 0 | 0 |
-| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | SetupRequired | No | No | 32 | 1 | 2 | 0 |
+| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | SetupRequired | No | No | 38 | 1 | 0 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 53 | 2 | 13 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 21 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 24 | 2 | 13 | 0 |
@@ -83,7 +83,7 @@ once.
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 46 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
-| Viewer-Authentication | com.deucarian.authentication | SetupRequired | No | Yes | 51 | 1 | 0 | 0 |
+| Viewer-Authentication | com.deucarian.authentication | SetupRequired | No | Yes | 52 | 1 | 0 | 0 |
 | Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 30 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | SetupRequired | No | No | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | SetupRequired | No | No | 17 | 1 | 0 | 0 |
@@ -99,7 +99,6 @@ once.
 
 | Repository | Kind | Disposition | File | Lines | Limit | Action |
 | --- | --- | --- | --- | --- | --- | --- |
-| API | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/ApiComposition.cs | 512 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Activity-Visualization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackProviderV2.cs | 1434 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1342 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -136,8 +135,6 @@ once.
 | Simultria-API | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Simultria-Viewer-Connection | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Simultria-Viewer-Connection | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
-| Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/SimultriaViewerEditorAuthenticationWorkspace.cs | 680 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Simultria-Viewer-Connection | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs | 612 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseTemplate.cs | 6878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentPackIndex.cs | 1758 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentSetProviderV2.cs | 1682 | 500 | Extract responsibilities until the production file is at most 500 lines. |

@@ -1,18 +1,6 @@
 {
   "findings": [
     {
-      "assembly": "Deucarian.API",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Core/ApiComposition.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 512,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.api",
-      "repository": "API",
-      "scope": "Runtime production"
-    },
-    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -423,30 +411,6 @@
       "kind": "MissingSharedArchitectureValidation",
       "packageId": "com.deucarian.simultria-viewer-integration",
       "repository": "Simultria-Viewer-Connection"
-    },
-    {
-      "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 680,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-integration",
-      "repository": "Simultria-Viewer-Connection",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.SimultriaViewerIntegration",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 612,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.simultria-viewer-integration",
-      "repository": "Simultria-Viewer-Connection",
-      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
@@ -1113,20 +1077,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.API",
-          "file": "Runtime/Core/ApiComposition.cs",
-          "lineCount": 512,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 70,
+      "productionFileCount": 71,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.API.Tests"
       ]
@@ -1994,22 +1951,9 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
-          "file": "Editor/SimultriaViewerEditorAuthenticationWorkspace.cs",
-          "lineCount": 680,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.SimultriaViewerIntegration",
-          "file": "Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs",
-          "lineCount": 612,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-viewer-integration",
-      "productionFileCount": 32,
+      "productionFileCount": 38,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
@@ -2474,7 +2418,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.authentication",
-      "productionFileCount": 51,
+      "productionFileCount": 52,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -2694,15 +2638,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 36,
+    "compliantRepositoryCount": 37,
     "findingsByDisposition": {
-      "RefactorBacklog": 80,
+      "RefactorBacklog": 77,
       "SetupRequired": 16
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 12,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 80
+      "ProductionFileExceedsLineLimit": 77
     },
     "repositoryCount": 64
   }

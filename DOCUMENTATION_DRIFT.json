@@ -119,6 +119,12 @@
       "repository": "Package-Installer"
     },
     {
+      "file": "ARCHITECTURE.md",
+      "kind": "MigrationDocumentation",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
       "file": "DOCUMENTATION_DRIFT_DECISIONS.md",
       "kind": "MigrationDocumentation",
       "packageId": null,
@@ -171,6 +177,12 @@
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
+    },
+    {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.simultria-viewer-integration",
+      "repository": "Simultria-Viewer-Connection"
     },
     {
       "file": "Documentation~/validation.md",
@@ -255,7 +267,7 @@
     "DependencyVersionDrift": 2,
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 8,
+    "MigrationDocumentation": 10,
     "ReviewRequired": 14
   }
 }
