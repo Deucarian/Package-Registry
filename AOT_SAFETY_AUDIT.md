@@ -123,7 +123,7 @@ Mode: `Audit`
 Repository: `Command-Routing`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/CommandDispatcher.cs`:138 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/CommandDispatcher.cs`:152 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.ToObject<T>` at `Runtime/CommandEnvelope.cs`:50 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/CommandTransportBridge.cs`:191 (`Runtime type/member discovery must be generated or explicitly composed.`)
 

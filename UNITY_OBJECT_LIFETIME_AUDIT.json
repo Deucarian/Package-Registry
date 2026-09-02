@@ -8930,6 +8930,51 @@
     {
       "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
       "classification": "Test",
+      "containingSymbol": "ViewerNavigationCommandTests::TearDown",
+      "file": "Tests/EditMode/ViewerNavigationCommandTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 42,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.viewer-navigation",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Viewer-Navigation",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "ViewerNavigationCommandTests::TearDown",
+      "file": "Tests/EditMode/ViewerNavigationCommandTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 43,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.viewer-navigation",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Viewer-Navigation",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "ViewerNavigationCommandTests::TearDown",
+      "file": "Tests/EditMode/ViewerNavigationCommandTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 44,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.viewer-navigation",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Viewer-Navigation",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+      "classification": "Test",
       "containingSymbol": "ViewerNavigationControllerTests::TearDown",
       "file": "Tests/EditMode/ViewerNavigationControllerTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -11389,10 +11434,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 755
+    "Allowed": 758
   },
   "summary": {
-    "direct Unity API call": 686,
+    "direct Unity API call": 689,
     "helper call site": 68,
     "helper definition": 1
   }

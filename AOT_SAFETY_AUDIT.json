@@ -217,7 +217,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/CommandDispatcher.cs",
-          "line": 138,
+          "line": 152,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },

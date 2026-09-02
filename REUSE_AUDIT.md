@@ -23,11 +23,11 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Auto-Defense | com.deucarian.auto-defense | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.defense-games, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems | 4 | 112 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.persistence, com.deucarian.progression, com.deucarian.combat, com.deucarian.encounters, com.deucarian.world-spawning, com.deucarian.world-navigation, com.deucarian.defense-games, com.deucarian.attacks, com.deucarian.projectiles, com.deucarian.weapon-systems, com.deucarian.auto-defense, com.deucarian.run-upgrades, com.deucarian.idle-progression | 1 | 0 |
 | Bootstrap | com.deucarian.bootstrap | 1.2.10 | 2021.3 | yes | clean | (none) | 2 | 3 |
-| Build-Pipeline | com.deucarian.build-pipeline | 0.5.1 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 75 |
+| Build-Pipeline | com.deucarian.build-pipeline | 0.6.0 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 92 |
 | Camera-Navigation | com.deucarian.camera-navigation | 0.2.12 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.editor | 4 | 153 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 3 | 81 |
 | Combat | com.deucarian.combat | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 218 |
-| Command-Routing | com.deucarian.command-routing | 0.2.5 | 2021.3 | yes | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 153 |
+| Command-Routing | com.deucarian.command-routing | 0.2.6 | 2021.3 | yes | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 160 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | 0.1.3 | 2021.3 | yes | clean | com.deucarian.command-routing, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 39 |
 | Command-Routing-WebGL-Integration | com.deucarian.command-routing.webgl-integration | 0.1.3 | 2021.3 | yes | clean | com.deucarian.command-routing, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 44 |
 | Common | com.deucarian.common | 0.2.1 | 2021.3 | yes | clean | (none) | 5 | 6 |
@@ -71,7 +71,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | UI-FLow | com.deucarian.ui-flow | 0.4.1 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 6 | 341 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 | Viewer-Authentication | com.deucarian.authentication | 1.0.2 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 4 | 152 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | 0.1.13 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements | 5 | 164 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | 0.1.14 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements | 5 | 173 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.theming, com.unity.render-pipelines.universal | 4 | 179 |
 | Viewer-Shell | com.deucarian.viewer-shell | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-rendering, com.unity.modules.uielements | 2 | 90 |
 | Weapon-Systems | com.deucarian.weapon-systems | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.attacks, com.deucarian.editor, com.deucarian.projectiles, com.deucarian.game-content-authoring | 5 | 171 |
@@ -87,19 +87,19 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 64 |
-| Parsed methods/bodies analyzed | 16009 |
+| Parsed methods/bodies analyzed | 16237 |
 | Exact AST clone groups | 80 |
 | Normalized structural clone groups | 134 |
-| Same-symbol semantic candidates | 31 |
-| Runtime public API symbols | 9514 |
-| Editor public API symbols | 2527 |
-| Test public symbols excluded from production API | 4705 |
+| Same-symbol semantic candidates | 32 |
+| Runtime public API symbols | 9530 |
+| Editor public API symbols | 2544 |
+| Test public symbols excluded from production API | 4840 |
 | Sample public symbols excluded from production API | 296 |
-| Internal/private production symbols | 12189 |
-| Public API symbols missing XML documentation | 9925 |
+| Internal/private production symbols | 12329 |
+| Public API symbols missing XML documentation | 9941 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 755 |
-| Documentation drift findings | 43 |
+| Unity object lifetime records | 758 |
+| Documentation drift findings | 41 |
 | Dependency usage findings | 245 |
 | Dependency cycles | 0 |
 

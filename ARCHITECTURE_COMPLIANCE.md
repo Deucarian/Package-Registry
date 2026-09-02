@@ -36,11 +36,11 @@ once.
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 36 | 1 | 0 | 0 |
-| Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 27 | 1 | 1 | 0 |
+| Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 37 | 1 | 1 | 0 |
 | Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 27 | 1 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
-| Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 34 | 1 | 0 | 0 |
+| Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 35 | 1 | 0 | 0 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Command-Routing-WebGL-Integration | com.deucarian.command-routing.webgl-integration | SetupRequired | No | Yes | 12 | 1 | 0 | 0 |
 | Common | com.deucarian.common | Compliant | Yes | Yes | 2 | 3 | 0 | 0 |
@@ -84,7 +84,7 @@ once.
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 46 | 2 | 2 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
 | Viewer-Authentication | com.deucarian.authentication | SetupRequired | No | Yes | 52 | 1 | 0 | 0 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 30 | 2 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 33 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | SetupRequired | No | No | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | SetupRequired | No | No | 17 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | RefactorBacklog | Yes | Yes | 9 | 1 | 1 | 0 |
