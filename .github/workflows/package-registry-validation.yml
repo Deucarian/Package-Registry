@@ -85,8 +85,10 @@ jobs:
           test "$candidate_root" = "$RUNNER_TEMP/deucarian-registry-candidate"
           rm -rf -- "$candidate_root"
           git clone --no-checkout "$GITHUB_WORKSPACE" "$candidate_root"
+          git -C "$candidate_root" fetch "$GITHUB_WORKSPACE" HEAD
+          candidate_commit="$(git -C "$candidate_root" rev-parse FETCH_HEAD)"
           git -C "$candidate_root" remote set-url origin "https://github.com/${GITHUB_REPOSITORY}.git"
-          git -C "$candidate_root" update-ref "refs/heads/$AUDIT_REF" HEAD
+          git -C "$candidate_root" update-ref "refs/heads/$AUDIT_REF" "$candidate_commit"
           git -C "$candidate_root" checkout --force "$AUDIT_REF"
           test -z "$(git -C "$candidate_root" status --porcelain)"
           test "$(git -C "$candidate_root" branch --show-current)" = "$AUDIT_REF"
