@@ -213,7 +213,7 @@ Repository: `Simultria-Viewer-Connection`
 Mode: `Audit`
 
 - `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs`:298 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs`:296 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs`:316 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:68 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:107 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.FromObject` at `Runtime/Initialization/SimultriaViewerInitializationCommand.cs`:32 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
@@ -234,8 +234,8 @@ Mode: `Audit`
 Repository: `Template-Viewer`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:123 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:126 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:161 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:164 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.theming`
 

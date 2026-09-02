@@ -782,7 +782,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
-          "line": 296,
+          "line": 316,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -900,14 +900,14 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/ViewerBootstrap.Composition.cs",
-          "line": 123,
+          "line": 161,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/ViewerBootstrap.Composition.cs",
-          "line": 126,
+          "line": 164,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }

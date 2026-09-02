@@ -4998,6 +4998,48 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "0.6.0",
+      "dependency": "com.deucarian.build-pipeline",
+      "packageId": "com.deucarian.simultria-viewer-integration",
+      "referencedAssemblies": [
+        "Deucarian.BuildPipeline.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.SimultriaViewerIntegration.Editor.asmdef",
+          "assembly": "Deucarian.SimultriaViewerIntegration.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.BuildPipeline.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.SimultriaViewerIntegration.Tests.asmdef",
+          "assembly": "Deucarian.SimultriaViewerIntegration.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.BuildPipeline.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Simultria-Viewer-Connection",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.5",
       "dependency": "com.deucarian.command-routing",
@@ -7344,6 +7386,34 @@
       "sourceMentionsByScope": {}
     },
     {
+      "assemblyReference": "Deucarian.CameraNavigation.InputSystemIntegration",
+      "classification": "TestOnlyUse",
+      "packageId": "com.deucarian.template.viewer",
+      "referencedAssemblies": [
+        "Deucarian.CameraNavigation.InputSystemIntegration"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewer.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation.InputSystemIntegration",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer",
+      "requiredPackage": "com.deucarian.camera-navigation.input-system-integration"
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "2.0.0",
       "dependency": "com.deucarian.api",
@@ -7458,7 +7528,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.11",
+      "declaredVersion": "0.2.12",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -7500,7 +7570,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.4",
+      "declaredVersion": "0.2.6",
       "dependency": "com.deucarian.command-routing",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -7556,7 +7626,33 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.5",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.template.viewer",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewer.asmdef",
+          "assembly": "Deucarian.TemplateViewer",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.6",
       "dependency": "com.deucarian.diagnostics",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -7582,7 +7678,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.0.4",
       "dependency": "com.deucarian.logging",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -7760,7 +7856,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.1",
+      "declaredVersion": "1.1.2",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -7861,7 +7957,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.12",
+      "declaredVersion": "0.1.14",
       "dependency": "com.deucarian.viewer-navigation",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -8090,7 +8186,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.5.0",
+      "declaredVersion": "0.6.0",
       "dependency": "com.deucarian.build-pipeline",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -8110,6 +8206,22 @@
           "reference": "Deucarian.BuildPipeline.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.BuildPipeline.Editor",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Viewer-Web",
@@ -8118,7 +8230,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.2",
+      "declaredVersion": "0.2.6",
       "dependency": "com.deucarian.command-routing",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -8282,7 +8394,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.3.1",
       "dependency": "com.deucarian.template.viewer",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -8348,6 +8460,64 @@
           "reference": "Deucarian.TemplateViewer",
           "scope": "Test",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Support/Deucarian.TemplateViewerWeb.Tests.Support.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.Support",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.TemplateViewer",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.1.2",
+      "dependency": "com.deucarian.theming",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.Theming"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.TemplateViewerWeb.Editor.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Viewer-Web",
@@ -8391,6 +8561,22 @@
           ],
           "reference": "Deucarian.WebGLTemplate",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WebGLTemplate.Editor",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -11177,10 +11363,10 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 37,
+    "EditorOnlyUse": 39,
     "OptionalVersionDefinedUse": 2,
-    "RequiredAndUsed": 155,
+    "RequiredAndUsed": 156,
     "SuiteComposition": 39,
-    "TestOnlyUse": 12
+    "TestOnlyUse": 13
   }
 }
