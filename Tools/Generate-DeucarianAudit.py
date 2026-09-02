@@ -45,6 +45,7 @@ SKIP_DIRS = {
     ".idea",
     "Logs",
     "UserSettings",
+    "__pycache__",
 }
 TEXT_EXTS = {".cs", ".json", ".asmdef", ".asmref", ".md", ".yml", ".yaml", ".ps1", ".sh", ".xml"}
 PACKAGE_ID_BOUNDARY_CHARS = r"A-Za-z0-9_.-"
@@ -1826,7 +1827,13 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
             "registryGroupId": (registry.get(package_json.get("name")) or {}).get("groupId") if package_json.get("name") else None,
             "registryKind": ((registry.get(package_json.get("name")) or {}).get("kind") or (registry.get(package_json.get("name")) or {}).get("type")) if package_json.get("name") else None,
             "ciWorkflows": sorted(rel(p, repo_root) for p in (repo_root / ".github" / "workflows").glob("*.y*ml")) if (repo_root / ".github" / "workflows").exists() else [],
-            "validationScripts": sorted(rel(p, repo_root) for p in repo_root.glob("Tools/**/*") if p.is_file() and "validat" in p.name.lower()),
+            "validationScripts": sorted(
+                rel(path, repo_root)
+                for path in repo_root.glob("Tools/**/*")
+                if path.is_file()
+                and "validat" in path.name.lower()
+                and not any(part in SKIP_DIRS for part in rel(path, repo_root).split("/"))
+            ),
             "samples": sorted(rel(p, repo_root) for p in repo_root.glob("Samples~/**/*") if p.is_file()),
             "provenance": {
                 "canonicalUrl": spec.get("canonicalUrl", "") if spec else normalize_git_url(branches.get("origin", "")),

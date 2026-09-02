@@ -495,6 +495,19 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                 audit.registry_audit_input_sha256(crlf_root),
             )
 
+    def test_validation_script_inventory_excludes_transient_python_bytecode(self) -> None:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        fixture = AuditFixture(Path(temp.name))
+        alpha_root = fixture.audit_root / "Alpha"
+        write(alpha_root / "Tools" / "validate_alpha.py", "# validation entry point")
+        write(alpha_root / "Tools" / "__pycache__" / "validate_alpha.cpython-313.pyc", "bytecode")
+
+        report = fixture.build()
+
+        alpha = next(repo for repo in report["repositories"] if repo["name"] == "Alpha")
+        self.assertEqual(["Tools/validate_alpha.py"], alpha["validationScripts"])
+
     @classmethod
     def setUpClass(cls) -> None:
         if not audit.CSharpSyntaxAnalyzer(authoritative=False).available:
