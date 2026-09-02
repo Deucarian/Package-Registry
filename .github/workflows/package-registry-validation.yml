@@ -64,14 +64,43 @@ jobs:
         env:
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
         run: |
+          set -euo pipefail
+
+          audit_root="$RUNNER_TEMP/deucarian-org-audit"
+          candidate_root="$RUNNER_TEMP/deucarian-registry-candidate"
+          audit_registry="$audit_root/Package-Registry"
+
           python Tools/Generate-DeucarianAudit.py \
-            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --audit-root "$audit_root" \
             --output-root . \
             --organization Deucarian \
             --ref "$AUDIT_REF" \
             --authoritative \
             --format all \
             --provision \
+            --provision-only
+
+          test -d "$audit_registry"
+          test "$audit_root" = "$RUNNER_TEMP/deucarian-org-audit"
+          test "$candidate_root" = "$RUNNER_TEMP/deucarian-registry-candidate"
+          rm -rf -- "$candidate_root"
+          git clone --no-checkout "$GITHUB_WORKSPACE" "$candidate_root"
+          git -C "$candidate_root" remote set-url origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git -C "$candidate_root" update-ref "refs/heads/$AUDIT_REF" HEAD
+          git -C "$candidate_root" checkout --force "$AUDIT_REF"
+          test -z "$(git -C "$candidate_root" status --porcelain)"
+          test "$(git -C "$candidate_root" branch --show-current)" = "$AUDIT_REF"
+          test "$(git -C "$candidate_root" rev-parse HEAD)" = "$(git -C "$candidate_root" rev-parse "refs/heads/$AUDIT_REF")"
+          rm -rf -- "$audit_registry"
+          mv "$candidate_root" "$audit_registry"
+
+          python Tools/Generate-DeucarianAudit.py \
+            --audit-root "$audit_root" \
+            --output-root . \
+            --organization Deucarian \
+            --ref "$AUDIT_REF" \
+            --authoritative \
+            --format all \
             --check
 
       - name: Check organization AOT safety inventory
