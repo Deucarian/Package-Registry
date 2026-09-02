@@ -313767,7 +313767,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "94a7a6374c5fb6269b21b0b54e8334159c28e5dd21dd001386d7067209dfc749",
+        "auditInputSha256": "733851825e8062d71e5747436f98d8f78b5ddbeaf8216fb0f2a5412d87f9440c",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -313781,12 +313781,8 @@
       "samples": [],
       "unity": null,
       "validationScripts": [
-        "Tools/__pycache__/deucarian_aot_validator.cpython-313.pyc",
-        "Tools/__pycache__/deucarian_package_validator.cpython-313.pyc",
         "Tools/deucarian_aot_validator.py",
         "Tools/deucarian_package_validator.py",
-        "Tools/tests/__pycache__/test_deucarian_aot_validator.cpython-313.pyc",
-        "Tools/tests/__pycache__/test_deucarian_package_validator.cpython-313.pyc",
         "Tools/tests/test_deucarian_aot_validator.py",
         "Tools/tests/test_deucarian_package_validator.py",
         "Tools/validate-deucarian-package.ps1",
