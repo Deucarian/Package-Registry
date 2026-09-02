@@ -19,22 +19,6 @@
       "repository": "Bootstrap"
     },
     {
-      "dependency": "com.deucarian.editor",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.build-pipeline",
-      "packageJsonVersion": "1.2.0",
-      "readmeVersion": "1.0.5",
-      "repository": "Build-Pipeline"
-    },
-    {
-      "dependency": "com.deucarian.logging",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.build-pipeline",
-      "packageJsonVersion": "1.0.4",
-      "readmeVersion": "1.0.2",
-      "repository": "Build-Pipeline"
-    },
-    {
       "file": "README.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.build-pipeline",
@@ -119,6 +103,12 @@
       "repository": "Package-Installer"
     },
     {
+      "file": "ARCHITECTURE.md",
+      "kind": "MigrationDocumentation",
+      "packageId": null,
+      "repository": "Package-Registry"
+    },
+    {
       "file": "DOCUMENTATION_DRIFT_DECISIONS.md",
       "kind": "MigrationDocumentation",
       "packageId": null,
@@ -171,6 +161,12 @@
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
+    },
+    {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.simultria-viewer-integration",
+      "repository": "Simultria-Viewer-Connection"
     },
     {
       "file": "Documentation~/validation.md",
@@ -252,10 +248,9 @@
     }
   ],
   "summary": {
-    "DependencyVersionDrift": 2,
     "HistoricalChangelogReference": 16,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 8,
+    "MigrationDocumentation": 10,
     "ReviewRequired": 14
   }
 }

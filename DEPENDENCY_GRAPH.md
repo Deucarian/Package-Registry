@@ -105,18 +105,18 @@ Schema version: 2
 | com.deucarian.session | com.deucarian.logging | 1.0.2 | Session | Logging |
 | com.deucarian.session.api-integration | com.deucarian.api | 2.0.0 | Session-API-Integration | API |
 | com.deucarian.session.api-integration | com.deucarian.session | 1.0.6 | Session-API-Integration | Session |
-| com.deucarian.simultria-api | com.deucarian.api | 2.0.1 | Simultria-API | API |
+| com.deucarian.simultria-api | com.deucarian.api | 2.0.2 | Simultria-API | API |
 | com.deucarian.simultria-api | com.deucarian.authentication | 1.0.1 | Simultria-API | Viewer-Authentication |
 | com.deucarian.simultria-api | com.deucarian.editor | 1.2.0 | Simultria-API | Editor |
 | com.deucarian.simultria-api | com.deucarian.session | 1.0.6 | Simultria-API | Session |
 | com.deucarian.simultria-api | com.deucarian.session.api-integration | 1.2.0 | Simultria-API | Session-API-Integration |
-| com.deucarian.simultria-viewer-integration | com.deucarian.api | 2.0.1 | Simultria-Viewer-Connection | API |
-| com.deucarian.simultria-viewer-integration | com.deucarian.authentication | 1.0.1 | Simultria-Viewer-Connection | Viewer-Authentication |
+| com.deucarian.simultria-viewer-integration | com.deucarian.api | 2.0.2 | Simultria-Viewer-Connection | API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.authentication | 1.0.2 | Simultria-Viewer-Connection | Viewer-Authentication |
 | com.deucarian.simultria-viewer-integration | com.deucarian.command-routing | 0.2.5 | Simultria-Viewer-Connection | Command-Routing |
 | com.deucarian.simultria-viewer-integration | com.deucarian.editor | 1.2.0 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-integration | com.deucarian.logging | 1.0.4 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-integration | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.0.2 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.0.4 | Simultria-Viewer-Connection | Simultria-API |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -245,5 +245,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 44
-- Registry dependency drift entries: 0
+- Dependency version drift entries: 49
+- Registry dependency drift entries: 3
