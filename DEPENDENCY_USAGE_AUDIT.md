@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 40 |
 | Optional version-defined use | 2 |
-| Required and used | 158 |
+| Required and used | 159 |
 | Suite composition | 39 |
 | Test-only use | 13 |
 
@@ -199,6 +199,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Test-Automation | com.deucarian.editor | Test-only use | Test: Deucarian.TestAutomation.Editor -> Deucarian.Editor; Test: Deucarian.TestAutomation.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Theming | com.deucarian.media | Required and used | Runtime production: Deucarian.Theming -> Deucarian.Media.Unity; Sample: Deucarian.Theming.Samples.AudioPalette -> Deucarian.Media.Unity | Deucarian.Media.Unity | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | UI | com.deucarian.theming | Required and used | Runtime production: Deucarian.UI -> Deucarian.Theming; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | UI-Binding | com.deucarian.common | Required and used | Runtime production: Deucarian.UIBinding -> Deucarian.Common | Deucarian.Common | 0 |
@@ -255,4 +256,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Web-Viewer-Suite | com.deucarian.theming | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.ui | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-navigation | Suite composition | Sample: Deucarian.WebViewerSuite.Samples.Stack -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
-| Web-Viewer-Suite | com.deucarian.viewer-rendering | Suite composition |  |  | 0 |

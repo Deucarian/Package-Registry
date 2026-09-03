@@ -20,8 +20,8 @@ Schema version: 2
 | game-content-authoring | com.deucarian.game-content-authoring | Game-Content-Authoring | com.deucarian.attacks, com.deucarian.run-upgrades, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.weapon-systems |
 | generated-json-serialization | (pending) | Package-Registry | (none) |
 | logging | com.deucarian.logging | Logging | com.deucarian.activity-visualization, com.deucarian.api, com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.udp-integration, com.deucarian.command-routing.webgl-integration, com.deucarian.diagnostics, com.deucarian.object-loading, com.deucarian.object-selection, com.deucarian.object-selection.core-state-integration, com.deucarian.package-installer, com.deucarian.session, com.deucarian.simultria-viewer-integration, com.deucarian.template.viewer, com.deucarian.theming, com.deucarian.ui-flow, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering |
-| media-loading | com.deucarian.media | Media | com.deucarian.media.api-integration |
-| media-playback | com.deucarian.media | Media | com.deucarian.media.api-integration |
+| media-loading | com.deucarian.media | Media | com.deucarian.media.api-integration, com.deucarian.theming |
+| media-playback | com.deucarian.media | Media | com.deucarian.media.api-integration, com.deucarian.theming |
 | notification-lifecycle | com.deucarian.notifications | Notifications | (none) |
 | object-loading | com.deucarian.object-loading | Object-Loading | com.deucarian.object-loading.api-integration, com.deucarian.template.viewer, com.deucarian.web-viewer-suite |
 | package-management | com.deucarian.package-installer | Package-Installer | (none) |

@@ -8806,6 +8806,44 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.media",
+      "packageId": "com.deucarian.theming",
+      "referencedAssemblies": [
+        "Deucarian.Media.Unity"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.Theming.asmdef",
+          "assembly": "Deucarian.Theming",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Audio Palette Demo/Deucarian.Theming.Samples.AudioPalette.asmdef",
+          "assembly": "Deucarian.Theming.Samples.AudioPalette",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Theming",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.ui",
@@ -11459,7 +11497,7 @@
   "summary": {
     "EditorOnlyUse": 40,
     "OptionalVersionDefinedUse": 2,
-    "RequiredAndUsed": 158,
+    "RequiredAndUsed": 159,
     "SuiteComposition": 39,
     "TestOnlyUse": 13
   }

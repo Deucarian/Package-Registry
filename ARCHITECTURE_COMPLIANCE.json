@@ -838,7 +838,7 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/Core/DeucarianThemeProvider.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 622,
+      "lineCount": 673,
       "lineLimit": 500,
       "packageId": "com.deucarian.theming",
       "repository": "Theming",
@@ -1572,7 +1572,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.media",
-      "productionFileCount": 11,
+      "productionFileCount": 13,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Media",
       "sharedValidationPresent": true,
@@ -2302,12 +2302,12 @@
         {
           "assembly": "Deucarian.Theming",
           "file": "Runtime/Core/DeucarianThemeProvider.cs",
-          "lineCount": 622,
+          "lineCount": 673,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 79,
+      "productionFileCount": 98,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,

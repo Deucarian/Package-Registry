@@ -2210,6 +2210,21 @@
     {
       "assembly": "Deucarian.Media.Unity",
       "classification": "Runtime production",
+      "containingSymbol": "UnityAudioOneShotOutput::ReleaseVoices",
+      "file": "Runtime/Unity/UnityAudioOneShotOutput.cs",
+      "invocation": "UnityObjectUtility.DestroySafely",
+      "line": 126,
+      "occurrenceKind": "helper call site",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Production code calls the canonical Deucarian.Common lifetime API.",
+      "policySeverity": "Info",
+      "repository": "Media",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.Media.Unity",
+      "classification": "Runtime production",
       "containingSymbol": "UnityVideoPlaybackSession::Dispose",
       "file": "Runtime/Unity/UnityVideoPlaybackSession.cs",
       "invocation": "UnityObjectUtility.DestroySafely",
@@ -2221,6 +2236,21 @@
       "policySeverity": "Info",
       "repository": "Media",
       "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.Media.Tests",
+      "classification": "Test",
+      "containingSymbol": "UnityAudioOneShotOutputTests::TearDown",
+      "file": "Tests/Editor/UnityAudioOneShotOutputTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 17,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.media",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Media",
+      "scope": "Test"
     },
     {
       "assembly": "Deucarian.Media.Tests",
@@ -8121,6 +8151,51 @@
     {
       "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
+      "containingSymbol": "DeucarianAudioPaletteLabTests::PreviewIsExplicitAndChangingExperienceStopsIt",
+      "file": "Tests/Editor/DeucarianAudioPaletteLabTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 57,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.theming",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Theming",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor.Tests",
+      "classification": "Test",
+      "containingSymbol": "DeucarianAudioPaletteLabTests::PreviewIsExplicitAndChangingExperienceStopsIt",
+      "file": "Tests/Editor/DeucarianAudioPaletteLabTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 58,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.theming",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Theming",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor.Tests",
+      "classification": "Test",
+      "containingSymbol": "DeucarianAudioPaletteLabTests::DisableCleansUpPreviewWithoutCreatingSceneObjects",
+      "file": "Tests/Editor/DeucarianAudioPaletteLabTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 78,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.theming",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Theming",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Theming.Editor.Tests",
+      "classification": "Test",
       "containingSymbol": "DeucarianDefaultThemeAssetFactoryTests::ThemePackCreationCreatesPackAssetsStylesAndRuntimeSettings",
       "file": "Tests/Editor/DeucarianDefaultThemeAssetFactoryTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -8575,6 +8650,21 @@
       "file": "Tests/Editor/DeucarianUIToolkitThemeUtilityTests.cs",
       "invocation": "Object.DestroyImmediate",
       "line": 24,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.theming",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Theming",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Theming.Tests",
+      "classification": "Test",
+      "containingSymbol": "DeucarianAudioPaletteTests::TearDown",
+      "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 19,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.theming",
       "policyDisposition": "Allowed",
@@ -11945,11 +12035,11 @@
     }
   ],
   "policySummary": {
-    "Allowed": 792
+    "Allowed": 798
   },
   "summary": {
-    "direct Unity API call": 723,
-    "helper call site": 68,
+    "direct Unity API call": 728,
+    "helper call site": 69,
     "helper definition": 1
   }
 }

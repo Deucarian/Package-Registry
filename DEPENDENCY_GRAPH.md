@@ -186,6 +186,7 @@ Schema version: 2
 | com.deucarian.test-automation | com.deucarian.editor | 1.2.0 | Test-Automation | Editor |
 | com.deucarian.theming | com.deucarian.editor | 1.2.0 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
+| com.deucarian.theming | com.deucarian.media | 0.1.0 | Theming | Media |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
 | com.deucarian.ui | com.deucarian.theming | 1.0.5 | UI | Theming |
 | com.deucarian.ui-binding | com.deucarian.common | 0.2.1 | UI-Binding | Common |
@@ -251,5 +252,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 42
-- Registry dependency drift entries: 1
+- Dependency version drift entries: 44
+- Registry dependency drift entries: 0
