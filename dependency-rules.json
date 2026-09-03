@@ -66,6 +66,7 @@
         "com.deucarian.media.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
+        "com.deucarian.notifications",
         "com.deucarian.projectiles",
         "com.deucarian.session.api-integration",
         "com.deucarian.ui",
