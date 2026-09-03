@@ -63,6 +63,12 @@
     {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.notifications",
+      "repository": "Notifications"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.object-selection",
       "repository": "Object-Selection"
     },
@@ -248,7 +254,7 @@
     }
   ],
   "summary": {
-    "HistoricalChangelogReference": 16,
+    "HistoricalChangelogReference": 17,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 10,
     "ReviewRequired": 14

@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 39 |
+| Editor-only use | 40 |
 | Optional version-defined use | 2 |
-| Required and used | 156 |
+| Required and used | 159 |
 | Suite composition | 39 |
 | Test-only use | 13 |
 
@@ -85,6 +85,9 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Media | com.deucarian.common | Required and used | Runtime production: Deucarian.Media.Unity -> Deucarian.Common | Deucarian.Common | 0 |
 | Media-API-Integration | com.deucarian.api | Required and used | Runtime production: Deucarian.Media.APIIntegration -> Deucarian.API; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.API; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.API | Deucarian.API | 0 |
 | Media-API-Integration | com.deucarian.media | Required and used | Runtime production: Deucarian.Media.APIIntegration -> Deucarian.Media; Runtime production: Deucarian.Media.APIIntegration -> Deucarian.Media.Unity; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.Media; Sample: Deucarian.Media.APIIntegration.Samples -> Deucarian.Media.Unity; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.Media; Test: Deucarian.Media.APIIntegration.Tests -> Deucarian.Media.Unity | Deucarian.Media, Deucarian.Media.Unity | 0 |
+| Notifications | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.Notifications -> Deucarian.Diagnostics; Test: Deucarian.Notifications.Tests -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
+| Notifications | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Notifications.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Notifications | com.deucarian.theming | Required and used | Runtime production: Deucarian.Notifications.Theming -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Object-Loading | com.deucarian.diagnostics | Optional version-defined use | Runtime production: Deucarian.ObjectLoading.Diagnostics -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED]; Test: Deucarian.ObjectLoading.Diagnostics.Tests -> Deucarian.Diagnostics [versionDefine com.deucarian.diagnostics => DEUCARIAN_DIAGNOSTICS_INSTALLED] | Deucarian.Diagnostics |  |
 | Object-Loading | com.deucarian.common | Required and used | Runtime production: Deucarian.ObjectLoading -> Deucarian.Common | Deucarian.Common | 0 |
 | Object-Loading | com.deucarian.logging | Required and used | Runtime production: Deucarian.ObjectLoading -> Deucarian.Logging | Deucarian.Logging | 0 |
@@ -196,6 +199,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Test-Automation | com.deucarian.editor | Test-only use | Test: Deucarian.TestAutomation.Editor -> Deucarian.Editor; Test: Deucarian.TestAutomation.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
+| Theming | com.deucarian.media | Required and used | Runtime production: Deucarian.Theming -> Deucarian.Media.Unity; Sample: Deucarian.Theming.Samples.AudioPalette -> Deucarian.Media.Unity | Deucarian.Media.Unity | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | UI | com.deucarian.theming | Required and used | Runtime production: Deucarian.UI -> Deucarian.Theming; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | UI-Binding | com.deucarian.common | Required and used | Runtime production: Deucarian.UIBinding -> Deucarian.Common | Deucarian.Common | 0 |
@@ -252,7 +256,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Web-Viewer-Suite | com.deucarian.theming | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.ui | Suite composition |  |  | 0 |
 | Web-Viewer-Suite | com.deucarian.viewer-navigation | Suite composition | Sample: Deucarian.WebViewerSuite.Samples.Stack -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
-| Web-Viewer-Suite | com.deucarian.viewer-rendering | Suite composition |  |  | 0 |
-| Web-Viewer-Suite | com.deucarian.viewer-shell | Suite composition |  |  | 0 |
-| Web-Viewer-Suite | com.deucarian.webgl-template | Suite composition |  |  | 0 |
-| WebGL-Template | com.deucarian.build-pipeline | Editor-only use | Editor production: Deucarian.WebGLTemplate.Editor -> Deucarian.BuildPipeline.Editor; Test: Deucarian.WebGLTemplate.Editor.Tests -> Deucarian.BuildPipeline.Editor | Deucarian.BuildPipeline.Editor | 0 |

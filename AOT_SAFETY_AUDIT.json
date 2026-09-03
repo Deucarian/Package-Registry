@@ -525,6 +525,18 @@
       "suppressedFindings": []
     },
     {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
+      "packageId": "com.deucarian.notifications",
+      "repository": "Notifications",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
       "categories": {
         "reflection-based-newtonsoft": 1,
         "runtime-type-discovery": 2
@@ -1337,12 +1349,12 @@
       "reflective-invocation": 10,
       "runtime-type-discovery": 48
     },
-    "cleanRepositoryCount": 41,
+    "cleanRepositoryCount": 42,
     "modeCounts": {
-      "Audit": 63
+      "Audit": 64
     },
     "repositoriesWithFindings": 22,
-    "repositoryCount": 63,
+    "repositoryCount": 64,
     "totalFindingCount": 71,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0

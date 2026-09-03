@@ -12,17 +12,17 @@ once.
 
 ## Summary
 
-- Repositories: 64
+- Repositories: 65
 - Fully compliant repositories: 17
 
 | Metric | Count |
 | --- | --- |
 | RefactorBacklog | 80 |
-| SetupRequired | 45 |
+| SetupRequired | 46 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 40 |
+| MissingCanonicalArchitectureReference | 41 |
 | MissingSharedArchitectureValidation | 5 |
 | ProductionFileExceedsLineLimit | 80 |
 
@@ -53,9 +53,10 @@ once.
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | SetupRequired | No | Yes | 5 | 1 | 0 | 0 |
 | Idle-Progression | com.deucarian.idle-progression | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
 | Logging | com.deucarian.logging | Compliant | Yes | Yes | 17 | 2 | 0 | 0 |
-| Media | com.deucarian.media | Compliant | Yes | Yes | 11 | 1 | 0 | 0 |
+| Media | com.deucarian.media | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
+| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 14 | 2 | 0 | 0 |
 | Object-Loading | com.deucarian.object-loading | SetupRequired | No | Yes | 21 | 2 | 1 | 0 |
 | Object-Selection | com.deucarian.object-selection | SetupRequired | No | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | SetupRequired | No | Yes | 5 | 1 | 0 | 0 |
@@ -78,7 +79,7 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 37 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 17 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 79 | 2 | 6 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 98 | 2 | 6 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | SetupRequired | No | Yes | 46 | 2 | 2 | 0 |
@@ -134,6 +135,7 @@ once.
 | Gameplay-Foundation | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Idle-Progression | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Monetization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
+| Notifications | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Object-Loading | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Object-Loading | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/ObjectLoadTypes.cs | 513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Object-Selection | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
@@ -198,7 +200,7 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingMenuActions.cs | 1795 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemePackAssetFactory.cs | 905 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemeManagerWorkflow.cs | 818 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 622 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 673 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 704 | 500 | Extract responsibilities until the production file is at most 500 lines. |

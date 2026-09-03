@@ -369,6 +369,14 @@
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
       "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.notifications",
+      "repository": "Notifications"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.object-loading",
       "repository": "Object-Loading"
     },
@@ -1066,7 +1074,7 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/Core/DeucarianThemeProvider.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 622,
+      "lineCount": 673,
       "lineLimit": 500,
       "packageId": "com.deucarian.theming",
       "repository": "Theming",
@@ -1856,7 +1864,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.media",
-      "productionFileCount": 11,
+      "productionFileCount": 13,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Media",
       "sharedValidationPresent": true,
@@ -1897,6 +1905,24 @@
       "status": "SetupRequired",
       "testAssemblies": [
         "Deucarian.Monetization.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.notifications",
+      "productionFileCount": 14,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Notifications",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.Notifications.PlayModeTests",
+        "Deucarian.Notifications.Tests"
       ]
     },
     {
@@ -2575,12 +2601,12 @@
         {
           "assembly": "Deucarian.Theming",
           "file": "Runtime/Core/DeucarianThemeProvider.cs",
-          "lineCount": 622,
+          "lineCount": 673,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 79,
+      "productionFileCount": 98,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -2929,13 +2955,13 @@
     "compliantRepositoryCount": 17,
     "findingsByDisposition": {
       "RefactorBacklog": 80,
-      "SetupRequired": 45
+      "SetupRequired": 46
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 40,
+      "MissingCanonicalArchitectureReference": 41,
       "MissingSharedArchitectureValidation": 5,
       "ProductionFileExceedsLineLimit": 80
     },
-    "repositoryCount": 64
+    "repositoryCount": 65
   }
 }

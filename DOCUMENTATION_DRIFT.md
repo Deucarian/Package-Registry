@@ -6,7 +6,7 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Historical changelog reference | 16 |
+| Historical changelog reference | 17 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 10 |
 | Review required | 14 |
@@ -27,6 +27,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Diagnostics | Review required | README.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Logging | Legitimate generic bridge term | README.md |  |  |  |
+| Notifications | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Object-Selection | Historical changelog reference | CHANGELOG.md |  |  |  |
 | ObjectLoading-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | ObjectLoading-API-Integration | Migration documentation | README.md |  |  |  |
