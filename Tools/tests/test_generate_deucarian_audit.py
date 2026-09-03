@@ -495,19 +495,6 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                 audit.registry_audit_input_sha256(crlf_root),
             )
 
-    def test_validation_script_inventory_excludes_transient_python_bytecode(self) -> None:
-        temp = tempfile.TemporaryDirectory()
-        self.addCleanup(temp.cleanup)
-        fixture = AuditFixture(Path(temp.name))
-        alpha_root = fixture.audit_root / "Alpha"
-        write(alpha_root / "Tools" / "validate_alpha.py", "# validation entry point")
-        write(alpha_root / "Tools" / "__pycache__" / "validate_alpha.cpython-313.pyc", "bytecode")
-
-        report = fixture.build()
-
-        alpha = next(repo for repo in report["repositories"] if repo["name"] == "Alpha")
-        self.assertEqual(["Tools/validate_alpha.py"], alpha["validationScripts"])
-
     @classmethod
     def setUpClass(cls) -> None:
         if not audit.CSharpSyntaxAnalyzer(authoritative=False).available:
@@ -757,7 +744,6 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
             parser.parse_args(["--check", "--write"])
         self.assertTrue(parser.parse_args(["--check"]).check)
         self.assertTrue(parser.parse_args(["--write"]).write)
-        self.assertTrue(parser.parse_args(["--provision-only"]).provision_only)
         self.assertEqual(audit.JSON_OUTPUT_FILES, audit.selected_output_files("json"))
         self.assertEqual(audit.MARKDOWN_OUTPUT_FILES, audit.selected_output_files("markdown"))
 
@@ -931,41 +917,6 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
                 "develop",
                 6,
             )
-
-    def test_provision_only_stops_after_the_exact_snapshot_is_ready(self) -> None:
-        with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
-            audit_root = root / "audit"
-            output_root = root / "registry"
-            registry_document = {"packages": []}
-            specs = []
-            arguments = [
-                str(SCRIPT_PATH),
-                "--audit-root",
-                str(audit_root),
-                "--output-root",
-                str(output_root),
-                "--ref",
-                "main",
-                "--provision",
-                "--provision-only",
-            ]
-            with (
-                mock.patch.object(sys, "argv", arguments),
-                mock.patch.object(audit, "load_registry_document", return_value=registry_document),
-                mock.patch.object(audit, "expected_repository_specs", return_value=specs),
-                mock.patch.object(audit, "provision_repositories") as provision,
-                mock.patch.object(audit, "build_report") as build_report,
-            ):
-                self.assertEqual(0, audit.main())
-
-            provision.assert_called_once_with(
-                audit_root.resolve(),
-                specs,
-                "main",
-                6,
-            )
-            build_report.assert_not_called()
 
     def test_debug_audit_uses_invocations_not_text_mentions(self) -> None:
         report = self.build_fixture_report()

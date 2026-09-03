@@ -3156,6 +3156,100 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.6",
+      "dependency": "com.deucarian.diagnostics",
+      "packageId": "com.deucarian.notifications",
+      "referencedAssemblies": [
+        "Deucarian.Diagnostics"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Core/Deucarian.Notifications.asmdef",
+          "assembly": "Deucarian.Notifications",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Notifications.Tests.asmdef",
+          "assembly": "Deucarian.Notifications.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Notifications",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.notifications",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Notifications.Editor.asmdef",
+          "assembly": "Deucarian.Notifications.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Notifications",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.2.0",
+      "dependency": "com.deucarian.theming",
+      "packageId": "com.deucarian.notifications",
+      "referencedAssemblies": [
+        "Deucarian.Theming"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Theming/Deucarian.Notifications.Theming.asmdef",
+          "assembly": "Deucarian.Notifications.Theming",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Notifications",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "assemblyReference": "Deucarian.Diagnostics",
       "classification": "OptionalVersionDefinedUse",
       "packageId": "com.deucarian.object-loading",
@@ -8712,6 +8806,44 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.1.0",
+      "dependency": "com.deucarian.media",
+      "packageId": "com.deucarian.theming",
+      "referencedAssemblies": [
+        "Deucarian.Media.Unity"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.Theming.asmdef",
+          "assembly": "Deucarian.Theming",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Audio Palette Demo/Deucarian.Theming.Samples.AudioPalette.asmdef",
+          "assembly": "Deucarian.Theming.Samples.AudioPalette",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Theming",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.ui",
@@ -11363,9 +11495,9 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 39,
+    "EditorOnlyUse": 40,
     "OptionalVersionDefinedUse": 2,
-    "RequiredAndUsed": 156,
+    "RequiredAndUsed": 159,
     "SuiteComposition": 39,
     "TestOnlyUse": 13
   }

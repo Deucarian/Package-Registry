@@ -151,6 +151,16 @@
       "ownerPackageId": "com.deucarian.theming"
     },
     {
+      "description": "Semantic audio roles, experience-specific audio palettes, deterministic fallback, and authoring preview tools.",
+      "id": "audio-theming",
+      "ownerPackageId": "com.deucarian.theming"
+    },
+    {
+      "description": "Reusable keyed notification episodes, atomic lifecycle updates, feedback requests, timing policy, and non-modal list presentation.",
+      "id": "notification-lifecycle",
+      "ownerPackageId": "com.deucarian.notifications"
+    },
+    {
       "description": "XR-ready world-space uGUI pressable controls, poke affordances, and world canvas event-camera helpers.",
       "id": "xr-world-ui-controls",
       "ownerPackageId": "com.deucarian.xr-ui"
