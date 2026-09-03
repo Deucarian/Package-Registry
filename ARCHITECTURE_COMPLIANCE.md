@@ -12,19 +12,19 @@ once.
 
 ## Summary
 
-- Repositories: 64
+- Repositories: 65
 - Fully compliant repositories: 37
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 77 |
-| SetupRequired | 16 |
+| RefactorBacklog | 76 |
+| SetupRequired | 17 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 12 |
+| MissingCanonicalArchitectureReference | 13 |
 | MissingSharedArchitectureValidation | 4 |
-| ProductionFileExceedsLineLimit | 77 |
+| ProductionFileExceedsLineLimit | 76 |
 
 ## Repository Status
 
@@ -56,6 +56,7 @@ once.
 | Media | com.deucarian.media | Compliant | Yes | Yes | 11 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
+| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 14 | 2 | 0 | 0 |
 | Object-Loading | com.deucarian.object-loading | Compliant | Yes | Yes | 22 | 2 | 0 | 0 |
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -71,12 +72,12 @@ once.
 | Session | com.deucarian.session | Compliant | Yes | Yes | 15 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 37 | 1 | 0 | 0 |
-| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | SetupRequired | No | No | 38 | 1 | 0 | 0 |
+| Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | SetupRequired | No | No | 50 | 1 | 0 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 53 | 2 | 13 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | RefactorBacklog | Yes | Yes | 21 | 2 | 3 | 0 |
 | Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 24 | 2 | 13 | 0 |
-| Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 26 | 3 | 1 | 0 |
-| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 10 | 1 | 0 | 0 |
+| Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 37 | 3 | 0 | 0 |
+| Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 17 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 79 | 2 | 6 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
@@ -120,6 +121,7 @@ once.
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentCollectionEditing.cs | 713 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryService.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Notifications | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs | 11377 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageEcosystemGraphLayout.cs | 2513 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageDependencyInstaller.cs | 1479 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -165,7 +167,6 @@ once.
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsPayloadWeapons.cs | 688 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsRunFlow.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Viewer | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Template-Viewer | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/ViewerApplication.cs | 507 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Viewer-Web | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianDefaultThemeAssetFactory.cs | 1978 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingMenuActions.cs | 1795 | 500 | Extract responsibilities until the production file is at most 500 lines. |

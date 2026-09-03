@@ -245,6 +245,14 @@
       "scope": "Editor production"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.notifications",
+      "repository": "Notifications"
+    },
+    {
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -767,18 +775,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.template.viewer",
       "repository": "Template-Viewer"
-    },
-    {
-      "assembly": "Deucarian.TemplateViewer",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/ViewerApplication.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 507,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.viewer",
-      "repository": "Template-Viewer",
-      "scope": "Runtime production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1622,6 +1618,24 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.notifications",
+      "productionFileCount": 14,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Notifications",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.Notifications.PlayModeTests",
+        "Deucarian.Notifications.Tests"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
@@ -1953,7 +1967,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-viewer-integration",
-      "productionFileCount": 38,
+      "productionFileCount": 50,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
       "sharedValidationPresent": false,
@@ -2199,16 +2213,9 @@
         "present": false,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.TemplateViewer",
-          "file": "Runtime/ViewerApplication.cs",
-          "lineCount": 507,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.viewer",
-      "productionFileCount": 26,
+      "productionFileCount": 37,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer",
       "sharedValidationPresent": true,
@@ -2227,13 +2234,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.viewer.web",
-      "productionFileCount": 10,
+      "productionFileCount": 17,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer-Web",
       "sharedValidationPresent": true,
       "status": "SetupRequired",
       "testAssemblies": [
-        "Deucarian.TemplateViewerWeb.Tests.EditMode"
+        "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "Deucarian.TemplateViewerWeb.Tests.Support"
       ]
     },
     {
@@ -2640,14 +2648,14 @@
   "summary": {
     "compliantRepositoryCount": 37,
     "findingsByDisposition": {
-      "RefactorBacklog": 77,
-      "SetupRequired": 16
+      "RefactorBacklog": 76,
+      "SetupRequired": 17
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 12,
+      "MissingCanonicalArchitectureReference": 13,
       "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 77
+      "ProductionFileExceedsLineLimit": 76
     },
-    "repositoryCount": 64
+    "repositoryCount": 65
   }
 }
