@@ -554,13 +554,33 @@
       "kind": "Library",
       "ecosystemGroup": "Experience & Interaction",
       "overviewOrder": 30,
-      "description": "Designer-friendly ScriptableObject theming with color role assets, palettes, themes, and Unity component adapters.",
+      "description": "Designer-friendly visual and semantic audio theming with roles, platform profiles, palettes, and Unity component adapters.",
       "iconKey": "palette",
       "stableUrl": "https://github.com/Deucarian/Theming.git#main",
       "developmentUrl": "https://github.com/Deucarian/Theming.git#develop",
       "dependencies": [
         "com.deucarian.editor",
-        "com.deucarian.logging"
+        "com.deucarian.logging",
+        "com.deucarian.media"
+      ],
+      "groupId": "ui-presentation"
+    },
+    {
+      "id": "com.deucarian.notifications",
+      "displayName": "Deucarian Notifications",
+      "category": "UI",
+      "type": "Core",
+      "kind": "Library",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 32,
+      "description": "Reusable keyed warning and notification episodes with atomic updates, timing policy, semantic feedback, diagnostics, and non-modal uGUI presentation.",
+      "iconKey": "bell",
+      "stableUrl": "https://github.com/Deucarian/Notifications.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Notifications.git#develop",
+      "dependencies": [
+        "com.deucarian.diagnostics",
+        "com.deucarian.editor",
+        "com.deucarian.theming"
       ],
       "groupId": "ui-presentation"
     },
