@@ -2308,7 +2308,7 @@
           }
         ],
         "packageId": "com.deucarian.theming",
-        "productionFileCount": 98,
+        "productionFileCount": 99,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Theming",
         "sharedValidationPresent": true,
@@ -17383,7 +17383,23 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.notifications",
+        "packageJsonDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.theming"
+        ],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.theming",
+          "com.deucarian.ui"
+        ],
+        "repo": "Notifications"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -23602,7 +23618,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 16941,
+    "methodCountAnalyzed": 16952,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -45487,8 +45503,8 @@
     "generatedAtUtc": "not-recorded-deterministic-output",
     "inputSignatures": {
       "capabilitiesSha256": "d15c6f6473b0c23fe2983d07a49a4d225301eb416de20a051da99feb53a84084",
-      "dependencyRulesSha256": "bec7323ad76f1c7ea16444f601f0bac95560f6c17cac610782fb9f04d4e69217",
-      "packagesSha256": "5753b9123c4a95b67116c7581bad3adadc58e2b123fb42df6040698c25f46c82"
+      "dependencyRulesSha256": "ec176ac6e404011de5717f87e0d1423852eb4574870c2c0de8c77b7a30d0f22a",
+      "packagesSha256": "5f785f0cc2ed9eda2c1d5d512ad4910fc9d17b6d315d9cac97983e0a1edae890"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -45858,11 +45874,11 @@
         "runtimePublicCount": 0
       },
       {
-        "editorPublicCount": 194,
-        "missingXmlDocumentationCount": 430,
+        "editorPublicCount": 201,
+        "missingXmlDocumentationCount": 444,
         "packageId": "com.deucarian.theming",
         "repository": "Theming",
-        "runtimePublicCount": 667
+        "runtimePublicCount": 679
       },
       {
         "editorPublicCount": 10,
@@ -45970,10 +45986,10 @@
         "runtimePublicCount": 1
       }
     ],
-    "editorProductionCount": 2593,
-    "internalPrivateProductionCount": 12779,
-    "missingXmlDocumentationCount": 10180,
-    "runtimeProductionCount": 9855,
+    "editorProductionCount": 2600,
+    "internalPrivateProductionCount": 12775,
+    "missingXmlDocumentationCount": 10194,
+    "runtimeProductionCount": 9867,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples",
@@ -190221,6 +190237,111 @@
       {
         "assembly": "Deucarian.Theming.Editor",
         "containingType": "",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public interface IDeucarianAudioPreviewService",
+        "line": 9,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "IDeucarianAudioPreviewService",
+        "symbolKind": "interface",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public sealed class DeucarianAudioPreviewService : IDeucarianAudioPreviewService",
+        "line": 18,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "DeucarianAudioPreviewService",
+        "symbolKind": "class",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "DeucarianAudioPreviewService",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public DeucarianAudioPreviewService()",
+        "line": 24,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "DeucarianAudioPreviewService",
+        "symbolKind": "constructor",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "DeucarianAudioPreviewService",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public bool IsAvailable",
+        "line": 42,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "IsAvailable",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "DeucarianAudioPreviewService",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public bool IsPlaying",
+        "line": 44,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "IsPlaying",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "DeucarianAudioPreviewService",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public bool Play(AudioClip clip)",
+        "line": 64,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "Play",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "DeucarianAudioPreviewService",
+        "file": "Editor/Core/DeucarianAudioPreviewService.cs",
+        "fullSignature": "public void Stop()",
+        "line": 97,
+        "namespace": "Deucarian.Theming.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Editor production",
+        "symbol": "Stop",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "containingType": "",
         "file": "Editor/Core/DeucarianBundledTypographyAssets.cs",
         "fullSignature": "public static class DeucarianBundledTypographyAssetGenerator",
         "line": 31,
@@ -193896,6 +194017,126 @@
       {
         "assembly": "Deucarian.Theming",
         "containingType": "",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "[Serializable] public readonly struct DeucarianAudioPlaybackModifiers",
+        "line": 10,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "DeucarianAudioPlaybackModifiers",
+        "symbolKind": "struct",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public DeucarianAudioPlaybackModifiers(float playbackVolumeScale, float playbackPitchScale)",
+        "line": 17,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "DeucarianAudioPlaybackModifiers",
+        "symbolKind": "constructor",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public static DeucarianAudioPlaybackModifiers Identity",
+        "line": 25,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "Identity",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public float VolumeScale",
+        "line": 28,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "VolumeScale",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public float PitchScale",
+        "line": 29,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "PitchScale",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public static DeucarianAudioPlaybackModifiers FromIntensity( float normalizedIntensity, float minimumVolumeScale = 0.7f, float maximumVolumeScale = 1f, float minimumPitchScale = 0.97f, float maximumPitchScale = 1.03f)",
+        "line": 34,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "FromIntensity",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public float ApplyVolume(float baseVolume)",
+        "line": 49,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "ApplyVolume",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianAudioPlaybackModifiers",
+        "file": "Runtime/Core/DeucarianAudioPlaybackModifiers.cs",
+        "fullSignature": "public float ApplyPitch(float basePitch)",
+        "line": 55,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "ApplyPitch",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "",
         "file": "Runtime/Core/DeucarianAudioResolution.cs",
         "fullSignature": "public enum DeucarianAudioResolutionSource",
         "line": 3,
@@ -196027,8 +196268,38 @@
         "assembly": "Deucarian.Theming",
         "containingType": "DeucarianThemeAudioPlayer",
         "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
+        "fullSignature": "public bool PlayRole( DeucarianAudioRole role, DeucarianAudioPlaybackModifiers modifiers)",
+        "line": 68,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "PlayRole",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianThemeAudioPlayer",
+        "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
         "fullSignature": "public bool PlayRoleById(string roleId)",
-        "line": 81,
+        "line": 88,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "PlayRoleById",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianThemeAudioPlayer",
+        "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
+        "fullSignature": "public bool PlayRoleById( string roleId, DeucarianAudioPlaybackModifiers modifiers)",
+        "line": 93,
         "namespace": "Deucarian.Theming",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -196043,7 +196314,7 @@
         "containingType": "DeucarianThemeAudioPlayer",
         "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
         "fullSignature": "public bool Play(DeucarianAudioCue cue)",
-        "line": 106,
+        "line": 120,
         "namespace": "Deucarian.Theming",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -196057,8 +196328,38 @@
         "assembly": "Deucarian.Theming",
         "containingType": "DeucarianThemeAudioPlayer",
         "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
+        "fullSignature": "public bool Play( DeucarianAudioCue cue, DeucarianAudioPlaybackModifiers modifiers)",
+        "line": 125,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "Play",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianThemeAudioPlayer",
+        "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
         "fullSignature": "public bool PlayResolved(string roleId, DeucarianAudioCue cue)",
-        "line": 111,
+        "line": 132,
+        "namespace": "Deucarian.Theming",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Runtime production",
+        "symbol": "PlayResolved",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "containingType": "DeucarianThemeAudioPlayer",
+        "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
+        "fullSignature": "public bool PlayResolved( string roleId, DeucarianAudioCue cue, DeucarianAudioPlaybackModifiers modifiers)",
+        "line": 137,
         "namespace": "Deucarian.Theming",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -196073,7 +196374,7 @@
         "containingType": "DeucarianThemeAudioPlayer",
         "file": "Runtime/Core/DeucarianThemeAudioPlayer.cs",
         "fullSignature": "public void StopAll()",
-        "line": 116,
+        "line": 145,
         "namespace": "Deucarian.Theming",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -302679,8 +302980,38 @@
         "assembly": "Deucarian.Theming.Tests",
         "containingType": "DeucarianAudioPaletteTests",
         "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
-        "fullSignature": "[Test] public void BuiltinClickIsCompatibilityAliasForActivate()",
+        "fullSignature": "[Test] public void PlaybackModifiersMapInteractionIntensityWithoutReplacingPaletteValues()",
         "line": 252,
+        "namespace": "Deucarian.Theming.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Test",
+        "symbol": "PlaybackModifiersMapInteractionIntensityWithoutReplacingPaletteValues",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Tests",
+        "containingType": "DeucarianAudioPaletteTests",
+        "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
+        "fullSignature": "[Test] public void DefaultPlaybackModifiersAreSafeIdentity()",
+        "line": 266,
+        "namespace": "Deucarian.Theming.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.theming",
+        "repository": "Theming",
+        "scope": "Test",
+        "symbol": "DefaultPlaybackModifiersAreSafeIdentity",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Theming.Tests",
+        "containingType": "DeucarianAudioPaletteTests",
+        "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
+        "fullSignature": "[Test] public void BuiltinClickIsCompatibilityAliasForActivate()",
+        "line": 275,
         "namespace": "Deucarian.Theming.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -302695,7 +303026,7 @@
         "containingType": "DeucarianAudioPaletteTests",
         "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
         "fullSignature": "[Test] public void BuiltinRoleCatalogueIsCompleteAndUnique()",
-        "line": 260,
+        "line": 283,
         "namespace": "Deucarian.Theming.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
@@ -302709,14 +303040,14 @@
         "assembly": "Deucarian.Theming.Tests",
         "containingType": "DeucarianAudioPaletteTests",
         "file": "Tests/Runtime/DeucarianAudioPaletteTests.cs",
-        "fullSignature": "[Test] public void BundledDefaultsContainDistinctXrAndWebGlWarningCues()",
-        "line": 287,
+        "fullSignature": "[Test] public void BundledDefaultsUseCanonicalKeyClickForEveryRoleAndExperience()",
+        "line": 310,
         "namespace": "Deucarian.Theming.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.theming",
         "repository": "Theming",
         "scope": "Test",
-        "symbol": "BundledDefaultsContainDistinctXrAndWebGlWarningCues",
+        "symbol": "BundledDefaultsUseCanonicalKeyClickForEveryRoleAndExperience",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -315006,7 +315337,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 5178
+    "testsPublicCount": 5180
   },
   "repositories": [
     {
@@ -315892,10 +316223,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "76dfb0ce885b66c18d6fe74dd02528bacc3f3fa0",
+        "headCommit": "3094074cb1299f5eafdd530c532b37892d33c59e",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "76dfb0ce885b66c18d6fe74dd02528bacc3f3fa0"
+        "requestedRefCommit": "3094074cb1299f5eafdd530c532b37892d33c59e"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -315932,7 +316263,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "76dfb0ce885b66c18d6fe74dd02528bacc3f3fa0",
+        "headCommit": "3094074cb1299f5eafdd530c532b37892d33c59e",
         "manifestSha256": "3753160b83ddba5ebe36a71d0db810ae31f445f8e1dec28364956ce81ff5007d",
         "requestedRef": "develop"
       },
@@ -318451,10 +318782,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "8ffff35464dde8ba448c81dff3dc946c69cd5207",
+        "headCommit": "522b3361797d8ae104a1f733f4a95577bc9cf852",
         "origin": "https://github.com/Deucarian/Media.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "8ffff35464dde8ba448c81dff3dc946c69cd5207"
+        "requestedRefCommit": "522b3361797d8ae104a1f733f4a95577bc9cf852"
       },
       "canonicalId": "Deucarian/Media",
       "ciWorkflows": [
@@ -318507,7 +318838,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media.git",
         "governanceConfigSha256": "92537a5477cf7ed4116a9dbe2bc4454b2bb2b79b991ecb0b846b6dedabe90080",
-        "headCommit": "8ffff35464dde8ba448c81dff3dc946c69cd5207",
+        "headCommit": "522b3361797d8ae104a1f733f4a95577bc9cf852",
         "manifestSha256": "2bd4e687e5e199705002441bd21c73eeca62d4c5dfadb083afe9e79db5173817",
         "requestedRef": "develop"
       },
@@ -318975,7 +319306,8 @@
       "registryDependencies": [
         "com.deucarian.diagnostics",
         "com.deucarian.editor",
-        "com.deucarian.theming"
+        "com.deucarian.theming",
+        "com.deucarian.ui"
       ],
       "registryGroupId": "ui-presentation",
       "registryKind": "Library",
@@ -319654,10 +319986,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "79c7e22859e5c4d49c84b1293a54170863b8167b",
+        "headCommit": "fe30273612ca2bc271e5a0fd325ac9093cc81acc",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "79c7e22859e5c4d49c84b1293a54170863b8167b"
+        "requestedRefCommit": "fe30273612ca2bc271e5a0fd325ac9093cc81acc"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -319702,7 +320034,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "79c7e22859e5c4d49c84b1293a54170863b8167b",
+        "headCommit": "fe30273612ca2bc271e5a0fd325ac9093cc81acc",
         "manifestSha256": "d5624a55c295f5ea7a35d68f9ab2b57f80dbeb799f0a24467605160c93dc2320",
         "requestedRef": "develop"
       },
@@ -319763,7 +320095,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "0c143fa859b9e6e3aea200ec5999f1a10cd1a8778158a4ad4c6f3c7cc83bb27a",
+        "auditInputSha256": "dcc0784665233fc6cf937c86ca9199c8d7af65d903e89a323e72f85a878d576d",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -322795,10 +323127,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "2c66a1a8256ac46903490cd12e419bad87145ad3",
+        "headCommit": "a19b610dea6a0505c17fe37163b4dcbdd8d9abb2",
         "origin": "https://github.com/Deucarian/Theming.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "2c66a1a8256ac46903490cd12e419bad87145ad3"
+        "requestedRefCommit": "a19b610dea6a0505c17fe37163b4dcbdd8d9abb2"
       },
       "canonicalId": "Deucarian/Theming",
       "ciWorkflows": [
@@ -322858,7 +323190,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Theming.git",
         "governanceConfigSha256": "81e52d0afe2594aae1a39447061a31ebc0f021f26b1d28a9315005e511b7efa0",
-        "headCommit": "2c66a1a8256ac46903490cd12e419bad87145ad3",
+        "headCommit": "a19b610dea6a0505c17fe37163b4dcbdd8d9abb2",
         "manifestSha256": "797922836001ca637ec10baee65eb9cf940fcf26ff4250a0197939cda61426c0",
         "requestedRef": "develop"
       },
