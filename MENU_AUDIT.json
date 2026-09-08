@@ -19,7 +19,7 @@
     },
     {
       "file": "Editor/GameContentAuthoringWindow.cs",
-      "line": 32,
+      "line": 33,
       "packageId": "com.deucarian.game-content-authoring",
       "path": "Tools/Deucarian/Authoring/Game Content...",
       "repository": "Game-Content-Authoring",

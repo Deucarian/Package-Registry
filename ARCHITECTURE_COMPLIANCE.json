@@ -160,30 +160,6 @@
       "assembly": "Deucarian.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianEditorWorkbench.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1180,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.editor",
-      "repository": "Editor",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianEditorWorkbenchGUI.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 581,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.editor",
-      "repository": "Editor",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/DeucarianEditorWorkflowControls.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 505,
@@ -224,30 +200,6 @@
       "assembly": "Deucarian.GameContentAuthoring.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentLibraryProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1246,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentAuthoringObjectPreview.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 997,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/GameContentEditingModels.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 954,
@@ -275,18 +227,6 @@
       "file": "Editor/GameContentCollectionEditing.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 713,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentLibraryService.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 634,
       "lineLimit": 500,
       "packageId": "com.deucarian.game-content-authoring",
       "repository": "Game-Content-Authoring",
@@ -953,30 +893,6 @@
       "repository": "Template-Viewer-Web"
     },
     {
-      "assembly": "Deucarian.Theming.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Core/DeucarianDefaultThemeAssetFactory.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1978,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Theming.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 905,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming",
-      "scope": "Editor production"
-    },
-    {
       "assembly": "Deucarian.Theming",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1535,25 +1451,13 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.Editor",
-          "file": "Editor/DeucarianEditorWorkbench.cs",
-          "lineCount": 1180,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Editor",
-          "file": "Editor/DeucarianEditorWorkbenchGUI.cs",
-          "lineCount": 581,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Editor",
           "file": "Editor/DeucarianEditorWorkflowControls.cs",
           "lineCount": 505,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 62,
+      "productionFileCount": 77,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -1589,12 +1493,6 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentAuthoringObjectPreview.cs",
-          "lineCount": 997,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
           "file": "Editor/GameContentCollectionEditing.cs",
           "lineCount": 713,
           "scope": "Editor production"
@@ -1603,18 +1501,6 @@
           "assembly": "Deucarian.GameContentAuthoring.Editor",
           "file": "Editor/GameContentEditingModels.cs",
           "lineCount": 954,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentLibraryProviderV2.cs",
-          "lineCount": 1246,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentLibraryService.cs",
-          "lineCount": 634,
           "scope": "Editor production"
         },
         {
@@ -1637,7 +1523,7 @@
         }
       ],
       "packageId": "com.deucarian.game-content-authoring",
-      "productionFileCount": 56,
+      "productionFileCount": 85,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Game-Content-Authoring",
       "sharedValidationPresent": true,
@@ -2412,18 +2298,6 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.Theming.Editor",
-          "file": "Editor/Core/DeucarianDefaultThemeAssetFactory.cs",
-          "lineCount": 1978,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Theming.Editor",
-          "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
-          "lineCount": 905,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Theming.Editor",
           "file": "Editor/Core/DeucarianThemingInspectorListFilter.cs",
           "lineCount": 582,
           "scope": "Editor production"
@@ -2436,7 +2310,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 119,
+      "productionFileCount": 140,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -2786,12 +2660,12 @@
   "summary": {
     "compliantRepositoryCount": 22,
     "findingsByDisposition": {
-      "RefactorBacklog": 75,
+      "RefactorBacklog": 68,
       "SetupRequired": 36
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 36,
-      "ProductionFileExceedsLineLimit": 75
+      "ProductionFileExceedsLineLimit": 68
     },
     "repositoryCount": 65
   }

@@ -8651,7 +8651,7 @@
       "containingSymbol": "DeucarianThemeManagerWorkflowTests::ThemeManagerSourceUsesWorkbenchWithoutLegacyLargeHeader",
       "file": "Tests/Editor/DeucarianThemeManagerWorkflowTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 1238,
+      "line": 1247,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.theming",
       "policyDisposition": "Allowed",
