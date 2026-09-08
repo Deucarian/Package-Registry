@@ -63,6 +63,45 @@ architecture-compliance pass.
 - A coordinator may sequence several abstractions, but it must not also own
   their parsing, storage, rendering, or platform-specific implementations.
 
+### Incremental responsibility review
+
+The shared package workflow also runs `Tools/deucarian_architecture_metrics.py`.
+It uses the existing C# syntax parser, aggregates partial declarations by
+assembly and qualified type (including generic arity), and excludes generated,
+sample, and test sources. Numbered partial files do not reset a type's budget.
+
+Review triggers are 500 type lines, 300 statements, 40 methods, and newly
+introduced mutable static fields, auto-properties, events, or known mutable
+collections. These are prompts to inspect responsibility and lifetime—not
+proof that a type violates SOLID. Presentation/storage/transport/scene signals
+are advisory, not automatic verdicts. Assembly validation separately rejects
+runtime references to known editor-only assemblies.
+
+`architecture-metrics-baseline.json` captures existing debt from the reviewed
+2026-09-08 develop snapshots of 63 public catalog packages plus Bootstrap.
+It does not grant permission to grow that debt. CI checks current source
+against the larger of the normal trigger and the existing per-type baseline.
+New packages are checked against normal triggers; private packages can be
+checked in their own authenticated workflow without publishing their source.
+The baseline is never rewritten by CI.
+
+An intentional ownership transfer, shared infrastructure owner, or compatibility
+adapter may use `architecture-metrics-exceptions.json`. Every exception names
+the exact assembly/type, package version, bounded metric allowance, and ownership
+rationale. A package version change requires renewed review. Do not increase a
+budget merely to make a check green; extract real collaborators first, and keep
+remaining debt visible.
+
+For a local check:
+
+```powershell
+python Tools/deucarian_architecture_metrics.py --repository-root <package-root> --baseline architecture-metrics-baseline.json --output <temporary-report.json>
+```
+
+Only an explicit baseline review may use `--write-baseline`. Pure-policy tests,
+Unity adapter tests, editor interaction checks, and consumer builds remain
+separate evidence; metric and file counts are not behavioral coverage.
+
 ## State And Behavior
 
 - Each domain state has one authoritative owner.
