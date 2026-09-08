@@ -125,27 +125,15 @@
       "scope": "Editor production"
     },
     {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
+      "assembly": "Deucarian.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentEditSessionCoordinator.cs",
+      "file": "Editor/DeucarianEditorWorkflowControls.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1835,
+      "lineCount": 505,
       "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentEditWorkbench.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1752,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor",
       "scope": "Editor production"
     },
     {
@@ -403,22 +391,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.simultria-viewer-integration",
-      "repository": "Simultria-Viewer-Connection"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.simultria-viewer-integration",
-      "repository": "Simultria-Viewer-Connection"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
@@ -800,33 +772,9 @@
       "assembly": "Deucarian.Theming.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/Core/DeucarianThemingMenuActions.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1795,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Theming.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 905,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.theming",
-      "repository": "Theming",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Theming.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/Core/DeucarianThemeManagerWorkflow.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 818,
       "lineLimit": 500,
       "packageId": "com.deucarian.theming",
       "repository": "Theming",
@@ -905,18 +853,6 @@
       "scope": "Runtime production"
     },
     {
-      "assembly": "Deucarian.UIFlow",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Navigation/UIFlowNavigator.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 966,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.ui-flow",
-      "repository": "UI-FLow",
-      "scope": "Runtime production"
-    },
-    {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
       "disposition": "SetupRequired",
       "file": "AGENTS.md",
@@ -931,38 +867,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.viewer-navigation",
       "repository": "Viewer-Navigation"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.viewer-rendering",
-      "repository": "Viewer-Rendering"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.viewer-rendering",
-      "repository": "Viewer-Rendering"
-    },
-    {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.viewer-shell",
-      "repository": "Viewer-Shell"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.viewer-shell",
-      "repository": "Viewer-Shell"
     },
     {
       "assembly": "Deucarian.WeaponSystems.Editor",
@@ -985,22 +889,6 @@
       "repository": "Web-Viewer-Suite"
     },
     {
-      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-      "disposition": "SetupRequired",
-      "file": "AGENTS.md",
-      "kind": "MissingCanonicalArchitectureReference",
-      "packageId": "com.deucarian.webgl-template",
-      "repository": "WebGL-Template"
-    },
-    {
-      "detail": "Run the shared Deucarian package validator in continuous integration.",
-      "disposition": "SetupRequired",
-      "file": ".github/workflows",
-      "kind": "MissingSharedArchitectureValidation",
-      "packageId": "com.deucarian.webgl-template",
-      "repository": "WebGL-Template"
-    },
-    {
       "assembly": "Deucarian.XRUI",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1018,7 +906,7 @@
       "disposition": "RefactorBacklog",
       "file": "Runtime/Controls/CustomButtonSettings.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 972,
+      "lineCount": 983,
       "lineLimit": 500,
       "packageId": "com.deucarian.xr-ui",
       "repository": "XR-UI",
@@ -1043,6 +931,18 @@
       "file": "Runtime/Controls/CustomPressableSurface.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 826,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.xr-ui",
+      "repository": "XR-UI",
+      "scope": "Runtime production"
+    },
+    {
+      "assembly": "Deucarian.XRUI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/XrUiColorPalette.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 502,
       "lineLimit": 500,
       "packageId": "com.deucarian.xr-ui",
       "repository": "XR-UI",
@@ -1404,10 +1304,16 @@
           "file": "Editor/DeucarianEditorWorkbenchGUI.cs",
           "lineCount": 581,
           "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.Editor",
+          "file": "Editor/DeucarianEditorWorkflowControls.cs",
+          "lineCount": 505,
+          "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 55,
+      "productionFileCount": 62,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -1455,18 +1361,6 @@
         },
         {
           "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentEditSessionCoordinator.cs",
-          "lineCount": 1835,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentEditWorkbench.cs",
-          "lineCount": 1752,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
           "file": "Editor/GameContentEditingModels.cs",
           "lineCount": 954,
           "scope": "Editor production"
@@ -1503,7 +1397,7 @@
         }
       ],
       "packageId": "com.deucarian.game-content-authoring",
-      "productionFileCount": 38,
+      "productionFileCount": 56,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Game-Content-Authoring",
       "sharedValidationPresent": true,
@@ -1623,7 +1517,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.notifications",
-      "productionFileCount": 27,
+      "productionFileCount": 34,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Notifications",
       "sharedValidationPresent": true,
@@ -1797,7 +1691,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.persistence",
-      "productionFileCount": 8,
+      "productionFileCount": 9,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Persistence",
       "sharedValidationPresent": true,
@@ -1916,7 +1810,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.session",
-      "productionFileCount": 15,
+      "productionFileCount": 17,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session",
       "sharedValidationPresent": true,
@@ -1950,7 +1844,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 37,
+      "productionFileCount": 38,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": true,
@@ -1962,7 +1856,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -1970,8 +1864,8 @@
       "productionFileCount": 50,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-Viewer-Connection",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.SimultriaViewerIntegration.Tests"
       ]
@@ -2277,12 +2171,6 @@
         },
         {
           "assembly": "Deucarian.Theming.Editor",
-          "file": "Editor/Core/DeucarianThemeManagerWorkflow.cs",
-          "lineCount": 818,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Theming.Editor",
           "file": "Editor/Core/DeucarianThemePackAssetFactory.cs",
           "lineCount": 905,
           "scope": "Editor production"
@@ -2294,12 +2182,6 @@
           "scope": "Editor production"
         },
         {
-          "assembly": "Deucarian.Theming.Editor",
-          "file": "Editor/Core/DeucarianThemingMenuActions.cs",
-          "lineCount": 1795,
-          "scope": "Editor production"
-        },
-        {
           "assembly": "Deucarian.Theming",
           "file": "Runtime/Core/DeucarianThemeProvider.cs",
           "lineCount": 673,
@@ -2307,7 +2189,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 99,
+      "productionFileCount": 119,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -2344,7 +2226,7 @@
         }
       ],
       "packageId": "com.deucarian.ui",
-      "productionFileCount": 36,
+      "productionFileCount": 39,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI",
       "sharedValidationPresent": true,
@@ -2382,16 +2264,10 @@
           "file": "Runtime/Navigation/UIFlowHost.cs",
           "lineCount": 984,
           "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.UIFlow",
-          "file": "Runtime/Navigation/UIFlowNavigator.cs",
-          "lineCount": 966,
-          "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.ui-flow",
-      "productionFileCount": 46,
+      "productionFileCount": 55,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-FLow",
       "sharedValidationPresent": true,
@@ -2456,7 +2332,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2464,8 +2340,8 @@
       "productionFileCount": 16,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Rendering",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ViewerRendering.Tests.EditMode",
         "Deucarian.ViewerRendering.Tests.PlayMode"
@@ -2474,7 +2350,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2482,8 +2358,8 @@
       "productionFileCount": 17,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Shell",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ViewerShell.Tests.EditMode"
       ]
@@ -2530,7 +2406,7 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
-        "present": false,
+        "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
       "oversizedProductionFiles": [],
@@ -2538,8 +2414,8 @@
       "productionFileCount": 2,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "WebGL-Template",
-      "sharedValidationPresent": false,
-      "status": "SetupRequired",
+      "sharedValidationPresent": true,
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.WebGLTemplate.Editor.Tests"
       ]
@@ -2590,7 +2466,7 @@
         {
           "assembly": "Deucarian.XRUI",
           "file": "Runtime/Controls/CustomButtonSettings.cs",
-          "lineCount": 972,
+          "lineCount": 983,
           "scope": "Runtime production"
         },
         {
@@ -2610,16 +2486,23 @@
           "file": "Runtime/Controls/CustomSelectableFeedback.cs",
           "lineCount": 930,
           "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.XRUI",
+          "file": "Runtime/XrUiColorPalette.cs",
+          "lineCount": 502,
+          "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.xr-ui",
-      "productionFileCount": 40,
+      "productionFileCount": 42,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
       "status": "RefactorBacklog",
       "testAssemblies": [
-        "Deucarian.XRUI.Tests.EditMode"
+        "Deucarian.XRUI.Tests.EditMode",
+        "Deucarian.XRUI.Tests.PlayMode"
       ]
     },
     {
@@ -2636,7 +2519,8 @@
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.XRUI.ThemingIntegration.Tests.EditMode"
+        "Deucarian.XRUI.ThemingIntegration.Tests.EditMode",
+        "Deucarian.XRUI.ThemingIntegration.Tests.PlayMode"
       ]
     }
   ],
@@ -2646,15 +2530,14 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 37,
+    "compliantRepositoryCount": 41,
     "findingsByDisposition": {
-      "RefactorBacklog": 76,
-      "SetupRequired": 17
+      "RefactorBacklog": 73,
+      "SetupRequired": 9
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 13,
-      "MissingSharedArchitectureValidation": 4,
-      "ProductionFileExceedsLineLimit": 76
+      "MissingCanonicalArchitectureReference": 9,
+      "ProductionFileExceedsLineLimit": 73
     },
     "repositoryCount": 65
   }

@@ -247,6 +247,12 @@
       "repository": "WebGL-Template"
     },
     {
+      "file": "CHANGELOG.md",
+      "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
@@ -254,7 +260,7 @@
     }
   ],
   "summary": {
-    "HistoricalChangelogReference": 17,
+    "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 10,
     "ReviewRequired": 14
