@@ -17513,7 +17513,38 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.notifications",
+        "packageJsonDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.theming",
+          "com.deucarian.ui"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.theming",
+          "com.deucarian.ui"
+        ],
+        "repo": "Notifications"
+      },
+      {
+        "packageId": "com.deucarian.xr-ui.theming-integration",
+        "packageJsonDependencies": [
+          "com.deucarian.theming",
+          "com.deucarian.xr-ui"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.theming",
+          "com.deucarian.xr-ui"
+        ],
+        "repo": "XR-UI-Theming-Integration"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -45712,7 +45743,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "d15c6f6473b0c23fe2983d07a49a4d225301eb416de20a051da99feb53a84084",
       "dependencyRulesSha256": "ec176ac6e404011de5717f87e0d1423852eb4574870c2c0de8c77b7a30d0f22a",
-      "packagesSha256": "5f785f0cc2ed9eda2c1d5d512ad4910fc9d17b6d315d9cac97983e0a1edae890"
+      "packagesSha256": "30fb1a068e5b6fbfb2e97db37fda65ccb3169e436aba6a7b3352242d4406a470"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -320860,6 +320891,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.common",
         "com.deucarian.diagnostics",
         "com.deucarian.editor",
         "com.deucarian.theming",
@@ -321651,7 +321683,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "dcc0784665233fc6cf937c86ca9199c8d7af65d903e89a323e72f85a878d576d",
+        "auditInputSha256": "a5b656cefc017e78873fc92a2e0a0692966fbd0866c2f8e5c0f36210461410ee",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -327208,6 +327240,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.common",
         "com.deucarian.xr-ui",
         "com.deucarian.theming"
       ],
