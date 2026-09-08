@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 75 |
+| RefactorBacklog | 68 |
 | SetupRequired | 36 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 36 |
-| ProductionFileExceedsLineLimit | 75 |
+| ProductionFileExceedsLineLimit | 68 |
 
 ## Repository Status
 
@@ -46,9 +46,9 @@ once.
 | Core-State | com.deucarian.core-state | SetupRequired | No | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | SetupRequired | No | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | Compliant | Yes | Yes | 20 | 1 | 0 | 0 |
-| Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 62 | 2 | 3 | 0 |
+| Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 77 | 2 | 1 | 0 |
 | Encounters | com.deucarian.encounters | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
-| Game-Content-Authoring | com.deucarian.game-content-authoring | SetupRequired | No | Yes | 56 | 1 | 8 | 0 |
+| Game-Content-Authoring | com.deucarian.game-content-authoring | SetupRequired | No | Yes | 85 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | SetupRequired | No | Yes | 5 | 1 | 0 | 0 |
 | Idle-Progression | com.deucarian.idle-progression | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
 | Logging | com.deucarian.logging | Compliant | Yes | Yes | 17 | 2 | 0 | 0 |
@@ -78,7 +78,7 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 37 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 17 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 119 | 2 | 4 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 140 | 2 | 2 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 39 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | SetupRequired | No | Yes | 55 | 2 | 1 | 0 |
@@ -115,18 +115,13 @@ once.
 | Common | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Core-State | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Defense-Games | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbench.cs | 1180 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkbenchGUI.cs | 581 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkflowControls.cs | 505 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Encounters | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Game-Content-Authoring | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentStructuredCollectionEditing.cs | 1280 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryProviderV2.cs | 1246 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentAuthoringObjectPreview.cs | 997 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentEditingModels.cs | 954 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackAwareViews.cs | 714 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentCollectionEditing.cs | 713 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentLibraryService.cs | 634 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackBrowser.cs | 585 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Gameplay-Foundation | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Idle-Progression | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
@@ -188,8 +183,6 @@ once.
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsRunFlow.cs | 553 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Viewer | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Template-Viewer-Web | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianDefaultThemeAssetFactory.cs | 1978 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemePackAssetFactory.cs | 905 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 673 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
