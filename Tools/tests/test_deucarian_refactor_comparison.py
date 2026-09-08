@@ -35,6 +35,26 @@ class RefactorComparisonTests(unittest.TestCase):
         after = analyze_sources("One", self.files(self.source(number=9)))["methods"][0]
         self.assertNotEqual(before["localNameNormalizedHash"], after["localNameNormalizedHash"])
 
+    def test_member_names_are_not_treated_as_same_named_locals(self):
+        first = self.source().replace('return value * 8', 'return sink.value(value) * 8')
+        renamed = self.source(local='amount').replace('return amount * 8', 'return sink.value(amount) * 8')
+        changed_api = renamed.replace('sink.value(', 'sink.amount(')
+        hashes = [analyze_sources('One', self.files(code))['methods'][0]['localNameNormalizedHash']
+                  for code in [first, renamed, changed_api]]
+        self.assertEqual(hashes[0], hashes[1])
+        self.assertNotEqual(hashes[1], hashes[2])
+
+    def test_parameter_identity_and_operand_order_are_preserved(self):
+        source = '''class Example { int Work(int left, int right) {
+            int total = left + right;
+            if (total < 8) { return total + left; }
+            return left - right + total * 3;
+        } }'''
+        changed = source.replace('return left - right', 'return right - left')
+        first = analyze_sources('One', self.files(source))['methods'][0]
+        second = analyze_sources('One', self.files(changed))['methods'][0]
+        self.assertNotEqual(first['localNameNormalizedHash'], second['localNameNormalizedHash'])
+
     def test_intra_package_clones_count_once_per_redundant_copy(self):
         first = analyze_sources("One", self.files(self.source()))["methods"][0]
         rows = [first, {**first, "symbol": "Second"}, {**first, "symbol": "Third"}]

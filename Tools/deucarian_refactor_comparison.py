@@ -56,13 +56,21 @@ def revision_files(root, revision):
     return files
 
 
-def tokens(node, source):
+def tokens(node, source, local_names=None):
     """Keep punctuation and literals, discard only whitespace and syntax comments."""
     if node.type == "comment":
         return []
     if not node.children:
-        return [source[node.start_byte:node.end_byte].decode("utf-8")]
-    return [token for child in node.children for token in tokens(child, source)]
+        value = source[node.start_byte:node.end_byte].decode("utf-8")
+        parent = node.parent
+        member_name = parent is not None and (
+            (parent.type == "member_access_expression" and parent.child_by_field_name("name") == node)
+            or parent.type in {"qualified_name", "alias_qualified_name", "generic_name", "name_colon", "type_argument_list"}
+            or parent.child_by_field_name("type") == node)
+        if local_names and node.type == "identifier" and value in local_names and not member_name:
+            value = local_names[value]
+        return [value]
+    return [token for child in node.children for token in tokens(child, source, local_names)]
 
 
 def digest(values):
@@ -111,10 +119,16 @@ def analyze_sources(repository, files):
             body_tokens = tokens(body, source)
             if len(body_tokens) < MIN_BODY_TOKENS:
                 continue
-            locals_ = analyzer._local_identifiers(node, source)
+            local_names = {}
+            for declaration in audit.walk(node):
+                if declaration.type not in {"parameter", "variable_declarator"}:
+                    continue
+                name = audit.child_text(declaration, "name", source)
+                if name and name not in local_names:
+                    local_names[name] = f"<local{len(local_names)}>"
             # Structural candidates normalize local/parameter spellings only.
             # Literals, members and called API names remain significant.
-            normalized = ["<local>" if token in locals_ else token for token in body_tokens]
+            normalized = tokens(body, source, local_names)
             methods.append({
                 "repository": repository, "file": path, "line": node.start_point[0] + 1,
                 "symbol": audit.child_text(node, "name", source), "tokens": len(body_tokens),
@@ -174,6 +188,8 @@ def write_report(manifest, output):
             continue
         root = Path(entry["repositoryRoot"])
         before, after = entry["before"], entry["after"]
+        if not all(re.fullmatch(r"[0-9a-f]{40}", value) for value in (before, after)):
+            raise ValueError("Comparison revisions must be full immutable commit IDs.")
         row = {key: entry[key] for key in ("repository", "before", "after")}
         row["note"] = entry.get("note", "")
         row["diffStat"] = git(root, "diff", "--stat", before, after, "--").decode("utf-8")
@@ -206,12 +222,13 @@ def write_report(manifest, output):
         old, new = totals["before"][key], totals["after"][key]
         lines.append(f"| {title}: redundant eligible tokens | {old['redundantBodyTokens']} ({old['redundantBodyTokenPercent']}%) | {new['redundantBodyTokens']} ({new['redundantBodyTokenPercent']}%) |")
     lines += ["", report["methodology"]["limitations"], "", "## Per-package Git diff", "",
-              "| Repository | Before | After | Changed paths | Full patch |", "| --- | --- | --- | ---: | --- |"]
+              "| Repository | Before | After | Changed paths | Full patch | Revision note |", "| --- | --- | --- | ---: | --- | --- |"]
     for row in packages:
         if row.get("excludedReason"):
-            lines.append(f"| {row['repository']} | — | — | — | Excluded: {row['excludedReason']} |")
+            lines.append(f"| {row['repository']} | — | — | — | — | Excluded: {row['excludedReason']} |")
         else:
-            lines.append(f"| {row['repository']} | `{row['before']}` | `{row['after']}` | {len(row['changedPaths'])} | [Diff]({(output / row['patch']).as_posix()}) |")
+            note = row['note'].replace('|', r'\|').replace('\n', ' ')
+            lines.append(f"| {row['repository']} | `{row['before']}` | `{row['after']}` | {len(row['changedPaths'])} | [Diff]({(output / row['patch']).as_posix()}) | {note} |")
     lines += ["", "Detailed type metrics, clone locations and diff statistics: [comparison.json](" + (output / "comparison.json").as_posix() + ").", ""]
     (output / "COMPARISON.md").write_text("\n".join(lines), encoding="utf-8")
     return report
