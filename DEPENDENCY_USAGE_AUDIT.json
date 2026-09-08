@@ -2760,7 +2760,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -3156,6 +3156,34 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.notifications",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Notifications.Editor.asmdef",
+          "assembly": "Deucarian.Notifications.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Common",
+          "scope": "Editor production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Notifications",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "0.1.6",
       "dependency": "com.deucarian.diagnostics",
@@ -3197,7 +3225,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3239,7 +3267,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3346,13 +3374,27 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.7",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.ui",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
         "Deucarian.UI"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Notifications.Editor.asmdef",
+          "assembly": "Deucarian.Notifications.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.UI",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Unity/Deucarian.Notifications.Unity.asmdef",
           "assembly": "Deucarian.Notifications.Unity",
@@ -3363,6 +3405,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.UI",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.Notifications.PlayModeTests.asmdef",
+          "assembly": "Deucarian.Notifications.PlayModeTests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.UI",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
@@ -4899,7 +4953,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -4941,7 +4995,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.6",
+      "declaredVersion": "1.0.7",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -8845,7 +8899,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -8931,9 +8985,38 @@
       "dependency": "com.deucarian.media",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
+        "Deucarian.Media",
         "Deucarian.Media.Unity"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Theming.Editor.asmdef",
+          "assembly": "Deucarian.Theming.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Media",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Editor/Deucarian.Theming.Editor.asmdef",
+          "assembly": "Deucarian.Theming.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.Theming.asmdef",
           "assembly": "Deucarian.Theming",
@@ -9007,7 +9090,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.5",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [
@@ -9101,7 +9184,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -11464,7 +11547,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.xr-ui",
       "referencedAssemblies": [
@@ -11508,7 +11591,33 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.XRUI.ThemingIntegration.asmdef",
+          "assembly": "Deucarian.XRUI.ThemingIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "XR-UI-Theming-Integration",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -11554,6 +11663,18 @@
           "reference": "Deucarian.Theming",
           "scope": "Test",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.XRUI.ThemingIntegration.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.XRUI.ThemingIntegration.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "XR-UI-Theming-Integration",
@@ -11562,7 +11683,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.xr-ui",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -11608,6 +11729,18 @@
           "reference": "Deucarian.XRUI",
           "scope": "Test",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.XRUI.ThemingIntegration.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.XRUI.ThemingIntegration.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.XRUI",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "XR-UI-Theming-Integration",
@@ -11616,9 +11749,9 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 40,
+    "EditorOnlyUse": 41,
     "OptionalVersionDefinedUse": 2,
-    "RequiredAndUsed": 160,
+    "RequiredAndUsed": 161,
     "SuiteComposition": 39,
     "TestOnlyUse": 13
   }
