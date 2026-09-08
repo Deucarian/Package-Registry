@@ -5,33 +5,6 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
-        "version": "1.3.0",
-        "limits": {
-          "mutableGlobals": 2
-        },
-        "reason": "Project-wide motion preference and its change event are intentionally owned by this editor service. Panel attachment owns subscriptions; detach unsubscribes and stops animation."
-      },
-      {
-        "assembly": "Deucarian.Editor",
-        "type": "Deucarian.Editor.DeucarianEditorAppearance",
-        "version": "1.3.0",
-        "limits": {
-          "mutableGlobals": 1
-        },
-        "reason": "One shared appearance event broadcasts an explicit project preference. Weak panel bindings attach and detach subscriptions; the service does not retain closed windows."
-      },
-      {
-        "assembly": "Deucarian.Editor",
-        "type": "Deucarian.Editor.DeucarianToolHistory",
-        "version": "1.3.0",
-        "limits": {
-          "mutableGlobals": 1
-        },
-        "reason": "One authoritative project preference cache owns tool favorites and the bounded twelve-item recent list. It stores stable tool IDs, never runtime objects or connections."
-      },
-      {
-        "assembly": "Deucarian.Editor",
-        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.3.1",
         "limits": {
           "mutableGlobals": 2
@@ -55,18 +28,6 @@
           "mutableGlobals": 1
         },
         "reason": "One authoritative project preference cache owns tool favorites and the bounded twelve-item recent list. It stores stable tool IDs, never runtime objects or connections."
-      }
-    ],
-    "com.deucarian.game-content-authoring": [
-      {
-        "assembly": "Deucarian.GameContentAuthoring.Editor",
-        "type": "Deucarian.GameContentAuthoring.Editor.GameContentAuthoringWindow",
-        "version": "0.2.0",
-        "limits": {
-          "lines": 819,
-          "statements": 412
-        },
-        "reason": "A small compatibility-window allowance wires owned per-window draft cleanup. Session policy and field/reference/collection renderers have been extracted; existing window presentation debt is not reclassified as good architecture."
       }
     ],
     "com.deucarian.notifications": [
@@ -81,15 +42,6 @@
       }
     ],
     "com.deucarian.theming": [
-      {
-        "assembly": "Deucarian.Theming.Editor",
-        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
-        "version": "1.3.0",
-        "limits": {
-          "mutableGlobals": 1
-        },
-        "reason": "The existing scene-preview repaint generation moved out of the workflow facade into the sole scene-application owner. This is an ownership transfer, not a second mutable source."
-      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
