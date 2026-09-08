@@ -56,7 +56,7 @@ once.
 | Media | com.deucarian.media | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
-| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 14 | 2 | 0 | 0 |
+| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 27 | 2 | 0 | 0 |
 | Object-Loading | com.deucarian.object-loading | Compliant | Yes | Yes | 22 | 2 | 0 | 0 |
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
