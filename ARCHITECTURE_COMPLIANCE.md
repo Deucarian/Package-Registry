@@ -13,17 +13,16 @@ once.
 ## Summary
 
 - Repositories: 65
-- Fully compliant repositories: 21
+- Fully compliant repositories: 22
 
 | Metric | Count |
 | --- | --- |
 | RefactorBacklog | 75 |
-| SetupRequired | 38 |
+| SetupRequired | 36 |
 
 | Metric | Count |
 | --- | --- |
-| MissingCanonicalArchitectureReference | 37 |
-| MissingSharedArchitectureValidation | 1 |
+| MissingCanonicalArchitectureReference | 36 |
 | ProductionFileExceedsLineLimit | 75 |
 
 ## Repository Status
@@ -64,7 +63,7 @@ once.
 | Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 105 | 1 | 9 | 0 |
 | Package-Registry |  | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Persistence | com.deucarian.persistence | SetupRequired | No | Yes | 9 | 1 | 0 | 0 |
-| Pointer-Capture | com.deucarian.pointer-capture | SetupRequired | No | No | 10 | 1 | 0 | 0 |
+| Pointer-Capture | com.deucarian.pointer-capture | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Progression | com.deucarian.progression | SetupRequired | No | Yes | 4 | 1 | 0 | 0 |
 | Projectiles | com.deucarian.projectiles | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
 | Run-Upgrades | com.deucarian.run-upgrades | SetupRequired | No | Yes | 9 | 1 | 3 | 0 |
@@ -148,8 +147,6 @@ once.
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageRegistryValidator.cs | 597 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageGraphHierarchyBuilder.cs | 508 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Persistence | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Pointer-Capture | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Pointer-Capture | MissingSharedArchitectureValidation | SetupRequired | .github/workflows |  |  | Run the shared Deucarian package validator in continuous integration. |
 | Progression | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Projectiles | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Run-Upgrades | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |

@@ -502,22 +502,6 @@
         "disposition": "SetupRequired",
         "file": "AGENTS.md",
         "kind": "MissingCanonicalArchitectureReference",
-        "packageId": "com.deucarian.pointer-capture",
-        "repository": "Pointer-Capture"
-      },
-      {
-        "detail": "Run the shared Deucarian package validator in continuous integration.",
-        "disposition": "SetupRequired",
-        "file": ".github/workflows",
-        "kind": "MissingSharedArchitectureValidation",
-        "packageId": "com.deucarian.pointer-capture",
-        "repository": "Pointer-Capture"
-      },
-      {
-        "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
-        "disposition": "SetupRequired",
-        "file": "AGENTS.md",
-        "kind": "MissingCanonicalArchitectureReference",
         "packageId": "com.deucarian.progression",
         "repository": "Progression"
       },
@@ -1967,7 +1951,7 @@
       {
         "canonicalReference": {
           "path": "AGENTS.md",
-          "present": false,
+          "present": true,
           "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
         },
         "oversizedProductionFiles": [],
@@ -1975,8 +1959,8 @@
         "productionFileCount": 10,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Pointer-Capture",
-        "sharedValidationPresent": false,
-        "status": "SetupRequired",
+        "sharedValidationPresent": true,
+        "status": "Compliant",
         "testAssemblies": [
           "Deucarian.PointerCapture.Tests.Editor"
         ]
@@ -2801,14 +2785,13 @@
       "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
     },
     "summary": {
-      "compliantRepositoryCount": 21,
+      "compliantRepositoryCount": 22,
       "findingsByDisposition": {
         "RefactorBacklog": 75,
-        "SetupRequired": 38
+        "SetupRequired": 36
       },
       "findingsByKind": {
-        "MissingCanonicalArchitectureReference": 37,
-        "MissingSharedArchitectureValidation": 1,
+        "MissingCanonicalArchitectureReference": 36,
         "ProductionFileExceedsLineLimit": 75
       },
       "repositoryCount": 65
@@ -325295,13 +325278,15 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "92b8535940ba3c5d64851dc9cfb19b844156b713",
+        "headCommit": "8cec72e291cb6fc9674d1f6206fbdd6a3fcc91b6",
         "origin": "https://github.com/Deucarian/Pointer-Capture.git",
         "requestedRef": "main",
-        "requestedRefCommit": "92b8535940ba3c5d64851dc9cfb19b844156b713"
+        "requestedRefCommit": "8cec72e291cb6fc9674d1f6206fbdd6a3fcc91b6"
       },
       "canonicalId": "Deucarian/Pointer-Capture",
-      "ciWorkflows": [],
+      "ciWorkflows": [
+        ".github/workflows/package-validation.yml"
+      ],
       "dependencies": {
         "com.deucarian.editor": "1.2.0"
       },
@@ -325343,7 +325328,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Pointer-Capture.git",
         "governanceConfigSha256": "d9c17ad7dc856ec50888c7691aba554b90fae725280fd7208a68c0a1db326a4a",
-        "headCommit": "92b8535940ba3c5d64851dc9cfb19b844156b713",
+        "headCommit": "8cec72e291cb6fc9674d1f6206fbdd6a3fcc91b6",
         "manifestSha256": "76c0778b70a263dbc1619eb11aa0ed91cc50c91cf727040d5170d23de0b9b435",
         "requestedRef": "main"
       },
