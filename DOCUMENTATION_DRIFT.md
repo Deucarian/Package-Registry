@@ -6,7 +6,7 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Historical changelog reference | 17 |
+| Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 10 |
 | Review required | 14 |
@@ -58,4 +58,5 @@ Historical changelog references preserve released history and are not rewrite re
 | WebGL-Template | Historical changelog reference | CHANGELOG.md |  |  |  |
 | WebGL-Template | Review required | AGENTS.md |  |  |  |
 | WebGL-Template | Review required | README.md |  |  |  |
+| XR-UI-Theming-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | AGENTS.md |  |  |  |
