@@ -12697,10 +12697,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 843
+    "Allowed": 842
   },
   "summary": {
-    "direct Unity API call": 770,
+    "direct Unity API call": 769,
     "helper call site": 72,
     "helper definition": 1
   }

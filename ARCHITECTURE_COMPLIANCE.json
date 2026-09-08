@@ -193,6 +193,22 @@
       "scope": "Editor production"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.encounters",
+      "repository": "Encounters"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.game-content-authoring",
+      "repository": "Game-Content-Authoring"
+    },
+    {
       "assembly": "Deucarian.GameContentAuthoring.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -283,30 +299,6 @@
       "file": "Editor/GameContentPackBrowser.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 585,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentPackModels.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 553,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.game-content-authoring",
-      "repository": "Game-Content-Authoring",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.GameContentAuthoring.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/GameContentPackContext.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 537,
       "lineLimit": 500,
       "packageId": "com.deucarian.game-content-authoring",
       "repository": "Game-Content-Authoring",
@@ -587,6 +579,14 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.simultria-api",
       "repository": "Simultria-API"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.template.game.idle-auto-defense",
+      "repository": "Template-Game-Idle-Auto-Defense"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
@@ -1089,6 +1089,14 @@
       "repository": "Viewer-Navigation"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.weapon-systems",
+      "repository": "Weapon-Systems"
+    },
+    {
       "assembly": "Deucarian.WeaponSystems.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1107,6 +1115,34 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.web-viewer-suite",
       "repository": "Web-Viewer-Suite"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.world-navigation",
+      "repository": "World-Navigation"
+    },
+    {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.world-spawning",
+      "repository": "World-Spawning"
+    },
+    {
+      "assembly": "Deucarian.WorldSpawning",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/WorldSpawningCore.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 572,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.world-spawning",
+      "repository": "World-Spawning",
+      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.XRUI",
@@ -1607,18 +1643,6 @@
           "assembly": "Deucarian.GameContentAuthoring.Editor",
           "file": "Editor/GameContentPackBrowser.cs",
           "lineCount": 585,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentPackContext.cs",
-          "lineCount": 537,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.GameContentAuthoring.Editor",
-          "file": "Editor/GameContentPackModels.cs",
-          "lineCount": 553,
           "scope": "Editor production"
         },
         {
@@ -2776,14 +2800,15 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 41,
+    "compliantRepositoryCount": 21,
     "findingsByDisposition": {
-      "RefactorBacklog": 73,
-      "SetupRequired": 9
+      "RefactorBacklog": 75,
+      "SetupRequired": 38
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 73
+      "MissingCanonicalArchitectureReference": 37,
+      "MissingSharedArchitectureValidation": 1,
+      "ProductionFileExceedsLineLimit": 75
     },
     "repositoryCount": 65
   }
