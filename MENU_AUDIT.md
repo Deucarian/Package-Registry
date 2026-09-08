@@ -11,7 +11,7 @@
 |---|---|---|---|
 | `Tools/Deucarian/Advanced/Developer Tools...` | `com.deucarian.editor` | Editor | `Editor/DeucarianControlCenterWindow.cs:41` |
 | `Tools/Deucarian/Advanced/Legacy Shortcuts...` | `com.deucarian.editor` | Editor | `Editor/DeucarianControlCenterWindow.cs:47` |
-| `Tools/Deucarian/Authoring/Game Content...` | `com.deucarian.game-content-authoring` | Game-Content-Authoring | `Editor/GameContentAuthoringWindow.cs:30` |
+| `Tools/Deucarian/Authoring/Game Content...` | `com.deucarian.game-content-authoring` | Game-Content-Authoring | `Editor/GameContentAuthoringWindow.cs:32` |
 | `Tools/Deucarian/Build Manager...` | `com.deucarian.build-pipeline` | Build-Pipeline | `Editor/DeucarianBuildManagerWindow.Part01.cs:16` |
 | `Tools/Deucarian/Control Center...` | `com.deucarian.editor` | Editor | `Editor/DeucarianControlCenterWindow.cs:35` |
 | `Tools/Deucarian/Diagnostics...` | `com.deucarian.diagnostics` | Diagnostics | `Editor/DiagnosticsMenu.cs:9` |

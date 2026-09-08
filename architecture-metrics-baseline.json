@@ -1,0 +1,1375 @@
+{
+  "packages": {
+    "com.deucarian.activity-visualization": {
+      "types": {
+        "Deucarian.ActivityVisualization:Deucarian.ActivityVisualization.ActivityVisualizationStateOwner": {
+          "lines": 615,
+          "methods": 19,
+          "mutableGlobals": 0,
+          "statements": 223
+        }
+      }
+    },
+    "com.deucarian.api": {
+      "types": {
+        "Deucarian.API:Deucarian.API.APIDebugSettings": {
+          "lines": 7,
+          "methods": 0,
+          "mutableGlobals": 1,
+          "statements": 0
+        },
+        "Deucarian.API:Deucarian.API.Certificates.HttpRequestConfigurator": {
+          "lines": 48,
+          "methods": 1,
+          "mutableGlobals": 1,
+          "statements": 10
+        },
+        "Deucarian.API:Deucarian.API.Services.ApiServices": {
+          "lines": 409,
+          "methods": 22,
+          "mutableGlobals": 1,
+          "statements": 33
+        }
+      }
+    },
+    "com.deucarian.attacks": {
+      "types": {
+        "Deucarian.Attacks.Editor:Deucarian.Attacks.Editor.AttackProviderV2View": {
+          "lines": 1098,
+          "methods": 47,
+          "mutableGlobals": 1,
+          "statements": 493
+        },
+        "Deucarian.Attacks.Editor:Deucarian.Attacks.Editor.EnemyProviderV2View": {
+          "lines": 884,
+          "methods": 43,
+          "mutableGlobals": 1,
+          "statements": 370
+        },
+        "Deucarian.Attacks.Editor:Deucarian.Attacks.Editor.WaveProviderV2View": {
+          "lines": 962,
+          "methods": 51,
+          "mutableGlobals": 1,
+          "statements": 410
+        }
+      }
+    },
+    "com.deucarian.authentication": {
+      "types": {
+        "Deucarian.Authentication.Editor:Deucarian.Authentication.Editor.AuthenticationAutoApply": {
+          "lines": 114,
+          "methods": 7,
+          "mutableGlobals": 1,
+          "statements": 30
+        },
+        "Deucarian.Authentication.Editor:Deucarian.Authentication.Editor.AuthenticationLocalSettings": {
+          "lines": 504,
+          "methods": 23,
+          "mutableGlobals": 0,
+          "statements": 110
+        },
+        "Deucarian.Authentication.Editor:Deucarian.Authentication.Editor.AuthenticationWindow": {
+          "lines": 1392,
+          "methods": 48,
+          "mutableGlobals": 0,
+          "statements": 416
+        },
+        "Deucarian.Authentication.ViewerIntegration:Deucarian.Authentication.ViewerRuntimeConnectionProviderRegistry": {
+          "lines": 150,
+          "methods": 5,
+          "mutableGlobals": 1,
+          "statements": 33
+        },
+        "Deucarian.Authentication:Deucarian.Authentication.AuthenticationTargetRegistry": {
+          "lines": 233,
+          "methods": 9,
+          "mutableGlobals": 3,
+          "statements": 38
+        }
+      }
+    },
+    "com.deucarian.auto-defense": {
+      "types": {}
+    },
+    "com.deucarian.auto-defense-suite": {
+      "types": {}
+    },
+    "com.deucarian.bootstrap": {
+      "types": {
+        "Deucarian.Bootstrap.Editor:Deucarian.Bootstrap.Editor.BootstrapPresentationModelFactory": {
+          "lines": 678,
+          "methods": 26,
+          "mutableGlobals": 0,
+          "statements": 190
+        },
+        "Deucarian.Bootstrap.Editor:Deucarian.Bootstrap.Editor.BootstrapSetupCoordinator": {
+          "lines": 916,
+          "methods": 33,
+          "mutableGlobals": 0,
+          "statements": 369
+        }
+      }
+    },
+    "com.deucarian.build-pipeline": {
+      "types": {
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildCompatibility": {
+          "lines": 274,
+          "methods": 15,
+          "mutableGlobals": 1,
+          "statements": 84
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildControlCenterStatus": {
+          "lines": 82,
+          "methods": 3,
+          "mutableGlobals": 2,
+          "statements": 15
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildExecutionScope": {
+          "lines": 30,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 6
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildLifecycleScopeRegistry": {
+          "lines": 72,
+          "methods": 8,
+          "mutableGlobals": 1,
+          "statements": 20
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildManagerWindow": {
+          "lines": 935,
+          "methods": 40,
+          "mutableGlobals": 0,
+          "statements": 313
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.DeucarianBuildRunner": {
+          "lines": 550,
+          "methods": 19,
+          "mutableGlobals": 0,
+          "statements": 145
+        },
+        "Deucarian.BuildPipeline.Editor:Deucarian.BuildPipeline.NewtonsoftJsonContractDiscovery": {
+          "lines": 584,
+          "methods": 19,
+          "mutableGlobals": 1,
+          "statements": 168
+        }
+      }
+    },
+    "com.deucarian.camera-navigation": {
+      "types": {
+        "Deucarian.CameraNavigation:Deucarian.CameraNavigation.DeucarianCameraFraming": {
+          "lines": 780,
+          "methods": 40,
+          "mutableGlobals": 0,
+          "statements": 192
+        },
+        "Deucarian.CameraNavigation:Deucarian.CameraNavigation.DeucarianOrbitCameraController": {
+          "lines": 557,
+          "methods": 27,
+          "mutableGlobals": 0,
+          "statements": 175
+        }
+      }
+    },
+    "com.deucarian.camera-navigation.input-system-integration": {
+      "types": {}
+    },
+    "com.deucarian.combat": {
+      "types": {}
+    },
+    "com.deucarian.command-routing": {
+      "types": {
+        "Deucarian.CommandRouting.Editor:Deucarian.CommandRouting.Editor.CommandRoutingEditorWindow": {
+          "lines": 916,
+          "methods": 31,
+          "mutableGlobals": 0,
+          "statements": 283
+        },
+        "Deucarian.CommandRouting.Editor:Deucarian.CommandRouting.Editor.CommandTestCatalogSourceRegistry": {
+          "lines": 51,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 10
+        },
+        "Deucarian.CommandRouting:Deucarian.CommandRouting.CommandRoutingRuntime`1": {
+          "lines": 351,
+          "methods": 13,
+          "mutableGlobals": 1,
+          "statements": 59
+        }
+      }
+    },
+    "com.deucarian.command-routing.udp-integration": {
+      "types": {
+        "Deucarian.CommandRouting.UdpIntegration:Deucarian.CommandRouting.UdpIntegration.UdpCommandTransport": {
+          "lines": 297,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 85
+        }
+      }
+    },
+    "com.deucarian.command-routing.webgl-integration": {
+      "types": {}
+    },
+    "com.deucarian.common": {
+      "types": {}
+    },
+    "com.deucarian.core-state": {
+      "types": {}
+    },
+    "com.deucarian.defense-games": {
+      "types": {}
+    },
+    "com.deucarian.diagnostics": {
+      "types": {
+        "Deucarian.Diagnostics.Editor:Deucarian.Diagnostics.Editor.DiagnosticsControlCenterStatus": {
+          "lines": 37,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 7
+        },
+        "Deucarian.Diagnostics.Editor:Deucarian.Diagnostics.Editor.DiagnosticsWindow": {
+          "lines": 644,
+          "methods": 37,
+          "mutableGlobals": 0,
+          "statements": 230
+        },
+        "Deucarian.Diagnostics:Deucarian.Diagnostics.DiagnosticProviderRegistry": {
+          "lines": 57,
+          "methods": 5,
+          "mutableGlobals": 1,
+          "statements": 15
+        }
+      }
+    },
+    "com.deucarian.editor": {
+      "types": {
+        "Deucarian.Editor:Deucarian.Editor.DeucarianControlCenterRegistry": {
+          "lines": 154,
+          "methods": 9,
+          "mutableGlobals": 3,
+          "statements": 36
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianControlCenterView": {
+          "lines": 516,
+          "methods": 21,
+          "mutableGlobals": 0,
+          "statements": 211
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorAccordion": {
+          "lines": 327,
+          "methods": 10,
+          "mutableGlobals": 5,
+          "statements": 96
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorAmbientGlass": {
+          "lines": 214,
+          "methods": 11,
+          "mutableGlobals": 5,
+          "statements": 74
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorAmbientMotionSettings": {
+          "lines": 42,
+          "methods": 1,
+          "mutableGlobals": 1,
+          "statements": 9
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorButtons": {
+          "lines": 95,
+          "methods": 3,
+          "mutableGlobals": 3,
+          "statements": 36
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorCards": {
+          "lines": 253,
+          "methods": 10,
+          "mutableGlobals": 7,
+          "statements": 60
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorCompactObjectCard": {
+          "lines": 101,
+          "methods": 1,
+          "mutableGlobals": 3,
+          "statements": 25
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorFieldRow": {
+          "lines": 135,
+          "methods": 8,
+          "mutableGlobals": 3,
+          "statements": 42
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorIcons": {
+          "lines": 180,
+          "methods": 12,
+          "mutableGlobals": 2,
+          "statements": 51
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorMiniToolbar": {
+          "lines": 53,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 13
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorSearchField": {
+          "lines": 52,
+          "methods": 1,
+          "mutableGlobals": 2,
+          "statements": 14
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorSectionHeader": {
+          "lines": 56,
+          "methods": 1,
+          "mutableGlobals": 2,
+          "statements": 14
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorSegmentedControl": {
+          "lines": 77,
+          "methods": 3,
+          "mutableGlobals": 2,
+          "statements": 27
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorSidebar": {
+          "lines": 168,
+          "methods": 2,
+          "mutableGlobals": 6,
+          "statements": 42
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorStatusPanel": {
+          "lines": 139,
+          "methods": 4,
+          "mutableGlobals": 4,
+          "statements": 38
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorStyles": {
+          "lines": 221,
+          "methods": 4,
+          "mutableGlobals": 10,
+          "statements": 86
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorTextureCache": {
+          "lines": 28,
+          "methods": 1,
+          "mutableGlobals": 1,
+          "statements": 10
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorTypography": {
+          "lines": 48,
+          "methods": 5,
+          "mutableGlobals": 3,
+          "statements": 12
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorVisualShell": {
+          "lines": 337,
+          "methods": 13,
+          "mutableGlobals": 2,
+          "statements": 122
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorWizardHeader": {
+          "lines": 72,
+          "methods": 1,
+          "mutableGlobals": 2,
+          "statements": 21
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianEditorWorkbenchGUI": {
+          "lines": 493,
+          "methods": 21,
+          "mutableGlobals": 23,
+          "statements": 210
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianPlayModeValidationGate": {
+          "lines": 35,
+          "methods": 2,
+          "mutableGlobals": 1,
+          "statements": 12
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianProjectValidationRegistry": {
+          "lines": 115,
+          "methods": 4,
+          "mutableGlobals": 2,
+          "statements": 27
+        },
+        "Deucarian.Editor:Deucarian.Editor.DeucarianToolRegistry": {
+          "lines": 135,
+          "methods": 6,
+          "mutableGlobals": 2,
+          "statements": 36
+        }
+      }
+    },
+    "com.deucarian.encounters": {
+      "types": {}
+    },
+    "com.deucarian.game-content-authoring": {
+      "types": {
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentAuthoringObjectPreviewRenderer": {
+          "lines": 800,
+          "methods": 36,
+          "mutableGlobals": 2,
+          "statements": 426
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentAuthoringPreviewContext": {
+          "lines": 269,
+          "methods": 17,
+          "mutableGlobals": 3,
+          "statements": 85
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentAuthoringProviderRegistry": {
+          "lines": 67,
+          "methods": 4,
+          "mutableGlobals": 1,
+          "statements": 23
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentAuthoringWindow": {
+          "lines": 816,
+          "methods": 45,
+          "mutableGlobals": 0,
+          "statements": 411
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentEditSessionCoordinator": {
+          "lines": 1744,
+          "methods": 53,
+          "mutableGlobals": 1,
+          "statements": 731
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentEditWorkbench": {
+          "lines": 1740,
+          "methods": 58,
+          "mutableGlobals": 3,
+          "statements": 622
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentLibraryProviderV2View": {
+          "lines": 652,
+          "methods": 27,
+          "mutableGlobals": 1,
+          "statements": 261
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentLibraryService": {
+          "lines": 622,
+          "methods": 28,
+          "mutableGlobals": 1,
+          "statements": 307
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentPackDashboard": {
+          "lines": 143,
+          "methods": 6,
+          "mutableGlobals": 1,
+          "statements": 74
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentPreviewLabRenderer": {
+          "lines": 40,
+          "methods": 1,
+          "mutableGlobals": 1,
+          "statements": 15
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentRecordLensBrowser": {
+          "lines": 381,
+          "methods": 17,
+          "mutableGlobals": 1,
+          "statements": 164
+        },
+        "Deucarian.GameContentAuthoring.Editor:Deucarian.GameContentAuthoring.Editor.GameContentRecordProjectionRegistry`1": {
+          "lines": 64,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 28
+        }
+      }
+    },
+    "com.deucarian.gameplay-foundation": {
+      "types": {}
+    },
+    "com.deucarian.idle-progression": {
+      "types": {}
+    },
+    "com.deucarian.logging": {
+      "types": {
+        "Deucarian.Logging:Deucarian.Logging.DeucarianLog": {
+          "lines": 258,
+          "methods": 14,
+          "mutableGlobals": 2,
+          "statements": 63
+        },
+        "Deucarian.Logging:Deucarian.Logging.DeucarianLogSettings": {
+          "lines": 54,
+          "methods": 2,
+          "mutableGlobals": 6,
+          "statements": 8
+        }
+      }
+    },
+    "com.deucarian.media": {
+      "types": {}
+    },
+    "com.deucarian.media.api-integration": {
+      "types": {}
+    },
+    "com.deucarian.monetization": {
+      "types": {}
+    },
+    "com.deucarian.notifications": {
+      "types": {
+        "Deucarian.Notifications:Deucarian.Notifications.NotificationEditorTargets": {
+          "lines": 29,
+          "methods": 2,
+          "mutableGlobals": 1,
+          "statements": 12
+        },
+        "Deucarian.Notifications:Deucarian.Notifications.NotificationEpisodeController": {
+          "lines": 188,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 72
+        },
+        "Deucarian.Notifications:Deucarian.Notifications.NotificationStore": {
+          "lines": 306,
+          "methods": 12,
+          "mutableGlobals": 1,
+          "statements": 109
+        }
+      }
+    },
+    "com.deucarian.object-loading": {
+      "types": {
+        "Deucarian.ObjectLoading.Diagnostics:Deucarian.ObjectLoading.Diagnostics.ObjectLoadingDiagnostics": {
+          "lines": 142,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 28
+        }
+      }
+    },
+    "com.deucarian.object-loading.api-integration": {
+      "types": {}
+    },
+    "com.deucarian.object-selection": {
+      "types": {}
+    },
+    "com.deucarian.object-selection.core-state-integration": {
+      "types": {}
+    },
+    "com.deucarian.package-installer": {
+      "types": {
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageDependencyInstaller": {
+          "lines": 1169,
+          "methods": 40,
+          "mutableGlobals": 0,
+          "statements": 228
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageDetectionService": {
+          "lines": 642,
+          "methods": 33,
+          "mutableGlobals": 0,
+          "statements": 203
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphBuilder": {
+          "lines": 592,
+          "methods": 24,
+          "mutableGlobals": 0,
+          "statements": 159
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphCanvas": {
+          "lines": 2811,
+          "methods": 116,
+          "mutableGlobals": 0,
+          "statements": 910
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphEdgeLayer": {
+          "lines": 2523,
+          "methods": 105,
+          "mutableGlobals": 0,
+          "statements": 796
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphHierarchyBuilder": {
+          "lines": 501,
+          "methods": 13,
+          "mutableGlobals": 0,
+          "statements": 138
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphLayout": {
+          "lines": 1874,
+          "methods": 71,
+          "mutableGlobals": 0,
+          "statements": 439
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphMembershipLayer": {
+          "lines": 1199,
+          "methods": 47,
+          "mutableGlobals": 0,
+          "statements": 386
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphOpenProfiler": {
+          "lines": 274,
+          "methods": 13,
+          "mutableGlobals": 1,
+          "statements": 107
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphSpotlightLayer": {
+          "lines": 130,
+          "methods": 5,
+          "mutableGlobals": 4,
+          "statements": 53
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphView": {
+          "lines": 2011,
+          "methods": 109,
+          "mutableGlobals": 0,
+          "statements": 647
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageGraphViewport": {
+          "lines": 794,
+          "methods": 56,
+          "mutableGlobals": 0,
+          "statements": 302
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallService": {
+          "lines": 1822,
+          "methods": 66,
+          "mutableGlobals": 0,
+          "statements": 556
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerActivityService": {
+          "lines": 72,
+          "methods": 2,
+          "mutableGlobals": 3,
+          "statements": 15
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerEditorStatus": {
+          "lines": 73,
+          "methods": 4,
+          "mutableGlobals": 7,
+          "statements": 21
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerStartupUpdateCheck": {
+          "lines": 195,
+          "methods": 9,
+          "mutableGlobals": 4,
+          "statements": 61
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerStateRepository": {
+          "lines": 401,
+          "methods": 47,
+          "mutableGlobals": 0,
+          "statements": 94
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerWindow": {
+          "lines": 8897,
+          "methods": 373,
+          "mutableGlobals": 0,
+          "statements": 2843
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageInstallerWindowReloadState": {
+          "lines": 209,
+          "methods": 15,
+          "mutableGlobals": 1,
+          "statements": 65
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageOperationAutoResumeState": {
+          "lines": 216,
+          "methods": 16,
+          "mutableGlobals": 3,
+          "statements": 58
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageOperationStateRepository": {
+          "lines": 524,
+          "methods": 10,
+          "mutableGlobals": 0,
+          "statements": 153
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageRegistryProvider": {
+          "lines": 600,
+          "methods": 29,
+          "mutableGlobals": 11,
+          "statements": 149
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageRegistryValidator": {
+          "lines": 590,
+          "methods": 11,
+          "mutableGlobals": 0,
+          "statements": 231
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageSampleImportService": {
+          "lines": 939,
+          "methods": 41,
+          "mutableGlobals": 0,
+          "statements": 327
+        },
+        "Deucarian.PackageInstaller.Editor:Deucarian.PackageInstaller.Editor.PackageUpdateCheckService": {
+          "lines": 2829,
+          "methods": 93,
+          "mutableGlobals": 24,
+          "statements": 738
+        }
+      }
+    },
+    "com.deucarian.persistence": {
+      "types": {}
+    },
+    "com.deucarian.pointer-capture": {
+      "types": {
+        "Deucarian.PointerCapture:Deucarian.PointerCapture.DeucarianPointerCapturePointerPosition": {
+          "lines": 25,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 6
+        },
+        "Deucarian.PointerCapture:Deucarian.PointerCapture.DeucarianPointerCaptureProjectSettings": {
+          "lines": 71,
+          "methods": 4,
+          "mutableGlobals": 2,
+          "statements": 15
+        }
+      }
+    },
+    "com.deucarian.progression": {
+      "types": {}
+    },
+    "com.deucarian.projectiles": {
+      "types": {}
+    },
+    "com.deucarian.run-upgrades": {
+      "types": {
+        "Deucarian.RunUpgrades.Editor:Deucarian.RunUpgrades.Editor.RunUpgradeProviderV2View": {
+          "lines": 991,
+          "methods": 53,
+          "mutableGlobals": 0,
+          "statements": 443
+        }
+      }
+    },
+    "com.deucarian.selection-suite": {
+      "types": {}
+    },
+    "com.deucarian.session": {
+      "types": {}
+    },
+    "com.deucarian.session.api-integration": {
+      "types": {}
+    },
+    "com.deucarian.simultria-api": {
+      "types": {}
+    },
+    "com.deucarian.simultria-viewer-integration": {
+      "types": {
+        "Deucarian.SimultriaViewerIntegration.Editor:Deucarian.SimultriaViewerIntegration.Editor.SimultriaViewerDevelopmentAutoLoader": {
+          "lines": 396,
+          "methods": 12,
+          "mutableGlobals": 9,
+          "statements": 136
+        },
+        "Deucarian.SimultriaViewerIntegration.Editor:Deucarian.SimultriaViewerIntegration.Editor.SimultriaViewerDevelopmentWindow": {
+          "lines": 668,
+          "methods": 21,
+          "mutableGlobals": 0,
+          "statements": 174
+        },
+        "Deucarian.SimultriaViewerIntegration.Editor:Deucarian.SimultriaViewerIntegration.Editor.SimultriaViewerEditorAuthenticationHost": {
+          "lines": 422,
+          "methods": 19,
+          "mutableGlobals": 10,
+          "statements": 129
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerConnectionAuthentication": {
+          "lines": 644,
+          "methods": 15,
+          "mutableGlobals": 1,
+          "statements": 113
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerEditorProfileProvider": {
+          "lines": 27,
+          "methods": 2,
+          "mutableGlobals": 1,
+          "statements": 7
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerModelInitializationCoordinator": {
+          "lines": 586,
+          "methods": 13,
+          "mutableGlobals": 0,
+          "statements": 122
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerRuntimeConnectionContext": {
+          "lines": 255,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 49
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerRuntimeConnectionProviderFactory": {
+          "lines": 65,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 9
+        },
+        "Deucarian.SimultriaViewerIntegration:Deucarian.SimultriaViewerIntegration.SimultriaViewerRuntimeEnvironment": {
+          "lines": 90,
+          "methods": 4,
+          "mutableGlobals": 2,
+          "statements": 25
+        }
+      }
+    },
+    "com.deucarian.template.game.idle-auto-defense": {
+      "types": {
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.GameContentPackAuthoringProvider": {
+          "lines": 775,
+          "methods": 25,
+          "mutableGlobals": 0,
+          "statements": 304
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.GameContentPackProviderV2View": {
+          "lines": 1034,
+          "methods": 57,
+          "mutableGlobals": 1,
+          "statements": 474
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.GameContentSetProviderV2View": {
+          "lines": 1520,
+          "methods": 80,
+          "mutableGlobals": 1,
+          "statements": 706
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefenseContentEditSession": {
+          "lines": 635,
+          "methods": 25,
+          "mutableGlobals": 0,
+          "statements": 325
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefenseContentPackIndex": {
+          "lines": 1708,
+          "methods": 53,
+          "mutableGlobals": 0,
+          "statements": 468
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefenseGeneratedSceneOpenQueue": {
+          "lines": 185,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 89
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefensePlayableContentAuditMenu": {
+          "lines": 742,
+          "methods": 43,
+          "mutableGlobals": 0,
+          "statements": 433
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefenseTemplateSetupService": {
+          "lines": 761,
+          "methods": 44,
+          "mutableGlobals": 0,
+          "statements": 281
+        },
+        "Deucarian.TemplateGameIdleAutoDefense.Editor:Deucarian.TemplateGameIdleAutoDefense.Editor.IdleAutoDefenseUnityUndoBridge": {
+          "lines": 92,
+          "methods": 7,
+          "mutableGlobals": 2,
+          "statements": 38
+        },
+        "Deucarian.TemplateGameIdleAutoDefense:Deucarian.TemplateGameIdleAutoDefense.BasicIdleAutoDefenseGame": {
+          "lines": 1253,
+          "methods": 62,
+          "mutableGlobals": 0,
+          "statements": 411
+        },
+        "Deucarian.TemplateGameIdleAutoDefense:Deucarian.TemplateGameIdleAutoDefense.GameContentSetValidator": {
+          "lines": 550,
+          "methods": 26,
+          "mutableGlobals": 0,
+          "statements": 328
+        },
+        "Deucarian.TemplateGameIdleAutoDefense:Deucarian.TemplateGameIdleAutoDefense.IdleAutoDefenseAuthoredCoreValidator": {
+          "lines": 538,
+          "methods": 24,
+          "mutableGlobals": 0,
+          "statements": 347
+        },
+        "Deucarian.TemplateGameIdleAutoDefense:Deucarian.TemplateGameIdleAutoDefense.IdleAutoDefensePlayerExperienceController": {
+          "lines": 1693,
+          "methods": 108,
+          "mutableGlobals": 0,
+          "statements": 1089
+        },
+        "Deucarian.TemplateGameIdleAutoDefense:Deucarian.TemplateGameIdleAutoDefense.IdleAutoDefenseTemplateController": {
+          "lines": 5183,
+          "methods": 264,
+          "mutableGlobals": 0,
+          "statements": 2866
+        }
+      }
+    },
+    "com.deucarian.template.game.movement-fps": {
+      "types": {
+        "Deucarian.TemplateGameMovementFps:Deucarian.TemplateGameMovementFps.Actors.MovementFpsPlayerController": {
+          "lines": 578,
+          "methods": 33,
+          "mutableGlobals": 0,
+          "statements": 211
+        },
+        "Deucarian.TemplateGameMovementFps:Deucarian.TemplateGameMovementFps.Movement.WallrunnerMotor": {
+          "lines": 3507,
+          "methods": 116,
+          "mutableGlobals": 0,
+          "statements": 1214
+        },
+        "Deucarian.TemplateGameMovementFps:Deucarian.TemplateGameMovementFps.MovementFpsTemplateController": {
+          "lines": 907,
+          "methods": 55,
+          "mutableGlobals": 0,
+          "statements": 394
+        }
+      }
+    },
+    "com.deucarian.template.game.survivors": {
+      "types": {
+        "Deucarian.TemplateGameSurvivors.Editor:Deucarian.TemplateGameSurvivors.Editor.SurvivorsAtomicFile": {
+          "lines": 544,
+          "methods": 15,
+          "mutableGlobals": 4,
+          "statements": 195
+        },
+        "Deucarian.TemplateGameSurvivors.Editor:Deucarian.TemplateGameSurvivors.Editor.SurvivorsContentEditSession": {
+          "lines": 931,
+          "methods": 30,
+          "mutableGlobals": 0,
+          "statements": 383
+        },
+        "Deucarian.TemplateGameSurvivors.Editor:Deucarian.TemplateGameSurvivors.Editor.SurvivorsContentPackIndex": {
+          "lines": 1167,
+          "methods": 43,
+          "mutableGlobals": 0,
+          "statements": 463
+        },
+        "Deucarian.TemplateGameSurvivors.Editor:Deucarian.TemplateGameSurvivors.Editor.SurvivorsContentPackPlayLauncher": {
+          "lines": 134,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 64
+        },
+        "Deucarian.TemplateGameSurvivors.Editor:Deucarian.TemplateGameSurvivors.Editor.SurvivorsLosslessJsonPatcher": {
+          "lines": 581,
+          "methods": 17,
+          "mutableGlobals": 0,
+          "statements": 296
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.BasicSurvivorsGame": {
+          "lines": 2309,
+          "methods": 31,
+          "mutableGlobals": 0,
+          "statements": 1134
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsAuthoredContentDefinition": {
+          "lines": 2315,
+          "methods": 66,
+          "mutableGlobals": 0,
+          "statements": 813
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsContentValidator": {
+          "lines": 4458,
+          "methods": 86,
+          "mutableGlobals": 0,
+          "statements": 1510
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsEnemyActor": {
+          "lines": 637,
+          "methods": 27,
+          "mutableGlobals": 0,
+          "statements": 306
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsMetaProgressionService": {
+          "lines": 703,
+          "methods": 32,
+          "mutableGlobals": 0,
+          "statements": 246
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsTemplateController": {
+          "lines": 14534,
+          "methods": 644,
+          "mutableGlobals": 0,
+          "statements": 6326
+        },
+        "Deucarian.TemplateGameSurvivors:Deucarian.TemplateGameSurvivors.SurvivorsUiTheme": {
+          "lines": 588,
+          "methods": 46,
+          "mutableGlobals": 0,
+          "statements": 166
+        }
+      }
+    },
+    "com.deucarian.template.viewer": {
+      "types": {
+        "Deucarian.TemplateViewer:Deucarian.TemplateViewer.ViewerApplication": {
+          "lines": 754,
+          "methods": 28,
+          "mutableGlobals": 0,
+          "statements": 207
+        },
+        "Deucarian.TemplateViewer:Deucarian.TemplateViewer.ViewerBootstrap": {
+          "lines": 897,
+          "methods": 31,
+          "mutableGlobals": 0,
+          "statements": 277
+        }
+      }
+    },
+    "com.deucarian.template.viewer.web": {
+      "types": {
+        "Deucarian.TemplateViewerWeb.Editor:Deucarian.TemplateViewerWeb.Editor.WebViewerProductBuildExecutionScope": {
+          "lines": 33,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 6
+        }
+      }
+    },
+    "com.deucarian.test-automation": {
+      "types": {}
+    },
+    "com.deucarian.theming": {
+      "types": {
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianAudioPaletteLabWindow": {
+          "lines": 574,
+          "methods": 32,
+          "mutableGlobals": 0,
+          "statements": 193
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianDefaultThemeAssetFactory": {
+          "lines": 1919,
+          "methods": 61,
+          "mutableGlobals": 0,
+          "statements": 590
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemeManagerWindow": {
+          "lines": 2575,
+          "methods": 93,
+          "mutableGlobals": 0,
+          "statements": 894
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemeManagerWorkflow": {
+          "lines": 639,
+          "methods": 22,
+          "mutableGlobals": 1,
+          "statements": 224
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemePackAssetFactory": {
+          "lines": 892,
+          "methods": 23,
+          "mutableGlobals": 0,
+          "statements": 315
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemePreviewCoordinator": {
+          "lines": 313,
+          "methods": 22,
+          "mutableGlobals": 10,
+          "statements": 103
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemingInspectorListFilter": {
+          "lines": 539,
+          "methods": 20,
+          "mutableGlobals": 0,
+          "statements": 207
+        },
+        "Deucarian.Theming.Editor:Deucarian.Theming.Editor.DeucarianThemingMenuActions": {
+          "lines": 1780,
+          "methods": 75,
+          "mutableGlobals": 0,
+          "statements": 676
+        },
+        "Deucarian.Theming:Deucarian.Theming.DeucarianThemeAssetChangeBus": {
+          "lines": 117,
+          "methods": 4,
+          "mutableGlobals": 5,
+          "statements": 34
+        },
+        "Deucarian.Theming:Deucarian.Theming.DeucarianThemeProvider": {
+          "lines": 662,
+          "methods": 29,
+          "mutableGlobals": 2,
+          "statements": 216
+        },
+        "Deucarian.Theming:Deucarian.Theming.DeucarianThemeRuntimeResolver": {
+          "lines": 177,
+          "methods": 10,
+          "mutableGlobals": 1,
+          "statements": 52
+        },
+        "Deucarian.Theming:Deucarian.Theming.DeucarianUGUIThemeStyleUtility": {
+          "lines": 130,
+          "methods": 8,
+          "mutableGlobals": 2,
+          "statements": 44
+        },
+        "Deucarian.Theming:Deucarian.Theming.DeucarianViewerReferenceThemePreset": {
+          "lines": 418,
+          "methods": 9,
+          "mutableGlobals": 1,
+          "statements": 58
+        },
+        "Deucarian.Theming:Deucarian.Theming.UIToolkit.DeucarianUIToolkitThemeUtility": {
+          "lines": 250,
+          "methods": 8,
+          "mutableGlobals": 1,
+          "statements": 108
+        }
+      }
+    },
+    "com.deucarian.ui": {
+      "types": {
+        "Deucarian.UI.Editor:Deucarian.UI.Editor.DeucarianUILayeringArchitectureValidator": {
+          "lines": 557,
+          "methods": 18,
+          "mutableGlobals": 0,
+          "statements": 145
+        },
+        "Deucarian.UI:Deucarian.UI.DeucarianGlassPanelStyle": {
+          "lines": 227,
+          "methods": 13,
+          "mutableGlobals": 1,
+          "statements": 55
+        },
+        "Deucarian.UI:Deucarian.UI.DeucarianMorphingMenu": {
+          "lines": 1014,
+          "methods": 53,
+          "mutableGlobals": 0,
+          "statements": 398
+        },
+        "Deucarian.UI:Deucarian.UI.DeucarianRuntimeTooltipPresenter": {
+          "lines": 690,
+          "methods": 38,
+          "mutableGlobals": 0,
+          "statements": 224
+        },
+        "Deucarian.UI:Deucarian.UI.DeucarianUIOverlayHost": {
+          "lines": 257,
+          "methods": 5,
+          "mutableGlobals": 1,
+          "statements": 44
+        }
+      }
+    },
+    "com.deucarian.ui-binding": {
+      "types": {}
+    },
+    "com.deucarian.ui-binding.core-state-integration": {
+      "types": {}
+    },
+    "com.deucarian.ui-flow": {
+      "types": {
+        "Deucarian.UIFlow:Deucarian.UIFlow.UIFlowDiagnosticRegistry": {
+          "lines": 44,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 11
+        },
+        "Deucarian.UIFlow:Deucarian.UIFlow.UIFlowHost": {
+          "lines": 972,
+          "methods": 38,
+          "mutableGlobals": 0,
+          "statements": 282
+        },
+        "Deucarian.UIFlow:Deucarian.UIFlow.UIFlowNavigator": {
+          "lines": 927,
+          "methods": 31,
+          "mutableGlobals": 0,
+          "statements": 363
+        }
+      }
+    },
+    "com.deucarian.viewer-navigation": {
+      "types": {
+        "Deucarian.ViewerNavigation:Deucarian.ViewerNavigation.UI.ViewerNavigationMovementKeyGuard": {
+          "lines": 331,
+          "methods": 12,
+          "mutableGlobals": 2,
+          "statements": 53
+        },
+        "Deucarian.ViewerNavigation:Deucarian.ViewerNavigation.UI.ViewerNavigationToolbarPresenter": {
+          "lines": 592,
+          "methods": 34,
+          "mutableGlobals": 0,
+          "statements": 205
+        },
+        "Deucarian.ViewerNavigation:Deucarian.ViewerNavigation.ViewerNavigationController": {
+          "lines": 854,
+          "methods": 45,
+          "mutableGlobals": 0,
+          "statements": 239
+        }
+      }
+    },
+    "com.deucarian.viewer-rendering": {
+      "types": {
+        "Deucarian.ViewerRendering:Deucarian.ViewerRendering.ViewerRenderingController": {
+          "lines": 651,
+          "methods": 29,
+          "mutableGlobals": 0,
+          "statements": 197
+        }
+      }
+    },
+    "com.deucarian.viewer-shell": {
+      "types": {
+        "Deucarian.ViewerShell:Deucarian.ViewerShell.ViewerShellPresenter": {
+          "lines": 553,
+          "methods": 34,
+          "mutableGlobals": 0,
+          "statements": 172
+        }
+      }
+    },
+    "com.deucarian.weapon-systems": {
+      "types": {
+        "Deucarian.WeaponSystems.Editor:Deucarian.WeaponSystems.Editor.WeaponProviderV2View": {
+          "lines": 752,
+          "methods": 40,
+          "mutableGlobals": 0,
+          "statements": 319
+        }
+      }
+    },
+    "com.deucarian.web-viewer-suite": {
+      "types": {}
+    },
+    "com.deucarian.webgl-template": {
+      "types": {}
+    },
+    "com.deucarian.world-navigation": {
+      "types": {}
+    },
+    "com.deucarian.world-spawning": {
+      "types": {}
+    },
+    "com.deucarian.xr-ui": {
+      "types": {
+        "Deucarian.XRUI:Deucarian.XRUI.ButtonFocusScopeRegistry": {
+          "lines": 99,
+          "methods": 7,
+          "mutableGlobals": 2,
+          "statements": 30
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomButtonSettings": {
+          "lines": 404,
+          "methods": 19,
+          "mutableGlobals": 4,
+          "statements": 110
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressActivationGate": {
+          "lines": 179,
+          "methods": 11,
+          "mutableGlobals": 1,
+          "statements": 72
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSelectableUtility": {
+          "lines": 115,
+          "methods": 4,
+          "mutableGlobals": 2,
+          "statements": 46
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSocketVisual": {
+          "lines": 504,
+          "methods": 28,
+          "mutableGlobals": 0,
+          "statements": 220
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSurface": {
+          "lines": 816,
+          "methods": 34,
+          "mutableGlobals": 0,
+          "statements": 211
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSurface.CustomPressablePointerContactRegistry": {
+          "lines": 48,
+          "methods": 3,
+          "mutableGlobals": 1,
+          "statements": 11
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSurface.CustomPressablePokeContactRegistry": {
+          "lines": 118,
+          "methods": 6,
+          "mutableGlobals": 1,
+          "statements": 31
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomPressableSurfaceHierarchy": {
+          "lines": 1299,
+          "methods": 52,
+          "mutableGlobals": 0,
+          "statements": 553
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomSelectableFeedback": {
+          "lines": 913,
+          "methods": 64,
+          "mutableGlobals": 0,
+          "statements": 304
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomSelectableFeedbackInstaller": {
+          "lines": 254,
+          "methods": 14,
+          "mutableGlobals": 1,
+          "statements": 83
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Controls.CustomSelectableTransientOwners": {
+          "lines": 45,
+          "methods": 2,
+          "mutableGlobals": 2,
+          "statements": 17
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.Dropdowns.DropdownInteractionCoordinator": {
+          "lines": 158,
+          "methods": 11,
+          "mutableGlobals": 2,
+          "statements": 51
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.WorldCanvasEventCameraAssigner": {
+          "lines": 179,
+          "methods": 13,
+          "mutableGlobals": 2,
+          "statements": 67
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XR.XrUiPokeAffordanceInstaller": {
+          "lines": 173,
+          "methods": 12,
+          "mutableGlobals": 1,
+          "statements": 68
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XrUiColorPalette": {
+          "lines": 448,
+          "methods": 21,
+          "mutableGlobals": 1,
+          "statements": 140
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XrUiColorPaletteRegistry": {
+          "lines": 59,
+          "methods": 2,
+          "mutableGlobals": 3,
+          "statements": 18
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XrUiControlExclusionRegistry": {
+          "lines": 95,
+          "methods": 7,
+          "mutableGlobals": 2,
+          "statements": 30
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XrUiRuntimeServices": {
+          "lines": 103,
+          "methods": 8,
+          "mutableGlobals": 6,
+          "statements": 33
+        },
+        "Deucarian.XRUI:Deucarian.XRUI.XrUiRuntimeSettings": {
+          "lines": 49,
+          "methods": 3,
+          "mutableGlobals": 3,
+          "statements": 12
+        }
+      }
+    },
+    "com.deucarian.xr-ui.theming-integration": {
+      "types": {}
+    }
+  },
+  "policy": {
+    "lines": 500,
+    "methods": 40,
+    "mutableGlobals": 0,
+    "statements": 300
+  },
+  "schemaVersion": 1
+}
