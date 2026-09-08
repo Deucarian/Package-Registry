@@ -78,6 +78,7 @@ Schema version: 2
 | com.deucarian.notifications | com.deucarian.diagnostics | 0.1.6 | Notifications | Diagnostics |
 | com.deucarian.notifications | com.deucarian.editor | 1.2.0 | Notifications | Editor |
 | com.deucarian.notifications | com.deucarian.theming | 1.2.0 | Notifications | Theming |
+| com.deucarian.notifications | com.deucarian.ui | 0.2.7 | Notifications | UI |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
 | com.deucarian.object-loading.api-integration | com.deucarian.api | 1.2.0 | ObjectLoading-API-Integration | API |
@@ -253,4 +254,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 44
-- Registry dependency drift entries: 1
+- Registry dependency drift entries: 0
