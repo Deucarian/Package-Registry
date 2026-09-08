@@ -58,6 +58,17 @@ jobs:
             --repository-root "package/${{ inputs.package-root }}" \
             --config "package/${{ inputs.package-root }}/${{ inputs.package-config }}"
 
+      - name: Install syntax parser for architecture review triggers
+        run: python -m pip install -r package-registry/Tools/audit-requirements.txt
+
+      - name: Block unreviewed architecture debt growth
+        shell: bash
+        run: |
+          python package-registry/Tools/deucarian_architecture_metrics.py \
+            --repository-root "package/${{ inputs.package-root }}" \
+            --baseline package-registry/architecture-metrics-baseline.json \
+            --output "$RUNNER_TEMP/deucarian-architecture-metrics.json"
+
       - name: Audit Deucarian menu policy
         shell: bash
         run: |

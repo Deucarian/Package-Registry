@@ -403,9 +403,17 @@ class Validator:
     def validate_asmdef_dependencies(self, package_id: str, dependencies: dict[str, str], config: dict[str, Any], asmdefs: list[dict[str, Any]]) -> None:
         declared_deps = set(dependencies.keys())
         optional_deps = set(config.get("optionalVersionDefinedDependencies") or [])
+        editor_names = {asm.get("name") for asm in asmdefs if asm.get("scope") == "editor"}
+        for repository in self.duplication_report.get("repositories", []):
+            editor_names.update(
+                asm.get("name") for asm in repository.get("asmdefs", [])
+                if set(asm.get("includePlatforms") or []) == {"Editor"}
+                or asm.get("scope") == "Editor production")
         for asmdef in asmdefs:
             for reference in asmdef.get("references") or []:
                 clean = reference.replace("GUID:", "")
+                if asmdef["scope"] == "runtime" and clean in editor_names:
+                    self.fail(f"{package_id}: runtime assembly {asmdef.get('name')} must not reference editor-only assembly {clean}.")
                 owner = self.assembly_to_package.get(clean)
                 if not owner or owner == package_id:
                     continue

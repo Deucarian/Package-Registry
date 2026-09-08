@@ -202,6 +202,23 @@ class ValidatorFixture:
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_runtime_cannot_reference_a_local_or_catalog_editor_assembly(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        validator.duplication_report = {"repositories": [{
+            "asmdefs": [{"name": "Other.Editor", "includePlatforms": ["Editor"]}]
+        }]}
+        assemblies = [
+            {"name": "Local.Runtime", "path": "Runtime/Main.asmdef", "scope": "runtime",
+             "references": ["Local.Editor", "Other.Editor"]},
+            {"name": "Local.Editor", "path": "Editor/Main.asmdef", "scope": "editor",
+             "references": ["Local.Runtime"]},
+        ]
+        validator.validate_asmdef_dependencies("com.deucarian.fixture", {}, {}, assemblies)
+        errors = [error for error in validator.errors if "editor-only" in error]
+        self.assertEqual(2, len(errors))
+        self.assertTrue(all("Local.Runtime" in error for error in errors))
+
     def test_runtime_asmdef_may_include_editor_and_player_platform(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)
