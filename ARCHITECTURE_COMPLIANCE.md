@@ -56,7 +56,7 @@ once.
 | Media | com.deucarian.media | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | SetupRequired | No | Yes | 1 | 1 | 0 | 0 |
-| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 14 | 2 | 0 | 0 |
+| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 27 | 2 | 0 | 0 |
 | Object-Loading | com.deucarian.object-loading | SetupRequired | No | Yes | 21 | 2 | 1 | 0 |
 | Object-Selection | com.deucarian.object-selection | SetupRequired | No | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | SetupRequired | No | Yes | 5 | 1 | 0 | 0 |
@@ -79,7 +79,7 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 37 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 17 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 98 | 2 | 6 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 99 | 2 | 6 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 36 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 12 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | SetupRequired | No | Yes | 46 | 2 | 2 | 0 |

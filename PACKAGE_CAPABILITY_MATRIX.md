@@ -38,8 +38,8 @@ Schema version: 2
 | simultria-viewer-integration | com.deucarian.simultria-viewer-integration | Simultria-Viewer-Connection | (none) |
 | ui-binding | com.deucarian.ui-binding | UI-Binding | com.deucarian.selection-suite, com.deucarian.ui-binding.core-state-integration |
 | ui-flow | com.deucarian.ui-flow | UI-FLow | (none) |
-| ui-motion | com.deucarian.ui | UI | com.deucarian.template.viewer, com.deucarian.viewer-navigation, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
-| ui-presentation-primitives | com.deucarian.ui | UI | com.deucarian.template.viewer, com.deucarian.viewer-navigation, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
+| ui-motion | com.deucarian.ui | UI | com.deucarian.notifications, com.deucarian.template.viewer, com.deucarian.viewer-navigation, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
+| ui-presentation-primitives | com.deucarian.ui | UI | com.deucarian.notifications, com.deucarian.template.viewer, com.deucarian.viewer-navigation, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |
 | unity-object-lifetime | com.deucarian.common | Common | com.deucarian.camera-navigation, com.deucarian.game-content-authoring, com.deucarian.media, com.deucarian.object-loading, com.deucarian.template.game.idle-auto-defense, com.deucarian.template.game.movement-fps, com.deucarian.template.game.survivors, com.deucarian.template.viewer, com.deucarian.ui, com.deucarian.ui-binding, com.deucarian.ui-flow, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.world-spawning, com.deucarian.xr-ui |
 | viewer-navigation-experience | com.deucarian.viewer-navigation | Viewer-Navigation | com.deucarian.template.viewer, com.deucarian.web-viewer-suite |
 | viewer-rendering-environment | com.deucarian.viewer-rendering | Viewer-Rendering | com.deucarian.template.viewer, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite |

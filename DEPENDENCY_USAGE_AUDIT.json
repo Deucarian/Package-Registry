@@ -3217,6 +3217,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Notifications.Tests.asmdef",
+          "assembly": "Deucarian.Notifications.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Notifications",
@@ -3229,9 +3243,38 @@
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
-        "Deucarian.Theming"
+        "Deucarian.Theming",
+        "Deucarian.Theming.Editor"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Notifications.Editor.asmdef",
+          "assembly": "Deucarian.Notifications.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Editor/Deucarian.Notifications.Editor.asmdef",
+          "assembly": "Deucarian.Notifications.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Theming/Deucarian.Notifications.Theming.asmdef",
           "assembly": "Deucarian.Notifications.Theming",
@@ -3241,6 +3284,84 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Theming",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Notifications.Unity.asmdef",
+          "assembly": "Deucarian.Notifications.Unity",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.Notifications.PlayModeTests.asmdef",
+          "assembly": "Deucarian.Notifications.PlayModeTests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Notifications.Tests.asmdef",
+          "assembly": "Deucarian.Notifications.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Notifications.Tests.asmdef",
+          "assembly": "Deucarian.Notifications.Tests",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming.Editor",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Notifications",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.7",
+      "dependency": "com.deucarian.ui",
+      "packageId": "com.deucarian.notifications",
+      "referencedAssemblies": [
+        "Deucarian.UI"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Notifications.Unity.asmdef",
+          "assembly": "Deucarian.Notifications.Unity",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.UI",
           "scope": "Runtime production",
           "versionDefines": []
         }
@@ -11497,7 +11618,7 @@
   "summary": {
     "EditorOnlyUse": 40,
     "OptionalVersionDefinedUse": 2,
-    "RequiredAndUsed": 159,
+    "RequiredAndUsed": 160,
     "SuiteComposition": 39,
     "TestOnlyUse": 13
   }

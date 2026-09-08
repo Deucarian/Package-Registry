@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 727 |
+| direct Unity API call | 741 |
 | helper call site | 69 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 797 |
+| Allowed | 811 |
 
 ## Production Semantic Comparison
 
@@ -189,7 +189,21 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Media | Tests/Editor/UnityVideoPlaybackSessionTests.cs | 35 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Media | Tests/Editor/UnityVideoPlaybackSessionTests.cs | 49 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Editor/DeucarianNotificationPrefabFactory.cs | 77 | Editor production | direct Unity API call | Object.DestroyImmediate | Allowed | The editor-only factory owns a temporary unsaved prefab source object and destroys it immediately after PrefabUtility serializes the package asset; no runtime object lifetime is bypassed. |
-| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 66 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationLabRuntimeTests.cs | 244 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationLabRuntimeTests.cs | 273 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationLabRuntimeTests.cs | 327 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationLabRuntimeTests.cs | 328 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationLabTests.cs | 41 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/Editor/NotificationPrefabLayoutTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 71 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 125 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 49 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 87 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 137 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 137 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Object-Loading | Runtime/Core/ObjectLoadHandle.cs | 71 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Object-Selection | Tests/EditMode/HighlighterHookTests.cs | 31 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Object-Selection | Tests/EditMode/ObjectHoverServiceTests.cs | 40 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -265,17 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4209 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4231 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4253 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4312 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6404 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6406 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6409 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6410 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6412 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6413 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6414 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6415 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6416 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 6480 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/Presentation/IdleAutoDefenseKenneyPresentationEffects.cs | 20 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/Presentation/IdleAutoDefenseKenneyPresentationEffects.cs | 77 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Tests/EditMode/IdleAutoDefenseAuthoredCoreEditModeTests.cs | 586 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |

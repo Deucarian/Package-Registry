@@ -43,12 +43,12 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Media | com.deucarian.media | 0.1.0 | 2021.3 | no | clean | com.deucarian.common, com.unity.modules.audio, com.unity.modules.unitywebrequest, com.unity.modules.unitywebrequestaudio, com.unity.modules.video | 4 | 103 |
 | Media-API-Integration | com.deucarian.media.api-integration | 0.1.0 | 2021.3 | no | clean | com.deucarian.api, com.deucarian.media | 3 | 13 |
 | Monetization | com.deucarian.monetization | 0.1.1 | 6000.3 | no | clean | (none) | 3 | 76 |
-| Notifications | com.deucarian.notifications | 0.1.0 | 2022.3 | no | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.theming, com.unity.textmeshpro, com.unity.ugui | 7 | 114 |
+| Notifications | com.deucarian.notifications | 0.1.0 | 2022.3 | no | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.theming, com.deucarian.ui, com.unity.textmeshpro, com.unity.ugui | 7 | 153 |
 | Object-Loading | com.deucarian.object-loading | 1.2.2 | 2021.3 | no | clean | com.deucarian.common, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 5 | 246 |
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | no | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.9 | 2021.3 | no | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 48 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | no | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.1.97 | 2021.3 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
+| Package-Installer | com.deucarian.package-installer | 1.1.98 | 2021.3 | no | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
 | Package-Registry | (none) | (none) | (none) | no | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.1 | 2021.3 | no | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.4 | 2022.3 | no | clean | com.deucarian.editor | 5 | 57 |
@@ -66,7 +66,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Template-Viewer | com.deucarian.template.viewer | 0.3.1 | 6000.0 | no | clean | com.deucarian.api, com.deucarian.camera-navigation, com.deucarian.command-routing, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.object-loading, com.deucarian.object-loading.api-integration, com.deucarian.session, com.deucarian.session.api-integration, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.authentication, com.unity.nuget.newtonsoft-json, com.unity.modules.uielements | 4 | 213 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | 0.6.0 | 6000.0 | no | clean | com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.webgl-integration, com.deucarian.diagnostics, com.deucarian.template.viewer, com.deucarian.theming, com.deucarian.authentication, com.deucarian.webgl-template, com.unity.textmeshpro, com.unity.nuget.newtonsoft-json | 5 | 47 |
 | Test-Automation | com.deucarian.test-automation | 0.1.1 | 6000.3 | no | clean | com.deucarian.editor | 2 | 0 |
-| Theming | com.deucarian.theming | 1.2.0 | 2022.3 | no | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 7 | 861 |
+| Theming | com.deucarian.theming | 1.2.0 | 2022.3 | no | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 7 | 880 |
 | UI | com.deucarian.ui | 0.2.7 | 2022.3 | no | clean | com.deucarian.common, com.deucarian.theming, com.unity.ugui, com.unity.modules.uielements | 4 | 508 |
 | UI-Binding | com.deucarian.ui-binding | 1.1.1 | 2021.3 | no | clean | com.deucarian.common, com.unity.ugui | 3 | 75 |
 | UI-FLow | com.deucarian.ui-flow | 0.4.1 | 2021.3 | no | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 6 | 341 |
@@ -88,20 +88,20 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `main`.
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 16934 |
+| Parsed methods/bodies analyzed | 17058 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 136 |
 | Same-symbol semantic candidates | 34 |
-| Runtime public API symbols | 9855 |
-| Editor public API symbols | 2593 |
-| Test public symbols excluded from production API | 5169 |
-| Sample public symbols excluded from production API | 309 |
-| Internal/private production symbols | 12779 |
-| Public API symbols missing XML documentation | 10180 |
+| Runtime public API symbols | 9900 |
+| Editor public API symbols | 2606 |
+| Test public symbols excluded from production API | 5220 |
+| Sample public symbols excluded from production API | 310 |
+| Internal/private production symbols | 12885 |
+| Public API symbols missing XML documentation | 10227 |
 | Debug invocation records | 25 |
-| Unity object lifetime records | 797 |
+| Unity object lifetime records | 811 |
 | Documentation drift findings | 42 |
-| Dependency usage findings | 253 |
+| Dependency usage findings | 254 |
 | Dependency cycles | 0 |
 
 ## Extraction Position
