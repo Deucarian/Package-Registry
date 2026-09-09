@@ -184,9 +184,9 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+      "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 11377,
+      "lineCount": 2513,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -196,9 +196,21 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
+      "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 2513,
+      "lineCount": 1735,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1649,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -235,6 +247,18 @@
       "file": "Editor/Models/PackageEcosystemGraph.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 838,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 769,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -286,18 +310,6 @@
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.RunUpgrades.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/RunUpgradeProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1166,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.run-upgrades",
-      "repository": "Run-Upgrades",
       "scope": "Editor production"
     },
     {
@@ -486,42 +498,6 @@
       "lineLimit": 500,
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "repository": "Template-Game-Idle-Auto-Defense",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameMovementFps",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Movement/WallrunnerMotor.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 3536,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.movement-fps",
-      "repository": "Template-Game-Movement-FPS",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameMovementFps",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Bootstrap/MovementFpsTemplateController.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 922,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.movement-fps",
-      "repository": "Template-Game-Movement-FPS",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameMovementFps",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/Actors/MovementFpsPlayerController.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 587,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.movement-fps",
-      "repository": "Template-Game-Movement-FPS",
       "scope": "Runtime production"
     },
     {
@@ -783,18 +759,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.viewer-navigation",
       "repository": "Viewer-Navigation"
-    },
-    {
-      "assembly": "Deucarian.WeaponSystems.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/WeaponProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 878,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.weapon-systems",
-      "repository": "Weapon-Systems",
-      "scope": "Editor production"
     },
     {
       "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
@@ -1540,12 +1504,24 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
-          "lineCount": 11377,
+          "lineCount": 1649,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
+          "lineCount": 1735,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+          "lineCount": 769,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 105,
+      "productionFileCount": 165,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -1651,12 +1627,6 @@
           "scope": "Editor production"
         },
         {
-          "assembly": "Deucarian.RunUpgrades.Editor",
-          "file": "Editor/RunUpgradeProviderV2.cs",
-          "lineCount": 1166,
-          "scope": "Editor production"
-        },
-        {
           "assembly": "Deucarian.RunUpgrades",
           "file": "Runtime/RunUpgradesCore.cs",
           "lineCount": 539,
@@ -1664,7 +1634,7 @@
         }
       ],
       "packageId": "com.deucarian.run-upgrades",
-      "productionFileCount": 9,
+      "productionFileCount": 20,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Run-Upgrades",
       "sharedValidationPresent": true,
@@ -1859,32 +1829,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.TemplateGameMovementFps",
-          "file": "Runtime/Actors/MovementFpsPlayerController.cs",
-          "lineCount": 587,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameMovementFps",
-          "file": "Runtime/Bootstrap/MovementFpsTemplateController.cs",
-          "lineCount": 922,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameMovementFps",
-          "file": "Runtime/Movement/WallrunnerMotor.cs",
-          "lineCount": 3536,
-          "scope": "Runtime production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.game.movement-fps",
-      "productionFileCount": 21,
+      "productionFileCount": 62,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Movement-FPS",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.TemplateGameMovementFps.PlayModeTests",
         "Deucarian.TemplateGameMovementFps.Tests"
@@ -2244,20 +2195,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.WeaponSystems.Editor",
-          "file": "Editor/WeaponProviderV2.cs",
-          "lineCount": 878,
-          "scope": "Editor production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.weapon-systems",
-      "productionFileCount": 9,
+      "productionFileCount": 19,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Weapon-Systems",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.WeaponSystems.Tests"
       ]
@@ -2404,14 +2348,14 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 41,
+    "compliantRepositoryCount": 43,
     "findingsByDisposition": {
-      "RefactorBacklog": 66,
+      "RefactorBacklog": 63,
       "SetupRequired": 9
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 66
+      "ProductionFileExceedsLineLimit": 63
     },
     "repositoryCount": 65
   }

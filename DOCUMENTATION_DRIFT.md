@@ -9,7 +9,7 @@ Schema version: 1
 | Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 10 |
-| Review required | 14 |
+| Review required | 15 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -46,6 +46,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Simultria-API | Review required | Documentation~/index.md |  |  |  |
 | Simultria-Viewer-Connection | Migration documentation | README.md |  |  |  |
+| Template-Game-Movement-FPS | Review required | Documentation~/gameplay-composition.md |  |  |  |
 | Template-Game-Survivors | Migration documentation | Documentation~/validation.md |  |  |  |
 | Template-Game-Survivors | Review required | Documentation~/game-content-authoring.md |  |  |  |
 | Template-Viewer-Web | Historical changelog reference | CHANGELOG.md |  |  |  |

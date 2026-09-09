@@ -51,7 +51,7 @@
     },
     {
       "file": "Editor/PackageInstallerWindow.Part01.cs",
-      "line": 116,
+      "line": 104,
       "packageId": "com.deucarian.package-installer",
       "path": "Tools/Deucarian/Package Installer...",
       "repository": "Package-Installer",

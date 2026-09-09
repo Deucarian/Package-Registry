@@ -15,7 +15,7 @@
 | `Tools/Deucarian/Build Manager...` | `com.deucarian.build-pipeline` | Build-Pipeline | `Editor/DeucarianBuildManagerWindow.Part01.cs:16` |
 | `Tools/Deucarian/Control Center...` | `com.deucarian.editor` | Editor | `Editor/DeucarianControlCenterWindow.cs:35` |
 | `Tools/Deucarian/Diagnostics...` | `com.deucarian.diagnostics` | Diagnostics | `Editor/DiagnosticsMenu.cs:9` |
-| `Tools/Deucarian/Package Installer...` | `com.deucarian.package-installer` | Package-Installer | `Editor/PackageInstallerWindow.Part01.cs:116` |
+| `Tools/Deucarian/Package Installer...` | `com.deucarian.package-installer` | Package-Installer | `Editor/PackageInstallerWindow.Part01.cs:104` |
 | `Tools/Deucarian/Set Up or Repair...` | `com.deucarian.bootstrap` | Bootstrap | `Editor/DeucarianBootstrapWindow.cs:26` |
 
 ## Findings
