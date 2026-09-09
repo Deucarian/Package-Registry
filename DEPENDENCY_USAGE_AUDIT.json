@@ -6630,6 +6630,22 @@
           "reference": "Deucarian.WorldNavigation",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.TemplateGameIdleAutoDefense.Tests.asmdef",
+          "assembly": "Deucarian.TemplateGameIdleAutoDefense.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldNavigation",
+          "scope": "Test",
+          "versionDefines": []
         }
       ],
       "repository": "Template-Game-Idle-Auto-Defense",

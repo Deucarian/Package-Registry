@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 63 |
+| RefactorBacklog | 56 |
 | SetupRequired | 9 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 9 |
-| ProductionFileExceedsLineLimit | 63 |
+| ProductionFileExceedsLineLimit | 56 |
 
 ## Repository Status
 
@@ -31,7 +31,7 @@ once.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
 | API | com.deucarian.api | Compliant | Yes | Yes | 71 | 1 | 0 | 0 |
-| Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 31 | 1 | 5 | 0 |
+| Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 64 | 1 | 2 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 36 | 1 | 0 | 0 |
@@ -72,9 +72,9 @@ once.
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 38 | 1 | 0 | 0 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | Compliant | Yes | Yes | 50 | 1 | 0 | 0 |
-| Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 53 | 2 | 13 | 0 |
+| Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 138 | 2 | 10 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | Compliant | Yes | Yes | 62 | 2 | 0 | 0 |
-| Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 24 | 2 | 13 | 0 |
+| Template-Game-Survivors | com.deucarian.template.game.survivors | RefactorBacklog | Yes | Yes | 223 | 2 | 12 | 0 |
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 37 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 17 | 2 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
@@ -100,10 +100,7 @@ once.
 | Repository | Kind | Disposition | File | Lines | Limit | Action |
 | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackProviderV2.cs | 1434 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1342 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/EnemyProviderV2.cs | 1175 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/WaveProviderV2.cs | 1104 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentPreview.cs | 1101 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs | 594 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -129,20 +126,16 @@ once.
 | Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/RunUpgradeGameContentAuthoringProvider.cs | 575 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/RunUpgradesCore.cs | 539 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-API | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseTemplate.cs | 6878 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentPackIndex.cs | 1758 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentSetProviderV2.cs | 1682 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentEditingMappings.cs | 1208 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackProviderV2.cs | 1207 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefensePlayerExperienceController.Ui.cs | 1081 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentEditSession.cs | 739 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentEditingBackend.cs | 701 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/GameContentSetValidation.cs | 677 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentSetGameContentAuthoringProvider.cs | 648 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefensePlayerExperienceController.cs | 640 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseAuthoredCoreValidation.cs | 547 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/IdleAutoDefenseRewardDraftCatalog.cs | 539 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsTemplateController.cs | 15821 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsContentValidation.cs | 4485 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/BasicSurvivorsGame.cs | 2707 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Template-Game-Survivors | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/SurvivorsAuthoredContent.cs | 2464 | 500 | Extract responsibilities until the production file is at most 500 lines. |
