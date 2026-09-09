@@ -2111,7 +2111,7 @@
       "containingSymbol": "DeucarianEditorWindowPages::Release",
       "file": "Editor/DeucarianEditorWindowPages.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 51,
+      "line": 60,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.editor",
       "policyDisposition": "Allowed",
