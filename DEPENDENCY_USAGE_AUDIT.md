@@ -7,8 +7,7 @@ Schema version: 1
 | Metric | Count |
 | --- | --- |
 | Editor-only use | 41 |
-| Missing hard package dependency | 1 |
-| Optional version-defined use | 3 |
+| Optional version-defined use | 4 |
 | Required and used | 161 |
 | Suite composition | 39 |
 | Test-only use | 13 |
@@ -191,7 +190,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer | com.deucarian.viewer-navigation | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerNavigation; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
 | Template-Viewer | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewer.Tests.Support -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Template-Viewer | com.deucarian.viewer-shell | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewer.Tests.Support -> Deucarian.ViewerShell | Deucarian.ViewerShell | 0 |
-| Template-Viewer-Web | com.deucarian.api | Missing hard package dependency | Runtime production: Deucarian.TemplateViewerWeb.SimultriaIntegration -> Deucarian.API; Test: Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests -> Deucarian.API | Deucarian.API |  |
+| Template-Viewer-Web | com.deucarian.api | Optional version-defined use | Runtime production: Deucarian.TemplateViewerWeb.SimultriaIntegration -> Deucarian.API [versionDefine com.deucarian.api => DEUCARIAN_SIMULTRIA_STARTUP_API]; Test: Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests -> Deucarian.API [versionDefine com.deucarian.api => DEUCARIAN_SIMULTRIA_STARTUP_API] | Deucarian.API |  |
 | Template-Viewer-Web | com.deucarian.simultria-viewer-integration | Optional version-defined use | Runtime production: Deucarian.TemplateViewerWeb.SimultriaIntegration -> Deucarian.SimultriaViewerIntegration [versionDefine com.deucarian.simultria-viewer-integration => DEUCARIAN_SIMULTRIA_STARTUP_STATUS]; Test: Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests -> Deucarian.SimultriaViewerIntegration [versionDefine com.deucarian.simultria-viewer-integration => DEUCARIAN_SIMULTRIA_STARTUP_STATUS]; Test: Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode -> Deucarian.SimultriaViewerIntegration [versionDefine com.deucarian.simultria-viewer-integration => DEUCARIAN_SIMULTRIA_STARTUP_STATUS] | Deucarian.SimultriaViewerIntegration |  |
 | Template-Viewer-Web | com.deucarian.authentication | Editor-only use | Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.Authentication; Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.Authentication.ViewerIntegration; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Authentication; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.Authentication.ViewerIntegration | Deucarian.Authentication, Deucarian.Authentication.ViewerIntegration | 0 |
 | Template-Viewer-Web | com.deucarian.build-pipeline | Editor-only use | Editor production: Deucarian.TemplateViewerWeb.Editor -> Deucarian.BuildPipeline.Editor; Test: Deucarian.TemplateViewerWeb.Tests.EditMode -> Deucarian.BuildPipeline.Editor | Deucarian.BuildPipeline.Editor | 0 |

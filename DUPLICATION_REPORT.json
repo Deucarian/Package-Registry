@@ -1821,7 +1821,7 @@
         },
         "oversizedProductionFiles": [],
         "packageId": "com.deucarian.template.viewer",
-        "productionFileCount": 38,
+        "productionFileCount": 39,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Template-Viewer",
         "sharedValidationPresent": true,
@@ -13172,7 +13172,7 @@
       },
       {
         "assemblyReference": "Deucarian.API",
-        "classification": "MissingHardPackageDependency",
+        "classification": "OptionalVersionDefinedUse",
         "packageId": "com.deucarian.template.viewer.web",
         "referencedAssemblies": [
           "Deucarian.API"
@@ -13183,10 +13183,15 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
             "autoReferenced": true,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
             ],
-            "guardEvidence": null,
-            "guardKind": "",
+            "guardEvidence": {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            "guardKind": "VersionDefine",
             "includePlatforms": [
               "Editor",
               "WebGL"
@@ -13194,6 +13199,11 @@
             "reference": "Deucarian.API",
             "scope": "Runtime production",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -13206,17 +13216,27 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "UNITY_INCLUDE_TESTS"
             ],
-            "guardEvidence": null,
-            "guardKind": "",
+            "guardEvidence": {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            "guardKind": "VersionDefine",
             "includePlatforms": [
               "Editor"
             ],
             "reference": "Deucarian.API",
             "scope": "Test",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -13241,6 +13261,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
             "autoReferenced": true,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
             ],
             "guardEvidence": {
@@ -13257,6 +13278,11 @@
             "scope": "Runtime production",
             "versionDefines": [
               {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
+              {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
                 "name": "com.deucarian.simultria-viewer-integration"
@@ -13268,6 +13294,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "UNITY_INCLUDE_TESTS"
             ],
@@ -13284,6 +13311,11 @@
             "scope": "Test",
             "versionDefines": [
               {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
+              {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
                 "name": "com.deucarian.simultria-viewer-integration"
@@ -13295,6 +13327,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "UNITY_INCLUDE_TESTS"
             ],
@@ -13311,6 +13344,11 @@
             "reference": "Deucarian.SimultriaViewerIntegration",
             "scope": "Test",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -13648,6 +13686,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
             "autoReferenced": true,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
             ],
             "guardEvidence": null,
@@ -13659,6 +13698,11 @@
             "reference": "Deucarian.TemplateViewer",
             "scope": "Runtime production",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -13686,6 +13730,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "UNITY_INCLUDE_TESTS"
             ],
@@ -13698,6 +13743,11 @@
             "scope": "Test",
             "versionDefines": [
               {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
+              {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
                 "name": "com.deucarian.simultria-viewer-integration"
@@ -13709,6 +13759,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
             "autoReferenced": false,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "UNITY_INCLUDE_TESTS"
             ],
@@ -13721,6 +13772,11 @@
             "reference": "Deucarian.TemplateViewer",
             "scope": "Test",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -13851,6 +13907,7 @@
             "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
             "autoReferenced": true,
             "defineConstraints": [
+              "DEUCARIAN_SIMULTRIA_STARTUP_API",
               "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
             ],
             "guardEvidence": null,
@@ -13862,6 +13919,11 @@
             "reference": "Deucarian.WebGLTemplate",
             "scope": "Runtime production",
             "versionDefines": [
+              {
+                "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+                "expression": "2.0.2",
+                "name": "com.deucarian.api"
+              },
               {
                 "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
                 "expression": "1.2.1",
@@ -16787,8 +16849,7 @@
     ],
     "summary": {
       "EditorOnlyUse": 41,
-      "MissingHardPackageDependency": 1,
-      "OptionalVersionDefinedUse": 3,
+      "OptionalVersionDefinedUse": 4,
       "RequiredAndUsed": 161,
       "SuiteComposition": 39,
       "TestOnlyUse": 13
@@ -23803,7 +23864,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 19215,
+    "methodCountAnalyzed": 19229,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -47183,7 +47244,7 @@
       }
     ],
     "editorProductionCount": 2769,
-    "internalPrivateProductionCount": 17397,
+    "internalPrivateProductionCount": 17399,
     "missingXmlDocumentationCount": 10455,
     "runtimeProductionCount": 10001,
     "samples": [
@@ -193070,7 +193131,7 @@
         "containingType": "",
         "file": "Runtime/ViewerBootstrap.Presentation.cs",
         "fullSignature": "public abstract partial class ViewerBootstrap",
-        "line": 12,
+        "line": 11,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -326210,6 +326271,111 @@
       {
         "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
         "containingType": "",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "public sealed class ViewerReferenceSceneCompositionTests",
+        "line": 7,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "ViewerReferenceSceneCompositionTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[SetUp] public void SetUp()",
+        "line": 13,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "SetUp",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[TearDown] public void TearDown()",
+        "line": 24,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "TearDown",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[Test] public void MissingDependenciesKeepReferenceNamesShapesAndLocalPositions()",
+        "line": 27,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "MissingDependenciesKeepReferenceNamesShapesAndLocalPositions",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[TestCase(false, false)] [TestCase(false, true)] [TestCase(true, false)] [TestCase(true, true)] public void OnlyMissingDependenciesAreCreated(bool hasParent, bool hasReference)",
+        "line": 49,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "OnlyMissingDependenciesAreCreated",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[Test] public void RepeatedCompositionDoesNotDuplicateSceneObjects()",
+        "line": 78,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "RepeatedCompositionDoesNotDuplicateSceneObjects",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "ViewerReferenceSceneCompositionTests",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "fullSignature": "[TestCase(false)] [TestCase(true)] public void DestroyedUnityReferencesAreRecreatedWithoutReplacingLiveObjects(bool destroyParent)",
+        "line": 93,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "DestroyedUnityReferencesAreRecreatedWithoutReplacingLiveObjects",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "containingType": "",
         "file": "Tests/EditMode/ViewerSelectionStateTests.cs",
         "fullSignature": "public sealed class ViewerSelectionStateTests",
         "line": 7,
@@ -328694,6 +328860,51 @@
         "repository": "Template-Viewer-Web",
         "scope": "Test",
         "symbol": "NextPlatformAttemptClearsThePreviousOriginFailureCode",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "containingType": "",
+        "file": "Tests/EditMode/WebViewerOptionalDependencyGuardTests.cs",
+        "fullSignature": "public sealed class WebViewerOptionalDependencyGuardTests",
+        "line": 9,
+        "namespace": "Deucarian.TemplateViewerWeb.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Test",
+        "symbol": "WebViewerOptionalDependencyGuardTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "containingType": "WebViewerOptionalDependencyGuardTests",
+        "file": "Tests/EditMode/WebViewerOptionalDependencyGuardTests.cs",
+        "fullSignature": "[TestCase(\"Runtime/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.asmdef\")] [TestCase(\"Tests/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.asmdef\")] [TestCase(\"Tests/SimultriaIntegrationPlayMode/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode.asmdef\")] public void StartupBridgeAndItsTestsRequireBothOptionalPackageGuards(string path)",
+        "line": 11,
+        "namespace": "Deucarian.TemplateViewerWeb.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Test",
+        "symbol": "StartupBridgeAndItsTestsRequireBothOptionalPackageGuards",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewerWeb.Tests.EditMode",
+        "containingType": "WebViewerOptionalDependencyGuardTests",
+        "file": "Tests/EditMode/WebViewerOptionalDependencyGuardTests.cs",
+        "fullSignature": "[Test] public void OptionalStartupPackagesDoNotBecomeHardAdapterDependencies()",
+        "line": 23,
+        "namespace": "Deucarian.TemplateViewerWeb.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer.web",
+        "repository": "Template-Viewer-Web",
+        "scope": "Test",
+        "symbol": "OptionalStartupPackagesDoNotBecomeHardAdapterDependencies",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -345948,7 +346159,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 6837
+    "testsPublicCount": 6847
   },
   "repositories": [
     {
@@ -353191,10 +353402,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "5afc4efc59edc43d9f8db9d20662048c14f8ba74",
+        "headCommit": "7a23d42f6b10e44c27ed9b612bb52f611a7293a7",
         "origin": "https://github.com/Deucarian/Template-Viewer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "5afc4efc59edc43d9f8db9d20662048c14f8ba74"
+        "requestedRefCommit": "7a23d42f6b10e44c27ed9b612bb52f611a7293a7"
       },
       "canonicalId": "Deucarian/Template-Viewer",
       "ciWorkflows": [
@@ -353268,7 +353479,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer.git",
         "governanceConfigSha256": "682f3de8b5f5b20e6697c5d06cb6f746311c869503d28820e7866b29899d647b",
-        "headCommit": "5afc4efc59edc43d9f8db9d20662048c14f8ba74",
+        "headCommit": "7a23d42f6b10e44c27ed9b612bb52f611a7293a7",
         "manifestSha256": "afec100c2ac08c5c1f58f845f94e3bfa07c26401e72b11d8b1db952327ca8263",
         "requestedRef": "develop"
       },
@@ -353353,6 +353564,7 @@
         {
           "autoReferenced": true,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
           ],
           "excludePlatforms": [],
@@ -353372,6 +353584,11 @@
           ],
           "scope": "Runtime production",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -353433,6 +353650,7 @@
         {
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -353455,6 +353673,11 @@
           "scope": "Test",
           "versionDefines": [
             {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
               "name": "com.deucarian.simultria-viewer-integration"
@@ -353464,6 +353687,7 @@
         {
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -353485,6 +353709,11 @@
           ],
           "scope": "Test",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -353517,10 +353746,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "e81ef6b1ea4e443899f846d775541306c8a49f4e",
+        "headCommit": "29ba11b85e5aa0e3b8097338c7b0b62fe4fef6c2",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "e81ef6b1ea4e443899f846d775541306c8a49f4e"
+        "requestedRefCommit": "29ba11b85e5aa0e3b8097338c7b0b62fe4fef6c2"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
@@ -353588,7 +353817,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "governanceConfigSha256": "038e89c056bf51d846e9625d703afe9a6324ebc8adcdd45205e6ff8cc94232ca",
-        "headCommit": "e81ef6b1ea4e443899f846d775541306c8a49f4e",
+        "headCommit": "29ba11b85e5aa0e3b8097338c7b0b62fe4fef6c2",
         "manifestSha256": "541e103f2df84d079ae396895acb14429c2a248e9e19fc875714e28741cba55c",
         "requestedRef": "develop"
       },
@@ -367115,6 +367344,36 @@
       {
         "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
         "classification": "Test",
+        "containingSymbol": "ViewerReferenceSceneCompositionTests::TearDown",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 25,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.template.viewer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Template-Viewer",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerReferenceSceneCompositionTests::DestroyedUnityReferencesAreRecreatedWithoutReplacingLiveObjects",
+        "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 100,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.template.viewer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Template-Viewer",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+        "classification": "Test",
         "containingSymbol": "ViewerSelectionStateTests::TearDown",
         "file": "Tests/EditMode/ViewerSelectionStateTests.cs",
         "invocation": "Object.DestroyImmediate",
@@ -371989,10 +372248,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1031
+      "Allowed": 1033
     },
     "summary": {
-      "direct Unity API call": 917,
+      "direct Unity API call": 919,
       "helper call site": 113,
       "helper definition": 1
     }

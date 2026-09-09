@@ -10658,6 +10658,36 @@
     {
       "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
       "classification": "Test",
+      "containingSymbol": "ViewerReferenceSceneCompositionTests::TearDown",
+      "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 25,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+      "classification": "Test",
+      "containingSymbol": "ViewerReferenceSceneCompositionTests::DestroyedUnityReferencesAreRecreatedWithoutReplacingLiveObjects",
+      "file": "Tests/EditMode/ViewerReferenceSceneCompositionTests.cs",
+      "invocation": "Object.DestroyImmediate",
+      "line": 100,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
+      "classification": "Test",
       "containingSymbol": "ViewerSelectionStateTests::TearDown",
       "file": "Tests/EditMode/ViewerSelectionStateTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -15532,10 +15562,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 1031
+    "Allowed": 1033
   },
   "summary": {
-    "direct Unity API call": 917,
+    "direct Unity API call": 919,
     "helper call site": 113,
     "helper definition": 1
   }

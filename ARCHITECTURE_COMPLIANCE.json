@@ -1820,7 +1820,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.template.viewer",
-      "productionFileCount": 38,
+      "productionFileCount": 39,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Viewer",
       "sharedValidationPresent": true,

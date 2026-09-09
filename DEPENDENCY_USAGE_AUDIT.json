@@ -8396,7 +8396,7 @@
     },
     {
       "assemblyReference": "Deucarian.API",
-      "classification": "MissingHardPackageDependency",
+      "classification": "OptionalVersionDefinedUse",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
         "Deucarian.API"
@@ -8407,10 +8407,15 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
           "autoReferenced": true,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
           ],
-          "guardEvidence": null,
-          "guardKind": "",
+          "guardEvidence": {
+            "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+            "expression": "2.0.2",
+            "name": "com.deucarian.api"
+          },
+          "guardKind": "VersionDefine",
           "includePlatforms": [
             "Editor",
             "WebGL"
@@ -8418,6 +8423,11 @@
           "reference": "Deucarian.API",
           "scope": "Runtime production",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -8430,17 +8440,27 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
-          "guardEvidence": null,
-          "guardKind": "",
+          "guardEvidence": {
+            "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+            "expression": "2.0.2",
+            "name": "com.deucarian.api"
+          },
+          "guardKind": "VersionDefine",
           "includePlatforms": [
             "Editor"
           ],
           "reference": "Deucarian.API",
           "scope": "Test",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -8465,6 +8485,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
           "autoReferenced": true,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
           ],
           "guardEvidence": {
@@ -8481,6 +8502,11 @@
           "scope": "Runtime production",
           "versionDefines": [
             {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
               "name": "com.deucarian.simultria-viewer-integration"
@@ -8492,6 +8518,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -8508,6 +8535,11 @@
           "scope": "Test",
           "versionDefines": [
             {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
               "name": "com.deucarian.simultria-viewer-integration"
@@ -8519,6 +8551,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -8535,6 +8568,11 @@
           "reference": "Deucarian.SimultriaViewerIntegration",
           "scope": "Test",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -8872,6 +8910,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
           "autoReferenced": true,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
           ],
           "guardEvidence": null,
@@ -8883,6 +8922,11 @@
           "reference": "Deucarian.TemplateViewer",
           "scope": "Runtime production",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -8910,6 +8954,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -8922,6 +8967,11 @@
           "scope": "Test",
           "versionDefines": [
             {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
+            {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
               "name": "com.deucarian.simultria-viewer-integration"
@@ -8933,6 +8983,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
           "autoReferenced": false,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
             "UNITY_INCLUDE_TESTS"
           ],
@@ -8945,6 +8996,11 @@
           "reference": "Deucarian.TemplateViewer",
           "scope": "Test",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -9075,6 +9131,7 @@
           "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
           "autoReferenced": true,
           "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_API",
             "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
           ],
           "guardEvidence": null,
@@ -9086,6 +9143,11 @@
           "reference": "Deucarian.WebGLTemplate",
           "scope": "Runtime production",
           "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_API",
+              "expression": "2.0.2",
+              "name": "com.deucarian.api"
+            },
             {
               "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
               "expression": "1.2.1",
@@ -12011,8 +12073,7 @@
   ],
   "summary": {
     "EditorOnlyUse": 41,
-    "MissingHardPackageDependency": 1,
-    "OptionalVersionDefinedUse": 3,
+    "OptionalVersionDefinedUse": 4,
     "RequiredAndUsed": 161,
     "SuiteComposition": 39,
     "TestOnlyUse": 13
