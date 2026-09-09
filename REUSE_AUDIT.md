@@ -34,7 +34,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | yes | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
 | Diagnostics | com.deucarian.diagnostics | 0.1.6 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 65 |
-| Editor | com.deucarian.editor | 1.3.1 | 2021.3 | yes | clean | (none) | 4 | 658 |
+| Editor | com.deucarian.editor | 1.4.0 | 2021.3 | yes | clean | (none) | 4 | 766 |
 | Encounters | com.deucarian.encounters | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 238 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.1 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1257 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
@@ -88,16 +88,16 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 18980 |
+| Parsed methods/bodies analyzed | 19059 |
 | Exact AST clone groups | 79 |
-| Normalized structural clone groups | 135 |
+| Normalized structural clone groups | 136 |
 | Same-symbol semantic candidates | 35 |
 | Runtime public API symbols | 9974 |
-| Editor public API symbols | 2654 |
-| Test public symbols excluded from production API | 6632 |
+| Editor public API symbols | 2762 |
+| Test public symbols excluded from production API | 6649 |
 | Sample public symbols excluded from production API | 310 |
-| Internal/private production symbols | 17308 |
-| Public API symbols missing XML documentation | 10337 |
+| Internal/private production symbols | 17336 |
+| Public API symbols missing XML documentation | 10438 |
 | Debug invocation records | 17 |
 | Unity object lifetime records | 1021 |
 | Documentation drift findings | 44 |
