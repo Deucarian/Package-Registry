@@ -12,15 +12,15 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 770 |
-| helper call site | 72 |
+| direct Unity API call | 783 |
+| helper call site | 81 |
 | helper definition | 1 |
 
 ## Policy Summary
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 843 |
+| Allowed | 865 |
 
 ## Production Semantic Comparison
 
@@ -238,6 +238,9 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Pointer-Capture | Tests/Editor/DeucarianPointerCaptureTests.cs | 79 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Projectiles | Tests/EditMode/ProjectilesTests.cs | 255 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Projectiles | Tests/EditMode/ProjectilesTests.cs | 315 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringCompositionTests.cs | 40 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringCompositionTests.cs | 41 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringCompositionTests.cs | 42 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringTests.cs | 48 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringTests.cs | 49 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Run-Upgrades | Tests/EditMode/RunUpgradeAuthoringTests.cs | 50 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -276,6 +279,3 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerEnvironmentResolverTests.cs | 52 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerInitializationCommandTests.cs | 73 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerModelInitializationCoordinatorTests.cs | 40 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Simultria-Viewer-Connection | Tests/Editor/SimultriaViewerRuntimeConnectionContextTests.cs | 39 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4153 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 4164 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |

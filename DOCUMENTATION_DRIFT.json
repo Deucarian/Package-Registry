@@ -175,6 +175,12 @@
       "repository": "Simultria-Viewer-Connection"
     },
     {
+      "file": "Documentation~/gameplay-composition.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS"
+    },
+    {
       "file": "Documentation~/validation.md",
       "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.template.game.survivors",
@@ -263,6 +269,6 @@
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 10,
-    "ReviewRequired": 14
+    "ReviewRequired": 15
   }
 }
