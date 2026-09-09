@@ -5500,7 +5500,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.4",
+      "declaredVersion": "1.1.1",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-integration",
       "referencedAssemblies": [
@@ -8395,6 +8395,158 @@
       "sourceMentionsByScope": {}
     },
     {
+      "assemblyReference": "Deucarian.API",
+      "classification": "MissingHardPackageDependency",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.API"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.API",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "requiredPackage": "com.deucarian.api"
+    },
+    {
+      "assemblyReference": "Deucarian.SimultriaViewerIntegration",
+      "classification": "OptionalVersionDefinedUse",
+      "packageId": "com.deucarian.template.viewer.web",
+      "referencedAssemblies": [
+        "Deucarian.SimultriaViewerIntegration"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "expression": "1.2.1",
+            "name": "com.deucarian.simultria-viewer-integration"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.SimultriaViewerIntegration",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "expression": "1.2.1",
+            "name": "com.deucarian.simultria-viewer-integration"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.SimultriaViewerIntegration",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/SimultriaIntegrationPlayMode/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": {
+            "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "expression": "1.2.1",
+            "name": "com.deucarian.simultria-viewer-integration"
+          },
+          "guardKind": "VersionDefine",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.SimultriaViewerIntegration",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        }
+      ],
+      "repository": "Template-Viewer-Web",
+      "requiredPackage": "com.deucarian.simultria-viewer-integration"
+    },
+    {
       "classification": "EditorOnlyUse",
       "declaredVersion": "1.0.0",
       "dependency": "com.deucarian.authentication",
@@ -8679,7 +8831,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.3.1",
+      "declaredVersion": "0.3.2",
       "dependency": "com.deucarian.template.viewer",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -8716,6 +8868,29 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Runtime/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.TemplateViewer",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        },
+        {
           "asmdef": "Samples~/Web Viewer/Deucarian.TemplateViewerWeb.Samples.WebViewer.asmdef",
           "assembly": "Deucarian.TemplateViewerWeb.Samples.WebViewer",
           "autoReferenced": true,
@@ -8729,6 +8904,53 @@
           "reference": "Deucarian.TemplateViewer",
           "scope": "Sample",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.TemplateViewer",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
+        },
+        {
+          "asmdef": "Tests/SimultriaIntegrationPlayMode/Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.TemplateViewer",
+          "scope": "Test",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
@@ -8811,7 +9033,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.1.1",
       "dependency": "com.deucarian.webgl-template",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -8847,6 +9069,29 @@
           "reference": "Deucarian.WebGLTemplate",
           "scope": "Runtime production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/SimultriaIntegration/Deucarian.TemplateViewerWeb.SimultriaIntegration.asmdef",
+          "assembly": "Deucarian.TemplateViewerWeb.SimultriaIntegration",
+          "autoReferenced": true,
+          "defineConstraints": [
+            "DEUCARIAN_SIMULTRIA_STARTUP_STATUS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor",
+            "WebGL"
+          ],
+          "reference": "Deucarian.WebGLTemplate",
+          "scope": "Runtime production",
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_SIMULTRIA_STARTUP_STATUS",
+              "expression": "1.2.1",
+              "name": "com.deucarian.simultria-viewer-integration"
+            }
+          ]
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.TemplateViewerWeb.Tests.EditMode.asmdef",
@@ -11766,7 +12011,8 @@
   ],
   "summary": {
     "EditorOnlyUse": 41,
-    "OptionalVersionDefinedUse": 2,
+    "MissingHardPackageDependency": 1,
+    "OptionalVersionDefinedUse": 3,
     "RequiredAndUsed": 161,
     "SuiteComposition": 39,
     "TestOnlyUse": 13

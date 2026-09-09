@@ -122,7 +122,7 @@ Schema version: 2
 | com.deucarian.simultria-viewer-integration | com.deucarian.editor | 1.2.0 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-integration | com.deucarian.logging | 1.0.4 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-integration | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.0.4 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.1.1 | Simultria-Viewer-Connection | Simultria-API |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -182,9 +182,9 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.6 | Template-Viewer-Web | Command-Routing |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing.webgl-integration | 0.1.1 | Template-Viewer-Web | Command-Routing-WebGL-Integration |
 | com.deucarian.template.viewer.web | com.deucarian.diagnostics | 0.1.4 | Template-Viewer-Web | Diagnostics |
-| com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.3.1 | Template-Viewer-Web | Template-Viewer |
+| com.deucarian.template.viewer.web | com.deucarian.template.viewer | 0.3.2 | Template-Viewer-Web | Template-Viewer |
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.2 | Template-Viewer-Web | Theming |
-| com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.0 | Template-Viewer-Web | WebGL-Template |
+| com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.1 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.test-automation | com.deucarian.editor | 1.2.0 | Test-Automation | Editor |
 | com.deucarian.theming | com.deucarian.editor | 1.4.1 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
@@ -255,5 +255,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 92
+- Dependency version drift entries: 94
 - Registry dependency drift entries: 0

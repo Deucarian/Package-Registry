@@ -199,6 +199,12 @@
       "repository": "Template-Viewer-Web"
     },
     {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web"
+    },
+    {
       "file": "Documentation~/architecture.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.template.viewer.web",
@@ -268,7 +274,7 @@
   "summary": {
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 10,
+    "MigrationDocumentation": 11,
     "ReviewRequired": 15
   }
 }
