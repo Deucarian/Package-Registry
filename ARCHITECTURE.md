@@ -220,6 +220,14 @@ Architecture reviews must check:
 - Do not add logging, editor, JSON, networking, diagnostics, state, UI, or domain helpers to Common.
 - Production Unity object cleanup outside Common should call `UnityObjectUtility.DestroySafely`.
 - Test fixture teardown may use `DestroyImmediate` directly.
+- Narrow editor-framework exception: Editor's `DeucarianEditorWindowPages` may
+  synchronously destroy the never-shown EditorWindow controllers it creates for
+  legacy page adapters. Unity 2021 `EditorWindow.Close()` requires a native parent;
+  Common's Play Mode destruction is intentionally deferred. These controllers are
+  editor-only, must be released when their window closes or before assembly reload,
+  and must never be returned by standalone window lookup. This is not a general
+  lifetime helper or permission to destroy runtime objects. Prefer plain composed
+  `IDeucarianEditorPage` implementations for new tools.
 
 ## Diagnostics
 

@@ -82,6 +82,33 @@
           "mutableGlobals": 1
         },
         "reason": "One authoritative project preference cache owns tool favorites and the bounded twelve-item recent list. It stores stable tool IDs, never runtime objects or connections. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.5.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Project-wide motion preference and its change event are intentionally owned by this editor service. Panel attachment owns subscriptions; detach unsubscribes and stops animation. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.5.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "One shared appearance event broadcasts an explicit project preference. Weak panel bindings attach and detach subscriptions; the service does not retain closed windows. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.5.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "One authoritative project preference cache owns tool favorites and the bounded twelve-item recent list. It stores stable tool IDs, never runtime objects or connections. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget."
       }
     ],
     "com.deucarian.notifications": [
@@ -113,6 +140,15 @@
           "mutableGlobals": 1
         },
         "reason": "The existing scene-preview repaint generation moved out of the workflow facade into the sole scene-application owner. This is an ownership transfer, not a second mutable source. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.4.1",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The existing scene-preview repaint generation moved out of the workflow facade into the sole scene-application owner. This is an ownership transfer, not a second mutable source. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget."
       }
     ],
     "com.deucarian.xr-ui": [
