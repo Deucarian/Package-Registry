@@ -2348,10 +2348,10 @@
     {
       "assembly": "Deucarian.Notifications.Tests",
       "classification": "Test",
-      "containingSymbol": "NotificationLabRuntimeTests::WindowTransitionsRemoveOnlyLabMessages",
+      "containingSymbol": "NotificationLabRuntimeTests::EditingMessageInputsDoesNotCompleteRuntimeTransitions",
       "file": "Tests/Editor/NotificationLabRuntimeTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 244,
+      "line": 82,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.notifications",
       "policyDisposition": "Allowed",
@@ -2363,7 +2363,7 @@
     {
       "assembly": "Deucarian.Notifications.Tests",
       "classification": "Test",
-      "containingSymbol": "NotificationLabRuntimeTests::WindowChangingTargetsAndClosingCleanUpWithoutAutoplay",
+      "containingSymbol": "NotificationLabRuntimeTests::WindowTransitionsRemoveOnlyLabMessages",
       "file": "Tests/Editor/NotificationLabRuntimeTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
       "line": 273,
@@ -2378,10 +2378,10 @@
     {
       "assembly": "Deucarian.Notifications.Tests",
       "classification": "Test",
-      "containingSymbol": "NotificationLabRuntimeTests::RunningWindowAddsStacksAndRemovesMessagesInTheRealSceneView",
+      "containingSymbol": "NotificationLabRuntimeTests::WindowChangingTargetsAndClosingCleanUpWithoutAutoplay",
       "file": "Tests/Editor/NotificationLabRuntimeTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 327,
+      "line": 302,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.notifications",
       "policyDisposition": "Allowed",
@@ -2396,7 +2396,22 @@
       "containingSymbol": "NotificationLabRuntimeTests::RunningWindowAddsStacksAndRemovesMessagesInTheRealSceneView",
       "file": "Tests/Editor/NotificationLabRuntimeTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 328,
+      "line": 356,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.notifications",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Notifications",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.Notifications.Tests",
+      "classification": "Test",
+      "containingSymbol": "NotificationLabRuntimeTests::RunningWindowAddsStacksAndRemovesMessagesInTheRealSceneView",
+      "file": "Tests/Editor/NotificationLabRuntimeTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 357,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.notifications",
       "policyDisposition": "Allowed",
@@ -2993,10 +3008,10 @@
     {
       "assembly": "Deucarian.PackageInstaller.Editor.Tests",
       "classification": "Test",
-      "containingSymbol": "PackageInstallerUiBaselineContractTests::Toolbar_UsesCanonicalLanesComposedActionsAndFixedGeometry",
+      "containingSymbol": "PackageInstallerUiBaselineContractTests::Toolbar_UsesSharedWorkspaceAndKeepsGraphSecondary",
       "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 99,
+      "line": 68,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.package-installer",
       "policyDisposition": "Allowed",
@@ -11291,7 +11306,7 @@
       "containingSymbol": "DeucarianThemeManagerWorkflowTests::ThemeManagerUsesSharedResponsiveWorkbenchAndToolbar",
       "file": "Tests/Editor/DeucarianThemeManagerWorkflowTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 1134,
+      "line": 999,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.theming",
       "policyDisposition": "Allowed",
@@ -11306,7 +11321,7 @@
       "containingSymbol": "DeucarianThemeManagerWorkflowTests::ThemeManagerSourceUsesWorkbenchWithoutLegacyLargeHeader",
       "file": "Tests/Editor/DeucarianThemeManagerWorkflowTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 1247,
+      "line": 1111,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.theming",
       "policyDisposition": "Allowed",
@@ -15382,10 +15397,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 1021
+    "Allowed": 1022
   },
   "summary": {
-    "direct Unity API call": 907,
+    "direct Unity API call": 908,
     "helper call site": 113,
     "helper definition": 1
   }

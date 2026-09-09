@@ -1265,7 +1265,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.notifications",
-      "productionFileCount": 34,
+      "productionFileCount": 35,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Notifications",
       "sharedValidationPresent": true,
@@ -1419,7 +1419,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 165,
+      "productionFileCount": 166,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -1888,7 +1888,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 140,
+      "productionFileCount": 142,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,

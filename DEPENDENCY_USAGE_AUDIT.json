@@ -2582,7 +2582,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.4.1",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -3225,7 +3225,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.4.1",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3824,7 +3824,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.4.1",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -8915,7 +8915,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.4.1",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
