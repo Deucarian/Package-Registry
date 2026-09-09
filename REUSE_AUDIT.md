@@ -34,7 +34,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | yes | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
 | Diagnostics | com.deucarian.diagnostics | 0.2.2 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 65 |
-| Editor | com.deucarian.editor | 1.6.0 | 2021.3 | yes | clean | (none) | 4 | 806 |
+| Editor | com.deucarian.editor | 1.6.1 | 2021.3 | yes | clean | (none) | 4 | 806 |
 | Encounters | com.deucarian.encounters | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 238 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.2 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1260 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
@@ -66,7 +66,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Template-Viewer | com.deucarian.template.viewer | 0.3.2 | 6000.0 | yes | clean | com.deucarian.api, com.deucarian.camera-navigation, com.deucarian.command-routing, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.object-loading, com.deucarian.object-loading.api-integration, com.deucarian.session, com.deucarian.session.api-integration, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.authentication, com.unity.nuget.newtonsoft-json, com.unity.modules.uielements | 4 | 214 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | 0.6.1 | 6000.0 | yes | clean | com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.webgl-integration, com.deucarian.diagnostics, com.deucarian.template.viewer, com.deucarian.theming, com.deucarian.authentication, com.deucarian.webgl-template, com.unity.textmeshpro, com.unity.nuget.newtonsoft-json | 8 | 50 |
 | Test-Automation | com.deucarian.test-automation | 0.1.2 | 6000.3 | yes | clean | com.deucarian.editor | 2 | 0 |
-| Theming | com.deucarian.theming | 1.4.2 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 7 | 887 |
+| Theming | com.deucarian.theming | 1.4.3 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 7 | 887 |
 | UI | com.deucarian.ui | 0.3.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.theming, com.unity.ugui, com.unity.modules.uielements | 4 | 520 |
 | UI-Binding | com.deucarian.ui-binding | 1.1.2 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui | 3 | 75 |
 | UI-FLow | com.deucarian.ui-flow | 0.4.3 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 6 | 342 |
@@ -88,18 +88,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 19336 |
+| Parsed methods/bodies analyzed | 19344 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 138 |
 | Same-symbol semantic candidates | 35 |
 | Runtime public API symbols | 10001 |
 | Editor public API symbols | 2823 |
-| Test public symbols excluded from production API | 6880 |
+| Test public symbols excluded from production API | 6888 |
 | Sample public symbols excluded from production API | 310 |
-| Internal/private production symbols | 17466 |
+| Internal/private production symbols | 17471 |
 | Public API symbols missing XML documentation | 10496 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1036 |
+| Unity object lifetime records | 1040 |
 | Documentation drift findings | 46 |
 | Dependency usage findings | 258 |
 | Dependency cycles | 0 |

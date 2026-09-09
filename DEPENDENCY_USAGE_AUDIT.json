@@ -9222,7 +9222,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.6.1",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
