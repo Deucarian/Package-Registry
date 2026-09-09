@@ -13,17 +13,17 @@ once.
 ## Summary
 
 - Repositories: 65
-- Fully compliant repositories: 43
+- Fully compliant repositories: 44
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 56 |
+| RefactorBacklog | 55 |
 | SetupRequired | 9 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 9 |
-| ProductionFileExceedsLineLimit | 56 |
+| ProductionFileExceedsLineLimit | 55 |
 
 ## Repository Status
 
@@ -46,7 +46,7 @@ once.
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | Compliant | Yes | Yes | 20 | 1 | 0 | 0 |
-| Editor | com.deucarian.editor | RefactorBacklog | Yes | Yes | 101 | 2 | 1 | 0 |
+| Editor | com.deucarian.editor | Compliant | Yes | Yes | 107 | 2 | 0 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 85 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -100,12 +100,11 @@ once.
 | Repository | Kind | Disposition | File | Lines | Limit | Action |
 | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1342 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentAuthoringProviders.cs | 1343 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Attacks | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/AttackGameContentPreview.cs | 1101 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Build-Pipeline | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/NewtonsoftLinking/NewtonsoftJsonContractDiscovery.cs | 594 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Camera-Navigation | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/DeucarianOrbitCameraController.cs | 562 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Command-Routing-WebGL-Integration | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| Editor | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianEditorWorkflowControls.cs | 505 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentStructuredCollectionEditing.cs | 1280 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentEditingModels.cs | 954 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Game-Content-Authoring | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/GameContentPackAwareViews.cs | 715 | 500 | Extract responsibilities until the production file is at most 500 lines. |
@@ -123,7 +122,7 @@ once.
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageEcosystemGraphBuilder.cs | 599 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageRegistryValidator.cs | 597 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Package-Installer | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Services/PackageGraphHierarchyBuilder.cs | 508 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/RunUpgradeGameContentAuthoringProvider.cs | 575 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/RunUpgradeGameContentAuthoringProvider.cs | 576 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Run-Upgrades | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/RunUpgradesCore.cs | 539 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Simultria-API | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Template-Game-Idle-Auto-Defense | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/IdleAutoDefenseContentPackIndex.cs | 1758 | 500 | Extract responsibilities until the production file is at most 500 lines. |

@@ -14,7 +14,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/AttackGameContentAuthoringProviders.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1342,
+      "lineCount": 1343,
       "lineLimit": 500,
       "packageId": "com.deucarian.attacks",
       "repository": "Attacks",
@@ -63,18 +63,6 @@
       "kind": "MissingCanonicalArchitectureReference",
       "packageId": "com.deucarian.command-routing.webgl-integration",
       "repository": "Command-Routing-WebGL-Integration"
-    },
-    {
-      "assembly": "Deucarian.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/DeucarianEditorWorkflowControls.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 505,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.editor",
-      "repository": "Editor",
-      "scope": "Editor production"
     },
     {
       "assembly": "Deucarian.GameContentAuthoring.Editor",
@@ -282,7 +270,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 575,
+      "lineCount": 576,
       "lineLimit": 500,
       "packageId": "com.deucarian.run-upgrades",
       "repository": "Run-Upgrades",
@@ -790,7 +778,7 @@
         {
           "assembly": "Deucarian.Attacks.Editor",
           "file": "Editor/AttackGameContentAuthoringProviders.cs",
-          "lineCount": 1342,
+          "lineCount": 1343,
           "scope": "Editor production"
         },
         {
@@ -1070,20 +1058,13 @@
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
-      "oversizedProductionFiles": [
-        {
-          "assembly": "Deucarian.Editor",
-          "file": "Editor/DeucarianEditorWorkflowControls.cs",
-          "lineCount": 505,
-          "scope": "Editor production"
-        }
-      ],
+      "oversizedProductionFiles": [],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 101,
+      "productionFileCount": 107,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
-      "status": "RefactorBacklog",
+      "status": "Compliant",
       "testAssemblies": [
         "Deucarian.Editor.EditorShellExample.Tests",
         "Deucarian.Editor.Tests"
@@ -1521,7 +1502,7 @@
         {
           "assembly": "Deucarian.RunUpgrades.Editor",
           "file": "Editor/RunUpgradeGameContentAuthoringProvider.cs",
-          "lineCount": 575,
+          "lineCount": 576,
           "scope": "Editor production"
         },
         {
@@ -2224,14 +2205,14 @@
     "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
   },
   "summary": {
-    "compliantRepositoryCount": 43,
+    "compliantRepositoryCount": 44,
     "findingsByDisposition": {
-      "RefactorBacklog": 56,
+      "RefactorBacklog": 55,
       "SetupRequired": 9
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 56
+      "ProductionFileExceedsLineLimit": 55
     },
     "repositoryCount": 65
   }
