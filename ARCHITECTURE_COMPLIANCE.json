@@ -324,9 +324,9 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+      "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 11377,
+      "lineCount": 2513,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -336,9 +336,21 @@
       "assembly": "Deucarian.PackageInstaller.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
+      "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 2513,
+      "lineCount": 1735,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 1649,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -375,6 +387,18 @@
       "file": "Editor/Models/PackageEcosystemGraph.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 838,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.package-installer",
+      "repository": "Package-Installer",
+      "scope": "Editor production"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 769,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -1787,12 +1811,24 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
-          "lineCount": 11377,
+          "lineCount": 1649,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
+          "lineCount": 1735,
+          "scope": "Editor production"
+        },
+        {
+          "assembly": "Deucarian.PackageInstaller.Editor",
+          "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+          "lineCount": 769,
           "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 105,
+      "productionFileCount": 165,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -2660,12 +2696,12 @@
   "summary": {
     "compliantRepositoryCount": 22,
     "findingsByDisposition": {
-      "RefactorBacklog": 68,
+      "RefactorBacklog": 70,
       "SetupRequired": 36
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 36,
-      "ProductionFileExceedsLineLimit": 68
+      "ProductionFileExceedsLineLimit": 70
     },
     "repositoryCount": 65
   }

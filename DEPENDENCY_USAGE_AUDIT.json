@@ -3824,7 +3824,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [

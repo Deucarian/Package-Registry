@@ -325,9 +325,9 @@
         "assembly": "Deucarian.PackageInstaller.Editor",
         "detail": "Extract responsibilities until the production file is at most 500 lines.",
         "disposition": "RefactorBacklog",
-        "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+        "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
         "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 11377,
+        "lineCount": 2513,
         "lineLimit": 500,
         "packageId": "com.deucarian.package-installer",
         "repository": "Package-Installer",
@@ -337,9 +337,21 @@
         "assembly": "Deucarian.PackageInstaller.Editor",
         "detail": "Extract responsibilities until the production file is at most 500 lines.",
         "disposition": "RefactorBacklog",
-        "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
+        "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
         "kind": "ProductionFileExceedsLineLimit",
-        "lineCount": 2513,
+        "lineCount": 1735,
+        "lineLimit": 500,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Editor production"
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor",
+        "detail": "Extract responsibilities until the production file is at most 500 lines.",
+        "disposition": "RefactorBacklog",
+        "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
+        "kind": "ProductionFileExceedsLineLimit",
+        "lineCount": 1649,
         "lineLimit": 500,
         "packageId": "com.deucarian.package-installer",
         "repository": "Package-Installer",
@@ -376,6 +388,18 @@
         "file": "Editor/Models/PackageEcosystemGraph.cs",
         "kind": "ProductionFileExceedsLineLimit",
         "lineCount": 838,
+        "lineLimit": 500,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Editor production"
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor",
+        "detail": "Extract responsibilities until the production file is at most 500 lines.",
+        "disposition": "RefactorBacklog",
+        "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+        "kind": "ProductionFileExceedsLineLimit",
+        "lineCount": 769,
         "lineLimit": 500,
         "packageId": "com.deucarian.package-installer",
         "repository": "Package-Installer",
@@ -1788,12 +1812,24 @@
           {
             "assembly": "Deucarian.PackageInstaller.Editor",
             "file": "Editor/UI/PackageInstaller/PackageEcosystemGraphView.cs",
-            "lineCount": 11377,
+            "lineCount": 1649,
+            "scope": "Editor production"
+          },
+          {
+            "assembly": "Deucarian.PackageInstaller.Editor",
+            "file": "Editor/UI/PackageInstaller/PackageGraphCanvas.cs",
+            "lineCount": 1735,
+            "scope": "Editor production"
+          },
+          {
+            "assembly": "Deucarian.PackageInstaller.Editor",
+            "file": "Editor/UI/PackageInstaller/PackageGraphViewport.cs",
+            "lineCount": 769,
             "scope": "Editor production"
           }
         ],
         "packageId": "com.deucarian.package-installer",
-        "productionFileCount": 105,
+        "productionFileCount": 165,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Package-Installer",
         "sharedValidationPresent": true,
@@ -2661,12 +2697,12 @@
     "summary": {
       "compliantRepositoryCount": 22,
       "findingsByDisposition": {
-        "RefactorBacklog": 68,
+        "RefactorBacklog": 70,
         "SetupRequired": 36
       },
       "findingsByKind": {
         "MissingCanonicalArchitectureReference": 36,
-        "ProductionFileExceedsLineLimit": 68
+        "ProductionFileExceedsLineLimit": 70
       },
       "repositoryCount": 65
     }
@@ -4227,7 +4263,7 @@
         "fromRepo": "Package-Installer",
         "to": "com.deucarian.editor",
         "toRepo": "Editor",
-        "version": "1.2.0"
+        "version": "1.3.0"
       },
       {
         "from": "com.deucarian.package-installer",
@@ -9170,7 +9206,7 @@
       },
       {
         "classification": "EditorOnlyUse",
-        "declaredVersion": "1.2.0",
+        "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
         "packageId": "com.deucarian.package-installer",
         "referencedAssemblies": [
@@ -17541,7 +17577,7 @@
         "repo": "ObjectSelection-CoreState-Integration"
       },
       {
-        "declaredVersion": "1.2.0",
+        "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
         "ownerDevelopVersion": "1.3.1",
         "packageId": "com.deucarian.package-installer",
@@ -24222,7 +24258,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 17322,
+    "methodCountAnalyzed": 17353,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -32331,7 +32367,7 @@
             "editorApi": false,
             "file": "Editor/PackageInstallerWindow.Part17.cs",
             "iterator": false,
-            "line": 394,
+            "line": 393,
             "lineCount": 5,
             "namespace": "Deucarian.PackageInstaller.Editor",
             "normalizedHash": "57a14898cd85aa984ca53ab9fbd348ee5486c9656576c3a086b7b22d0e136cab",
@@ -46644,7 +46680,7 @@
       }
     ],
     "editorProductionCount": 2654,
-    "internalPrivateProductionCount": 13289,
+    "internalPrivateProductionCount": 13391,
     "missingXmlDocumentationCount": 10308,
     "runtimeProductionCount": 9943,
     "samples": [
@@ -276470,6 +276506,66 @@
       },
       {
         "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/PackageGraphGeometrySnapshotTests.cs",
+        "fullSignature": "public sealed class PackageGraphGeometrySnapshotTests",
+        "line": 7,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "PackageGraphGeometrySnapshotTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphGeometrySnapshotTests",
+        "file": "Tests/Editor/PackageGraphGeometrySnapshotTests.cs",
+        "fullSignature": "[Test] public void GeometryIsCopiedAndComparedCaseInsensitively()",
+        "line": 9,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "GeometryIsCopiedAndComparedCaseInsensitively",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphGeometrySnapshotTests",
+        "file": "Tests/Editor/PackageGraphGeometrySnapshotTests.cs",
+        "fullSignature": "[Test] public void MissingInputsClearPreviousGeometryAndRadiiStayNonnegative()",
+        "line": 21,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "MissingInputsClearPreviousGeometryAndRadiiStayNonnegative",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphGeometrySnapshotTests",
+        "file": "Tests/Editor/PackageGraphGeometrySnapshotTests.cs",
+        "fullSignature": "[Test] public void RouteGeometryCanBeEvaluatedWithoutAVisualLayer()",
+        "line": 37,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "RouteGeometryCanBeEvaluatedWithoutAVisualLayer",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
         "containingType": "PackageGraphLayeringAndRoutingTests",
         "file": "Tests/Editor/PackageGraphLayeringAndRoutingTests.cs",
         "fullSignature": "[Test] public void Canvas_OrdersConnectionOcclusionsBetweenConnectorsAndInteractiveContent()",
@@ -276620,6 +276716,51 @@
       },
       {
         "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphLayoutAnimationTests",
+        "file": "Tests/Editor/PackageGraphLayoutAnimationTests.cs",
+        "fullSignature": "[Test] public void FirstLayoutSnapsWithoutDependingOnAnEditorClockOrWindow()",
+        "line": 9,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "FirstLayoutSnapsWithoutDependingOnAnEditorClockOrWindow",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphLayoutAnimationTests",
+        "file": "Tests/Editor/PackageGraphLayoutAnimationTests.cs",
+        "fullSignature": "[Test] public void ExplicitProgressInterpolatesAndARepeatedEvaluationIsDeterministic()",
+        "line": 20,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "ExplicitProgressInterpolatesAndARepeatedEvaluationIsDeterministic",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphLayoutAnimationTests",
+        "file": "Tests/Editor/PackageGraphLayoutAnimationTests.cs",
+        "fullSignature": "[Test] public void SnapDropsOldFrameStateWhenAReplacementLayoutIsEmpty()",
+        "line": 37,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "SnapDropsOldFrameStateWhenAReplacementLayoutIsEmpty",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
         "containingType": "PackageGraphPainterTests",
         "file": "Tests/Editor/PackageGraphPainterTests.cs",
         "fullSignature": "[Test] public void BuildFill_ProducesValidConvexMeshWithPositiveScreenSpaceWinding()",
@@ -276705,6 +276846,51 @@
         "repository": "Package-Installer",
         "scope": "Test",
         "symbol": "CubicCircle_ProducesClosedProductionShapedFillAndStrokeMeshes",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/PackageGraphPanGestureTests.cs",
+        "fullSignature": "public sealed class PackageGraphPanGestureTests",
+        "line": 6,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "PackageGraphPanGestureTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphPanGestureTests",
+        "file": "Tests/Editor/PackageGraphPanGestureTests.cs",
+        "fullSignature": "[Test] public void DragStartsOnlyPastThresholdAndUsesLastPointerDelta()",
+        "line": 8,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "DragStartsOnlyPastThresholdAndUsesLastPointerDelta",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageGraphPanGestureTests",
+        "file": "Tests/Editor/PackageGraphPanGestureTests.cs",
+        "fullSignature": "[Test] public void ResetAndNewGestureDoNotReusePreviousDragState()",
+        "line": 20,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "ResetAndNewGestureDoNotReusePreviousDragState",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -278348,7 +278534,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "[Test] public void Stylesheets_VisibleSurfacesUseCanonicalPaddingExactlyOnce()",
-        "line": 387,
+        "line": 389,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278363,7 +278549,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "[Test] public void Stylesheets_EmptyStateTextWrapsAndActionsGrowWithContent()",
-        "line": 427,
+        "line": 429,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278378,7 +278564,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "[Test] public void Stylesheets_OperationDrawerAndFooterGeometryMatchBaseline()",
-        "line": 456,
+        "line": 458,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278393,7 +278579,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "[Test] public void ImGuiStyleDeclarations_PanelMetricsAndColorsMatchBaseline()",
-        "line": 567,
+        "line": 569,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278408,7 +278594,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests.CssRule",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "public CssRule(IReadOnlyCollection<string> selectors, string body)",
-        "line": 1000,
+        "line": 1011,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278423,7 +278609,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests.CssRule",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "public IReadOnlyCollection<string> Selectors",
-        "line": 1006,
+        "line": 1017,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278438,7 +278624,7 @@
         "containingType": "PackageInstallerUiBaselineContractTests.CssRule",
         "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
         "fullSignature": "public string Body",
-        "line": 1008,
+        "line": 1019,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -278565,6 +278751,36 @@
         "repository": "Package-Installer",
         "scope": "Test",
         "symbol": "GraphViewAppliesReloadCameraAfterResponsiveLayout",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/PackageInstallerWindowStylesTests.cs",
+        "fullSignature": "public sealed class PackageInstallerWindowStylesTests",
+        "line": 6,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "PackageInstallerWindowStylesTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerWindowStylesTests",
+        "file": "Tests/Editor/PackageInstallerWindowStylesTests.cs",
+        "fullSignature": "[Test] public void EachWindowOwnsItsStylesWithoutMutatingSharedDefaults()",
+        "line": 8,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "EachWindowOwnsItsStylesWithoutMutatingSharedDefaults",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -320539,7 +320755,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 5352
+    "testsPublicCount": 5364
   },
   "repositories": [
     {
@@ -325207,10 +325423,10 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "875e8fbacd8e3d4735dc06a3f7f5c2102badbfac",
+        "headCommit": "f5db175a891a383cfd765c65935d7796cfda97cc",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "main",
-        "requestedRefCommit": "875e8fbacd8e3d4735dc06a3f7f5c2102badbfac"
+        "requestedRefCommit": "f5db175a891a383cfd765c65935d7796cfda97cc"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -325220,7 +325436,7 @@
         ".github/workflows/unity-editmode-tests.yml"
       ],
       "dependencies": {
-        "com.deucarian.editor": "1.2.0",
+        "com.deucarian.editor": "1.3.0",
         "com.deucarian.logging": "1.0.4"
       },
       "displayName": "Deucarian Package Installer",
@@ -325250,13 +325466,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.1.98",
+      "packageVersion": "1.2.6",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "875e8fbacd8e3d4735dc06a3f7f5c2102badbfac",
-        "manifestSha256": "8e687644a7d9a70102ffbcec95106b491ecc7ee4d352a8d163294529df5d595c",
+        "headCommit": "f5db175a891a383cfd765c65935d7796cfda97cc",
+        "manifestSha256": "4432289eb1fabdcf44d6fc0f64466aa97e318bf115c4e4f4d66c26f2aaaacd9e",
         "requestedRef": "main"
       },
       "registryDependencies": [
