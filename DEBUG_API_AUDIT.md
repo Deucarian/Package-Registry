@@ -8,7 +8,7 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 25 |
+| Allowed | 17 |
 
 ## Log Level Summary
 
@@ -17,13 +17,13 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 | Error | 6 |
 | Exception | 1 |
 | Info | 5 |
-| Warning | 13 |
+| Warning | 5 |
 
 ## Policy Severity Summary
 
 | Metric | Count |
 | --- | --- |
-| Info | 25 |
+| Info | 17 |
 
 ## Findings
 
@@ -37,16 +37,8 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 | Logging | Runtime/UnityConsoleLogSink.cs | 48 | Runtime production | UnityEngine.Debug.LogError | Error | Allowed | Info | Reviewed exception declared in deucarian-package.json. |
 | Logging | Runtime/UnityConsoleLogSink.cs | 52 | Runtime production | UnityEngine.Debug.LogError | Error | Allowed | Info | Reviewed exception declared in deucarian-package.json. |
 | Logging | Runtime/UnityConsoleLogSink.cs | 53 | Runtime production | UnityEngine.Debug.LogException | Exception | Allowed | Info | Reviewed exception declared in deucarian-package.json. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5258 | Runtime production | Debug.LogError | Error | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5311 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5323 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5349 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5359 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5511 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5525 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5539 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5553 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
-| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 5567 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
+| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 30 | Runtime production | Debug.LogWarning | Warning | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
+| Template-Game-Idle-Auto-Defense | Runtime/IdleAutoDefenseTemplate.cs | 32 | Runtime production | Debug.LogError | Error | Allowed | Info | Template diagnostics are intentionally visible in the Unity console; replacing them with Logging should be handled with an explicit dependency/governance phase. |
 | Template-Game-Movement-FPS | Editor/MovementFpsEditorContentValidation.cs | 24 | Editor production | Debug.LogError | Error | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |
 | Template-Game-Movement-FPS | Editor/MovementFpsEditorContentValidation.cs | 28 | Editor production | Debug.LogWarning | Warning | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |
 | Template-Game-Movement-FPS | Editor/MovementFpsEditorContentValidation.cs | 32 | Editor production | Debug.Log | Info | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |

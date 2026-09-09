@@ -12,45 +12,9 @@
       "assembly": "Deucarian.Attacks.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Editor/AttackProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1434,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.attacks",
-      "repository": "Attacks",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Attacks.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Editor/AttackGameContentAuthoringProviders.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 1342,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.attacks",
-      "repository": "Attacks",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Attacks.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/EnemyProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1175,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.attacks",
-      "repository": "Attacks",
-      "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.Attacks.Editor",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Editor/WaveProviderV2.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1104,
       "lineLimit": 500,
       "packageId": "com.deucarian.attacks",
       "repository": "Attacks",
@@ -345,18 +309,6 @@
       "repository": "Simultria-API"
     },
     {
-      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/IdleAutoDefenseTemplate.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 6878,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -403,18 +355,6 @@
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "repository": "Template-Game-Idle-Auto-Defense",
       "scope": "Editor production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/IdleAutoDefensePlayerExperienceController.Ui.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 1081,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "scope": "Runtime production"
     },
     {
       "assembly": "Deucarian.TemplateGameIdleAutoDefense.Editor",
@@ -468,18 +408,6 @@
       "assembly": "Deucarian.TemplateGameIdleAutoDefense",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Runtime/IdleAutoDefensePlayerExperienceController.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 640,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "repository": "Template-Game-Idle-Auto-Defense",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Runtime/IdleAutoDefenseAuthoredCoreValidation.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 547,
@@ -498,18 +426,6 @@
       "lineLimit": 500,
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "repository": "Template-Game-Idle-Auto-Defense",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.TemplateGameSurvivors",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/SurvivorsTemplateController.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 15821,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.template.game.survivors",
-      "repository": "Template-Game-Survivors",
       "scope": "Runtime production"
     },
     {
@@ -882,28 +798,10 @@
           "file": "Editor/AttackGameContentPreview.cs",
           "lineCount": 1101,
           "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Attacks.Editor",
-          "file": "Editor/AttackProviderV2.cs",
-          "lineCount": 1434,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Attacks.Editor",
-          "file": "Editor/EnemyProviderV2.cs",
-          "lineCount": 1175,
-          "scope": "Editor production"
-        },
-        {
-          "assembly": "Deucarian.Attacks.Editor",
-          "file": "Editor/WaveProviderV2.cs",
-          "lineCount": 1104,
-          "scope": "Editor production"
         }
       ],
       "packageId": "com.deucarian.attacks",
-      "productionFileCount": 31,
+      "productionFileCount": 64,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Attacks",
       "sharedValidationPresent": true,
@@ -1789,31 +1687,13 @@
         },
         {
           "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-          "file": "Runtime/IdleAutoDefensePlayerExperienceController.Ui.cs",
-          "lineCount": 1081,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-          "file": "Runtime/IdleAutoDefensePlayerExperienceController.cs",
-          "lineCount": 640,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
           "file": "Runtime/IdleAutoDefenseRewardDraftCatalog.cs",
           "lineCount": 539,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameIdleAutoDefense",
-          "file": "Runtime/IdleAutoDefenseTemplate.cs",
-          "lineCount": 6878,
           "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.template.game.idle-auto-defense",
-      "productionFileCount": 53,
+      "productionFileCount": 138,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Idle-Auto-Defense",
       "sharedValidationPresent": true,
@@ -1910,12 +1790,6 @@
         },
         {
           "assembly": "Deucarian.TemplateGameSurvivors",
-          "file": "Runtime/SurvivorsTemplateController.cs",
-          "lineCount": 15821,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.TemplateGameSurvivors",
           "file": "Runtime/SurvivorsUiTheme.cs",
           "lineCount": 739,
           "scope": "Runtime production"
@@ -1928,7 +1802,7 @@
         }
       ],
       "packageId": "com.deucarian.template.game.survivors",
-      "productionFileCount": 24,
+      "productionFileCount": 223,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Template-Game-Survivors",
       "sharedValidationPresent": true,
@@ -2350,12 +2224,12 @@
   "summary": {
     "compliantRepositoryCount": 43,
     "findingsByDisposition": {
-      "RefactorBacklog": 63,
+      "RefactorBacklog": 56,
       "SetupRequired": 9
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 63
+      "ProductionFileExceedsLineLimit": 56
     },
     "repositoryCount": 65
   }
