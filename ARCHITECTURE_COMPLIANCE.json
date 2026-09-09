@@ -1079,7 +1079,7 @@
         }
       ],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 89,
+      "productionFileCount": 93,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
