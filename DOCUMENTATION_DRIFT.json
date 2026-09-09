@@ -49,6 +49,12 @@
       "repository": "Diagnostics"
     },
     {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.logging",
@@ -275,6 +281,6 @@
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 11,
-    "ReviewRequired": 15
+    "ReviewRequired": 16
   }
 }
