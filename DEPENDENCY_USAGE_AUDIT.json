@@ -2,7 +2,7 @@
   "findings": [
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -354,7 +354,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -398,7 +398,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.2",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -1472,7 +1472,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1598,7 +1598,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -1792,7 +1792,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing",
       "referencedAssemblies": [
@@ -1994,7 +1994,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing.udp-integration",
       "referencedAssemblies": [
@@ -2172,7 +2172,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing.webgl-integration",
       "referencedAssemblies": [
@@ -2582,7 +2582,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.5.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -2760,7 +2760,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -2944,7 +2944,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
       "referencedAssemblies": [
@@ -3225,7 +3225,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.5.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3267,7 +3267,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.4.2",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3824,7 +3824,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.5.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -3908,7 +3908,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.pointer-capture",
       "referencedAssemblies": [
@@ -4953,7 +4953,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -5364,7 +5364,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-viewer-integration",
       "referencedAssemblies": [
@@ -5902,7 +5902,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
@@ -6002,7 +6002,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.2",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
@@ -6778,7 +6778,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.template.game.movement-fps",
       "referencedAssemblies": [
@@ -7117,7 +7117,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -7203,7 +7203,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.2",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -9178,7 +9178,7 @@
     },
     {
       "classification": "TestOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.test-automation",
       "referencedAssemblies": [
@@ -9222,7 +9222,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.5.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -9507,7 +9507,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -9877,7 +9877,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
@@ -10240,7 +10240,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -11870,7 +11870,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.6.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.xr-ui",
       "referencedAssemblies": [
