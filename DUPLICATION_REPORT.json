@@ -1080,7 +1080,7 @@
           }
         ],
         "packageId": "com.deucarian.editor",
-        "productionFileCount": 93,
+        "productionFileCount": 95,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Editor",
         "sharedValidationPresent": true,
@@ -17146,7 +17146,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.api",
         "repo": "API"
       },
@@ -17167,7 +17167,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.attacks",
         "repo": "Attacks"
       },
@@ -17188,14 +17188,14 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.build-pipeline",
         "repo": "Build-Pipeline"
       },
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.camera-navigation",
         "repo": "Camera-Navigation"
       },
@@ -17216,7 +17216,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.command-routing",
         "repo": "Command-Routing"
       },
@@ -17237,7 +17237,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.command-routing.udp-integration",
         "repo": "Command-Routing-UDP-Integration"
       },
@@ -17258,28 +17258,28 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.command-routing.webgl-integration",
         "repo": "Command-Routing-WebGL-Integration"
       },
       {
         "declaredVersion": "1.5.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.diagnostics",
         "repo": "Diagnostics"
       },
       {
         "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.game-content-authoring",
         "repo": "Game-Content-Authoring"
       },
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.logging",
         "repo": "Logging"
       },
@@ -17300,7 +17300,7 @@
       {
         "declaredVersion": "1.5.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.notifications",
         "repo": "Notifications"
       },
@@ -17342,21 +17342,21 @@
       {
         "declaredVersion": "1.5.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.package-installer",
         "repo": "Package-Installer"
       },
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.pointer-capture",
         "repo": "Pointer-Capture"
       },
       {
         "declaredVersion": "1.0.3",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.run-upgrades",
         "repo": "Run-Upgrades"
       },
@@ -17405,7 +17405,7 @@
       {
         "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.simultria-api",
         "repo": "Simultria-API"
       },
@@ -17419,7 +17419,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.simultria-viewer-integration",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -17433,7 +17433,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.template.game.idle-auto-defense",
         "repo": "Template-Game-Idle-Auto-Defense"
       },
@@ -17454,7 +17454,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.template.game.movement-fps",
         "repo": "Template-Game-Movement-FPS"
       },
@@ -17468,7 +17468,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.template.game.survivors",
         "repo": "Template-Game-Survivors"
       },
@@ -17580,14 +17580,14 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.test-automation",
         "repo": "Test-Automation"
       },
       {
         "declaredVersion": "1.5.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.theming",
         "repo": "Theming"
       },
@@ -17601,7 +17601,7 @@
       {
         "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.ui-flow",
         "repo": "UI-FLow"
       },
@@ -17622,7 +17622,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.authentication",
         "repo": "Viewer-Authentication"
       },
@@ -17643,7 +17643,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.viewer-navigation",
         "repo": "Viewer-Navigation"
       },
@@ -17699,7 +17699,7 @@
       {
         "declaredVersion": "1.0.3",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.weapon-systems",
         "repo": "Weapon-Systems"
       },
@@ -17818,7 +17818,7 @@
       {
         "declaredVersion": "1.3.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.5.1",
+        "ownerDevelopVersion": "1.5.2",
         "packageId": "com.deucarian.xr-ui",
         "repo": "XR-UI"
       },
@@ -23962,7 +23962,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 19283,
+    "methodCountAnalyzed": 19302,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -35914,7 +35914,7 @@
           "UnityEngine.Object",
           "UnityEngine.Object.DestroyImmediate"
         ],
-        "estimatedDuplicatedLines": 1412,
+        "estimatedDuplicatedLines": 1422,
         "extractionConfidence": "medium",
         "groupKey": "dispose",
         "occurrences": [
@@ -36388,10 +36388,31 @@
             "editorApi": false,
             "file": "Editor/DeucarianEditorWorkspace.cs",
             "iterator": false,
-            "line": 162,
-            "lineCount": 10,
+            "line": 166,
+            "lineCount": 11,
             "namespace": "Deucarian.Editor",
-            "normalizedHash": "105967251d77a2571276bd5158d8ef0ec5238f3887444496918c4074b77fd320",
+            "normalizedHash": "48dc0dbc499022b8b7b06909c9c330861f4b2a44ebc4e264bc0f8bd4788d1a14",
+            "packageId": "com.deucarian.editor",
+            "repository": "Editor",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public void Dispose()",
+            "symbol": "Dispose",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Editor",
+            "async": false,
+            "containingType": "DeucarianEditorWorkspaceScale",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/DeucarianEditorWorkspaceScale.cs",
+            "iterator": false,
+            "line": 63,
+            "lineCount": 9,
+            "namespace": "Deucarian.Editor",
+            "normalizedHash": "ad1870a022315c6bc4bea2eddc9f7bdddc7276d484f1061703fd81445983cc19",
             "packageId": "com.deucarian.editor",
             "repository": "Editor",
             "runtimeUnityApi": false,
@@ -47111,8 +47132,8 @@
         "runtimePublicCount": 58
       },
       {
-        "editorPublicCount": 788,
-        "missingXmlDocumentationCount": 737,
+        "editorPublicCount": 789,
+        "missingXmlDocumentationCount": 738,
         "packageId": "com.deucarian.editor",
         "repository": "Editor",
         "runtimePublicCount": 0
@@ -47447,9 +47468,9 @@
         "runtimePublicCount": 2
       }
     ],
-    "editorProductionCount": 2791,
-    "internalPrivateProductionCount": 17434,
-    "missingXmlDocumentationCount": 10472,
+    "editorProductionCount": 2792,
+    "internalPrivateProductionCount": 17450,
+    "missingXmlDocumentationCount": 10473,
     "runtimeProductionCount": 10001,
     "samples": [
       {
@@ -83865,7 +83886,7 @@
         "containingType": "DeucarianEditorAppearance",
         "file": "Editor/DeucarianEditorAppearance.cs",
         "fullSignature": "public static event Action Changed",
-        "line": 12,
+        "line": 13,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -83879,8 +83900,23 @@
         "assembly": "Deucarian.Editor",
         "containingType": "DeucarianEditorAppearance",
         "file": "Editor/DeucarianEditorAppearance.cs",
+        "fullSignature": "public static int WorkspaceScalePercent",
+        "line": 15,
+        "namespace": "Deucarian.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Editor production",
+        "symbol": "WorkspaceScalePercent",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "containingType": "DeucarianEditorAppearance",
+        "file": "Editor/DeucarianEditorAppearance.cs",
         "fullSignature": "public static bool DecorativeBackgrounds",
-        "line": 14,
+        "line": 27,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92535,7 +92571,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public DeucarianEditorWorkspace(VisualElement root, string context, bool includeDrawer = false)",
-        "line": 38,
+        "line": 39,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92550,7 +92586,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Root",
-        "line": 109,
+        "line": 113,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92565,7 +92601,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Sidebar",
-        "line": 110,
+        "line": 114,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92580,7 +92616,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Navigation",
-        "line": 111,
+        "line": 115,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92595,7 +92631,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement NavigationFooter",
-        "line": 112,
+        "line": 116,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92610,7 +92646,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Page",
-        "line": 113,
+        "line": 117,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92625,7 +92661,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement PageActions",
-        "line": 114,
+        "line": 118,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92640,7 +92676,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Tabs",
-        "line": 115,
+        "line": 119,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92655,7 +92691,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Scope",
-        "line": 116,
+        "line": 120,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92670,7 +92706,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Content",
-        "line": 117,
+        "line": 121,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92685,7 +92721,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Footer",
-        "line": 118,
+        "line": 122,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92700,7 +92736,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Label Title",
-        "line": 119,
+        "line": 123,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92715,7 +92751,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Label Subtitle",
-        "line": 120,
+        "line": 124,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92730,7 +92766,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Label FooterLeading",
-        "line": 121,
+        "line": 125,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92745,7 +92781,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Label FooterTrailing",
-        "line": 122,
+        "line": 126,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92760,7 +92796,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public TextField SearchField",
-        "line": 123,
+        "line": 127,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92775,7 +92811,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Button ContextButton",
-        "line": 124,
+        "line": 128,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92790,7 +92826,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public VisualElement Drawer",
-        "line": 125,
+        "line": 129,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92805,7 +92841,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public void SetSearchPrompt(string prompt)",
-        "line": 127,
+        "line": 131,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92820,7 +92856,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public Button AddNavigation(string id, string label, string icon, Action open, bool footer = false)",
-        "line": 134,
+        "line": 138,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92835,7 +92871,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public void SelectNavigation(string id)",
-        "line": 149,
+        "line": 153,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92850,7 +92886,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public void ApplyWidth(float width)",
-        "line": 155,
+        "line": 159,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -92865,7 +92901,7 @@
         "containingType": "DeucarianEditorWorkspace",
         "file": "Editor/DeucarianEditorWorkspace.cs",
         "fullSignature": "public void Dispose()",
-        "line": 162,
+        "line": 166,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -260190,6 +260226,66 @@
       {
         "assembly": "Deucarian.Editor.Tests",
         "containingType": "",
+        "file": "Tests/Editor/DeucarianControlCenterOverviewPresentationTests.cs",
+        "fullSignature": "public sealed class DeucarianControlCenterOverviewPresentationTests",
+        "line": 11,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "DeucarianControlCenterOverviewPresentationTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianControlCenterOverviewPresentationTests",
+        "file": "Tests/Editor/DeucarianControlCenterOverviewPresentationTests.cs",
+        "fullSignature": "[Test] public void OverviewHasOneFocusWithoutRepeatedCountsOrToolDescriptions()",
+        "line": 13,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "OverviewHasOneFocusWithoutRepeatedCountsOrToolDescriptions",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianControlCenterOverviewPresentationTests",
+        "file": "Tests/Editor/DeucarianControlCenterOverviewPresentationTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator AttentionPrioritizesErrorsIncludingSectionsAndNavigatesWithoutExecutingAFix()",
+        "line": 32,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "AttentionPrioritizesErrorsIncludingSectionsAndNavigatesWithoutExecutingAFix",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianControlCenterOverviewPresentationTests",
+        "file": "Tests/Editor/DeucarianControlCenterOverviewPresentationTests.cs",
+        "fullSignature": "[Test] public void AConcreteStatusTakesPrecedenceOverAGenericToolDescription()",
+        "line": 62,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "AConcreteStatusTakesPrecedenceOverAGenericToolDescription",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "",
         "file": "Tests/Editor/DeucarianControlCenterResilienceTests.cs",
         "fullSignature": "public sealed class DeucarianControlCenterResilienceTests",
         "line": 11,
@@ -262254,6 +262350,81 @@
         "repository": "Editor",
         "scope": "Test",
         "symbol": "ControlCenterUsesFlatToolRowsAndContentAlignedWrappingCards",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/DeucarianEditorWorkspaceScaleTests.cs",
+        "fullSignature": "public sealed class DeucarianEditorWorkspaceScaleTests",
+        "line": 11,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "DeucarianEditorWorkspaceScaleTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianEditorWorkspaceScaleTests",
+        "file": "Tests/Editor/DeucarianEditorWorkspaceScaleTests.cs",
+        "fullSignature": "[SetUp] public void SavePreference()",
+        "line": 15,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "SavePreference",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianEditorWorkspaceScaleTests",
+        "file": "Tests/Editor/DeucarianEditorWorkspaceScaleTests.cs",
+        "fullSignature": "[TearDown] public void RestorePreference()",
+        "line": 16,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "RestorePreference",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianEditorWorkspaceScaleTests",
+        "file": "Tests/Editor/DeucarianEditorWorkspaceScaleTests.cs",
+        "fullSignature": "[TestCase(-100, 75)] [TestCase(125, 125)] [TestCase(1000, 150)] public void PreferenceClampsAndNotifiesOnlyOnChanges(int requested, int expected)",
+        "line": 18,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "PreferenceClampsAndNotifiesOnlyOnChanges",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Editor.Tests",
+        "containingType": "DeucarianEditorWorkspaceScaleTests",
+        "file": "Tests/Editor/DeucarianEditorWorkspaceScaleTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator ScaleFitsTheViewportPreservesDraftsAndWorksAfterDetachAndReset()",
+        "line": 37,
+        "namespace": "Deucarian.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.editor",
+        "repository": "Editor",
+        "scope": "Test",
+        "symbol": "ScaleFitsTheViewportPreservesDraftsAndWorksAfterDetachAndReset",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -346963,7 +347134,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 6865
+    "testsPublicCount": 6874
   },
   "repositories": [
     {
@@ -349611,10 +349782,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "733b8a053d6109f872953d48c27b664cf0a04a8a",
+        "headCommit": "dd91ec161936ec525ca01468150bf412b8b42a24",
         "origin": "https://github.com/Deucarian/Editor.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "733b8a053d6109f872953d48c27b664cf0a04a8a"
+        "requestedRefCommit": "dd91ec161936ec525ca01468150bf412b8b42a24"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
@@ -349655,13 +349826,13 @@
       },
       "name": "Editor",
       "packageId": "com.deucarian.editor",
-      "packageVersion": "1.5.1",
+      "packageVersion": "1.5.2",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "eedaeb15351d52712076439a399f18a31a5c14d6ea597be87a890babb5559f45",
-        "headCommit": "733b8a053d6109f872953d48c27b664cf0a04a8a",
-        "manifestSha256": "df4805765a9541c9151f6c712708dd0cd928195961e485e6bd92e713d197f4c1",
+        "headCommit": "dd91ec161936ec525ca01468150bf412b8b42a24",
+        "manifestSha256": "fdf5f19e31402f2492d623a75eaccf7c121bf9c0303db8613a87a28357b00c9d",
         "requestedRef": "develop"
       },
       "registryDependencies": [],
