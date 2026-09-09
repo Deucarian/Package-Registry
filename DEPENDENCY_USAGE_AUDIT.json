@@ -2,7 +2,7 @@
   "findings": [
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -354,7 +354,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -1472,7 +1472,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1598,7 +1598,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -1792,7 +1792,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing",
       "referencedAssemblies": [
@@ -1994,7 +1994,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing.udp-integration",
       "referencedAssemblies": [
@@ -2172,7 +2172,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing.webgl-integration",
       "referencedAssemblies": [
@@ -2582,7 +2582,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.diagnostics",
       "referencedAssemblies": [
@@ -2760,7 +2760,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -2944,7 +2944,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.logging",
       "referencedAssemblies": [
@@ -3225,7 +3225,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3824,7 +3824,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -3908,7 +3908,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.pointer-capture",
       "referencedAssemblies": [
@@ -4348,7 +4348,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -4953,7 +4953,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -5364,7 +5364,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-viewer-integration",
       "referencedAssemblies": [
@@ -5902,7 +5902,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.template.game.idle-auto-defense",
       "referencedAssemblies": [
@@ -7117,7 +7117,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.template.game.survivors",
       "referencedAssemblies": [
@@ -9222,7 +9222,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.1",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -9507,7 +9507,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -10240,7 +10240,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -11017,7 +11017,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.0.3",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
