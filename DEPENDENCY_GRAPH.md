@@ -88,7 +88,7 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.7.0 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.editor | 1.8.1 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.7.0 | Pointer-Capture | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |

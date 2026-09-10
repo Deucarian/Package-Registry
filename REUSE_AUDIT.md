@@ -34,7 +34,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | yes | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
 | Diagnostics | com.deucarian.diagnostics | 0.2.3 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 65 |
-| Editor | com.deucarian.editor | 1.8.0 | 2021.3 | yes | clean | (none) | 4 | 907 |
+| Editor | com.deucarian.editor | 1.8.1 | 2021.3 | yes | clean | (none) | 4 | 936 |
 | Encounters | com.deucarian.encounters | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 238 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.3 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1260 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
@@ -48,7 +48,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.9 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 48 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.3.4 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
+| Package-Installer | com.deucarian.package-installer | 1.4.5 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.2 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.6 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 58 |
@@ -88,16 +88,16 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 19510 |
+| Parsed methods/bodies analyzed | 19959 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 139 |
-| Same-symbol semantic candidates | 35 |
+| Same-symbol semantic candidates | 36 |
 | Runtime public API symbols | 10019 |
-| Editor public API symbols | 2951 |
-| Test public symbols excluded from production API | 6961 |
+| Editor public API symbols | 2980 |
+| Test public symbols excluded from production API | 7196 |
 | Sample public symbols excluded from production API | 310 |
-| Internal/private production symbols | 17566 |
-| Public API symbols missing XML documentation | 10627 |
+| Internal/private production symbols | 18004 |
+| Public API symbols missing XML documentation | 10650 |
 | Debug invocation records | 17 |
 | Unity object lifetime records | 1057 |
 | Documentation drift findings | 46 |
