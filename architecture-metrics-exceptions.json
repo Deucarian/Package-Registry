@@ -5,6 +5,33 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.9.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Rechecked for the editor design rollout: this existing owner is unchanged. The same exact allowance is retained; controls and feature gates own instance state and lifecycle."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.9.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Rechecked for the editor design rollout: this existing owner is unchanged. The same exact allowance is retained; controls and feature gates own instance state and lifecycle."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.9.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Rechecked for the editor design rollout: this existing owner is unchanged. The same exact allowance is retained; controls and feature gates own instance state and lifecycle."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.8.0",
         "limits": { "mutableGlobals": 2 },
         "reason": "Rechecked for composed feature sections: the existing motion preference and event owner is unchanged from 1.7.0. No new global owner or increased allowance."
@@ -333,6 +360,15 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.6.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Rechecked for the editor design rollout: this existing owner is unchanged. The same exact allowance is retained; controls and feature gates own instance state and lifecycle."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
