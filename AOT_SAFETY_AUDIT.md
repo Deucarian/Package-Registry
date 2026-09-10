@@ -205,7 +205,7 @@ Mode: `Audit`
 Repository: `Simultria-API`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs`:96 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs`:115 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.simultria-viewer-integration`
 
