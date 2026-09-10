@@ -11919,36 +11919,6 @@
     {
       "assembly": "Deucarian.Theming.Editor.Tests",
       "classification": "Test",
-      "containingSymbol": "DeucarianThemingProjectPageTests::TogglesPersistIndependentlyAndReadOnlyStateKeepsPreviewAccessible",
-      "file": "Tests/Editor/DeucarianThemingProjectPageTests.cs",
-      "invocation": "UnityEngine.Object.DestroyImmediate",
-      "line": 85,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.theming",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Theming",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Theming.Editor.Tests",
-      "classification": "Test",
-      "containingSymbol": "DeucarianThemingProjectSettingsTests::Cleanup",
-      "file": "Tests/Editor/DeucarianThemingProjectSettingsTests.cs",
-      "invocation": "Object.DestroyImmediate",
-      "line": 31,
-      "occurrenceKind": "direct Unity API call",
-      "packageId": "com.deucarian.theming",
-      "policyDisposition": "Allowed",
-      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
-      "policySeverity": "Info",
-      "repository": "Theming",
-      "scope": "Test"
-    },
-    {
-      "assembly": "Deucarian.Theming.Editor.Tests",
-      "classification": "Test",
       "containingSymbol": "DeucarianUIToolkitThemeTypographyTests::TearDown",
       "file": "Tests/Editor/DeucarianUIToolkitThemeTypographyTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -15923,10 +15893,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 1057
+    "Allowed": 1055
   },
   "summary": {
-    "direct Unity API call": 943,
+    "direct Unity API call": 941,
     "helper call site": 113,
     "helper definition": 1
   }
