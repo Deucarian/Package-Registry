@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 55 |
+| RefactorBacklog | 54 |
 | SetupRequired | 9 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 9 |
-| ProductionFileExceedsLineLimit | 55 |
+| ProductionFileExceedsLineLimit | 54 |
 
 ## Repository Status
 
@@ -70,7 +70,7 @@ once.
 | Selection-Suite | com.deucarian.selection-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Session | com.deucarian.session | Compliant | Yes | Yes | 17 | 1 | 0 | 0 |
 | Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
-| Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 40 | 1 | 0 | 0 |
+| Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 41 | 1 | 0 | 0 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | Compliant | Yes | Yes | 54 | 1 | 0 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 138 | 2 | 10 | 0 |
 | Template-Game-Movement-FPS | com.deucarian.template.game.movement-fps | Compliant | Yes | Yes | 62 | 2 | 0 | 0 |
@@ -92,7 +92,7 @@ once.
 | WebGL-Template | com.deucarian.webgl-template | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
 | World-Navigation | com.deucarian.world-navigation | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | World-Spawning | com.deucarian.world-spawning | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
-| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 42 | 2 | 5 | 0 |
+| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 44 | 2 | 4 | 0 |
 | XR-UI-Theming-Integration | com.deucarian.xr-ui.theming-integration | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 
 ## Findings
@@ -159,7 +159,6 @@ once.
 | Viewer-Navigation | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomButtonSettings.cs | 983 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomSelectableFeedback.cs | 930 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.cs | 826 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/XrUiColorPalette.cs | 502 | 500 | Extract responsibilities until the production file is at most 500 lines. |

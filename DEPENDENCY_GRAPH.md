@@ -122,7 +122,7 @@ Schema version: 2
 | com.deucarian.simultria-viewer-integration | com.deucarian.editor | 1.7.0 | Simultria-Viewer-Connection | Editor |
 | com.deucarian.simultria-viewer-integration | com.deucarian.logging | 1.0.4 | Simultria-Viewer-Connection | Logging |
 | com.deucarian.simultria-viewer-integration | com.deucarian.session | 1.0.6 | Simultria-Viewer-Connection | Session |
-| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.1.1 | Simultria-Viewer-Connection | Simultria-API |
+| com.deucarian.simultria-viewer-integration | com.deucarian.simultria-api | 1.2.0 | Simultria-Viewer-Connection | Simultria-API |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.attacks | 0.1.1 | Template-Game-Idle-Auto-Defense | Attacks |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense |
 | com.deucarian.template.game.idle-auto-defense | com.deucarian.auto-defense-suite | 0.1.1 | Template-Game-Idle-Auto-Defense | Auto-Defense-Suite |
@@ -244,7 +244,7 @@ Schema version: 2
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
 | com.deucarian.world-spawning | com.deucarian.gameplay-foundation | 0.1.1 | World-Spawning | Gameplay-Foundation |
 | com.deucarian.xr-ui | com.deucarian.common | 0.2.1 | XR-UI | Common |
-| com.deucarian.xr-ui | com.deucarian.editor | 1.6.0 | XR-UI | Editor |
+| com.deucarian.xr-ui | com.deucarian.editor | 1.7.0 | XR-UI | Editor |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.common | 0.2.1 | XR-UI-Theming-Integration | Common |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.theming | 1.3.0 | XR-UI-Theming-Integration | Theming |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.xr-ui | 0.2.0 | XR-UI-Theming-Integration | XR-UI |
@@ -255,5 +255,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 115
+- Dependency version drift entries: 113
 - Registry dependency drift entries: 0

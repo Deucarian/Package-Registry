@@ -5500,7 +5500,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.1",
+      "declaredVersion": "1.2.0",
       "dependency": "com.deucarian.simultria-api",
       "packageId": "com.deucarian.simultria-viewer-integration",
       "referencedAssemblies": [
@@ -11870,7 +11870,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.xr-ui",
       "referencedAssemblies": [
