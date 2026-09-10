@@ -46,7 +46,7 @@ once.
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | Compliant | Yes | Yes | 20 | 1 | 0 | 0 |
-| Editor | com.deucarian.editor | Compliant | Yes | Yes | 107 | 2 | 0 | 0 |
+| Editor | com.deucarian.editor | Compliant | Yes | Yes | 113 | 2 | 0 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 85 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -60,7 +60,7 @@ once.
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
-| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 168 | 1 | 11 | 0 |
+| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 199 | 1 | 11 | 0 |
 | Package-Registry |  | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Persistence | com.deucarian.persistence | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Pointer-Capture | com.deucarian.pointer-capture | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |

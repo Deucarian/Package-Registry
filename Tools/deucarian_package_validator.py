@@ -29,7 +29,12 @@ from project_package_catalogs import (  # noqa: E402
 SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$")
 PACKAGE_ID_RE = re.compile(r"^com\.deucarian(\.[a-z0-9]+(?:-[a-z0-9]+)*)+$")
 ICON_KEY_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-GIT_URL_RE = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git#(?P<branch>[A-Za-z0-9._/-]+)$")
+GIT_HOST_PATTERN = r"(?:github\.com|bitbucket\.org)"
+GIT_URL_RE = re.compile(
+    rf"(?:https://{GIT_HOST_PATTERN}/|ssh://git@{GIT_HOST_PATTERN}/|git@{GIT_HOST_PATTERN}:)"
+    r"[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9][A-Za-z0-9_.-]*\.git"
+    r"#(?P<branch>[A-Za-z0-9._/-]+)\Z"
+)
 README_VERSION_PATTERNS = (
     re.compile(r"Current package version\s*[:|]\s*`?(\d+\.\d+\.\d+)`?", re.I),
     re.compile(r"\|\s*Package version\s*\|\s*`?(\d+\.\d+\.\d+)`?\s*\|", re.I),
@@ -698,7 +703,7 @@ class Validator:
             value = entry.get(field, "")
             match = GIT_URL_RE.match(value)
             if not match:
-                self.fail(f"{package_id}: registry {field} must be a GitHub URL with branch fragment.")
+                self.fail(f"{package_id}: registry {field} must be a credential-free GitHub or Bitbucket Cloud HTTPS/SSH Git URL with branch fragment.")
             elif field == "stableUrl" and match.group("branch") != "main":
                 self.fail(f"{package_id}: stableUrl must target #main.")
             elif field == "developmentUrl" and match.group("branch") != "develop":
@@ -1038,7 +1043,7 @@ class Validator:
                 url = pkg.get(field, "")
                 match = GIT_URL_RE.match(str(url))
                 if not match:
-                    self.fail(f"{package_id}: {field} must be a GitHub URL with branch fragment.")
+                    self.fail(f"{package_id}: {field} must be a credential-free GitHub or Bitbucket Cloud HTTPS/SSH Git URL with branch fragment.")
                 elif match.group("branch") != branch:
                     self.fail(f"{package_id}: {field} must target #{branch}.")
                 elif self.check_remote_urls and not self.git_ref_exists(url):

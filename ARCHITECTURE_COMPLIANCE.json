@@ -1048,7 +1048,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 107,
+      "productionFileCount": 113,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -1388,7 +1388,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 168,
+      "productionFileCount": 199,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,

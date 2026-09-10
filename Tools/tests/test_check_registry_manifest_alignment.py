@@ -88,6 +88,38 @@ class AlignmentFixture:
 
 
 class RegistryManifestAlignmentTests(unittest.TestCase):
+    def test_repository_identity_accepts_both_providers_and_ssh_transports(self) -> None:
+        for host in ("github.com", "bitbucket.org"):
+            expected = f"https://{host}/migration-workspace/Package.git"
+            for value in (expected, f"ssh://git@{host}/migration-workspace/Package.git", f"git@{host}:migration-workspace/Package.git"):
+                with self.subTest(value=value):
+                    self.assertEqual("Package", alignment.repo_name_from_url(value + "#develop"))
+                    self.assertEqual(expected, alignment.normalize_repo_url(value + "#develop"))
+                    self.assertEqual("Package", alignment.repo_name_from_url("git+" + value))
+
+    def test_repository_name_rejects_unknown_hosts_credentials_and_empty_tokens(self) -> None:
+        for value in ("", " ", "origin", "https://evilgithub.com/Deucarian/Package.git", "https://bitbucket.org.example.com/workspace/Package.git", "https://user@bitbucket.org/workspace/Package.git"):
+            with self.subTest(value=value):
+                self.assertEqual("", alignment.repo_name_from_url(value))
+
+    def test_bitbucket_catalog_matches_ssh_manifest_without_changing_identity(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            fixture = AlignmentFixture(Path(temp))
+            registry = alignment.read_json(fixture.registry / "packages.json")
+            registry["packages"][0]["stableUrl"] = "https://bitbucket.org/new-workspace/Alpha.git#main"
+            registry["packages"][0]["developmentUrl"] = "https://bitbucket.org/new-workspace/Alpha.git#develop"
+            registry["packages"][0]["sourceVisibility"] = "private"
+            write_json(fixture.registry / "packages.json", registry)
+            manifest_path = fixture.root / "Alpha/package.json"
+            manifest = alignment.read_json(manifest_path)
+            manifest["repository"]["url"] = "ssh://git@bitbucket.org/new-workspace/Alpha.git"
+            write_json(manifest_path, manifest)
+
+            report = fixture.report()
+
+            self.assertTrue(report["ok"], report)
+            self.assertEqual(2, report["checkedPackages"])
+
     def test_repo_name_parser_accepts_git_remote_line_tokens(self) -> None:
         self.assertEqual(
             "Package-Installer",

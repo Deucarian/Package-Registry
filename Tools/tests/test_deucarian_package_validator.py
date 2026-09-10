@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 SCRIPT_PATH = Path(__file__).resolve().parents[1] / "deucarian_package_validator.py"
@@ -202,6 +203,77 @@ class ValidatorFixture:
 
 
 class DeucarianPackageValidatorTests(unittest.TestCase):
+    def test_registry_accepts_github_and_private_bitbucket_cloud_channels(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        for host in ("github.com", "bitbucket.org"):
+            for prefix in (f"https://{host}/", f"ssh://git@{host}/", f"git@{host}:"):
+                with self.subTest(prefix=prefix):
+                    validator = validator_module.Validator(registry_root)
+                    package = validator.packages["packages"][0]
+                    package["sourceVisibility"] = "private"
+                    package["stableUrl"] = prefix + "migration-workspace/Package.git#main"
+                    package["developmentUrl"] = prefix + "migration-workspace/Package.git#develop"
+
+                    validator.validate_registry_schema()
+                    validator.validate_registry_entry(package["id"], {})
+
+                    self.assertEqual([], validator.errors)
+
+    def test_registry_rejects_credentials_hosts_and_noncanonical_channel_urls(self) -> None:
+        invalid_urls = (
+            "https://user@bitbucket.org/workspace/package.git#main",
+            "https://user:example-password@bitbucket.org/workspace/package.git#main",
+            "ssh://user@bitbucket.org/workspace/package.git#main",
+            "https://bitbucket.org.example.com/workspace/package.git#main",
+            "https://bitbucket.example.com/workspace/package.git#main",
+            "https://bitbucket.org:443/workspace/package.git#main",
+            "https://bitbucket.org/workspace/package.git?path=/nested#main",
+            "https://bitbucket.org/workspace/package.git#main\n",
+            "git://bitbucket.org/workspace/package.git#main",
+            "file:///fixture/package.git#main",
+            "https://bitbucket.org/workspace/package.git",
+        )
+        registry_root = Path(__file__).resolve().parents[2]
+        for url in invalid_urls:
+            with self.subTest(url=url):
+                validator = validator_module.Validator(registry_root)
+                package = validator.packages["packages"][0]
+                package["stableUrl"] = url
+
+                validator.validate_registry_schema()
+                validator.validate_registry_entry(package["id"], {})
+
+                self.assertEqual(2, len(validator.errors))
+                self.assertTrue(all("credential-free GitHub or Bitbucket Cloud" in error for error in validator.errors))
+                self.assertTrue(all(url not in error for error in validator.errors))
+
+    def test_bitbucket_channels_still_require_main_and_develop(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        package = validator.packages["packages"][0]
+        package["stableUrl"] = "git@bitbucket.org:workspace/package.git#develop"
+        package["developmentUrl"] = "https://bitbucket.org/workspace/package.git#feature/change"
+
+        validator.validate_registry_schema()
+        validator.validate_registry_entry(package["id"], {})
+
+        self.assertEqual(4, len(validator.errors))
+        self.assertTrue(all("must target #" in error for error in validator.errors))
+
+    def test_private_bitbucket_reachability_uses_native_git_authentication(self) -> None:
+        registry_root = Path(__file__).resolve().parents[2]
+        validator = validator_module.Validator(registry_root)
+        for base in ("https://bitbucket.org/workspace/package.git", "git@bitbucket.org:workspace/package.git"):
+            with self.subTest(base=base), mock.patch.object(validator_module.subprocess, "run") as run:
+                run.return_value = mock.Mock(returncode=0, stdout="a" * 40 + "\trefs/heads/develop\n")
+
+                self.assertTrue(validator.git_ref_exists(base + "#develop"))
+
+                run.assert_called_once_with(
+                    ["git", "ls-remote", "--heads", base, "develop"],
+                    capture_output=True, text=True, timeout=30,
+                )
+
     def test_runtime_cannot_reference_a_local_or_catalog_editor_assembly(self) -> None:
         registry_root = Path(__file__).resolve().parents[2]
         validator = validator_module.Validator(registry_root)
