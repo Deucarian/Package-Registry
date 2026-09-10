@@ -669,6 +669,41 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
             self.assertFalse(coverage["complete"])
             self.assertEqual(["Bootstrap", "Package-Registry"], coverage["missingRepositories"])
 
+    def test_audit_normalizes_github_and_bitbucket_ssh_repository_identities(self) -> None:
+        for host in ("github.com", "bitbucket.org"):
+            expected = f"https://{host}/migration-workspace/Package.git"
+            for value in (expected, f"ssh://git@{host}/migration-workspace/Package.git", f"git@{host}:migration-workspace/Package.git"):
+                with self.subTest(value=value):
+                    self.assertEqual(expected, audit.normalize_git_url(value + "#develop"))
+                    self.assertEqual(expected, audit.normalize_git_url("git+" + value))
+                    self.assertEqual(audit.git_url_key(expected), audit.git_url_key(value))
+                    self.assertEqual("Package", audit.repository_name_from_url(value))
+        self.assertNotEqual(
+            audit.git_url_key("https://github.com/workspace/Package.git"),
+            audit.git_url_key("https://bitbucket.org/workspace/Package.git"),
+        )
+
+    def test_private_bitbucket_packages_are_not_provisioned_by_public_audit(self) -> None:
+        document = {"packages": [
+            {"id": "com.deucarian.public", "developmentUrl": "git@bitbucket.org:workspace/Public.git#develop"},
+            {"id": "com.deucarian.private", "developmentUrl": "ssh://git@bitbucket.org/workspace/Private.git#develop", "sourceVisibility": "private"},
+        ]}
+
+        specs = audit.expected_repository_specs(document, "Deucarian", "develop")
+
+        self.assertEqual(["Bootstrap", "Package-Registry", "Public"], [item["name"] for item in specs])
+        public = next(item for item in specs if item["name"] == "Public")
+        self.assertEqual("https://bitbucket.org/workspace/Public.git", public["canonicalUrl"])
+
+    def test_cross_provider_repository_name_collisions_still_fail_closed(self) -> None:
+        document = {"packages": [
+            {"id": "com.deucarian.alpha", "developmentUrl": "https://github.com/Deucarian/Package.git#develop"},
+            {"id": "com.deucarian.beta", "developmentUrl": "https://bitbucket.org/workspace/Package.git#develop"},
+        ]}
+
+        with self.assertRaisesRegex(RuntimeError, "mapping is not one-to-one"):
+            audit.expected_repository_specs(document, "Deucarian", "develop")
+
     def test_configured_assembly_roles_override_path_and_test_constraints_are_not_optional_guards(self) -> None:
         governance = {
             "testAssemblies": ["Deucarian.Feature.Validation"],

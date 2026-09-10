@@ -21,6 +21,32 @@ branches, force pushes, resets, cleans, merges and rebases are outside this UI.
 Use existing Git authentication and hooks. Do not collect credentials or expose
 raw process diagnostics, application payloads or secrets in status snapshots.
 
+## Git hosts and pull requests
+
+GitHub and Bitbucket Cloud package repositories use the same local workflow:
+connect the package checkout, edit and test in Unity, commit and push the feature
+branch, then open the provider's pull-request page in the browser. Existing Git
+tools remain valid for editing, branches, commits and pushes. Installer owns the
+source connection and safe restoration; it does not need to become a complete
+Git client or pull-request review tool.
+
+The browser handoff is an explicit action against the verified package remote
+and selected source/destination branches. Browser login, PR submission, reviewers,
+checks and merging stay with the provider. Opening the page must not submit a PR,
+push a branch or merge it. Do not collect provider tokens to build this handoff.
+
+Private GitHub and Bitbucket Cloud packages reuse configured Git credentials or
+SSH authentication for package access. Credential-free HTTPS and `git` SSH
+remote forms identify the same repository on each host; a host or workspace
+change is still a different repository and requires explicit verification.
+Private packages remain subject to the [distribution policy](../DISTRIBUTION_POLICY.md)
+and authenticated package validation. Bitbucket Data Center is outside this scope.
+
+After testing, restore the original package reference before committing consumer
+configuration. The package checkout and its work remain available for review.
+Merging the package PR does not silently update applications: install the chosen
+updated revision through Installer as a separate deliberate consumer change.
+
 ## Disposable source-switching fixtures
 
 Installer implementation, review and validation hosts continue to consume
