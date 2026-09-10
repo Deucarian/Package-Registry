@@ -34,7 +34,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | yes | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
 | Diagnostics | com.deucarian.diagnostics | 0.2.3 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 65 |
-| Editor | com.deucarian.editor | 1.9.0 | 2021.3 | yes | clean | (none) | 4 | 963 |
+| Editor | com.deucarian.editor | 1.9.1 | 2021.3 | yes | clean | (none) | 4 | 963 |
 | Encounters | com.deucarian.encounters | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 238 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.3 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1260 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
@@ -88,13 +88,13 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 19992 |
+| Parsed methods/bodies analyzed | 19993 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 139 |
 | Same-symbol semantic candidates | 36 |
 | Runtime public API symbols | 10019 |
 | Editor public API symbols | 3013 |
-| Test public symbols excluded from production API | 7208 |
+| Test public symbols excluded from production API | 7209 |
 | Sample public symbols excluded from production API | 310 |
 | Internal/private production symbols | 18019 |
 | Public API symbols missing XML documentation | 10682 |
