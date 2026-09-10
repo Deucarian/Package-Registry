@@ -1389,7 +1389,7 @@
           }
         ],
         "packageId": "com.deucarian.package-installer",
-        "productionFileCount": 166,
+        "productionFileCount": 168,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Package-Installer",
         "sharedValidationPresent": true,
@@ -24094,7 +24094,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 19419,
+    "methodCountAnalyzed": 19439,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -36110,7 +36110,7 @@
           "UnityEngine.Object",
           "UnityEngine.Object.DestroyImmediate"
         ],
-        "estimatedDuplicatedLines": 1435,
+        "estimatedDuplicatedLines": 1442,
         "extractionConfidence": "medium",
         "groupKey": "dispose",
         "occurrences": [
@@ -37035,6 +37035,27 @@
             "repository": "ObjectSelection-CoreState-Integration",
             "runtimeUnityApi": true,
             "scope": "Test",
+            "signature": "public void Dispose()",
+            "symbol": "Dispose",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.PackageInstaller.Editor",
+            "async": false,
+            "containingType": "PackageInstallerWindow.InstallerWorkspace",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/PackageInstallerWindow.Workspace.cs",
+            "iterator": false,
+            "line": 177,
+            "lineCount": 7,
+            "namespace": "Deucarian.PackageInstaller.Editor",
+            "normalizedHash": "99ad8e94a72590d7db203d5522b0f348e10ed7849da1ac8380d600dfb832af6a",
+            "packageId": "com.deucarian.package-installer",
+            "repository": "Package-Installer",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
             "signature": "public void Dispose()",
             "symbol": "Dispose",
             "symbolKind": "method",
@@ -47686,7 +47707,7 @@
       }
     ],
     "editorProductionCount": 2936,
-    "internalPrivateProductionCount": 17487,
+    "internalPrivateProductionCount": 17510,
     "missingXmlDocumentationCount": 10605,
     "runtimeProductionCount": 10008,
     "samples": [
@@ -286017,6 +286038,81 @@
       },
       {
         "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerLoadingTests",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator LocalReadRunsOffTheEditorThreadAndPollingDoesNotWait()",
+        "line": 18,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "LocalReadRunsOffTheEditorThreadAndPollingDoesNotWait",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerLoadingTests",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator WorkerFailureBecomesACompletedFailureResult()",
+        "line": 54,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "WorkerFailureBecomesACompletedFailureResult",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerLoadingTests",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator RealBundledCatalogCanBeParsedOnTheWorker()",
+        "line": 66,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "RealBundledCatalogCanBeParsedOnTheWorker",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerLoadingTests",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "fullSignature": "[Test] public void PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately()",
+        "line": 81,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "containingType": "PackageInstallerLoadingTests",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "fullSignature": "[Test] public void RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch()",
+        "line": 125,
+        "namespace": "Deucarian.PackageInstaller.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.package-installer",
+        "repository": "Package-Installer",
+        "scope": "Test",
+        "symbol": "RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
         "containingType": "PackageInstallerLoggingTests",
         "file": "Tests/Editor/PackageInstallerLoggingTests.cs",
         "fullSignature": "[SetUp] public void SetUp()",
@@ -350351,7 +350447,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 6923
+    "testsPublicCount": 6928
   },
   "repositories": [
     {
@@ -355024,10 +355120,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "3845266ec62300522006a536061549cd85673090",
+        "headCommit": "39a750164dbf9b7db535d51ee4bac4d4ebcef8b2",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "3845266ec62300522006a536061549cd85673090"
+        "requestedRefCommit": "39a750164dbf9b7db535d51ee4bac4d4ebcef8b2"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -355067,13 +355163,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.3.3",
+      "packageVersion": "1.3.4",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "3845266ec62300522006a536061549cd85673090",
-        "manifestSha256": "d7e6007982cea15488b982f55cf590446ac695151da0356ae311e658ad4a4392",
+        "headCommit": "39a750164dbf9b7db535d51ee4bac4d4ebcef8b2",
+        "manifestSha256": "00720bb331ab3158c335ec5956acf5c3e60f84ce9171dc33cbc5b48400a1e721",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -363932,6 +364028,51 @@
         "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
         "policySeverity": "Info",
         "repository": "ObjectSelection-CoreState-Integration",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "classification": "Test",
+        "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 111,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.package-installer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Package-Installer",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "classification": "Test",
+        "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 118,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.package-installer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Package-Installer",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+        "classification": "Test",
+        "containingSymbol": "PackageInstallerLoadingTests::RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch",
+        "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 155,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.package-installer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Package-Installer",
         "scope": "Test"
       },
       {
@@ -376716,10 +376857,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1051
+      "Allowed": 1054
     },
     "summary": {
-      "direct Unity API call": 937,
+      "direct Unity API call": 940,
       "helper call site": 113,
       "helper definition": 1
     }
