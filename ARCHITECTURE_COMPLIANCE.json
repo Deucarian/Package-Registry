@@ -1048,7 +1048,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 113,
+      "productionFileCount": 117,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -1859,7 +1859,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 145,
+      "productionFileCount": 146,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
