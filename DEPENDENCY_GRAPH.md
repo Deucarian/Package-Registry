@@ -186,7 +186,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.2 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.1 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.test-automation | com.deucarian.editor | 1.6.0 | Test-Automation | Editor |
-| com.deucarian.theming | com.deucarian.editor | 1.7.0 | Theming | Editor |
+| com.deucarian.theming | com.deucarian.editor | 1.8.0 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
 | com.deucarian.theming | com.deucarian.media | 0.1.0 | Theming | Media |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -255,5 +255,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 113
+- Dependency version drift entries: 135
 - Registry dependency drift entries: 0

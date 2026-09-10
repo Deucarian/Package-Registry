@@ -9222,7 +9222,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.7.0",
+      "declaredVersion": "1.8.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -9362,6 +9362,20 @@
           "includePlatforms": [],
           "reference": "Deucarian.Media.Unity",
           "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/Editor/Deucarian.Theming.Editor.Tests.asmdef",
+          "assembly": "Deucarian.Theming.Editor.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Media.Unity",
+          "scope": "Test",
           "versionDefines": []
         }
       ],
