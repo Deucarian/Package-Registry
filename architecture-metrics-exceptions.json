@@ -5,6 +5,27 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.8.0",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Rechecked for composed feature sections: the existing motion preference and event owner is unchanged from 1.7.0. No new global owner or increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.8.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "The project-local appearance event and fixed scale dock are unchanged from 1.7.0. Feature sections own instance state and commands; no increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.8.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "The bounded recent-tool and favorites preference owner is unchanged from 1.7.0. New submenu labels preserve stable IDs; no increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.3.1",
         "limits": {
           "mutableGlobals": 2
@@ -285,6 +306,13 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.5.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "The scene preview generation owner is unchanged from 1.4.4. Project adoption controls reuse the existing settings resource; connection observers are instance-owned and disposed on page deactivation. No increased allowance."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
