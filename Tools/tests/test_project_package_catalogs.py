@@ -90,6 +90,19 @@ def write_json(path: Path, data: object, *, compact: bool = False) -> None:
 
 
 class PackageCatalogProjectionTests(unittest.TestCase):
+    def test_both_projections_preserve_explicit_bitbucket_git_channels(self) -> None:
+        registry = registry_fixture()
+        package = next(item for item in registry["packages"] if item["id"] == "com.deucarian.editor")
+        package["stableUrl"] = "https://bitbucket.org/migration-workspace/editor.git#main"
+        package["developmentUrl"] = "ssh://git@bitbucket.org/migration-workspace/editor.git#develop"
+        package["sourceVisibility"] = "private"
+
+        for project in (projection.project_installer_catalog, projection.project_bootstrap_catalog):
+            with self.subTest(project=project.__name__):
+                projected = next(item for item in project(registry)["packages"] if item["id"] == package["id"])
+                self.assertEqual(package["stableUrl"], projected["stableUrl"])
+                self.assertEqual(package["developmentUrl"], projected["developmentUrl"])
+
     def test_installer_projection_is_the_full_canonical_catalog(self) -> None:
         registry = registry_fixture()
 

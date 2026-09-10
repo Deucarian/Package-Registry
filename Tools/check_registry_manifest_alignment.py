@@ -17,7 +17,12 @@ from typing import Any
 
 
 DEUCARIAN_PACKAGE_PREFIX = "com.deucarian."
-DEUCARIAN_REPO_RE = re.compile(r"github\.com[:/]Deucarian/([^/#?]+?)(?:\.git)?(?:[?#].*)?$", re.I)
+GIT_HOST_PATTERN = r"(?:github\.com|bitbucket\.org)"
+DEUCARIAN_REPO_RE = re.compile(
+    rf"(?:git\+)?(?:(?:https://|git://|ssh://git@){GIT_HOST_PATTERN}/|git@{GIT_HOST_PATTERN}:)"
+    r"[A-Za-z0-9][A-Za-z0-9_.-]*/([A-Za-z0-9][A-Za-z0-9_.-]*?)(?:\.git)?\Z",
+    re.I,
+)
 
 
 def read_json(path: Path) -> Any:
@@ -36,7 +41,8 @@ def package_repo_name(package: dict[str, Any]) -> str:
 
 
 def repo_name_from_url(url: str) -> str:
-    match = DEUCARIAN_REPO_RE.search(strip_url_ref(url).split()[0])
+    tokens = strip_url_ref(url).split()
+    match = DEUCARIAN_REPO_RE.fullmatch(tokens[0]) if tokens else None
     return match.group(1) if match else ""
 
 
@@ -51,10 +57,10 @@ def normalize_repo_url(url: str) -> str:
     value = strip_url_ref(url)
     if value.startswith("git+"):
         value = value[4:]
-    if value.startswith("git://github.com/"):
-        value = "https://github.com/" + value[len("git://github.com/") :]
-    if value.startswith("git@github.com:"):
-        value = "https://github.com/" + value[len("git@github.com:") :]
+    for host in ("github.com", "bitbucket.org"):
+        for prefix in (f"git://{host}/", f"git@{host}:", f"ssh://git@{host}/"):
+            if value.startswith(prefix):
+                value = f"https://{host}/" + value[len(prefix) :]
     value = value.rstrip("/")
     if value and not value.endswith(".git"):
         value += ".git"

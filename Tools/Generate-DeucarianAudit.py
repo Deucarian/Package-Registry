@@ -1340,10 +1340,10 @@ def normalize_git_url(url: str) -> str:
     if value.startswith("git+"):
         value = value[4:]
     value = value.split("#", 1)[0].split("?", 1)[0].rstrip("/")
-    if value.startswith("git@github.com:"):
-        value = "https://github.com/" + value[len("git@github.com:") :]
-    elif value.startswith("ssh://git@github.com/"):
-        value = "https://github.com/" + value[len("ssh://git@github.com/") :]
+    for host in ("github.com", "bitbucket.org"):
+        for prefix in (f"git@{host}:", f"ssh://git@{host}/"):
+            if value.startswith(prefix):
+                value = f"https://{host}/" + value[len(prefix) :]
     parsed = urlsplit(value)
     if parsed.scheme and parsed.netloc:
         value = f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{parsed.path.rstrip('/')}"
