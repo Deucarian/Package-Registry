@@ -77,8 +77,8 @@ Schema version: 2
 | com.deucarian.media.api-integration | com.deucarian.media | 0.1.0 | Media-API-Integration | Media |
 | com.deucarian.notifications | com.deucarian.common | 0.2.1 | Notifications | Common |
 | com.deucarian.notifications | com.deucarian.diagnostics | 0.1.6 | Notifications | Diagnostics |
-| com.deucarian.notifications | com.deucarian.editor | 1.7.0 | Notifications | Editor |
-| com.deucarian.notifications | com.deucarian.theming | 1.4.2 | Notifications | Theming |
+| com.deucarian.notifications | com.deucarian.editor | 1.9.0 | Notifications | Editor |
+| com.deucarian.notifications | com.deucarian.theming | 1.6.0 | Notifications | Theming |
 | com.deucarian.notifications | com.deucarian.ui | 0.3.0 | Notifications | UI |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
@@ -88,7 +88,7 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.8.1 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.editor | 1.9.0 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.7.0 | Pointer-Capture | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
@@ -186,7 +186,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.2 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.1 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.test-automation | com.deucarian.editor | 1.6.0 | Test-Automation | Editor |
-| com.deucarian.theming | com.deucarian.editor | 1.8.0 | Theming | Editor |
+| com.deucarian.theming | com.deucarian.editor | 1.9.0 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
 | com.deucarian.theming | com.deucarian.media | 0.1.0 | Theming | Media |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -255,5 +255,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 135
+- Dependency version drift entries: 132
 - Registry dependency drift entries: 0

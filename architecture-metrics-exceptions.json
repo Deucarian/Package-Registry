@@ -5,6 +5,27 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.9.1",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Rechecked for shared control geometry fixes: this preference owner is unchanged from 1.9.0. No added global state or increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.9.1",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for shared control geometry fixes: this appearance event owner is unchanged from 1.9.0. No added global state or increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.9.1",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for shared control geometry fixes: this bounded preference owner is unchanged from 1.9.0. No added global state or increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.9.0",
         "limits": {
           "mutableGlobals": 2

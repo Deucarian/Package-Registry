@@ -11937,7 +11937,7 @@
       "containingSymbol": "DeucarianThemingProjectSettingsTests::Cleanup",
       "file": "Tests/Editor/DeucarianThemingProjectSettingsTests.cs",
       "invocation": "Object.DestroyImmediate",
-      "line": 31,
+      "line": 33,
       "occurrenceKind": "direct Unity API call",
       "packageId": "com.deucarian.theming",
       "policyDisposition": "Allowed",
