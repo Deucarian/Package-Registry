@@ -1,6 +1,6 @@
 {
   "organization": "Deucarian",
-  "ref": "main",
+  "ref": "develop",
   "repositories": [
     {
       "categories": {
@@ -217,7 +217,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/CommandDispatcher.cs",
-          "line": 152,
+          "line": 156,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -231,7 +231,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/CommandTransportBridge.cs",
-          "line": 191,
+          "line": 194,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }
@@ -274,10 +274,10 @@
     },
     {
       "categories": {
-        "reflection-based-newtonsoft": 2
+        "reflection-based-newtonsoft": 1
       },
       "errors": [],
-      "findingCount": 2,
+      "findingCount": 1,
       "findings": [
         {
           "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
@@ -285,13 +285,6 @@
           "line": 165,
           "rule": "reflection-based-newtonsoft",
           "symbol": "JsonConvert.DeserializeObject<WebGlInboundMessage>"
-        },
-        {
-          "description": "Newtonsoft object mapping discovers constructors and members through reflection.",
-          "file": "Runtime/WebGlCommandTransport.cs",
-          "line": 217,
-          "rule": "reflection-based-newtonsoft",
-          "symbol": "JsonConvert.SerializeObject"
         }
       ],
       "mode": "Audit",
@@ -764,7 +757,7 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs",
-          "line": 112,
+          "line": 115,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }
@@ -779,10 +772,10 @@
     {
       "categories": {
         "reflection-based-newtonsoft": 2,
-        "runtime-type-discovery": 4
+        "runtime-type-discovery": 2
       },
       "errors": [],
-      "findingCount": 6,
+      "findingCount": 4,
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
@@ -795,20 +788,6 @@
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs",
           "line": 316,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        },
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
-          "line": 68,
-          "rule": "runtime-type-discovery",
-          "symbol": ".GetType"
-        },
-        {
-          "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/Development/SimultriaViewerBuildConnectionGate.cs",
-          "line": 107,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
@@ -1345,9 +1324,9 @@
   "schemaVersion": 1,
   "summary": {
     "categoryCounts": {
-      "reflection-based-newtonsoft": 13,
+      "reflection-based-newtonsoft": 12,
       "reflective-invocation": 10,
-      "runtime-type-discovery": 48
+      "runtime-type-discovery": 46
     },
     "cleanRepositoryCount": 42,
     "modeCounts": {
@@ -1355,7 +1334,7 @@
     },
     "repositoriesWithFindings": 22,
     "repositoryCount": 64,
-    "totalFindingCount": 71,
+    "totalFindingCount": 68,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
   }
