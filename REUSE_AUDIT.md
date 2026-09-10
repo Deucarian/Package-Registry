@@ -39,7 +39,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.3 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1260 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
 | Idle-Progression | com.deucarian.idle-progression | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.progression | 3 | 24 |
-| Logging | com.deucarian.logging | 1.0.6 | 2021.3 | yes | clean | com.deucarian.editor | 5 | 69 |
+| Logging | com.deucarian.logging | 1.0.7 | 2021.3 | yes | clean | com.deucarian.editor | 5 | 70 |
 | Media | com.deucarian.media | 0.1.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.modules.audio, com.unity.modules.unitywebrequest, com.unity.modules.unitywebrequestaudio, com.unity.modules.video | 4 | 103 |
 | Media-API-Integration | com.deucarian.media.api-integration | 0.1.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.media | 3 | 13 |
 | Monetization | com.deucarian.monetization | 0.1.1 | 6000.3 | yes | clean | (none) | 3 | 76 |
@@ -88,15 +88,15 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 19439 |
+| Parsed methods/bodies analyzed | 19450 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 138 |
 | Same-symbol semantic candidates | 35 |
 | Runtime public API symbols | 10008 |
-| Editor public API symbols | 2936 |
-| Test public symbols excluded from production API | 6928 |
+| Editor public API symbols | 2937 |
+| Test public symbols excluded from production API | 6934 |
 | Sample public symbols excluded from production API | 310 |
-| Internal/private production symbols | 17510 |
+| Internal/private production symbols | 17521 |
 | Public API symbols missing XML documentation | 10605 |
 | Debug invocation records | 17 |
 | Unity object lifetime records | 1054 |
