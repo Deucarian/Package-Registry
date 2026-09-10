@@ -9,7 +9,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 - Repositories scanned: **64**
 - Repositories with findings: **22**
 - Clean repositories: **42**
-- Unresolved findings: **71**
+- Unresolved findings: **68**
 - Suppressed findings: **0**
 - Validation failures: **0**
 
@@ -17,9 +17,9 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 | Rule | Count |
 | --- | ---: |
-| `reflection-based-newtonsoft` | 13 |
+| `reflection-based-newtonsoft` | 12 |
 | `reflective-invocation` | 10 |
-| `runtime-type-discovery` | 48 |
+| `runtime-type-discovery` | 46 |
 
 ## Repository Status
 
@@ -38,7 +38,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.combat` | `Combat` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.command-routing` | `Command-Routing` | `Audit` | 3 | 0 | Valid |
 | `com.deucarian.command-routing.udp-integration` | `Command-Routing-UDP-Integration` | `Audit` | 2 | 0 | Valid |
-| `com.deucarian.command-routing.webgl-integration` | `Command-Routing-WebGL-Integration` | `Audit` | 2 | 0 | Valid |
+| `com.deucarian.command-routing.webgl-integration` | `Command-Routing-WebGL-Integration` | `Audit` | 1 | 0 | Valid |
 | `com.deucarian.common` | `Common` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.core-state` | `Core-State` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.defense-games` | `Defense-Games` | `Audit` | 0 | 0 | Valid |
@@ -67,7 +67,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.session` | `Session` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.session.api-integration` | `Session-API-Integration` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.simultria-api` | `Simultria-API` | `Audit` | 1 | 0 | Valid |
-| `com.deucarian.simultria-viewer-integration` | `Simultria-Viewer-Connection` | `Audit` | 6 | 0 | Valid |
+| `com.deucarian.simultria-viewer-integration` | `Simultria-Viewer-Connection` | `Audit` | 4 | 0 | Valid |
 | `com.deucarian.template.game.idle-auto-defense` | `Template-Game-Idle-Auto-Defense` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.movement-fps` | `Template-Game-Movement-FPS` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.template.game.survivors` | `Template-Game-Survivors` | `Audit` | 4 | 0 | Valid |
@@ -124,9 +124,9 @@ Mode: `Audit`
 Repository: `Command-Routing`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/CommandDispatcher.cs`:152 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/CommandDispatcher.cs`:156 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.ToObject<T>` at `Runtime/CommandEnvelope.cs`:50 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/CommandTransportBridge.cs`:191 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/CommandTransportBridge.cs`:194 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.command-routing.udp-integration`
 
@@ -142,7 +142,6 @@ Repository: `Command-Routing-WebGL-Integration`
 Mode: `Audit`
 
 - `reflection-based-newtonsoft` — `JsonConvert.DeserializeObject<WebGlInboundMessage>` at `Runtime/WebGlCommandTransport.cs`:165 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
-- `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/WebGlCommandTransport.cs`:217 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 
 ### `com.deucarian.diagnostics`
 
@@ -206,7 +205,7 @@ Mode: `Audit`
 Repository: `Simultria-API`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs`:112 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/UnityBuildRouting/SimultriaUnityBuildRoutingService.cs`:115 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.simultria-viewer-integration`
 
@@ -215,8 +214,6 @@ Mode: `Audit`
 
 - `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerConnectionAuthentication.cs`:298 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Authentication/SimultriaViewerRuntimeConnectionProvider.cs`:316 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:68 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Development/SimultriaViewerBuildConnectionGate.cs`:107 (`Runtime type/member discovery must be generated or explicitly composed.`)
 - `reflection-based-newtonsoft` — `.FromObject` at `Runtime/Initialization/SimultriaViewerInitializationCommand.cs`:32 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `reflection-based-newtonsoft` — `.FromObject` at `Runtime/Initialization/SimultriaViewerInitializationCommand.cs`:57 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 

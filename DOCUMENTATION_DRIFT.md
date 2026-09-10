@@ -8,8 +8,8 @@ Schema version: 1
 | --- | --- |
 | Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
-| Migration documentation | 10 |
-| Review required | 14 |
+| Migration documentation | 11 |
+| Review required | 16 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -25,6 +25,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Command-Routing-WebGL-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Defense-Games | Review required | Documentation~/CrossGenre.md |  |  |  |
 | Diagnostics | Review required | README.md |  |  |  |
+| Editor | Review required | AGENTS.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Logging | Legitimate generic bridge term | README.md |  |  |  |
 | Notifications | Historical changelog reference | CHANGELOG.md |  |  |  |
@@ -46,9 +47,11 @@ Historical changelog references preserve released history and are not rewrite re
 | Session-API-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Simultria-API | Review required | Documentation~/index.md |  |  |  |
 | Simultria-Viewer-Connection | Migration documentation | README.md |  |  |  |
+| Template-Game-Movement-FPS | Review required | Documentation~/gameplay-composition.md |  |  |  |
 | Template-Game-Survivors | Migration documentation | Documentation~/validation.md |  |  |  |
 | Template-Game-Survivors | Review required | Documentation~/game-content-authoring.md |  |  |  |
 | Template-Viewer-Web | Historical changelog reference | CHANGELOG.md |  |  |  |
+| Template-Viewer-Web | Migration documentation | README.md |  |  |  |
 | Template-Viewer-Web | Review required | Documentation~/architecture.md |  |  |  |
 | Test-Automation | Review required | Documentation~/lifecycle.md |  |  |  |
 | UI-Binding | Historical changelog reference | CHANGELOG.md |  |  |  |

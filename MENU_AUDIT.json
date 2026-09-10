@@ -3,7 +3,7 @@
   "entries": [
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 41,
+      "line": 43,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Advanced/Developer Tools...",
       "repository": "Editor",
@@ -11,7 +11,7 @@
     },
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 47,
+      "line": 49,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Advanced/Legacy Shortcuts...",
       "repository": "Editor",
@@ -35,7 +35,7 @@
     },
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 35,
+      "line": 37,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Control Center...",
       "repository": "Editor",

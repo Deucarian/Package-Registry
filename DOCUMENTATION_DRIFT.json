@@ -49,6 +49,12 @@
       "repository": "Diagnostics"
     },
     {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.logging",
@@ -175,6 +181,12 @@
       "repository": "Simultria-Viewer-Connection"
     },
     {
+      "file": "Documentation~/gameplay-composition.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.template.game.movement-fps",
+      "repository": "Template-Game-Movement-FPS"
+    },
+    {
       "file": "Documentation~/validation.md",
       "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.template.game.survivors",
@@ -189,6 +201,12 @@
     {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
+      "packageId": "com.deucarian.template.viewer.web",
+      "repository": "Template-Viewer-Web"
+    },
+    {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
       "packageId": "com.deucarian.template.viewer.web",
       "repository": "Template-Viewer-Web"
     },
@@ -262,7 +280,7 @@
   "summary": {
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 10,
-    "ReviewRequired": 14
+    "MigrationDocumentation": 11,
+    "ReviewRequired": 16
   }
 }
