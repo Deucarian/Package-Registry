@@ -48,7 +48,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Object-Selection | com.deucarian.object-selection | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.unity.modules.physics | 3 | 118 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | 0.2.9 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json, com.deucarian.api, com.deucarian.object-loading | 3 | 48 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.logging, com.deucarian.object-selection, com.deucarian.core-state | 3 | 25 |
-| Package-Installer | com.deucarian.package-installer | 1.3.3 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
+| Package-Installer | com.deucarian.package-installer | 1.3.4 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging | 2 | 18 |
 | Package-Registry | (none) | (none) | (none) | yes | clean | (none) | 0 | 0 |
 | Persistence | com.deucarian.persistence | 0.1.2 | 2021.3 | yes | clean | com.unity.nuget.newtonsoft-json | 5 | 147 |
 | Pointer-Capture | com.deucarian.pointer-capture | 0.1.6 | 2022.3 | yes | clean | com.deucarian.editor | 5 | 58 |
@@ -88,18 +88,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 65 |
-| Parsed methods/bodies analyzed | 19419 |
+| Parsed methods/bodies analyzed | 19439 |
 | Exact AST clone groups | 81 |
 | Normalized structural clone groups | 138 |
 | Same-symbol semantic candidates | 35 |
 | Runtime public API symbols | 10008 |
 | Editor public API symbols | 2936 |
-| Test public symbols excluded from production API | 6923 |
+| Test public symbols excluded from production API | 6928 |
 | Sample public symbols excluded from production API | 310 |
-| Internal/private production symbols | 17487 |
+| Internal/private production symbols | 17510 |
 | Public API symbols missing XML documentation | 10605 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1051 |
+| Unity object lifetime records | 1054 |
 | Documentation drift findings | 46 |
 | Dependency usage findings | 258 |
 | Dependency cycles | 0 |

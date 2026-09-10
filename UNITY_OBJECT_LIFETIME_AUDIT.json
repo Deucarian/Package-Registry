@@ -3054,6 +3054,51 @@
     {
       "assembly": "Deucarian.PackageInstaller.Editor.Tests",
       "classification": "Test",
+      "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
+      "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 111,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.package-installer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Package-Installer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+      "classification": "Test",
+      "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
+      "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 118,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.package-installer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Package-Installer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+      "classification": "Test",
+      "containingSymbol": "PackageInstallerLoadingTests::RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch",
+      "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
+      "invocation": "UnityEngine.Object.DestroyImmediate",
+      "line": 155,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.package-installer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Package-Installer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.PackageInstaller.Editor.Tests",
+      "classification": "Test",
       "containingSymbol": "PackageInstallerUiBaselineContractTests::Toolbar_UsesSharedWorkspaceAndKeepsGraphSecondary",
       "file": "Tests/Editor/PackageInstallerUiBaselineContractTests.cs",
       "invocation": "UnityEngine.Object.DestroyImmediate",
@@ -15833,10 +15878,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 1051
+    "Allowed": 1054
   },
   "summary": {
-    "direct Unity API call": 937,
+    "direct Unity API call": 940,
     "helper call site": 113,
     "helper definition": 1
   }
