@@ -1166,7 +1166,7 @@
         },
         "oversizedProductionFiles": [],
         "packageId": "com.deucarian.logging",
-        "productionFileCount": 17,
+        "productionFileCount": 19,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Logging",
         "sharedValidationPresent": true,
@@ -17109,7 +17109,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.api",
         "repo": "API"
       },
@@ -17123,7 +17123,7 @@
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.activity-visualization",
         "repo": "Activity-Visualization"
       },
@@ -17179,7 +17179,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.build-pipeline",
         "repo": "Build-Pipeline"
       },
@@ -17200,7 +17200,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.command-routing",
         "repo": "Command-Routing"
       },
@@ -17221,7 +17221,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.command-routing.udp-integration",
         "repo": "Command-Routing-UDP-Integration"
       },
@@ -17242,14 +17242,14 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.command-routing.webgl-integration",
         "repo": "Command-Routing-WebGL-Integration"
       },
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.diagnostics",
         "repo": "Diagnostics"
       },
@@ -17277,14 +17277,14 @@
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.object-loading",
         "repo": "Object-Loading"
       },
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.object-selection",
         "repo": "Object-Selection"
       },
@@ -17298,14 +17298,14 @@
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.object-selection.core-state-integration",
         "repo": "ObjectSelection-CoreState-Integration"
       },
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.package-installer",
         "repo": "Package-Installer"
       },
@@ -17347,7 +17347,7 @@
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.session",
         "repo": "Session"
       },
@@ -17410,7 +17410,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.simultria-viewer-integration",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -17550,7 +17550,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.template.viewer",
         "repo": "Template-Viewer"
       },
@@ -17641,7 +17641,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.theming",
         "repo": "Theming"
       },
@@ -17655,7 +17655,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.ui-flow",
         "repo": "UI-FLow"
       },
@@ -17704,7 +17704,7 @@
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.viewer-navigation",
         "repo": "Viewer-Navigation"
       },
@@ -17739,7 +17739,7 @@
       {
         "declaredVersion": "1.0.2",
         "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.6",
+        "ownerDevelopVersion": "1.0.7",
         "packageId": "com.deucarian.viewer-rendering",
         "repo": "Viewer-Rendering"
       },
@@ -24094,7 +24094,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 19439,
+    "methodCountAnalyzed": 19450,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -27703,7 +27703,7 @@
             "editorApi": false,
             "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
             "iterator": false,
-            "line": 167,
+            "line": 316,
             "lineCount": 13,
             "namespace": "Deucarian.Logging.Editor.Tests",
             "normalizedHash": "5e4f44f31dc1b7a24ffa16b3ac5df235ae1f6fd091e7575f52ed7d8f34f328c8",
@@ -36110,7 +36110,7 @@
           "UnityEngine.Object",
           "UnityEngine.Object.DestroyImmediate"
         ],
-        "estimatedDuplicatedLines": 1442,
+        "estimatedDuplicatedLines": 1450,
         "extractionConfidence": "medium",
         "groupKey": "dispose",
         "occurrences": [
@@ -36695,6 +36695,27 @@
             "normalizedHash": "2239e3bc7e3922f0b9801187f918e3e4b662f04f032b520460ab3864130d34ab",
             "packageId": "com.deucarian.game-content-authoring",
             "repository": "Game-Content-Authoring",
+            "runtimeUnityApi": false,
+            "scope": "Editor production",
+            "signature": "public void Dispose()",
+            "symbol": "Dispose",
+            "symbolKind": "method",
+            "throws": false
+          },
+          {
+            "assembly": "Deucarian.Logging.Editor",
+            "async": false,
+            "containingType": "DeucarianLoggingSettingsView",
+            "dependenciesUsed": [],
+            "editorApi": false,
+            "file": "Editor/DeucarianLoggingSettingsView.cs",
+            "iterator": false,
+            "line": 75,
+            "lineCount": 8,
+            "namespace": "Deucarian.Logging.Editor",
+            "normalizedHash": "15eca9761e559a1e8068203825d63b0bb038942bcedb7d1f87db35d42046e804",
+            "packageId": "com.deucarian.logging",
+            "repository": "Logging",
             "runtimeUnityApi": false,
             "scope": "Editor production",
             "signature": "public void Dispose()",
@@ -45429,7 +45450,7 @@
       "differences": "Different signatures or local names; scopes: Runtime production, Test.",
       "existingCapabilityOwner": "needs capability-owner review",
       "files": [
-        "Logging:Tests/Editor/DeucarianLoggingEditorTests.cs:167",
+        "Logging:Tests/Editor/DeucarianLoggingEditorTests.cs:316",
         "Session-API-Integration:Runtime/TokenEndpoints/SessionTokenEndpointResponseMapping.cs:22",
         "Template-Game-Survivors:Runtime/SurvivorsUiTheme.cs:669"
       ],
@@ -47405,7 +47426,7 @@
         "runtimePublicCount": 24
       },
       {
-        "editorPublicCount": 18,
+        "editorPublicCount": 19,
         "missingXmlDocumentationCount": 0,
         "packageId": "com.deucarian.logging",
         "repository": "Logging",
@@ -47706,8 +47727,8 @@
         "runtimePublicCount": 2
       }
     ],
-    "editorProductionCount": 2936,
-    "internalPrivateProductionCount": 17510,
+    "editorProductionCount": 2937,
+    "internalPrivateProductionCount": 17521,
     "missingXmlDocumentationCount": 10605,
     "runtimeProductionCount": 10008,
     "samples": [
@@ -121009,7 +121030,7 @@
         "containingType": "",
         "file": "Editor/DeucarianLoggingSettingsProvider.cs",
         "fullSignature": "public sealed class DeucarianLoggingSettingsProvider : SettingsProvider",
-        "line": 11,
+        "line": 9,
         "namespace": "Deucarian.Logging.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -121024,7 +121045,7 @@
         "containingType": "DeucarianLoggingSettingsProvider",
         "file": "Editor/DeucarianLoggingSettingsProvider.cs",
         "fullSignature": "public DeucarianLoggingSettingsProvider(string path, SettingsScope scope) : base(path, scope)",
-        "line": 23,
+        "line": 18,
         "namespace": "Deucarian.Logging.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -121039,7 +121060,7 @@
         "containingType": "DeucarianLoggingSettingsProvider",
         "file": "Editor/DeucarianLoggingSettingsProvider.cs",
         "fullSignature": "[SettingsProvider] public static SettingsProvider CreateProvider()",
-        "line": 42,
+        "line": 26,
         "namespace": "Deucarian.Logging.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -121053,14 +121074,29 @@
         "assembly": "Deucarian.Logging.Editor",
         "containingType": "DeucarianLoggingSettingsProvider",
         "file": "Editor/DeucarianLoggingSettingsProvider.cs",
-        "fullSignature": "public override void OnGUI(string searchContext)",
-        "line": 49,
+        "fullSignature": "public override void OnActivate(string searchContext, VisualElement rootElement)",
+        "line": 31,
         "namespace": "Deucarian.Logging.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
         "repository": "Logging",
         "scope": "Editor production",
-        "symbol": "OnGUI",
+        "symbol": "OnActivate",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor",
+        "containingType": "DeucarianLoggingSettingsProvider",
+        "file": "Editor/DeucarianLoggingSettingsProvider.cs",
+        "fullSignature": "public override void OnDeactivate()",
+        "line": 48,
+        "namespace": "Deucarian.Logging.Editor",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Editor production",
+        "symbol": "OnDeactivate",
         "symbolKind": "method",
         "xmlDocumentation": true
       },
@@ -274896,7 +274932,7 @@
         "containingType": "",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "public sealed class DeucarianLoggingEditorTests",
-        "line": 9,
+        "line": 11,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274911,7 +274947,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[SetUp] public void SetUp()",
-        "line": 13,
+        "line": 15,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274926,7 +274962,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[TearDown] public void TearDown()",
-        "line": 19,
+        "line": 21,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274941,7 +274977,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void EditorUtilityExposesPackageName()",
-        "line": 26,
+        "line": 28,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274956,7 +274992,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void SettingsResetSetsExpectedDefaults()",
-        "line": 32,
+        "line": 34,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274971,7 +275007,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void SettingsProviderCanBeCreated()",
-        "line": 53,
+        "line": 55,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -274986,7 +275022,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void LoggingAndResetIconsComeFromSharedEditorShell()",
-        "line": 63,
+        "line": 65,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275000,14 +275036,14 @@
         "assembly": "Deucarian.Logging.Editor.Tests",
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
-        "fullSignature": "[Test] public void SettingsProviderUsesSharedThemedPageAndCompactControls()",
-        "line": 75,
+        "fullSignature": "[Test] public void SettingsProviderAndControlCenterUseTheSameSharedFormWithoutLegacyPanels()",
+        "line": 77,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
         "repository": "Logging",
         "scope": "Test",
-        "symbol": "SettingsProviderUsesSharedThemedPageAndCompactControls",
+        "symbol": "SettingsProviderAndControlCenterUseTheSameSharedFormWithoutLegacyPanels",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -275015,8 +275051,98 @@
         "assembly": "Deucarian.Logging.Editor.Tests",
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator FormEditsPersistImmediatelyAndPreserveUneditedSettings()",
+        "line": 107,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "FormEditsPersistImmediatelyAndPreserveUneditedSettings",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "[Test] public void RevisitingPageRefreshesExternalChangesWithoutRebuildingFields()",
+        "line": 143,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "RevisitingPageRefreshesExternalChangesWithoutRebuildingFields",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator DisposedFormCannotWritePreferencesThroughRetainedFields()",
+        "line": 160,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "DisposedFormCannotWritePreferencesThroughRetainedFields",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator ProjectSettingsFormFillsItsHostAndSavesEdits()",
+        "line": 184,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "ProjectSettingsFormFillsItsHostAndSavesEdits",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator SharedFormStaysReadableAtDifferentSizesAndResetUsesTheVisibleButton()",
+        "line": 206,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "SharedFormStaysReadableAtDifferentSizesAndResetUsesTheVisibleButton",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
+        "fullSignature": "public sealed class LoggingFormTestWindow : EditorWindow",
+        "line": 251,
+        "namespace": "Deucarian.Logging.Editor.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.logging",
+        "repository": "Logging",
+        "scope": "Test",
+        "symbol": "LoggingFormTestWindow",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Logging.Editor.Tests",
+        "containingType": "DeucarianLoggingEditorTests",
+        "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void MenuResetRestoresExpectedDefaults()",
-        "line": 104,
+        "line": 253,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275031,7 +275157,7 @@
         "containingType": "DeucarianLoggingEditorTests",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "[Test] public void ControlCenterCard_ExposesSanitizedSettingsAndGuardedActions()",
-        "line": 131,
+        "line": 280,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275046,7 +275172,7 @@
         "containingType": "DeucarianLoggingEditorTests.CapturingSink",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "public IReadOnlyList<DeucarianLogEntry> Entries",
-        "line": 148,
+        "line": 297,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275061,7 +275187,7 @@
         "containingType": "DeucarianLoggingEditorTests.CapturingSink",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "public void Log(in DeucarianLogEntry entry)",
-        "line": 153,
+        "line": 302,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275076,7 +275202,7 @@
         "containingType": "DeucarianLoggingEditorTests.SettingsSnapshot",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "public static SettingsSnapshot Capture()",
-        "line": 181,
+        "line": 330,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -275091,7 +275217,7 @@
         "containingType": "DeucarianLoggingEditorTests.SettingsSnapshot",
         "file": "Tests/Editor/DeucarianLoggingEditorTests.cs",
         "fullSignature": "public void Restore()",
-        "line": 191,
+        "line": 340,
         "namespace": "Deucarian.Logging.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.logging",
@@ -350447,7 +350573,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 6928
+    "testsPublicCount": 6934
   },
   "repositories": [
     {
@@ -353741,10 +353867,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "f200dbc8e2ef0d6885018578ea5009f309b75675",
+        "headCommit": "2e05b0f1b0f5e4f803b8a58297bd01370189b22d",
         "origin": "https://github.com/Deucarian/Logging.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "f200dbc8e2ef0d6885018578ea5009f309b75675"
+        "requestedRefCommit": "2e05b0f1b0f5e4f803b8a58297bd01370189b22d"
       },
       "canonicalId": "Deucarian/Logging",
       "ciWorkflows": [
@@ -353794,13 +353920,13 @@
       },
       "name": "Logging",
       "packageId": "com.deucarian.logging",
-      "packageVersion": "1.0.6",
+      "packageVersion": "1.0.7",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Logging.git",
         "governanceConfigSha256": "6f38aa4aefe0bd0923a8e2333642e8e5cd5a630341cc688ad1933157499f8c0c",
-        "headCommit": "f200dbc8e2ef0d6885018578ea5009f309b75675",
-        "manifestSha256": "1e4741c67c9d81758c974edd5efbef4856444541ee9490f73b1289eaeedb8cf3",
+        "headCommit": "2e05b0f1b0f5e4f803b8a58297bd01370189b22d",
+        "manifestSha256": "e6127e95c47be0826ada0db7702aaf039fb739ccda67ba7312a1c96f3bbb740c",
         "requestedRef": "develop"
       },
       "registryDependencies": [

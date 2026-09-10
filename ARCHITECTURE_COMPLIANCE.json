@@ -1165,7 +1165,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.logging",
-      "productionFileCount": 17,
+      "productionFileCount": 19,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Logging",
       "sharedValidationPresent": true,

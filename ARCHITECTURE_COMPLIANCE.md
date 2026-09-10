@@ -51,7 +51,7 @@ once.
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 85 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
 | Idle-Progression | com.deucarian.idle-progression | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
-| Logging | com.deucarian.logging | Compliant | Yes | Yes | 17 | 2 | 0 | 0 |
+| Logging | com.deucarian.logging | Compliant | Yes | Yes | 19 | 2 | 0 | 0 |
 | Media | com.deucarian.media | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
