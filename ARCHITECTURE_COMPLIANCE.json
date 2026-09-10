@@ -688,18 +688,6 @@
       "assembly": "Deucarian.XRUI",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
-      "file": "Runtime/Controls/CustomButtonSettings.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 983,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.xr-ui",
-      "repository": "XR-UI",
-      "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.XRUI",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
       "file": "Runtime/Controls/CustomSelectableFeedback.cs",
       "kind": "ProductionFileExceedsLineLimit",
       "lineCount": 930,
@@ -1579,7 +1567,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.simultria-api",
-      "productionFileCount": 40,
+      "productionFileCount": 41,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Simultria-API",
       "sharedValidationPresent": true,
@@ -2140,12 +2128,6 @@
       "oversizedProductionFiles": [
         {
           "assembly": "Deucarian.XRUI",
-          "file": "Runtime/Controls/CustomButtonSettings.cs",
-          "lineCount": 983,
-          "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.XRUI",
           "file": "Runtime/Controls/CustomPressableSurface.Hierarchy.cs",
           "lineCount": 1314,
           "scope": "Runtime production"
@@ -2170,7 +2152,7 @@
         }
       ],
       "packageId": "com.deucarian.xr-ui",
-      "productionFileCount": 42,
+      "productionFileCount": 44,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
@@ -2207,12 +2189,12 @@
   "summary": {
     "compliantRepositoryCount": 44,
     "findingsByDisposition": {
-      "RefactorBacklog": 55,
+      "RefactorBacklog": 54,
       "SetupRequired": 9
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 55
+      "ProductionFileExceedsLineLimit": 54
     },
     "repositoryCount": 65
   }
