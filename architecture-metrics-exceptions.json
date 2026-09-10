@@ -271,6 +271,33 @@
           "mutableGlobals": 1
         },
         "reason": "The authoritative project-local favorites and bounded recent-tool cache is unchanged from 1.5.1. It stores IDs rather than runtime objects; no budget increase. Reviewed for the compact baseline and fixed scaler dock: responsibilities and metric allowances are unchanged. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.8.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Project-wide motion preference and its change event remain unchanged from 1.5.1. Panel attachment owns subscriptions and detach stops animation. The same bounded allowance is retained. Reviewed for the compact baseline and fixed scaler dock: responsibilities and metric allowances are unchanged. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged. Rechecked for package review controls: this existing owner has no source changes; the same exact allowance is retained. New controls introduce no mutable global state."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.8.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The existing shared appearance event now also broadcasts a persisted project-local workspace scale preference. No new global cache, event, or window registry is added. Workspace-scale bindings unsubscribe on detach and disposal; the same one-event budget is retained. Reviewed for the compact baseline and fixed scaler dock: responsibilities and metric allowances are unchanged. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged. Rechecked for package review controls: this existing owner has no source changes; the same exact allowance is retained. New controls introduce no mutable global state."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.8.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The authoritative project-local favorites and bounded recent-tool cache is unchanged from 1.5.1. It stores IDs rather than runtime objects; no budget increase. Reviewed for the compact baseline and fixed scaler dock: responsibilities and metric allowances are unchanged. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged. Rechecked for package review controls: this existing owner has no source changes; the same exact allowance is retained. New controls introduce no mutable global state."
       }
     ],
     "com.deucarian.notifications": [
