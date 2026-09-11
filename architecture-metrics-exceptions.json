@@ -484,6 +484,27 @@
       {
         "assembly": "Deucarian.Tweens",
         "type": "Deucarian.Tweens.TweenDiagnosticProvider",
+        "version": "0.2.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Renewed review for live easing edits: unchanged monotonic provider identity only; no target data or new allowance."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenRuntime",
+        "version": "0.2.0",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Renewed review for custom curves: unchanged lazy runner and quit guard; subsystem reset and shutdown ownership unchanged, with no additional allowance."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenVisibilityDefaults",
+        "version": "0.2.0",
+        "limits": { "mutableGlobals": 3 },
+        "reason": "Renewed review for continuous preview editing: unchanged project profile/cache and motion preference; no per-object references or increased allowance."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenDiagnosticProvider",
         "version": "0.1.0",
         "limits": { "mutableGlobals": 1 },
         "reason": "Monotonic, process-local provider identity only; no target data. Provider registration is removed on scheduler disposal. Reviewed in TWEENS_DEVELOPMENT_PUBLICATION.md."
