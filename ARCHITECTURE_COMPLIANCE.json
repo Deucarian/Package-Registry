@@ -1388,7 +1388,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 199,
+      "productionFileCount": 203,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
