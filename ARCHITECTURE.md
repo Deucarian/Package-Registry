@@ -270,6 +270,28 @@ Architecture reviews must check:
 - Editor owns shared picker, source formatting/import and generic serialized-key validation. Domain packages own key types, definition discovery and generation projections. Runtime discovery/reflection and a cross-domain global service locator are not substitutes for explicit setup. Build Pipeline retains final player/AOT evidence ownership.
 - Every convenience entry point includes a compiled short caller sample and separate startup guidance. Validate serialized/code interchange, wrong-domain or payload compiler rejection, actionable missing configuration and any changed lifetime behavior before publication.
 
+## Definition authoring
+
+- Reusable domain content may be authored through Unity assets, shared Definitions
+  UI, package Labs, or bounded editable C# declarations. All routes converge on
+  the same domain schema, validation, runtime catalog and typed keys.
+- Editor owns source parsing/formatting, synchronization records, conflict UI and
+  generated assembly setup. Domain packages own serialized mappings, defaults,
+  readiness checks and runtime projections. Declaration types stay editor-only.
+- `.definition.cs` is editable declarative input; `.g.cs` is generated runtime
+  output. Do not execute arbitrary authoring code to discover content. Keep
+  stable IDs and Unity GUIDs across renames. Preserve both changed copies on a
+  conflict and require an explicit choice; never silently recreate deleted data.
+- Package MonoBehaviours delegate to the same scoped services used by C# callers.
+  Serialized fields select typed definitions. The host owns state and lifetime;
+  a reusable definition owns default content and associated feedback.
+- Payload implementations, runtime instances and external credentials remain
+  explicit C# contracts or scoped handles. Asset generation does not invent
+  application endpoints, handlers, providers or authentication policy.
+- Include importable runnable scenes and document startup separately from short
+  caller examples. Validate source/asset round trips, imported samples without
+  hidden project state, generated compilation, host teardown and player builds.
+
 ## Adding A Capability
 
 1. Prove repeated production use or clear package ownership pressure with audit data.

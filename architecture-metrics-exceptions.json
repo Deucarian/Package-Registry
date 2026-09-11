@@ -6,21 +6,27 @@
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.11.0",
-        "limits": { "mutableGlobals": 2 },
+        "limits": {
+          "mutableGlobals": 2
+        },
         "reason": "Rechecked for interactive previews and navigation geometry: unchanged project motion preference/event owner. Previews are instance-owned and disposed; no allowance increase."
       },
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAppearance",
         "version": "1.11.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Rechecked for equal action sizing and persistent navigation: unchanged appearance preference/event boundary, with no additional global state or allowance."
       },
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianToolHistory",
         "version": "1.11.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Rechecked for concrete page descriptions: unchanged bounded favorite/recent-tool preference owner. No additional collection or allowance."
       },
       {
@@ -427,6 +433,42 @@
           "mutableGlobals": 1
         },
         "reason": "The authoritative project-local favorites and bounded recent-tool cache is unchanged from 1.5.1. It stores IDs rather than runtime objects; no budget increase. Reviewed for the compact baseline and fixed scaler dock: responsibilities and metric allowances are unchanged. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged. Rechecked for package review controls after integrating develop feature sections: this existing owner has no source changes; the same exact allowance is retained. New controls introduce no mutable global state."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Rechecked for interactive previews and navigation geometry: unchanged project motion preference/event owner. Previews are instance-owned and disposed; no allowance increase."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Rechecked for equal action sizing and persistent navigation: unchanged appearance preference/event boundary, with no additional global state or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Rechecked for concrete page descriptions: unchanged bounded favorite/recent-tool preference owner. No additional collection or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.Definitions.DeucarianDefinitionImport",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 3
+        },
+        "reason": "Shared editor-only asset importer owns one deduplicated pending-path set, current per-path errors and a scheduling flag. Work drains outside import, errors clear after repair/delete, and assembly reload resets these project-local collections. No player discovery or runtime service is retained."
       }
     ],
     "com.deucarian.notifications": [
@@ -434,7 +476,9 @@
         "assembly": "Deucarian.Notifications",
         "type": "Deucarian.Notifications.NotificationManager",
         "version": "0.4.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Renewed after integrating typed warning keys from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 0.3.5; NotificationService remains the domain state owner. No additional global state, discovery or service creation is introduced."
       },
       {
@@ -463,6 +507,15 @@
           "mutableGlobals": 1
         },
         "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. NotificationService remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md. Rechecked after the native editor update and typed key adoption: the facade still holds the same single borrowed registration. Typed keys add no global state; lifecycle and stale-registration tests pass. The allowance is unchanged."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.5.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Renewed after integrating typed warning keys from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 0.3.5; NotificationService remains the domain state owner. No additional global state, discovery or service creation is introduced."
       }
     ],
     "com.deucarian.theming": [
@@ -470,14 +523,18 @@
         "assembly": "Deucarian.Theming",
         "type": "Deucarian.Theming.ThemeAudio",
         "version": "1.7.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Renewed after integrating the typed audio API from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 1.6.1; no discovery, service creation, domain collection or additional global state is introduced. The same allowance and lifecycle ownership apply."
       },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
         "version": "1.7.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Rechecked for shared DS/RP palettes: unchanged scene preview generation/repaint owner. Theme mapping and preview state remain instance-owned; no additional global state or allowance."
       },
       {
@@ -578,6 +635,24 @@
           "mutableGlobals": 1
         },
         "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. DeucarianThemeAudioPlayer remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md. Rechecked after the native editor update and typed key adoption: the facade still holds the same single borrowed registration. Typed keys add no global state; lifecycle and stale-registration tests pass. The allowance is unchanged."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.8.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Renewed after integrating the typed audio API from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 1.6.1; no discovery, service creation, domain collection or additional global state is introduced. The same allowance and lifecycle ownership apply."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.8.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Rechecked for shared DS/RP palettes: unchanged scene preview generation/repaint owner. Theme mapping and preview state remain instance-owned; no additional global state or allowance."
       }
     ],
     "com.deucarian.xr-ui": [
@@ -618,6 +693,15 @@
           "mutableGlobals": 1
         },
         "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. IUIFlowRouter remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md. Rechecked after the native editor update and typed key adoption: the facade still holds the same single borrowed registration. Typed keys add no global state; lifecycle and stale-registration tests pass. The allowance is unchanged."
+      },
+      {
+        "assembly": "Deucarian.UIFlow",
+        "type": "Deucarian.UIFlow.Screens",
+        "version": "0.5.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. IUIFlowRouter remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md. Rechecked after the native editor update and typed key adoption: the facade still holds the same single borrowed registration. Typed keys add no global state; lifecycle and stale-registration tests pass. The allowance is unchanged."
       }
     ],
     "com.deucarian.object-loading": [
@@ -629,6 +713,15 @@
           "mutableGlobals": 1
         },
         "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. ObjectLoadingHost remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.ObjectLoading",
+        "type": "Deucarian.ObjectLoading.Objects",
+        "version": "1.3.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. ObjectLoadingHost remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
       }
     ]
   }

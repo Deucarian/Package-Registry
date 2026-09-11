@@ -25,7 +25,7 @@
       "ownerPackageId": "com.deucarian.logging"
     },
     {
-      "description": "Shared editor chrome, icons, resources, style tokens, editor-only UI Toolkit helpers.",
+      "description": "Shared editor chrome, icons, resources, style tokens, editor-only UI Toolkit helpers, typed key pickers, and bounded definition source/asset synchronization with domain-owned projections.",
       "id": "editor-shell",
       "ownerPackageId": "com.deucarian.editor"
     },
