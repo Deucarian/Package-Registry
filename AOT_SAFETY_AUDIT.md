@@ -176,7 +176,7 @@ Mode: `Audit`
 
 - `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ObjectLoadRequest.cs`:169 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/DefaultObjectDiagnostics.cs`:176 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/ObjectLoadingPipeline.cs`:281 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/ObjectLoadingPipeline.cs`:301 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.object-loading.api-integration`
 

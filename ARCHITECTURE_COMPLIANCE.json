@@ -138,7 +138,7 @@
       "disposition": "RefactorBacklog",
       "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
       "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 2513,
+      "lineCount": 2464,
       "lineLimit": 500,
       "packageId": "com.deucarian.package-installer",
       "repository": "Package-Installer",
@@ -747,13 +747,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.api",
-      "productionFileCount": 73,
+      "productionFileCount": 78,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "API",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.API.Tests"
+        "Deucarian.API.Tests",
+        "Deucarian.API.Tests.PlayMode"
       ]
     },
     {
@@ -777,13 +778,14 @@
         }
       ],
       "packageId": "com.deucarian.attacks",
-      "productionFileCount": 69,
+      "productionFileCount": 75,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Attacks",
       "sharedValidationPresent": true,
       "status": "RefactorBacklog",
       "testAssemblies": [
-        "Deucarian.Attacks.Tests"
+        "Deucarian.Attacks.Tests",
+        "Deucarian.Attacks.Tests.PlayMode"
       ]
     },
     {
@@ -875,13 +877,14 @@
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 28,
+      "productionFileCount": 34,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
       "status": "RefactorBacklog",
       "testAssemblies": [
-        "Deucarian.CameraNavigation.Tests.EditMode"
+        "Deucarian.CameraNavigation.Tests.EditMode",
+        "Deucarian.CameraNavigation.Tests.PlayMode"
       ]
     },
     {
@@ -909,13 +912,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.combat",
-      "productionFileCount": 2,
+      "productionFileCount": 13,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Combat",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.Combat.Tests"
+        "Deucarian.Combat.Tests",
+        "Deucarian.Combat.Tests.PlayMode"
       ]
     },
     {
@@ -926,7 +930,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.command-routing",
-      "productionFileCount": 34,
+      "productionFileCount": 39,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Command-Routing",
       "sharedValidationPresent": true,
@@ -1048,7 +1052,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.editor",
-      "productionFileCount": 130,
+      "productionFileCount": 139,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Editor",
       "sharedValidationPresent": true,
@@ -1066,13 +1070,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.encounters",
-      "productionFileCount": 1,
+      "productionFileCount": 7,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Encounters",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.Encounters.Tests"
+        "Deucarian.Encounters.Tests",
+        "Deucarian.Encounters.Tests.PlayMode"
       ]
     },
     {
@@ -1131,7 +1136,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.gameplay-foundation",
-      "productionFileCount": 5,
+      "productionFileCount": 14,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Gameplay-Foundation",
       "sharedValidationPresent": true,
@@ -1183,7 +1188,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.media",
-      "productionFileCount": 13,
+      "productionFileCount": 14,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Media",
       "sharedValidationPresent": true,
@@ -1217,13 +1222,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.monetization",
-      "productionFileCount": 1,
+      "productionFileCount": 10,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Monetization",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.Monetization.Tests"
+        "Deucarian.Monetization.Tests",
+        "Deucarian.Monetization.Tests.PlayMode"
       ]
     },
     {
@@ -1234,7 +1240,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.notifications",
-      "productionFileCount": 37,
+      "productionFileCount": 43,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Notifications",
       "sharedValidationPresent": true,
@@ -1252,13 +1258,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.object-loading",
-      "productionFileCount": 22,
+      "productionFileCount": 28,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Object-Loading",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
         "Deucarian.ObjectLoading.Diagnostics.Tests",
+        "Deucarian.ObjectLoading.PlayModeTests",
         "Deucarian.ObjectLoading.Tests"
       ]
     },
@@ -1270,7 +1277,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.object-selection",
-      "productionFileCount": 25,
+      "productionFileCount": 27,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Object-Selection",
       "sharedValidationPresent": true,
@@ -1341,7 +1348,7 @@
         {
           "assembly": "Deucarian.PackageInstaller.Editor",
           "file": "Editor/Services/PackageEcosystemGraphLayout.cs",
-          "lineCount": 2513,
+          "lineCount": 2464,
           "scope": "Editor production"
         },
         {
@@ -1388,7 +1395,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 203,
+      "productionFileCount": 204,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -1420,7 +1427,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.persistence",
-      "productionFileCount": 9,
+      "productionFileCount": 15,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Persistence",
       "sharedValidationPresent": true,
@@ -1454,7 +1461,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.progression",
-      "productionFileCount": 4,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Progression",
       "sharedValidationPresent": true,
@@ -1471,7 +1478,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.projectiles",
-      "productionFileCount": 1,
+      "productionFileCount": 5,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Projectiles",
       "sharedValidationPresent": true,
@@ -1501,13 +1508,14 @@
         }
       ],
       "packageId": "com.deucarian.run-upgrades",
-      "productionFileCount": 23,
+      "productionFileCount": 31,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Run-Upgrades",
       "sharedValidationPresent": true,
       "status": "RefactorBacklog",
       "testAssemblies": [
-        "Deucarian.RunUpgrades.Tests"
+        "Deucarian.RunUpgrades.Tests",
+        "Deucarian.RunUpgrades.Tests.PlayMode"
       ]
     },
     {
@@ -1533,7 +1541,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.session",
-      "productionFileCount": 17,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Session",
       "sharedValidationPresent": true,
@@ -1859,7 +1867,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 151,
+      "productionFileCount": 158,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -1913,7 +1921,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.ui-binding",
-      "productionFileCount": 12,
+      "productionFileCount": 14,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-Binding",
       "sharedValidationPresent": true,
@@ -1937,7 +1945,7 @@
         }
       ],
       "packageId": "com.deucarian.ui-flow",
-      "productionFileCount": 56,
+      "productionFileCount": 62,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI-FLow",
       "sharedValidationPresent": true,
@@ -1972,7 +1980,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.authentication",
-      "productionFileCount": 55,
+      "productionFileCount": 57,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Authentication",
       "sharedValidationPresent": true,
@@ -1989,7 +1997,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 34,
+      "productionFileCount": 37,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2042,13 +2050,14 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.weapon-systems",
-      "productionFileCount": 21,
+      "productionFileCount": 30,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Weapon-Systems",
       "sharedValidationPresent": true,
       "status": "Compliant",
       "testAssemblies": [
-        "Deucarian.WeaponSystems.Tests"
+        "Deucarian.WeaponSystems.Tests",
+        "Deucarian.WeaponSystems.Tests.PlayMode"
       ]
     },
     {
@@ -2091,7 +2100,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.world-navigation",
-      "productionFileCount": 1,
+      "productionFileCount": 2,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "World-Navigation",
       "sharedValidationPresent": true,
@@ -2109,7 +2118,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.world-spawning",
-      "productionFileCount": 2,
+      "productionFileCount": 6,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "World-Spawning",
       "sharedValidationPresent": true,
