@@ -9,9 +9,6 @@
         "com.deucarian.common",
         "com.deucarian.core-state",
         "com.deucarian.editor",
-        "com.deucarian.gameplay-foundation",
-        "com.deucarian.monetization",
-        "com.deucarian.persistence",
         "com.deucarian.simultria.rendering"
       ]
     },
@@ -20,17 +17,13 @@
       "rank": 1,
       "description": "Packages whose longest canonical dependency path has 1 edge.",
       "packages": [
+        "com.deucarian.gameplay-foundation",
+        "com.deucarian.persistence",
         "com.deucarian.test-automation",
-        "com.deucarian.camera-navigation",
-        "com.deucarian.combat",
-        "com.deucarian.encounters",
-        "com.deucarian.game-content-authoring",
         "com.deucarian.logging",
         "com.deucarian.media",
         "com.deucarian.pointer-capture",
-        "com.deucarian.progression",
         "com.deucarian.ui-binding",
-        "com.deucarian.world-spawning",
         "com.deucarian.xr-ui"
       ]
     },
@@ -39,20 +32,18 @@
       "rank": 2,
       "description": "Packages whose longest canonical dependency path has 2 edges.",
       "packages": [
-        "com.deucarian.api",
-        "com.deucarian.attacks",
+        "com.deucarian.game-content-authoring",
+        "com.deucarian.progression",
+        "com.deucarian.world-spawning",
         "com.deucarian.build-pipeline",
-        "com.deucarian.camera-navigation.input-system-integration",
         "com.deucarian.diagnostics",
-        "com.deucarian.idle-progression",
         "com.deucarian.object-loading",
         "com.deucarian.object-selection",
         "com.deucarian.package-installer",
         "com.deucarian.session",
         "com.deucarian.theming",
         "com.deucarian.ui-binding.core-state-integration",
-        "com.deucarian.ui-flow",
-        "com.deucarian.world-navigation"
+        "com.deucarian.ui-flow"
       ]
     },
     {
@@ -60,14 +51,16 @@
       "rank": 3,
       "description": "Packages whose longest canonical dependency path has 3 edges.",
       "packages": [
-        "com.deucarian.defense-games",
+        "com.deucarian.monetization",
+        "com.deucarian.camera-navigation",
+        "com.deucarian.combat",
+        "com.deucarian.encounters",
+        "com.deucarian.api",
+        "com.deucarian.idle-progression",
+        "com.deucarian.world-navigation",
         "com.deucarian.command-routing",
         "com.deucarian.activity-visualization",
-        "com.deucarian.media.api-integration",
-        "com.deucarian.object-loading.api-integration",
         "com.deucarian.object-selection.core-state-integration",
-        "com.deucarian.projectiles",
-        "com.deucarian.session.api-integration",
         "com.deucarian.ui",
         "com.deucarian.viewer-rendering",
         "com.deucarian.webgl-template",
@@ -79,14 +72,17 @@
       "rank": 4,
       "description": "Packages whose longest canonical dependency path has 4 edges.",
       "packages": [
+        "com.deucarian.attacks",
+        "com.deucarian.camera-navigation.input-system-integration",
+        "com.deucarian.defense-games",
+        "com.deucarian.media.api-integration",
+        "com.deucarian.object-loading.api-integration",
+        "com.deucarian.session.api-integration",
         "com.deucarian.notifications",
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
-        "com.deucarian.authentication",
-        "com.deucarian.viewer-navigation",
         "com.deucarian.viewer-shell",
-        "com.deucarian.selection-suite",
-        "com.deucarian.weapon-systems"
+        "com.deucarian.selection-suite"
       ]
     },
     {
@@ -94,11 +90,9 @@
       "rank": 5,
       "description": "Packages whose longest canonical dependency path has 5 edges.",
       "packages": [
-        "com.deucarian.auto-defense",
-        "com.deucarian.simultria-api",
-        "com.deucarian.template.viewer",
-        "com.deucarian.web-viewer-suite",
-        "com.deucarian.run-upgrades"
+        "com.deucarian.projectiles",
+        "com.deucarian.authentication",
+        "com.deucarian.viewer-navigation"
       ]
     },
     {
@@ -106,11 +100,10 @@
       "rank": 6,
       "description": "Packages whose longest canonical dependency path has 6 edges.",
       "packages": [
-        "com.deucarian.auto-defense-suite",
-        "com.deucarian.simultria-viewer-integration",
-        "com.deucarian.template.game.movement-fps",
-        "com.deucarian.template.game.survivors",
-        "com.deucarian.template.viewer.web"
+        "com.deucarian.weapon-systems",
+        "com.deucarian.simultria-api",
+        "com.deucarian.template.viewer",
+        "com.deucarian.web-viewer-suite"
       ]
     },
     {
@@ -118,7 +111,28 @@
       "rank": 7,
       "description": "Packages whose longest canonical dependency path has 7 edges.",
       "packages": [
-        "com.deucarian.activity-visualization.simultria",
+        "com.deucarian.auto-defense",
+        "com.deucarian.run-upgrades",
+        "com.deucarian.simultria-viewer-integration",
+        "com.deucarian.template.viewer.web"
+      ]
+    },
+    {
+      "id": "tier-8",
+      "rank": 8,
+      "description": "Packages whose longest canonical dependency path has 8 edges.",
+      "packages": [
+        "com.deucarian.auto-defense-suite",
+        "com.deucarian.template.game.movement-fps",
+        "com.deucarian.template.game.survivors",
+        "com.deucarian.activity-visualization.simultria"
+      ]
+    },
+    {
+      "id": "tier-9",
+      "rank": 9,
+      "description": "Packages whose longest canonical dependency path has 9 edges.",
+      "packages": [
         "com.deucarian.template.game.idle-auto-defense"
       ]
     }

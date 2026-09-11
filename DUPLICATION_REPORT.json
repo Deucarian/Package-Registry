@@ -18052,7 +18052,207 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.api",
+        "packageJsonDependencies": [
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "repo": "API"
+      },
+      {
+        "packageId": "com.deucarian.attacks",
+        "packageJsonDependencies": [
+          "com.deucarian.combat",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "registryDependencies": [
+          "com.deucarian.combat",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "repo": "Attacks"
+      },
+      {
+        "packageId": "com.deucarian.camera-navigation",
+        "packageJsonDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.editor"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor"
+        ],
+        "repo": "Camera-Navigation"
+      },
+      {
+        "packageId": "com.deucarian.combat",
+        "packageJsonDependencies": [
+          "com.deucarian.gameplay-foundation"
+        ],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "repo": "Combat"
+      },
+      {
+        "packageId": "com.deucarian.encounters",
+        "packageJsonDependencies": [
+          "com.deucarian.gameplay-foundation"
+        ],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "repo": "Encounters"
+      },
+      {
+        "packageId": "com.deucarian.gameplay-foundation",
+        "packageJsonDependencies": [],
+        "registryDependencies": [
+          "com.deucarian.editor"
+        ],
+        "repo": "Gameplay-Foundation"
+      },
+      {
+        "packageId": "com.deucarian.monetization",
+        "packageJsonDependencies": [],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor"
+        ],
+        "repo": "Monetization"
+      },
+      {
+        "packageId": "com.deucarian.object-loading",
+        "packageJsonDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.logging"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "repo": "Object-Loading"
+      },
+      {
+        "packageId": "com.deucarian.persistence",
+        "packageJsonDependencies": [],
+        "registryDependencies": [
+          "com.deucarian.editor"
+        ],
+        "repo": "Persistence"
+      },
+      {
+        "packageId": "com.deucarian.progression",
+        "packageJsonDependencies": [
+          "com.deucarian.gameplay-foundation"
+        ],
+        "registryDependencies": [
+          "com.deucarian.editor",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "repo": "Progression"
+      },
+      {
+        "packageId": "com.deucarian.projectiles",
+        "packageJsonDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.combat",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.world-navigation",
+          "com.deucarian.world-spawning"
+        ],
+        "registryDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.combat",
+          "com.deucarian.editor",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.world-navigation",
+          "com.deucarian.world-spawning"
+        ],
+        "repo": "Projectiles"
+      },
+      {
+        "packageId": "com.deucarian.run-upgrades",
+        "packageJsonDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.weapon-systems"
+        ],
+        "registryDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.weapon-systems"
+        ],
+        "repo": "Run-Upgrades"
+      },
+      {
+        "packageId": "com.deucarian.weapon-systems",
+        "packageJsonDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.projectiles"
+        ],
+        "registryDependencies": [
+          "com.deucarian.attacks",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.game-content-authoring",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.projectiles"
+        ],
+        "repo": "Weapon-Systems"
+      },
+      {
+        "packageId": "com.deucarian.world-navigation",
+        "packageJsonDependencies": [
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.world-spawning"
+        ],
+        "registryDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.gameplay-foundation",
+          "com.deucarian.world-spawning"
+        ],
+        "repo": "World-Navigation"
+      },
+      {
+        "packageId": "com.deucarian.world-spawning",
+        "packageJsonDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.editor",
+          "com.deucarian.gameplay-foundation"
+        ],
+        "repo": "World-Spawning"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -49215,8 +49415,8 @@
     "generatedAtUtc": "not-recorded-deterministic-output",
     "inputSignatures": {
       "capabilitiesSha256": "d15c6f6473b0c23fe2983d07a49a4d225301eb416de20a051da99feb53a84084",
-      "dependencyRulesSha256": "ec176ac6e404011de5717f87e0d1423852eb4574870c2c0de8c77b7a30d0f22a",
-      "packagesSha256": "30fb1a068e5b6fbfb2e97db37fda65ccb3169e436aba6a7b3352242d4406a470"
+      "dependencyRulesSha256": "ef6c707bb7eb6d74a1388e4abf4e87f6d4c7cf80d68f0d08cb6d74367282de04",
+      "packagesSha256": "7632f8a96fb0a94a3bb080866071217f204d637cc98d00584885819e6d5d7809"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -360640,6 +360840,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.diagnostics",
         "com.deucarian.editor",
         "com.deucarian.logging"
       ],
@@ -360836,10 +361037,11 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
-        "com.deucarian.gameplay-foundation",
         "com.deucarian.combat",
+        "com.deucarian.diagnostics",
         "com.deucarian.editor",
-        "com.deucarian.game-content-authoring"
+        "com.deucarian.game-content-authoring",
+        "com.deucarian.gameplay-foundation"
       ],
       "registryGroupId": "gameplay-combat-weapons",
       "registryKind": "Library",
@@ -361549,6 +361751,7 @@
       },
       "registryDependencies": [
         "com.deucarian.common",
+        "com.deucarian.diagnostics",
         "com.deucarian.editor"
       ],
       "registryGroupId": "world-xr-interaction",
@@ -361804,6 +362007,8 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.diagnostics",
+        "com.deucarian.editor",
         "com.deucarian.gameplay-foundation"
       ],
       "registryGroupId": "gameplay-combat-weapons",
@@ -363194,6 +363399,8 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.diagnostics",
+        "com.deucarian.editor",
         "com.deucarian.gameplay-foundation"
       ],
       "registryGroupId": "gameplay-encounters-world",
@@ -363426,7 +363633,9 @@
         "manifestSha256": "f860b0e88c15bf168950e8c69040c8c09d830e9ad9637b1888e37f02e786ba0b",
         "requestedRef": "develop"
       },
-      "registryDependencies": [],
+      "registryDependencies": [
+        "com.deucarian.editor"
+      ],
       "registryGroupId": "gameplay-foundations",
       "registryKind": "Library",
       "repository": {
@@ -364129,7 +364338,10 @@
         "manifestSha256": "56a518f096d7ffb3cbfe0470a8460fbc79f39bd257d460c90131f7bddc6c6acc",
         "requestedRef": "develop"
       },
-      "registryDependencies": [],
+      "registryDependencies": [
+        "com.deucarian.diagnostics",
+        "com.deucarian.editor"
+      ],
       "registryGroupId": "runtime-services",
       "registryKind": "Library",
       "repository": {
@@ -364546,6 +364758,7 @@
       },
       "registryDependencies": [
         "com.deucarian.common",
+        "com.deucarian.editor",
         "com.deucarian.logging"
       ],
       "registryGroupId": "runtime-services",
@@ -365149,7 +365362,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "f4f8fab99b5c57728275ee30f405604e963d234f97c49d631b735c1d9ba8861a",
+        "auditInputSha256": "9881b2e823159d8ed2c4ece3913f26dc4f13ec138362617c3c8c6d582194f674",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
@@ -365309,7 +365522,9 @@
         "manifestSha256": "636f2bc62082cc2dc0b14605cd2e6834aed4e926fa4c8d3381be734bad8b8786",
         "requestedRef": "develop"
       },
-      "registryDependencies": [],
+      "registryDependencies": [
+        "com.deucarian.editor"
+      ],
       "registryGroupId": "state-data",
       "registryKind": "Library",
       "repository": {
@@ -365603,6 +365818,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.editor",
         "com.deucarian.gameplay-foundation"
       ],
       "registryGroupId": "gameplay-progression-meta",
@@ -365747,9 +365963,10 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
-        "com.deucarian.gameplay-foundation",
-        "com.deucarian.combat",
         "com.deucarian.attacks",
+        "com.deucarian.combat",
+        "com.deucarian.editor",
+        "com.deucarian.gameplay-foundation",
         "com.deucarian.world-navigation",
         "com.deucarian.world-spawning"
       ],
@@ -365929,11 +366146,12 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
-        "com.deucarian.gameplay-foundation",
         "com.deucarian.attacks",
-        "com.deucarian.weapon-systems",
+        "com.deucarian.diagnostics",
         "com.deucarian.editor",
-        "com.deucarian.game-content-authoring"
+        "com.deucarian.game-content-authoring",
+        "com.deucarian.gameplay-foundation",
+        "com.deucarian.weapon-systems"
       ],
       "registryGroupId": "gameplay-progression-meta",
       "registryKind": "Library",
@@ -369933,11 +370151,12 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
-        "com.deucarian.gameplay-foundation",
         "com.deucarian.attacks",
+        "com.deucarian.diagnostics",
         "com.deucarian.editor",
-        "com.deucarian.projectiles",
-        "com.deucarian.game-content-authoring"
+        "com.deucarian.game-content-authoring",
+        "com.deucarian.gameplay-foundation",
+        "com.deucarian.projectiles"
       ],
       "registryGroupId": "gameplay-combat-weapons",
       "registryKind": "Library",
@@ -370360,6 +370579,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.diagnostics",
         "com.deucarian.gameplay-foundation",
         "com.deucarian.world-spawning"
       ],
@@ -370510,6 +370730,7 @@
       },
       "registryDependencies": [
         "com.deucarian.common",
+        "com.deucarian.editor",
         "com.deucarian.gameplay-foundation"
       ],
       "registryGroupId": "gameplay-encounters-world",
