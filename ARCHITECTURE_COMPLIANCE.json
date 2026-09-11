@@ -707,18 +707,6 @@
       "packageId": "com.deucarian.xr-ui",
       "repository": "XR-UI",
       "scope": "Runtime production"
-    },
-    {
-      "assembly": "Deucarian.XRUI",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/XrUiColorPalette.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 502,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.xr-ui",
-      "repository": "XR-UI",
-      "scope": "Runtime production"
     }
   ],
   "repositories": [
@@ -877,7 +865,7 @@
         }
       ],
       "packageId": "com.deucarian.camera-navigation",
-      "productionFileCount": 34,
+      "productionFileCount": 38,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Camera-Navigation",
       "sharedValidationPresent": true,
@@ -1240,7 +1228,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.notifications",
-      "productionFileCount": 43,
+      "productionFileCount": 47,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Notifications",
       "sharedValidationPresent": true,
@@ -1867,7 +1855,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 158,
+      "productionFileCount": 162,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -1997,7 +1985,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 37,
+      "productionFileCount": 40,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2152,16 +2140,10 @@
           "file": "Runtime/Controls/CustomSelectableFeedback.cs",
           "lineCount": 930,
           "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.XRUI",
-          "file": "Runtime/XrUiColorPalette.cs",
-          "lineCount": 502,
-          "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.xr-ui",
-      "productionFileCount": 46,
+      "productionFileCount": 47,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI",
       "sharedValidationPresent": true,
@@ -2179,7 +2161,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.xr-ui.theming-integration",
-      "productionFileCount": 1,
+      "productionFileCount": 2,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "XR-UI-Theming-Integration",
       "sharedValidationPresent": true,
@@ -2198,12 +2180,12 @@
   "summary": {
     "compliantRepositoryCount": 44,
     "findingsByDisposition": {
-      "RefactorBacklog": 54,
+      "RefactorBacklog": 53,
       "SetupRequired": 9
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 9,
-      "ProductionFileExceedsLineLimit": 54
+      "ProductionFileExceedsLineLimit": 53
     },
     "repositoryCount": 65
   }

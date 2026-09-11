@@ -19,6 +19,14 @@
       "repository": "Bootstrap"
     },
     {
+      "dependency": "com.deucarian.editor",
+      "kind": "DependencyVersionDrift",
+      "packageId": "com.deucarian.build-pipeline",
+      "packageJsonVersion": "1.11.0",
+      "readmeVersion": "1.10.6",
+      "repository": "Build-Pipeline"
+    },
+    {
       "file": "README.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.build-pipeline",
@@ -223,6 +231,12 @@
       "repository": "Test-Automation"
     },
     {
+      "file": "Documentation~/SIMULTRIA_PALETTES.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.theming",
+      "repository": "Theming"
+    },
+    {
       "file": "CHANGELOG.md",
       "kind": "HistoricalChangelogReference",
       "packageId": "com.deucarian.ui-binding",
@@ -275,12 +289,25 @@
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "repository": "XR-UI-Theming-Integration"
+    },
+    {
+      "file": "Documentation~/PALETTE_OWNERSHIP.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration"
+    },
+    {
+      "file": "README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration"
     }
   ],
   "summary": {
+    "DependencyVersionDrift": 1,
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 11,
-    "ReviewRequired": 16
+    "ReviewRequired": 19
   }
 }
