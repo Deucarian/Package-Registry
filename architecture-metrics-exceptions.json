@@ -378,6 +378,15 @@
           "lines": 504
         },
         "reason": "Four lines above the review trigger are retained for serialized window compatibility and explicit draft-to-runtime application. Recipe rendering/storage and runtime connection lifetime are separate owners."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.3.4",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. NotificationService remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
       }
     ],
     "com.deucarian.theming": [
@@ -394,7 +403,9 @@
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
         "version": "1.5.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "The scene preview generation owner is unchanged from 1.4.4. Project adoption controls reuse the existing settings resource; connection observers are instance-owned and disposed on page deactivation. No increased allowance."
       },
       {
@@ -450,6 +461,15 @@
           "mutableGlobals": 1
         },
         "reason": "The existing scene-preview repaint generation moved out of the workflow facade into the sole scene-application owner. This is an ownership transfer, not a second mutable source. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.6.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. DeucarianThemeAudioPlayer remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
       }
     ],
     "com.deucarian.xr-ui": [
@@ -470,6 +490,28 @@
           "lines": 508
         },
         "reason": "The four-line increase retains the existing public overload while introducing explicit palette scope. No new rendering responsibility or global state was added; callers can now avoid global palette lookup. Rechecked for package-wide window-local navigation: owner unchanged, same allowance."
+      }
+    ],
+    "com.deucarian.ui-flow": [
+      {
+        "assembly": "Deucarian.UIFlow",
+        "type": "Deucarian.UIFlow.Screens",
+        "version": "0.4.4",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. IUIFlowRouter remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
+      }
+    ],
+    "com.deucarian.object-loading": [
+      {
+        "assembly": "Deucarian.ObjectLoading",
+        "type": "Deucarian.ObjectLoading.Objects",
+        "version": "1.2.2",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. ObjectLoadingHost remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
       }
     ]
   }
