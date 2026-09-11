@@ -379293,10 +379293,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "c674a1d9f999fbb043b310bc70f30c8f5fe51fc8",
+        "headCommit": "499a246f6638b8fb4c4fbefebca02901e3de6dfb",
         "origin": "https://github.com/Deucarian/Attacks.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "c674a1d9f999fbb043b310bc70f30c8f5fe51fc8"
+        "requestedRefCommit": "499a246f6638b8fb4c4fbefebca02901e3de6dfb"
       },
       "canonicalId": "Deucarian/Attacks",
       "ciWorkflows": [
@@ -379348,7 +379348,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Attacks.git",
         "governanceConfigSha256": "183855d86a1a47db525a8e62e4ecdb8d0c37b0d0922338f4e7fb19bbc41577a7",
-        "headCommit": "c674a1d9f999fbb043b310bc70f30c8f5fe51fc8",
+        "headCommit": "499a246f6638b8fb4c4fbefebca02901e3de6dfb",
         "manifestSha256": "0caf037f8efcbd87ae8a365f16a9fff9a8133b064163be889e3334dbf8871310",
         "requestedRef": "develop"
       },
@@ -381641,10 +381641,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "dd6c6476b2de93a88b417aa45a026e78257d5845",
+        "headCommit": "5d41bcf3f7df963c4dc0abb11681b5c42e667e27",
         "origin": "https://github.com/Deucarian/Editor.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "dd6c6476b2de93a88b417aa45a026e78257d5845"
+        "requestedRefCommit": "5d41bcf3f7df963c4dc0abb11681b5c42e667e27"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
@@ -381690,7 +381690,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "eedaeb15351d52712076439a399f18a31a5c14d6ea597be87a890babb5559f45",
-        "headCommit": "dd6c6476b2de93a88b417aa45a026e78257d5845",
+        "headCommit": "5d41bcf3f7df963c4dc0abb11681b5c42e667e27",
         "manifestSha256": "55b5d3494f46889084722cf4479b78e0eb1fd343f38c8ec7eb6a7126e53c1be1",
         "requestedRef": "develop"
       },
@@ -384930,10 +384930,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "15b2527b8ee1dc05dd507b11fd936d93698c43dd",
+        "headCommit": "b4c7f759ac5725b476f7d926ce6276af9af07883",
         "origin": "https://github.com/Deucarian/Run-Upgrades.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "15b2527b8ee1dc05dd507b11fd936d93698c43dd"
+        "requestedRefCommit": "b4c7f759ac5725b476f7d926ce6276af9af07883"
       },
       "canonicalId": "Deucarian/Run-Upgrades",
       "ciWorkflows": [
@@ -384987,7 +384987,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Run-Upgrades.git",
         "governanceConfigSha256": "291c28f50a7cf31e29e20f848602ff5c037cdb185aa6aa61186a21dabe74f445",
-        "headCommit": "15b2527b8ee1dc05dd507b11fd936d93698c43dd",
+        "headCommit": "b4c7f759ac5725b476f7d926ce6276af9af07883",
         "manifestSha256": "5517396f08adf090ecae0c85f9295ebc333b6f1a17c3ab8aa31bd18283da0f10",
         "requestedRef": "develop"
       },
@@ -387373,10 +387373,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "835238c50300cef091849d92a4b7f1e63d11c379",
+        "headCommit": "34d0afc16d57e28d617d9ca963e81c858272cf9e",
         "origin": "https://github.com/Deucarian/Theming.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "835238c50300cef091849d92a4b7f1e63d11c379"
+        "requestedRefCommit": "34d0afc16d57e28d617d9ca963e81c858272cf9e"
       },
       "canonicalId": "Deucarian/Theming",
       "ciWorkflows": [
@@ -387436,7 +387436,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Theming.git",
         "governanceConfigSha256": "81e52d0afe2594aae1a39447061a31ebc0f021f26b1d28a9315005e511b7efa0",
-        "headCommit": "835238c50300cef091849d92a4b7f1e63d11c379",
+        "headCommit": "34d0afc16d57e28d617d9ca963e81c858272cf9e",
         "manifestSha256": "446ca2c29841d6a87688b09a3e9faeab7d23085c810a0e035d39e4c475ef953a",
         "requestedRef": "develop"
       },
@@ -387913,10 +387913,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "87373e37e3296c4eb9c0816d1b46a49e1d7183d2",
+        "headCommit": "d82147b24b17bb836ec0068fef626bd2d5433f12",
         "origin": "https://github.com/Deucarian/UI-FLow.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "87373e37e3296c4eb9c0816d1b46a49e1d7183d2"
+        "requestedRefCommit": "d82147b24b17bb836ec0068fef626bd2d5433f12"
       },
       "canonicalId": "Deucarian/UI-FLow",
       "ciWorkflows": [
@@ -387968,7 +387968,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI-FLow.git",
         "governanceConfigSha256": "e319e9c59095f4b2a7bf8406732abe62e0f3cf1b3aa383a02d612ccf5c863f3b",
-        "headCommit": "87373e37e3296c4eb9c0816d1b46a49e1d7183d2",
+        "headCommit": "d82147b24b17bb836ec0068fef626bd2d5433f12",
         "manifestSha256": "2b56cfb493c50b2d9b444824d81cd8ace2ac5009dd1afbe78de321fc8c8f42a9",
         "requestedRef": "develop"
       },
@@ -389015,10 +389015,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "960106286e128ee651aa70a2168ed3cd7d8ee72b",
+        "headCommit": "b890e584fbb7dc8f175cd9743c1895304a890f0d",
         "origin": "https://github.com/Deucarian/Weapon-Systems.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "960106286e128ee651aa70a2168ed3cd7d8ee72b"
+        "requestedRefCommit": "b890e584fbb7dc8f175cd9743c1895304a890f0d"
       },
       "canonicalId": "Deucarian/Weapon-Systems",
       "ciWorkflows": [
@@ -389072,7 +389072,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Weapon-Systems.git",
         "governanceConfigSha256": "7f5db3111593656de3ed985f8cf1d76d1df74177105d1ea6f0bc760b4b9e757f",
-        "headCommit": "960106286e128ee651aa70a2168ed3cd7d8ee72b",
+        "headCommit": "b890e584fbb7dc8f175cd9743c1895304a890f0d",
         "manifestSha256": "9de3f210dd73cf838fef1275ce41fe66d0d399e5acb9db174c79c5ae2e84cb10",
         "requestedRef": "develop"
       },
