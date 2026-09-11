@@ -10,6 +10,7 @@ class PackagesCatalogTests(unittest.TestCase):
         packages_by_id = {package["id"]: package for package in packages}
         expected_dependencies = {
             "com.deucarian.api": [
+                "com.deucarian.diagnostics",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
             ],
@@ -237,10 +238,11 @@ class PackagesCatalogTests(unittest.TestCase):
 
         self.assertEqual(
             [
-                "com.deucarian.gameplay-foundation",
                 "com.deucarian.combat",
+                "com.deucarian.diagnostics",
                 "com.deucarian.editor",
                 "com.deucarian.game-content-authoring",
+                "com.deucarian.gameplay-foundation",
             ],
             attacks["dependencies"],
         )
