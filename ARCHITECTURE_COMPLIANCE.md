@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 54 |
+| RefactorBacklog | 53 |
 | SetupRequired | 9 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 9 |
-| ProductionFileExceedsLineLimit | 54 |
+| ProductionFileExceedsLineLimit | 53 |
 
 ## Repository Status
 
@@ -36,7 +36,7 @@ once.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 40 | 1 | 0 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 37 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 34 | 2 | 1 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 38 | 2 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 13 | 2 | 0 | 0 |
 | Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 39 | 1 | 0 | 0 |
@@ -55,7 +55,7 @@ once.
 | Media | com.deucarian.media | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 10 | 2 | 0 | 0 |
-| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 43 | 2 | 0 | 0 |
+| Notifications | com.deucarian.notifications | SetupRequired | No | Yes | 47 | 2 | 0 | 0 |
 | Object-Loading | com.deucarian.object-loading | Compliant | Yes | Yes | 28 | 3 | 0 | 0 |
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 27 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
@@ -78,13 +78,13 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 39 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 22 | 4 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 158 | 2 | 2 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 162 | 2 | 2 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 39 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 62 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
 | Viewer-Authentication | com.deucarian.authentication | SetupRequired | No | Yes | 57 | 1 | 0 | 0 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 37 | 2 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | SetupRequired | No | Yes | 40 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | Compliant | Yes | Yes | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | Compliant | Yes | Yes | 17 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | Compliant | Yes | Yes | 30 | 2 | 0 | 0 |
@@ -92,8 +92,8 @@ once.
 | WebGL-Template | com.deucarian.webgl-template | Compliant | Yes | Yes | 2 | 1 | 0 | 0 |
 | World-Navigation | com.deucarian.world-navigation | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
 | World-Spawning | com.deucarian.world-spawning | Compliant | Yes | Yes | 6 | 2 | 0 | 0 |
-| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 46 | 2 | 4 | 0 |
-| XR-UI-Theming-Integration | com.deucarian.xr-ui.theming-integration | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
+| XR-UI | com.deucarian.xr-ui | RefactorBacklog | Yes | Yes | 47 | 2 | 3 | 0 |
+| XR-UI-Theming-Integration | com.deucarian.xr-ui.theming-integration | Compliant | Yes | Yes | 2 | 2 | 0 | 0 |
 
 ## Findings
 
@@ -161,4 +161,3 @@ once.
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomSelectableFeedback.cs | 930 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.cs | 826 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/XrUiColorPalette.cs | 502 | 500 | Extract responsibilities until the production file is at most 500 lines. |

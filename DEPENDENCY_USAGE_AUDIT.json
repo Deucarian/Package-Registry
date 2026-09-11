@@ -56,7 +56,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -1666,7 +1666,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1758,6 +1758,20 @@
       ],
       "referencedBy": [
         {
+          "asmdef": "Editor/Deucarian.CameraNavigation.Editor.asmdef",
+          "assembly": "Deucarian.CameraNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Common",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Runtime/Deucarian.CameraNavigation.asmdef",
           "assembly": "Deucarian.CameraNavigation",
           "autoReferenced": true,
@@ -1848,7 +1862,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -3781,7 +3795,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3823,7 +3837,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.6.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -5600,7 +5614,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "2.0.2",
+      "declaredVersion": "2.0.6",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -5733,7 +5747,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.simultria-api",
       "referencedAssemblies": [
@@ -10002,7 +10016,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -10866,13 +10880,42 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.12",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
-        "Deucarian.CameraNavigation"
+        "Deucarian.CameraNavigation",
+        "Deucarian.CameraNavigation.Editor"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.ViewerNavigation.Editor.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Editor/Deucarian.ViewerNavigation.Editor.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.ViewerNavigation.asmdef",
           "assembly": "Deucarian.ViewerNavigation",
@@ -10898,6 +10941,22 @@
             "Editor"
           ],
           "reference": "Deucarian.CameraNavigation",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.ViewerNavigation.Tests.EditMode.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation.Editor",
           "scope": "Test",
           "versionDefines": []
         },
@@ -10929,6 +10988,20 @@
         "Deucarian.CameraNavigation.InputSystemIntegration"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.ViewerNavigation.Editor.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.CameraNavigation.InputSystemIntegration",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.ViewerNavigation.asmdef",
           "assembly": "Deucarian.ViewerNavigation",
@@ -11046,7 +11119,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -13012,7 +13085,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -13078,7 +13151,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.xr-ui",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
