@@ -5,6 +5,27 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Rechecked for interactive previews and navigation geometry: unchanged project motion preference/event owner. Previews are instance-owned and disposed; no allowance increase."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for equal action sizing and persistent navigation: unchanged appearance preference/event boundary, with no additional global state or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for concrete page descriptions: unchanged bounded favorite/recent-tool preference owner. No additional collection or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.10.8",
         "limits": { "mutableGlobals": 2 },
         "reason": "Rechecked for the native visual-fidelity rollout: the existing project motion preference/event owner is unchanged. Instance-owned pages and preview controls retain their own cleanup; no allowance increase."
@@ -402,6 +423,13 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.7.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for shared DS/RP palettes: unchanged scene preview generation/repaint owner. Theme mapping and preview state remain instance-owned; no additional global state or allowance."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
