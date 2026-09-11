@@ -88,7 +88,7 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.core-state | 1.0.2 | ObjectSelection-CoreState-Integration | Core-State |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.logging | 1.0.2 | ObjectSelection-CoreState-Integration | Logging |
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
-| com.deucarian.package-installer | com.deucarian.editor | 1.9.0 | Package-Installer | Editor |
+| com.deucarian.package-installer | com.deucarian.editor | 1.10.8 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.10.6 | Pointer-Capture | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
@@ -255,5 +255,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 134
+- Dependency version drift entries: 133
 - Registry dependency drift entries: 0

@@ -1389,7 +1389,7 @@
           }
         ],
         "packageId": "com.deucarian.package-installer",
-        "productionFileCount": 199,
+        "productionFileCount": 203,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "Package-Installer",
         "sharedValidationPresent": true,
@@ -3620,7 +3620,7 @@
         "fromRepo": "Package-Installer",
         "to": "com.deucarian.editor",
         "toRepo": "Editor",
-        "version": "1.9.0"
+        "version": "1.10.8"
       },
       {
         "from": "com.deucarian.package-installer",
@@ -8563,7 +8563,7 @@
       },
       {
         "classification": "EditorOnlyUse",
-        "declaredVersion": "1.9.0",
+        "declaredVersion": "1.10.8",
         "dependency": "com.deucarian.editor",
         "packageId": "com.deucarian.package-installer",
         "referencedAssemblies": [
@@ -17123,7 +17123,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.api",
         "repo": "API"
       },
@@ -17151,7 +17151,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.attacks",
         "repo": "Attacks"
       },
@@ -17200,7 +17200,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.build-pipeline",
         "repo": "Build-Pipeline"
       },
@@ -17214,7 +17214,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.camera-navigation",
         "repo": "Camera-Navigation"
       },
@@ -17235,7 +17235,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.command-routing",
         "repo": "Command-Routing"
       },
@@ -17263,7 +17263,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.command-routing.udp-integration",
         "repo": "Command-Routing-UDP-Integration"
       },
@@ -17291,7 +17291,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.command-routing.webgl-integration",
         "repo": "Command-Routing-WebGL-Integration"
       },
@@ -17305,7 +17305,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.diagnostics",
         "repo": "Diagnostics"
       },
@@ -17319,14 +17319,14 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.game-content-authoring",
         "repo": "Game-Content-Authoring"
       },
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.logging",
         "repo": "Logging"
       },
@@ -17347,7 +17347,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.notifications",
         "repo": "Notifications"
       },
@@ -17387,13 +17387,6 @@
         "repo": "ObjectSelection-CoreState-Integration"
       },
       {
-        "declaredVersion": "1.9.0",
-        "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
-        "packageId": "com.deucarian.package-installer",
-        "repo": "Package-Installer"
-      },
-      {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
@@ -17403,7 +17396,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.pointer-capture",
         "repo": "Pointer-Capture"
       },
@@ -17424,7 +17417,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.run-upgrades",
         "repo": "Run-Upgrades"
       },
@@ -17480,7 +17473,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.simultria-api",
         "repo": "Simultria-API"
       },
@@ -17515,7 +17508,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.simultria-viewer-integration",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -17550,7 +17543,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.template.game.idle-auto-defense",
         "repo": "Template-Game-Idle-Auto-Defense"
       },
@@ -17585,7 +17578,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.template.game.movement-fps",
         "repo": "Template-Game-Movement-FPS"
       },
@@ -17613,7 +17606,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.template.game.survivors",
         "repo": "Template-Game-Survivors"
       },
@@ -17767,14 +17760,14 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.test-automation",
         "repo": "Test-Automation"
       },
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.theming",
         "repo": "Theming"
       },
@@ -17795,7 +17788,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.ui-flow",
         "repo": "UI-FLow"
       },
@@ -17823,7 +17816,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.authentication",
         "repo": "Viewer-Authentication"
       },
@@ -17851,7 +17844,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.viewer-navigation",
         "repo": "Viewer-Navigation"
       },
@@ -17928,7 +17921,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.weapon-systems",
         "repo": "Weapon-Systems"
       },
@@ -18040,7 +18033,7 @@
       {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.7",
+        "ownerDevelopVersion": "1.10.8",
         "packageId": "com.deucarian.xr-ui",
         "repo": "XR-UI"
       },
@@ -24578,7 +24571,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 20253,
+    "methodCountAnalyzed": 20281,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -38475,7 +38468,7 @@
             "editorApi": false,
             "file": "Editor/Development/DevelopmentPage.cs",
             "iterator": false,
-            "line": 159,
+            "line": 171,
             "lineCount": 5,
             "namespace": "Deucarian.PackageInstaller.Editor.Development",
             "normalizedHash": "804c781d48b9a583de5fcb90481245dc5ebab186c9e71f02d5d518f25e00a277",
@@ -38517,7 +38510,7 @@
             "editorApi": false,
             "file": "Editor/PackageInstallerWindow.Workspace.cs",
             "iterator": false,
-            "line": 179,
+            "line": 231,
             "lineCount": 7,
             "namespace": "Deucarian.PackageInstaller.Editor",
             "normalizedHash": "99ad8e94a72590d7db203d5522b0f348e10ed7849da1ac8380d600dfb832af6a",
@@ -49706,7 +49699,7 @@
       }
     ],
     "editorProductionCount": 3069,
-    "internalPrivateProductionCount": 18323,
+    "internalPrivateProductionCount": 18362,
     "missingXmlDocumentationCount": 10732,
     "runtimeProductionCount": 10019,
     "samples": [
@@ -287560,7 +287553,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[Test] public void PackageSelectionIsIndependentAcrossCachedPageInstances()",
-        "line": 85,
+        "line": 87,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287575,7 +287568,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[Test] public void FailedDiffRequestNeverRepublishesPreviouslyInspectedContent()",
-        "line": 110,
+        "line": 112,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287590,7 +287583,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[Test] public void ConfirmationsExpireAfterAnOperationOrSelectionRoundTrip()",
-        "line": 135,
+        "line": 137,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287605,7 +287598,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[Test] public void IdleCancellationPreservesStatusAndDisposalStopsDeferredCapture()",
-        "line": 162,
+        "line": 164,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287620,7 +287613,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[UnityTest] public IEnumerator DisposalCancelsAnInFlightInspectionAndSuppressesLatePageNotifications()",
-        "line": 181,
+        "line": 183,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287635,7 +287628,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public async Task DisposalCancelsAnInFlightInspectionAndSuppressesLatePageNotificationsAsync()",
-        "line": 184,
+        "line": 186,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287650,7 +287643,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[Test] public void PackageDevelopmentIsRegisteredOnceAsAPlainPageUnderPackages()",
-        "line": 208,
+        "line": 210,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287665,7 +287658,7 @@
         "containingType": "DevelopmentPageTests",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "[UnityTest] public IEnumerator RealPageUsesSharedReviewAtNormalNarrowAndScaledSizes()",
-        "line": 220,
+        "line": 222,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287680,7 +287673,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public Task<DevelopmentGitResult> RunAsync(string directory, IReadOnlyList<string> arguments, CancellationToken token)",
-        "line": 284,
+        "line": 295,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287695,7 +287688,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public string Canonicalize(string path)",
-        "line": 292,
+        "line": 303,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287710,7 +287703,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public bool FileExists(string path)",
-        "line": 293,
+        "line": 304,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287725,7 +287718,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public bool DirectoryExists(string path)",
-        "line": 294,
+        "line": 305,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287740,7 +287733,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public string ReadText(string path)",
-        "line": 295,
+        "line": 306,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287755,7 +287748,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public bool IsBinary(string path)",
-        "line": 296,
+        "line": 307,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287770,7 +287763,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public string Fingerprint(string path)",
-        "line": 297,
+        "line": 308,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287785,7 +287778,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public IDisposable Lock(string path, string name)",
-        "line": 298,
+        "line": 309,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287800,7 +287793,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public byte[] ReadManifest()",
-        "line": 299,
+        "line": 310,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287815,7 +287808,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public void CompareExchangeManifest(byte[] expected, byte[] replacement)",
-        "line": 300,
+        "line": 311,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287830,7 +287823,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public IDisposable AcquireProjectLock()",
-        "line": 301,
+        "line": 312,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287845,7 +287838,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public IReadOnlyList<PackageDevelopmentSession> LoadAll() => Session == null ? Array.Empty<PackageDevelopmentSession>() : new[]",
-        "line": 302,
+        "line": 313,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287860,7 +287853,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public void Save(PackageDevelopmentSession session)",
-        "line": 303,
+        "line": 314,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287875,7 +287868,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public Task<DevelopmentSourceResolution> ResolveAsync(DevelopmentSourceExpectation expectation, bool request, CancellationToken token)",
-        "line": 304,
+        "line": 315,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287890,7 +287883,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public void Acquire(PackageDevelopmentSession session)",
-        "line": 306,
+        "line": 317,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287905,7 +287898,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public void AssertOwned(PackageDevelopmentSession session)",
-        "line": 307,
+        "line": 318,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -287920,7 +287913,7 @@
         "containingType": "DevelopmentPageTests.PagePorts",
         "file": "Tests/Editor/DevelopmentPageTests.cs",
         "fullSignature": "public void Release(PackageDevelopmentSession session)",
-        "line": 308,
+        "line": 319,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -294745,7 +294738,7 @@
         "containingType": "PackageInstallerLoadingTests",
         "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
         "fullSignature": "[Test] public void RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch()",
-        "line": 125,
+        "line": 142,
         "namespace": "Deucarian.PackageInstaller.Editor.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.package-installer",
@@ -363015,10 +363008,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "3015190d70c4889ed87cba335578242f0f592bbb",
+        "headCommit": "a0b32c87161c40635334cbd8f9c096244f8e9c0a",
         "origin": "https://github.com/Deucarian/Editor.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "3015190d70c4889ed87cba335578242f0f592bbb"
+        "requestedRefCommit": "a0b32c87161c40635334cbd8f9c096244f8e9c0a"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
@@ -363059,13 +363052,13 @@
       },
       "name": "Editor",
       "packageId": "com.deucarian.editor",
-      "packageVersion": "1.10.7",
+      "packageVersion": "1.10.8",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "eedaeb15351d52712076439a399f18a31a5c14d6ea597be87a890babb5559f45",
-        "headCommit": "3015190d70c4889ed87cba335578242f0f592bbb",
-        "manifestSha256": "452ab2459b1094331be11910424928086a70983a96dd6fbaa8d704425b4b7d34",
+        "headCommit": "a0b32c87161c40635334cbd8f9c096244f8e9c0a",
+        "manifestSha256": "55b5d3494f46889084722cf4479b78e0eb1fd343f38c8ec7eb6a7126e53c1be1",
         "requestedRef": "develop"
       },
       "registryDependencies": [],
@@ -365047,10 +365040,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "d12815c88830a2b11858009834087d485128026f",
+        "headCommit": "644b70f9a8d1f6f01b325b463f2fbfa257c842b0",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "d12815c88830a2b11858009834087d485128026f"
+        "requestedRefCommit": "644b70f9a8d1f6f01b325b463f2fbfa257c842b0"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -365060,7 +365053,7 @@
         ".github/workflows/unity-editmode-tests.yml"
       ],
       "dependencies": {
-        "com.deucarian.editor": "1.9.0",
+        "com.deucarian.editor": "1.10.8",
         "com.deucarian.logging": "1.0.4"
       },
       "displayName": "Deucarian Package Installer",
@@ -365090,13 +365083,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.5.0",
+      "packageVersion": "1.6.9",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "d12815c88830a2b11858009834087d485128026f",
-        "manifestSha256": "bf29f8f4637ee4b4708351b2866f1eba63b7353ac2041b3c3f4371e6ac7e160d",
+        "headCommit": "644b70f9a8d1f6f01b325b463f2fbfa257c842b0",
+        "manifestSha256": "ab57bc14e44def9ba87b913d5e6372d32a3f02eb3fb71c180a92bd40dd9b5025",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -374174,7 +374167,7 @@
         "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
         "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 111,
+        "line": 128,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.package-installer",
         "policyDisposition": "Allowed",
@@ -374189,7 +374182,7 @@
         "containingSymbol": "PackageInstallerLoadingTests::PageOpensWithLoadingStateWhileCatalogReaderIsBlockedAndCanCloseImmediately",
         "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 118,
+        "line": 135,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.package-installer",
         "policyDisposition": "Allowed",
@@ -374204,7 +374197,7 @@
         "containingSymbol": "PackageInstallerLoadingTests::RowsArriveInBatchesAndNewSearchReplacesAnUnfinishedBatch",
         "file": "Tests/Editor/PackageInstallerLoadingTests.cs",
         "invocation": "UnityEngine.Object.DestroyImmediate",
-        "line": 155,
+        "line": 172,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.package-installer",
         "policyDisposition": "Allowed",
