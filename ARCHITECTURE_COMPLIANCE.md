@@ -36,8 +36,8 @@ once.
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 40 | 1 | 0 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 37 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 38 | 2 | 1 | 0 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 9 | 1 | 0 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 39 | 2 | 1 | 0 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 11 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 13 | 2 | 0 | 0 |
 | Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 39 | 1 | 0 | 0 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
@@ -46,7 +46,7 @@ once.
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | Compliant | Yes | Yes | 20 | 1 | 0 | 0 |
-| Editor | com.deucarian.editor | Compliant | Yes | Yes | 139 | 2 | 0 | 0 |
+| Editor | com.deucarian.editor | Compliant | Yes | Yes | 140 | 2 | 0 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 7 | 2 | 0 | 0 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 92 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
@@ -78,8 +78,8 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 39 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 22 | 4 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 162 | 2 | 2 | 0 |
-| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 39 | 1 | 3 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 164 | 2 | 2 | 0 |
+| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 41 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 62 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |

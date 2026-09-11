@@ -8607,7 +8607,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.12",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -8935,7 +8935,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.2",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -9036,7 +9036,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.14",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.viewer-navigation",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -9839,7 +9839,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.1.2",
+      "declaredVersion": "1.7.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.template.viewer.web",
       "referencedAssemblies": [
@@ -10929,6 +10929,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/Viewer Navigation Bootstrap/Deucarian.ViewerNavigation.Samples.Bootstrap.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Samples.Bootstrap",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CameraNavigation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Tests/EditMode/Deucarian.ViewerNavigation.Tests.EditMode.asmdef",
           "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
           "autoReferenced": false,
@@ -11012,6 +11024,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.CameraNavigation.InputSystemIntegration",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Viewer Navigation Bootstrap/Deucarian.ViewerNavigation.Samples.Bootstrap.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Samples.Bootstrap",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CameraNavigation.InputSystemIntegration",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
