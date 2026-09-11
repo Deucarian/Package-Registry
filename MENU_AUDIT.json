@@ -3,7 +3,7 @@
   "entries": [
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 43,
+      "line": 45,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Advanced/Developer Tools...",
       "repository": "Editor",
@@ -11,7 +11,7 @@
     },
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 49,
+      "line": 51,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Advanced/Legacy Shortcuts...",
       "repository": "Editor",
@@ -19,15 +19,15 @@
     },
     {
       "file": "Editor/GameContentAuthoringWindow.cs",
-      "line": 33,
+      "line": 15,
       "packageId": "com.deucarian.game-content-authoring",
       "path": "Tools/Deucarian/Authoring/Game Content...",
       "repository": "Game-Content-Authoring",
       "validator": false
     },
     {
-      "file": "Editor/DeucarianBuildManagerWindow.Part01.cs",
-      "line": 16,
+      "file": "Editor/DeucarianBuildManagerWindow.cs",
+      "line": 56,
       "packageId": "com.deucarian.build-pipeline",
       "path": "Tools/Deucarian/Build Manager...",
       "repository": "Build-Pipeline",
@@ -35,7 +35,7 @@
     },
     {
       "file": "Editor/DeucarianControlCenterWindow.cs",
-      "line": 37,
+      "line": 39,
       "packageId": "com.deucarian.editor",
       "path": "Tools/Deucarian/Control Center...",
       "repository": "Editor",
