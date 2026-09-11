@@ -258,6 +258,18 @@ Architecture reviews must check:
   styles, icons, status rows, and workflow controls. They never copy theme
   values or maintain a second package-local visual language.
 
+## Simple, typed package entry points
+
+- Each package exposes one obvious short entry point for ordinary callers. Configure the existing authoritative owner once; views and gameplay callers do not create competing stores, presenters, clocks or service lifetimes.
+- Definition identifiers are domain-specific types. The same value works as a named code definition and a serialized Inspector selection. Ordinary convenience APIs do not accept raw strings, public string constructors or implicit string conversions. String-based advanced composition remains explicit.
+- Declare project keys once in public runtime definition sets. Existing asset-authored catalogs generate code keys from those definitions; callers do not need asset references. Generated runtime assemblies permit use from caller asmdefs. Identity stays stable across display-name changes; deleted members fail compilation and stale serialized selections fail validation.
+- Payload types belong in the key where meaningful, such as save documents, commands and API request/response pairs. Do not invent a key registry for existing enums, parameterless actions, URLs or other data. Runtime-created rows, targets and offered choices receive typed handles from their scope; reject expired or foreign handles without mutating another scope.
+- Missing configuration and invalid declarations identify the owner, offending definition and concrete repair. Expected runtime outcomes remain typed results. A typed identifier does not prove external availability or correct scene setup.
+- Defaults include associated domain behavior. A warning request includes its warning feedback; callers must not coordinate an extra audio call to get the normal warning behavior. Repeated updates preserve the owner's deduplication and recovery policy.
+- Keep advanced APIs, pure core assemblies, ownership and cancellation contracts intact. Borrowed owners remain borrowed. Awaitable operations finish on success, cancellation, supersession or teardown. Operational Unity hosts register sanitized lifecycle/configuration diagnostics automatically.
+- Editor owns shared picker, source formatting/import and generic serialized-key validation. Domain packages own key types, definition discovery and generation projections. Runtime discovery/reflection and a cross-domain global service locator are not substitutes for explicit setup. Build Pipeline retains final player/AOT evidence ownership.
+- Every convenience entry point includes a compiled short caller sample and separate startup guidance. Validate serialized/code interchange, wrong-domain or payload compiler rejection, actionable missing configuration and any changed lifetime behavior before publication.
+
 ## Adding A Capability
 
 1. Prove repeated production use or clear package ownership pressure with audit data.
