@@ -19,14 +19,6 @@
       "repository": "Bootstrap"
     },
     {
-      "dependency": "com.deucarian.editor",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.build-pipeline",
-      "packageJsonVersion": "1.10.6",
-      "readmeVersion": "1.7.0",
-      "repository": "Build-Pipeline"
-    },
-    {
       "file": "README.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.build-pipeline",
@@ -286,7 +278,6 @@
     }
   ],
   "summary": {
-    "DependencyVersionDrift": 1,
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 11,
