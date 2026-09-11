@@ -5,21 +5,21 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
-        "version": "1.10.7",
+        "version": "1.10.8",
         "limits": { "mutableGlobals": 2 },
         "reason": "Rechecked for the native visual-fidelity rollout: the existing project motion preference/event owner is unchanged. Instance-owned pages and preview controls retain their own cleanup; no allowance increase."
       },
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAppearance",
-        "version": "1.10.7",
+        "version": "1.10.8",
         "limits": { "mutableGlobals": 1 },
         "reason": "Rechecked for the native visual-fidelity rollout: the existing appearance event and preference boundary is unchanged. The stationary dock remains project-local, without retaining pages; no allowance increase."
       },
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianToolHistory",
-        "version": "1.10.7",
+        "version": "1.10.8",
         "limits": { "mutableGlobals": 1 },
         "reason": "Rechecked for the native visual-fidelity rollout: bounded favorite/recent-tool preference ownership is unchanged, with no additional collection or allowance."
       },

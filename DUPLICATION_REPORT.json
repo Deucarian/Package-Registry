@@ -16853,14 +16853,6 @@
         "repository": "Bootstrap"
       },
       {
-        "dependency": "com.deucarian.editor",
-        "kind": "DependencyVersionDrift",
-        "packageId": "com.deucarian.build-pipeline",
-        "packageJsonVersion": "1.10.6",
-        "readmeVersion": "1.7.0",
-        "repository": "Build-Pipeline"
-      },
-      {
         "file": "README.md",
         "kind": "ReviewRequired",
         "packageId": "com.deucarian.build-pipeline",
@@ -17120,7 +17112,6 @@
       }
     ],
     "summary": {
-      "DependencyVersionDrift": 1,
       "HistoricalChangelogReference": 18,
       "LegitimateGenericBridgeTerm": 1,
       "MigrationDocumentation": 11,
@@ -17129,6 +17120,13 @@
   },
   "drift": {
     "dependencyVersionDrift": [
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.api",
+        "repo": "API"
+      },
       {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
@@ -17149,6 +17147,13 @@
         "ownerDevelopVersion": "1.0.8",
         "packageId": "com.deucarian.activity-visualization",
         "repo": "Activity-Visualization"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.attacks",
+        "repo": "Attacks"
       },
       {
         "declaredVersion": "0.1.1",
@@ -17193,11 +17198,25 @@
         "repo": "Auto-Defense-Suite"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.build-pipeline",
+        "repo": "Build-Pipeline"
+      },
+      {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
         "packageId": "com.deucarian.build-pipeline",
         "repo": "Build-Pipeline"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.camera-navigation",
+        "repo": "Camera-Navigation"
       },
       {
         "declaredVersion": "0.2.5",
@@ -17214,6 +17233,13 @@
         "repo": "Command-Routing"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.command-routing",
+        "repo": "Command-Routing"
+      },
+      {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
@@ -17235,6 +17261,13 @@
         "repo": "Command-Routing-UDP-Integration"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.command-routing.udp-integration",
+        "repo": "Command-Routing-UDP-Integration"
+      },
+      {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
@@ -17256,9 +17289,9 @@
         "repo": "Command-Routing-WebGL-Integration"
       },
       {
-        "declaredVersion": "1.0.4",
-        "dependency": "com.deucarian.logging",
-        "ownerDevelopVersion": "1.0.8",
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.command-routing.webgl-integration",
         "repo": "Command-Routing-WebGL-Integration"
       },
@@ -17266,8 +17299,36 @@
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
+        "packageId": "com.deucarian.command-routing.webgl-integration",
+        "repo": "Command-Routing-WebGL-Integration"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.diagnostics",
         "repo": "Diagnostics"
+      },
+      {
+        "declaredVersion": "1.0.4",
+        "dependency": "com.deucarian.logging",
+        "ownerDevelopVersion": "1.0.8",
+        "packageId": "com.deucarian.diagnostics",
+        "repo": "Diagnostics"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.game-content-authoring",
+        "repo": "Game-Content-Authoring"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.logging",
+        "repo": "Logging"
       },
       {
         "declaredVersion": "1.1.3",
@@ -17280,6 +17341,13 @@
         "declaredVersion": "0.1.6",
         "dependency": "com.deucarian.diagnostics",
         "ownerDevelopVersion": "0.2.4",
+        "packageId": "com.deucarian.notifications",
+        "repo": "Notifications"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.notifications",
         "repo": "Notifications"
       },
@@ -17321,7 +17389,7 @@
       {
         "declaredVersion": "1.9.0",
         "dependency": "com.deucarian.editor",
-        "ownerDevelopVersion": "1.10.6",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.package-installer",
         "repo": "Package-Installer"
       },
@@ -17331,6 +17399,13 @@
         "ownerDevelopVersion": "1.0.8",
         "packageId": "com.deucarian.package-installer",
         "repo": "Package-Installer"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.pointer-capture",
+        "repo": "Pointer-Capture"
       },
       {
         "declaredVersion": "0.1.1",
@@ -17343,6 +17418,13 @@
         "declaredVersion": "0.1.1",
         "dependency": "com.deucarian.attacks",
         "ownerDevelopVersion": "0.1.4",
+        "packageId": "com.deucarian.run-upgrades",
+        "repo": "Run-Upgrades"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.run-upgrades",
         "repo": "Run-Upgrades"
       },
@@ -17396,6 +17478,13 @@
         "repo": "Simultria-API"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.simultria-api",
+        "repo": "Simultria-API"
+      },
+      {
         "declaredVersion": "2.0.2",
         "dependency": "com.deucarian.api",
         "ownerDevelopVersion": "2.0.5",
@@ -17420,6 +17509,13 @@
         "declaredVersion": "0.2.5",
         "dependency": "com.deucarian.command-routing",
         "ownerDevelopVersion": "0.2.10",
+        "packageId": "com.deucarian.simultria-viewer-integration",
+        "repo": "Simultria-Viewer-Connection"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.simultria-viewer-integration",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -17452,6 +17548,13 @@
         "repo": "Template-Game-Idle-Auto-Defense"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.template.game.idle-auto-defense",
+        "repo": "Template-Game-Idle-Auto-Defense"
+      },
+      {
         "declaredVersion": "0.2.2",
         "dependency": "com.deucarian.game-content-authoring",
         "ownerDevelopVersion": "0.2.4",
@@ -17480,6 +17583,13 @@
         "repo": "Template-Game-Idle-Auto-Defense"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.template.game.movement-fps",
+        "repo": "Template-Game-Movement-FPS"
+      },
+      {
         "declaredVersion": "0.1.1",
         "dependency": "com.deucarian.game-content-authoring",
         "ownerDevelopVersion": "0.2.4",
@@ -17497,6 +17607,13 @@
         "declaredVersion": "0.1.1",
         "dependency": "com.deucarian.attacks",
         "ownerDevelopVersion": "0.1.4",
+        "packageId": "com.deucarian.template.game.survivors",
+        "repo": "Template-Game-Survivors"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.template.game.survivors",
         "repo": "Template-Game-Survivors"
       },
@@ -17648,6 +17765,20 @@
         "repo": "Template-Viewer-Web"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.test-automation",
+        "repo": "Test-Automation"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.theming",
+        "repo": "Theming"
+      },
+      {
         "declaredVersion": "1.0.4",
         "dependency": "com.deucarian.logging",
         "ownerDevelopVersion": "1.0.8",
@@ -17660,6 +17791,13 @@
         "ownerDevelopVersion": "1.6.1",
         "packageId": "com.deucarian.ui",
         "repo": "UI"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.ui-flow",
+        "repo": "UI-FLow"
       },
       {
         "declaredVersion": "1.0.4",
@@ -17683,6 +17821,13 @@
         "repo": "Viewer-Authentication"
       },
       {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.authentication",
+        "repo": "Viewer-Authentication"
+      },
+      {
         "declaredVersion": "1.0.6",
         "dependency": "com.deucarian.session",
         "ownerDevelopVersion": "1.0.7",
@@ -17700,6 +17845,13 @@
         "declaredVersion": "0.1.6",
         "dependency": "com.deucarian.diagnostics",
         "ownerDevelopVersion": "0.2.4",
+        "packageId": "com.deucarian.viewer-navigation",
+        "repo": "Viewer-Navigation"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.viewer-navigation",
         "repo": "Viewer-Navigation"
       },
@@ -17770,6 +17922,13 @@
         "declaredVersion": "0.1.1",
         "dependency": "com.deucarian.attacks",
         "ownerDevelopVersion": "0.1.4",
+        "packageId": "com.deucarian.weapon-systems",
+        "repo": "Weapon-Systems"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
         "packageId": "com.deucarian.weapon-systems",
         "repo": "Weapon-Systems"
       },
@@ -17877,6 +18036,13 @@
         "ownerDevelopVersion": "0.6.3",
         "packageId": "com.deucarian.webgl-template",
         "repo": "WebGL-Template"
+      },
+      {
+        "declaredVersion": "1.10.6",
+        "dependency": "com.deucarian.editor",
+        "ownerDevelopVersion": "1.10.7",
+        "packageId": "com.deucarian.xr-ui",
+        "repo": "XR-UI"
       },
       {
         "declaredVersion": "1.3.0",
@@ -93007,7 +93173,7 @@
         "containingType": "",
         "file": "Editor/DeucarianEditorStepper.cs",
         "fullSignature": "public sealed class DeucarianEditorStepper : BaseField<int>",
-        "line": 6,
+        "line": 7,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -93022,7 +93188,7 @@
         "containingType": "DeucarianEditorStepper",
         "file": "Editor/DeucarianEditorStepper.cs",
         "fullSignature": "public DeucarianEditorStepper(int minimum, int maximum) : base(null, new VisualElement())",
-        "line": 14,
+        "line": 15,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -93037,7 +93203,7 @@
         "containingType": "DeucarianEditorStepper",
         "file": "Editor/DeucarianEditorStepper.cs",
         "fullSignature": "public override int value",
-        "line": 35,
+        "line": 36,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -93052,7 +93218,7 @@
         "containingType": "DeucarianEditorStepper",
         "file": "Editor/DeucarianEditorStepper.cs",
         "fullSignature": "public override void SetValueWithoutNotify(int newValue)",
-        "line": 36,
+        "line": 37,
         "namespace": "Deucarian.Editor",
         "obsolete": false,
         "packageId": "com.deucarian.editor",
@@ -361187,10 +361353,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "902dd442889760103221fcd2587f2e55242469cf",
+        "headCommit": "c810829b3bccc38b564cfe856527e31bcfff9757",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "902dd442889760103221fcd2587f2e55242469cf"
+        "requestedRefCommit": "c810829b3bccc38b564cfe856527e31bcfff9757"
       },
       "canonicalId": "Deucarian/Build-Pipeline",
       "ciWorkflows": [
@@ -361240,7 +361406,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Build-Pipeline.git",
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
-        "headCommit": "902dd442889760103221fcd2587f2e55242469cf",
+        "headCommit": "c810829b3bccc38b564cfe856527e31bcfff9757",
         "manifestSha256": "667dea19d946b4d15a7c7ecb1545cec2f1a8e456f3c217cccc1b907174a2c019",
         "requestedRef": "develop"
       },
@@ -362849,10 +363015,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "20c90ece734b55da0eabe620a4d4d38d30435c0d",
+        "headCommit": "3015190d70c4889ed87cba335578242f0f592bbb",
         "origin": "https://github.com/Deucarian/Editor.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "20c90ece734b55da0eabe620a4d4d38d30435c0d"
+        "requestedRefCommit": "3015190d70c4889ed87cba335578242f0f592bbb"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
@@ -362893,13 +363059,13 @@
       },
       "name": "Editor",
       "packageId": "com.deucarian.editor",
-      "packageVersion": "1.10.6",
+      "packageVersion": "1.10.7",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "eedaeb15351d52712076439a399f18a31a5c14d6ea597be87a890babb5559f45",
-        "headCommit": "20c90ece734b55da0eabe620a4d4d38d30435c0d",
-        "manifestSha256": "1a39e04db46cebb2db7ea9f0d87c20bf931f2ecb33b6846eff58e174b8943420",
+        "headCommit": "3015190d70c4889ed87cba335578242f0f592bbb",
+        "manifestSha256": "452ab2459b1094331be11910424928086a70983a96dd6fbaa8d704425b4b7d34",
         "requestedRef": "develop"
       },
       "registryDependencies": [],

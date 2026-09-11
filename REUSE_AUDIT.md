@@ -34,7 +34,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Core-State | com.deucarian.core-state | 1.0.2 | 2021.3 | yes | clean | (none) | 3 | 41 |
 | Defense-Games | com.deucarian.defense-games | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.encounters, com.deucarian.combat, com.deucarian.world-spawning, com.deucarian.world-navigation | 4 | 122 |
 | Diagnostics | com.deucarian.diagnostics | 0.2.4 | 2021.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 65 |
-| Editor | com.deucarian.editor | 1.10.6 | 2021.3 | yes | clean | (none) | 4 | 1022 |
+| Editor | com.deucarian.editor | 1.10.7 | 2021.3 | yes | clean | (none) | 4 | 1022 |
 | Encounters | com.deucarian.encounters | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation | 3 | 238 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | 0.2.4 | 6000.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.gameplay-foundation | 2 | 1275 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.1.1 | 2021.3 | yes | clean | (none) | 3 | 131 |
@@ -100,7 +100,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Public API symbols missing XML documentation | 10732 |
 | Debug invocation records | 17 |
 | Unity object lifetime records | 1080 |
-| Documentation drift findings | 47 |
+| Documentation drift findings | 46 |
 | Dependency usage findings | 258 |
 | Dependency cycles | 0 |
 
