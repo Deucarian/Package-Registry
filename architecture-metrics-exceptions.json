@@ -5,6 +5,27 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Rechecked for interactive previews and navigation geometry: unchanged project motion preference/event owner. Previews are instance-owned and disposed; no allowance increase."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for equal action sizing and persistent navigation: unchanged appearance preference/event boundary, with no additional global state or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.11.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for concrete page descriptions: unchanged bounded favorite/recent-tool preference owner. No additional collection or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.10.8",
         "limits": {
           "mutableGlobals": 2
@@ -410,6 +431,13 @@
     ],
     "com.deucarian.notifications": [
       {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.4.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Renewed after integrating typed warning keys from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 0.3.5; NotificationService remains the domain state owner. No additional global state, discovery or service creation is introduced."
+      },
+      {
         "assembly": "Deucarian.Notifications.Editor",
         "type": "Deucarian.Notifications.Editor.DeucarianNotificationLabWindow",
         "version": "0.2.0",
@@ -438,6 +466,20 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.7.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Renewed after integrating the typed audio API from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 1.6.1; no discovery, service creation, domain collection or additional global state is introduced. The same allowance and lifecycle ownership apply."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.7.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for shared DS/RP palettes: unchanged scene preview generation/repaint owner. Theme mapping and preview state remain instance-owned; no additional global state or allowance."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
