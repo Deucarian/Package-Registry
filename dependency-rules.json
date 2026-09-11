@@ -68,6 +68,7 @@
         "com.deucarian.object-selection.core-state-integration",
         "com.deucarian.projectiles",
         "com.deucarian.session.api-integration",
+        "com.deucarian.tweens",
         "com.deucarian.ui",
         "com.deucarian.viewer-rendering",
         "com.deucarian.webgl-template",

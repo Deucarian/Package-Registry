@@ -1,6 +1,11 @@
 {
   "capabilities": [
     {
+      "id": "visibility-tween-playback",
+      "ownerPackageId": "com.deucarian.tweens",
+      "description": "Shared active tween scheduling, renderer-independent visibility progress/sampling, profiles, explicit animated object lifecycle and isolated editor preview."
+    },
+    {
       "description": "Category-based local package logging and Unity console forwarding.",
       "exceptions": [
         {

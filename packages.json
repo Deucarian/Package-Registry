@@ -153,6 +153,25 @@
   ],
   "packages": [
     {
+      "id": "com.deucarian.tweens",
+      "displayName": "Deucarian Tweens",
+      "category": "UI",
+      "type": "Core",
+      "kind": "Library",
+      "ecosystemGroup": "Experience & Interaction",
+      "overviewOrder": 13,
+      "description": "Shared active-only visibility tween scheduling, lifecycle adapters, profiles and isolated previews.",
+      "iconKey": "play",
+      "stableUrl": "https://github.com/Deucarian/Tweens.git#main",
+      "developmentUrl": "https://github.com/Deucarian/Tweens.git#develop",
+      "dependencies": [
+        "com.deucarian.common",
+        "com.deucarian.diagnostics",
+        "com.deucarian.editor"
+      ],
+      "groupId": "ui-presentation"
+    },
+    {
       "id": "com.deucarian.common",
       "displayName": "Deucarian Common",
       "category": "Core",

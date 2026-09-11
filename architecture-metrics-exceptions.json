@@ -480,6 +480,29 @@
         "reason": "The existing scene-preview repaint generation moved out of the workflow facade into the sole scene-application owner. This is an ownership transfer, not a second mutable source. Rechecked for the workspace migration: this owner is unchanged from 1.3.1; the same budget is retained. Rechecked for in-window navigation: no change to this owner's responsibilities or budget. Rechecked for package-wide window-local navigation: owner unchanged, same allowance. Rechecked for switching stabilization: these existing global owners are unchanged; navigation state remains window-local. No allowance increased. Renewed for the editor presentation migration; ownership and metric allowances are unchanged."
       }
     ],
+    "com.deucarian.tweens": [
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenDiagnosticProvider",
+        "version": "0.1.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Monotonic, process-local provider identity only; no target data. Provider registration is removed on scheduler disposal. Reviewed in TWEENS_DEVELOPMENT_PUBLICATION.md."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenRuntime",
+        "version": "0.1.0",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "The one lazy persistent runner and quit guard. Subsystem registration clears both; shutdown disposes work and prevents recreation during quit. Reviewed in TWEENS_DEVELOPMENT_PUBLICATION.md."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenVisibilityDefaults",
+        "version": "0.1.0",
+        "limits": { "mutableGlobals": 3 },
+        "reason": "Explicit project profile/cache and reduced-motion preference, owned by this policy service. Subsystem registration clears all three; no per-object references. Reviewed in TWEENS_DEVELOPMENT_PUBLICATION.md."
+      }
+    ],
     "com.deucarian.xr-ui": [
       {
         "assembly": "Deucarian.XRUI",
