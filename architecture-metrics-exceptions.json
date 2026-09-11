@@ -431,6 +431,13 @@
     ],
     "com.deucarian.notifications": [
       {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.4.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Renewed after integrating typed warning keys from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 0.3.5; NotificationService remains the domain state owner. No additional global state, discovery or service creation is introduced."
+      },
+      {
         "assembly": "Deucarian.Notifications.Editor",
         "type": "Deucarian.Notifications.Editor.DeucarianNotificationLabWindow",
         "version": "0.2.0",
@@ -459,6 +466,13 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.7.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Renewed after integrating the typed audio API from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 1.6.1; no discovery, service creation, domain collection or additional global state is introduced. The same allowance and lifecycle ownership apply."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
