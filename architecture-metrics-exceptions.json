@@ -5,6 +5,27 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.10.6",
+        "limits": { "mutableGlobals": 2 },
+        "reason": "Rechecked for the native visual-fidelity rollout: the existing project motion preference/event owner is unchanged. Instance-owned pages and preview controls retain their own cleanup; no allowance increase."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.10.6",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for the native visual-fidelity rollout: the existing appearance event and preference boundary is unchanged. The stationary dock remains project-local, without retaining pages; no allowance increase."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.10.6",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for the native visual-fidelity rollout: bounded favorite/recent-tool preference ownership is unchanged, with no additional collection or allowance."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.9.1",
         "limits": { "mutableGlobals": 2 },
         "reason": "Rechecked for shared control geometry fixes: this preference owner is unchanged from 1.9.0. No added global state or increased allowance."
@@ -381,6 +402,13 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.6.1",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Rechecked for native palettes and Inspectors: this scene-preview repaint owner is byte-for-byte unchanged from develop 1.6.0. No additional global state or allowance."
+      },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
