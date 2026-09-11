@@ -8,10 +8,12 @@ Schema version: 2
 | --- | --- | --- | --- | --- |
 | com.deucarian.activity-visualization | com.deucarian.diagnostics | 0.1.4 | Activity-Visualization | Diagnostics |
 | com.deucarian.activity-visualization | com.deucarian.logging | 1.0.2 | Activity-Visualization | Logging |
-| com.deucarian.api | com.deucarian.editor | 1.10.6 | API | Editor |
+| com.deucarian.api | com.deucarian.diagnostics | 0.2.3 | API | Diagnostics |
+| com.deucarian.api | com.deucarian.editor | 1.10.8 | API | Editor |
 | com.deucarian.api | com.deucarian.logging | 1.0.4 | API | Logging |
 | com.deucarian.attacks | com.deucarian.combat | 0.1.1 | Attacks | Combat |
-| com.deucarian.attacks | com.deucarian.editor | 1.10.6 | Attacks | Editor |
+| com.deucarian.attacks | com.deucarian.diagnostics | 0.2.3 | Attacks | Diagnostics |
+| com.deucarian.attacks | com.deucarian.editor | 1.10.8 | Attacks | Editor |
 | com.deucarian.attacks | com.deucarian.game-content-authoring | 0.2.4 | Attacks | Game-Content-Authoring |
 | com.deucarian.attacks | com.deucarian.gameplay-foundation | 0.1.1 | Attacks | Gameplay-Foundation |
 | com.deucarian.authentication | com.deucarian.api | 2.0.1 | Viewer-Authentication | API |
@@ -44,11 +46,14 @@ Schema version: 2
 | com.deucarian.build-pipeline | com.deucarian.editor | 1.10.6 | Build-Pipeline | Editor |
 | com.deucarian.build-pipeline | com.deucarian.logging | 1.0.4 | Build-Pipeline | Logging |
 | com.deucarian.camera-navigation | com.deucarian.common | 0.2.1 | Camera-Navigation | Common |
-| com.deucarian.camera-navigation | com.deucarian.editor | 1.10.6 | Camera-Navigation | Editor |
+| com.deucarian.camera-navigation | com.deucarian.diagnostics | 0.2.3 | Camera-Navigation | Diagnostics |
+| com.deucarian.camera-navigation | com.deucarian.editor | 1.10.8 | Camera-Navigation | Editor |
 | com.deucarian.camera-navigation.input-system-integration | com.deucarian.camera-navigation | 0.2.5 | CameraNavigation-InputSystem-Integration | Camera-Navigation |
+| com.deucarian.combat | com.deucarian.diagnostics | 0.2.3 | Combat | Diagnostics |
+| com.deucarian.combat | com.deucarian.editor | 1.10.8 | Combat | Editor |
 | com.deucarian.combat | com.deucarian.gameplay-foundation | 0.1.1 | Combat | Gameplay-Foundation |
 | com.deucarian.command-routing | com.deucarian.diagnostics | 0.1.6 | Command-Routing | Diagnostics |
-| com.deucarian.command-routing | com.deucarian.editor | 1.10.6 | Command-Routing | Editor |
+| com.deucarian.command-routing | com.deucarian.editor | 1.10.8 | Command-Routing | Editor |
 | com.deucarian.command-routing | com.deucarian.logging | 1.0.4 | Command-Routing | Logging |
 | com.deucarian.command-routing.udp-integration | com.deucarian.command-routing | 0.2.5 | Command-Routing-UDP-Integration | Command-Routing |
 | com.deucarian.command-routing.udp-integration | com.deucarian.diagnostics | 0.1.6 | Command-Routing-UDP-Integration | Diagnostics |
@@ -65,22 +70,28 @@ Schema version: 2
 | com.deucarian.defense-games | com.deucarian.world-spawning | 0.2.1 | Defense-Games | World-Spawning |
 | com.deucarian.diagnostics | com.deucarian.editor | 1.10.6 | Diagnostics | Editor |
 | com.deucarian.diagnostics | com.deucarian.logging | 1.0.4 | Diagnostics | Logging |
+| com.deucarian.encounters | com.deucarian.diagnostics | 0.2.3 | Encounters | Diagnostics |
+| com.deucarian.encounters | com.deucarian.editor | 1.10.8 | Encounters | Editor |
 | com.deucarian.encounters | com.deucarian.gameplay-foundation | 0.1.1 | Encounters | Gameplay-Foundation |
 | com.deucarian.game-content-authoring | com.deucarian.common | 0.2.1 | Game-Content-Authoring | Common |
 | com.deucarian.game-content-authoring | com.deucarian.editor | 1.10.6 | Game-Content-Authoring | Editor |
 | com.deucarian.game-content-authoring | com.deucarian.gameplay-foundation | 0.1.1 | Game-Content-Authoring | Gameplay-Foundation |
+| com.deucarian.gameplay-foundation | com.deucarian.editor | 1.10.8 | Gameplay-Foundation | Editor |
 | com.deucarian.idle-progression | com.deucarian.gameplay-foundation | 0.1.1 | Idle-Progression | Gameplay-Foundation |
 | com.deucarian.idle-progression | com.deucarian.progression | 0.1.1 | Idle-Progression | Progression |
 | com.deucarian.logging | com.deucarian.editor | 1.10.6 | Logging | Editor |
 | com.deucarian.media | com.deucarian.common | 0.2.1 | Media | Common |
 | com.deucarian.media.api-integration | com.deucarian.api | 1.1.3 | Media-API-Integration | API |
 | com.deucarian.media.api-integration | com.deucarian.media | 0.1.0 | Media-API-Integration | Media |
+| com.deucarian.monetization | com.deucarian.diagnostics | 0.2.3 | Monetization | Diagnostics |
+| com.deucarian.monetization | com.deucarian.editor | 1.10.8 | Monetization | Editor |
 | com.deucarian.notifications | com.deucarian.common | 0.2.1 | Notifications | Common |
 | com.deucarian.notifications | com.deucarian.diagnostics | 0.1.6 | Notifications | Diagnostics |
-| com.deucarian.notifications | com.deucarian.editor | 1.10.6 | Notifications | Editor |
+| com.deucarian.notifications | com.deucarian.editor | 1.10.8 | Notifications | Editor |
 | com.deucarian.notifications | com.deucarian.theming | 1.6.0 | Notifications | Theming |
 | com.deucarian.notifications | com.deucarian.ui | 0.3.0 | Notifications | UI |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
+| com.deucarian.object-loading | com.deucarian.editor | 1.10.8 | Object-Loading | Editor |
 | com.deucarian.object-loading | com.deucarian.logging | 1.0.2 | Object-Loading | Logging |
 | com.deucarian.object-loading.api-integration | com.deucarian.api | 1.2.0 | ObjectLoading-API-Integration | API |
 | com.deucarian.object-loading.api-integration | com.deucarian.object-loading | 1.2.2 | ObjectLoading-API-Integration | Object-Loading |
@@ -90,15 +101,19 @@ Schema version: 2
 | com.deucarian.object-selection.core-state-integration | com.deucarian.object-selection | 1.0.4 | ObjectSelection-CoreState-Integration | Object-Selection |
 | com.deucarian.package-installer | com.deucarian.editor | 1.10.8 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
+| com.deucarian.persistence | com.deucarian.editor | 1.10.8 | Persistence | Editor |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.10.6 | Pointer-Capture | Editor |
+| com.deucarian.progression | com.deucarian.editor | 1.10.8 | Progression | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.1.1 | Progression | Gameplay-Foundation |
 | com.deucarian.projectiles | com.deucarian.attacks | 0.1.1 | Projectiles | Attacks |
 | com.deucarian.projectiles | com.deucarian.combat | 0.1.1 | Projectiles | Combat |
+| com.deucarian.projectiles | com.deucarian.editor | 1.10.8 | Projectiles | Editor |
 | com.deucarian.projectiles | com.deucarian.gameplay-foundation | 0.1.1 | Projectiles | Gameplay-Foundation |
 | com.deucarian.projectiles | com.deucarian.world-navigation | 0.1.1 | Projectiles | World-Navigation |
 | com.deucarian.projectiles | com.deucarian.world-spawning | 0.2.1 | Projectiles | World-Spawning |
 | com.deucarian.run-upgrades | com.deucarian.attacks | 0.1.1 | Run-Upgrades | Attacks |
-| com.deucarian.run-upgrades | com.deucarian.editor | 1.10.6 | Run-Upgrades | Editor |
+| com.deucarian.run-upgrades | com.deucarian.diagnostics | 0.2.3 | Run-Upgrades | Diagnostics |
+| com.deucarian.run-upgrades | com.deucarian.editor | 1.10.8 | Run-Upgrades | Editor |
 | com.deucarian.run-upgrades | com.deucarian.game-content-authoring | 0.2.4 | Run-Upgrades | Game-Content-Authoring |
 | com.deucarian.run-upgrades | com.deucarian.gameplay-foundation | 0.1.1 | Run-Upgrades | Gameplay-Foundation |
 | com.deucarian.run-upgrades | com.deucarian.weapon-systems | 0.1.1 | Run-Upgrades | Weapon-Systems |
@@ -186,7 +201,7 @@ Schema version: 2
 | com.deucarian.template.viewer.web | com.deucarian.theming | 1.1.2 | Template-Viewer-Web | Theming |
 | com.deucarian.template.viewer.web | com.deucarian.webgl-template | 0.1.1 | Template-Viewer-Web | WebGL-Template |
 | com.deucarian.test-automation | com.deucarian.editor | 1.10.6 | Test-Automation | Editor |
-| com.deucarian.theming | com.deucarian.editor | 1.10.6 | Theming | Editor |
+| com.deucarian.theming | com.deucarian.editor | 1.10.8 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
 | com.deucarian.theming | com.deucarian.media | 0.1.0 | Theming | Media |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
@@ -195,7 +210,7 @@ Schema version: 2
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.core-state | 1.0.2 | UIBinding-CoreState-Integration | Core-State |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
 | com.deucarian.ui-flow | com.deucarian.common | 0.2.1 | UI-FLow | Common |
-| com.deucarian.ui-flow | com.deucarian.editor | 1.10.6 | UI-FLow | Editor |
+| com.deucarian.ui-flow | com.deucarian.editor | 1.10.8 | UI-FLow | Editor |
 | com.deucarian.ui-flow | com.deucarian.logging | 1.0.4 | UI-FLow | Logging |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation | 0.2.12 | Viewer-Navigation | Camera-Navigation |
 | com.deucarian.viewer-navigation | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | Viewer-Navigation | CameraNavigation-InputSystem-Integration |
@@ -215,7 +230,8 @@ Schema version: 2
 | com.deucarian.viewer-shell | com.deucarian.ui | 0.2.7 | Viewer-Shell | UI |
 | com.deucarian.viewer-shell | com.deucarian.viewer-rendering | 0.1.0 | Viewer-Shell | Viewer-Rendering |
 | com.deucarian.weapon-systems | com.deucarian.attacks | 0.1.1 | Weapon-Systems | Attacks |
-| com.deucarian.weapon-systems | com.deucarian.editor | 1.10.6 | Weapon-Systems | Editor |
+| com.deucarian.weapon-systems | com.deucarian.diagnostics | 0.2.3 | Weapon-Systems | Diagnostics |
+| com.deucarian.weapon-systems | com.deucarian.editor | 1.10.8 | Weapon-Systems | Editor |
 | com.deucarian.weapon-systems | com.deucarian.game-content-authoring | 0.2.4 | Weapon-Systems | Game-Content-Authoring |
 | com.deucarian.weapon-systems | com.deucarian.gameplay-foundation | 0.1.1 | Weapon-Systems | Gameplay-Foundation |
 | com.deucarian.weapon-systems | com.deucarian.projectiles | 0.2.1 | Weapon-Systems | Projectiles |
@@ -239,9 +255,11 @@ Schema version: 2
 | com.deucarian.web-viewer-suite | com.deucarian.viewer-shell | 0.1.0 | Web-Viewer-Suite | Viewer-Shell |
 | com.deucarian.web-viewer-suite | com.deucarian.webgl-template | 0.1.0 | Web-Viewer-Suite | WebGL-Template |
 | com.deucarian.webgl-template | com.deucarian.build-pipeline | 0.5.0 | WebGL-Template | Build-Pipeline |
+| com.deucarian.world-navigation | com.deucarian.diagnostics | 0.2.3 | World-Navigation | Diagnostics |
 | com.deucarian.world-navigation | com.deucarian.gameplay-foundation | 0.1.1 | World-Navigation | Gameplay-Foundation |
 | com.deucarian.world-navigation | com.deucarian.world-spawning | 0.2.1 | World-Navigation | World-Spawning |
 | com.deucarian.world-spawning | com.deucarian.common | 0.2.1 | World-Spawning | Common |
+| com.deucarian.world-spawning | com.deucarian.editor | 1.10.8 | World-Spawning | Editor |
 | com.deucarian.world-spawning | com.deucarian.gameplay-foundation | 0.1.1 | World-Spawning | Gameplay-Foundation |
 | com.deucarian.xr-ui | com.deucarian.common | 0.2.1 | XR-UI | Common |
 | com.deucarian.xr-ui | com.deucarian.editor | 1.10.6 | XR-UI | Editor |
@@ -256,4 +274,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 133
-- Registry dependency drift entries: 15
+- Registry dependency drift entries: 0

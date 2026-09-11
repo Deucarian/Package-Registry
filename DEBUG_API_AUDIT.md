@@ -45,4 +45,4 @@ Counts actual C# invocation expressions plus fenced Markdown examples. Comments,
 | Template-Game-Survivors | Editor/SurvivorsEditorContentValidation.cs | 24 | Editor production | Debug.LogError | Error | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |
 | Template-Game-Survivors | Editor/SurvivorsEditorContentValidation.cs | 28 | Editor production | Debug.LogWarning | Warning | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |
 | Template-Game-Survivors | Editor/SurvivorsEditorContentValidation.cs | 32 | Editor production | Debug.Log | Info | Allowed | Info | Template editor content validation intentionally prints validation summaries to the Unity console for developer visibility. |
-| Weapon-Systems | Tests/EditMode/WeaponSystemsTests.cs | 345 | Test | Debug.Log | Info | Allowed | Info |  |
+| Weapon-Systems | Tests/EditMode/WeaponSystemsTests.cs | 369 | Test | Debug.Log | Info | Allowed | Info |  |
