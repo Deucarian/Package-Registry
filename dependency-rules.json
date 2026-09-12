@@ -22,9 +22,7 @@
         "com.deucarian.test-automation",
         "com.deucarian.logging",
         "com.deucarian.media",
-        "com.deucarian.pointer-capture",
-        "com.deucarian.ui-binding",
-        "com.deucarian.xr-ui"
+        "com.deucarian.ui-binding"
       ]
     },
     {
@@ -64,7 +62,8 @@
         "com.deucarian.ui",
         "com.deucarian.viewer-rendering",
         "com.deucarian.webgl-template",
-        "com.deucarian.xr-ui.theming-integration"
+        "com.deucarian.pointer-capture",
+        "com.deucarian.xr-ui"
       ]
     },
     {
@@ -82,7 +81,8 @@
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
         "com.deucarian.viewer-shell",
-        "com.deucarian.selection-suite"
+        "com.deucarian.selection-suite",
+        "com.deucarian.xr-ui.theming-integration"
       ]
     },
     {

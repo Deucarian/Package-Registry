@@ -8,6 +8,22 @@ No new capability owner, Git-client package or runtime dependency is introduced.
 
 ## Repository boundary
 
+The default clone destination is `<project>/.deucarian/checkouts/<package-id>`.
+Cloning there is an explicit action that adds a narrowly scoped local ignore
+rule to the consumer repository's Git `info/exclude`, preserving existing rules.
+It does not edit `.gitignore`, stage consumer files, or change consumer commits.
+Already tracked files, junctions in local storage, consumer Git metadata used as
+package metadata, and other nested checkout locations are rejected. A separate
+external repository remains supported. Page opening never creates directories
+or edits exclusions. The clone retains its own independent Git repository.
+
+Connecting still modifies the consumer manifest and may cause Unity to update
+the lockfile. These tracked changes are never hidden using ignore rules, index
+flags or lockfile rewriting. Show **Local development active**, the checkout and
+branch, and **Project connection temporarily changed**. **Restore installed
+version** restores the original reference while preserving local source, edits
+and commits. Do not describe an active local connection as a clean project.
+
 Every mutation must validate the package ID, canonical working-tree root, common
 Git directory, expected remote and selected branch. Consumer repositories,
 ancestor repositories, PackageCache and aliases of those paths are forbidden
