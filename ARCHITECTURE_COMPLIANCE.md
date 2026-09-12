@@ -30,13 +30,13 @@ once.
 | Repository | Package | Status | Architecture reference | Shared validation | Production files | Test assemblies | Oversized files | Unowned files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
-| API | com.deucarian.api | Compliant | Yes | Yes | 79 | 2 | 0 | 0 |
+| API | com.deucarian.api | Compliant | Yes | Yes | 80 | 2 | 0 | 0 |
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 95 | 2 | 2 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Bootstrap | com.deucarian.bootstrap | Compliant | Yes | Yes | 40 | 1 | 0 | 0 |
 | Build-Pipeline | com.deucarian.build-pipeline | RefactorBacklog | Yes | Yes | 37 | 1 | 1 | 0 |
-| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 46 | 2 | 1 | 0 |
+| Camera-Navigation | com.deucarian.camera-navigation | RefactorBacklog | Yes | Yes | 47 | 2 | 1 | 0 |
 | CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | Compliant | Yes | Yes | 11 | 1 | 0 | 0 |
 | Combat | com.deucarian.combat | Compliant | Yes | Yes | 26 | 2 | 0 | 0 |
 | Command-Routing | com.deucarian.command-routing | Compliant | Yes | Yes | 40 | 1 | 0 | 0 |
@@ -46,7 +46,7 @@ once.
 | Core-State | com.deucarian.core-state | Compliant | Yes | Yes | 10 | 1 | 0 | 0 |
 | Defense-Games | com.deucarian.defense-games | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Diagnostics | com.deucarian.diagnostics | Compliant | Yes | Yes | 20 | 1 | 0 | 0 |
-| Editor | com.deucarian.editor | Compliant | Yes | Yes | 154 | 2 | 0 | 0 |
+| Editor | com.deucarian.editor | Compliant | Yes | Yes | 158 | 2 | 0 | 0 |
 | Encounters | com.deucarian.encounters | Compliant | Yes | Yes | 17 | 2 | 0 | 0 |
 | Game-Content-Authoring | com.deucarian.game-content-authoring | RefactorBacklog | Yes | Yes | 92 | 1 | 5 | 0 |
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 26 | 1 | 0 | 0 |
@@ -69,7 +69,7 @@ once.
 | Run-Upgrades | com.deucarian.run-upgrades | RefactorBacklog | Yes | Yes | 38 | 2 | 2 | 0 |
 | Selection-Suite | com.deucarian.selection-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Session | com.deucarian.session | Compliant | Yes | Yes | 19 | 1 | 0 | 0 |
-| Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 13 | 1 | 0 | 0 |
+| Session-API-Integration | com.deucarian.session.api-integration | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | Simultria-API | com.deucarian.simultria-api | SetupRequired | No | Yes | 42 | 1 | 0 | 0 |
 | Simultria-Viewer-Connection | com.deucarian.simultria-viewer-integration | Compliant | Yes | Yes | 53 | 1 | 0 | 0 |
 | Template-Game-Idle-Auto-Defense | com.deucarian.template.game.idle-auto-defense | RefactorBacklog | Yes | Yes | 139 | 2 | 10 | 0 |
@@ -78,12 +78,12 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 39 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 22 | 4 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 167 | 2 | 2 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 168 | 2 | 2 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 41 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 65 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
-| Viewer-Authentication | com.deucarian.authentication | Compliant | Yes | Yes | 58 | 1 | 0 | 0 |
+| Viewer-Authentication | com.deucarian.authentication | Compliant | Yes | Yes | 59 | 1 | 0 | 0 |
 | Viewer-Navigation | com.deucarian.viewer-navigation | Compliant | Yes | Yes | 41 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | Compliant | Yes | Yes | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | Compliant | Yes | Yes | 17 | 1 | 0 | 0 |
