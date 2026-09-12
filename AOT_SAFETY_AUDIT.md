@@ -198,7 +198,7 @@ Mode: `Audit`
 Repository: `Pointer-Capture`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/DeucarianPointerCaptureController.cs`:484 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/PointerCaptureOwnerDescription.cs`:6 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.simultria-api`
 

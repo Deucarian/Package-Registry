@@ -662,8 +662,8 @@
       "findings": [
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
-          "file": "Runtime/DeucarianPointerCaptureController.cs",
-          "line": 484,
+          "file": "Runtime/PointerCaptureOwnerDescription.cs",
+          "line": 6,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }

@@ -12,8 +12,8 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 1081 |
-| helper call site | 121 |
+| direct Unity API call | 1082 |
+| helper call site | 120 |
 | helper definition | 1 |
 
 ## Policy Summary

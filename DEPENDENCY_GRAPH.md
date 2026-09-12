@@ -104,6 +104,8 @@ Schema version: 2
 | com.deucarian.package-installer | com.deucarian.editor | 1.12.0 | Package-Installer | Editor |
 | com.deucarian.package-installer | com.deucarian.logging | 1.0.4 | Package-Installer | Logging |
 | com.deucarian.persistence | com.deucarian.editor | 1.12.0 | Persistence | Editor |
+| com.deucarian.pointer-capture | com.deucarian.common | 0.2.1 | Pointer-Capture | Common |
+| com.deucarian.pointer-capture | com.deucarian.diagnostics | 0.2.4 | Pointer-Capture | Diagnostics |
 | com.deucarian.pointer-capture | com.deucarian.editor | 1.13.0 | Pointer-Capture | Editor |
 | com.deucarian.progression | com.deucarian.editor | 1.12.0 | Progression | Editor |
 | com.deucarian.progression | com.deucarian.gameplay-foundation | 0.2.0 | Progression | Gameplay-Foundation |
@@ -221,7 +223,7 @@ Schema version: 2
 | com.deucarian.viewer-navigation | com.deucarian.diagnostics | 0.1.6 | Viewer-Navigation | Diagnostics |
 | com.deucarian.viewer-navigation | com.deucarian.editor | 1.13.0 | Viewer-Navigation | Editor |
 | com.deucarian.viewer-navigation | com.deucarian.logging | 1.0.4 | Viewer-Navigation | Logging |
-| com.deucarian.viewer-navigation | com.deucarian.pointer-capture | 0.1.4 | Viewer-Navigation | Pointer-Capture |
+| com.deucarian.viewer-navigation | com.deucarian.pointer-capture | 0.2.0 | Viewer-Navigation | Pointer-Capture |
 | com.deucarian.viewer-navigation | com.deucarian.theming | 1.8.0 | Viewer-Navigation | Theming |
 | com.deucarian.viewer-navigation | com.deucarian.ui | 0.2.7 | Viewer-Navigation | UI |
 | com.deucarian.viewer-rendering | com.deucarian.common | 0.2.1 | Viewer-Rendering | Common |
@@ -268,9 +270,10 @@ Schema version: 2
 | com.deucarian.world-spawning | com.deucarian.gameplay-foundation | 0.2.0 | World-Spawning | Gameplay-Foundation |
 | com.deucarian.xr-ui | com.deucarian.common | 0.2.1 | XR-UI | Common |
 | com.deucarian.xr-ui | com.deucarian.editor | 1.13.0 | XR-UI | Editor |
+| com.deucarian.xr-ui | com.deucarian.theming | 1.10.0 | XR-UI | Theming |
 | com.deucarian.xr-ui.theming-integration | com.deucarian.common | 0.2.1 | XR-UI-Theming-Integration | Common |
-| com.deucarian.xr-ui.theming-integration | com.deucarian.theming | 1.7.0 | XR-UI-Theming-Integration | Theming |
-| com.deucarian.xr-ui.theming-integration | com.deucarian.xr-ui | 0.3.0 | XR-UI-Theming-Integration | XR-UI |
+| com.deucarian.xr-ui.theming-integration | com.deucarian.theming | 1.10.0 | XR-UI-Theming-Integration | Theming |
+| com.deucarian.xr-ui.theming-integration | com.deucarian.xr-ui | 0.4.0 | XR-UI-Theming-Integration | XR-UI |
 
 ## Cycle Report
 
@@ -279,4 +282,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 202
-- Registry dependency drift entries: 2
+- Registry dependency drift entries: 0
