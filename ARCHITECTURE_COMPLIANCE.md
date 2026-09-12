@@ -60,10 +60,10 @@ once.
 | Object-Selection | com.deucarian.object-selection | Compliant | Yes | Yes | 28 | 1 | 0 | 0 |
 | ObjectLoading-API-Integration | com.deucarian.object-loading.api-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
 | ObjectSelection-CoreState-Integration | com.deucarian.object-selection.core-state-integration | Compliant | Yes | Yes | 5 | 1 | 0 | 0 |
-| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 204 | 1 | 11 | 0 |
+| Package-Installer | com.deucarian.package-installer | RefactorBacklog | Yes | Yes | 206 | 1 | 11 | 0 |
 | Package-Registry |  | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |
 | Persistence | com.deucarian.persistence | Compliant | Yes | Yes | 16 | 1 | 0 | 0 |
-| Pointer-Capture | com.deucarian.pointer-capture | Compliant | Yes | Yes | 11 | 1 | 0 | 0 |
+| Pointer-Capture | com.deucarian.pointer-capture | Compliant | Yes | Yes | 18 | 1 | 0 | 0 |
 | Progression | com.deucarian.progression | Compliant | Yes | Yes | 34 | 1 | 0 | 0 |
 | Projectiles | com.deucarian.projectiles | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | Run-Upgrades | com.deucarian.run-upgrades | RefactorBacklog | Yes | Yes | 38 | 2 | 2 | 0 |
@@ -78,7 +78,7 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 39 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 22 | 4 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 168 | 2 | 2 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 170 | 2 | 2 | 0 |
 | UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 41 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 65 | 2 | 1 | 0 |

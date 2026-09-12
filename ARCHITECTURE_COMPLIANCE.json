@@ -1359,7 +1359,7 @@
         }
       ],
       "packageId": "com.deucarian.package-installer",
-      "productionFileCount": 204,
+      "productionFileCount": 206,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Package-Installer",
       "sharedValidationPresent": true,
@@ -1408,7 +1408,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.pointer-capture",
-      "productionFileCount": 11,
+      "productionFileCount": 18,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Pointer-Capture",
       "sharedValidationPresent": true,
@@ -1831,7 +1831,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 168,
+      "productionFileCount": 170,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,

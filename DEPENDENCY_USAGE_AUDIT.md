@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 52 |
 | Optional version-defined use | 4 |
-| Required and used | 171 |
+| Required and used | 174 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -116,6 +116,8 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Package-Installer | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Editor; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Package-Installer | com.deucarian.logging | Editor-only use | Editor production: Deucarian.PackageInstaller.Editor -> Deucarian.Logging; Test: Deucarian.PackageInstaller.Editor.Tests -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Persistence | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Persistence.Editor -> Deucarian.Editor; Test: Deucarian.Persistence.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
+| Pointer-Capture | com.deucarian.common | Required and used | Runtime production: Deucarian.PointerCapture -> Deucarian.Common | Deucarian.Common | 0 |
+| Pointer-Capture | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.PointerCapture -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Pointer-Capture | com.deucarian.editor | Editor-only use | Editor production: Deucarian.PointerCapture.Editor -> Deucarian.Editor; Test: Deucarian.PointerCapture.Tests.Editor -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Progression | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Progression.Editor -> Deucarian.Editor; Sample: Deucarian.Samples.Progression.DefinitionDeclarations -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Progression | com.deucarian.gameplay-foundation | Required and used | Runtime production: Deucarian.Progression -> Deucarian.GameplayFoundation; Test: Deucarian.Progression.Tests -> Deucarian.GameplayFoundation | Deucarian.GameplayFoundation | 0 |
@@ -242,7 +244,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Navigation | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Diagnostics; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Viewer-Navigation | com.deucarian.editor | Editor-only use | Editor production: Deucarian.ViewerNavigation.Editor -> Deucarian.Editor; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Viewer-Navigation | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Logging | Deucarian.Logging | 0 |
-| Viewer-Navigation | com.deucarian.pointer-capture | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.PointerCapture; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.PointerCapture | Deucarian.PointerCapture | 0 |
+| Viewer-Navigation | com.deucarian.pointer-capture | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.PointerCapture; Sample: Deucarian.ViewerNavigation.Samples.DefinitionWorkflow -> Deucarian.PointerCapture; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.PointerCapture | Deucarian.PointerCapture | 0 |
 | Viewer-Navigation | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.Theming; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Viewer-Navigation | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerNavigation -> Deucarian.UI; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.UI; Test: Deucarian.ViewerNavigation.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
 | Viewer-Rendering | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Common | Deucarian.Common | 0 |
@@ -255,5 +257,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Shell | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.ViewerRendering; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Weapon-Systems | com.deucarian.defense-games | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.DefenseGames; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.DefenseGames | Deucarian.DefenseGames |  |
 | Weapon-Systems | com.deucarian.encounters | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.Encounters; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.Encounters | Deucarian.Encounters |  |
-| Weapon-Systems | com.deucarian.world-navigation | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.WorldNavigation; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.WorldNavigation | Deucarian.WorldNavigation |  |
-| Weapon-Systems | com.deucarian.world-spawning | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.WorldSpawning; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.WorldSpawning | Deucarian.WorldSpawning |  |

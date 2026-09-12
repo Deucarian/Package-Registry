@@ -4888,6 +4888,58 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.pointer-capture",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.PointerCapture.asmdef",
+          "assembly": "Deucarian.PointerCapture",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Pointer-Capture",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.4",
+      "dependency": "com.deucarian.diagnostics",
+      "packageId": "com.deucarian.pointer-capture",
+      "referencedAssemblies": [
+        "Deucarian.Diagnostics"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.PointerCapture.asmdef",
+          "assembly": "Deucarian.PointerCapture",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Diagnostics",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Pointer-Capture",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "EditorOnlyUse",
       "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
@@ -11929,7 +11981,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.4",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.pointer-capture",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -11946,6 +11998,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.PointerCapture",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.ViewerNavigation.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.PointerCapture",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -13990,6 +14054,32 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "1.10.0",
+      "dependency": "com.deucarian.theming",
+      "packageId": "com.deucarian.xr-ui",
+      "referencedAssemblies": [
+        "Deucarian.Theming"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.XRUI.asmdef",
+          "assembly": "Deucarian.XRUI",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Theming",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "XR-UI",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
       "packageId": "com.deucarian.xr-ui.theming-integration",
@@ -14016,7 +14106,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.7.0",
+      "declaredVersion": "1.10.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -14082,7 +14172,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.3.0",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.xr-ui",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "referencedAssemblies": [
@@ -14150,7 +14240,7 @@
   "summary": {
     "EditorOnlyUse": 52,
     "OptionalVersionDefinedUse": 4,
-    "RequiredAndUsed": 171,
+    "RequiredAndUsed": 174,
     "SampleOnlyUse": 2,
     "SuiteComposition": 39,
     "TestOnlyUse": 12
