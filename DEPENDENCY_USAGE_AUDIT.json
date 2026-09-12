@@ -56,7 +56,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -384,11 +384,13 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
-        "Deucarian.Combat"
+        "Deucarian.Combat",
+        "Deucarian.Combat.Editor",
+        "Deucarian.Combat.Unity"
       ],
       "referencedBy": [
         {
@@ -430,6 +432,42 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Runtime/Authoring/Deucarian.Attacks.Authoring.asmdef",
+          "assembly": "Deucarian.Attacks.Authoring",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat.Unity",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.Attacks.Authoring.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.Attacks.Authoring.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.Attacks.Authoring.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.Attacks.Authoring.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat.Unity",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Samples~/AttacksMinimal/Deucarian.Attacks.Samples.asmdef",
           "assembly": "Deucarian.Attacks.Samples",
           "autoReferenced": true,
@@ -438,6 +476,34 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Attacks.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Attacks.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Attacks.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Attacks.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Editor",
           "scope": "Sample",
           "versionDefines": []
         },
@@ -534,7 +600,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -553,6 +619,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Attacks.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Attacks.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -578,7 +658,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.2.4",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -622,7 +702,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.attacks",
       "referencedAssemblies": [
@@ -1666,7 +1746,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1862,7 +1942,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -1881,6 +1961,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.CameraNavigation.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.CameraNavigation.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -2004,7 +2098,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.combat",
       "referencedAssemblies": [
@@ -2024,6 +2118,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Combat.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Combat.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Combat",
@@ -2032,7 +2140,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.combat",
       "referencedAssemblies": [
@@ -2042,6 +2150,18 @@
         {
           "asmdef": "Runtime/Deucarian.Combat.asmdef",
           "assembly": "Deucarian.Combat",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Combat.Unity.asmdef",
+          "assembly": "Deucarian.Combat.Unity",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -2154,7 +2274,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing",
       "referencedAssemblies": [
@@ -3096,7 +3216,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.encounters",
       "referencedAssemblies": [
@@ -3116,6 +3236,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Encounters.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Encounters.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Encounters",
@@ -3124,7 +3258,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.encounters",
       "referencedAssemblies": [
@@ -3134,6 +3268,18 @@
         {
           "asmdef": "Runtime/Deucarian.Encounters.asmdef",
           "assembly": "Deucarian.Encounters",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Encounters.Unity.asmdef",
+          "assembly": "Deucarian.Encounters.Unity",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -3191,6 +3337,75 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "RequiredAndUsed",
+      "declaredVersion": "0.3.0",
+      "dependency": "com.deucarian.world-spawning",
+      "packageId": "com.deucarian.encounters",
+      "referencedAssemblies": [
+        "Deucarian.WorldSpawning",
+        "Deucarian.WorldSpawning.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Encounters.Editor.asmdef",
+          "assembly": "Deucarian.Encounters.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Runtime/Unity/Deucarian.Encounters.Unity.asmdef",
+          "assembly": "Deucarian.Encounters.Unity",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Encounters.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Encounters.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Encounters.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Encounters.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning.Editor",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Encounters",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "EditorOnlyUse",
       "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.common",
@@ -3220,7 +3435,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -3264,7 +3479,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.game-content-authoring",
       "referencedAssemblies": [
@@ -3308,7 +3523,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.gameplay-foundation",
       "referencedAssemblies": [
@@ -3327,6 +3542,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.GameplayFoundation.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.GameplayFoundation.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         }
       ],
@@ -3493,6 +3722,48 @@
           "includePlatforms": [],
           "reference": "Deucarian.Common",
           "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Media",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.12.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.media",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Media.Editor.asmdef",
+          "assembly": "Deucarian.Media.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Media.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Media.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         }
       ],
@@ -3699,7 +3970,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.monetization",
       "referencedAssemblies": [
@@ -3718,6 +3989,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Monetization.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Monetization.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         }
       ],
@@ -3795,7 +4080,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3814,6 +4099,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Notifications.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Notifications.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -3837,7 +4136,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.7.0",
+      "declaredVersion": "1.8.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -3895,6 +4194,34 @@
           "includePlatforms": [],
           "reference": "Deucarian.Theming",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Notifications.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Notifications.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Notifications.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Notifications.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -4084,7 +4411,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.object-loading",
       "referencedAssemblies": [
@@ -4103,6 +4430,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.ObjectLoading.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.ObjectLoading.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         }
       ],
@@ -4422,7 +4763,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.package-installer",
       "referencedAssemblies": [
@@ -4506,7 +4847,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.persistence",
       "referencedAssemblies": [
@@ -4592,7 +4933,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.progression",
       "referencedAssemblies": [
@@ -4612,6 +4953,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Progression.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Progression.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Progression",
@@ -4620,7 +4975,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.progression",
       "referencedAssemblies": [
@@ -4690,11 +5045,13 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
-        "Deucarian.Attacks"
+        "Deucarian.Attacks",
+        "Deucarian.Attacks.Authoring",
+        "Deucarian.Attacks.Editor"
       ],
       "referencedBy": [
         {
@@ -4710,6 +5067,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Runtime/Deucarian.Projectiles.asmdef",
+          "assembly": "Deucarian.Projectiles",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks.Authoring",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
           "assembly": "Deucarian.Projectiles.Samples",
           "autoReferenced": true,
@@ -4718,6 +5087,34 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Authoring",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Editor",
           "scope": "Sample",
           "versionDefines": []
         },
@@ -4744,13 +5141,43 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.combat",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
-        "Deucarian.Combat"
+        "Deucarian.Combat",
+        "Deucarian.Combat.Editor",
+        "Deucarian.Combat.Unity"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Projectiles.Editor.asmdef",
+          "assembly": "Deucarian.Projectiles.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Editor/Deucarian.Projectiles.Editor.asmdef",
+          "assembly": "Deucarian.Projectiles.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Unity",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.Projectiles.asmdef",
           "assembly": "Deucarian.Projectiles",
@@ -4764,6 +5191,18 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Runtime/Deucarian.Projectiles.asmdef",
+          "assembly": "Deucarian.Projectiles",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat.Unity",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Samples~/BasicProjectileLifecycle/Deucarian.Projectiles.Samples.asmdef",
           "assembly": "Deucarian.Projectiles.Samples",
           "autoReferenced": true,
@@ -4772,6 +5211,48 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Editor",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Unity",
           "scope": "Sample",
           "versionDefines": []
         },
@@ -4798,7 +5279,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -4818,6 +5299,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "Projectiles",
@@ -4826,7 +5321,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -4880,7 +5375,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.world-navigation",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
@@ -4934,13 +5429,28 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.projectiles",
       "referencedAssemblies": [
-        "Deucarian.WorldSpawning"
+        "Deucarian.WorldSpawning",
+        "Deucarian.WorldSpawning.Editor"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Projectiles.Editor.asmdef",
+          "assembly": "Deucarian.Projectiles.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.Projectiles.asmdef",
           "assembly": "Deucarian.Projectiles",
@@ -4962,6 +5472,34 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Projectiles.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Projectiles.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WorldSpawning.Editor",
           "scope": "Sample",
           "versionDefines": []
         },
@@ -4988,11 +5526,12 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
-        "Deucarian.Attacks.Authoring"
+        "Deucarian.Attacks.Authoring",
+        "Deucarian.Attacks.Editor"
       ],
       "referencedBy": [
         {
@@ -5019,6 +5558,34 @@
           "includePlatforms": [],
           "reference": "Deucarian.Attacks.Authoring",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Authoring",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -5049,6 +5616,49 @@
           "includePlatforms": [],
           "reference": "Deucarian.Attacks.Authoring",
           "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Run-Upgrades",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "SampleOnlyUse",
+      "declaredVersion": "0.2.0",
+      "dependency": "com.deucarian.combat",
+      "packageId": "com.deucarian.run-upgrades",
+      "referencedAssemblies": [
+        "Deucarian.Combat",
+        "Deucarian.Combat.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Editor",
+          "scope": "Sample",
           "versionDefines": []
         }
       ],
@@ -5114,7 +5724,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -5133,6 +5743,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -5158,7 +5782,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.2.4",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -5202,7 +5826,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -5272,7 +5896,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.weapon-systems",
       "packageId": "com.deucarian.run-upgrades",
       "referencedAssemblies": [
@@ -5303,6 +5927,20 @@
           "includePlatforms": [],
           "reference": "Deucarian.WeaponSystems.Authoring",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.RunUpgrades.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.RunUpgrades.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.WeaponSystems.Authoring",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -10016,7 +10654,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -10035,6 +10673,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.Theming.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.Theming.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -10098,7 +10750,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.0",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.media",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -10315,7 +10967,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.ui-flow",
       "referencedAssemblies": [
@@ -10334,6 +10986,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.UIFLow.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.UIFLow.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -10602,7 +11268,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "2.0.1",
+      "declaredVersion": "2.1.0",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
@@ -10685,7 +11351,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
@@ -10736,7 +11402,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.0.6",
+      "declaredVersion": "1.1.0",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
@@ -10788,6 +11454,18 @@
               "name": "com.deucarian.command-routing"
             }
           ]
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.Authentication.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.Authentication.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Session",
+          "scope": "Sample",
+          "versionDefines": []
         },
         {
           "asmdef": "Samples~/SimpleUsage/Deucarian.Authentication.Samples.SimpleUsage.asmdef",
@@ -10880,7 +11558,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.3.0",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.camera-navigation",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -10931,6 +11609,18 @@
         {
           "asmdef": "Samples~/Viewer Navigation Bootstrap/Deucarian.ViewerNavigation.Samples.Bootstrap.asmdef",
           "assembly": "Deucarian.ViewerNavigation.Samples.Bootstrap",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CameraNavigation",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.ViewerNavigation.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Samples.DefinitionWorkflow",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -11029,6 +11719,18 @@
         {
           "asmdef": "Samples~/Viewer Navigation Bootstrap/Deucarian.ViewerNavigation.Samples.Bootstrap.asmdef",
           "assembly": "Deucarian.ViewerNavigation.Samples.Bootstrap",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.CameraNavigation.InputSystemIntegration",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.ViewerNavigation.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.ViewerNavigation.Samples.DefinitionWorkflow",
           "autoReferenced": true,
           "defineConstraints": [],
           "guardEvidence": null,
@@ -11143,7 +11845,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -11255,7 +11957,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.2",
+      "declaredVersion": "1.8.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -11670,48 +12372,6 @@
       "sourceMentionsByScope": {}
     },
     {
-      "assemblyReference": "Deucarian.Combat",
-      "classification": "TestOnlyUse",
-      "packageId": "com.deucarian.weapon-systems",
-      "referencedAssemblies": [
-        "Deucarian.Combat"
-      ],
-      "referencedBy": [
-        {
-          "asmdef": "Tests/EditMode/Deucarian.WeaponSystems.Tests.asmdef",
-          "assembly": "Deucarian.WeaponSystems.Tests",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [
-            "Editor"
-          ],
-          "reference": "Deucarian.Combat",
-          "scope": "Test",
-          "versionDefines": []
-        },
-        {
-          "asmdef": "Tests/PlayMode/Deucarian.WeaponSystems.Tests.PlayMode.asmdef",
-          "assembly": "Deucarian.WeaponSystems.Tests.PlayMode",
-          "autoReferenced": false,
-          "defineConstraints": [
-            "UNITY_INCLUDE_TESTS"
-          ],
-          "guardEvidence": null,
-          "guardKind": "",
-          "includePlatforms": [],
-          "reference": "Deucarian.Combat",
-          "scope": "Test",
-          "versionDefines": []
-        }
-      ],
-      "repository": "Weapon-Systems",
-      "requiredPackage": "com.deucarian.combat"
-    },
-    {
       "assemblyReference": "Deucarian.DefenseGames",
       "classification": "TestOnlyUse",
       "packageId": "com.deucarian.weapon-systems",
@@ -11881,12 +12541,13 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.attacks",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
         "Deucarian.Attacks",
-        "Deucarian.Attacks.Authoring"
+        "Deucarian.Attacks.Authoring",
+        "Deucarian.Attacks.Editor"
       ],
       "referencedBy": [
         {
@@ -11940,6 +12601,34 @@
           "versionDefines": []
         },
         {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WeaponSystems.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WeaponSystems.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Authoring",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WeaponSystems.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WeaponSystems.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Attacks.Editor",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
           "asmdef": "Samples~/BasicWeaponRuntime/Deucarian.WeaponSystems.Samples.asmdef",
           "assembly": "Deucarian.WeaponSystems.Samples",
           "autoReferenced": true,
@@ -11948,6 +12637,30 @@
           "guardKind": "",
           "includePlatforms": [],
           "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.WeaponSystems.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.WeaponSystems.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Attacks.Authoring",
           "scope": "Sample",
           "versionDefines": []
         },
@@ -12017,6 +12730,104 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "SampleOnlyUse",
+      "declaredVersion": "0.2.0",
+      "dependency": "com.deucarian.combat",
+      "packageId": "com.deucarian.weapon-systems",
+      "referencedAssemblies": [
+        "Deucarian.Combat",
+        "Deucarian.Combat.Editor",
+        "Deucarian.Combat.Unity"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WeaponSystems.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WeaponSystems.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WeaponSystems.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WeaponSystems.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat.Editor",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.WeaponSystems.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.WeaponSystems.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat.Unity",
+          "scope": "Sample",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/EditMode/Deucarian.WeaponSystems.Tests.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Tests",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Combat",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.WeaponSystems.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Combat",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Weapon-Systems",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.3",
       "dependency": "com.deucarian.diagnostics",
@@ -12074,7 +12885,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -12093,6 +12904,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WeaponSystems.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WeaponSystems.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -12118,7 +12943,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "0.2.4",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.game-content-authoring",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -12162,7 +12987,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -12193,6 +13018,18 @@
           "includePlatforms": [],
           "reference": "Deucarian.GameplayFoundation",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Runtime/Deucarian.WeaponSystems.Samples.DefinitionWorkflow.asmdef",
+          "assembly": "Deucarian.WeaponSystems.Samples.DefinitionWorkflow",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.GameplayFoundation",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -12232,7 +13069,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.projectiles",
       "packageId": "com.deucarian.weapon-systems",
       "referencedAssemblies": [
@@ -12736,8 +13573,50 @@
       "sourceMentionsByScope": {}
     },
     {
+      "classification": "EditorOnlyUse",
+      "declaredVersion": "1.12.0",
+      "dependency": "com.deucarian.editor",
+      "packageId": "com.deucarian.world-navigation",
+      "referencedAssemblies": [
+        "Deucarian.Editor"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.WorldNavigation.Editor.asmdef",
+          "assembly": "Deucarian.WorldNavigation.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WorldNavigation.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WorldNavigation.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
+        }
+      ],
+      "repository": "World-Navigation",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.world-navigation",
       "referencedAssemblies": [
@@ -12793,7 +13672,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.1",
+      "declaredVersion": "0.3.0",
       "dependency": "com.deucarian.world-spawning",
       "packageId": "com.deucarian.world-navigation",
       "referencedAssemblies": [
@@ -12929,7 +13808,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.8",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.world-spawning",
       "referencedAssemblies": [
@@ -12949,6 +13828,20 @@
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
           "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/DefinitionWorkflow/Definitions/Editor/Deucarian.Samples.WorldSpawning.DefinitionDeclarations.asmdef",
+          "assembly": "Deucarian.Samples.WorldSpawning.DefinitionDeclarations",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
+          "versionDefines": []
         }
       ],
       "repository": "World-Spawning",
@@ -12957,7 +13850,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.1.1",
+      "declaredVersion": "0.2.0",
       "dependency": "com.deucarian.gameplay-foundation",
       "packageId": "com.deucarian.world-spawning",
       "referencedAssemblies": [
@@ -13241,10 +14134,11 @@
     }
   ],
   "summary": {
-    "EditorOnlyUse": 50,
+    "EditorOnlyUse": 52,
     "OptionalVersionDefinedUse": 4,
-    "RequiredAndUsed": 170,
+    "RequiredAndUsed": 171,
+    "SampleOnlyUse": 2,
     "SuiteComposition": 39,
-    "TestOnlyUse": 13
+    "TestOnlyUse": 12
   }
 }
