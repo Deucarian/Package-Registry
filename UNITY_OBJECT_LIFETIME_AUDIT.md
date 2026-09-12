@@ -12,15 +12,15 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 1060 |
-| helper call site | 118 |
+| direct Unity API call | 1070 |
+| helper call site | 117 |
 | helper definition | 1 |
 
 ## Policy Summary
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 1179 |
+| Allowed | 1188 |
 
 ## Production Semantic Comparison
 
@@ -101,10 +101,9 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Build-Pipeline | Editor/DeucarianBuildProfileUtility.cs | 96 | Editor production | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Disposes the transient non-asset BuildProfile instance returned by Unity's editor-only profile factory. |
 | Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 82 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Build-Pipeline | Tests/Editor/DeucarianBuildManagerTests.cs | 119 | Test | direct Unity API call | UnityEngine.Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Camera-Navigation | Editor/DeucarianCameraNavigationPreview.cs | 166 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Camera-Navigation | Editor/DeucarianCameraNavigationPreview.cs | 167 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Camera-Navigation | Editor/DeucarianCameraNavigationPreview.cs | 168 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Camera-Navigation | Tests/EditMode/CameraNavigationPreviewTests.cs | 98 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Camera-Navigation | Editor/DeucarianCameraNavigationPreview.cs | 169 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Camera-Navigation | Tests/EditMode/CameraNavigationPreviewTests.cs | 103 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/ControlCenterRegistrationTests.cs | 30 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/ControlCenterRegistrationTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Camera-Navigation | Tests/EditMode/DeucarianCameraFramingTargetTests.cs | 53 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
@@ -266,16 +265,17 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Notifications | Tests/PlayMode/NotificationHostPlayModeTests.cs | 29 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationLazyFollowPlayModeTests.cs | 52 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationLazyFollowPlayModeTests.cs | 96 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListReflowTests.cs | 50 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListReflowTests.cs | 73 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 72 | Test | direct Unity API call | Object.Destroy | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 164 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 164 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 164 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 165 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 165 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 165 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 166 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
+| Notifications | Tests/PlayMode/NotificationListViewPlayModeTests.cs | 166 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 49 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 87 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 137 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 137 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
-| Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/PlayMode/NotificationPresentationPlayModeTests.cs | 138 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |

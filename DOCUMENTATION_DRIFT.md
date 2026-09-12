@@ -10,7 +10,7 @@ Schema version: 1
 | Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 11 |
-| Review required | 19 |
+| Review required | 20 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -68,3 +68,4 @@ Historical changelog references preserve released history and are not rewrite re
 | XR-UI-Theming-Integration | Review required | AGENTS.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | Documentation~/PALETTE_OWNERSHIP.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | README.md |  |  |  |
+| XR-UI-Theming-Integration | Review required | Samples~/Themed Pressable Controls/README.md |  |  |  |

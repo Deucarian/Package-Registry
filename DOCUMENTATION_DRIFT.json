@@ -301,6 +301,12 @@
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.xr-ui.theming-integration",
       "repository": "XR-UI-Theming-Integration"
+    },
+    {
+      "file": "Samples~/Themed Pressable Controls/README.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.xr-ui.theming-integration",
+      "repository": "XR-UI-Theming-Integration"
     }
   ],
   "summary": {
@@ -308,6 +314,6 @@
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 11,
-    "ReviewRequired": 19
+    "ReviewRequired": 20
   }
 }
