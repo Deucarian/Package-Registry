@@ -5,6 +5,42 @@
       {
         "assembly": "Deucarian.Editor",
         "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop 4dc37ad56ce43c1fcff02e074b11b7e44f9e9592. The project motion preference override and change event still have their existing panel-owned subscription lifetime. No budget increase; new asset controls/catalogs own instance state. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop 4dc37ad56ce43c1fcff02e074b11b7e44f9e9592. The appearance preference event still uses weak panel bindings that unsubscribe on detach. No budget increase; new asset controls/catalogs own instance state. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop 4dc37ad56ce43c1fcff02e074b11b7e44f9e9592. The single project-local preference cache still stores stable tool IDs and a bounded twelve-item recent list. No budget increase; new asset controls/catalogs own instance state. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.Definitions.DeucarianDefinitionImport",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 3
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop 4dc37ad56ce43c1fcff02e074b11b7e44f9e9592. The editor importer still owns one deduplicated pending-path set, per-path errors and scheduling flag; work drains outside import and assembly reload resets it. No budget increase; new asset controls/catalogs own instance state. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
         "version": "1.11.0",
         "limits": {
           "mutableGlobals": 2
@@ -519,6 +555,24 @@
       }
     ],
     "com.deucarian.theming": [
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.9.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop e6e5e74f36cedbec9d6a7e1d39f4e54e775d3c8b. The single borrowed player registration still requires explicit binding and removes only its own registration on disposal; no discovery or service creation. No budget increase. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.9.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Shared asset workflow version review: byte-for-byte unchanged from develop e6e5e74f36cedbec9d6a7e1d39f4e54e775d3c8b. The single scene-preview repaint generation counter is unchanged; providers retain their own theme and preview state. No budget increase. See ASSET_WORKFLOW_VERSION_REVIEW.md."
+      },
       {
         "assembly": "Deucarian.Theming",
         "type": "Deucarian.Theming.ThemeAudio",
