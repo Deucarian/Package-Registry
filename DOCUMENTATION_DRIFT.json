@@ -19,14 +19,6 @@
       "repository": "Bootstrap"
     },
     {
-      "dependency": "com.deucarian.editor",
-      "kind": "DependencyVersionDrift",
-      "packageId": "com.deucarian.build-pipeline",
-      "packageJsonVersion": "1.11.0",
-      "readmeVersion": "1.10.6",
-      "repository": "Build-Pipeline"
-    },
-    {
       "file": "README.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.build-pipeline",
@@ -61,6 +53,12 @@
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.editor",
       "repository": "Editor"
+    },
+    {
+      "file": "AGENTS.md",
+      "kind": "ReviewRequired",
+      "packageId": "com.deucarian.encounters",
+      "repository": "Encounters"
     },
     {
       "file": "CHANGELOG.md",
@@ -310,10 +308,9 @@
     }
   ],
   "summary": {
-    "DependencyVersionDrift": 1,
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
     "MigrationDocumentation": 11,
-    "ReviewRequired": 20
+    "ReviewRequired": 21
   }
 }
