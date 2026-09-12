@@ -94,7 +94,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Same-symbol semantic candidates | 41 |
 | Runtime public API symbols | 10848 |
 | Editor public API symbols | 3606 |
-| Test public symbols excluded from production API | 7662 |
+| Test public symbols excluded from production API | 7663 |
 | Sample public symbols excluded from production API | 638 |
 | Internal/private production symbols | 19095 |
 | Public API symbols missing XML documentation | 11858 |
