@@ -20901,7 +20901,49 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.template.viewer",
+        "packageJsonDependencies": [
+          "com.deucarian.api",
+          "com.deucarian.authentication",
+          "com.deucarian.camera-navigation",
+          "com.deucarian.command-routing",
+          "com.deucarian.common",
+          "com.deucarian.diagnostics",
+          "com.deucarian.logging",
+          "com.deucarian.object-loading",
+          "com.deucarian.object-loading.api-integration",
+          "com.deucarian.session",
+          "com.deucarian.session.api-integration",
+          "com.deucarian.theming",
+          "com.deucarian.ui",
+          "com.deucarian.viewer-navigation",
+          "com.deucarian.viewer-rendering",
+          "com.deucarian.viewer-shell"
+        ],
+        "registryDependencies": [
+          "com.deucarian.api",
+          "com.deucarian.authentication",
+          "com.deucarian.camera-navigation",
+          "com.deucarian.command-routing",
+          "com.deucarian.common",
+          "com.deucarian.diagnostics",
+          "com.deucarian.logging",
+          "com.deucarian.object-loading",
+          "com.deucarian.object-loading.api-integration",
+          "com.deucarian.pointer-capture",
+          "com.deucarian.session",
+          "com.deucarian.session.api-integration",
+          "com.deucarian.theming",
+          "com.deucarian.ui",
+          "com.deucarian.viewer-navigation",
+          "com.deucarian.viewer-rendering",
+          "com.deucarian.viewer-shell"
+        ],
+        "repo": "Template-Viewer"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -60904,7 +60946,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "2ecc997ebb38115c7a28ce58be1b6f1ee74e57cbfda8fd4bf9b068949485c615",
       "dependencyRulesSha256": "4f3b4613b5892815bb189aa15effd350ee02766dbc6dde8ddc62e8ca123af2e0",
-      "packagesSha256": "f303469375c16ff9fdbf27de85b723c77b8eb04f4a8ccb5e76ae6cdd30e798da"
+      "packagesSha256": "a29f0b2308083b267575e5cd90b8049d8f9452ea1b585876c605abfbf7ac61e8"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -408731,7 +408773,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "1e60603a35d7f57324d2e59e13dfef47a331cb8be46e3c6aa9c7c8d44aec8be4",
+        "auditInputSha256": "3090c61f7b5ef248729cbec23beae3aceba40ac2e91381cd5ed287e71d16ffef",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "e35beb71bcbe068ddd4d98bfee9285f1522124c4b313db044dbbb9380aa937e0",
         "headCommit": "",
@@ -411715,6 +411757,7 @@
         "com.deucarian.logging",
         "com.deucarian.object-loading",
         "com.deucarian.object-loading.api-integration",
+        "com.deucarian.pointer-capture",
         "com.deucarian.session",
         "com.deucarian.session.api-integration",
         "com.deucarian.theming",
