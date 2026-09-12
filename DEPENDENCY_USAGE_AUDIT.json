@@ -56,7 +56,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.api",
       "referencedAssemblies": [
@@ -1746,7 +1746,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.build-pipeline",
       "referencedAssemblies": [
@@ -1942,7 +1942,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.camera-navigation",
       "referencedAssemblies": [
@@ -2274,7 +2274,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.command-routing",
       "referencedAssemblies": [
@@ -4080,7 +4080,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -4136,7 +4136,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.8.0",
+      "declaredVersion": "1.9.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -4889,7 +4889,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.pointer-capture",
       "referencedAssemblies": [
@@ -10654,7 +10654,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.theming",
       "referencedAssemblies": [
@@ -11351,7 +11351,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
@@ -11509,13 +11509,27 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.2.0",
+      "declaredVersion": "1.3.0",
       "dependency": "com.deucarian.session.api-integration",
       "packageId": "com.deucarian.authentication",
       "referencedAssemblies": [
         "Deucarian.Session.APIIntegration"
       ],
       "referencedBy": [
+        {
+          "asmdef": "Editor/Deucarian.Authentication.Editor.asmdef",
+          "assembly": "Deucarian.Authentication.Editor",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Session.APIIntegration",
+          "scope": "Editor production",
+          "versionDefines": []
+        },
         {
           "asmdef": "Runtime/Deucarian.Authentication.asmdef",
           "assembly": "Deucarian.Authentication",
@@ -11845,7 +11859,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.12.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.viewer-navigation",
       "referencedAssemblies": [
@@ -13932,7 +13946,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.10.6",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.xr-ui",
       "referencedAssemblies": [

@@ -558,6 +558,20 @@
       {
         "assembly": "Deucarian.Theming",
         "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.10.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Control color ownership review: unchanged from develop 70ab7d4. The borrowed audio registration and its disposal semantics are untouched; the new color helpers contain only immutable values and pure functions. Same allowance, no new global service."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.10.0",
+        "limits": { "mutableGlobals": 1 },
+        "reason": "Control color ownership review: unchanged from develop 70ab7d4. The existing scene-preview repaint generation counter is untouched. No allowance increase or additional mutable global state."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
         "version": "1.9.0",
         "limits": {
           "mutableGlobals": 1
