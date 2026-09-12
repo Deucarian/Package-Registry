@@ -143,3 +143,9 @@ MIT. See [LICENSE.md](LICENSE.md).
 `Tools/Deucarian` menu and the stable Control Center area IDs.
 `Tools/deucarian_menu_audit.py` validates a package checkout or a complete
 organization snapshot and produces readable and JSON inventory reports.
+
+## Definition authoring integration
+
+The package catalog includes the direct editor and runtime dependencies needed by the definition-authoring workflow. Use a coherent set of package development versions when trying the new samples.
+
+See the [shared authoring walkthrough](https://github.com/Deucarian/Editor/blob/develop/Documentation~/DefinitionAuthoring.md). Runtime packages expose their **Definition Workflow** sample through Package Manager.

@@ -1045,6 +1045,15 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "HistoricalChangelogReference" for item in doc_findings))
         self.assertTrue(any(item["repository"] == "Logging" and item["kind"] == "LegitimateGenericBridgeTerm" for item in doc_findings))
 
+    def test_dependency_in_samples_and_tests_has_no_production_use(self) -> None:
+        records = [{"scope": "Sample"}, {"scope": "Test"}]
+        self.assertEqual("SampleOnlyUse", audit.classify_dependency_records(records, True, 0))
+        self.assertEqual("SampleOnlyUse", audit.classify_dependency_records(records, False, 0))
+        self.assertEqual("TestOnlyUse", audit.classify_dependency_records(records[1:], True, 0))
+        records.append({"scope": "Runtime production"})
+        self.assertEqual("RequiredAndUsed", audit.classify_dependency_records(records, True, 0))
+        self.assertEqual("MissingHardPackageDependency", audit.classify_dependency_records(records, False, 0))
+
     def test_package_id_version_mentions_use_exact_package_id_boundaries(self) -> None:
         text = """
         README prose mentions com.deucarian.ui-binding 1.2.3.

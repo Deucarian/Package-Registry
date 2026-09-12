@@ -1178,7 +1178,7 @@ def classify_dependency_records(records: list[dict[str, Any]], declared: bool, s
         scopes = {record.get("scope", "Other") for record in records}
         if scopes and scopes <= {"Test"}:
             return "TestOnlyUse"
-        if scopes and scopes <= {"Sample"}:
+        if "Sample" in scopes and scopes <= {"Sample", "Test"}:
             return "SampleOnlyUse"
         production_records = [record for record in records if record.get("scope") in {"Runtime production", "Editor production"}]
         if production_records and all(record.get("guardKind") == "VersionDefine" for record in production_records):
