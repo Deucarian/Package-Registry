@@ -12506,6 +12506,21 @@
     {
       "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
       "classification": "Test",
+      "containingSymbol": "ViewerPointerCaptureScopeTests::TearDown",
+      "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+      "invocation": "Object.Destroy",
+      "line": 35,
+      "occurrenceKind": "direct Unity API call",
+      "packageId": "com.deucarian.template.viewer",
+      "policyDisposition": "Allowed",
+      "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+      "policySeverity": "Info",
+      "repository": "Template-Viewer",
+      "scope": "Test"
+    },
+    {
+      "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+      "classification": "Test",
       "containingSymbol": "ViewerVisibilityCameraInvariantTests::SelectionAndClearDoNotChangeCameraState",
       "file": "Tests/PlayMode/ViewerVisibilityCameraInvariantTests.cs",
       "invocation": "Object.DestroyImmediate",
@@ -18115,10 +18130,10 @@
     }
   ],
   "policySummary": {
-    "Allowed": 1203
+    "Allowed": 1204
   },
   "summary": {
-    "direct Unity API call": 1082,
+    "direct Unity API call": 1083,
     "helper call site": 120,
     "helper definition": 1
   }

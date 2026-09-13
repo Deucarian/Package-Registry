@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 52 |
 | Optional version-defined use | 4 |
-| Required and used | 174 |
+| Required and used | 175 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -204,11 +204,12 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Template-Viewer | com.deucarian.logging | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Template-Viewer | com.deucarian.object-loading | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ObjectLoading | Deucarian.ObjectLoading | 0 |
 | Template-Viewer | com.deucarian.object-loading.api-integration | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ObjectLoading.APIIntegration; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ObjectLoading.APIIntegration | Deucarian.ObjectLoading.APIIntegration | 0 |
+| Template-Viewer | com.deucarian.pointer-capture | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.PointerCapture; Test: Deucarian.TemplateViewer.Tests.PlayMode -> Deucarian.PointerCapture | Deucarian.PointerCapture | 0 |
 | Template-Viewer | com.deucarian.session | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.Session; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.Session | Deucarian.Session | 0 |
 | Template-Viewer | com.deucarian.session.api-integration | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.Session.APIIntegration; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.Session.APIIntegration | Deucarian.Session.APIIntegration | 0 |
 | Template-Viewer | com.deucarian.theming | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.Theming; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Template-Viewer | com.deucarian.ui | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.UI; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.UI; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
-| Template-Viewer | com.deucarian.viewer-navigation | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerNavigation; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
+| Template-Viewer | com.deucarian.viewer-navigation | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerNavigation; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerNavigation; Test: Deucarian.TemplateViewer.Tests.PlayMode -> Deucarian.ViewerNavigation | Deucarian.ViewerNavigation | 0 |
 | Template-Viewer | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerRendering; Test: Deucarian.TemplateViewer.Tests.Support -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Template-Viewer | com.deucarian.viewer-shell | Required and used | Runtime production: Deucarian.TemplateViewer -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewer.Tests.EditMode -> Deucarian.ViewerShell; Test: Deucarian.TemplateViewer.Tests.Support -> Deucarian.ViewerShell | Deucarian.ViewerShell | 0 |
 | Template-Viewer-Web | com.deucarian.api | Optional version-defined use | Runtime production: Deucarian.TemplateViewerWeb.SimultriaIntegration -> Deucarian.API [versionDefine com.deucarian.api => DEUCARIAN_SIMULTRIA_STARTUP_API]; Test: Deucarian.TemplateViewerWeb.SimultriaIntegration.Tests -> Deucarian.API [versionDefine com.deucarian.api => DEUCARIAN_SIMULTRIA_STARTUP_API] | Deucarian.API |  |
@@ -256,4 +257,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Shell | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
 | Viewer-Shell | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.ViewerRendering; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
 | Weapon-Systems | com.deucarian.defense-games | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.DefenseGames; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.DefenseGames | Deucarian.DefenseGames |  |
-| Weapon-Systems | com.deucarian.encounters | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.Encounters; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.Encounters | Deucarian.Encounters |  |

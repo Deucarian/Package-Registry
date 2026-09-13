@@ -190,11 +190,12 @@ Schema version: 2
 | com.deucarian.template.viewer | com.deucarian.logging | 1.0.4 | Template-Viewer | Logging |
 | com.deucarian.template.viewer | com.deucarian.object-loading | 1.2.2 | Template-Viewer | Object-Loading |
 | com.deucarian.template.viewer | com.deucarian.object-loading.api-integration | 0.2.8 | Template-Viewer | ObjectLoading-API-Integration |
+| com.deucarian.template.viewer | com.deucarian.pointer-capture | 0.2.0 | Template-Viewer | Pointer-Capture |
 | com.deucarian.template.viewer | com.deucarian.session | 1.0.6 | Template-Viewer | Session |
 | com.deucarian.template.viewer | com.deucarian.session.api-integration | 1.2.0 | Template-Viewer | Session-API-Integration |
 | com.deucarian.template.viewer | com.deucarian.theming | 1.7.0 | Template-Viewer | Theming |
 | com.deucarian.template.viewer | com.deucarian.ui | 0.2.7 | Template-Viewer | UI |
-| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.2.0 | Template-Viewer | Viewer-Navigation |
+| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.4.0 | Template-Viewer | Viewer-Navigation |
 | com.deucarian.template.viewer | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer | Viewer-Rendering |
 | com.deucarian.template.viewer | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer | Viewer-Shell |
 | com.deucarian.template.viewer.web | com.deucarian.authentication | 1.0.0 | Template-Viewer-Web | Viewer-Authentication |
@@ -282,4 +283,4 @@ None detected.
 ## Version Drift
 
 - Dependency version drift entries: 202
-- Registry dependency drift entries: 1
+- Registry dependency drift entries: 0
