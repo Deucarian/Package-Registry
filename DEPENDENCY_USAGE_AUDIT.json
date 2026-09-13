@@ -9541,6 +9541,46 @@
     },
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.0",
+      "dependency": "com.deucarian.pointer-capture",
+      "packageId": "com.deucarian.template.viewer",
+      "referencedAssemblies": [
+        "Deucarian.PointerCapture"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.TemplateViewer.asmdef",
+          "assembly": "Deucarian.TemplateViewer",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.PointerCapture",
+          "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.TemplateViewer.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.PointerCapture",
+          "scope": "Test",
+          "versionDefines": []
+        }
+      ],
+      "repository": "Template-Viewer",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "1.0.6",
       "dependency": "com.deucarian.session",
       "packageId": "com.deucarian.template.viewer",
@@ -9726,7 +9766,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.4.0",
       "dependency": "com.deucarian.viewer-navigation",
       "packageId": "com.deucarian.template.viewer",
       "referencedAssemblies": [
@@ -9757,6 +9797,20 @@
           "includePlatforms": [
             "Editor"
           ],
+          "reference": "Deucarian.ViewerNavigation",
+          "scope": "Test",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Tests/PlayMode/Deucarian.TemplateViewer.Tests.PlayMode.asmdef",
+          "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+          "autoReferenced": false,
+          "defineConstraints": [
+            "UNITY_INCLUDE_TESTS"
+          ],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
           "reference": "Deucarian.ViewerNavigation",
           "scope": "Test",
           "versionDefines": []
@@ -14240,7 +14294,7 @@
   "summary": {
     "EditorOnlyUse": 52,
     "OptionalVersionDefinedUse": 4,
-    "RequiredAndUsed": 174,
+    "RequiredAndUsed": 175,
     "SampleOnlyUse": 2,
     "SuiteComposition": 39,
     "TestOnlyUse": 12

@@ -25,7 +25,7 @@ Schema version: 2
 | notification-lifecycle | com.deucarian.notifications | Notifications | (none) |
 | object-loading | com.deucarian.object-loading | Object-Loading | com.deucarian.object-loading.api-integration, com.deucarian.template.viewer, com.deucarian.web-viewer-suite |
 | package-management | com.deucarian.package-installer | Package-Installer | (none) |
-| pointer-capture | com.deucarian.pointer-capture | Pointer-Capture | com.deucarian.viewer-navigation, com.deucarian.web-viewer-suite |
+| pointer-capture | com.deucarian.pointer-capture | Pointer-Capture | com.deucarian.template.viewer, com.deucarian.viewer-navigation, com.deucarian.web-viewer-suite |
 | registry-metadata | (pending) | Package-Registry | (none) |
 | repository-state | com.deucarian.core-state | Core-State | com.deucarian.object-selection.core-state-integration, com.deucarian.selection-suite, com.deucarian.ui-binding.core-state-integration |
 | runtime-theming | com.deucarian.theming | Theming | com.deucarian.notifications, com.deucarian.template.viewer, com.deucarian.template.viewer.web, com.deucarian.ui, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.web-viewer-suite, com.deucarian.xr-ui, com.deucarian.xr-ui.theming-integration |

@@ -891,14 +891,14 @@
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/ViewerBootstrap.Composition.cs",
-          "line": 161,
+          "line": 162,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         },
         {
           "description": "Runtime type/member discovery must be generated or explicitly composed.",
           "file": "Runtime/ViewerBootstrap.Composition.cs",
-          "line": 164,
+          "line": 165,
           "rule": "runtime-type-discovery",
           "symbol": ".GetType"
         }

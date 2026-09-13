@@ -2470,6 +2470,7 @@
     },
     {
       "currentConsumers": [
+        "com.deucarian.template.viewer",
         "com.deucarian.viewer-navigation",
         "com.deucarian.web-viewer-suite"
       ],
@@ -4324,6 +4325,13 @@
       {
         "from": "com.deucarian.template.viewer",
         "fromRepo": "Template-Viewer",
+        "to": "com.deucarian.pointer-capture",
+        "toRepo": "Pointer-Capture",
+        "version": "0.2.0"
+      },
+      {
+        "from": "com.deucarian.template.viewer",
+        "fromRepo": "Template-Viewer",
         "to": "com.deucarian.session",
         "toRepo": "Session",
         "version": "1.0.6"
@@ -4354,7 +4362,7 @@
         "fromRepo": "Template-Viewer",
         "to": "com.deucarian.viewer-navigation",
         "toRepo": "Viewer-Navigation",
-        "version": "0.2.0"
+        "version": "0.4.0"
       },
       {
         "from": "com.deucarian.template.viewer",
@@ -14454,6 +14462,46 @@
       },
       {
         "classification": "RequiredAndUsed",
+        "declaredVersion": "0.2.0",
+        "dependency": "com.deucarian.pointer-capture",
+        "packageId": "com.deucarian.template.viewer",
+        "referencedAssemblies": [
+          "Deucarian.PointerCapture"
+        ],
+        "referencedBy": [
+          {
+            "asmdef": "Runtime/Deucarian.TemplateViewer.asmdef",
+            "assembly": "Deucarian.TemplateViewer",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.PointerCapture",
+            "scope": "Runtime production",
+            "versionDefines": []
+          },
+          {
+            "asmdef": "Tests/PlayMode/Deucarian.TemplateViewer.Tests.PlayMode.asmdef",
+            "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+            "autoReferenced": false,
+            "defineConstraints": [
+              "UNITY_INCLUDE_TESTS"
+            ],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.PointerCapture",
+            "scope": "Test",
+            "versionDefines": []
+          }
+        ],
+        "repository": "Template-Viewer",
+        "sourceMentionCount": 0,
+        "sourceMentionsByScope": {}
+      },
+      {
+        "classification": "RequiredAndUsed",
         "declaredVersion": "1.0.6",
         "dependency": "com.deucarian.session",
         "packageId": "com.deucarian.template.viewer",
@@ -14639,7 +14687,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "0.2.0",
+        "declaredVersion": "0.4.0",
         "dependency": "com.deucarian.viewer-navigation",
         "packageId": "com.deucarian.template.viewer",
         "referencedAssemblies": [
@@ -14670,6 +14718,20 @@
             "includePlatforms": [
               "Editor"
             ],
+            "reference": "Deucarian.ViewerNavigation",
+            "scope": "Test",
+            "versionDefines": []
+          },
+          {
+            "asmdef": "Tests/PlayMode/Deucarian.TemplateViewer.Tests.PlayMode.asmdef",
+            "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+            "autoReferenced": false,
+            "defineConstraints": [
+              "UNITY_INCLUDE_TESTS"
+            ],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
             "reference": "Deucarian.ViewerNavigation",
             "scope": "Test",
             "versionDefines": []
@@ -19153,7 +19215,7 @@
     "summary": {
       "EditorOnlyUse": 52,
       "OptionalVersionDefinedUse": 4,
-      "RequiredAndUsed": 174,
+      "RequiredAndUsed": 175,
       "SampleOnlyUse": 2,
       "SuiteComposition": 39,
       "TestOnlyUse": 12
@@ -20523,13 +20585,6 @@
         "repo": "Template-Viewer"
       },
       {
-        "declaredVersion": "0.2.0",
-        "dependency": "com.deucarian.viewer-navigation",
-        "ownerDevelopVersion": "0.4.0",
-        "packageId": "com.deucarian.template.viewer",
-        "repo": "Template-Viewer"
-      },
-      {
         "declaredVersion": "1.0.0",
         "dependency": "com.deucarian.authentication",
         "ownerDevelopVersion": "1.1.0",
@@ -20561,6 +20616,13 @@
         "declaredVersion": "0.1.4",
         "dependency": "com.deucarian.diagnostics",
         "ownerDevelopVersion": "0.2.4",
+        "packageId": "com.deucarian.template.viewer.web",
+        "repo": "Template-Viewer-Web"
+      },
+      {
+        "declaredVersion": "0.3.2",
+        "dependency": "com.deucarian.template.viewer",
+        "ownerDevelopVersion": "0.3.3",
         "packageId": "com.deucarian.template.viewer.web",
         "repo": "Template-Viewer-Web"
       },
@@ -20901,49 +20963,7 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": [
-      {
-        "packageId": "com.deucarian.template.viewer",
-        "packageJsonDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.authentication",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.command-routing",
-          "com.deucarian.common",
-          "com.deucarian.diagnostics",
-          "com.deucarian.logging",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell"
-        ],
-        "registryDependencies": [
-          "com.deucarian.api",
-          "com.deucarian.authentication",
-          "com.deucarian.camera-navigation",
-          "com.deucarian.command-routing",
-          "com.deucarian.common",
-          "com.deucarian.diagnostics",
-          "com.deucarian.logging",
-          "com.deucarian.object-loading",
-          "com.deucarian.object-loading.api-integration",
-          "com.deucarian.pointer-capture",
-          "com.deucarian.session",
-          "com.deucarian.session.api-integration",
-          "com.deucarian.theming",
-          "com.deucarian.ui",
-          "com.deucarian.viewer-navigation",
-          "com.deucarian.viewer-rendering",
-          "com.deucarian.viewer-shell"
-        ],
-        "repo": "Template-Viewer"
-      }
-    ]
+    "registryDependencyDrift": []
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -29629,7 +29649,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21413,
+    "methodCountAnalyzed": 21421,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -232156,7 +232176,7 @@
         "containingType": "",
         "file": "Runtime/ViewerBootstrap.Presentation.cs",
         "fullSignature": "public abstract partial class ViewerBootstrap",
-        "line": 11,
+        "line": 12,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232201,7 +232221,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerApplication Application",
-        "line": 86,
+        "line": 87,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232216,7 +232236,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public IViewerPlatformAdapter PlatformAdapter",
-        "line": 87,
+        "line": 88,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232231,7 +232251,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationReferenceCompositionProfile ResolvedNavigationComposition",
-        "line": 88,
+        "line": 89,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232246,7 +232266,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationSettings ResolvedNavigationSettings",
-        "line": 90,
+        "line": 91,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232261,7 +232281,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerRenderingReferenceCompositionProfile ResolvedRenderingComposition",
-        "line": 92,
+        "line": 93,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232276,7 +232296,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerShellReferenceProfile ResolvedShellProfile",
-        "line": 94,
+        "line": 95,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232291,7 +232311,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public IViewerReferenceNavigation ReferenceNavigation",
-        "line": 96,
+        "line": 97,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232306,7 +232326,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerNavigationInstaller NavigationInstaller",
-        "line": 98,
+        "line": 99,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232321,7 +232341,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerRenderingInstaller RenderingInstaller",
-        "line": 100,
+        "line": 101,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232336,7 +232356,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public ViewerShellPresenter ShellPresenter",
-        "line": 102,
+        "line": 103,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232351,7 +232371,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public IReadOnlyList<ViewerFeatureBehaviour> ResolvedFeatureBehaviours",
-        "line": 103,
+        "line": 104,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232366,7 +232386,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public DeucarianThemeProvider ThemeProvider",
-        "line": 108,
+        "line": 109,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232381,7 +232401,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public DeucarianViewerReferenceThemeRuntime ThemeRuntime",
-        "line": 113,
+        "line": 114,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232396,7 +232416,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public DeucarianTheme CurrentTheme",
-        "line": 115,
+        "line": 116,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232411,7 +232431,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public SessionTokenEndpointProfile ResolvedAuthenticationTokenEndpointProfile",
-        "line": 119,
+        "line": 120,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232426,7 +232446,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public IAuthenticationAcquisitionProvider AuthenticationAcquisitionProvider",
-        "line": 122,
+        "line": 123,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -232441,7 +232461,7 @@
         "containingType": "ViewerBootstrap",
         "file": "Runtime/ViewerBootstrap.cs",
         "fullSignature": "public CommandRoutePortBehaviour LocalCommandPort",
-        "line": 125,
+        "line": 126,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -233446,7 +233466,7 @@
         "containingType": "ViewerFeatureComposition",
         "file": "Runtime/ViewerFeatures.cs",
         "fullSignature": "public static ICommandHandler<ViewerApplication> ResolveInitializationCommandHandler( IReadOnlyList<ViewerFeatureBehaviour> features)",
-        "line": 211,
+        "line": 237,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -233461,7 +233481,7 @@
         "containingType": "ViewerFeatureComposition",
         "file": "Runtime/ViewerFeatures.cs",
         "fullSignature": "public static IViewerModelReadinessFeature ResolveModelReadinessFeature( IReadOnlyList<ViewerFeatureBehaviour> features)",
-        "line": 249,
+        "line": 275,
         "namespace": "Deucarian.TemplateViewer",
         "obsolete": false,
         "packageId": "com.deucarian.template.viewer",
@@ -379877,7 +379897,7 @@
         "assembly": "Deucarian.TemplateViewer.Tests.EditMode",
         "containingType": "ViewerPackageBaselineTests",
         "file": "Tests/EditMode/ViewerPackageBaselineTests.cs",
-        "fullSignature": "[TestCase(\"com.deucarian.camera-navigation\", \"0.3.0\")] [TestCase(\"com.deucarian.viewer-navigation\", \"0.2.0\")] [TestCase(\"com.deucarian.theming\", \"1.7.0\")] public void TemplateRequiresTheSharedNavigationAndThemeBaseline(string id, string minimum)",
+        "fullSignature": "[TestCase(\"com.deucarian.camera-navigation\", \"0.3.0\")] [TestCase(\"com.deucarian.viewer-navigation\", \"0.4.0\")] [TestCase(\"com.deucarian.pointer-capture\", \"0.2.0\")] [TestCase(\"com.deucarian.theming\", \"1.7.0\")] public void TemplateRequiresTheSharedNavigationAndThemeBaseline(string id, string minimum)",
         "line": 10,
         "namespace": "Deucarian.TemplateViewer.Tests",
         "obsolete": false,
@@ -380966,6 +380986,111 @@
         "scope": "Test",
         "symbol": "ViewerModelRevealTestHost",
         "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "public sealed class ViewerPointerCaptureScopeTests",
+        "line": 13,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "ViewerPointerCaptureScopeTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[SetUp] public void SetUp()",
+        "line": 20,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "SetUp",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[UnityTearDown] public IEnumerator TearDown()",
+        "line": 32,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "TearDown",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator CompositionLendsSessionWithoutAddingSceneCaptureController()",
+        "line": 41,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "CompositionLendsSessionWithoutAddingSceneCaptureController",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator RepeatedDisableEnableRetainsOneScopeAndBorrowedSession()",
+        "line": 62,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "RepeatedDisableEnableRetainsOneScopeAndBorrowedSession",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator InitializationFailureReleasesCaptureAndRetryUsesANewScope()",
+        "line": 82,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "InitializationFailureReleasesCaptureAndRetryUsesANewScope",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "containingType": "ViewerPointerCaptureScopeTests",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator SceneUnloadReleasesThePersistentCaptureHost()",
+        "line": 102,
+        "namespace": "Deucarian.TemplateViewer.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.template.viewer",
+        "repository": "Template-Viewer",
+        "scope": "Test",
+        "symbol": "SceneUnloadReleasesThePersistentCaptureHost",
+        "symbolKind": "method",
         "xmlDocumentation": false
       },
       {
@@ -402764,7 +402889,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7663
+    "testsPublicCount": 7670
   },
   "repositories": [
     {
@@ -403799,10 +403924,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "e503d1b196316a4eeac901465424f94331974bc3",
+        "headCommit": "743b9c195e92ea0684419100c2ab32975a7e2e57",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "e503d1b196316a4eeac901465424f94331974bc3"
+        "requestedRefCommit": "743b9c195e92ea0684419100c2ab32975a7e2e57"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -403834,13 +403959,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.15",
+      "packageVersion": "1.2.16",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "e503d1b196316a4eeac901465424f94331974bc3",
-        "manifestSha256": "27e21f69d36f09a933d0741d60452cca853ee6dbc4ff3a0fd4e1d452071cd432",
+        "headCommit": "743b9c195e92ea0684419100c2ab32975a7e2e57",
+        "manifestSha256": "7acb4c83d519a5eace250d9d45c6fbcc328e3c056087f861f38e3dd8ae82347c",
         "requestedRef": "develop"
       },
       "registryDependencies": null,
@@ -408662,10 +408787,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "00094ce319e7968cde6c8fdd0656e4b94538a83e",
+        "headCommit": "fad42d77999831c3c3b7b699e0a321a5b602ed7a",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "00094ce319e7968cde6c8fdd0656e4b94538a83e"
+        "requestedRefCommit": "fad42d77999831c3c3b7b699e0a321a5b602ed7a"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -408705,13 +408830,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.7.0",
+      "packageVersion": "1.7.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "00094ce319e7968cde6c8fdd0656e4b94538a83e",
-        "manifestSha256": "00c3430a7176e09df772312841dfb27378da0619371fe7bec4decacd7d1c7e18",
+        "headCommit": "fad42d77999831c3c3b7b699e0a321a5b602ed7a",
+        "manifestSha256": "d20db25c81c62af0582a6f945eb3994f7f31aa562b3ff4a9da81ce9835a72a57",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -411568,6 +411693,7 @@
             "Deucarian.Logging",
             "Deucarian.ObjectLoading",
             "Deucarian.ObjectLoading.APIIntegration",
+            "Deucarian.PointerCapture",
             "Deucarian.Session",
             "Deucarian.Session.APIIntegration",
             "Deucarian.Theming",
@@ -411632,8 +411758,10 @@
           ],
           "path": "Tests/PlayMode/Deucarian.TemplateViewer.Tests.PlayMode.asmdef",
           "references": [
+            "Deucarian.PointerCapture",
             "Deucarian.TemplateViewer",
-            "Deucarian.TemplateViewer.Tests.Support"
+            "Deucarian.TemplateViewer.Tests.Support",
+            "Deucarian.ViewerNavigation"
           ],
           "scope": "Test",
           "versionDefines": []
@@ -411667,10 +411795,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "bf63e5a3666ba04396b4fd8a5ce9ee7e8f7184f6",
+        "headCommit": "7383efbfc42e1f9c014e3e17c47e9ee64d1af3de",
         "origin": "https://github.com/Deucarian/Template-Viewer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "bf63e5a3666ba04396b4fd8a5ce9ee7e8f7184f6"
+        "requestedRefCommit": "7383efbfc42e1f9c014e3e17c47e9ee64d1af3de"
       },
       "canonicalId": "Deucarian/Template-Viewer",
       "ciWorkflows": [
@@ -411686,11 +411814,12 @@
         "com.deucarian.logging": "1.0.4",
         "com.deucarian.object-loading": "1.2.2",
         "com.deucarian.object-loading.api-integration": "0.2.8",
+        "com.deucarian.pointer-capture": "0.2.0",
         "com.deucarian.session": "1.0.6",
         "com.deucarian.session.api-integration": "1.2.0",
         "com.deucarian.theming": "1.7.0",
         "com.deucarian.ui": "0.2.7",
-        "com.deucarian.viewer-navigation": "0.2.0",
+        "com.deucarian.viewer-navigation": "0.4.0",
         "com.deucarian.viewer-rendering": "0.1.0",
         "com.deucarian.viewer-shell": "0.1.0",
         "com.unity.modules.uielements": "1.0.0",
@@ -411715,6 +411844,7 @@
           "com.deucarian.logging",
           "com.deucarian.object-loading",
           "com.deucarian.object-loading.api-integration",
+          "com.deucarian.pointer-capture",
           "com.deucarian.session",
           "com.deucarian.session.api-integration",
           "com.deucarian.theming",
@@ -411739,13 +411869,13 @@
       },
       "name": "Template-Viewer",
       "packageId": "com.deucarian.template.viewer",
-      "packageVersion": "0.3.2",
+      "packageVersion": "0.3.3",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer.git",
-        "governanceConfigSha256": "682f3de8b5f5b20e6697c5d06cb6f746311c869503d28820e7866b29899d647b",
-        "headCommit": "bf63e5a3666ba04396b4fd8a5ce9ee7e8f7184f6",
-        "manifestSha256": "aa5737c7ab4c948ea866d066dd066f5ed29a18c195b3513af2dcbbc8f5ee662e",
+        "governanceConfigSha256": "4411efaee96758c7a2cd43b625b7c8220ed626b730f532302289ba801fc0d251",
+        "headCommit": "7383efbfc42e1f9c014e3e17c47e9ee64d1af3de",
+        "manifestSha256": "fd4bfe8c381caef803016acf54bb9f37274b618fa72743ab5fc93b52d359d6da",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -427992,6 +428122,21 @@
       {
         "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
         "classification": "Test",
+        "containingSymbol": "ViewerPointerCaptureScopeTests::TearDown",
+        "file": "Tests/PlayMode/ViewerPointerCaptureScopeTests.cs",
+        "invocation": "Object.Destroy",
+        "line": 35,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.template.viewer",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Template-Viewer",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.TemplateViewer.Tests.PlayMode",
+        "classification": "Test",
         "containingSymbol": "ViewerVisibilityCameraInvariantTests::SelectionAndClearDoNotChangeCameraState",
         "file": "Tests/PlayMode/ViewerVisibilityCameraInvariantTests.cs",
         "invocation": "Object.DestroyImmediate",
@@ -433601,10 +433746,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1203
+      "Allowed": 1204
     },
     "summary": {
-      "direct Unity API call": 1082,
+      "direct Unity API call": 1083,
       "helper call site": 120,
       "helper definition": 1
     }
