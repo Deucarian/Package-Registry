@@ -113,6 +113,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.logging",
                 "com.deucarian.object-loading",
                 "com.deucarian.object-loading.api-integration",
+                "com.deucarian.pointer-capture",
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",
                 "com.deucarian.theming",
