@@ -559,14 +559,18 @@
         "assembly": "Deucarian.Theming",
         "type": "Deucarian.Theming.ThemeAudio",
         "version": "1.10.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Control color ownership review: unchanged from develop 70ab7d4. The borrowed audio registration and its disposal semantics are untouched; the new color helpers contain only immutable values and pure functions. Same allowance, no new global service."
       },
       {
         "assembly": "Deucarian.Theming.Editor",
         "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
         "version": "1.10.0",
-        "limits": { "mutableGlobals": 1 },
+        "limits": {
+          "mutableGlobals": 1
+        },
         "reason": "Control color ownership review: unchanged from develop 70ab7d4. The existing scene-preview repaint generation counter is untouched. No allowance increase or additional mutable global state."
       },
       {
@@ -790,6 +794,17 @@
           "mutableGlobals": 1
         },
         "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. The approved one-line convenience API intentionally holds one explicitly bound, borrowed registration for the application default. ObjectLoadingHost remains the authoritative instance owner of domain state and behavior. Duplicate bindings are rejected and disposal can remove only its own registration. Scene hosts unregister at their lifecycle boundary; no object discovery, lazy service creation, service locator, global domain collection, or extra mutable field is allowed. Independent callers may continue to use scoped instances. See Documentation~/SIMPLE_USAGE_REGISTRATION_REVIEW.md."
+      }
+    ],
+    "com.deucarian.activity-visualization.simultria": [
+      {
+        "assembly": "Deucarian.ActivityVisualization.Simultria",
+        "type": "Deucarian.ActivityVisualization.Simultria.SimultriaActivityCatalogNotifications",
+        "version": "0.6.2",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-875 Processor contract review: runtime notification and editor subscriber are byte-for-byte unchanged from develop eb2a50d6f5c90241812544067a773080402f75bd. This single static tooling event refreshes the editor command catalog; authoritative catalog state and ordinary subscriptions remain instance-owned. The editor subscriber removes its own handler before adding it. No new global state or increased allowance. Scope is this package version only; replacing the tooling event requires a separate lifecycle change."
       }
     ]
   }
