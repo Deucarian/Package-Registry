@@ -6,9 +6,9 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
-| Editor-only use | 52 |
+| Editor-only use | 53 |
 | Optional version-defined use | 4 |
-| Required and used | 175 |
+| Required and used | 177 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -226,6 +226,9 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Theming | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Theming.Editor -> Deucarian.Editor; Sample: Deucarian.Samples.Theming.DefinitionDeclarations -> Deucarian.Editor; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | Theming | com.deucarian.logging | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Logging; Runtime production: Deucarian.Theming -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Theming | com.deucarian.media | Required and used | Editor production: Deucarian.Theming.Editor -> Deucarian.Media; Editor production: Deucarian.Theming.Editor -> Deucarian.Media.Unity; Runtime production: Deucarian.Theming -> Deucarian.Media.Unity; Sample: Deucarian.Theming.Samples.AudioPalette -> Deucarian.Media.Unity; Test: Deucarian.Theming.Editor.Tests -> Deucarian.Media.Unity | Deucarian.Media, Deucarian.Media.Unity | 0 |
+| Tweens | com.deucarian.common | Required and used | Editor production: Deucarian.Tweens.Editor -> Deucarian.Common; Runtime production: Deucarian.Tweens -> Deucarian.Common; Sample: Deucarian.Tweens.Samples -> Deucarian.Common; Test: Deucarian.Tweens.Tests -> Deucarian.Common; Test: Deucarian.Tweens.Tests.PlayMode -> Deucarian.Common | Deucarian.Common | 0 |
+| Tweens | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.Tweens -> Deucarian.Diagnostics; Test: Deucarian.Tweens.Tests -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
+| Tweens | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Tweens.Editor -> Deucarian.Editor; Test: Deucarian.Tweens.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | UI | com.deucarian.theming | Required and used | Runtime production: Deucarian.UI -> Deucarian.Theming; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | UI-Binding | com.deucarian.common | Required and used | Runtime production: Deucarian.UIBinding -> Deucarian.Common | Deucarian.Common | 0 |
@@ -254,6 +257,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Rendering | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.EditMode -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.PlayMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Viewer-Shell | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Common; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | Viewer-Shell | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Theming; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
-| Viewer-Shell | com.deucarian.ui | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.UI.Editor | Deucarian.UI, Deucarian.UI.Editor | 0 |
-| Viewer-Shell | com.deucarian.viewer-rendering | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.ViewerRendering; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.ViewerRendering | Deucarian.ViewerRendering | 0 |
-| Weapon-Systems | com.deucarian.defense-games | Test-only use | Test: Deucarian.WeaponSystems.Tests -> Deucarian.DefenseGames; Test: Deucarian.WeaponSystems.Tests.PlayMode -> Deucarian.DefenseGames | Deucarian.DefenseGames |  |

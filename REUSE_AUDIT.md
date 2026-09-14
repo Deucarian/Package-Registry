@@ -67,12 +67,13 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Template-Viewer-Web | com.deucarian.template.viewer.web | 0.6.1 | 6000.0 | yes | clean | com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.webgl-integration, com.deucarian.diagnostics, com.deucarian.template.viewer, com.deucarian.theming, com.deucarian.authentication, com.deucarian.webgl-template, com.unity.textmeshpro, com.unity.nuget.newtonsoft-json | 8 | 50 |
 | Test-Automation | com.deucarian.test-automation | 0.1.3 | 6000.3 | yes | clean | com.deucarian.editor | 2 | 0 |
 | Theming | com.deucarian.theming | 1.10.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 9 | 981 |
+| Tweens | com.deucarian.tweens | 0.2.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.unity.modules.ui, com.unity.modules.uielements, com.unity.modules.imgui, com.unity.modules.physics | 5 | 134 |
 | UI | com.deucarian.ui | 0.3.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.theming, com.unity.ugui, com.unity.modules.uielements | 4 | 536 |
 | UI-Binding | com.deucarian.ui-binding | 1.2.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui | 4 | 83 |
 | UI-FLow | com.deucarian.ui-flow | 0.5.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 8 | 375 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 | Viewer-Authentication | com.deucarian.authentication | 1.1.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 6 | 163 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | 0.4.0 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 190 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | 0.4.1 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 192 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.theming, com.unity.render-pipelines.universal | 4 | 179 |
 | Viewer-Shell | com.deucarian.viewer-shell | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-rendering, com.unity.modules.uielements | 2 | 90 |
 | Weapon-Systems | com.deucarian.weapon-systems | 0.2.0 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.attacks, com.deucarian.editor, com.deucarian.projectiles, com.deucarian.game-content-authoring, com.deucarian.diagnostics, com.deucarian.combat | 8 | 224 |
@@ -87,21 +88,21 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 
 | Metric | Count |
 | --- | --- |
-| Repositories | 65 |
-| Parsed methods/bodies analyzed | 21421 |
+| Repositories | 66 |
+| Parsed methods/bodies analyzed | 21604 |
 | Exact AST clone groups | 97 |
-| Normalized structural clone groups | 168 |
+| Normalized structural clone groups | 169 |
 | Same-symbol semantic candidates | 41 |
-| Runtime public API symbols | 10848 |
-| Editor public API symbols | 3606 |
-| Test public symbols excluded from production API | 7670 |
-| Sample public symbols excluded from production API | 638 |
-| Internal/private production symbols | 19095 |
-| Public API symbols missing XML documentation | 11858 |
+| Runtime public API symbols | 10964 |
+| Editor public API symbols | 3626 |
+| Test public symbols excluded from production API | 7762 |
+| Sample public symbols excluded from production API | 639 |
+| Internal/private production symbols | 19191 |
+| Public API symbols missing XML documentation | 11982 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1204 |
+| Unity object lifetime records | 1226 |
 | Documentation drift findings | 52 |
-| Dependency usage findings | 284 |
+| Dependency usage findings | 287 |
 | Dependency cycles | 0 |
 
 ## Extraction Position

@@ -1151,6 +1151,21 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertIn("UnityObjectUtility.DestroySafely(UnityEngine.Object target)", conclusion["apiProposal"])
         self.assertEqual("KeepLocal", conclusion["testingPackageDecision"]["decision"])
 
+    def test_sample_cleanup_through_common_does_not_introduce_a_lifetime_owner(self) -> None:
+        sample = {
+            "packageId": "com.deucarian.tweens",
+            "scope": "Sample",
+            "occurrenceKind": "helper call site",
+            "invocation": "UnityObjectUtility.DestroySafely",
+        }
+        self.assertEqual("Allowed", audit.lifetime_policy(sample)[0])
+        self.assertEqual("ReviewRequired", audit.lifetime_policy({
+            **sample, "invocation": "LocalCleanup.DestroySafely",
+        })[0])
+        self.assertEqual("ReviewRequired", audit.lifetime_policy({
+            **sample, "occurrenceKind": "direct Unity API call", "invocation": "Object.Destroy",
+        })[0])
+
     def test_lifetime_policy_allows_common_and_canonical_consumers(self) -> None:
         records = [
             {
