@@ -20817,6 +20817,13 @@
         "repo": "Template-Viewer"
       },
       {
+        "declaredVersion": "0.1.0",
+        "dependency": "com.deucarian.viewer-rendering",
+        "ownerDevelopVersion": "0.1.1",
+        "packageId": "com.deucarian.template.viewer",
+        "repo": "Template-Viewer"
+      },
+      {
         "declaredVersion": "1.0.0",
         "dependency": "com.deucarian.authentication",
         "ownerDevelopVersion": "1.1.0",
@@ -21034,6 +21041,13 @@
         "repo": "Viewer-Shell"
       },
       {
+        "declaredVersion": "0.1.0",
+        "dependency": "com.deucarian.viewer-rendering",
+        "ownerDevelopVersion": "0.1.1",
+        "packageId": "com.deucarian.viewer-shell",
+        "repo": "Viewer-Shell"
+      },
+      {
         "declaredVersion": "0.2.3",
         "dependency": "com.deucarian.diagnostics",
         "ownerDevelopVersion": "0.2.4",
@@ -21149,6 +21163,13 @@
         "declaredVersion": "0.1.12",
         "dependency": "com.deucarian.viewer-navigation",
         "ownerDevelopVersion": "0.4.5",
+        "packageId": "com.deucarian.web-viewer-suite",
+        "repo": "Web-Viewer-Suite"
+      },
+      {
+        "declaredVersion": "0.1.0",
+        "dependency": "com.deucarian.viewer-rendering",
+        "ownerDevelopVersion": "0.1.1",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -29852,7 +29873,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21686,
+    "methodCountAnalyzed": 21687,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -404698,6 +404719,36 @@
       {
         "assembly": "Deucarian.ViewerRendering.Tests.EditMode",
         "containingType": "",
+        "file": "Tests/EditMode/ViewerRenderingPackagedShaderTests.cs",
+        "fullSignature": "public sealed class ViewerRenderingPackagedShaderTests",
+        "line": 7,
+        "namespace": "Deucarian.ViewerRendering.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-rendering",
+        "repository": "Viewer-Rendering",
+        "scope": "Test",
+        "symbol": "ViewerRenderingPackagedShaderTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerRendering.Tests.EditMode",
+        "containingType": "ViewerRenderingPackagedShaderTests",
+        "file": "Tests/EditMode/ViewerRenderingPackagedShaderTests.cs",
+        "fullSignature": "[Test] public void PackagedVolumeEffectsSurvivePlayerShaderStripping()",
+        "line": 9,
+        "namespace": "Deucarian.ViewerRendering.Tests.EditMode",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-rendering",
+        "repository": "Viewer-Rendering",
+        "scope": "Test",
+        "symbol": "PackagedVolumeEffectsSurvivePlayerShaderStripping",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerRendering.Tests.EditMode",
+        "containingType": "",
         "file": "Tests/EditMode/ViewerRenderingQualityPolicyTests.cs",
         "fullSignature": "public sealed class ViewerRenderingQualityPolicyTests",
         "line": 12,
@@ -407936,7 +407987,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7812
+    "testsPublicCount": 7814
   },
   "repositories": [
     {
@@ -419231,10 +419282,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "62b68a24f5be10beb69db07792505daa1fb170de",
+        "headCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99",
         "origin": "https://github.com/Deucarian/Viewer-Rendering.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "62b68a24f5be10beb69db07792505daa1fb170de"
+        "requestedRefCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99"
       },
       "canonicalId": "Deucarian/Viewer-Rendering",
       "ciWorkflows": [
@@ -419281,13 +419332,13 @@
       },
       "name": "Viewer-Rendering",
       "packageId": "com.deucarian.viewer-rendering",
-      "packageVersion": "0.1.0",
+      "packageVersion": "0.1.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Rendering.git",
         "governanceConfigSha256": "dd1270da8e19b674e4ed4756ff4199642642c7a269c5175f460fe17c63d65a94",
-        "headCommit": "62b68a24f5be10beb69db07792505daa1fb170de",
-        "manifestSha256": "087fc3788d6a9477a7cbdc08ea536f7851367e3beb203f286725400531226989",
+        "headCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99",
+        "manifestSha256": "8320c864a4033368a338be6188d93f8c90dfb4f229493d2ebe8a426d79bdd644",
         "requestedRef": "develop"
       },
       "registryDependencies": [
