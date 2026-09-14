@@ -21251,7 +21251,23 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": []
+    "registryDependencyDrift": [
+      {
+        "packageId": "com.deucarian.api",
+        "packageJsonDependencies": [
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "registryDependencies": [
+          "com.deucarian.common",
+          "com.deucarian.diagnostics",
+          "com.deucarian.editor",
+          "com.deucarian.logging"
+        ],
+        "repo": "API"
+      }
+    ]
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -61302,7 +61318,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "3deca8b741e5af0e492b73b3908ba31bfff412693459e7e909e31fdaa93f6fe9",
       "dependencyRulesSha256": "0058adda7c966f687d474eff5bbac877038bd77dce1ce9fab60d029e607db3cf",
-      "packagesSha256": "3e2ed559e5e597aacace90107b805ae6199156ecd48df724cd057cfad1b8ef56"
+      "packagesSha256": "a74d81b91d411cf813d4dc7d04a74e449cf3e30aaf57c60f1f61f754cd3e6a29"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -408308,6 +408324,7 @@
         "requestedRef": "develop"
       },
       "registryDependencies": [
+        "com.deucarian.common",
         "com.deucarian.diagnostics",
         "com.deucarian.editor",
         "com.deucarian.logging"
@@ -413996,7 +414013,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "f86d1d35699b7d6a81fa0b936592d947c10189ab6e118c107535a44f8368e32c",
+        "auditInputSha256": "a53ea337b7b93059aa80b3c7b9a4dc214af32ff9580125267f2722e195b1fd01",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "e35beb71bcbe068ddd4d98bfee9285f1522124c4b313db044dbbb9380aa937e0",
         "headCommit": "",

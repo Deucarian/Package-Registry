@@ -10,6 +10,7 @@ class PackagesCatalogTests(unittest.TestCase):
         packages_by_id = {package["id"]: package for package in packages}
         expected_dependencies = {
             "com.deucarian.api": [
+                "com.deucarian.common",
                 "com.deucarian.diagnostics",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
