@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 53 |
 | Optional version-defined use | 4 |
-| Required and used | 177 |
+| Required and used | 178 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -231,6 +231,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Tweens | com.deucarian.editor | Editor-only use | Editor production: Deucarian.Tweens.Editor -> Deucarian.Editor; Test: Deucarian.Tweens.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | UI | com.deucarian.common | Required and used | Runtime production: Deucarian.UI -> Deucarian.Common; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
 | UI | com.deucarian.theming | Required and used | Runtime production: Deucarian.UI -> Deucarian.Theming; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
+| UI | com.deucarian.tweens | Required and used | Runtime production: Deucarian.UI -> Deucarian.Tweens; Test: Deucarian.UI.Tests.EditMode -> Deucarian.Tweens | Deucarian.Tweens | 0 |
 | UI-Binding | com.deucarian.common | Required and used | Runtime production: Deucarian.UIBinding -> Deucarian.Common | Deucarian.Common | 0 |
 | UI-FLow | com.deucarian.common | Required and used | Runtime production: Deucarian.UIFlow -> Deucarian.Common | Deucarian.Common | 0 |
 | UI-FLow | com.deucarian.editor | Editor-only use | Editor production: Deucarian.UIFlow.Editor -> Deucarian.Editor; Sample: Deucarian.Samples.UIFLow.DefinitionDeclarations -> Deucarian.Editor; Test: Deucarian.UIFlow.Tests.EditMode -> Deucarian.Editor | Deucarian.Editor | 0 |
@@ -256,4 +257,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Rendering | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Viewer-Rendering | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.EditMode -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.PlayMode -> Deucarian.Theming | Deucarian.Theming | 0 |
 | Viewer-Shell | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Common; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
-| Viewer-Shell | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Theming; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |

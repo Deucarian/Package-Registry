@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 53 |
+| RefactorBacklog | 52 |
 | SetupRequired | 7 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 7 |
-| ProductionFileExceedsLineLimit | 53 |
+| ProductionFileExceedsLineLimit | 52 |
 
 ## Repository Status
 
@@ -80,12 +80,12 @@ once.
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 170 | 2 | 2 | 0 |
 | Tweens | com.deucarian.tweens | SetupRequired | No | Yes | 20 | 2 | 0 | 0 |
-| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 41 | 1 | 3 | 0 |
+| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 44 | 1 | 2 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 65 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
 | Viewer-Authentication | com.deucarian.authentication | Compliant | Yes | Yes | 59 | 1 | 0 | 0 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | Compliant | Yes | Yes | 43 | 2 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | Compliant | Yes | Yes | 44 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | Compliant | Yes | Yes | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | Compliant | Yes | Yes | 17 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | Compliant | Yes | Yes | 36 | 2 | 0 | 0 |
@@ -153,7 +153,6 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Tweens | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 704 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianUILayeringArchitectureValidator.cs | 618 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 974 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
