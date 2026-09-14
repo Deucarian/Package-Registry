@@ -11139,7 +11139,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.11.0",
+      "declaredVersion": "1.12.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [

@@ -66,9 +66,9 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Template-Viewer | com.deucarian.template.viewer | 0.3.5 | 6000.0 | yes | clean | com.deucarian.api, com.deucarian.camera-navigation, com.deucarian.command-routing, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.object-loading, com.deucarian.object-loading.api-integration, com.deucarian.pointer-capture, com.deucarian.session, com.deucarian.session.api-integration, com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-navigation, com.deucarian.viewer-rendering, com.deucarian.viewer-shell, com.deucarian.authentication, com.unity.nuget.newtonsoft-json, com.unity.modules.uielements | 4 | 214 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | 0.6.1 | 6000.0 | yes | clean | com.deucarian.build-pipeline, com.deucarian.command-routing, com.deucarian.command-routing.webgl-integration, com.deucarian.diagnostics, com.deucarian.template.viewer, com.deucarian.theming, com.deucarian.authentication, com.deucarian.webgl-template, com.unity.textmeshpro, com.unity.nuget.newtonsoft-json | 8 | 50 |
 | Test-Automation | com.deucarian.test-automation | 0.1.3 | 6000.3 | yes | clean | com.deucarian.editor | 2 | 0 |
-| Theming | com.deucarian.theming | 1.11.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 9 | 985 |
-| Tweens | com.deucarian.tweens | 0.2.1 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.unity.modules.ui, com.unity.modules.uielements, com.unity.modules.imgui, com.unity.modules.physics | 5 | 134 |
-| UI | com.deucarian.ui | 0.5.1 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.theming, com.unity.ugui, com.unity.modules.uielements, com.deucarian.tweens | 4 | 554 |
+| Theming | com.deucarian.theming | 1.12.0 | 2022.3 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.deucarian.media, com.unity.textmeshpro, com.unity.ugui, com.unity.modules.uielements | 9 | 991 |
+| Tweens | com.deucarian.tweens | 0.3.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.unity.modules.ui, com.unity.modules.uielements, com.unity.modules.imgui, com.unity.modules.physics | 5 | 135 |
+| UI | com.deucarian.ui | 0.6.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.theming, com.unity.ugui, com.unity.modules.uielements, com.deucarian.tweens | 4 | 556 |
 | UI-Binding | com.deucarian.ui-binding | 1.2.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui | 4 | 83 |
 | UI-FLow | com.deucarian.ui-flow | 0.5.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 8 | 375 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
@@ -89,18 +89,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 66 |
-| Parsed methods/bodies analyzed | 21668 |
+| Parsed methods/bodies analyzed | 21686 |
 | Exact AST clone groups | 96 |
 | Normalized structural clone groups | 167 |
 | Same-symbol semantic candidates | 41 |
-| Runtime public API symbols | 10991 |
+| Runtime public API symbols | 11000 |
 | Editor public API symbols | 3626 |
-| Test public symbols excluded from production API | 7798 |
+| Test public symbols excluded from production API | 7812 |
 | Sample public symbols excluded from production API | 639 |
-| Internal/private production symbols | 19226 |
-| Public API symbols missing XML documentation | 12002 |
+| Internal/private production symbols | 19229 |
+| Public API symbols missing XML documentation | 12007 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1241 |
+| Unity object lifetime records | 1247 |
 | Documentation drift findings | 52 |
 | Dependency usage findings | 287 |
 | Dependency cycles | 0 |
