@@ -272,7 +272,7 @@ Mode: `Audit`
 Repository: `Viewer-Navigation`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerNavigationUiInputBlocker.cs`:102 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerNavigationUiInputBlocker.cs`:111 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.xr-ui`
 
