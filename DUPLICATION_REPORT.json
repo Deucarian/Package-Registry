@@ -61488,7 +61488,7 @@
     "inputSignatures": {
       "capabilitiesSha256": "3deca8b741e5af0e492b73b3908ba31bfff412693459e7e909e31fdaa93f6fe9",
       "dependencyRulesSha256": "0058adda7c966f687d474eff5bbac877038bd77dce1ce9fab60d029e607db3cf",
-      "packagesSha256": "f7359f8b824f519fa1e988642b5ba5d6839130f6768d77bf678c5c765afdb2d0"
+      "packagesSha256": "37c70209db7c467e7fe49b32989fdeb66c169804970bc19b0026ee0c2e57c757"
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
@@ -413192,7 +413192,7 @@
       "packageId": null,
       "packageVersion": null,
       "provenance": {
-        "auditInputSha256": "c6b6450fa30dd5210f01027a94845131d1dffa1b0efdf9f9c6df65fc529bb4fd",
+        "auditInputSha256": "f5eafc0f63132ea9ee4218e0cb65b9ee9c1d505583606fe1294e36042db7d8d8",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
         "governanceConfigSha256": "e35beb71bcbe068ddd4d98bfee9285f1522124c4b313db044dbbb9380aa937e0",
         "headCommit": "",
