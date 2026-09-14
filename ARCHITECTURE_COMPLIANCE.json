@@ -613,18 +613,6 @@
       "scope": "Runtime production"
     },
     {
-      "assembly": "Deucarian.UI",
-      "detail": "Extract responsibilities until the production file is at most 500 lines.",
-      "disposition": "RefactorBacklog",
-      "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
-      "kind": "ProductionFileExceedsLineLimit",
-      "lineCount": 704,
-      "lineLimit": 500,
-      "packageId": "com.deucarian.ui",
-      "repository": "UI",
-      "scope": "Runtime production"
-    },
-    {
       "assembly": "Deucarian.UI.Editor",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1885,16 +1873,10 @@
           "file": "Runtime/UIToolkit/DeucarianMorphingMenu.cs",
           "lineCount": 1029,
           "scope": "Runtime production"
-        },
-        {
-          "assembly": "Deucarian.UI",
-          "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
-          "lineCount": 704,
-          "scope": "Runtime production"
         }
       ],
       "packageId": "com.deucarian.ui",
-      "productionFileCount": 41,
+      "productionFileCount": 44,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "UI",
       "sharedValidationPresent": true,
@@ -1987,7 +1969,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 43,
+      "productionFileCount": 44,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2182,12 +2164,12 @@
   "summary": {
     "compliantRepositoryCount": 47,
     "findingsByDisposition": {
-      "RefactorBacklog": 53,
+      "RefactorBacklog": 52,
       "SetupRequired": 7
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 7,
-      "ProductionFileExceedsLineLimit": 53
+      "ProductionFileExceedsLineLimit": 52
     },
     "repositoryCount": 66
   }
