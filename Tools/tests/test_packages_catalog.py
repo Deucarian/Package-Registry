@@ -47,6 +47,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.simultria-viewer-integration",
                 "com.deucarian.template.viewer",
                 "com.deucarian.authentication",
+                "com.deucarian.tweens",
             ],
             "com.deucarian.viewer-rendering": [
                 "com.deucarian.common",
