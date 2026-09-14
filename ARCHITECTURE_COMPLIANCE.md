@@ -80,7 +80,7 @@ once.
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
 | Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 171 | 2 | 2 | 0 |
 | Tweens | com.deucarian.tweens | SetupRequired | No | Yes | 20 | 2 | 0 | 0 |
-| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 44 | 1 | 3 | 0 |
+| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 50 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 65 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
@@ -152,9 +152,9 @@ once.
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Core/DeucarianThemeProvider.cs | 673 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Theming | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/Core/DeucarianThemingInspectorListFilter.cs | 582 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Tweens | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
-| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 753 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianUILayeringArchitectureValidator.cs | 618 | 500 | Extract responsibilities until the production file is at most 500 lines. |
-| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 502 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 505 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 974 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |

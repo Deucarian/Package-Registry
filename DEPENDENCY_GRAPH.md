@@ -194,10 +194,10 @@ Schema version: 2
 | com.deucarian.template.viewer | com.deucarian.session | 1.0.6 | Template-Viewer | Session |
 | com.deucarian.template.viewer | com.deucarian.session.api-integration | 1.2.0 | Template-Viewer | Session-API-Integration |
 | com.deucarian.template.viewer | com.deucarian.theming | 1.7.0 | Template-Viewer | Theming |
-| com.deucarian.template.viewer | com.deucarian.ui | 0.2.7 | Template-Viewer | UI |
-| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.4.0 | Template-Viewer | Viewer-Navigation |
+| com.deucarian.template.viewer | com.deucarian.ui | 0.5.0 | Template-Viewer | UI |
+| com.deucarian.template.viewer | com.deucarian.viewer-navigation | 0.4.4 | Template-Viewer | Viewer-Navigation |
 | com.deucarian.template.viewer | com.deucarian.viewer-rendering | 0.1.0 | Template-Viewer | Viewer-Rendering |
-| com.deucarian.template.viewer | com.deucarian.viewer-shell | 0.1.0 | Template-Viewer | Viewer-Shell |
+| com.deucarian.template.viewer | com.deucarian.viewer-shell | 0.1.1 | Template-Viewer | Viewer-Shell |
 | com.deucarian.template.viewer.web | com.deucarian.authentication | 1.0.0 | Template-Viewer-Web | Viewer-Authentication |
 | com.deucarian.template.viewer.web | com.deucarian.build-pipeline | 0.6.0 | Template-Viewer-Web | Build-Pipeline |
 | com.deucarian.template.viewer.web | com.deucarian.command-routing | 0.2.6 | Template-Viewer-Web | Command-Routing |
@@ -230,14 +230,13 @@ Schema version: 2
 | com.deucarian.viewer-navigation | com.deucarian.logging | 1.0.4 | Viewer-Navigation | Logging |
 | com.deucarian.viewer-navigation | com.deucarian.pointer-capture | 0.2.0 | Viewer-Navigation | Pointer-Capture |
 | com.deucarian.viewer-navigation | com.deucarian.theming | 1.8.0 | Viewer-Navigation | Theming |
-| com.deucarian.viewer-navigation | com.deucarian.ui | 0.2.7 | Viewer-Navigation | UI |
+| com.deucarian.viewer-navigation | com.deucarian.ui | 0.5.0 | Viewer-Navigation | UI |
 | com.deucarian.viewer-rendering | com.deucarian.common | 0.2.1 | Viewer-Rendering | Common |
 | com.deucarian.viewer-rendering | com.deucarian.diagnostics | 0.1.4 | Viewer-Rendering | Diagnostics |
 | com.deucarian.viewer-rendering | com.deucarian.logging | 1.0.2 | Viewer-Rendering | Logging |
 | com.deucarian.viewer-rendering | com.deucarian.theming | 1.0.5 | Viewer-Rendering | Theming |
-| com.deucarian.viewer-shell | com.deucarian.common | 0.2.1 | Viewer-Shell | Common |
-| com.deucarian.viewer-shell | com.deucarian.theming | 1.0.5 | Viewer-Shell | Theming |
-| com.deucarian.viewer-shell | com.deucarian.ui | 0.2.7 | Viewer-Shell | UI |
+| com.deucarian.viewer-shell | com.deucarian.theming | 1.11.0 | Viewer-Shell | Theming |
+| com.deucarian.viewer-shell | com.deucarian.ui | 0.5.0 | Viewer-Shell | UI |
 | com.deucarian.viewer-shell | com.deucarian.viewer-rendering | 0.1.0 | Viewer-Shell | Viewer-Rendering |
 | com.deucarian.weapon-systems | com.deucarian.attacks | 0.2.0 | Weapon-Systems | Attacks |
 | com.deucarian.weapon-systems | com.deucarian.combat | 0.2.0 | Weapon-Systems | Combat |
@@ -286,5 +285,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 208
-- Registry dependency drift entries: 1
+- Dependency version drift entries: 206
+- Registry dependency drift entries: 0

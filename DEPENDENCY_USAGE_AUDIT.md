@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 53 |
 | Optional version-defined use | 4 |
-| Required and used | 178 |
+| Required and used | 177 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -256,4 +256,4 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Rendering | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Viewer-Rendering | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Viewer-Rendering | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.EditMode -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.PlayMode -> Deucarian.Theming | Deucarian.Theming | 0 |
-| Viewer-Shell | com.deucarian.common | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Common; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Common | Deucarian.Common | 0 |
+| Viewer-Shell | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Theming; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
