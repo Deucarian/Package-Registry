@@ -625,6 +625,18 @@
       "scope": "Editor production"
     },
     {
+      "assembly": "Deucarian.UI",
+      "detail": "Extract responsibilities until the production file is at most 500 lines.",
+      "disposition": "RefactorBacklog",
+      "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
+      "kind": "ProductionFileExceedsLineLimit",
+      "lineCount": 502,
+      "lineLimit": 500,
+      "packageId": "com.deucarian.ui",
+      "repository": "UI",
+      "scope": "Runtime production"
+    },
+    {
       "assembly": "Deucarian.UIFlow",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1148,7 +1160,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.media",
-      "productionFileCount": 24,
+      "productionFileCount": 25,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Media",
       "sharedValidationPresent": true,
@@ -1827,7 +1839,7 @@
         }
       ],
       "packageId": "com.deucarian.theming",
-      "productionFileCount": 170,
+      "productionFileCount": 171,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Theming",
       "sharedValidationPresent": true,
@@ -1872,6 +1884,12 @@
           "assembly": "Deucarian.UI",
           "file": "Runtime/UIToolkit/DeucarianMorphingMenu.cs",
           "lineCount": 1029,
+          "scope": "Runtime production"
+        },
+        {
+          "assembly": "Deucarian.UI",
+          "file": "Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs",
+          "lineCount": 502,
           "scope": "Runtime production"
         }
       ],
@@ -1969,7 +1987,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 44,
+      "productionFileCount": 45,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2164,12 +2182,12 @@
   "summary": {
     "compliantRepositoryCount": 47,
     "findingsByDisposition": {
-      "RefactorBacklog": 52,
+      "RefactorBacklog": 53,
       "SetupRequired": 7
     },
     "findingsByKind": {
       "MissingCanonicalArchitectureReference": 7,
-      "ProductionFileExceedsLineLimit": 52
+      "ProductionFileExceedsLineLimit": 53
     },
     "repositoryCount": 66
   }

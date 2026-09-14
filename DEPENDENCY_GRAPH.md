@@ -214,8 +214,8 @@ Schema version: 2
 | com.deucarian.tweens | com.deucarian.diagnostics | 0.2.3 | Tweens | Diagnostics |
 | com.deucarian.tweens | com.deucarian.editor | 1.11.0 | Tweens | Editor |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
-| com.deucarian.ui | com.deucarian.theming | 1.3.0 | UI | Theming |
-| com.deucarian.ui | com.deucarian.tweens | 0.2.0 | UI | Tweens |
+| com.deucarian.ui | com.deucarian.theming | 1.11.0 | UI | Theming |
+| com.deucarian.ui | com.deucarian.tweens | 0.2.1 | UI | Tweens |
 | com.deucarian.ui-binding | com.deucarian.common | 0.2.1 | UI-Binding | Common |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.core-state | 1.0.2 | UIBinding-CoreState-Integration | Core-State |
 | com.deucarian.ui-binding.core-state-integration | com.deucarian.ui-binding | 1.1.1 | UIBinding-CoreState-Integration | UI-Binding |
@@ -286,5 +286,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 206
+- Dependency version drift entries: 208
 - Registry dependency drift entries: 0

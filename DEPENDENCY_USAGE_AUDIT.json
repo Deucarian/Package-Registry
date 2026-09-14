@@ -11139,7 +11139,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.3.0",
+      "declaredVersion": "1.11.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [
@@ -11181,7 +11181,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "0.2.0",
+      "declaredVersion": "0.2.1",
       "dependency": "com.deucarian.tweens",
       "packageId": "com.deucarian.ui",
       "referencedAssemblies": [

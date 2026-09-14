@@ -17,13 +17,13 @@ once.
 
 | Metric | Count |
 | --- | --- |
-| RefactorBacklog | 52 |
+| RefactorBacklog | 53 |
 | SetupRequired | 7 |
 
 | Metric | Count |
 | --- | --- |
 | MissingCanonicalArchitectureReference | 7 |
-| ProductionFileExceedsLineLimit | 52 |
+| ProductionFileExceedsLineLimit | 53 |
 
 ## Repository Status
 
@@ -52,7 +52,7 @@ once.
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | Compliant | Yes | Yes | 26 | 1 | 0 | 0 |
 | Idle-Progression | com.deucarian.idle-progression | Compliant | Yes | Yes | 1 | 1 | 0 | 0 |
 | Logging | com.deucarian.logging | Compliant | Yes | Yes | 19 | 2 | 0 | 0 |
-| Media | com.deucarian.media | Compliant | Yes | Yes | 24 | 1 | 0 | 0 |
+| Media | com.deucarian.media | Compliant | Yes | Yes | 25 | 1 | 0 | 0 |
 | Media-API-Integration | com.deucarian.media.api-integration | Compliant | Yes | Yes | 4 | 1 | 0 | 0 |
 | Monetization | com.deucarian.monetization | Compliant | Yes | Yes | 22 | 2 | 0 | 0 |
 | Notifications | com.deucarian.notifications | Compliant | Yes | Yes | 55 | 2 | 0 | 0 |
@@ -78,14 +78,14 @@ once.
 | Template-Viewer | com.deucarian.template.viewer | SetupRequired | No | Yes | 39 | 3 | 0 | 0 |
 | Template-Viewer-Web | com.deucarian.template.viewer.web | SetupRequired | No | Yes | 22 | 4 | 0 | 0 |
 | Test-Automation | com.deucarian.test-automation | Compliant | Yes | Yes | 0 | 2 | 0 | 0 |
-| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 170 | 2 | 2 | 0 |
+| Theming | com.deucarian.theming | RefactorBacklog | Yes | Yes | 171 | 2 | 2 | 0 |
 | Tweens | com.deucarian.tweens | SetupRequired | No | Yes | 20 | 2 | 0 | 0 |
-| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 44 | 1 | 2 | 0 |
+| UI | com.deucarian.ui | RefactorBacklog | Yes | Yes | 44 | 1 | 3 | 0 |
 | UI-Binding | com.deucarian.ui-binding | Compliant | Yes | Yes | 14 | 1 | 0 | 0 |
 | UI-FLow | com.deucarian.ui-flow | RefactorBacklog | Yes | Yes | 65 | 2 | 1 | 0 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | Compliant | Yes | Yes | 3 | 1 | 0 | 0 |
 | Viewer-Authentication | com.deucarian.authentication | Compliant | Yes | Yes | 59 | 1 | 0 | 0 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | Compliant | Yes | Yes | 44 | 2 | 0 | 0 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | Compliant | Yes | Yes | 45 | 2 | 0 | 0 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | Compliant | Yes | Yes | 16 | 2 | 0 | 0 |
 | Viewer-Shell | com.deucarian.viewer-shell | Compliant | Yes | Yes | 17 | 1 | 0 | 0 |
 | Weapon-Systems | com.deucarian.weapon-systems | Compliant | Yes | Yes | 36 | 2 | 0 | 0 |
@@ -154,6 +154,7 @@ once.
 | Tweens | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianMorphingMenu.cs | 1029 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI | ProductionFileExceedsLineLimit | RefactorBacklog | Editor/DeucarianUILayeringArchitectureValidator.cs | 618 | 500 | Extract responsibilities until the production file is at most 500 lines. |
+| UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/UIToolkit/DeucarianRuntimeTooltipPresenter.cs | 502 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | UI-FLow | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Navigation/UIFlowHost.cs | 974 | 500 | Extract responsibilities until the production file is at most 500 lines. |
 | Web-Viewer-Suite | MissingCanonicalArchitectureReference | SetupRequired | AGENTS.md |  |  | Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance. |
 | XR-UI | ProductionFileExceedsLineLimit | RefactorBacklog | Runtime/Controls/CustomPressableSurface.Hierarchy.cs | 1314 | 500 | Extract responsibilities until the production file is at most 500 lines. |
