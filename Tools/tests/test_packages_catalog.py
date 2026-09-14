@@ -56,7 +56,6 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.theming",
             ],
             "com.deucarian.viewer-shell": [
-                "com.deucarian.common",
                 "com.deucarian.theming",
                 "com.deucarian.ui",
                 "com.deucarian.viewer-rendering",
