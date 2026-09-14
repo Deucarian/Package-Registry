@@ -20810,6 +20810,13 @@
         "repo": "Template-Viewer"
       },
       {
+        "declaredVersion": "0.4.4",
+        "dependency": "com.deucarian.viewer-navigation",
+        "ownerDevelopVersion": "0.4.5",
+        "packageId": "com.deucarian.template.viewer",
+        "repo": "Template-Viewer"
+      },
+      {
         "declaredVersion": "1.0.0",
         "dependency": "com.deucarian.authentication",
         "ownerDevelopVersion": "1.1.0",
@@ -21127,7 +21134,7 @@
       {
         "declaredVersion": "0.1.12",
         "dependency": "com.deucarian.viewer-navigation",
-        "ownerDevelopVersion": "0.4.4",
+        "ownerDevelopVersion": "0.4.5",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -29831,7 +29838,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21666,
+    "methodCountAnalyzed": 21668,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -61726,7 +61733,7 @@
       }
     ],
     "editorProductionCount": 3626,
-    "internalPrivateProductionCount": 19225,
+    "internalPrivateProductionCount": 19226,
     "missingXmlDocumentationCount": 12002,
     "runtimeProductionCount": 10991,
     "samples": [
@@ -272173,7 +272180,7 @@
         "containingType": "ViewerNavigationUiInputBlocker",
         "file": "Runtime/ViewerNavigationUiInputBlocker.cs",
         "fullSignature": "public bool IsKeyboardInputBlocked()",
-        "line": 45,
+        "line": 47,
         "namespace": "Deucarian.ViewerNavigation",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-navigation",
@@ -404276,6 +404283,36 @@
         "xmlDocumentation": false
       },
       {
+        "assembly": "Deucarian.ViewerNavigation.Tests.PlayMode",
+        "containingType": "",
+        "file": "Tests/PlayMode/ViewerNavigationOverlayInputTests.cs",
+        "fullSignature": "public sealed class ViewerNavigationOverlayInputTests",
+        "line": 9,
+        "namespace": "Deucarian.ViewerNavigation.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-navigation",
+        "repository": "Viewer-Navigation",
+        "scope": "Test",
+        "symbol": "ViewerNavigationOverlayInputTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.PlayMode",
+        "containingType": "ViewerNavigationOverlayInputTests",
+        "file": "Tests/PlayMode/ViewerNavigationOverlayInputTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator TransientOverlayBlocksSceneInputUntilDisabled()",
+        "line": 11,
+        "namespace": "Deucarian.ViewerNavigation.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-navigation",
+        "repository": "Viewer-Navigation",
+        "scope": "Test",
+        "symbol": "TransientOverlayBlocksSceneInputUntilDisabled",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
         "assembly": "Deucarian.ViewerRendering.Tests.EditMode",
         "containingType": "",
         "file": "Tests/EditMode/ViewerRenderingQualityPolicyTests.cs",
@@ -407516,7 +407553,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7796
+    "testsPublicCount": 7798
   },
   "repositories": [
     {
@@ -418606,10 +418643,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "50d28be83768ab97e347adee8b48e45c71166184",
+        "headCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507",
         "origin": "https://github.com/Deucarian/Viewer-Navigation.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "50d28be83768ab97e347adee8b48e45c71166184"
+        "requestedRefCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507"
       },
       "canonicalId": "Deucarian/Viewer-Navigation",
       "ciWorkflows": [
@@ -418673,13 +418710,13 @@
       },
       "name": "Viewer-Navigation",
       "packageId": "com.deucarian.viewer-navigation",
-      "packageVersion": "0.4.4",
+      "packageVersion": "0.4.5",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Navigation.git",
         "governanceConfigSha256": "5b27e10fe95e43181722624d00826ce1a76ec6ea17607ae3be74ba200b1adfdf",
-        "headCommit": "50d28be83768ab97e347adee8b48e45c71166184",
-        "manifestSha256": "d1e4151ab2f42cb439669c84e465b4fa6fe4ca919e46a4fc999337bfe9ff9445",
+        "headCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507",
+        "manifestSha256": "8321d07edb946130f418c991fdc9eefd6f66d274f14f28e7f687ef89d7cdb30e",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -436864,6 +436901,36 @@
         "scope": "Test"
       },
       {
+        "assembly": "Deucarian.ViewerNavigation.Tests.PlayMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationOverlayInputTests::TransientOverlayBlocksSceneInputUntilDisabled",
+        "file": "Tests/PlayMode/ViewerNavigationOverlayInputTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 49,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.PlayMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationOverlayInputTests::TransientOverlayBlocksSceneInputUntilDisabled",
+        "file": "Tests/PlayMode/ViewerNavigationOverlayInputTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 50,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
         "assembly": "Deucarian.ViewerRendering",
         "classification": "Runtime production",
         "containingSymbol": "ViewerRenderingController::OnDestroy",
@@ -439085,10 +439152,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1239
+      "Allowed": 1241
     },
     "summary": {
-      "direct Unity API call": 1114,
+      "direct Unity API call": 1116,
       "helper call site": 124,
       "helper definition": 1
     }

@@ -73,7 +73,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | UI-FLow | com.deucarian.ui-flow | 0.5.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 8 | 375 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 | Viewer-Authentication | com.deucarian.authentication | 1.1.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 6 | 163 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | 0.4.4 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 192 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | 0.4.5 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 192 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | 0.1.0 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.theming, com.unity.render-pipelines.universal | 4 | 179 |
 | Viewer-Shell | com.deucarian.viewer-shell | 0.1.1 | 6000.0 | yes | clean | com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-rendering, com.unity.modules.uielements | 2 | 90 |
 | Weapon-Systems | com.deucarian.weapon-systems | 0.2.0 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.attacks, com.deucarian.editor, com.deucarian.projectiles, com.deucarian.game-content-authoring, com.deucarian.diagnostics, com.deucarian.combat | 8 | 224 |
@@ -89,18 +89,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 66 |
-| Parsed methods/bodies analyzed | 21666 |
+| Parsed methods/bodies analyzed | 21668 |
 | Exact AST clone groups | 96 |
 | Normalized structural clone groups | 167 |
 | Same-symbol semantic candidates | 41 |
 | Runtime public API symbols | 10991 |
 | Editor public API symbols | 3626 |
-| Test public symbols excluded from production API | 7796 |
+| Test public symbols excluded from production API | 7798 |
 | Sample public symbols excluded from production API | 639 |
-| Internal/private production symbols | 19225 |
+| Internal/private production symbols | 19226 |
 | Public API symbols missing XML documentation | 12002 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1239 |
+| Unity object lifetime records | 1241 |
 | Documentation drift findings | 52 |
 | Dependency usage findings | 287 |
 | Dependency cycles | 0 |
