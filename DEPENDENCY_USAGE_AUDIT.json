@@ -2,6 +2,32 @@
   "findings": [
     {
       "classification": "RequiredAndUsed",
+      "declaredVersion": "0.2.1",
+      "dependency": "com.deucarian.common",
+      "packageId": "com.deucarian.api",
+      "referencedAssemblies": [
+        "Deucarian.Common"
+      ],
+      "referencedBy": [
+        {
+          "asmdef": "Runtime/Deucarian.API.asmdef",
+          "assembly": "Deucarian.API",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [],
+          "reference": "Deucarian.Common",
+          "scope": "Runtime production",
+          "versionDefines": []
+        }
+      ],
+      "repository": "API",
+      "sourceMentionCount": 0,
+      "sourceMentionsByScope": {}
+    },
+    {
+      "classification": "RequiredAndUsed",
       "declaredVersion": "0.2.3",
       "dependency": "com.deucarian.diagnostics",
       "packageId": "com.deucarian.api",
@@ -3773,7 +3799,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.1.3",
+      "declaredVersion": "2.1.1",
       "dependency": "com.deucarian.api",
       "packageId": "com.deucarian.media.api-integration",
       "referencedAssemblies": [
@@ -14454,7 +14480,7 @@
   "summary": {
     "EditorOnlyUse": 53,
     "OptionalVersionDefinedUse": 4,
-    "RequiredAndUsed": 177,
+    "RequiredAndUsed": 178,
     "SampleOnlyUse": 2,
     "SuiteComposition": 39,
     "TestOnlyUse": 12

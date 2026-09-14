@@ -720,7 +720,7 @@
         },
         "oversizedProductionFiles": [],
         "packageId": "com.deucarian.api",
-        "productionFileCount": 80,
+        "productionFileCount": 81,
         "productionFilesWithoutAssemblyOwner": [],
         "repository": "API",
         "sharedValidationPresent": true,
@@ -2559,6 +2559,7 @@
     },
     {
       "currentConsumers": [
+        "com.deucarian.api",
         "com.deucarian.camera-navigation",
         "com.deucarian.game-content-authoring",
         "com.deucarian.media",
@@ -2668,6 +2669,7 @@
     },
     {
       "currentConsumers": [
+        "com.deucarian.api",
         "com.deucarian.camera-navigation",
         "com.deucarian.game-content-authoring",
         "com.deucarian.media",
@@ -3084,6 +3086,13 @@
         "to": "com.deucarian.logging",
         "toRepo": "Logging",
         "version": "1.0.2"
+      },
+      {
+        "from": "com.deucarian.api",
+        "fromRepo": "API",
+        "to": "com.deucarian.common",
+        "toRepo": "Common",
+        "version": "0.2.1"
       },
       {
         "from": "com.deucarian.api",
@@ -3615,7 +3624,7 @@
         "fromRepo": "Media-API-Integration",
         "to": "com.deucarian.api",
         "toRepo": "API",
-        "version": "1.1.3"
+        "version": "2.1.1"
       },
       {
         "from": "com.deucarian.media.api-integration",
@@ -4979,6 +4988,32 @@
   },
   "dependencyUsage": {
     "findings": [
+      {
+        "classification": "RequiredAndUsed",
+        "declaredVersion": "0.2.1",
+        "dependency": "com.deucarian.common",
+        "packageId": "com.deucarian.api",
+        "referencedAssemblies": [
+          "Deucarian.Common"
+        ],
+        "referencedBy": [
+          {
+            "asmdef": "Runtime/Deucarian.API.asmdef",
+            "assembly": "Deucarian.API",
+            "autoReferenced": true,
+            "defineConstraints": [],
+            "guardEvidence": null,
+            "guardKind": "",
+            "includePlatforms": [],
+            "reference": "Deucarian.Common",
+            "scope": "Runtime production",
+            "versionDefines": []
+          }
+        ],
+        "repository": "API",
+        "sourceMentionCount": 0,
+        "sourceMentionsByScope": {}
+      },
       {
         "classification": "RequiredAndUsed",
         "declaredVersion": "0.2.3",
@@ -8752,7 +8787,7 @@
       },
       {
         "classification": "RequiredAndUsed",
-        "declaredVersion": "1.1.3",
+        "declaredVersion": "2.1.1",
         "dependency": "com.deucarian.api",
         "packageId": "com.deucarian.media.api-integration",
         "referencedAssemblies": [
@@ -19433,7 +19468,7 @@
     "summary": {
       "EditorOnlyUse": 53,
       "OptionalVersionDefinedUse": 4,
-      "RequiredAndUsed": 177,
+      "RequiredAndUsed": 178,
       "SampleOnlyUse": 2,
       "SuiteComposition": 39,
       "TestOnlyUse": 12
@@ -19766,6 +19801,13 @@
   },
   "drift": {
     "dependencyVersionDrift": [
+      {
+        "declaredVersion": "0.2.1",
+        "dependency": "com.deucarian.common",
+        "ownerDevelopVersion": "0.3.0",
+        "packageId": "com.deucarian.api",
+        "repo": "API"
+      },
       {
         "declaredVersion": "0.2.3",
         "dependency": "com.deucarian.diagnostics",
@@ -20173,13 +20215,6 @@
         "repo": "Media"
       },
       {
-        "declaredVersion": "1.1.3",
-        "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
-        "packageId": "com.deucarian.media.api-integration",
-        "repo": "Media-API-Integration"
-      },
-      {
         "declaredVersion": "0.1.0",
         "dependency": "com.deucarian.media",
         "ownerDevelopVersion": "0.3.0",
@@ -20224,7 +20259,7 @@
       {
         "declaredVersion": "0.3.0",
         "dependency": "com.deucarian.ui",
-        "ownerDevelopVersion": "0.6.0",
+        "ownerDevelopVersion": "0.6.1",
         "packageId": "com.deucarian.notifications",
         "repo": "Notifications"
       },
@@ -20259,7 +20294,7 @@
       {
         "declaredVersion": "1.2.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.object-loading.api-integration",
         "repo": "ObjectLoading-API-Integration"
       },
@@ -20378,7 +20413,7 @@
       {
         "declaredVersion": "2.0.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.session.api-integration",
         "repo": "Session-API-Integration"
       },
@@ -20392,7 +20427,7 @@
       {
         "declaredVersion": "2.0.6",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.simultria-api",
         "repo": "Simultria-API"
       },
@@ -20427,7 +20462,7 @@
       {
         "declaredVersion": "2.0.2",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.simultria-viewer-integration",
         "repo": "Simultria-Viewer-Connection"
       },
@@ -20721,7 +20756,7 @@
       {
         "declaredVersion": "2.0.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.template.viewer",
         "repo": "Template-Viewer"
       },
@@ -20805,7 +20840,7 @@
       {
         "declaredVersion": "0.5.0",
         "dependency": "com.deucarian.ui",
-        "ownerDevelopVersion": "0.6.0",
+        "ownerDevelopVersion": "0.6.1",
         "packageId": "com.deucarian.template.viewer",
         "repo": "Template-Viewer"
       },
@@ -20964,6 +20999,13 @@
         "repo": "UIBinding-CoreState-Integration"
       },
       {
+        "declaredVersion": "2.1.0",
+        "dependency": "com.deucarian.api",
+        "ownerDevelopVersion": "2.1.1",
+        "packageId": "com.deucarian.authentication",
+        "repo": "Viewer-Authentication"
+      },
+      {
         "declaredVersion": "0.2.1",
         "dependency": "com.deucarian.common",
         "ownerDevelopVersion": "0.3.0",
@@ -20994,7 +21036,7 @@
       {
         "declaredVersion": "0.5.0",
         "dependency": "com.deucarian.ui",
-        "ownerDevelopVersion": "0.6.0",
+        "ownerDevelopVersion": "0.6.1",
         "packageId": "com.deucarian.viewer-navigation",
         "repo": "Viewer-Navigation"
       },
@@ -21036,7 +21078,7 @@
       {
         "declaredVersion": "0.5.0",
         "dependency": "com.deucarian.ui",
-        "ownerDevelopVersion": "0.6.0",
+        "ownerDevelopVersion": "0.6.1",
         "packageId": "com.deucarian.viewer-shell",
         "repo": "Viewer-Shell"
       },
@@ -21064,7 +21106,7 @@
       {
         "declaredVersion": "2.0.0",
         "dependency": "com.deucarian.api",
-        "ownerDevelopVersion": "2.1.0",
+        "ownerDevelopVersion": "2.1.1",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -21155,7 +21197,7 @@
       {
         "declaredVersion": "0.2.7",
         "dependency": "com.deucarian.ui",
-        "ownerDevelopVersion": "0.6.0",
+        "ownerDevelopVersion": "0.6.1",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -21251,23 +21293,7 @@
         "repo": "XR-UI-Theming-Integration"
       }
     ],
-    "registryDependencyDrift": [
-      {
-        "packageId": "com.deucarian.api",
-        "packageJsonDependencies": [
-          "com.deucarian.diagnostics",
-          "com.deucarian.editor",
-          "com.deucarian.logging"
-        ],
-        "registryDependencies": [
-          "com.deucarian.common",
-          "com.deucarian.diagnostics",
-          "com.deucarian.editor",
-          "com.deucarian.logging"
-        ],
-        "repo": "API"
-      }
-    ]
+    "registryDependencyDrift": []
   },
   "duplication": {
     "exactAstCloneGroups": [
@@ -29889,7 +29915,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21687,
+    "methodCountAnalyzed": 21694,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -39647,7 +39673,7 @@
             "editorApi": false,
             "file": "Runtime/Core/UnityWebRequestBuilder.cs",
             "iterator": false,
-            "line": 388,
+            "line": 391,
             "lineCount": 18,
             "namespace": "Deucarian.API.Core",
             "normalizedHash": "22449c53ac2611a3f87c22a775ca0e3501b2d85384a6072bf467eb1e4ee248a3",
@@ -45220,7 +45246,7 @@
             "editorApi": false,
             "file": "Runtime/Core/UnityWebRequestSender.cs",
             "iterator": false,
-            "line": 186,
+            "line": 196,
             "lineCount": 4,
             "namespace": "Deucarian.API.Core",
             "normalizedHash": "7d2a1120f57ad5313831cc91263ccc134fb002feea8c1c4faca58ec63b475cbc",
@@ -61356,7 +61382,7 @@
         "missingXmlDocumentationCount": 75,
         "packageId": "com.deucarian.api",
         "repository": "API",
-        "runtimePublicCount": 378
+        "runtimePublicCount": 379
       },
       {
         "editorPublicCount": 95,
@@ -61703,10 +61729,10 @@
       },
       {
         "editorPublicCount": 10,
-        "missingXmlDocumentationCount": 484,
+        "missingXmlDocumentationCount": 486,
         "packageId": "com.deucarian.ui",
         "repository": "UI",
-        "runtimePublicCount": 546
+        "runtimePublicCount": 548
       },
       {
         "editorPublicCount": 0,
@@ -61808,9 +61834,9 @@
       }
     ],
     "editorProductionCount": 3626,
-    "internalPrivateProductionCount": 19229,
-    "missingXmlDocumentationCount": 12007,
-    "runtimeProductionCount": 11000,
+    "internalPrivateProductionCount": 19238,
+    "missingXmlDocumentationCount": 12009,
+    "runtimeProductionCount": 11003,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples.DefinitionWorkflow",
@@ -76504,8 +76530,23 @@
         "assembly": "Deucarian.API",
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
+        "fullSignature": "public bool UseIncrementalTextureUpload",
+        "line": 112,
+        "namespace": "Deucarian.API.Models",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Runtime production",
+        "symbol": "UseIncrementalTextureUpload",
+        "symbolKind": "property",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.API",
+        "containingType": "ApiRequest",
+        "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public ApiJsonPropertyNamingPolicy? JsonPropertyNamingOverride",
-        "line": 110,
+        "line": 117,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -76520,7 +76561,7 @@
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public ApiAssetBundleRequestOptions AssetBundleOptions",
-        "line": 116,
+        "line": 123,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -76535,7 +76576,7 @@
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public ApiRequestPolicy RequestPolicy",
-        "line": 122,
+        "line": 129,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -76550,7 +76591,7 @@
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public bool SuppressLogging",
-        "line": 129,
+        "line": 136,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -76565,7 +76606,7 @@
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public Action<ApiTransferProgress> TransferProgress",
-        "line": 132,
+        "line": 139,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -76580,7 +76621,7 @@
         "containingType": "ApiRequest",
         "file": "Runtime/Models/ApiRequest.cs",
         "fullSignature": "public string BearerTokenOverride",
-        "line": 138,
+        "line": 145,
         "namespace": "Deucarian.API.Models",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -256654,8 +256695,23 @@
         "assembly": "Deucarian.UI",
         "containingType": "DeucarianIconButtonPalette",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
+        "fullSignature": "public Color ResolveContrastBackground(DeucarianIconButtonVisualState state)",
+        "line": 94,
+        "namespace": "Deucarian.UI",
+        "obsolete": false,
+        "packageId": "com.deucarian.ui",
+        "repository": "UI",
+        "scope": "Runtime production",
+        "symbol": "ResolveContrastBackground",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.UI",
+        "containingType": "DeucarianIconButtonPalette",
+        "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color ResolveIcon(DeucarianIconButtonVisualState state)",
-        "line": 115,
+        "line": 119,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256670,7 +256726,7 @@
         "containingType": "DeucarianIconButtonPalette",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color ResolveBorder(DeucarianIconButtonVisualState state)",
-        "line": 139,
+        "line": 143,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256685,7 +256741,7 @@
         "containingType": "",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public readonly struct DeucarianIconButtonPresentation",
-        "line": 145,
+        "line": 149,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256699,8 +256755,8 @@
         "assembly": "Deucarian.UI",
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
-        "fullSignature": "public DeucarianIconButtonPresentation( bool visible, float opacity, Color background, Color text, Color icon, Color border, float borderWidth, Vector3 buttonScale, Vector3 iconScale, bool autoContrast = false, DeucarianForegroundPalette? foregroundPalette = null)",
-        "line": 147,
+        "fullSignature": "public DeucarianIconButtonPresentation( bool visible, float opacity, Color background, Color text, Color icon, Color border, float borderWidth, Vector3 buttonScale, Vector3 iconScale, bool autoContrast = false, DeucarianForegroundPalette? foregroundPalette = null, Color backingSurface = default)",
+        "line": 151,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256715,7 +256771,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public bool Visible",
-        "line": 174,
+        "line": 181,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256730,7 +256786,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public float Opacity",
-        "line": 175,
+        "line": 182,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256745,7 +256801,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color Background",
-        "line": 176,
+        "line": 183,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256760,7 +256816,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color Text",
-        "line": 177,
+        "line": 184,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256775,7 +256831,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color Icon",
-        "line": 178,
+        "line": 185,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256790,7 +256846,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Color Border",
-        "line": 179,
+        "line": 186,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256805,7 +256861,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public float BorderWidth",
-        "line": 180,
+        "line": 187,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256820,7 +256876,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Vector3 ButtonScale",
-        "line": 181,
+        "line": 188,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256835,7 +256891,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public Vector3 IconScale",
-        "line": 182,
+        "line": 189,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256850,7 +256906,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public bool AutoContrast",
-        "line": 183,
+        "line": 190,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256865,7 +256921,7 @@
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public DeucarianForegroundPalette ForegroundPalette",
-        "line": 185,
+        "line": 192,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256879,8 +256935,23 @@
         "assembly": "Deucarian.UI",
         "containingType": "DeucarianIconButtonPresentation",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
+        "fullSignature": "public Color BackingSurface",
+        "line": 194,
+        "namespace": "Deucarian.UI",
+        "obsolete": false,
+        "packageId": "com.deucarian.ui",
+        "repository": "UI",
+        "scope": "Runtime production",
+        "symbol": "BackingSurface",
+        "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.UI",
+        "containingType": "DeucarianIconButtonPresentation",
+        "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static DeucarianIconButtonPresentation Lerp( DeucarianIconButtonPresentation from, DeucarianIconButtonPresentation to, float progress)",
-        "line": 187,
+        "line": 196,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256895,7 +256966,7 @@
         "containingType": "",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static class DeucarianIconButtonStyle",
-        "line": 208,
+        "line": 218,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256910,7 +256981,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyState( VisualElement button, VisualElement icon, DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state)",
-        "line": 214,
+        "line": 224,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256925,7 +256996,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyState( VisualElement button, VisualElement icon, DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state, DeucarianThemeStyle style)",
-        "line": 226,
+        "line": 236,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256940,7 +257011,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyButtonState( VisualElement button, DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state)",
-        "line": 237,
+        "line": 247,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256955,7 +257026,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyButtonState( VisualElement button, DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state, DeucarianThemeStyle style)",
-        "line": 248,
+        "line": 258,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256970,7 +257041,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyIconState( VisualElement icon, DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state)",
-        "line": 259,
+        "line": 269,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -256985,7 +257056,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static DeucarianIconButtonPresentation ResolvePresentation( DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state, DeucarianThemeStyle style = null)",
-        "line": 269,
+        "line": 279,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257000,7 +257071,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static DeucarianIconButtonPresentation ResolvePresentation( DeucarianIconButtonPalette palette, DeucarianIconButtonVisualState state, DeucarianThemeStyle style, bool preservePressedScale)",
-        "line": 277,
+        "line": 287,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257015,7 +257086,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyPresentation( VisualElement button, VisualElement icon, DeucarianIconButtonPresentation presentation, bool keepDisplayed = false, bool manageIconVisibility = true, bool manageButtonScale = true, bool manageIconScale = true)",
-        "line": 309,
+        "line": 320,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257030,7 +257101,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyButtonPresentation( VisualElement button, DeucarianIconButtonPresentation presentation, bool keepDisplayed = false, bool manageScale = true)",
-        "line": 331,
+        "line": 342,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257045,7 +257116,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static void ApplyIconPresentation( VisualElement icon, DeucarianIconButtonPresentation presentation, bool keepDisplayed = false, bool manageVisibility = true, bool manageScale = true)",
-        "line": 363,
+        "line": 374,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257060,7 +257131,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static Vector3 ResolveButtonScale(DeucarianIconButtonVisualState state)",
-        "line": 391,
+        "line": 402,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -257075,7 +257146,7 @@
         "containingType": "DeucarianIconButtonStyle",
         "file": "Runtime/UIToolkit/DeucarianIconButtonStyle.cs",
         "fullSignature": "public static Vector3 ResolveIconScale(DeucarianIconButtonVisualState state)",
-        "line": 418,
+        "line": 429,
         "namespace": "Deucarian.UI",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -291531,7 +291602,7 @@
         "assembly": "Deucarian.API.Tests",
         "containingType": "ApiClientTests.SuccessRequestSender",
         "file": "Tests/Editor/ApiClientTests.cs",
-        "fullSignature": "public Task<ApiTransportResponse> SendAsync(UnityWebRequest request, ApiRequest apiRequest, CancellationToken cancellationToken)",
+        "fullSignature": "public Task<ApiTransportResponse> SendAsync(UnityWebRequest request, ApiRequest apiRequest, ApiResponseFormat responseFormat, CancellationToken cancellationToken)",
         "line": 981,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
@@ -291546,8 +291617,8 @@
         "assembly": "Deucarian.API.Tests",
         "containingType": "ApiClientTests.CancellingRequestSender",
         "file": "Tests/Editor/ApiClientTests.cs",
-        "fullSignature": "public Task<ApiTransportResponse> SendAsync(UnityWebRequest request, ApiRequest apiRequest, CancellationToken cancellationToken)",
-        "line": 999,
+        "fullSignature": "public Task<ApiTransportResponse> SendAsync(UnityWebRequest request, ApiRequest apiRequest, ApiResponseFormat responseFormat, CancellationToken cancellationToken)",
+        "line": 1000,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291561,8 +291632,8 @@
         "assembly": "Deucarian.API.Tests",
         "containingType": "ApiClientTests.FailureRequestSender",
         "file": "Tests/Editor/ApiClientTests.cs",
-        "fullSignature": "public Task<ApiTransportResponse> SendAsync( UnityWebRequest request, ApiRequest apiRequest, CancellationToken cancellationToken)",
-        "line": 1019,
+        "fullSignature": "public Task<ApiTransportResponse> SendAsync( UnityWebRequest request, ApiRequest apiRequest, ApiResponseFormat responseFormat, CancellationToken cancellationToken)",
+        "line": 1021,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291577,7 +291648,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public ApiEndpoint LastEndpoint",
-        "line": 1037,
+        "line": 1040,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291592,7 +291663,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public ApiRequest LastRequest",
-        "line": 1038,
+        "line": 1041,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291607,7 +291678,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public object LastBody",
-        "line": 1039,
+        "line": 1042,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291622,7 +291693,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>(ApiRequest request, CancellationToken cancellationToken = default)",
-        "line": 1041,
+        "line": 1044,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291637,7 +291708,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>(ApiEndpoint endpoint, CancellationToken cancellationToken = default)",
-        "line": 1049,
+        "line": 1052,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291652,7 +291723,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>(ApiEndpoint endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 1056,
+        "line": 1059,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291667,7 +291738,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
-        "line": 1065,
+        "line": 1068,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291682,7 +291753,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PostAsync<TResponse>(string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 1071,
+        "line": 1074,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291697,7 +291768,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PutAsync<TResponse>(string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 1079,
+        "line": 1082,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291712,7 +291783,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PatchAsync<TResponse>(string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 1087,
+        "line": 1090,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -291727,7 +291798,7 @@
         "containingType": "ApiClientTests.RecordingApiClient",
         "file": "Tests/Editor/ApiClientTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>(string endpoint, CancellationToken cancellationToken = default)",
-        "line": 1095,
+        "line": 1098,
         "namespace": "Deucarian.API.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.api",
@@ -292545,6 +292616,66 @@
         "scope": "Test",
         "symbol": "Metadata",
         "symbolKind": "property",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "fullSignature": "public sealed class ApiMediaResponseAllocationTests",
+        "line": 15,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "ApiMediaResponseAllocationTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiMediaResponseAllocationTests",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator TextureResponseDoesNotRetainAnEncodedManagedCopy()",
+        "line": 17,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "TextureResponseDoesNotRetainAnEncodedManagedCopy",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiMediaResponseAllocationTests",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "fullSignature": "[UnityTest] public IEnumerator ByteResponseRetainsBytesWithoutCreatingATextCopy()",
+        "line": 51,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "ByteResponseRetainsBytesWithoutCreatingATextCopy",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "containingType": "ApiMediaResponseAllocationTests",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "fullSignature": "[Test] public void MissingTextureFailsEvenWithoutAnEncodedCopy()",
+        "line": 72,
+        "namespace": "Deucarian.API.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.api",
+        "repository": "API",
+        "scope": "Test",
+        "symbol": "MissingTextureFailsEvenWithoutAnEncodedCopy",
+        "symbolKind": "method",
         "xmlDocumentation": false
       },
       {
@@ -323722,7 +323853,7 @@
         "containingType": "ApiMediaLoaderTests",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "[Test] public async Task TextLoader_MapsApiFailure()",
-        "line": 50,
+        "line": 56,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323737,7 +323868,7 @@
         "containingType": "ApiMediaLoaderTests",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "[Test] public async Task BytesLoader_RespectsPreCancelledToken()",
-        "line": 76,
+        "line": 82,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323752,7 +323883,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public object Result",
-        "line": 99,
+        "line": 105,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323767,7 +323898,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public ApiRequest LastRequest",
-        "line": 101,
+        "line": 107,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323782,7 +323913,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public int CallCount",
-        "line": 103,
+        "line": 109,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323797,7 +323928,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiRequest request, CancellationToken cancellationToken = default)",
-        "line": 105,
+        "line": 111,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323812,7 +323943,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, CancellationToken cancellationToken = default)",
-        "line": 114,
+        "line": 120,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323827,7 +323958,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> SendAsync<TResponse>( ApiEndpoint endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 121,
+        "line": 127,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323842,7 +323973,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> GetAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default)",
-        "line": 129,
+        "line": 135,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323857,7 +323988,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PostAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 136,
+        "line": 142,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323872,7 +324003,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PutAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 144,
+        "line": 150,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323887,7 +324018,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> PatchAsync<TResponse>( string endpoint, object body, CancellationToken cancellationToken = default)",
-        "line": 152,
+        "line": 158,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -323902,7 +324033,7 @@
         "containingType": "ApiMediaLoaderTests.FakeApiClient",
         "file": "Tests/Editor/ApiMediaLoaderTests.cs",
         "fullSignature": "public Task<ApiResult<TResponse>> DeleteAsync<TResponse>( string endpoint, CancellationToken cancellationToken = default)",
-        "line": 160,
+        "line": 166,
         "namespace": "Deucarian.Media.APIIntegration.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media.api-integration",
@@ -395092,7 +395223,7 @@
         "containingType": "DeucarianControlReadabilityTests",
         "file": "Tests/EditMode/DeucarianControlReadabilityTests.cs",
         "fullSignature": "[Test] public void EveryAnimatedFrameKeepsTextReadableWithoutChangingContainedGeometry()",
-        "line": 58,
+        "line": 61,
         "namespace": "Deucarian.UI.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -395107,7 +395238,7 @@
         "containingType": "DeucarianControlReadabilityTests",
         "file": "Tests/EditMode/DeucarianControlReadabilityTests.cs",
         "fullSignature": "[Test] public void SelectedPointerStateAddsNoInnerOutlineAndClearsDefaultButtonImage()",
-        "line": 83,
+        "line": 86,
         "namespace": "Deucarian.UI.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.ui",
@@ -395669,6 +395800,51 @@
         "repository": "UI",
         "scope": "Test",
         "symbol": "InvalidIconIsRejectedBeforeCreatingRuntimeUi",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.UI.Tests.EditMode",
+        "containingType": "",
+        "file": "Tests/EditMode/DeucarianToolbarSurfaceTests.cs",
+        "fullSignature": "public sealed class DeucarianToolbarSurfaceTests",
+        "line": 8,
+        "namespace": "Deucarian.UI.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.ui",
+        "repository": "UI",
+        "scope": "Test",
+        "symbol": "DeucarianToolbarSurfaceTests",
+        "symbolKind": "class",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.UI.Tests.EditMode",
+        "containingType": "DeucarianToolbarSurfaceTests",
+        "file": "Tests/EditMode/DeucarianToolbarSurfaceTests.cs",
+        "fullSignature": "[TestCase(false)] [TestCase(true)] public void RestingAndDisabledControlsKeepTheToolbarVisible(bool enabled)",
+        "line": 10,
+        "namespace": "Deucarian.UI.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.ui",
+        "repository": "UI",
+        "scope": "Test",
+        "symbol": "RestingAndDisabledControlsKeepTheToolbarVisible",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.UI.Tests.EditMode",
+        "containingType": "DeucarianToolbarSurfaceTests",
+        "file": "Tests/EditMode/DeucarianToolbarSurfaceTests.cs",
+        "fullSignature": "[Test] public void AnimatedStateUsesCompositedContrastWithoutPaintingTheBackingSurfaceTwice()",
+        "line": 24,
+        "namespace": "Deucarian.UI.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.ui",
+        "repository": "UI",
+        "scope": "Test",
+        "symbol": "AnimatedStateUsesCompositedContrastWithoutPaintingTheBackingSurfaceTwice",
         "symbolKind": "method",
         "xmlDocumentation": false
       },
@@ -408003,7 +408179,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7814
+    "testsPublicCount": 7821
   },
   "repositories": [
     {
@@ -408166,6 +408342,7 @@
           "optionalUnityReferences": [],
           "path": "Runtime/Deucarian.API.asmdef",
           "references": [
+            "Deucarian.Common",
             "Deucarian.Diagnostics",
             "Deucarian.Logging"
           ],
@@ -408250,10 +408427,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "78b71c64155ddb22cf750bcb39202ab2125d9e73",
+        "headCommit": "3589705624443ae9f76863a2ef552daabab7c670",
         "origin": "https://github.com/Deucarian/API.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "78b71c64155ddb22cf750bcb39202ab2125d9e73"
+        "requestedRefCommit": "3589705624443ae9f76863a2ef552daabab7c670"
       },
       "canonicalId": "Deucarian/API",
       "ciWorkflows": [
@@ -408261,9 +408438,11 @@
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
         ".github/workflows/release-package.yml",
-        ".github/workflows/unity-editmode-tests.yml"
+        ".github/workflows/unity-editmode-tests.yml",
+        ".github/workflows/webgl-texture-tests.yml"
       ],
       "dependencies": {
+        "com.deucarian.common": "0.2.1",
         "com.deucarian.diagnostics": "0.2.3",
         "com.deucarian.editor": "1.13.0",
         "com.deucarian.logging": "1.0.4",
@@ -408297,7 +408476,8 @@
           "com.unity.modules.unitywebrequestassetbundle",
           "com.unity.modules.unitywebrequesttexture",
           "com.unity.modules.unitywebrequestwww",
-          "com.deucarian.diagnostics"
+          "com.deucarian.diagnostics",
+          "com.deucarian.common"
         ],
         "runtimeAssemblies": [
           "Deucarian.API"
@@ -408314,13 +408494,13 @@
       },
       "name": "API",
       "packageId": "com.deucarian.api",
-      "packageVersion": "2.1.0",
+      "packageVersion": "2.1.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/API.git",
-        "governanceConfigSha256": "bc9633dfd58f4a1bf5ee169c6f88e17eb4bb2b6374ddd32fab1d29f310d104e8",
-        "headCommit": "78b71c64155ddb22cf750bcb39202ab2125d9e73",
-        "manifestSha256": "6796c6f55bb17e4468e641f60e6a91d4549f40411998a6d1da09c4bcb6c6dbcc",
+        "governanceConfigSha256": "7d76b4d085702111dd1a4c853895155ab576ab95ae86da9599ca52007b7a0e1c",
+        "headCommit": "3589705624443ae9f76863a2ef552daabab7c670",
+        "manifestSha256": "7296ffdbf1f4023904ffa065fdbc54d937284939345e0554765cc7982add38a0",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -409039,10 +409219,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "413750c2ffd1246945ccef5cb260cb55d5944702",
+        "headCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "413750c2ffd1246945ccef5cb260cb55d5944702"
+        "requestedRefCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -409074,13 +409254,13 @@
       },
       "name": "Bootstrap",
       "packageId": "com.deucarian.bootstrap",
-      "packageVersion": "1.2.18",
+      "packageVersion": "1.2.19",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "413750c2ffd1246945ccef5cb260cb55d5944702",
-        "manifestSha256": "008e4d14f66131e27141e2b974c7e807ddee9b22e43a001045f572cd1597beeb",
+        "headCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8",
+        "manifestSha256": "3578b0cf49bb9219e87be56c929ec0fbdead85379ad944bdabae11b79511f7d0",
         "requestedRef": "develop"
       },
       "registryDependencies": null,
@@ -412384,10 +412564,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "bf22e6aa14dc2f62f1df501451635a3a6d2772bc",
+        "headCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c",
         "origin": "https://github.com/Deucarian/Media-API-Integration.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "bf22e6aa14dc2f62f1df501451635a3a6d2772bc"
+        "requestedRefCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c"
       },
       "canonicalId": "Deucarian/Media-API-Integration",
       "ciWorkflows": [
@@ -412395,7 +412575,7 @@
         ".github/workflows/unity-editmode-tests.yml"
       ],
       "dependencies": {
-        "com.deucarian.api": "1.1.3",
+        "com.deucarian.api": "2.1.1",
         "com.deucarian.media": "0.1.0"
       },
       "displayName": "Deucarian Media API Integration",
@@ -412425,13 +412605,13 @@
       },
       "name": "Media-API-Integration",
       "packageId": "com.deucarian.media.api-integration",
-      "packageVersion": "0.1.0",
+      "packageVersion": "0.1.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media-API-Integration.git",
         "governanceConfigSha256": "d3e7ff03f6e1e178fabf232e1d2eb853751ee1742d20e53c25454cecf31a7bd9",
-        "headCommit": "bf22e6aa14dc2f62f1df501451635a3a6d2772bc",
-        "manifestSha256": "b1efc0632c47ec67802500c762a632b153f90812791f61f23b86b657edf8e2a6",
+        "headCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c",
+        "manifestSha256": "8504eeaa7fd16b444dc6251a97052203d663d0c03ecd97306dbd4e72a3fde68e",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -413902,10 +414082,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "610aa1bd86013905cb22969dce427a0b689df608",
+        "headCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "610aa1bd86013905cb22969dce427a0b689df608"
+        "requestedRefCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -413945,13 +414125,13 @@
       },
       "name": "Package-Installer",
       "packageId": "com.deucarian.package-installer",
-      "packageVersion": "1.7.4",
+      "packageVersion": "1.7.5",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "610aa1bd86013905cb22969dce427a0b689df608",
-        "manifestSha256": "cbb9371cd6fd93a0ff28eb5f524a4bdc4709486d9b52eaba65330bc42cfa0e64",
+        "headCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561",
+        "manifestSha256": "b796d0f5dd3b2423de942cdb9a5ce6fc3ca8c3e74d08284db2226fbcaffd91c4",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -418034,10 +418214,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "844e3d84371777ab384d35378ad461a7031a20db",
+        "headCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0",
         "origin": "https://github.com/Deucarian/UI.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "844e3d84371777ab384d35378ad461a7031a20db"
+        "requestedRefCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0"
       },
       "canonicalId": "Deucarian/UI",
       "ciWorkflows": [
@@ -418085,13 +418265,13 @@
       },
       "name": "UI",
       "packageId": "com.deucarian.ui",
-      "packageVersion": "0.6.0",
+      "packageVersion": "0.6.1",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI.git",
         "governanceConfigSha256": "b0fae6faf658f7492932a0c11af6bd5820fc575b3c451fa1ccdedf10aade7521",
-        "headCommit": "844e3d84371777ab384d35378ad461a7031a20db",
-        "manifestSha256": "15eb3aa7d7e5f4e377e1d894a24dbca3648d5f1fd667dd1b2fbe026c6c5411fa",
+        "headCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0",
+        "manifestSha256": "fb4949ecd2836e47390287590027c1c81e1e9246f620271a92158f3c6777c53a",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -420930,6 +421110,7 @@
       "editorRepositoryCount": 5,
       "helperDefinitionCount": 1,
       "intendedConsumers": [
+        "API",
         "Camera-Navigation",
         "Game-Content-Authoring",
         "Media",
@@ -420955,7 +421136,7 @@
         "Editor asset destruction and test fixture cleanup should stay out of the initial runtime API.",
         "Ref-clearing overload is omitted because audited production consumers do not require it."
       ],
-      "runtimeRepositoryCount": 15,
+      "runtimeRepositoryCount": 16,
       "selectedOption": "Completed",
       "testRepositoryCount": 51,
       "testingPackageDecision": {
@@ -420965,6 +421146,21 @@
       }
     },
     "occurrences": [
+      {
+        "assembly": "Deucarian.API",
+        "classification": "Runtime production",
+        "containingSymbol": "WebGLTextureResponseDecoder::DecodeAsync",
+        "file": "Runtime/Core/WebGLTextureResponseDecoder.cs",
+        "invocation": "UnityObjectUtility.DestroySafely",
+        "line": 57,
+        "occurrenceKind": "helper call site",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Production code calls the canonical Deucarian.Common lifetime API.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Runtime production"
+      },
       {
         "assembly": "Deucarian.API.Tests",
         "classification": "Test",
@@ -421152,6 +421348,36 @@
         "file": "Tests/Editor/ApiJsonPropertyNamingTests.cs",
         "invocation": "Object.DestroyImmediate",
         "line": 134,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "classification": "Test",
+        "containingSymbol": "ApiMediaResponseAllocationTests::TextureResponseDoesNotRetainAnEncodedManagedCopy",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 48,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.api",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "API",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.API.Tests",
+        "classification": "Test",
+        "containingSymbol": "ApiMediaResponseAllocationTests::TextureResponseDoesNotRetainAnEncodedManagedCopy",
+        "file": "Tests/Editor/ApiMediaResponseAllocationTests.cs",
+        "invocation": "UnityEngine.Object.DestroyImmediate",
+        "line": 48,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.api",
         "policyDisposition": "Allowed",
@@ -439693,11 +439919,11 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1247
+      "Allowed": 1250
     },
     "summary": {
-      "direct Unity API call": 1122,
-      "helper call site": 124,
+      "direct Unity API call": 1124,
+      "helper call site": 125,
       "helper definition": 1
     }
   }

@@ -30,7 +30,7 @@ once.
 | Repository | Package | Status | Architecture reference | Shared validation | Production files | Test assemblies | Oversized files | Unowned files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Activity-Visualization | com.deucarian.activity-visualization | SetupRequired | No | Yes | 24 | 1 | 0 | 0 |
-| API | com.deucarian.api | Compliant | Yes | Yes | 80 | 2 | 0 | 0 |
+| API | com.deucarian.api | Compliant | Yes | Yes | 81 | 2 | 0 | 0 |
 | Attacks | com.deucarian.attacks | RefactorBacklog | Yes | Yes | 95 | 2 | 2 | 0 |
 | Auto-Defense | com.deucarian.auto-defense | Compliant | Yes | Yes | 1 | 2 | 0 | 0 |
 | Auto-Defense-Suite | com.deucarian.auto-defense-suite | Compliant | Yes | Yes | 0 | 0 | 0 | 0 |

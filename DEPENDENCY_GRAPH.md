@@ -8,6 +8,7 @@ Schema version: 2
 | --- | --- | --- | --- | --- |
 | com.deucarian.activity-visualization | com.deucarian.diagnostics | 0.1.4 | Activity-Visualization | Diagnostics |
 | com.deucarian.activity-visualization | com.deucarian.logging | 1.0.2 | Activity-Visualization | Logging |
+| com.deucarian.api | com.deucarian.common | 0.2.1 | API | Common |
 | com.deucarian.api | com.deucarian.diagnostics | 0.2.3 | API | Diagnostics |
 | com.deucarian.api | com.deucarian.editor | 1.13.0 | API | Editor |
 | com.deucarian.api | com.deucarian.logging | 1.0.4 | API | Logging |
@@ -83,7 +84,7 @@ Schema version: 2
 | com.deucarian.logging | com.deucarian.editor | 1.10.6 | Logging | Editor |
 | com.deucarian.media | com.deucarian.common | 0.2.1 | Media | Common |
 | com.deucarian.media | com.deucarian.editor | 1.12.0 | Media | Editor |
-| com.deucarian.media.api-integration | com.deucarian.api | 1.1.3 | Media-API-Integration | API |
+| com.deucarian.media.api-integration | com.deucarian.api | 2.1.1 | Media-API-Integration | API |
 | com.deucarian.media.api-integration | com.deucarian.media | 0.1.0 | Media-API-Integration | Media |
 | com.deucarian.monetization | com.deucarian.diagnostics | 0.2.3 | Monetization | Diagnostics |
 | com.deucarian.monetization | com.deucarian.editor | 1.12.0 | Monetization | Editor |
@@ -285,5 +286,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 212
-- Registry dependency drift entries: 1
+- Dependency version drift entries: 213
+- Registry dependency drift entries: 0
