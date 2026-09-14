@@ -6,9 +6,9 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 ## Summary
 
-- Repositories scanned: **64**
+- Repositories scanned: **65**
 - Repositories with findings: **22**
-- Clean repositories: **42**
+- Clean repositories: **43**
 - Unresolved findings: **68**
 - Suppressed findings: **0**
 - Validation failures: **0**
@@ -75,6 +75,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
+| `com.deucarian.tweens` | `Tweens` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui` | `UI` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding` | `UI-Binding` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding.core-state-integration` | `UIBinding-CoreState-Integration` | `Audit` | 7 | 0 | Valid |

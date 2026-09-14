@@ -210,6 +210,9 @@ Schema version: 2
 | com.deucarian.theming | com.deucarian.editor | 1.13.0 | Theming | Editor |
 | com.deucarian.theming | com.deucarian.logging | 1.0.4 | Theming | Logging |
 | com.deucarian.theming | com.deucarian.media | 0.2.0 | Theming | Media |
+| com.deucarian.tweens | com.deucarian.common | 0.3.0 | Tweens | Common |
+| com.deucarian.tweens | com.deucarian.diagnostics | 0.2.3 | Tweens | Diagnostics |
+| com.deucarian.tweens | com.deucarian.editor | 1.11.0 | Tweens | Editor |
 | com.deucarian.ui | com.deucarian.common | 0.2.1 | UI | Common |
 | com.deucarian.ui | com.deucarian.theming | 1.3.0 | UI | Theming |
 | com.deucarian.ui-binding | com.deucarian.common | 0.2.1 | UI-Binding | Common |
@@ -282,5 +285,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 202
-- Registry dependency drift entries: 0
+- Dependency version drift entries: 205
+- Registry dependency drift entries: 1

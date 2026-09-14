@@ -593,6 +593,14 @@
       "scope": "Editor production"
     },
     {
+      "detail": "Reference https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md from the repository agent guidance.",
+      "disposition": "SetupRequired",
+      "file": "AGENTS.md",
+      "kind": "MissingCanonicalArchitectureReference",
+      "packageId": "com.deucarian.tweens",
+      "repository": "Tweens"
+    },
+    {
       "assembly": "Deucarian.UI",
       "detail": "Extract responsibilities until the production file is at most 500 lines.",
       "disposition": "RefactorBacklog",
@@ -1844,6 +1852,24 @@
     {
       "canonicalReference": {
         "path": "AGENTS.md",
+        "present": false,
+        "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
+      },
+      "oversizedProductionFiles": [],
+      "packageId": "com.deucarian.tweens",
+      "productionFileCount": 20,
+      "productionFilesWithoutAssemblyOwner": [],
+      "repository": "Tweens",
+      "sharedValidationPresent": true,
+      "status": "SetupRequired",
+      "testAssemblies": [
+        "Deucarian.Tweens.Tests",
+        "Deucarian.Tweens.Tests.PlayMode"
+      ]
+    },
+    {
+      "canonicalReference": {
+        "path": "AGENTS.md",
         "present": true,
         "url": "https://github.com/Deucarian/Package-Registry/blob/main/ARCHITECTURE.md"
       },
@@ -1961,7 +1987,7 @@
       },
       "oversizedProductionFiles": [],
       "packageId": "com.deucarian.viewer-navigation",
-      "productionFileCount": 41,
+      "productionFileCount": 43,
       "productionFilesWithoutAssemblyOwner": [],
       "repository": "Viewer-Navigation",
       "sharedValidationPresent": true,
@@ -2157,12 +2183,12 @@
     "compliantRepositoryCount": 47,
     "findingsByDisposition": {
       "RefactorBacklog": 53,
-      "SetupRequired": 6
+      "SetupRequired": 7
     },
     "findingsByKind": {
-      "MissingCanonicalArchitectureReference": 6,
+      "MissingCanonicalArchitectureReference": 7,
       "ProductionFileExceedsLineLimit": 53
     },
-    "repositoryCount": 65
+    "repositoryCount": 66
   }
 }
