@@ -59,11 +59,11 @@
         "com.deucarian.command-routing",
         "com.deucarian.activity-visualization",
         "com.deucarian.object-selection.core-state-integration",
-        "com.deucarian.ui",
         "com.deucarian.viewer-rendering",
         "com.deucarian.webgl-template",
         "com.deucarian.pointer-capture",
-        "com.deucarian.xr-ui"
+        "com.deucarian.xr-ui",
+        "com.deucarian.tweens"
       ]
     },
     {
@@ -71,16 +71,15 @@
       "rank": 4,
       "description": "Packages whose longest canonical dependency path has 4 edges.",
       "packages": [
+        "com.deucarian.ui",
         "com.deucarian.attacks",
         "com.deucarian.camera-navigation.input-system-integration",
         "com.deucarian.defense-games",
         "com.deucarian.media.api-integration",
         "com.deucarian.object-loading.api-integration",
         "com.deucarian.session.api-integration",
-        "com.deucarian.notifications",
         "com.deucarian.command-routing.udp-integration",
         "com.deucarian.command-routing.webgl-integration",
-        "com.deucarian.viewer-shell",
         "com.deucarian.selection-suite",
         "com.deucarian.xr-ui.theming-integration"
       ]
@@ -90,6 +89,8 @@
       "rank": 5,
       "description": "Packages whose longest canonical dependency path has 5 edges.",
       "packages": [
+        "com.deucarian.notifications",
+        "com.deucarian.viewer-shell",
         "com.deucarian.projectiles",
         "com.deucarian.authentication",
         "com.deucarian.viewer-navigation"

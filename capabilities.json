@@ -131,7 +131,7 @@
       "ownerPackageId": "com.deucarian.ui"
     },
     {
-      "description": "Reusable UI motion profiles, animated visibility, and cancellable icon/content reveal helpers.",
+      "description": "UI motion presentation profiles and cancellable UI Toolkit adapters. Reversible visibility progress and active scheduling are provided by com.deucarian.tweens.",
       "id": "ui-motion",
       "ownerPackageId": "com.deucarian.ui"
     },
@@ -271,6 +271,11 @@
       "id": "shared-motion-easing",
       "ownerPackageId": "com.deucarian.common",
       "status": "Implemented in com.deucarian.common"
+    },
+    {
+      "id": "visibility-tween-playback",
+      "ownerPackageId": "com.deucarian.tweens",
+      "description": "Shared active tween scheduling, renderer-independent visibility progress/sampling, profiles, explicit animated object lifecycle and isolated editor preview."
     }
   ],
   "schemaVersion": 2
