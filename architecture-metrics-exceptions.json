@@ -743,6 +743,24 @@
           "mutableGlobals": 1
         },
         "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Rechecked for shared DS/RP palettes: unchanged scene preview generation/repaint owner. Theme mapping and preview state remain instance-owned; no additional global state or allowance."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-879 palette and scale-origin review: Editor/Core/DeucarianThemeSceneApplication.cs is unchanged from 52ff5b59911cd55bab5303b406739f776d4a6ec0. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 viewer quality review: existing owner is unchanged from 08a3fb4e34c848e10c87cb854475e050fb10c8ed; verified source diff is empty. Control color ownership review: unchanged from develop 70ab7d4. The existing scene-preview repaint generation counter is untouched. No allowance increase or additional mutable global state. No metric allowance increase. New contrast/preparation/visibility objects own instance state."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.12.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-879 palette and scale-origin review: Runtime/Core/ThemeAudio.cs is unchanged from 52ff5b59911cd55bab5303b406739f776d4a6ec0. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 viewer quality review: existing owner is unchanged from 08a3fb4e34c848e10c87cb854475e050fb10c8ed; verified source diff is empty. Control color ownership review: unchanged from develop 70ab7d4. The borrowed audio registration and its disposal semantics are untouched; the new color helpers contain only immutable values and pure functions. Same allowance, no new global service. No metric allowance increase. New contrast/preparation/visibility objects own instance state."
       }
     ],
     "com.deucarian.xr-ui": [
@@ -832,6 +850,15 @@
           "mutableGlobals": 1
         },
         "reason": "SIM-875 Processor contract review: runtime notification and editor subscriber are byte-for-byte unchanged from develop eb2a50d6f5c90241812544067a773080402f75bd. This single static tooling event refreshes the editor command catalog; authoritative catalog state and ordinary subscriptions remain instance-owned. The editor subscriber removes its own handler before adding it. No new global state or increased allowance. Scope is this package version only; replacing the tooling event requires a separate lifecycle change."
+      },
+      {
+        "assembly": "Deucarian.ActivityVisualization.Simultria",
+        "type": "Deucarian.ActivityVisualization.Simultria.SimultriaActivityCatalogNotifications",
+        "version": "0.7.1",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-879 palette and scale-origin review: Runtime/Catalog/SimultriaActivityCatalogRuntime.cs is unchanged from d4d17162ecead9ffa48fce17b06c4fe5c95dbe7d. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 viewer quality review: existing owner is unchanged from d9bf1e5034af8848ef97e14130014fc15d4d39fa; verified source diff is empty. SIM-875 Processor contract review: runtime notification and editor subscriber are byte-for-byte unchanged from develop eb2a50d6f5c90241812544067a773080402f75bd. This single static tooling event refreshes the editor command catalog; authoritative catalog state and ordinary subscriptions remain instance-owned. The editor subscriber removes its own handler before adding it. No new global state or increased allowance. Scope is this package version only; replacing the tooling event requires a separate lifecycle change. No metric allowance increase. New contrast/preparation/visibility objects own instance state."
       }
     ],
     "com.deucarian.tweens": [
@@ -861,6 +888,33 @@
           "mutableGlobals": 3
         },
         "reason": "SIM-879 review of existing Tweens 0.2.0 runtime (3eafe7aa9b42d1c00e6f574216cca68ffae30b9d), unchanged by the inspector lifetime fix. The existing cached project profile, loaded guard and reduced-motion preference provide the package-wide defaults. Subsystem registration resets all three; individual transition and object state is instance-owned. This allowance covers only those existing fields; no global domain state is permitted."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenDiagnosticProvider",
+        "version": "0.3.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-879 palette and scale-origin review: Runtime/Scheduling/TweenDiagnosticProvider.cs is unchanged from 5a6fca7868ad4a664cb70ed57ef598dea13d6e05. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 review of existing Tweens 0.2.0 runtime (3eafe7aa9b42d1c00e6f574216cca68ffae30b9d), unchanged by the inspector lifetime fix. Only a monotonic provider identifier allocator; per-scheduler diagnostic state remains instance-owned and registration is disposed with the scheduler. This allowance covers only those existing fields; no global domain state is permitted."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenRuntime",
+        "version": "0.3.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "SIM-879 palette and scale-origin review: Runtime/Scheduling/TweenRuntime.cs is unchanged from 5a6fca7868ad4a664cb70ed57ef598dea13d6e05. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 review of existing Tweens 0.2.0 runtime (3eafe7aa9b42d1c00e6f574216cca68ffae30b9d), unchanged by the inspector lifetime fix. The one Unity runtime driver and application-quitting guard coordinate the shared scheduler. Existing subsystem registration resets both and driver shutdown releases all active work. This allowance covers only those existing fields; no global domain state is permitted."
+      },
+      {
+        "assembly": "Deucarian.Tweens",
+        "type": "Deucarian.Tweens.TweenVisibilityDefaults",
+        "version": "0.3.0",
+        "limits": {
+          "mutableGlobals": 3
+        },
+        "reason": "SIM-879 palette and scale-origin review: Runtime/Visibility/TweenVisibilityProfile.cs is unchanged from 5a6fca7868ad4a664cb70ed57ef598dea13d6e05. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 review of existing Tweens 0.2.0 runtime (3eafe7aa9b42d1c00e6f574216cca68ffae30b9d), unchanged by the inspector lifetime fix. The existing cached project profile, loaded guard and reduced-motion preference provide the package-wide defaults. Subsystem registration resets all three; individual transition and object state is instance-owned. This allowance covers only those existing fields; no global domain state is permitted."
       }
     ]
   }
