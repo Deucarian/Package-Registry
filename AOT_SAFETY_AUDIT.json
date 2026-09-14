@@ -984,6 +984,18 @@
       "findings": [],
       "mode": "Audit",
       "ok": true,
+      "packageId": "com.deucarian.tweens",
+      "repository": "Tweens",
+      "suppressedFindingCount": 0,
+      "suppressedFindings": []
+    },
+    {
+      "categories": {},
+      "errors": [],
+      "findingCount": 0,
+      "findings": [],
+      "mode": "Audit",
+      "ok": true,
       "packageId": "com.deucarian.ui",
       "repository": "UI",
       "suppressedFindingCount": 0,
@@ -1328,12 +1340,12 @@
       "reflective-invocation": 10,
       "runtime-type-discovery": 46
     },
-    "cleanRepositoryCount": 42,
+    "cleanRepositoryCount": 43,
     "modeCounts": {
-      "Audit": 64
+      "Audit": 65
     },
     "repositoriesWithFindings": 22,
-    "repositoryCount": 64,
+    "repositoryCount": 65,
     "totalFindingCount": 68,
     "totalSuppressedFindingCount": 0,
     "validationFailureCount": 0
