@@ -8,7 +8,7 @@ Schema version: 1
 | --- | --- |
 | Editor-only use | 53 |
 | Optional version-defined use | 4 |
-| Required and used | 177 |
+| Required and used | 178 |
 | Sample-only use | 2 |
 | Suite composition | 39 |
 | Test-only use | 12 |
@@ -17,6 +17,7 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 
 | Repository | Dependency/Reference | Classification | Evidence | Referenced assemblies | Source mentions |
 | --- | --- | --- | --- | --- | --- |
+| API | com.deucarian.common | Required and used | Runtime production: Deucarian.API -> Deucarian.Common | Deucarian.Common | 0 |
 | API | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.API -> Deucarian.Diagnostics; Test: Deucarian.API.Tests -> Deucarian.Diagnostics; Test: Deucarian.API.Tests.PlayMode -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | API | com.deucarian.editor | Editor-only use | Editor production: Deucarian.API.Editor -> Deucarian.Editor; Test: Deucarian.API.Tests -> Deucarian.Editor | Deucarian.Editor | 0 |
 | API | com.deucarian.logging | Required and used | Editor production: Deucarian.API.Editor -> Deucarian.Logging; Runtime production: Deucarian.API -> Deucarian.Logging; Sample: Deucarian.API.Samples -> Deucarian.Logging | Deucarian.Logging | 0 |
@@ -256,4 +257,3 @@ Findings marked `apparently unused` are review prompts, not removal recommendati
 | Viewer-Rendering | com.deucarian.diagnostics | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Diagnostics | Deucarian.Diagnostics | 0 |
 | Viewer-Rendering | com.deucarian.logging | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Logging | Deucarian.Logging | 0 |
 | Viewer-Rendering | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerRendering -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.EditMode -> Deucarian.Theming; Test: Deucarian.ViewerRendering.Tests.PlayMode -> Deucarian.Theming | Deucarian.Theming | 0 |
-| Viewer-Shell | com.deucarian.theming | Required and used | Runtime production: Deucarian.ViewerShell -> Deucarian.Theming; Test: Deucarian.ViewerShell.Tests.EditMode -> Deucarian.Theming | Deucarian.Theming | 0 |
