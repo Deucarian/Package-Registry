@@ -4106,7 +4106,7 @@
     },
     {
       "classification": "EditorOnlyUse",
-      "declaredVersion": "1.13.0",
+      "declaredVersion": "1.14.0",
       "dependency": "com.deucarian.editor",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -4125,6 +4125,20 @@
           ],
           "reference": "Deucarian.Editor",
           "scope": "Editor production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Notification List Basics/Definitions/Editor/Deucarian.Samples.Notifications.BasicDefinitions.asmdef",
+          "assembly": "Deucarian.Samples.Notifications.BasicDefinitions",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Editor",
+          "scope": "Sample",
           "versionDefines": []
         },
         {
@@ -4162,7 +4176,7 @@
     },
     {
       "classification": "RequiredAndUsed",
-      "declaredVersion": "1.9.0",
+      "declaredVersion": "1.13.0",
       "dependency": "com.deucarian.theming",
       "packageId": "com.deucarian.notifications",
       "referencedAssemblies": [
@@ -4220,6 +4234,20 @@
           "includePlatforms": [],
           "reference": "Deucarian.Theming",
           "scope": "Runtime production",
+          "versionDefines": []
+        },
+        {
+          "asmdef": "Samples~/Notification List Basics/Definitions/Editor/Deucarian.Samples.Notifications.BasicDefinitions.asmdef",
+          "assembly": "Deucarian.Samples.Notifications.BasicDefinitions",
+          "autoReferenced": true,
+          "defineConstraints": [],
+          "guardEvidence": null,
+          "guardKind": "",
+          "includePlatforms": [
+            "Editor"
+          ],
+          "reference": "Deucarian.Theming",
+          "scope": "Sample",
           "versionDefines": []
         },
         {

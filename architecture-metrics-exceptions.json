@@ -597,6 +597,15 @@
           "mutableGlobals": 1
         },
         "reason": "SIM-841 strict notification review: Runtime/Core/NotificationManager.cs is unchanged from 1726583cebc3971bda2c28c792a4e85ee22c768b. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.7.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 default notification prefab review: Runtime/Core/NotificationManager.cs is unchanged from develop f64e4759f599247ecf55250700206a73a13d312a. Its existing scoped default service binding and lifecycle are preserved. New prefab settings use instance-owned state and subscriptions; no mutable-global allowance is increased."
       }
     ],
     "com.deucarian.theming": [
