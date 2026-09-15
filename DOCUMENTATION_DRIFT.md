@@ -9,7 +9,7 @@ Schema version: 1
 | Dependency version drift | 1 |
 | Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
-| Migration documentation | 11 |
+| Migration documentation | 12 |
 | Review required | 21 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
@@ -27,6 +27,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Command-Routing-WebGL-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Defense-Games | Review required | Documentation~/CrossGenre.md |  |  |  |
 | Diagnostics | Review required | README.md |  |  |  |
+| Editor | Migration documentation | README.md |  |  |  |
 | Editor | Review required | AGENTS.md |  |  |  |
 | Encounters | Review required | AGENTS.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |
