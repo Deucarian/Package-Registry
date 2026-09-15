@@ -505,6 +505,78 @@
           "mutableGlobals": 3
         },
         "reason": "Shared editor-only asset importer owns one deduplicated pending-path set, current per-path errors and a scheduling flag. Work drains outside import, errors clear after repair/delete, and assembly reload resets these project-local collections. No player discovery or runtime service is retained."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.Definitions.DeucarianDefinitionImport",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 3
+        },
+        "reason": "SIM-841 strict notification review: Editor/Definitions/DeucarianDefinitionImport.cs is unchanged from 86359d0f465dbc00a6b6b82abdc2b672f494d19c. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "SIM-841 strict notification review: Editor/DeucarianEditorAmbientGlass.cs is unchanged from 86359d0f465dbc00a6b6b82abdc2b672f494d19c. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 strict notification review: Editor/DeucarianEditorAppearance.cs is unchanged from 86359d0f465dbc00a6b6b82abdc2b672f494d19c. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 strict notification review: Editor/DeucarianToolHistory.cs is unchanged from 86359d0f465dbc00a6b6b82abdc2b672f494d19c. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.Definitions.DeucarianDefinitionImport",
+        "version": "1.15.0",
+        "limits": {
+          "mutableGlobals": 3
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAmbientMotionSettings",
+        "version": "1.15.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianEditorAppearance",
+        "version": "1.15.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Editor",
+        "type": "Deucarian.Editor.DeucarianToolHistory",
+        "version": "1.15.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
       }
     ],
     "com.deucarian.notifications": [
@@ -552,6 +624,33 @@
           "mutableGlobals": 1
         },
         "reason": "Definition authoring review: existing ownership and lifetime remain unchanged, with no allowance increase. Renewed after integrating typed warning keys from develop into the editor feedback batch. The source of the explicitly bound borrowed registration is unchanged from 0.3.5; NotificationService remains the domain state owner. No additional global state, discovery or service creation is introduced."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.6.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 strict notification review: Runtime/Core/NotificationManager.cs is unchanged from 1726583cebc3971bda2c28c792a4e85ee22c768b. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.7.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 default notification prefab review: Runtime/Core/NotificationManager.cs is unchanged from develop f64e4759f599247ecf55250700206a73a13d312a. Its existing scoped default service binding and lifecycle are preserved. New prefab settings use instance-owned state and subscriptions; no mutable-global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.7.1",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
       }
     ],
     "com.deucarian.theming": [
@@ -761,6 +860,42 @@
           "mutableGlobals": 1
         },
         "reason": "SIM-879 palette and scale-origin review: Runtime/Core/ThemeAudio.cs is unchanged from 52ff5b59911cd55bab5303b406739f776d4a6ec0. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 viewer quality review: existing owner is unchanged from 08a3fb4e34c848e10c87cb854475e050fb10c8ed; verified source diff is empty. Control color ownership review: unchanged from develop 70ab7d4. The borrowed audio registration and its disposal semantics are untouched; the new color helpers contain only immutable values and pure functions. Same allowance, no new global service. No metric allowance increase. New contrast/preparation/visibility objects own instance state."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 strict notification review: Editor/Core/DeucarianThemeSceneApplication.cs is unchanged from 0750764c6967339b6976ca2b15078d883a9fd574. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.13.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 strict notification review: Runtime/Core/ThemeAudio.cs is unchanged from 0750764c6967339b6976ca2b15078d883a9fd574. Existing ownership, lifetime and metric limits are preserved. New definition validation and runtime previews use instance-owned state; no global allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Theming.Editor",
+        "type": "Deucarian.Theming.Editor.DeucarianThemeSceneApplication",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
+      },
+      {
+        "assembly": "Deucarian.Theming",
+        "type": "Deucarian.Theming.ThemeAudio",
+        "version": "1.14.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 TestProj workflow review: retain the exact prior limits for this existing capability owner. Reload drafts and visual theme previews use instance-owned state. The definition import queue is now a dedicated instance collaborator; no metric allowance is increased."
       }
     ],
     "com.deucarian.xr-ui": [
