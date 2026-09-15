@@ -1,6 +1,6 @@
 # Deucarian AOT Safety Audit
 
-Authoritative runtime reflection and linker inventory for `Deucarian` at `develop`.
+Authoritative runtime reflection and linker inventory for `Deucarian` at `main`.
 
 This report inventories current package-owned player-code findings. Editor-only reflection is excluded. Audit findings are migration work; an `Enforce` package with an unresolved finding fails validation.
 

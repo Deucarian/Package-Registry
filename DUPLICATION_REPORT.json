@@ -61355,7 +61355,7 @@
     },
     "organization": "Deucarian",
     "parser": "tree-sitter-c-sharp",
-    "ref": "develop",
+    "ref": "main",
     "schemaVersion": 2
   },
   "parseFailures": [],
@@ -408272,13 +408272,13 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
+        "hasDevelop": false,
+        "hasMain": true,
         "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
         "origin": "https://github.com/Deucarian/Activity-Visualization.git",
-        "requestedRef": "develop",
+        "requestedRef": "main",
         "requestedRefCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf"
       },
       "canonicalId": "Deucarian/Activity-Visualization",
@@ -408326,7 +408326,7 @@
         "governanceConfigSha256": "6ef572df872cec08415c5051faac183d820b7caf72a912ae8fca2ca5b11297ad",
         "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
         "manifestSha256": "9d53762610520c31ac587882e4d67e1fdae15ba0a8aaf7acff59ccaf7e135005",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -408460,14 +408460,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "3589705624443ae9f76863a2ef552daabab7c670",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1",
         "origin": "https://github.com/Deucarian/API.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "3589705624443ae9f76863a2ef552daabab7c670"
+        "requestedRef": "main",
+        "requestedRefCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1"
       },
       "canonicalId": "Deucarian/API",
       "ciWorkflows": [
@@ -408536,9 +408536,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/API.git",
         "governanceConfigSha256": "7d76b4d085702111dd1a4c853895155ab576ab95ae86da9599ca52007b7a0e1c",
-        "headCommit": "3589705624443ae9f76863a2ef552daabab7c670",
+        "headCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1",
         "manifestSha256": "7296ffdbf1f4023904ffa065fdbc54d937284939345e0554765cc7982add38a0",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -408760,14 +408760,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "66723153a66cbf82fe5ce6352a2a5727da9c3c3d",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "96d7f8f1f431e7c81bb04df3a598439291e9a05a",
         "origin": "https://github.com/Deucarian/Attacks.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "66723153a66cbf82fe5ce6352a2a5727da9c3c3d"
+        "requestedRef": "main",
+        "requestedRefCommit": "96d7f8f1f431e7c81bb04df3a598439291e9a05a"
       },
       "canonicalId": "Deucarian/Attacks",
       "ciWorkflows": [
@@ -408821,9 +408821,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Attacks.git",
         "governanceConfigSha256": "8de132581ad5047246b3c4b5a79bacc757c288b271bce73c5f4f0c41ec355042",
-        "headCommit": "66723153a66cbf82fe5ce6352a2a5727da9c3c3d",
+        "headCommit": "96d7f8f1f431e7c81bb04df3a598439291e9a05a",
         "manifestSha256": "18242b43cc311505759f08692b430f58b0275f9945311a798edf5382ad5dda56",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.combat",
@@ -408974,14 +408974,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "9f5740bd74113f141995a73f22f89a088eb263c5",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "3345923ed6289ff1cc338f4c2bf6be5f121b9fa5",
         "origin": "https://github.com/Deucarian/Auto-Defense.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "9f5740bd74113f141995a73f22f89a088eb263c5"
+        "requestedRef": "main",
+        "requestedRefCommit": "3345923ed6289ff1cc338f4c2bf6be5f121b9fa5"
       },
       "canonicalId": "Deucarian/Auto-Defense",
       "ciWorkflows": [
@@ -409043,9 +409043,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Auto-Defense.git",
         "governanceConfigSha256": "98759481cf38313240e4169478bc4d34ac1acd108e8999026ecf2c2cbc2bd066",
-        "headCommit": "9f5740bd74113f141995a73f22f89a088eb263c5",
+        "headCommit": "3345923ed6289ff1cc338f4c2bf6be5f121b9fa5",
         "manifestSha256": "8d6cc6467e6fed4afc5b3bedfef51087a562202d3b3431bfbd8dab5aaa2b492a",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -409105,14 +409105,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "466a8b43c72a481aff6b88c86fec52b9013cdd77",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "7fc2b2baefea2be7fb52d9e646edc58df69c0970",
         "origin": "https://github.com/Deucarian/Auto-Defense-Suite.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "466a8b43c72a481aff6b88c86fec52b9013cdd77"
+        "requestedRef": "main",
+        "requestedRefCommit": "7fc2b2baefea2be7fb52d9e646edc58df69c0970"
       },
       "canonicalId": "Deucarian/Auto-Defense-Suite",
       "ciWorkflows": [
@@ -409179,9 +409179,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Auto-Defense-Suite.git",
         "governanceConfigSha256": "319433df855b3021ba96d5d2200d942913f683c0bacbc996946eb96703850d62",
-        "headCommit": "466a8b43c72a481aff6b88c86fec52b9013cdd77",
+        "headCommit": "7fc2b2baefea2be7fb52d9e646edc58df69c0970",
         "manifestSha256": "ca3dbcaee8531c6a188a3a013fea813068b4ade8c119f430e2e049f65357aea8",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -409252,14 +409252,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8"
+        "requestedRef": "main",
+        "requestedRefCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
@@ -409296,9 +409296,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "6d9030c9bf8acb923153c26d9ba84a8c4d78bdf8",
+        "headCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8",
         "manifestSha256": "3578b0cf49bb9219e87be56c929ec0fbdead85379ad944bdabae11b79511f7d0",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": null,
       "registryGroupId": null,
@@ -409353,14 +409353,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "8c0ca9a6985ba409ad67a28c9ae739cccaa745f8",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "8c0ca9a6985ba409ad67a28c9ae739cccaa745f8"
+        "requestedRef": "main",
+        "requestedRefCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd"
       },
       "canonicalId": "Deucarian/Build-Pipeline",
       "ciWorkflows": [
@@ -409410,9 +409410,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Build-Pipeline.git",
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
-        "headCommit": "8c0ca9a6985ba409ad67a28c9ae739cccaa745f8",
+        "headCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd",
         "manifestSha256": "f5037089bb725484d07ad64f04fcc968261bc9388f4097108f0e092d42238821",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -409555,14 +409555,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e86698f3464aa2cbf3684e4d68af1de3049dca62",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6",
         "origin": "https://github.com/Deucarian/Camera-Navigation.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e86698f3464aa2cbf3684e4d68af1de3049dca62"
+        "requestedRef": "main",
+        "requestedRefCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6"
       },
       "canonicalId": "Deucarian/Camera-Navigation",
       "ciWorkflows": [
@@ -409617,9 +409617,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Camera-Navigation.git",
         "governanceConfigSha256": "3d18340fae8c31f2ad86fef8051ee2546090219b760c920e1f5ec66fea1f87f2",
-        "headCommit": "e86698f3464aa2cbf3684e4d68af1de3049dca62",
+        "headCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6",
         "manifestSha256": "c835a0ea65fe0261ca05c6f1f58f0d67d0f97ef3a9367b132f547758ce7ebca2",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -409739,14 +409739,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "0b88fda066dd539041b24ee4f83873712d1ba514",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "31d6027b35fe0942e5cce1d2640e835febdc4ed4",
         "origin": "https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "0b88fda066dd539041b24ee4f83873712d1ba514"
+        "requestedRef": "main",
+        "requestedRefCommit": "31d6027b35fe0942e5cce1d2640e835febdc4ed4"
       },
       "canonicalId": "Deucarian/CameraNavigation-InputSystem-Integration",
       "ciWorkflows": [
@@ -409790,9 +409790,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git",
         "governanceConfigSha256": "f1993a4831045e677bc476444eedcb9eb476aa104f33cd0f1bafd08378834e95",
-        "headCommit": "0b88fda066dd539041b24ee4f83873712d1ba514",
+        "headCommit": "31d6027b35fe0942e5cce1d2640e835febdc4ed4",
         "manifestSha256": "0c9ed5373876383c9f0c75de23c7a83a2da401d447ab507f1eb7ec59dce75d66",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.camera-navigation"
@@ -409957,14 +409957,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "d3cd34dbe5602db790310e683e23621f6e5864ff",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "78db4289ca9dcb8bd289dfba07b5b9c2ce6d355b",
         "origin": "https://github.com/Deucarian/Combat.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "d3cd34dbe5602db790310e683e23621f6e5864ff"
+        "requestedRef": "main",
+        "requestedRefCommit": "78db4289ca9dcb8bd289dfba07b5b9c2ce6d355b"
       },
       "canonicalId": "Deucarian/Combat",
       "ciWorkflows": [
@@ -410014,9 +410014,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Combat.git",
         "governanceConfigSha256": "0281115f292d2d3c6aae280d8ec9b508c3492fb8f4d9d24ee69f927a77f6c31d",
-        "headCommit": "d3cd34dbe5602db790310e683e23621f6e5864ff",
+        "headCommit": "78db4289ca9dcb8bd289dfba07b5b9c2ce6d355b",
         "manifestSha256": "5a1f2a8b511776448d10f3405f3bed8d9a27e72ce88be054a0f7dc0f141a86a8",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -410159,14 +410159,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "d1d7ed74ff44e2c8a58fb10735072419b1793f2b",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a",
         "origin": "https://github.com/Deucarian/Command-Routing.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "d1d7ed74ff44e2c8a58fb10735072419b1793f2b"
+        "requestedRef": "main",
+        "requestedRefCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a"
       },
       "canonicalId": "Deucarian/Command-Routing",
       "ciWorkflows": [
@@ -410220,9 +410220,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing.git",
         "governanceConfigSha256": "b69bf447bf00168c692c9aee5f12221df814d11652319344ef616dabb4f16343",
-        "headCommit": "d1d7ed74ff44e2c8a58fb10735072419b1793f2b",
+        "headCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a",
         "manifestSha256": "4225c4863e21b4a43524d56ea63d5a6ed683feef105b67a99bf197ea2e2c3f15",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -410352,14 +410352,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "0075f47826f6126f6e8e5277f5552abaa73aabf4",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491",
         "origin": "https://github.com/Deucarian/Command-Routing-UDP-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "0075f47826f6126f6e8e5277f5552abaa73aabf4"
+        "requestedRef": "main",
+        "requestedRefCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491"
       },
       "canonicalId": "Deucarian/Command-Routing-UDP-Integration",
       "ciWorkflows": [
@@ -410412,9 +410412,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing-UDP-Integration.git",
         "governanceConfigSha256": "aacc132d20e937a4685b99a1b16d491d2586a02586e421d5811065341e17a6a8",
-        "headCommit": "0075f47826f6126f6e8e5277f5552abaa73aabf4",
+        "headCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491",
         "manifestSha256": "e1a4a019c2195104d6e4dc8440660adbcdebf95fd6758af917c27f9bd88f101c",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.command-routing",
@@ -410517,14 +410517,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "039a68122bc853585b8271eab6a8287be572a598",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "8a11760981f025173cca128a3d6faec36fae5681",
         "origin": "https://github.com/Deucarian/Command-Routing-WebGL-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "039a68122bc853585b8271eab6a8287be572a598"
+        "requestedRef": "main",
+        "requestedRefCommit": "8a11760981f025173cca128a3d6faec36fae5681"
       },
       "canonicalId": "Deucarian/Command-Routing-WebGL-Integration",
       "ciWorkflows": [
@@ -410577,9 +410577,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing-WebGL-Integration.git",
         "governanceConfigSha256": "9903cf8746eeb24271160977b722f8b1bc9892c2f0e31a01b2ecd04f3d003666",
-        "headCommit": "039a68122bc853585b8271eab6a8287be572a598",
+        "headCommit": "8a11760981f025173cca128a3d6faec36fae5681",
         "manifestSha256": "87a19740992456ee412d918ff2dfb0d0bf55bd3f2e288ea859399452df79c940",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.command-routing",
@@ -410695,14 +410695,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "8e5eb62b599a9854d4e8fbb3303780acc3535f35",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75",
         "origin": "https://github.com/Deucarian/Common.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "8e5eb62b599a9854d4e8fbb3303780acc3535f35"
+        "requestedRef": "main",
+        "requestedRefCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75"
       },
       "canonicalId": "Deucarian/Common",
       "ciWorkflows": [
@@ -410748,9 +410748,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Common.git",
         "governanceConfigSha256": "f219fd78c9d57d4bb76036bad180329cdf34fde9d1c1d2c0decc979660d12a82",
-        "headCommit": "8e5eb62b599a9854d4e8fbb3303780acc3535f35",
-        "manifestSha256": "c81e1cbe8492f16bacea8d51390c906238b1a13955dda1bd143fa71a42a969b3",
-        "requestedRef": "develop"
+        "headCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75",
+        "manifestSha256": "432dc09e55b093241ffc018f15bf6b8beb8272ed538d191398c3c2ec7eac6df9",
+        "requestedRef": "main"
       },
       "registryDependencies": [],
       "registryGroupId": "infrastructure",
@@ -410832,14 +410832,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "d48073b78ee23bfe60d2d9db27be8956fbc2a7f1",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428",
         "origin": "https://github.com/Deucarian/Core-State.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "d48073b78ee23bfe60d2d9db27be8956fbc2a7f1"
+        "requestedRef": "main",
+        "requestedRefCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428"
       },
       "canonicalId": "Deucarian/Core-State",
       "ciWorkflows": [
@@ -410880,9 +410880,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Core-State.git",
         "governanceConfigSha256": "7570459ec3622da12292102f170bd5b3992a619bf2fbf7060e6047ff413e739a",
-        "headCommit": "d48073b78ee23bfe60d2d9db27be8956fbc2a7f1",
-        "manifestSha256": "77fdf88e0ecf062685090b0c2e7d1def9afb51f722624de9c62546e63b226ba5",
-        "requestedRef": "develop"
+        "headCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428",
+        "manifestSha256": "2706ae84d7336a529e74f93b4a7a3e5432daf9ac3d9f982b15120138c5668e48",
+        "requestedRef": "main"
       },
       "registryDependencies": [],
       "registryGroupId": "state-data",
@@ -411008,14 +411008,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "591d63b85eb285baa851cd4b40f9a7b417e575ed",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "2e590ddc807d045dfb533fc9fb7cc62f955b3c57",
         "origin": "https://github.com/Deucarian/Defense-Games.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "591d63b85eb285baa851cd4b40f9a7b417e575ed"
+        "requestedRef": "main",
+        "requestedRefCommit": "2e590ddc807d045dfb533fc9fb7cc62f955b3c57"
       },
       "canonicalId": "Deucarian/Defense-Games",
       "ciWorkflows": [
@@ -411064,9 +411064,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Defense-Games.git",
         "governanceConfigSha256": "19c933f8926a507925ec5c1f16cb4b9c0da3a961cae6443f6be179431ab2bc23",
-        "headCommit": "591d63b85eb285baa851cd4b40f9a7b417e575ed",
+        "headCommit": "2e590ddc807d045dfb533fc9fb7cc62f955b3c57",
         "manifestSha256": "892f6f0df59edb3e83106f3256ce301ea2f7523ef30422080027f84258156730",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -411163,14 +411163,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "709dafc8736add7024c88b6f5745eeaa2ddd512e",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502",
         "origin": "https://github.com/Deucarian/Diagnostics.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "709dafc8736add7024c88b6f5745eeaa2ddd512e"
+        "requestedRef": "main",
+        "requestedRefCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502"
       },
       "canonicalId": "Deucarian/Diagnostics",
       "ciWorkflows": [
@@ -411218,9 +411218,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Diagnostics.git",
         "governanceConfigSha256": "6f2293f199d36bdfdab28fb9ccd1a3709a6074058f1d0dab6a4ab05e8ca4831e",
-        "headCommit": "709dafc8736add7024c88b6f5745eeaa2ddd512e",
+        "headCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502",
         "manifestSha256": "94336e1158933614d352f0e3a20923dd57d1e2543a42f678ada731bd9a734538",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -411320,14 +411320,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "86359d0f465dbc00a6b6b82abdc2b672f494d19c",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "0b5589c986114a5c96b7c5bdf4f6a220dd33bf5f",
         "origin": "https://github.com/Deucarian/Editor.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "86359d0f465dbc00a6b6b82abdc2b672f494d19c"
+        "requestedRef": "main",
+        "requestedRefCommit": "0b5589c986114a5c96b7c5bdf4f6a220dd33bf5f"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
@@ -411373,9 +411373,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "b399eb0195d6b893b65f88f03d67a20dee11c15c4939ee881c021d0a2bf3c3ba",
-        "headCommit": "86359d0f465dbc00a6b6b82abdc2b672f494d19c",
+        "headCommit": "0b5589c986114a5c96b7c5bdf4f6a220dd33bf5f",
         "manifestSha256": "9a8ea5a24e8f6651d3e8f8a1d6cc064465d2df804a8b657c2508ff49b2f8425c",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [],
       "registryGroupId": "infrastructure",
@@ -411552,14 +411552,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "f87f13cf0d75eeb6bea42c2207d416b248f80a79",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "6560530aba8f1d549642267ddf9e799651d0cbc1",
         "origin": "https://github.com/Deucarian/Encounters.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "f87f13cf0d75eeb6bea42c2207d416b248f80a79"
+        "requestedRef": "main",
+        "requestedRefCommit": "6560530aba8f1d549642267ddf9e799651d0cbc1"
       },
       "canonicalId": "Deucarian/Encounters",
       "ciWorkflows": [
@@ -411611,9 +411611,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Encounters.git",
         "governanceConfigSha256": "25b57b1e60c1ffb0bbe558da31a6883a3ac0a99ea4179ba5c912b8d76def7163",
-        "headCommit": "f87f13cf0d75eeb6bea42c2207d416b248f80a79",
+        "headCommit": "6560530aba8f1d549642267ddf9e799651d0cbc1",
         "manifestSha256": "b5afe22f1f839eeed337ef52d8b1c2de88bf0484b913dfcbd18117c8a625a3b9",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -411706,14 +411706,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "cf4d14249bc7d5058385d60026ec908c580b17fd",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "1690b19280a6a51ac80dfc5b401e97cb1442cb1f",
         "origin": "https://github.com/Deucarian/Game-Content-Authoring.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "cf4d14249bc7d5058385d60026ec908c580b17fd"
+        "requestedRef": "main",
+        "requestedRefCommit": "1690b19280a6a51ac80dfc5b401e97cb1442cb1f"
       },
       "canonicalId": "Deucarian/Game-Content-Authoring",
       "ciWorkflows": [
@@ -411762,9 +411762,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Game-Content-Authoring.git",
         "governanceConfigSha256": "7ad8a49e349478219de1a59f3c85f8469ca712de0079a9347afe69a65c2cae80",
-        "headCommit": "cf4d14249bc7d5058385d60026ec908c580b17fd",
+        "headCommit": "1690b19280a6a51ac80dfc5b401e97cb1442cb1f",
         "manifestSha256": "39d1065437a7458bbc4d4666d6f5a93e87852c47e30b588fe569f9fb6b306732",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -411894,14 +411894,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "6b41bd6fd38a54cff9084c408b481be631f48272",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "f2e8040fb18a6745e634835cef1f4bc777f0b799",
         "origin": "https://github.com/Deucarian/Gameplay-Foundation.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "6b41bd6fd38a54cff9084c408b481be631f48272"
+        "requestedRef": "main",
+        "requestedRefCommit": "f2e8040fb18a6745e634835cef1f4bc777f0b799"
       },
       "canonicalId": "Deucarian/Gameplay-Foundation",
       "ciWorkflows": [
@@ -411946,9 +411946,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Gameplay-Foundation.git",
         "governanceConfigSha256": "a8bec3a2ffa07d2261c90b402f04a16499e2801fcc9ad64a6e3a8fa9b924c193",
-        "headCommit": "6b41bd6fd38a54cff9084c408b481be631f48272",
-        "manifestSha256": "f9ba487a860d482d121891a889c3d52675bb0023c903c19deaf6a7c2cb189e7d",
-        "requestedRef": "develop"
+        "headCommit": "f2e8040fb18a6745e634835cef1f4bc777f0b799",
+        "manifestSha256": "f361b999f4c6cea88459fc088980230217ccdd22ec3031af09cf5c0e005fbcdb",
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -412040,14 +412040,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e662c5f373a8d1b11eff7083ed604bb85bb3e013",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "ae02525e2351dbeac9e747d505345fadb0733fa1",
         "origin": "https://github.com/Deucarian/Idle-Progression.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e662c5f373a8d1b11eff7083ed604bb85bb3e013"
+        "requestedRef": "main",
+        "requestedRefCommit": "ae02525e2351dbeac9e747d505345fadb0733fa1"
       },
       "canonicalId": "Deucarian/Idle-Progression",
       "ciWorkflows": [
@@ -412089,9 +412089,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Idle-Progression.git",
         "governanceConfigSha256": "1ae364ca035cf4ecd12c8331fd450e2db5ee3cbc50b3f4d239082b5b847e67ef",
-        "headCommit": "e662c5f373a8d1b11eff7083ed604bb85bb3e013",
+        "headCommit": "ae02525e2351dbeac9e747d505345fadb0733fa1",
         "manifestSha256": "cf23b77a29d6917b648f1ca0496d528e3a7ad969c275be50d805d987f13bb261",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.gameplay-foundation",
@@ -412199,14 +412199,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "217ce8d1fcdc9391c23fd5644020bf8d59eff2d9",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a",
         "origin": "https://github.com/Deucarian/Logging.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "217ce8d1fcdc9391c23fd5644020bf8d59eff2d9"
+        "requestedRef": "main",
+        "requestedRefCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a"
       },
       "canonicalId": "Deucarian/Logging",
       "ciWorkflows": [
@@ -412261,9 +412261,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Logging.git",
         "governanceConfigSha256": "6f38aa4aefe0bd0923a8e2333642e8e5cd5a630341cc688ad1933157499f8c0c",
-        "headCommit": "217ce8d1fcdc9391c23fd5644020bf8d59eff2d9",
+        "headCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a",
         "manifestSha256": "393e32ecc90e1d044e2d585029ec7e9600b208d27b93172f57cce9d624c2dcfc",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -412421,14 +412421,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f",
         "origin": "https://github.com/Deucarian/Media.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77"
+        "requestedRef": "main",
+        "requestedRefCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f"
       },
       "canonicalId": "Deucarian/Media",
       "ciWorkflows": [
@@ -412488,9 +412488,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media.git",
         "governanceConfigSha256": "72b1650c542b1bc3d09667c266bedd22e2a2484bbf160f21f9a669ea8f733fd2",
-        "headCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77",
+        "headCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f",
         "manifestSha256": "61e7aad49d96def5c8f7805942d5c9276172fa4b0f762790b7fafd8e1758ce6e",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -412597,14 +412597,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c",
         "origin": "https://github.com/Deucarian/Media-API-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c"
+        "requestedRef": "main",
+        "requestedRefCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c"
       },
       "canonicalId": "Deucarian/Media-API-Integration",
       "ciWorkflows": [
@@ -412647,9 +412647,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media-API-Integration.git",
         "governanceConfigSha256": "d3e7ff03f6e1e178fabf232e1d2eb853751ee1742d20e53c25454cecf31a7bd9",
-        "headCommit": "ec1e6c6dfbe0c45778546aaef5c3a5959b981f2c",
+        "headCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c",
         "manifestSha256": "8504eeaa7fd16b444dc6251a97052203d663d0c03ecd97306dbd4e72a3fde68e",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -412809,14 +412809,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "c160815f6b2b137a758d5fe4113cfe1991d64427",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "674668b6061d5ea446d18233f9df020132f6571a",
         "origin": "https://github.com/Deucarian/Monetization.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "c160815f6b2b137a758d5fe4113cfe1991d64427"
+        "requestedRef": "main",
+        "requestedRefCommit": "674668b6061d5ea446d18233f9df020132f6571a"
       },
       "canonicalId": "Deucarian/Monetization",
       "ciWorkflows": [
@@ -412865,9 +412865,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Monetization.git",
         "governanceConfigSha256": "9c3d860c5ed457a3a9c65c9fc14102cac7ee6c42d4def08c7638fcb398dd4fc9",
-        "headCommit": "c160815f6b2b137a758d5fe4113cfe1991d64427",
+        "headCommit": "674668b6061d5ea446d18233f9df020132f6571a",
         "manifestSha256": "7a9cc54f6e436e8fac59731db9a0449ddc86fa6426438bee3db0f4b9efe4cbe3",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -413098,14 +413098,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "1726583cebc3971bda2c28c792a4e85ee22c768b",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "e5bf7019487efaa4e3a8cdc2a68be19f92b54485",
         "origin": "https://github.com/Deucarian/Notifications.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "1726583cebc3971bda2c28c792a4e85ee22c768b"
+        "requestedRef": "main",
+        "requestedRefCommit": "e5bf7019487efaa4e3a8cdc2a68be19f92b54485"
       },
       "canonicalId": "Deucarian/Notifications",
       "ciWorkflows": [
@@ -413173,9 +413173,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Notifications.git",
         "governanceConfigSha256": "f9f898f178580caa628df2b9ac78874806428b4c3da30cb52590b9444ca3ed04",
-        "headCommit": "1726583cebc3971bda2c28c792a4e85ee22c768b",
+        "headCommit": "e5bf7019487efaa4e3a8cdc2a68be19f92b54485",
         "manifestSha256": "2ad148f79bf121380cfaf7d413273c015f33db794fb5bbca823e63c729dd00db",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -413495,14 +413495,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5627f8d02153e1a40177bff6813a74489f385392",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2",
         "origin": "https://github.com/Deucarian/Object-Loading.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5627f8d02153e1a40177bff6813a74489f385392"
+        "requestedRef": "main",
+        "requestedRefCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2"
       },
       "canonicalId": "Deucarian/Object-Loading",
       "ciWorkflows": [
@@ -413561,9 +413561,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Object-Loading.git",
         "governanceConfigSha256": "f71c4f2e8aeb8133cb61b8bfdcf5d590ac6627884db88e4b332d8dcad3c8de69",
-        "headCommit": "5627f8d02153e1a40177bff6813a74489f385392",
-        "manifestSha256": "98f94c10442fe6c6efd2b1d5a24b1ee0049c35302ee45cd0dd9db2b65436a83e",
-        "requestedRef": "develop"
+        "headCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2",
+        "manifestSha256": "8bba5aae0d127da91ac8f58b3402e39f99311796354363829608923785206783",
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -413681,14 +413681,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "d12e458c60d621fa0f4a7e7454aeb871fe06a967",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6",
         "origin": "https://github.com/Deucarian/Object-Selection.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "d12e458c60d621fa0f4a7e7454aeb871fe06a967"
+        "requestedRef": "main",
+        "requestedRefCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6"
       },
       "canonicalId": "Deucarian/Object-Selection",
       "ciWorkflows": [
@@ -413737,9 +413737,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Object-Selection.git",
         "governanceConfigSha256": "8ac58285a47cae47623d9a59da7a853b19f41d9bb84bbb707aa36565876bcde4",
-        "headCommit": "d12e458c60d621fa0f4a7e7454aeb871fe06a967",
+        "headCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6",
         "manifestSha256": "7aa662fac00d13958b87937c8bed935b647c013803d5b7f2c66674e2deb1f08f",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.logging"
@@ -413844,14 +413844,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5a05fc8bed67fb1a08d870ec0f8eab8c9fea38a5",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c",
         "origin": "https://github.com/Deucarian/ObjectLoading-API-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5a05fc8bed67fb1a08d870ec0f8eab8c9fea38a5"
+        "requestedRef": "main",
+        "requestedRefCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c"
       },
       "canonicalId": "Deucarian/ObjectLoading-API-Integration",
       "ciWorkflows": [
@@ -413897,9 +413897,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/ObjectLoading-API-Integration.git",
         "governanceConfigSha256": "acdc50280650970beece179f4c31cc037a7351e418b513e0cb38ba1ef64ffce1",
-        "headCommit": "5a05fc8bed67fb1a08d870ec0f8eab8c9fea38a5",
-        "manifestSha256": "4846d5587bcb8de51e146aaccebeb670588f503d20db4097580b13ae6f48154d",
-        "requestedRef": "develop"
+        "headCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c",
+        "manifestSha256": "042fb34b9fec49c01a229fc9083ed084cbe42f26fd3bad7240279609c9fb4d2c",
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -413981,14 +413981,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e62f4f8a6c546a0189898b603f84bcad287eab19",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18",
         "origin": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e62f4f8a6c546a0189898b603f84bcad287eab19"
+        "requestedRef": "main",
+        "requestedRefCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18"
       },
       "canonicalId": "Deucarian/ObjectSelection-CoreState-Integration",
       "ciWorkflows": [
@@ -414036,9 +414036,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git",
         "governanceConfigSha256": "521a7f68d86f56d1dc942e40724c141f2ec5183716d00749d6f7b0588f804a2d",
-        "headCommit": "e62f4f8a6c546a0189898b603f84bcad287eab19",
+        "headCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18",
         "manifestSha256": "a190188640d1374d2667f817d71c504a239125f8c83021ef987f4a18680bdae7",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.object-selection",
@@ -414115,14 +414115,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "73d172199889fda2edc78479e683e724f14cb896",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561"
+        "requestedRef": "main",
+        "requestedRefCommit": "73d172199889fda2edc78479e683e724f14cb896"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
@@ -414167,9 +414167,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "9f29ce41972b52daf2ee7ebc6c05bd5b31ecb561",
+        "headCommit": "73d172199889fda2edc78479e683e724f14cb896",
         "manifestSha256": "b796d0f5dd3b2423de942cdb9a5ce6fc3ca8c3e74d08284db2226fbcaffd91c4",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -414189,13 +414189,13 @@
       "asmdefs": [],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
+        "hasDevelop": false,
+        "hasMain": true,
         "headCommit": "",
         "origin": "https://github.com/Deucarian/Package-Registry.git",
-        "requestedRef": "develop",
+        "requestedRef": "main",
         "requestedRefCommit": ""
       },
       "canonicalId": "Deucarian/Package-Registry",
@@ -414222,9 +414222,7 @@
           "DEPENDENCY_USAGE_AUDIT.json"
         ],
         "repositoryName": "Package-Registry",
-        "repositoryType": "package-registry",
-        "sampleAssemblies": [],
-        "testAssemblies": []
+        "repositoryType": "package-registry"
       },
       "name": "Package-Registry",
       "packageId": null,
@@ -414232,10 +414230,10 @@
       "provenance": {
         "auditInputSha256": "a53ea337b7b93059aa80b3c7b9a4dc214af32ff9580125267f2722e195b1fd01",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
-        "governanceConfigSha256": "e35beb71bcbe068ddd4d98bfee9285f1522124c4b313db044dbbb9380aa937e0",
+        "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
         "headCommit": "",
         "manifestSha256": "",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": null,
       "registryGroupId": null,
@@ -414368,14 +414366,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "2cdbb8488b8f4fb9e0bf8d6cf72fe0149294371a",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb",
         "origin": "https://github.com/Deucarian/Persistence.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "2cdbb8488b8f4fb9e0bf8d6cf72fe0149294371a"
+        "requestedRef": "main",
+        "requestedRefCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb"
       },
       "canonicalId": "Deucarian/Persistence",
       "ciWorkflows": [
@@ -414422,9 +414420,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Persistence.git",
         "governanceConfigSha256": "c8519cb40eb1957bdaee7fd027d6eb09d4b93a479e41a8a523123cfbd1797986",
-        "headCommit": "2cdbb8488b8f4fb9e0bf8d6cf72fe0149294371a",
+        "headCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb",
         "manifestSha256": "edf4226222519c9a46782b09d802386f98bb333c3c0f9ae96db524141fb25eaf",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -414565,14 +414563,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "c893783528c591b7b03780d7f431bcc43c40a494",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225",
         "origin": "https://github.com/Deucarian/Pointer-Capture.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "c893783528c591b7b03780d7f431bcc43c40a494"
+        "requestedRef": "main",
+        "requestedRefCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225"
       },
       "canonicalId": "Deucarian/Pointer-Capture",
       "ciWorkflows": [
@@ -414623,9 +414621,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Pointer-Capture.git",
         "governanceConfigSha256": "e40cc46f3ad440346eec45e5e714fb2e25c168a8e4e4afe27937daa55da02c26",
-        "headCommit": "c893783528c591b7b03780d7f431bcc43c40a494",
+        "headCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225",
         "manifestSha256": "474adefa04573ace5a5e0f480cfe5f8874b267568f83c592c0ee95efd7ab396d",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -414783,14 +414781,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "827f8c974c1e00508e7aed913477c95d9f7a52e2",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "2176c481cd96480738324e1c7f46cb2b78e15356",
         "origin": "https://github.com/Deucarian/Progression.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "827f8c974c1e00508e7aed913477c95d9f7a52e2"
+        "requestedRef": "main",
+        "requestedRefCommit": "2176c481cd96480738324e1c7f46cb2b78e15356"
       },
       "canonicalId": "Deucarian/Progression",
       "ciWorkflows": [
@@ -414838,9 +414836,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Progression.git",
         "governanceConfigSha256": "ad88e599a501cdd0743c76ef5d6c0e096a41cb7126ae0afd287b694b69f8f6a7",
-        "headCommit": "827f8c974c1e00508e7aed913477c95d9f7a52e2",
+        "headCommit": "2176c481cd96480738324e1c7f46cb2b78e15356",
         "manifestSha256": "8fadfb85d1d3a159724c4cc5a749716606d9ab60454b707f4183774a584b7b75",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -415019,14 +415017,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "7af223ce1257e446314c622b0e22d218793e25b7",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "0fdad6d5acb7a1171cb051a9773cbf56a40b618a",
         "origin": "https://github.com/Deucarian/Projectiles.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "7af223ce1257e446314c622b0e22d218793e25b7"
+        "requestedRef": "main",
+        "requestedRefCommit": "0fdad6d5acb7a1171cb051a9773cbf56a40b618a"
       },
       "canonicalId": "Deucarian/Projectiles",
       "ciWorkflows": [
@@ -415080,9 +415078,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Projectiles.git",
         "governanceConfigSha256": "2be4509e07fb5a0efdc245894e26ced844c27f6d111619812d5ad3aa7bbab234",
-        "headCommit": "7af223ce1257e446314c622b0e22d218793e25b7",
+        "headCommit": "0fdad6d5acb7a1171cb051a9773cbf56a40b618a",
         "manifestSha256": "5151e70dac11a4ad47c3e301d1450f939ec6e66f4e8badcc4aaea6624a67ace0",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -415310,14 +415308,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e0adcbc7b444075297e71b0040fdfce24c0be374",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "067962fd9a5b7d8860b56b84a78ed7d6e0416607",
         "origin": "https://github.com/Deucarian/Run-Upgrades.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e0adcbc7b444075297e71b0040fdfce24c0be374"
+        "requestedRef": "main",
+        "requestedRefCommit": "067962fd9a5b7d8860b56b84a78ed7d6e0416607"
       },
       "canonicalId": "Deucarian/Run-Upgrades",
       "ciWorkflows": [
@@ -415375,9 +415373,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Run-Upgrades.git",
         "governanceConfigSha256": "efd96611df066889808ace140f5bff36ddc5ce3cbb733f5bd8f4554b0084479f",
-        "headCommit": "e0adcbc7b444075297e71b0040fdfce24c0be374",
+        "headCommit": "067962fd9a5b7d8860b56b84a78ed7d6e0416607",
         "manifestSha256": "3cc54dd7ac11e74657a5b82d19494e60857a8289a0515cf54dbf91aa7938bfc4",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -415451,14 +415449,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "47635bdb8f538a603ea94cf4961ac24b6fe7fccf",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "fa13d201233c04f855fdbebe975df34af1e7feee",
         "origin": "https://github.com/Deucarian/Selection-Suite.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "47635bdb8f538a603ea94cf4961ac24b6fe7fccf"
+        "requestedRef": "main",
+        "requestedRefCommit": "fa13d201233c04f855fdbebe975df34af1e7feee"
       },
       "canonicalId": "Deucarian/Selection-Suite",
       "ciWorkflows": [
@@ -415504,9 +415502,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Selection-Suite.git",
         "governanceConfigSha256": "f95d4f807c892bc283043a0d9e50e8d28b99e4c6bf20b6515354f053551e33ce",
-        "headCommit": "47635bdb8f538a603ea94cf4961ac24b6fe7fccf",
+        "headCommit": "fa13d201233c04f855fdbebe975df34af1e7feee",
         "manifestSha256": "4c687865a07032fa932ec3c8d8059962a44eab33872ac55960ddaef33fef7bc8",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.core-state",
@@ -415603,14 +415601,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5577668ae4045404e08ce286425a68d959edf8f1",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "a985a30a82759842f96790efc8f19d37626426a1",
         "origin": "https://github.com/Deucarian/Session.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5577668ae4045404e08ce286425a68d959edf8f1"
+        "requestedRef": "main",
+        "requestedRefCommit": "a985a30a82759842f96790efc8f19d37626426a1"
       },
       "canonicalId": "Deucarian/Session",
       "ciWorkflows": [
@@ -415657,9 +415655,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Session.git",
         "governanceConfigSha256": "3bea4902ebe5f938d359b364bc49a863158c1bcc9f6936f189709c5c18ec2c16",
-        "headCommit": "5577668ae4045404e08ce286425a68d959edf8f1",
+        "headCommit": "a985a30a82759842f96790efc8f19d37626426a1",
         "manifestSha256": "0307d3e4738cbc3478e6b5dc595898c01c895289a445a88b59a89ab772596623",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.logging"
@@ -415764,14 +415762,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "d8f32a1f0527a4bd7c0e946f4a94f7b66ca8dae7",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89",
         "origin": "https://github.com/Deucarian/Session-API-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "d8f32a1f0527a4bd7c0e946f4a94f7b66ca8dae7"
+        "requestedRef": "main",
+        "requestedRefCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89"
       },
       "canonicalId": "Deucarian/Session-API-Integration",
       "ciWorkflows": [
@@ -415817,9 +415815,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Session-API-Integration.git",
         "governanceConfigSha256": "b712b9399cdc14f48a67b05add403f625b8e58e52c495eb086a3ee0e02b64ed6",
-        "headCommit": "d8f32a1f0527a4bd7c0e946f4a94f7b66ca8dae7",
+        "headCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89",
         "manifestSha256": "8c4e23652a54cf92531c6f6e2c93f1060901dd45a19a040dfc1b51ea4809a3dd",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.session",
@@ -415943,14 +415941,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5061358b9d981534158c033c3667ee6041bcbd6d",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4",
         "origin": "https://github.com/Deucarian/Simultria-API.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5061358b9d981534158c033c3667ee6041bcbd6d"
+        "requestedRef": "main",
+        "requestedRefCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4"
       },
       "canonicalId": "Deucarian/Simultria-API",
       "ciWorkflows": [
@@ -416007,9 +416005,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-API.git",
         "governanceConfigSha256": "cbd782faa0549b81e15777baeb2179626957330b18ca5afa2816989c0fe514e3",
-        "headCommit": "5061358b9d981534158c033c3667ee6041bcbd6d",
+        "headCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4",
         "manifestSha256": "72875e28ff2a7c468dd3eb7416b32831ccef95a56870a9c38324b05b764aea30",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -416122,14 +416120,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e72a964a4b26dcb760ab4e139f3e03c3bb48e626",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "09faf9d26cb15f46563f16811867bc3f308347e9",
         "origin": "https://github.com/Deucarian/Simultria-Viewer-Connection.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e72a964a4b26dcb760ab4e139f3e03c3bb48e626"
+        "requestedRef": "main",
+        "requestedRefCommit": "09faf9d26cb15f46563f16811867bc3f308347e9"
       },
       "canonicalId": "Deucarian/Simultria-Viewer-Connection",
       "ciWorkflows": [
@@ -416187,9 +416185,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-Viewer-Connection.git",
         "governanceConfigSha256": "c7db92f454369ac0b2f195a0ef61745a45960918428487307395e2970923096a",
-        "headCommit": "e72a964a4b26dcb760ab4e139f3e03c3bb48e626",
+        "headCommit": "09faf9d26cb15f46563f16811867bc3f308347e9",
         "manifestSha256": "a7d7de463ef7b284002018e1e73549454ea1a4770c6b53c0bafa0e9779e71225",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -416344,14 +416342,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "205d9c659064a9cccff678127ad5a80e97d95f27",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "d9292f4ed561dd1b822d64e107556e32ee276b3a",
         "origin": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "205d9c659064a9cccff678127ad5a80e97d95f27"
+        "requestedRef": "main",
+        "requestedRefCommit": "d9292f4ed561dd1b822d64e107556e32ee276b3a"
       },
       "canonicalId": "Deucarian/Template-Game-Idle-Auto-Defense",
       "ciWorkflows": [
@@ -416438,9 +416436,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git",
         "governanceConfigSha256": "0cc538f1cb465ddd2874b0f989f98a9b80f6563fc6b6a7c062a9e1bcb30cc37b",
-        "headCommit": "205d9c659064a9cccff678127ad5a80e97d95f27",
+        "headCommit": "d9292f4ed561dd1b822d64e107556e32ee276b3a",
         "manifestSha256": "c003c6d2cc536c00cfbbb6a05dd133e70f7c28dec5d8bd439de6f54f5a19f489",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -416576,14 +416574,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "0e2d20339082535dcdbf00b8927ab42a5dcf5866",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "bac8433db364e4a3b5bda0162971fb69738064c3",
         "origin": "https://github.com/Deucarian/Template-Game-Movement-FPS.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "0e2d20339082535dcdbf00b8927ab42a5dcf5866"
+        "requestedRef": "main",
+        "requestedRefCommit": "bac8433db364e4a3b5bda0162971fb69738064c3"
       },
       "canonicalId": "Deucarian/Template-Game-Movement-FPS",
       "ciWorkflows": [
@@ -416645,9 +416643,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Game-Movement-FPS.git",
         "governanceConfigSha256": "8870dd3772d2f3297e909103c69d6a8073ae5e608d0bb57bf2ac2066cdc0971f",
-        "headCommit": "0e2d20339082535dcdbf00b8927ab42a5dcf5866",
+        "headCommit": "bac8433db364e4a3b5bda0162971fb69738064c3",
         "manifestSha256": "07f61001c69324d27f72d9ded95a8fd1dd1d1100bbc0362f72ea54612260d81b",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -416806,14 +416804,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "0f81805c6b03fcb99dab94a5bf6c5820091a032b",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "adacd9f81724297832ea66f1b8a4bd7acc63ed24",
         "origin": "https://github.com/Deucarian/Template-Game-Survivors.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "0f81805c6b03fcb99dab94a5bf6c5820091a032b"
+        "requestedRef": "main",
+        "requestedRefCommit": "adacd9f81724297832ea66f1b8a4bd7acc63ed24"
       },
       "canonicalId": "Deucarian/Template-Game-Survivors",
       "ciWorkflows": [
@@ -416887,9 +416885,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Game-Survivors.git",
         "governanceConfigSha256": "6a826f7aaeea645abbb67be28ccbd4df9264e5f3fb445344e418a4fc06563186",
-        "headCommit": "0f81805c6b03fcb99dab94a5bf6c5820091a032b",
+        "headCommit": "adacd9f81724297832ea66f1b8a4bd7acc63ed24",
         "manifestSha256": "719b714283dfd681085e75a0ca53afa32fd83af840b1c1d44a43b30dfce35925",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -417123,14 +417121,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "cb1f91b5b89d85e19ccb059acd83f0013ae59781",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567",
         "origin": "https://github.com/Deucarian/Template-Viewer.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "cb1f91b5b89d85e19ccb059acd83f0013ae59781"
+        "requestedRef": "main",
+        "requestedRefCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567"
       },
       "canonicalId": "Deucarian/Template-Viewer",
       "ciWorkflows": [
@@ -417206,9 +417204,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer.git",
         "governanceConfigSha256": "4411efaee96758c7a2cd43b625b7c8220ed626b730f532302289ba801fc0d251",
-        "headCommit": "cb1f91b5b89d85e19ccb059acd83f0013ae59781",
+        "headCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567",
         "manifestSha256": "380461c3172c2449e3df955675a3b218fca6cb1f1d6f9ccb435da9314533a13d",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -417470,14 +417468,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5ea937a59dbf625e48b4444a051fb13cbf611202",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5ea937a59dbf625e48b4444a051fb13cbf611202"
+        "requestedRef": "main",
+        "requestedRefCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
@@ -417545,9 +417543,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "governanceConfigSha256": "038e89c056bf51d846e9625d703afe9a6324ebc8adcdd45205e6ff8cc94232ca",
-        "headCommit": "5ea937a59dbf625e48b4444a051fb13cbf611202",
+        "headCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33",
         "manifestSha256": "f099fbf70114d890422193dc2e3401bb3cce3a8854ae03a63d19668d1f8843b7",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.build-pipeline",
@@ -417622,14 +417620,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "9fc4e6b64ac2dc62c5bf01e7aaba227377eb123e",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025",
         "origin": "https://github.com/Deucarian/Test-Automation.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "9fc4e6b64ac2dc62c5bf01e7aaba227377eb123e"
+        "requestedRef": "main",
+        "requestedRefCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025"
       },
       "canonicalId": "Deucarian/Test-Automation",
       "ciWorkflows": [
@@ -417666,9 +417664,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Test-Automation.git",
         "governanceConfigSha256": "47aeb55cb625d12f8017e28815e714f2a9454dbfcfc1a762ede01c89d4e86d3b",
-        "headCommit": "9fc4e6b64ac2dc62c5bf01e7aaba227377eb123e",
+        "headCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025",
         "manifestSha256": "b8ed3eaa314531628941bc9d6cd82b535c40f43ac614bdc1caa41fe15a2ac0ce",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor"
@@ -417847,14 +417845,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "0750764c6967339b6976ca2b15078d883a9fd574",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "df0f501d9e53bf1c0c9322466d6738bf41bdb9ea",
         "origin": "https://github.com/Deucarian/Theming.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "0750764c6967339b6976ca2b15078d883a9fd574"
+        "requestedRef": "main",
+        "requestedRefCommit": "df0f501d9e53bf1c0c9322466d6738bf41bdb9ea"
       },
       "canonicalId": "Deucarian/Theming",
       "ciWorkflows": [
@@ -417916,9 +417914,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Theming.git",
         "governanceConfigSha256": "05ce89a819c1924c825aff6e4f908711da12b9c6978f9f8053fe231c6c082ae2",
-        "headCommit": "0750764c6967339b6976ca2b15078d883a9fd574",
+        "headCommit": "df0f501d9e53bf1c0c9322466d6738bf41bdb9ea",
         "manifestSha256": "0718ffe1bae20ba07d175c2e43c2b6c5b720e23a4db072aadb5768c4b9245f5e",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.editor",
@@ -418077,14 +418075,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "c05ac70af3d36d0db60cefb033b5709a1617f57a",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05",
         "origin": "https://github.com/Deucarian/Tweens.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "c05ac70af3d36d0db60cefb033b5709a1617f57a"
+        "requestedRef": "main",
+        "requestedRefCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05"
       },
       "canonicalId": "Deucarian/Tweens",
       "ciWorkflows": [
@@ -418142,9 +418140,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Tweens.git",
         "governanceConfigSha256": "4eae2eca6f3bc98ec054569a7af315d05ceb10a4b19ca374590ef26e0a637b94",
-        "headCommit": "c05ac70af3d36d0db60cefb033b5709a1617f57a",
+        "headCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05",
         "manifestSha256": "5516eb8a01b453f896301848f2d2839fe63922b61602e112ff6701352972db3f",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -418247,14 +418245,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c",
         "origin": "https://github.com/Deucarian/UI.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0"
+        "requestedRef": "main",
+        "requestedRefCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c"
       },
       "canonicalId": "Deucarian/UI",
       "ciWorkflows": [
@@ -418307,9 +418305,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI.git",
         "governanceConfigSha256": "b0fae6faf658f7492932a0c11af6bd5820fc575b3c451fa1ccdedf10aade7521",
-        "headCommit": "5df2128f3a093a0aa74ec7ea5b457c374a2ac6c0",
+        "headCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c",
         "manifestSha256": "fb4949ecd2836e47390287590027c1c81e1e9246f620271a92158f3c6777c53a",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -418404,14 +418402,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "ceb2c4987e30c440a960ef1dc6badc8efa453a42",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be",
         "origin": "https://github.com/Deucarian/UI-Binding.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "ceb2c4987e30c440a960ef1dc6badc8efa453a42"
+        "requestedRef": "main",
+        "requestedRefCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be"
       },
       "canonicalId": "Deucarian/UI-Binding",
       "ciWorkflows": [
@@ -418459,9 +418457,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI-Binding.git",
         "governanceConfigSha256": "175c3228c537729bd2f32e48e220c553072ca3dca1c6f5eaedb1e2b6c759c7a2",
-        "headCommit": "ceb2c4987e30c440a960ef1dc6badc8efa453a42",
+        "headCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be",
         "manifestSha256": "7a42f55d528ee07994922cdd8de8964f91c8109df1a6c5712c5049c27ae633e6",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common"
@@ -418668,14 +418666,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "a9820c1f2ce8796858663f78181e4407282eac8f",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17",
         "origin": "https://github.com/Deucarian/UI-FLow.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "a9820c1f2ce8796858663f78181e4407282eac8f"
+        "requestedRef": "main",
+        "requestedRefCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17"
       },
       "canonicalId": "Deucarian/UI-FLow",
       "ciWorkflows": [
@@ -418729,9 +418727,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI-FLow.git",
         "governanceConfigSha256": "798835ae8630ac96b704c3050fae0ed92953ac10fe86f60a5ac7e4a10ae97e2e",
-        "headCommit": "a9820c1f2ce8796858663f78181e4407282eac8f",
+        "headCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17",
         "manifestSha256": "109dc48f82a3f2308d9c8648484aeb87e0cb8e4cde03b9d91f7f8385f6054520",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -418854,14 +418852,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "3f75ad56766e061566b2f30405a92efa0489000c",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "9401f64fc6dedc844d059008cb1358ed20c60594",
         "origin": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "3f75ad56766e061566b2f30405a92efa0489000c"
+        "requestedRef": "main",
+        "requestedRefCommit": "9401f64fc6dedc844d059008cb1358ed20c60594"
       },
       "canonicalId": "Deucarian/UIBinding-CoreState-Integration",
       "ciWorkflows": [
@@ -418905,9 +418903,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git",
         "governanceConfigSha256": "0e0e3e434124ee470fafb1af1286889adb9a9de0b09b5a9c2f41c0f71f93cdf7",
-        "headCommit": "3f75ad56766e061566b2f30405a92efa0489000c",
+        "headCommit": "9401f64fc6dedc844d059008cb1358ed20c60594",
         "manifestSha256": "0fc58cd3019e8e8877b102f603e932fa5fbdcb09abc8e93058e104488c17165d",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.ui-binding",
@@ -419071,14 +419069,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "80c0d18a9977546b6ef631a633fd608e21fc3ab8",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "80c0d18a9977546b6ef631a633fd608e21fc3ab8"
+        "requestedRef": "main",
+        "requestedRefCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c"
       },
       "canonicalId": "Deucarian/Viewer-Authentication",
       "ciWorkflows": [
@@ -419135,9 +419133,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Authentication.git",
         "governanceConfigSha256": "6942f42c0a016246df1ebee4eb5abe851fbe768a9d009bd0695cf83740099880",
-        "headCommit": "80c0d18a9977546b6ef631a633fd608e21fc3ab8",
+        "headCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c",
         "manifestSha256": "f8762b7b5cd1956a314b636799b16fbd0446cad129dab7448263945237969c3e",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -419307,14 +419305,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "8191430789eb62cda2c23fc4f38d10a02f6dc3fb",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "cbffda6d4154b4c25f3a47bcaee74c296ca7bd37",
         "origin": "https://github.com/Deucarian/Viewer-Navigation.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "8191430789eb62cda2c23fc4f38d10a02f6dc3fb"
+        "requestedRef": "main",
+        "requestedRefCommit": "cbffda6d4154b4c25f3a47bcaee74c296ca7bd37"
       },
       "canonicalId": "Deucarian/Viewer-Navigation",
       "ciWorkflows": [
@@ -419383,9 +419381,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Navigation.git",
         "governanceConfigSha256": "5b27e10fe95e43181722624d00826ce1a76ec6ea17607ae3be74ba200b1adfdf",
-        "headCommit": "8191430789eb62cda2c23fc4f38d10a02f6dc3fb",
+        "headCommit": "cbffda6d4154b4c25f3a47bcaee74c296ca7bd37",
         "manifestSha256": "c71015f5eeb8bb9393fca16b8413075e31101ec1c89a3c6dc3dfdc8659ccd36a",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.camera-navigation",
@@ -419512,14 +419510,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7",
         "origin": "https://github.com/Deucarian/Viewer-Rendering.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99"
+        "requestedRef": "main",
+        "requestedRefCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7"
       },
       "canonicalId": "Deucarian/Viewer-Rendering",
       "ciWorkflows": [
@@ -419571,9 +419569,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Rendering.git",
         "governanceConfigSha256": "dd1270da8e19b674e4ed4756ff4199642642c7a269c5175f460fe17c63d65a94",
-        "headCommit": "e86db9842957282b01f8c0a1be2d1c428233ef99",
+        "headCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7",
         "manifestSha256": "8320c864a4033368a338be6188d93f8c90dfb4f229493d2ebe8a426d79bdd644",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -419646,14 +419644,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "93ada845dfe4fa8e604d20190ff2a0c0e1bc8399",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f",
         "origin": "https://github.com/Deucarian/Viewer-Shell.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "93ada845dfe4fa8e604d20190ff2a0c0e1bc8399"
+        "requestedRef": "main",
+        "requestedRefCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f"
       },
       "canonicalId": "Deucarian/Viewer-Shell",
       "ciWorkflows": [
@@ -419700,9 +419698,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Shell.git",
         "governanceConfigSha256": "58f31bb18eae27cb95d069d1a113a005193f794da8becf6a91b66f30bf7fe6e2",
-        "headCommit": "93ada845dfe4fa8e604d20190ff2a0c0e1bc8399",
+        "headCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f",
         "manifestSha256": "c1cd53fb18e8b42056038697e916d55209cb648d26672ffa0b5ca338dfd235aa",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.theming",
@@ -419900,14 +419898,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "dd075746e5b0302be8463ab8f396a24291d3e52b",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "6d434eee7c555806dd0c75fa25aa83f536384564",
         "origin": "https://github.com/Deucarian/Weapon-Systems.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "dd075746e5b0302be8463ab8f396a24291d3e52b"
+        "requestedRef": "main",
+        "requestedRefCommit": "6d434eee7c555806dd0c75fa25aa83f536384564"
       },
       "canonicalId": "Deucarian/Weapon-Systems",
       "ciWorkflows": [
@@ -419965,9 +419963,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Weapon-Systems.git",
         "governanceConfigSha256": "2d92e7a0fe8a4e2053bed7d60e0062eab22a56486fcee9f781168089c82df151",
-        "headCommit": "dd075746e5b0302be8463ab8f396a24291d3e52b",
+        "headCommit": "6d434eee7c555806dd0c75fa25aa83f536384564",
         "manifestSha256": "143f075dc0435f3846d60662dfbf5275c81b8a5cc0af2f5ad0abef98469ba895",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.attacks",
@@ -420049,14 +420047,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "310eb4aa754b1904e62e6ab50c94e0cb9ce38be9",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "310eb4aa754b1904e62e6ab50c94e0cb9ce38be9"
+        "requestedRef": "main",
+        "requestedRefCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe"
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
       "ciWorkflows": [
@@ -420130,9 +420128,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "governanceConfigSha256": "9a61fc6db588d516fdd9fa7bb7403058a3a7487a653aa89159c30277a925f541",
-        "headCommit": "310eb4aa754b1904e62e6ab50c94e0cb9ce38be9",
+        "headCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe",
         "manifestSha256": "0174833ef8b95482c82ed2eef9742b5ed59f5152ff3c42708393af8daed6a3a4",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.api",
@@ -420227,14 +420225,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1",
         "origin": "https://github.com/Deucarian/WebGL-Template.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58"
+        "requestedRef": "main",
+        "requestedRefCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1"
       },
       "canonicalId": "Deucarian/WebGL-Template",
       "ciWorkflows": [
@@ -420278,9 +420276,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/WebGL-Template.git",
         "governanceConfigSha256": "d76b09f14be2bc8e44e9ba76f9a7f401c65a58e23f5e6d0233f92f300dd20ae4",
-        "headCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58",
+        "headCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1",
         "manifestSha256": "81bb8d1379356f7c22646008909f3e0a0a14f43a09f2b34d9d9dfc888fdd8d90",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.build-pipeline"
@@ -420423,14 +420421,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "297372fd7b129ec1cd44af9bb1235ad0076cc821",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "2543e9b54133b31b44b299ab3dc9f5d561079ba4",
         "origin": "https://github.com/Deucarian/World-Navigation.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "297372fd7b129ec1cd44af9bb1235ad0076cc821"
+        "requestedRef": "main",
+        "requestedRefCommit": "2543e9b54133b31b44b299ab3dc9f5d561079ba4"
       },
       "canonicalId": "Deucarian/World-Navigation",
       "ciWorkflows": [
@@ -420481,9 +420479,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/World-Navigation.git",
         "governanceConfigSha256": "574e3d350e71c1143e460517fd85556bb3f6b991b007ff79537f810f93c2a764",
-        "headCommit": "297372fd7b129ec1cd44af9bb1235ad0076cc821",
+        "headCommit": "2543e9b54133b31b44b299ab3dc9f5d561079ba4",
         "manifestSha256": "8f3e1edf9d1714bb2662dd5fe1deb29ca6a2b9b51aa4b41bd34f8876e9c0ae0c",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.diagnostics",
@@ -420646,14 +420644,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "53150fd5a99e1d264ade96fc03c50eebda57b913",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "812537154eb99815b3736f77e316fe3e26f2df94",
         "origin": "https://github.com/Deucarian/World-Spawning.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "53150fd5a99e1d264ade96fc03c50eebda57b913"
+        "requestedRef": "main",
+        "requestedRefCommit": "812537154eb99815b3736f77e316fe3e26f2df94"
       },
       "canonicalId": "Deucarian/World-Spawning",
       "ciWorkflows": [
@@ -420702,9 +420700,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/World-Spawning.git",
         "governanceConfigSha256": "480f7d176f288444c46ca5cc597569110dc65c5c5a18a41d02cca24a0ecd13fd",
-        "headCommit": "53150fd5a99e1d264ade96fc03c50eebda57b913",
+        "headCommit": "812537154eb99815b3736f77e316fe3e26f2df94",
         "manifestSha256": "9856ac3f6b56b2e1d3f42fff5078eb6abfab4a5e4d1d3a927cf3678cda5bb525",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -420868,14 +420866,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "a3415f271ad2dc0dae7d81b9694408b6e037553c",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e",
         "origin": "https://github.com/Deucarian/XR-UI.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "a3415f271ad2dc0dae7d81b9694408b6e037553c"
+        "requestedRef": "main",
+        "requestedRefCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e"
       },
       "canonicalId": "Deucarian/XR-UI",
       "ciWorkflows": [
@@ -420935,9 +420933,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/XR-UI.git",
         "governanceConfigSha256": "ec0ff91544b371c3430d6987a80aa08f36ab272d1b4c52baae53e7b36550ebd1",
-        "headCommit": "a3415f271ad2dc0dae7d81b9694408b6e037553c",
+        "headCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e",
         "manifestSha256": "429dbe6afaaf9158f9ff49e92e5faa3994899f59985e1f4d5c9eb9ea31028626",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
@@ -421050,14 +421048,14 @@
       ],
       "branches": {
         "atRequestedRef": true,
-        "currentBranch": "develop",
+        "currentBranch": "main",
         "dirty": false,
-        "hasDevelop": true,
-        "hasMain": false,
-        "headCommit": "bf2985d3f292b7c19e155700d09198a6fe8c8e9e",
+        "hasDevelop": false,
+        "hasMain": true,
+        "headCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789",
         "origin": "https://github.com/Deucarian/XR-UI-Theming-Integration.git",
-        "requestedRef": "develop",
-        "requestedRefCommit": "bf2985d3f292b7c19e155700d09198a6fe8c8e9e"
+        "requestedRef": "main",
+        "requestedRefCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789"
       },
       "canonicalId": "Deucarian/XR-UI-Theming-Integration",
       "ciWorkflows": [
@@ -421102,9 +421100,9 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git",
         "governanceConfigSha256": "8412a6bc6b71538ec4136404cccd505d3359e327fa0905571ba7d3171a704e3a",
-        "headCommit": "bf2985d3f292b7c19e155700d09198a6fe8c8e9e",
+        "headCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789",
         "manifestSha256": "53c8e18c3eeca727ac01e8f8b18eaf58a0c58168d0e668ed3b8ff91b649accd1",
-        "requestedRef": "develop"
+        "requestedRef": "main"
       },
       "registryDependencies": [
         "com.deucarian.common",
