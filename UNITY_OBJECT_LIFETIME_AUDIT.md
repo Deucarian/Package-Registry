@@ -12,7 +12,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| direct Unity API call | 1163 |
+| direct Unity API call | 1166 |
 | helper call site | 129 |
 | helper definition | 1 |
 
@@ -20,7 +20,7 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 
 | Metric | Count |
 | --- | --- |
-| Allowed | 1293 |
+| Allowed | 1296 |
 
 ## Production Semantic Comparison
 
@@ -258,9 +258,9 @@ API proposal: UnityObjectUtility.DestroySafely(UnityEngine.Object target)
 | Notifications | Editor/DeucarianNotificationPrefabFactory.cs | 101 | Editor production | direct Unity API call | Object.DestroyImmediate | Allowed | The editor-only factory owns a temporary unsaved prefab source object and destroys it immediately after PrefabUtility serializes the package asset; no runtime object lifetime is bypassed. |
 | Notifications | Editor/NotificationLabRecipeStorage.cs | 48 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Notifications | Editor/NotificationPreviewTheme.cs | 59 | Editor production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Notifications | Runtime/Unity/NotificationListView.cs | 112 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Notifications | Runtime/Unity/NotificationListView.cs | 115 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
-| Notifications | Runtime/Unity/NotificationListView.cs | 119 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Notifications | Runtime/Unity/NotificationListView.cs | 114 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Notifications | Runtime/Unity/NotificationListView.cs | 117 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
+| Notifications | Runtime/Unity/NotificationListView.cs | 121 | Runtime production | helper call site | UnityObjectUtility.DestroySafely | Allowed | Production code calls the canonical Deucarian.Common lifetime API. |
 | Notifications | Tests/Editor/NotificationAppearanceTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/Editor/NotificationAppearanceTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
 | Notifications | Tests/Editor/NotificationAppearanceTests.cs | 34 | Test | direct Unity API call | Object.DestroyImmediate | Allowed | Test-only explicit Unity object teardown remains local; no shared testing package was approved. |
