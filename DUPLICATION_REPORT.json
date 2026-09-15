@@ -414222,7 +414222,9 @@
           "DEPENDENCY_USAGE_AUDIT.json"
         ],
         "repositoryName": "Package-Registry",
-        "repositoryType": "package-registry"
+        "repositoryType": "package-registry",
+        "sampleAssemblies": [],
+        "testAssemblies": []
       },
       "name": "Package-Registry",
       "packageId": null,
@@ -414230,7 +414232,7 @@
       "provenance": {
         "auditInputSha256": "a53ea337b7b93059aa80b3c7b9a4dc214af32ff9580125267f2722e195b1fd01",
         "canonicalUrl": "https://github.com/Deucarian/Package-Registry.git",
-        "governanceConfigSha256": "3601d9439ebcdb062db6ab13d46a78958f9f9f0096a5d3f314499a608d98d3dd",
+        "governanceConfigSha256": "e35beb71bcbe068ddd4d98bfee9285f1522124c4b313db044dbbb9380aa937e0",
         "headCommit": "",
         "manifestSha256": "",
         "requestedRef": "main"
