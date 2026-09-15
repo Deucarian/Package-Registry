@@ -40,7 +40,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Gameplay-Foundation | com.deucarian.gameplay-foundation | 0.2.0 | 2021.3 | yes | clean | com.deucarian.editor | 7 | 203 |
 | Idle-Progression | com.deucarian.idle-progression | 0.1.1 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.progression | 3 | 24 |
 | Logging | com.deucarian.logging | 1.0.8 | 2021.3 | yes | clean | com.deucarian.editor | 5 | 70 |
-| Media | com.deucarian.media | 0.3.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.modules.audio, com.unity.modules.unitywebrequest, com.unity.modules.unitywebrequestaudio, com.unity.modules.video, com.deucarian.editor | 8 | 154 |
+| Media | com.deucarian.media | 0.4.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.modules.audio, com.unity.modules.unitywebrequest, com.unity.modules.unitywebrequestaudio, com.unity.modules.video, com.deucarian.editor | 8 | 156 |
 | Media-API-Integration | com.deucarian.media.api-integration | 0.1.1 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.media | 3 | 13 |
 | Monetization | com.deucarian.monetization | 0.2.0 | 6000.3 | yes | clean | com.deucarian.editor, com.deucarian.diagnostics | 8 | 146 |
 | Notifications | com.deucarian.notifications | 0.5.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.theming, com.deucarian.ui, com.unity.textmeshpro, com.unity.ugui | 10 | 255 |
@@ -89,16 +89,16 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 66 |
-| Parsed methods/bodies analyzed | 21694 |
+| Parsed methods/bodies analyzed | 21697 |
 | Exact AST clone groups | 96 |
 | Normalized structural clone groups | 167 |
 | Same-symbol semantic candidates | 41 |
-| Runtime public API symbols | 11003 |
+| Runtime public API symbols | 11005 |
 | Editor public API symbols | 3626 |
-| Test public symbols excluded from production API | 7821 |
+| Test public symbols excluded from production API | 7823 |
 | Sample public symbols excluded from production API | 639 |
-| Internal/private production symbols | 19238 |
-| Public API symbols missing XML documentation | 12009 |
+| Internal/private production symbols | 19239 |
+| Public API symbols missing XML documentation | 12010 |
 | Debug invocation records | 17 |
 | Unity object lifetime records | 1250 |
 | Documentation drift findings | 52 |
