@@ -57,6 +57,12 @@
       "repository": "Diagnostics"
     },
     {
+      "file": "README.md",
+      "kind": "MigrationDocumentation",
+      "packageId": "com.deucarian.editor",
+      "repository": "Editor"
+    },
+    {
       "file": "AGENTS.md",
       "kind": "ReviewRequired",
       "packageId": "com.deucarian.editor",
@@ -319,7 +325,7 @@
     "DependencyVersionDrift": 1,
     "HistoricalChangelogReference": 18,
     "LegitimateGenericBridgeTerm": 1,
-    "MigrationDocumentation": 11,
+    "MigrationDocumentation": 12,
     "ReviewRequired": 21
   }
 }
