@@ -20908,6 +20908,13 @@
         "repo": "Template-Viewer-Web"
       },
       {
+        "declaredVersion": "0.1.1",
+        "dependency": "com.deucarian.webgl-template",
+        "ownerDevelopVersion": "0.1.2",
+        "packageId": "com.deucarian.template.viewer.web",
+        "repo": "Template-Viewer-Web"
+      },
+      {
         "declaredVersion": "1.10.6",
         "dependency": "com.deucarian.editor",
         "ownerDevelopVersion": "1.13.0",
@@ -21225,7 +21232,7 @@
       {
         "declaredVersion": "0.1.0",
         "dependency": "com.deucarian.webgl-template",
-        "ownerDevelopVersion": "0.1.1",
+        "ownerDevelopVersion": "0.1.2",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -420224,10 +420231,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "dc184375bfc8cc5ff510b586384898b3ae594cd2",
+        "headCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58",
         "origin": "https://github.com/Deucarian/WebGL-Template.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "dc184375bfc8cc5ff510b586384898b3ae594cd2"
+        "requestedRefCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58"
       },
       "canonicalId": "Deucarian/WebGL-Template",
       "ciWorkflows": [
@@ -420266,13 +420273,13 @@
       },
       "name": "WebGL-Template",
       "packageId": "com.deucarian.webgl-template",
-      "packageVersion": "0.1.1",
+      "packageVersion": "0.1.2",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/WebGL-Template.git",
         "governanceConfigSha256": "d76b09f14be2bc8e44e9ba76f9a7f401c65a58e23f5e6d0233f92f300dd20ae4",
-        "headCommit": "dc184375bfc8cc5ff510b586384898b3ae594cd2",
-        "manifestSha256": "f668e8ed07ee1061239a563f8d646794ba37200577b12a7edb66df655d2aeaf4",
+        "headCommit": "28ed5a233c4841e06385f8644ba3d45d55915c58",
+        "manifestSha256": "81bb8d1379356f7c22646008909f3e0a0a14f43a09f2b34d9d9dfc888fdd8d90",
         "requestedRef": "develop"
       },
       "registryDependencies": [
