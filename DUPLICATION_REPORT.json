@@ -20847,7 +20847,7 @@
       {
         "declaredVersion": "0.4.4",
         "dependency": "com.deucarian.viewer-navigation",
-        "ownerDevelopVersion": "0.4.5",
+        "ownerDevelopVersion": "0.5.0",
         "packageId": "com.deucarian.template.viewer",
         "repo": "Template-Viewer"
       },
@@ -21204,7 +21204,7 @@
       {
         "declaredVersion": "0.1.12",
         "dependency": "com.deucarian.viewer-navigation",
-        "ownerDevelopVersion": "0.4.5",
+        "ownerDevelopVersion": "0.5.0",
         "packageId": "com.deucarian.web-viewer-suite",
         "repo": "Web-Viewer-Suite"
       },
@@ -29915,7 +29915,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21697,
+    "methodCountAnalyzed": 21701,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -61834,7 +61834,7 @@
       }
     ],
     "editorProductionCount": 3626,
-    "internalPrivateProductionCount": 19239,
+    "internalPrivateProductionCount": 19240,
     "missingXmlDocumentationCount": 12010,
     "runtimeProductionCount": 11005,
     "samples": [
@@ -270645,8 +270645,8 @@
         "assembly": "Deucarian.ViewerNavigation",
         "containingType": "ViewerNavigationController",
         "file": "Runtime/ViewerNavigationController.CapturePose.cs",
-        "fullSignature": "public bool TryRestorePose(DeucarianCameraPose pose, Vector3 pivot, out string message, bool animate = true)",
-        "line": 12,
+        "fullSignature": "public bool TryRestorePose(DeucarianCameraPose pose, Vector3 pivot, out string message, bool animate = true, float? durationSeconds = null)",
+        "line": 13,
         "namespace": "Deucarian.ViewerNavigation",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-navigation",
@@ -270900,7 +270900,7 @@
         "assembly": "Deucarian.ViewerNavigation",
         "containingType": "ViewerNavigationController",
         "file": "Runtime/ViewerNavigationController.Reference.cs",
-        "fullSignature": "public bool TryFrame( DeucarianCameraFramingTarget target, out string message, bool animate = true)",
+        "fullSignature": "public bool TryFrame( DeucarianCameraFramingTarget target, out string message, bool animate = true, float? durationSeconds = null)",
         "line": 245,
         "namespace": "Deucarian.ViewerNavigation",
         "obsolete": false,
@@ -404327,8 +404327,53 @@
         "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
         "containingType": "ViewerNavigationRefocusTimingTests",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
-        "fullSignature": "[TestCase(5f)] [TestCase(10f)] [TestCase(20f)] public void StationaryCaptureTurnAndReturnUseTheSameSensitivity(float sensitivity)",
+        "fullSignature": "[TestCase(false, 0.1f, 5f)] [TestCase(false, 100f, 10f)] [TestCase(true, 0.1f, 20f)] [TestCase(true, 100f, 10f)] public void PerActionDurationIsIndependentOfDistanceAndRetainsSensitivity( bool frameBounds, float distance, float sensitivity)",
         "line": 9,
+        "namespace": "Deucarian.ViewerNavigation.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-navigation",
+        "repository": "Viewer-Navigation",
+        "scope": "Test",
+        "symbol": "PerActionDurationIsIndependentOfDistanceAndRetainsSensitivity",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "containingType": "ViewerNavigationRefocusTimingTests",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "fullSignature": "[TestCase(-1f)] [TestCase(float.NaN)] [TestCase(float.PositiveInfinity)] public void InvalidActionDurationDoesNotCancelAnExistingMove(float duration)",
+        "line": 48,
+        "namespace": "Deucarian.ViewerNavigation.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-navigation",
+        "repository": "Viewer-Navigation",
+        "scope": "Test",
+        "symbol": "InvalidActionDurationDoesNotCancelAnExistingMove",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "containingType": "ViewerNavigationRefocusTimingTests",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "fullSignature": "[TestCase(true, 0f)] [TestCase(false, 1f)] public void ZeroDurationOrDisabledAnimationCommitsImmediately(bool animate, float duration)",
+        "line": 72,
+        "namespace": "Deucarian.ViewerNavigation.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.viewer-navigation",
+        "repository": "Viewer-Navigation",
+        "scope": "Test",
+        "symbol": "ZeroDurationOrDisabledAnimationCommitsImmediately",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "containingType": "ViewerNavigationRefocusTimingTests",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "fullSignature": "[TestCase(5f)] [TestCase(10f)] [TestCase(20f)] public void StationaryCaptureTurnAndReturnUseTheSameSensitivity(float sensitivity)",
+        "line": 92,
         "namespace": "Deucarian.ViewerNavigation.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-navigation",
@@ -404343,7 +404388,7 @@
         "containingType": "ViewerNavigationRefocusTimingTests",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
         "fullSignature": "[Test] public void LensOnlyRestoreUsesTransitionInsteadOfSnapping()",
-        "line": 42,
+        "line": 125,
         "namespace": "Deucarian.ViewerNavigation.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.viewer-navigation",
@@ -408239,7 +408284,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7823
+    "testsPublicCount": 7826
   },
   "repositories": [
     {
@@ -419334,10 +419379,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507",
+        "headCommit": "774f54e4a00c39913f4d0cc3c2172a6e81ff6d70",
         "origin": "https://github.com/Deucarian/Viewer-Navigation.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507"
+        "requestedRefCommit": "774f54e4a00c39913f4d0cc3c2172a6e81ff6d70"
       },
       "canonicalId": "Deucarian/Viewer-Navigation",
       "ciWorkflows": [
@@ -419401,13 +419446,13 @@
       },
       "name": "Viewer-Navigation",
       "packageId": "com.deucarian.viewer-navigation",
-      "packageVersion": "0.4.5",
+      "packageVersion": "0.5.0",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Navigation.git",
         "governanceConfigSha256": "5b27e10fe95e43181722624d00826ce1a76ec6ea17607ae3be74ba200b1adfdf",
-        "headCommit": "7510979e824e2d20c8af915b7d23c57ca13a3507",
-        "manifestSha256": "8321d07edb946130f418c991fdc9eefd6f66d274f14f28e7f687ef89d7cdb30e",
+        "headCommit": "774f54e4a00c39913f4d0cc3c2172a6e81ff6d70",
+        "manifestSha256": "3668e2c1ff6fa8f5d0de2e15c448a7604d3a6a142977a8363c54d0c800cae259",
         "requestedRef": "develop"
       },
       "registryDependencies": [
@@ -437280,10 +437325,55 @@
       {
         "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
         "classification": "Test",
-        "containingSymbol": "ViewerNavigationRefocusTimingTests::StationaryCaptureTurnAndReturnUseTheSameSensitivity",
+        "containingSymbol": "ViewerNavigationRefocusTimingTests::PerActionDurationIsIndependentOfDistanceAndRetainsSensitivity",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
         "invocation": "Object.DestroyImmediate",
-        "line": 39,
+        "line": 45,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationRefocusTimingTests::PerActionDurationIsIndependentOfDistanceAndRetainsSensitivity",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 45,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationRefocusTimingTests::InvalidActionDurationDoesNotCancelAnExistingMove",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 69,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationRefocusTimingTests::ZeroDurationOrDisabledAnimationCommitsImmediately",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 89,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.viewer-navigation",
         "policyDisposition": "Allowed",
@@ -437298,7 +437388,22 @@
         "containingSymbol": "ViewerNavigationRefocusTimingTests::StationaryCaptureTurnAndReturnUseTheSameSensitivity",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
         "invocation": "Object.DestroyImmediate",
-        "line": 39,
+        "line": 122,
+        "occurrenceKind": "direct Unity API call",
+        "packageId": "com.deucarian.viewer-navigation",
+        "policyDisposition": "Allowed",
+        "policyReason": "Test-only explicit Unity object teardown remains local; no shared testing package was approved.",
+        "policySeverity": "Info",
+        "repository": "Viewer-Navigation",
+        "scope": "Test"
+      },
+      {
+        "assembly": "Deucarian.ViewerNavigation.Tests.EditMode",
+        "classification": "Test",
+        "containingSymbol": "ViewerNavigationRefocusTimingTests::StationaryCaptureTurnAndReturnUseTheSameSensitivity",
+        "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
+        "invocation": "Object.DestroyImmediate",
+        "line": 122,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.viewer-navigation",
         "policyDisposition": "Allowed",
@@ -437313,7 +437418,7 @@
         "containingSymbol": "ViewerNavigationRefocusTimingTests::LensOnlyRestoreUsesTransitionInsteadOfSnapping",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
         "invocation": "Object.DestroyImmediate",
-        "line": 61,
+        "line": 144,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.viewer-navigation",
         "policyDisposition": "Allowed",
@@ -437328,7 +437433,7 @@
         "containingSymbol": "ViewerNavigationRefocusTimingTests::LensOnlyRestoreUsesTransitionInsteadOfSnapping",
         "file": "Tests/EditMode/ViewerNavigationRefocusTimingTests.cs",
         "invocation": "Object.DestroyImmediate",
-        "line": 61,
+        "line": 144,
         "occurrenceKind": "direct Unity API call",
         "packageId": "com.deucarian.viewer-navigation",
         "policyDisposition": "Allowed",
@@ -439979,10 +440084,10 @@
       }
     ],
     "policySummary": {
-      "Allowed": 1250
+      "Allowed": 1254
     },
     "summary": {
-      "direct Unity API call": 1124,
+      "direct Unity API call": 1128,
       "helper call site": 125,
       "helper definition": 1
     }
