@@ -12,5 +12,7 @@
     "DEBUG_API_AUDIT.json",
     "UNITY_OBJECT_LIFETIME_AUDIT.json",
     "DEPENDENCY_USAGE_AUDIT.json"
-  ]
+  ],
+  "sampleAssemblies": [],
+  "testAssemblies": []
 }

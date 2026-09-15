@@ -10,6 +10,8 @@ class PackagesCatalogTests(unittest.TestCase):
         packages_by_id = {package["id"]: package for package in packages}
         expected_dependencies = {
             "com.deucarian.api": [
+                "com.deucarian.common",
+                "com.deucarian.diagnostics",
                 "com.deucarian.editor",
                 "com.deucarian.logging",
             ],
@@ -46,6 +48,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.simultria-viewer-integration",
                 "com.deucarian.template.viewer",
                 "com.deucarian.authentication",
+                "com.deucarian.tweens",
             ],
             "com.deucarian.viewer-rendering": [
                 "com.deucarian.common",
@@ -54,7 +57,6 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.theming",
             ],
             "com.deucarian.viewer-shell": [
-                "com.deucarian.common",
                 "com.deucarian.theming",
                 "com.deucarian.ui",
                 "com.deucarian.viewer-rendering",
@@ -112,6 +114,7 @@ class PackagesCatalogTests(unittest.TestCase):
                 "com.deucarian.logging",
                 "com.deucarian.object-loading",
                 "com.deucarian.object-loading.api-integration",
+                "com.deucarian.pointer-capture",
                 "com.deucarian.session",
                 "com.deucarian.session.api-integration",
                 "com.deucarian.theming",
@@ -237,10 +240,11 @@ class PackagesCatalogTests(unittest.TestCase):
 
         self.assertEqual(
             [
-                "com.deucarian.gameplay-foundation",
                 "com.deucarian.combat",
+                "com.deucarian.diagnostics",
                 "com.deucarian.editor",
                 "com.deucarian.game-content-authoring",
+                "com.deucarian.gameplay-foundation",
             ],
             attacks["dependencies"],
         )

@@ -856,6 +856,8 @@ def lifetime_policy(record: dict[str, Any]) -> tuple[str, str]:
     if is_common_lifetime_implementation(record):
         return "Allowed", "Canonical Common implementation owns the Play Mode/Edit Mode UnityEngine.Object destruction capability."
     if is_common_lifetime_call_site(record):
+        if record.get("scope") == "Sample":
+            return "Allowed", "Sample code calls the canonical Deucarian.Common lifetime API."
         return "Allowed", "Production code calls the canonical Deucarian.Common lifetime API."
     if record.get("configuredExceptionReason"):
         return "Allowed", str(record["configuredExceptionReason"])
@@ -891,7 +893,7 @@ def is_common_lifetime_implementation(record: dict[str, Any]) -> bool:
 def is_common_lifetime_call_site(record: dict[str, Any]) -> bool:
     if record.get("packageId") == COMMON_PACKAGE_ID:
         return False
-    if record.get("scope") not in {"Runtime production", "Editor production"}:
+    if record.get("scope") not in {"Runtime production", "Editor production", "Sample"}:
         return False
     if record.get("occurrenceKind") != "helper call site":
         return False
@@ -1178,7 +1180,7 @@ def classify_dependency_records(records: list[dict[str, Any]], declared: bool, s
         scopes = {record.get("scope", "Other") for record in records}
         if scopes and scopes <= {"Test"}:
             return "TestOnlyUse"
-        if scopes and scopes <= {"Sample"}:
+        if "Sample" in scopes and scopes <= {"Sample", "Test"}:
             return "SampleOnlyUse"
         production_records = [record for record in records if record.get("scope") in {"Runtime production", "Editor production"}]
         if production_records and all(record.get("guardKind") == "VersionDefine" for record in production_records):

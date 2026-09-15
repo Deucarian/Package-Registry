@@ -6,9 +6,9 @@ This report inventories current package-owned player-code findings. Editor-only 
 
 ## Summary
 
-- Repositories scanned: **64**
+- Repositories scanned: **65**
 - Repositories with findings: **22**
-- Clean repositories: **42**
+- Clean repositories: **43**
 - Unresolved findings: **68**
 - Suppressed findings: **0**
 - Validation failures: **0**
@@ -75,6 +75,7 @@ This report inventories current package-owned player-code findings. Editor-only 
 | `com.deucarian.template.viewer.web` | `Template-Viewer-Web` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.test-automation` | `Test-Automation` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.theming` | `Theming` | `Audit` | 4 | 0 | Valid |
+| `com.deucarian.tweens` | `Tweens` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui` | `UI` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding` | `UI-Binding` | `Audit` | 0 | 0 | Valid |
 | `com.deucarian.ui-binding.core-state-integration` | `UIBinding-CoreState-Integration` | `Audit` | 7 | 0 | Valid |
@@ -176,7 +177,7 @@ Mode: `Audit`
 
 - `reflection-based-newtonsoft` — `JsonConvert.SerializeObject` at `Runtime/Core/ObjectLoadRequest.cs`:169 (`Newtonsoft object mapping discovers constructors and members through reflection.`)
 - `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/DefaultObjectDiagnostics.cs`:176 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/ObjectLoadingPipeline.cs`:281 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/Pipeline/ObjectLoadingPipeline.cs`:301 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.object-loading.api-integration`
 
@@ -198,7 +199,7 @@ Mode: `Audit`
 Repository: `Pointer-Capture`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/DeucarianPointerCaptureController.cs`:484 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/PointerCaptureOwnerDescription.cs`:6 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.simultria-api`
 
@@ -232,8 +233,8 @@ Mode: `Audit`
 Repository: `Template-Viewer`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:161 (`Runtime type/member discovery must be generated or explicitly composed.`)
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:164 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:162 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerBootstrap.Composition.cs`:165 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.theming`
 
@@ -271,7 +272,7 @@ Mode: `Audit`
 Repository: `Viewer-Navigation`
 Mode: `Audit`
 
-- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerNavigationUiInputBlocker.cs`:102 (`Runtime type/member discovery must be generated or explicitly composed.`)
+- `runtime-type-discovery` — `.GetType` at `Runtime/ViewerNavigationUiInputBlocker.cs`:111 (`Runtime type/member discovery must be generated or explicitly composed.`)
 
 ### `com.deucarian.xr-ui`
 

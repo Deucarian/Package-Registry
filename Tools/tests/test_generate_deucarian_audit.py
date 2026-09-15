@@ -1045,6 +1045,15 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertTrue(any(item["repository"] == "Gamma" and item["kind"] == "HistoricalChangelogReference" for item in doc_findings))
         self.assertTrue(any(item["repository"] == "Logging" and item["kind"] == "LegitimateGenericBridgeTerm" for item in doc_findings))
 
+    def test_dependency_in_samples_and_tests_has_no_production_use(self) -> None:
+        records = [{"scope": "Sample"}, {"scope": "Test"}]
+        self.assertEqual("SampleOnlyUse", audit.classify_dependency_records(records, True, 0))
+        self.assertEqual("SampleOnlyUse", audit.classify_dependency_records(records, False, 0))
+        self.assertEqual("TestOnlyUse", audit.classify_dependency_records(records[1:], True, 0))
+        records.append({"scope": "Runtime production"})
+        self.assertEqual("RequiredAndUsed", audit.classify_dependency_records(records, True, 0))
+        self.assertEqual("MissingHardPackageDependency", audit.classify_dependency_records(records, False, 0))
+
     def test_package_id_version_mentions_use_exact_package_id_boundaries(self) -> None:
         text = """
         README prose mentions com.deucarian.ui-binding 1.2.3.
@@ -1141,6 +1150,21 @@ class GenerateDeucarianAuditTests(unittest.TestCase):
         self.assertEqual("Create com.deucarian.common", conclusion["decision"])
         self.assertIn("UnityObjectUtility.DestroySafely(UnityEngine.Object target)", conclusion["apiProposal"])
         self.assertEqual("KeepLocal", conclusion["testingPackageDecision"]["decision"])
+
+    def test_sample_cleanup_through_common_does_not_introduce_a_lifetime_owner(self) -> None:
+        sample = {
+            "packageId": "com.deucarian.tweens",
+            "scope": "Sample",
+            "occurrenceKind": "helper call site",
+            "invocation": "UnityObjectUtility.DestroySafely",
+        }
+        self.assertEqual("Allowed", audit.lifetime_policy(sample)[0])
+        self.assertEqual("ReviewRequired", audit.lifetime_policy({
+            **sample, "invocation": "LocalCleanup.DestroySafely",
+        })[0])
+        self.assertEqual("ReviewRequired", audit.lifetime_policy({
+            **sample, "occurrenceKind": "direct Unity API call", "invocation": "Object.Destroy",
+        })[0])
 
     def test_lifetime_policy_allows_common_and_canonical_consumers(self) -> None:
         records = [

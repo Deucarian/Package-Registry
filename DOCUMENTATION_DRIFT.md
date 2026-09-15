@@ -6,10 +6,11 @@ Schema version: 1
 
 | Metric | Count |
 | --- | --- |
+| Dependency version drift | 1 |
 | Historical changelog reference | 18 |
 | Legitimate generic bridge term | 1 |
 | Migration documentation | 11 |
-| Review required | 16 |
+| Review required | 21 |
 
 Historical changelog references preserve released history and are not rewrite recommendations.
 
@@ -20,12 +21,14 @@ Historical changelog references preserve released history and are not rewrite re
 | API | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Bootstrap | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Bootstrap | Migration documentation | README.md |  |  |  |
+| Build-Pipeline | Dependency version drift |  | com.deucarian.editor | 1.13.0 | 1.12.0 |
 | Build-Pipeline | Review required | README.md |  |  |  |
 | Command-Routing | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Command-Routing-WebGL-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Defense-Games | Review required | Documentation~/CrossGenre.md |  |  |  |
 | Diagnostics | Review required | README.md |  |  |  |
 | Editor | Review required | AGENTS.md |  |  |  |
+| Encounters | Review required | AGENTS.md |  |  |  |
 | Logging | Historical changelog reference | CHANGELOG.md |  |  |  |
 | Logging | Legitimate generic bridge term | README.md |  |  |  |
 | Notifications | Historical changelog reference | CHANGELOG.md |  |  |  |
@@ -54,6 +57,7 @@ Historical changelog references preserve released history and are not rewrite re
 | Template-Viewer-Web | Migration documentation | README.md |  |  |  |
 | Template-Viewer-Web | Review required | Documentation~/architecture.md |  |  |  |
 | Test-Automation | Review required | Documentation~/lifecycle.md |  |  |  |
+| Theming | Review required | Documentation~/SIMULTRIA_PALETTES.md |  |  |  |
 | UI-Binding | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | UIBinding-CoreState-Integration | Migration documentation | README.md |  |  |  |
@@ -63,3 +67,6 @@ Historical changelog references preserve released history and are not rewrite re
 | WebGL-Template | Review required | README.md |  |  |  |
 | XR-UI-Theming-Integration | Historical changelog reference | CHANGELOG.md |  |  |  |
 | XR-UI-Theming-Integration | Review required | AGENTS.md |  |  |  |
+| XR-UI-Theming-Integration | Review required | Documentation~/PALETTE_OWNERSHIP.md |  |  |  |
+| XR-UI-Theming-Integration | Review required | README.md |  |  |  |
+| XR-UI-Theming-Integration | Review required | Samples~/Themed Pressable Controls/README.md |  |  |  |

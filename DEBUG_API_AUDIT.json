@@ -279,7 +279,7 @@
       "containingSymbol": "WeaponSystemsTests::BenchmarkRecordsWeaponFireEvaluationCosts",
       "file": "Tests/EditMode/WeaponSystemsTests.cs",
       "invocation": "Debug.Log",
-      "line": 345,
+      "line": 369,
       "logLevel": "Info",
       "loggingDeclared": false,
       "packageId": "com.deucarian.weapon-systems",
