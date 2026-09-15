@@ -90,8 +90,8 @@ Schema version: 2
 | com.deucarian.monetization | com.deucarian.editor | 1.12.0 | Monetization | Editor |
 | com.deucarian.notifications | com.deucarian.common | 0.2.1 | Notifications | Common |
 | com.deucarian.notifications | com.deucarian.diagnostics | 0.1.6 | Notifications | Diagnostics |
-| com.deucarian.notifications | com.deucarian.editor | 1.13.0 | Notifications | Editor |
-| com.deucarian.notifications | com.deucarian.theming | 1.9.0 | Notifications | Theming |
+| com.deucarian.notifications | com.deucarian.editor | 1.14.0 | Notifications | Editor |
+| com.deucarian.notifications | com.deucarian.theming | 1.13.0 | Notifications | Theming |
 | com.deucarian.notifications | com.deucarian.ui | 0.3.0 | Notifications | UI |
 | com.deucarian.object-loading | com.deucarian.common | 0.2.1 | Object-Loading | Common |
 | com.deucarian.object-loading | com.deucarian.editor | 1.12.0 | Object-Loading | Editor |
@@ -286,5 +286,5 @@ None detected.
 
 ## Version Drift
 
-- Dependency version drift entries: 214
+- Dependency version drift entries: 223
 - Registry dependency drift entries: 0
