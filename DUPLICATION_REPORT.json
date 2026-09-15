@@ -20217,7 +20217,7 @@
       {
         "declaredVersion": "0.1.0",
         "dependency": "com.deucarian.media",
-        "ownerDevelopVersion": "0.3.0",
+        "ownerDevelopVersion": "0.4.0",
         "packageId": "com.deucarian.media.api-integration",
         "repo": "Media-API-Integration"
       },
@@ -20924,7 +20924,7 @@
       {
         "declaredVersion": "0.2.0",
         "dependency": "com.deucarian.media",
-        "ownerDevelopVersion": "0.3.0",
+        "ownerDevelopVersion": "0.4.0",
         "packageId": "com.deucarian.theming",
         "repo": "Theming"
       },
@@ -29915,7 +29915,7 @@
         ]
       }
     ],
-    "methodCountAnalyzed": 21694,
+    "methodCountAnalyzed": 21697,
     "normalizedStructuralCloneGroups": [
       {
         "category": "normalized structural clone",
@@ -47608,7 +47608,7 @@
             "editorApi": false,
             "file": "Runtime/Core/MediaPreparationQueue.cs",
             "iterator": false,
-            "line": 114,
+            "line": 155,
             "lineCount": 10,
             "namespace": "Deucarian.Media",
             "normalizedHash": "839a1f7609fdf58e7e852d18f195ba76af252f3fcad2f3d9165429798476e14f",
@@ -61533,10 +61533,10 @@
       },
       {
         "editorPublicCount": 14,
-        "missingXmlDocumentationCount": 146,
+        "missingXmlDocumentationCount": 147,
         "packageId": "com.deucarian.media",
         "repository": "Media",
-        "runtimePublicCount": 140
+        "runtimePublicCount": 142
       },
       {
         "editorPublicCount": 0,
@@ -61834,9 +61834,9 @@
       }
     ],
     "editorProductionCount": 3626,
-    "internalPrivateProductionCount": 19238,
-    "missingXmlDocumentationCount": 12009,
-    "runtimeProductionCount": 11003,
+    "internalPrivateProductionCount": 19239,
+    "missingXmlDocumentationCount": 12010,
+    "runtimeProductionCount": 11005,
     "samples": [
       {
         "assembly": "Deucarian.API.Samples.DefinitionWorkflow",
@@ -151891,7 +151891,7 @@
         "containingType": "MediaPreparationQueue",
         "file": "Runtime/Core/MediaPreparationQueue.cs",
         "fullSignature": "public MediaPreparationQueue(Func<CancellationToken, Task> nextStep, int concurrency = 1)",
-        "line": 30,
+        "line": 33,
         "namespace": "Deucarian.Media",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -151906,7 +151906,7 @@
         "containingType": "MediaPreparationQueue",
         "file": "Runtime/Core/MediaPreparationQueue.cs",
         "fullSignature": "public Task Enqueue(TKey key, Func<CancellationToken, Task> prepare, bool priority = false)",
-        "line": 37,
+        "line": 40,
         "namespace": "Deucarian.Media",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -151921,7 +151921,7 @@
         "containingType": "MediaPreparationQueue",
         "file": "Runtime/Core/MediaPreparationQueue.cs",
         "fullSignature": "public void Prioritize(TKey key)",
-        "line": 57,
+        "line": 62,
         "namespace": "Deucarian.Media",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -151935,8 +151935,38 @@
         "assembly": "Deucarian.Media",
         "containingType": "MediaPreparationQueue",
         "file": "Runtime/Core/MediaPreparationQueue.cs",
+        "fullSignature": "public void Prioritize(TKey key, bool interruptRunning)",
+        "line": 65,
+        "namespace": "Deucarian.Media",
+        "obsolete": false,
+        "packageId": "com.deucarian.media",
+        "repository": "Media",
+        "scope": "Runtime production",
+        "symbol": "Prioritize",
+        "symbolKind": "method",
+        "xmlDocumentation": true
+      },
+      {
+        "assembly": "Deucarian.Media",
+        "containingType": "MediaPreparationQueue",
+        "file": "Runtime/Core/MediaPreparationQueue.cs",
+        "fullSignature": "public void ClearPriority()",
+        "line": 80,
+        "namespace": "Deucarian.Media",
+        "obsolete": false,
+        "packageId": "com.deucarian.media",
+        "repository": "Media",
+        "scope": "Runtime production",
+        "symbol": "ClearPriority",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Media",
+        "containingType": "MediaPreparationQueue",
+        "file": "Runtime/Core/MediaPreparationQueue.cs",
         "fullSignature": "public void Dispose()",
-        "line": 114,
+        "line": 155,
         "namespace": "Deucarian.Media",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -323567,8 +323597,38 @@
         "assembly": "Deucarian.Media.Tests",
         "containingType": "MediaPreparationQueueTests",
         "file": "Tests/Editor/MediaPreparationQueueTests.cs",
-        "fullSignature": "[Test] public async Task WorkWaitsForBudgetCoalescesAndPromotesSelection()",
+        "fullSignature": "[Test] public async Task SelectedItemInterruptsOldAttemptAndBackgroundWaitsUntilSelectionClears()",
         "line": 10,
+        "namespace": "Deucarian.Media.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.media",
+        "repository": "Media",
+        "scope": "Test",
+        "symbol": "SelectedItemInterruptsOldAttemptAndBackgroundWaitsUntilSelectionClears",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Media.Tests",
+        "containingType": "MediaPreparationQueueTests",
+        "file": "Tests/Editor/MediaPreparationQueueTests.cs",
+        "fullSignature": "[Test] public async Task FocusCanPrecedeEnqueueAndUnrelatedCancellationIsNotRetried()",
+        "line": 40,
+        "namespace": "Deucarian.Media.Tests",
+        "obsolete": false,
+        "packageId": "com.deucarian.media",
+        "repository": "Media",
+        "scope": "Test",
+        "symbol": "FocusCanPrecedeEnqueueAndUnrelatedCancellationIsNotRetried",
+        "symbolKind": "method",
+        "xmlDocumentation": false
+      },
+      {
+        "assembly": "Deucarian.Media.Tests",
+        "containingType": "MediaPreparationQueueTests",
+        "file": "Tests/Editor/MediaPreparationQueueTests.cs",
+        "fullSignature": "[Test] public async Task WorkWaitsForBudgetCoalescesAndPromotesSelection()",
+        "line": 59,
         "namespace": "Deucarian.Media.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -323583,7 +323643,7 @@
         "containingType": "MediaPreparationQueueTests",
         "file": "Tests/Editor/MediaPreparationQueueTests.cs",
         "fullSignature": "[Test] public async Task CancelledLifetimeCancelsRunningWorkAndNeverStartsQueuedWork()",
-        "line": 28,
+        "line": 77,
         "namespace": "Deucarian.Media.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -323598,7 +323658,7 @@
         "containingType": "MediaPreparationQueueTests",
         "file": "Tests/Editor/MediaPreparationQueueTests.cs",
         "fullSignature": "[Test] public async Task FailedPreparationDoesNotPreventNextItem()",
-        "line": 45,
+        "line": 94,
         "namespace": "Deucarian.Media.Tests",
         "obsolete": false,
         "packageId": "com.deucarian.media",
@@ -408179,7 +408239,7 @@
         "xmlDocumentation": false
       }
     ],
-    "testsPublicCount": 7821
+    "testsPublicCount": 7823
   },
   "repositories": [
     {
@@ -412388,10 +412448,10 @@
         "dirty": false,
         "hasDevelop": true,
         "hasMain": false,
-        "headCommit": "8b54a9e19c29da81e93d7f946d2bd7f455695fb2",
+        "headCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77",
         "origin": "https://github.com/Deucarian/Media.git",
         "requestedRef": "develop",
-        "requestedRefCommit": "8b54a9e19c29da81e93d7f946d2bd7f455695fb2"
+        "requestedRefCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77"
       },
       "canonicalId": "Deucarian/Media",
       "ciWorkflows": [
@@ -412446,13 +412506,13 @@
       },
       "name": "Media",
       "packageId": "com.deucarian.media",
-      "packageVersion": "0.3.0",
+      "packageVersion": "0.4.0",
       "provenance": {
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media.git",
         "governanceConfigSha256": "72b1650c542b1bc3d09667c266bedd22e2a2484bbf160f21f9a669ea8f733fd2",
-        "headCommit": "8b54a9e19c29da81e93d7f946d2bd7f455695fb2",
-        "manifestSha256": "f1aec503fa5555bda21161d3b9e9aecc4c62214dcb144540b1c5dbcfa5afcb21",
+        "headCommit": "1fa14c95e2fef2b1058daa7257123b48c0d08a77",
+        "manifestSha256": "61e7aad49d96def5c8f7805942d5c9276172fa4b0f762790b7fafd8e1758ce6e",
         "requestedRef": "develop"
       },
       "registryDependencies": [
