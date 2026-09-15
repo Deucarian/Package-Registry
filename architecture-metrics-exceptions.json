@@ -583,6 +583,15 @@
       {
         "assembly": "Deucarian.Notifications",
         "type": "Deucarian.Notifications.NotificationManager",
+        "version": "0.7.2",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "SIM-841 saved notification appearance review: Runtime/Core/NotificationManager.cs is unchanged from main 94f832d507f48f7b94702e7570818f7fb80bab76. Its existing borrowed service binding and disposal ownership are preserved. Presentation settings and lab commands use instance-owned state. No additional global state or increased metric allowance."
+      },
+      {
+        "assembly": "Deucarian.Notifications",
+        "type": "Deucarian.Notifications.NotificationManager",
         "version": "0.4.0",
         "limits": {
           "mutableGlobals": 1
