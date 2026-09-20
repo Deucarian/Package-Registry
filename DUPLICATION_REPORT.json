@@ -102638,7 +102638,7 @@
         "containingType": "",
         "file": "Runtime/DeucarianEasing.cs",
         "fullSignature": "public static class DeucarianEasingUtility",
-        "line": 47,
+        "line": 48,
         "namespace": "Deucarian.Common",
         "obsolete": false,
         "packageId": "com.deucarian.common",
@@ -102653,7 +102653,7 @@
         "containingType": "DeucarianEasingUtility",
         "file": "Runtime/DeucarianEasing.cs",
         "fullSignature": "public static float Evaluate(DeucarianEasing easing, float value)",
-        "line": 49,
+        "line": 50,
         "namespace": "Deucarian.Common",
         "obsolete": false,
         "packageId": "com.deucarian.common",
@@ -411261,13 +411261,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
+        "headCommit": "3086f4aafa8b73a762424a3cf5df013215756533",
         "origin": "https://github.com/Deucarian/Activity-Visualization.git",
         "requestedRef": "main",
-        "requestedRefCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf"
+        "requestedRefCommit": "3086f4aafa8b73a762424a3cf5df013215756533"
       },
       "canonicalId": "Deucarian/Activity-Visualization",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -411309,7 +411310,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Activity-Visualization.git",
         "governanceConfigSha256": "6ef572df872cec08415c5051faac183d820b7caf72a912ae8fca2ca5b11297ad",
-        "headCommit": "cff8d668e8d2ff1217f8f46d7ad3eb721f759cdf",
+        "headCommit": "3086f4aafa8b73a762424a3cf5df013215756533",
         "manifestSha256": "9d53762610520c31ac587882e4d67e1fdae15ba0a8aaf7acff59ccaf7e135005",
         "requestedRef": "main"
       },
@@ -411449,13 +411450,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1",
+        "headCommit": "78974f6dfa2eb3b7bf9bf83206fc83f8eae26b0f",
         "origin": "https://github.com/Deucarian/API.git",
         "requestedRef": "main",
-        "requestedRefCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1"
+        "requestedRefCommit": "78974f6dfa2eb3b7bf9bf83206fc83f8eae26b0f"
       },
       "canonicalId": "Deucarian/API",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
@@ -411521,7 +411523,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/API.git",
         "governanceConfigSha256": "7d76b4d085702111dd1a4c853895155ab576ab95ae86da9599ca52007b7a0e1c",
-        "headCommit": "bcfb21088ae9f18418738ee4abb5f3863da23ba1",
+        "headCommit": "78974f6dfa2eb3b7bf9bf83206fc83f8eae26b0f",
         "manifestSha256": "7296ffdbf1f4023904ffa065fdbc54d937284939345e0554765cc7982add38a0",
         "requestedRef": "main"
       },
@@ -412241,13 +412243,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8",
+        "headCommit": "c6ac9eb4614b1a605f33e21f300d747147103b8b",
         "origin": "https://github.com/Deucarian/Bootstrap.git",
         "requestedRef": "main",
-        "requestedRefCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8"
+        "requestedRefCommit": "c6ac9eb4614b1a605f33e21f300d747147103b8b"
       },
       "canonicalId": "Deucarian/Bootstrap",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -412281,7 +412284,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Bootstrap.git",
         "governanceConfigSha256": "26f4f752f06e26e25b04dc674001d90b6cd7209e3f13978343ab9436128178a6",
-        "headCommit": "c4467228c87f1fb807979e573fde52f4c00c29f8",
+        "headCommit": "c6ac9eb4614b1a605f33e21f300d747147103b8b",
         "manifestSha256": "3578b0cf49bb9219e87be56c929ec0fbdead85379ad944bdabae11b79511f7d0",
         "requestedRef": "main"
       },
@@ -412342,13 +412345,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd",
+        "headCommit": "5f6ffb0697d1264717712a093d0b88bf9e2caf43",
         "origin": "https://github.com/Deucarian/Build-Pipeline.git",
         "requestedRef": "main",
-        "requestedRefCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd"
+        "requestedRefCommit": "5f6ffb0697d1264717712a093d0b88bf9e2caf43"
       },
       "canonicalId": "Deucarian/Build-Pipeline",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -412395,7 +412399,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Build-Pipeline.git",
         "governanceConfigSha256": "b07899952db05305daf77e5cc65f7622d28136db7d656d5a3cb31df818cc8cfa",
-        "headCommit": "aa0e2423846c8fa5ca9dc478926445ce902cf4dd",
+        "headCommit": "5f6ffb0697d1264717712a093d0b88bf9e2caf43",
         "manifestSha256": "f5037089bb725484d07ad64f04fcc968261bc9388f4097108f0e092d42238821",
         "requestedRef": "main"
       },
@@ -412544,13 +412548,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6",
+        "headCommit": "9fafb90bceb889d5955c429bbed279f1dfca4a27",
         "origin": "https://github.com/Deucarian/Camera-Navigation.git",
         "requestedRef": "main",
-        "requestedRefCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6"
+        "requestedRefCommit": "9fafb90bceb889d5955c429bbed279f1dfca4a27"
       },
       "canonicalId": "Deucarian/Camera-Navigation",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -412602,7 +412607,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Camera-Navigation.git",
         "governanceConfigSha256": "3d18340fae8c31f2ad86fef8051ee2546090219b760c920e1f5ec66fea1f87f2",
-        "headCommit": "f74a9d6445b44841724ebbbcf7ccb7b184d6fff6",
+        "headCommit": "9fafb90bceb889d5955c429bbed279f1dfca4a27",
         "manifestSha256": "c835a0ea65fe0261ca05c6f1f58f0d67d0f97ef3a9367b132f547758ce7ebca2",
         "requestedRef": "main"
       },
@@ -412728,13 +412733,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "46f01184c9254ef920eee99c2270fb87303bc016",
+        "headCommit": "661a2f860e591f41a03febc46616bc4a143c3f78",
         "origin": "https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "46f01184c9254ef920eee99c2270fb87303bc016"
+        "requestedRefCommit": "661a2f860e591f41a03febc46616bc4a143c3f78"
       },
       "canonicalId": "Deucarian/CameraNavigation-InputSystem-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -412775,7 +412781,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/CameraNavigation-InputSystem-Integration.git",
         "governanceConfigSha256": "f1993a4831045e677bc476444eedcb9eb476aa104f33cd0f1bafd08378834e95",
-        "headCommit": "46f01184c9254ef920eee99c2270fb87303bc016",
+        "headCommit": "661a2f860e591f41a03febc46616bc4a143c3f78",
         "manifestSha256": "0c9ed5373876383c9f0c75de23c7a83a2da401d447ab507f1eb7ec59dce75d66",
         "requestedRef": "main"
       },
@@ -413148,13 +413154,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a",
+        "headCommit": "9548fe885561f4b0e0fdc2834e5a535f7bbba37b",
         "origin": "https://github.com/Deucarian/Command-Routing.git",
         "requestedRef": "main",
-        "requestedRefCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a"
+        "requestedRefCommit": "9548fe885561f4b0e0fdc2834e5a535f7bbba37b"
       },
       "canonicalId": "Deucarian/Command-Routing",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -413205,7 +413212,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing.git",
         "governanceConfigSha256": "b69bf447bf00168c692c9aee5f12221df814d11652319344ef616dabb4f16343",
-        "headCommit": "a0a4501da61ec5e875dca6121b1e1bf89bc8428a",
+        "headCommit": "9548fe885561f4b0e0fdc2834e5a535f7bbba37b",
         "manifestSha256": "4225c4863e21b4a43524d56ea63d5a6ed683feef105b67a99bf197ea2e2c3f15",
         "requestedRef": "main"
       },
@@ -413341,13 +413348,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491",
+        "headCommit": "7eac11bb388b5c21b4023ddb3603f8364ed54fe9",
         "origin": "https://github.com/Deucarian/Command-Routing-UDP-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491"
+        "requestedRefCommit": "7eac11bb388b5c21b4023ddb3603f8364ed54fe9"
       },
       "canonicalId": "Deucarian/Command-Routing-UDP-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -413397,7 +413405,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing-UDP-Integration.git",
         "governanceConfigSha256": "aacc132d20e937a4685b99a1b16d491d2586a02586e421d5811065341e17a6a8",
-        "headCommit": "caa7a6bf11c8fb0ceb7bca270b197e71adf01491",
+        "headCommit": "7eac11bb388b5c21b4023ddb3603f8364ed54fe9",
         "manifestSha256": "e1a4a019c2195104d6e4dc8440660adbcdebf95fd6758af917c27f9bd88f101c",
         "requestedRef": "main"
       },
@@ -413506,13 +413514,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "8a11760981f025173cca128a3d6faec36fae5681",
+        "headCommit": "af45c9874b6a0605427814f35e22a093953d843a",
         "origin": "https://github.com/Deucarian/Command-Routing-WebGL-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "8a11760981f025173cca128a3d6faec36fae5681"
+        "requestedRefCommit": "af45c9874b6a0605427814f35e22a093953d843a"
       },
       "canonicalId": "Deucarian/Command-Routing-WebGL-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -413562,7 +413571,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Command-Routing-WebGL-Integration.git",
         "governanceConfigSha256": "9903cf8746eeb24271160977b722f8b1bc9892c2f0e31a01b2ecd04f3d003666",
-        "headCommit": "8a11760981f025173cca128a3d6faec36fae5681",
+        "headCommit": "af45c9874b6a0605427814f35e22a093953d843a",
         "manifestSha256": "87a19740992456ee412d918ff2dfb0d0bf55bd3f2e288ea859399452df79c940",
         "requestedRef": "main"
       },
@@ -413684,13 +413693,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75",
+        "headCommit": "c60e3c9945937959fe77904f53c637db3949eca6",
         "origin": "https://github.com/Deucarian/Common.git",
         "requestedRef": "main",
-        "requestedRefCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75"
+        "requestedRefCommit": "c60e3c9945937959fe77904f53c637db3949eca6"
       },
       "canonicalId": "Deucarian/Common",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {},
@@ -413733,7 +413743,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Common.git",
         "governanceConfigSha256": "f219fd78c9d57d4bb76036bad180329cdf34fde9d1c1d2c0decc979660d12a82",
-        "headCommit": "09aa708af886924385b9a36b18a1f92cf5c37a75",
+        "headCommit": "c60e3c9945937959fe77904f53c637db3949eca6",
         "manifestSha256": "432dc09e55b093241ffc018f15bf6b8beb8272ed538d191398c3c2ec7eac6df9",
         "requestedRef": "main"
       },
@@ -413821,13 +413831,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428",
+        "headCommit": "f3fa319aadf055001b42c599ec6a6f713a27a557",
         "origin": "https://github.com/Deucarian/Core-State.git",
         "requestedRef": "main",
-        "requestedRefCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428"
+        "requestedRefCommit": "f3fa319aadf055001b42c599ec6a6f713a27a557"
       },
       "canonicalId": "Deucarian/Core-State",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -413865,7 +413876,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Core-State.git",
         "governanceConfigSha256": "7570459ec3622da12292102f170bd5b3992a619bf2fbf7060e6047ff413e739a",
-        "headCommit": "435d9c5aecf2b9cde980e8c331bd96574bb6e428",
+        "headCommit": "f3fa319aadf055001b42c599ec6a6f713a27a557",
         "manifestSha256": "2706ae84d7336a529e74f93b4a7a3e5432daf9ac3d9f982b15120138c5668e48",
         "requestedRef": "main"
       },
@@ -414152,13 +414163,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502",
+        "headCommit": "fa215b3f725d9da08081c87144ade6973f1c83ca",
         "origin": "https://github.com/Deucarian/Diagnostics.git",
         "requestedRef": "main",
-        "requestedRefCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502"
+        "requestedRefCommit": "fa215b3f725d9da08081c87144ade6973f1c83ca"
       },
       "canonicalId": "Deucarian/Diagnostics",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -414203,7 +414215,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Diagnostics.git",
         "governanceConfigSha256": "6f2293f199d36bdfdab28fb9ccd1a3709a6074058f1d0dab6a4ab05e8ca4831e",
-        "headCommit": "12fd78eb77df08efb9dc516a7597704fc3fc1502",
+        "headCommit": "fa215b3f725d9da08081c87144ade6973f1c83ca",
         "manifestSha256": "94336e1158933614d352f0e3a20923dd57d1e2543a42f678ada731bd9a734538",
         "requestedRef": "main"
       },
@@ -414309,13 +414321,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "43ed88b2611b0c7eb79177e0001f0f292f9f7e8a",
+        "headCommit": "73c64c085cd7c9f14bc068394a7581c75833ec2a",
         "origin": "https://github.com/Deucarian/Editor.git",
         "requestedRef": "main",
-        "requestedRefCommit": "43ed88b2611b0c7eb79177e0001f0f292f9f7e8a"
+        "requestedRefCommit": "73c64c085cd7c9f14bc068394a7581c75833ec2a"
       },
       "canonicalId": "Deucarian/Editor",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -414358,7 +414371,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Editor.git",
         "governanceConfigSha256": "b399eb0195d6b893b65f88f03d67a20dee11c15c4939ee881c021d0a2bf3c3ba",
-        "headCommit": "43ed88b2611b0c7eb79177e0001f0f292f9f7e8a",
+        "headCommit": "73c64c085cd7c9f14bc068394a7581c75833ec2a",
         "manifestSha256": "055035690749183e8d4cfaccffb9c8c49def5ed37f8ff1c2d53e582dd6a6deda",
         "requestedRef": "main"
       },
@@ -415188,13 +415201,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a",
+        "headCommit": "e337d543f14a7e4488370831ca425c17677c6d2b",
         "origin": "https://github.com/Deucarian/Logging.git",
         "requestedRef": "main",
-        "requestedRefCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a"
+        "requestedRefCommit": "e337d543f14a7e4488370831ca425c17677c6d2b"
       },
       "canonicalId": "Deucarian/Logging",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -415246,7 +415260,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Logging.git",
         "governanceConfigSha256": "6f38aa4aefe0bd0923a8e2333642e8e5cd5a630341cc688ad1933157499f8c0c",
-        "headCommit": "63dafad328f56b9b72357eb5729cb60fb23b036a",
+        "headCommit": "e337d543f14a7e4488370831ca425c17677c6d2b",
         "manifestSha256": "393e32ecc90e1d044e2d585029ec7e9600b208d27b93172f57cce9d624c2dcfc",
         "requestedRef": "main"
       },
@@ -415410,13 +415424,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f",
+        "headCommit": "6d7df583f040774e7facfdd8695a38696e407135",
         "origin": "https://github.com/Deucarian/Media.git",
         "requestedRef": "main",
-        "requestedRefCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f"
+        "requestedRefCommit": "6d7df583f040774e7facfdd8695a38696e407135"
       },
       "canonicalId": "Deucarian/Media",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml",
         ".github/workflows/unity-editmode-tests.yml"
       ],
@@ -415473,7 +415488,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media.git",
         "governanceConfigSha256": "72b1650c542b1bc3d09667c266bedd22e2a2484bbf160f21f9a669ea8f733fd2",
-        "headCommit": "8b7c4919bbeb854c9e0fd45788712584a17ed85f",
+        "headCommit": "6d7df583f040774e7facfdd8695a38696e407135",
         "manifestSha256": "61e7aad49d96def5c8f7805942d5c9276172fa4b0f762790b7fafd8e1758ce6e",
         "requestedRef": "main"
       },
@@ -415586,13 +415601,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c",
+        "headCommit": "8c24ab3120c4d93ba3ce5ff7dca34e0710c815f5",
         "origin": "https://github.com/Deucarian/Media-API-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c"
+        "requestedRefCommit": "8c24ab3120c4d93ba3ce5ff7dca34e0710c815f5"
       },
       "canonicalId": "Deucarian/Media-API-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml",
         ".github/workflows/unity-editmode-tests.yml"
       ],
@@ -415632,7 +415648,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Media-API-Integration.git",
         "governanceConfigSha256": "d3e7ff03f6e1e178fabf232e1d2eb853751ee1742d20e53c25454cecf31a7bd9",
-        "headCommit": "49e5b152edf51cfce57a3cf2c3b25a8b0d17af3c",
+        "headCommit": "8c24ab3120c4d93ba3ce5ff7dca34e0710c815f5",
         "manifestSha256": "8504eeaa7fd16b444dc6251a97052203d663d0c03ecd97306dbd4e72a3fde68e",
         "requestedRef": "main"
       },
@@ -416108,13 +416124,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "5566fe6f10394bded053184a889f3b858da576c6",
+        "headCommit": "50ddc1174a44fb5c499e58311575dc4d39c730a3",
         "origin": "https://github.com/Deucarian/Notifications.git",
         "requestedRef": "main",
-        "requestedRefCommit": "5566fe6f10394bded053184a889f3b858da576c6"
+        "requestedRefCommit": "50ddc1174a44fb5c499e58311575dc4d39c730a3"
       },
       "canonicalId": "Deucarian/Notifications",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -416180,7 +416197,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Notifications.git",
         "governanceConfigSha256": "3f3e9e8161ca341e633bd712552527a72765a4a8c8cf8ca4332a5cc612dfbac9",
-        "headCommit": "5566fe6f10394bded053184a889f3b858da576c6",
+        "headCommit": "50ddc1174a44fb5c499e58311575dc4d39c730a3",
         "manifestSha256": "387b681e8ce9ef42d2977a7dda64f9db80491ff3874795b2c56dfc9f5b8b7369",
         "requestedRef": "main"
       },
@@ -416530,13 +416547,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2",
+        "headCommit": "8e67c855d21e856d304c454c1edcd30a1cf6ce9f",
         "origin": "https://github.com/Deucarian/Object-Loading.git",
         "requestedRef": "main",
-        "requestedRefCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2"
+        "requestedRefCommit": "8e67c855d21e856d304c454c1edcd30a1cf6ce9f"
       },
       "canonicalId": "Deucarian/Object-Loading",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -416592,7 +416610,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Object-Loading.git",
         "governanceConfigSha256": "f71c4f2e8aeb8133cb61b8bfdcf5d590ac6627884db88e4b332d8dcad3c8de69",
-        "headCommit": "b25bcd7ca8856001e7af732b9f793bc1e15a5bd2",
+        "headCommit": "8e67c855d21e856d304c454c1edcd30a1cf6ce9f",
         "manifestSha256": "8bba5aae0d127da91ac8f58b3402e39f99311796354363829608923785206783",
         "requestedRef": "main"
       },
@@ -416716,13 +416734,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6",
+        "headCommit": "643f12a6535e4ef3b62da9aab941cecc82e7c8d6",
         "origin": "https://github.com/Deucarian/Object-Selection.git",
         "requestedRef": "main",
-        "requestedRefCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6"
+        "requestedRefCommit": "643f12a6535e4ef3b62da9aab941cecc82e7c8d6"
       },
       "canonicalId": "Deucarian/Object-Selection",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
@@ -416768,7 +416787,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Object-Selection.git",
         "governanceConfigSha256": "8ac58285a47cae47623d9a59da7a853b19f41d9bb84bbb707aa36565876bcde4",
-        "headCommit": "5e215f8e08cbfb67af3d03506daef9742d3fd4a6",
+        "headCommit": "643f12a6535e4ef3b62da9aab941cecc82e7c8d6",
         "manifestSha256": "7aa662fac00d13958b87937c8bed935b647c013803d5b7f2c66674e2deb1f08f",
         "requestedRef": "main"
       },
@@ -416879,13 +416898,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c",
+        "headCommit": "4bbbbb32b840b0b3bd8a1aa5bdd1aa6ffe486230",
         "origin": "https://github.com/Deucarian/ObjectLoading-API-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c"
+        "requestedRefCommit": "4bbbbb32b840b0b3bd8a1aa5bdd1aa6ffe486230"
       },
       "canonicalId": "Deucarian/ObjectLoading-API-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -416928,7 +416948,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/ObjectLoading-API-Integration.git",
         "governanceConfigSha256": "acdc50280650970beece179f4c31cc037a7351e418b513e0cb38ba1ef64ffce1",
-        "headCommit": "43f1c82542dd6ba0e26a346e84e0d42879e7142c",
+        "headCommit": "4bbbbb32b840b0b3bd8a1aa5bdd1aa6ffe486230",
         "manifestSha256": "042fb34b9fec49c01a229fc9083ed084cbe42f26fd3bad7240279609c9fb4d2c",
         "requestedRef": "main"
       },
@@ -417016,13 +417036,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18",
+        "headCommit": "af66be84ac8de7bf8b7ac5d2b8a658e04e91ad15",
         "origin": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18"
+        "requestedRefCommit": "af66be84ac8de7bf8b7ac5d2b8a658e04e91ad15"
       },
       "canonicalId": "Deucarian/ObjectSelection-CoreState-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
@@ -417067,7 +417088,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/ObjectSelection-CoreState-Integration.git",
         "governanceConfigSha256": "521a7f68d86f56d1dc942e40724c141f2ec5183716d00749d6f7b0588f804a2d",
-        "headCommit": "5e776b0bbda746a3c24a9f68b2565b00ce696e18",
+        "headCommit": "af66be84ac8de7bf8b7ac5d2b8a658e04e91ad15",
         "manifestSha256": "a190188640d1374d2667f817d71c504a239125f8c83021ef987f4a18680bdae7",
         "requestedRef": "main"
       },
@@ -417150,13 +417171,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "91edf2a90d42d5894ae4938f2ab091bc8f90bb93",
+        "headCommit": "6c7ee04ccd1b1090ef1e0406f32b06c5f0c0896e",
         "origin": "https://github.com/Deucarian/Package-Installer.git",
         "requestedRef": "main",
-        "requestedRefCommit": "91edf2a90d42d5894ae4938f2ab091bc8f90bb93"
+        "requestedRefCommit": "6c7ee04ccd1b1090ef1e0406f32b06c5f0c0896e"
       },
       "canonicalId": "Deucarian/Package-Installer",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
@@ -417198,7 +417220,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Package-Installer.git",
         "governanceConfigSha256": "1b5ee328247dc3e0b09edbc31a437b676b38cf8fbeb85725c53b8bada52bc2de",
-        "headCommit": "91edf2a90d42d5894ae4938f2ab091bc8f90bb93",
+        "headCommit": "6c7ee04ccd1b1090ef1e0406f32b06c5f0c0896e",
         "manifestSha256": "271a1382e67bb1dd027ba5b374f3c54d65c97c7af440753193004eb241f126b7",
         "requestedRef": "main"
       },
@@ -417235,7 +417257,8 @@
         ".github/workflows/deucarian-audit-check.yml",
         ".github/workflows/deucarian-catalog-projection-check.yml",
         ".github/workflows/deucarian-package-validation.yml",
-        ".github/workflows/package-registry-validation.yml"
+        ".github/workflows/package-registry-validation.yml",
+        ".github/workflows/package-synchronization.yml"
       ],
       "dependencies": {},
       "displayName": null,
@@ -417403,13 +417426,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb",
+        "headCommit": "f4b26ac2a9dea55bb68619f33b89ab14625d1325",
         "origin": "https://github.com/Deucarian/Persistence.git",
         "requestedRef": "main",
-        "requestedRefCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb"
+        "requestedRefCommit": "f4b26ac2a9dea55bb68619f33b89ab14625d1325"
       },
       "canonicalId": "Deucarian/Persistence",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -417453,7 +417477,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Persistence.git",
         "governanceConfigSha256": "c8519cb40eb1957bdaee7fd027d6eb09d4b93a479e41a8a523123cfbd1797986",
-        "headCommit": "b9c81538a91c0a62dd0f91ad6cab5db1e640b0eb",
+        "headCommit": "f4b26ac2a9dea55bb68619f33b89ab14625d1325",
         "manifestSha256": "edf4226222519c9a46782b09d802386f98bb333c3c0f9ae96db524141fb25eaf",
         "requestedRef": "main"
       },
@@ -417600,13 +417624,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225",
+        "headCommit": "37f2a8838434cbc8b61eca5e6541484bdd747cf4",
         "origin": "https://github.com/Deucarian/Pointer-Capture.git",
         "requestedRef": "main",
-        "requestedRefCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225"
+        "requestedRefCommit": "37f2a8838434cbc8b61eca5e6541484bdd747cf4"
       },
       "canonicalId": "Deucarian/Pointer-Capture",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -417654,7 +417679,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Pointer-Capture.git",
         "governanceConfigSha256": "e40cc46f3ad440346eec45e5e714fb2e25c168a8e4e4afe27937daa55da02c26",
-        "headCommit": "9d4617d8e18dfb9cbf7923933e52a56b8adfa225",
+        "headCommit": "37f2a8838434cbc8b61eca5e6541484bdd747cf4",
         "manifestSha256": "474adefa04573ace5a5e0f480cfe5f8874b267568f83c592c0ee95efd7ab396d",
         "requestedRef": "main"
       },
@@ -418486,13 +418511,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "fa13d201233c04f855fdbebe975df34af1e7feee",
+        "headCommit": "7ac51d830a4502ca2e3c99bd4a8803594c79afb3",
         "origin": "https://github.com/Deucarian/Selection-Suite.git",
         "requestedRef": "main",
-        "requestedRefCommit": "fa13d201233c04f855fdbebe975df34af1e7feee"
+        "requestedRefCommit": "7ac51d830a4502ca2e3c99bd4a8803594c79afb3"
       },
       "canonicalId": "Deucarian/Selection-Suite",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -418535,7 +418561,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Selection-Suite.git",
         "governanceConfigSha256": "f95d4f807c892bc283043a0d9e50e8d28b99e4c6bf20b6515354f053551e33ce",
-        "headCommit": "fa13d201233c04f855fdbebe975df34af1e7feee",
+        "headCommit": "7ac51d830a4502ca2e3c99bd4a8803594c79afb3",
         "manifestSha256": "4c687865a07032fa932ec3c8d8059962a44eab33872ac55960ddaef33fef7bc8",
         "requestedRef": "main"
       },
@@ -418638,13 +418664,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "a985a30a82759842f96790efc8f19d37626426a1",
+        "headCommit": "79239f070bf0b0e6406751c2b65f9dd133e728df",
         "origin": "https://github.com/Deucarian/Session.git",
         "requestedRef": "main",
-        "requestedRefCommit": "a985a30a82759842f96790efc8f19d37626426a1"
+        "requestedRefCommit": "79239f070bf0b0e6406751c2b65f9dd133e728df"
       },
       "canonicalId": "Deucarian/Session",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -418688,7 +418715,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Session.git",
         "governanceConfigSha256": "3bea4902ebe5f938d359b364bc49a863158c1bcc9f6936f189709c5c18ec2c16",
-        "headCommit": "a985a30a82759842f96790efc8f19d37626426a1",
+        "headCommit": "79239f070bf0b0e6406751c2b65f9dd133e728df",
         "manifestSha256": "0307d3e4738cbc3478e6b5dc595898c01c895289a445a88b59a89ab772596623",
         "requestedRef": "main"
       },
@@ -418799,13 +418826,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89",
+        "headCommit": "2d3220995d020cdf868d488149a3c12a7ae8ed50",
         "origin": "https://github.com/Deucarian/Session-API-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89"
+        "requestedRefCommit": "2d3220995d020cdf868d488149a3c12a7ae8ed50"
       },
       "canonicalId": "Deucarian/Session-API-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -418848,7 +418876,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Session-API-Integration.git",
         "governanceConfigSha256": "b712b9399cdc14f48a67b05add403f625b8e58e52c495eb086a3ee0e02b64ed6",
-        "headCommit": "6a32fdd6a3e259c4d4884cd5e91fd97649a0bd89",
+        "headCommit": "2d3220995d020cdf868d488149a3c12a7ae8ed50",
         "manifestSha256": "8c4e23652a54cf92531c6f6e2c93f1060901dd45a19a040dfc1b51ea4809a3dd",
         "requestedRef": "main"
       },
@@ -418978,13 +419006,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4",
+        "headCommit": "55a6686ad957e11d852d2a1ab472bed183472833",
         "origin": "https://github.com/Deucarian/Simultria-API.git",
         "requestedRef": "main",
-        "requestedRefCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4"
+        "requestedRefCommit": "55a6686ad957e11d852d2a1ab472bed183472833"
       },
       "canonicalId": "Deucarian/Simultria-API",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/simultria-contract-validation.yml"
       ],
       "dependencies": {
@@ -419038,7 +419067,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-API.git",
         "governanceConfigSha256": "cbd782faa0549b81e15777baeb2179626957330b18ca5afa2816989c0fe514e3",
-        "headCommit": "82ddc4993019a065d5950327b36cc8a5b546e2d4",
+        "headCommit": "55a6686ad957e11d852d2a1ab472bed183472833",
         "manifestSha256": "72875e28ff2a7c468dd3eb7416b32831ccef95a56870a9c38324b05b764aea30",
         "requestedRef": "main"
       },
@@ -419157,13 +419186,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "09faf9d26cb15f46563f16811867bc3f308347e9",
+        "headCommit": "8bf5132ba345e8c0af52a42c613d8ccd24093d88",
         "origin": "https://github.com/Deucarian/Simultria-Viewer-Connection.git",
         "requestedRef": "main",
-        "requestedRefCommit": "09faf9d26cb15f46563f16811867bc3f308347e9"
+        "requestedRefCommit": "8bf5132ba345e8c0af52a42c613d8ccd24093d88"
       },
       "canonicalId": "Deucarian/Simultria-Viewer-Connection",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/deucarian-package-validation.yml"
       ],
       "dependencies": {
@@ -419218,7 +419248,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Simultria-Viewer-Connection.git",
         "governanceConfigSha256": "c7db92f454369ac0b2f195a0ef61745a45960918428487307395e2970923096a",
-        "headCommit": "09faf9d26cb15f46563f16811867bc3f308347e9",
+        "headCommit": "8bf5132ba345e8c0af52a42c613d8ccd24093d88",
         "manifestSha256": "a7d7de463ef7b284002018e1e73549454ea1a4770c6b53c0bafa0e9779e71225",
         "requestedRef": "main"
       },
@@ -420158,13 +420188,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567",
+        "headCommit": "b46e5f54381094be6d0c86bdd994e61660ba27a1",
         "origin": "https://github.com/Deucarian/Template-Viewer.git",
         "requestedRef": "main",
-        "requestedRefCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567"
+        "requestedRefCommit": "b46e5f54381094be6d0c86bdd994e61660ba27a1"
       },
       "canonicalId": "Deucarian/Template-Viewer",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -420237,7 +420268,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer.git",
         "governanceConfigSha256": "4411efaee96758c7a2cd43b625b7c8220ed626b730f532302289ba801fc0d251",
-        "headCommit": "74b20f8f92d78b7a382cfbf79fae8ccb6391b567",
+        "headCommit": "b46e5f54381094be6d0c86bdd994e61660ba27a1",
         "manifestSha256": "380461c3172c2449e3df955675a3b218fca6cb1f1d6f9ccb435da9314533a13d",
         "requestedRef": "main"
       },
@@ -420505,13 +420536,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33",
+        "headCommit": "2350e14608e059b36451510bc505f71eb7505ea3",
         "origin": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "requestedRef": "main",
-        "requestedRefCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33"
+        "requestedRefCommit": "2350e14608e059b36451510bc505f71eb7505ea3"
       },
       "canonicalId": "Deucarian/Template-Viewer-Web",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -420576,7 +420608,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Template-Viewer-Web.git",
         "governanceConfigSha256": "038e89c056bf51d846e9625d703afe9a6324ebc8adcdd45205e6ff8cc94232ca",
-        "headCommit": "62022a9df3ebde37d2a801a9ae97467b404dab33",
+        "headCommit": "2350e14608e059b36451510bc505f71eb7505ea3",
         "manifestSha256": "f099fbf70114d890422193dc2e3401bb3cce3a8854ae03a63d19668d1f8843b7",
         "requestedRef": "main"
       },
@@ -420657,13 +420689,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025",
+        "headCommit": "1f18cc81a08bbd65f9b16ade22a552ec239ce892",
         "origin": "https://github.com/Deucarian/Test-Automation.git",
         "requestedRef": "main",
-        "requestedRefCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025"
+        "requestedRefCommit": "1f18cc81a08bbd65f9b16ade22a552ec239ce892"
       },
       "canonicalId": "Deucarian/Test-Automation",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -420697,7 +420730,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Test-Automation.git",
         "governanceConfigSha256": "47aeb55cb625d12f8017e28815e714f2a9454dbfcfc1a762ede01c89d4e86d3b",
-        "headCommit": "3ca8806515cbe8e79e5d1f847d0452d735071025",
+        "headCommit": "1f18cc81a08bbd65f9b16ade22a552ec239ce892",
         "manifestSha256": "b8ed3eaa314531628941bc9d6cd82b535c40f43ac614bdc1caa41fe15a2ac0ce",
         "requestedRef": "main"
       },
@@ -420882,13 +420915,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "f81196fbec59b0ca8a72f7dc9f40d11a4112389b",
+        "headCommit": "7ae8b6740570ed21aa46e8f4cf093bd4b8079a70",
         "origin": "https://github.com/Deucarian/Theming.git",
         "requestedRef": "main",
-        "requestedRefCommit": "f81196fbec59b0ca8a72f7dc9f40d11a4112389b"
+        "requestedRefCommit": "7ae8b6740570ed21aa46e8f4cf093bd4b8079a70"
       },
       "canonicalId": "Deucarian/Theming",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -420947,7 +420981,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Theming.git",
         "governanceConfigSha256": "05ce89a819c1924c825aff6e4f908711da12b9c6978f9f8053fe231c6c082ae2",
-        "headCommit": "f81196fbec59b0ca8a72f7dc9f40d11a4112389b",
+        "headCommit": "7ae8b6740570ed21aa46e8f4cf093bd4b8079a70",
         "manifestSha256": "ff1bb1ff4b460979590d0e0fbc1e1d4a2afd2874da2d0012d966d882b8567f0f",
         "requestedRef": "main"
       },
@@ -421112,13 +421146,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05",
+        "headCommit": "6c7e1fa0a232d80f99e1b567dfe9488767e43c12",
         "origin": "https://github.com/Deucarian/Tweens.git",
         "requestedRef": "main",
-        "requestedRefCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05"
+        "requestedRefCommit": "6c7e1fa0a232d80f99e1b567dfe9488767e43c12"
       },
       "canonicalId": "Deucarian/Tweens",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -421173,7 +421208,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Tweens.git",
         "governanceConfigSha256": "4eae2eca6f3bc98ec054569a7af315d05ceb10a4b19ca374590ef26e0a637b94",
-        "headCommit": "670be41ce7ea16b098b110fa66faa5b8e0e95b05",
+        "headCommit": "6c7e1fa0a232d80f99e1b567dfe9488767e43c12",
         "manifestSha256": "5516eb8a01b453f896301848f2d2839fe63922b61602e112ff6701352972db3f",
         "requestedRef": "main"
       },
@@ -421282,13 +421317,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c",
+        "headCommit": "f34c902d9e84cb45aa43a8e463398fd9db356d60",
         "origin": "https://github.com/Deucarian/UI.git",
         "requestedRef": "main",
-        "requestedRefCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c"
+        "requestedRefCommit": "f34c902d9e84cb45aa43a8e463398fd9db356d60"
       },
       "canonicalId": "Deucarian/UI",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -421338,7 +421374,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI.git",
         "governanceConfigSha256": "b0fae6faf658f7492932a0c11af6bd5820fc575b3c451fa1ccdedf10aade7521",
-        "headCommit": "42527b0ad7563f44bdadb691fae2ddd8c39ee23c",
+        "headCommit": "f34c902d9e84cb45aa43a8e463398fd9db356d60",
         "manifestSha256": "fb4949ecd2836e47390287590027c1c81e1e9246f620271a92158f3c6777c53a",
         "requestedRef": "main"
       },
@@ -421439,13 +421475,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be",
+        "headCommit": "c020b4af0dace42bb93b5d431be623fa16bdb9fc",
         "origin": "https://github.com/Deucarian/UI-Binding.git",
         "requestedRef": "main",
-        "requestedRefCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be"
+        "requestedRefCommit": "c020b4af0dace42bb93b5d431be623fa16bdb9fc"
       },
       "canonicalId": "Deucarian/UI-Binding",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml",
@@ -421490,7 +421527,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI-Binding.git",
         "governanceConfigSha256": "175c3228c537729bd2f32e48e220c553072ca3dca1c6f5eaedb1e2b6c759c7a2",
-        "headCommit": "72d1286f0f7f8ec573863fd2e0804e1ac000a0be",
+        "headCommit": "c020b4af0dace42bb93b5d431be623fa16bdb9fc",
         "manifestSha256": "7a42f55d528ee07994922cdd8de8964f91c8109df1a6c5712c5049c27ae633e6",
         "requestedRef": "main"
       },
@@ -421703,13 +421740,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17",
+        "headCommit": "2b2576709e97d5d898184a1612e7181d1a547fdd",
         "origin": "https://github.com/Deucarian/UI-FLow.git",
         "requestedRef": "main",
-        "requestedRefCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17"
+        "requestedRefCommit": "2b2576709e97d5d898184a1612e7181d1a547fdd"
       },
       "canonicalId": "Deucarian/UI-FLow",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -421760,7 +421798,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UI-FLow.git",
         "governanceConfigSha256": "798835ae8630ac96b704c3050fae0ed92953ac10fe86f60a5ac7e4a10ae97e2e",
-        "headCommit": "0dca6fdf94acd74b4e488c43cd32cc7ffc898d17",
+        "headCommit": "2b2576709e97d5d898184a1612e7181d1a547fdd",
         "manifestSha256": "109dc48f82a3f2308d9c8648484aeb87e0cb8e4cde03b9d91f7f8385f6054520",
         "requestedRef": "main"
       },
@@ -421889,13 +421927,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "9401f64fc6dedc844d059008cb1358ed20c60594",
+        "headCommit": "7bd82eee0192fb82e40fd24a22b30ae88c03efb7",
         "origin": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "9401f64fc6dedc844d059008cb1358ed20c60594"
+        "requestedRefCommit": "7bd82eee0192fb82e40fd24a22b30ae88c03efb7"
       },
       "canonicalId": "Deucarian/UIBinding-CoreState-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/npm-development.yml",
         ".github/workflows/npm-stable.yml",
         ".github/workflows/package-validation.yml"
@@ -421936,7 +421975,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/UIBinding-CoreState-Integration.git",
         "governanceConfigSha256": "0e0e3e434124ee470fafb1af1286889adb9a9de0b09b5a9c2f41c0f71f93cdf7",
-        "headCommit": "9401f64fc6dedc844d059008cb1358ed20c60594",
+        "headCommit": "7bd82eee0192fb82e40fd24a22b30ae88c03efb7",
         "manifestSha256": "0fc58cd3019e8e8877b102f603e932fa5fbdcb09abc8e93058e104488c17165d",
         "requestedRef": "main"
       },
@@ -422106,13 +422145,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c",
+        "headCommit": "70cf408b9ed7ccb87422af8e6a2e8a9d809db2ed",
         "origin": "https://github.com/Deucarian/Viewer-Authentication.git",
         "requestedRef": "main",
-        "requestedRefCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c"
+        "requestedRefCommit": "70cf408b9ed7ccb87422af8e6a2e8a9d809db2ed"
       },
       "canonicalId": "Deucarian/Viewer-Authentication",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -422166,7 +422206,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Authentication.git",
         "governanceConfigSha256": "6942f42c0a016246df1ebee4eb5abe851fbe768a9d009bd0695cf83740099880",
-        "headCommit": "8fd5275dac74e7b0dd1a876b7b6ac34f8cea0e2c",
+        "headCommit": "70cf408b9ed7ccb87422af8e6a2e8a9d809db2ed",
         "manifestSha256": "f8762b7b5cd1956a314b636799b16fbd0446cad129dab7448263945237969c3e",
         "requestedRef": "main"
       },
@@ -422342,13 +422382,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "c3a84c48222a1ff63d121df09f18d7f004b81d47",
+        "headCommit": "741df3e7000cc111c2c0ec28faf93347085380e6",
         "origin": "https://github.com/Deucarian/Viewer-Navigation.git",
         "requestedRef": "main",
-        "requestedRefCommit": "c3a84c48222a1ff63d121df09f18d7f004b81d47"
+        "requestedRefCommit": "741df3e7000cc111c2c0ec28faf93347085380e6"
       },
       "canonicalId": "Deucarian/Viewer-Navigation",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -422414,7 +422455,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Navigation.git",
         "governanceConfigSha256": "5b27e10fe95e43181722624d00826ce1a76ec6ea17607ae3be74ba200b1adfdf",
-        "headCommit": "c3a84c48222a1ff63d121df09f18d7f004b81d47",
+        "headCommit": "741df3e7000cc111c2c0ec28faf93347085380e6",
         "manifestSha256": "c71015f5eeb8bb9393fca16b8413075e31101ec1c89a3c6dc3dfdc8659ccd36a",
         "requestedRef": "main"
       },
@@ -422547,13 +422588,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7",
+        "headCommit": "a2176298ab929fb110e3e5bc5dddf5b0e60ef7c0",
         "origin": "https://github.com/Deucarian/Viewer-Rendering.git",
         "requestedRef": "main",
-        "requestedRefCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7"
+        "requestedRefCommit": "a2176298ab929fb110e3e5bc5dddf5b0e60ef7c0"
       },
       "canonicalId": "Deucarian/Viewer-Rendering",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/deucarian-package-validation.yml"
       ],
       "dependencies": {
@@ -422602,7 +422644,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Rendering.git",
         "governanceConfigSha256": "dd1270da8e19b674e4ed4756ff4199642642c7a269c5175f460fe17c63d65a94",
-        "headCommit": "641a758b82ca7fc2a5d5edea82f705e492a1c6a7",
+        "headCommit": "a2176298ab929fb110e3e5bc5dddf5b0e60ef7c0",
         "manifestSha256": "8320c864a4033368a338be6188d93f8c90dfb4f229493d2ebe8a426d79bdd644",
         "requestedRef": "main"
       },
@@ -422681,13 +422723,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f",
+        "headCommit": "cb669a5f506ef4eae111b076620c9518037d0fb3",
         "origin": "https://github.com/Deucarian/Viewer-Shell.git",
         "requestedRef": "main",
-        "requestedRefCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f"
+        "requestedRefCommit": "cb669a5f506ef4eae111b076620c9518037d0fb3"
       },
       "canonicalId": "Deucarian/Viewer-Shell",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/deucarian-package-validation.yml"
       ],
       "dependencies": {
@@ -422731,7 +422774,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Viewer-Shell.git",
         "governanceConfigSha256": "58f31bb18eae27cb95d069d1a113a005193f794da8becf6a91b66f30bf7fe6e2",
-        "headCommit": "3b244366eb87a7b88e6f190a3c0641c1fe6a764f",
+        "headCommit": "cb669a5f506ef4eae111b076620c9518037d0fb3",
         "manifestSha256": "c1cd53fb18e8b42056038697e916d55209cb648d26672ffa0b5ca338dfd235aa",
         "requestedRef": "main"
       },
@@ -423084,13 +423127,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe",
+        "headCommit": "22ab7a6bf085bde047524d68a57b7d05baab9ed5",
         "origin": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "requestedRef": "main",
-        "requestedRefCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe"
+        "requestedRefCommit": "22ab7a6bf085bde047524d68a57b7d05baab9ed5"
       },
       "canonicalId": "Deucarian/Web-Viewer-Suite",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -423161,7 +423205,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/Web-Viewer-Suite.git",
         "governanceConfigSha256": "9a61fc6db588d516fdd9fa7bb7403058a3a7487a653aa89159c30277a925f541",
-        "headCommit": "4cc4aae4a9dee3b5ba8515bbcf9ac8d841423fbe",
+        "headCommit": "22ab7a6bf085bde047524d68a57b7d05baab9ed5",
         "manifestSha256": "0174833ef8b95482c82ed2eef9742b5ed59f5152ff3c42708393af8daed6a3a4",
         "requestedRef": "main"
       },
@@ -423262,13 +423306,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1",
+        "headCommit": "e314e44a72525e2fc31dfe3a139b7046a7fd1832",
         "origin": "https://github.com/Deucarian/WebGL-Template.git",
         "requestedRef": "main",
-        "requestedRefCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1"
+        "requestedRefCommit": "e314e44a72525e2fc31dfe3a139b7046a7fd1832"
       },
       "canonicalId": "Deucarian/WebGL-Template",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/deucarian-package-validation.yml"
       ],
       "dependencies": {
@@ -423309,7 +423354,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/WebGL-Template.git",
         "governanceConfigSha256": "d76b09f14be2bc8e44e9ba76f9a7f401c65a58e23f5e6d0233f92f300dd20ae4",
-        "headCommit": "72ce690483117e4210b2096c2539c041b3d3f7b1",
+        "headCommit": "e314e44a72525e2fc31dfe3a139b7046a7fd1832",
         "manifestSha256": "81bb8d1379356f7c22646008909f3e0a0a14f43a09f2b34d9d9dfc888fdd8d90",
         "requestedRef": "main"
       },
@@ -423903,13 +423948,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e",
+        "headCommit": "4151841fe982e9b8b600a6cd3dc6998dd5e18e60",
         "origin": "https://github.com/Deucarian/XR-UI.git",
         "requestedRef": "main",
-        "requestedRefCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e"
+        "requestedRefCommit": "4151841fe982e9b8b600a6cd3dc6998dd5e18e60"
       },
       "canonicalId": "Deucarian/XR-UI",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -423966,7 +424012,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/XR-UI.git",
         "governanceConfigSha256": "ec0ff91544b371c3430d6987a80aa08f36ab272d1b4c52baae53e7b36550ebd1",
-        "headCommit": "e0361e71a17b6e52c911904a5c750f3f5e15e74e",
+        "headCommit": "4151841fe982e9b8b600a6cd3dc6998dd5e18e60",
         "manifestSha256": "429dbe6afaaf9158f9ff49e92e5faa3994899f59985e1f4d5c9eb9ea31028626",
         "requestedRef": "main"
       },
@@ -424085,13 +424131,14 @@
         "dirty": false,
         "hasDevelop": false,
         "hasMain": true,
-        "headCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789",
+        "headCommit": "637fdaeff8ebb4cba8e5c0aee4d3f92418371131",
         "origin": "https://github.com/Deucarian/XR-UI-Theming-Integration.git",
         "requestedRef": "main",
-        "requestedRefCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789"
+        "requestedRefCommit": "637fdaeff8ebb4cba8e5c0aee4d3f92418371131"
       },
       "canonicalId": "Deucarian/XR-UI-Theming-Integration",
       "ciWorkflows": [
+        ".github/workflows/bitbucket-sync.yml",
         ".github/workflows/package-validation.yml"
       ],
       "dependencies": {
@@ -424133,7 +424180,7 @@
         "auditInputSha256": "",
         "canonicalUrl": "https://github.com/Deucarian/XR-UI-Theming-Integration.git",
         "governanceConfigSha256": "8412a6bc6b71538ec4136404cccd505d3359e327fa0905571ba7d3171a704e3a",
-        "headCommit": "3d1d9429c98f74e5081505743ab8205e10cb2789",
+        "headCommit": "637fdaeff8ebb4cba8e5c0aee4d3f92418371131",
         "manifestSha256": "53c8e18c3eeca727ac01e8f8b18eaf58a0c58168d0e668ed3b8ff91b649accd1",
         "requestedRef": "main"
       },
