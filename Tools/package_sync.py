@@ -182,8 +182,7 @@ def finish_pending(github, pull, configuration):
         print('Merge remains blocked or pending: ' + detail['html_url'])
         return
     result = github.request('/pulls/' + str(pull['number']) + '/merge', 'PUT', {
-        'sha': revision, 'merge_method': 'merge', 'commit_title': 'Synchronize shared package changes from Bitbucket',
-        'commit_message': 'Preserve the Deucarian package projection of the reviewed shared changes.'})
+        'sha': revision, 'merge_method': 'rebase'})
     if not result.get('merged'):
         raise RuntimeError('GitHub did not merge the validated synchronization pull request')
     print('Merged validated synchronization: ' + detail['html_url'])
@@ -250,7 +249,10 @@ def main():
     profile = json.loads(args.profile.read_text())
     github = GitHub(configuration['githubRepository'], os.environ['GH_TOKEN']) if args.publish else None
     failures = []
-    for channel in ('main', 'develop'):
+    channels = configuration.get('channels', ['main', 'develop'])
+    if not channels or len(set(channels)) != len(channels) or any(channel not in ('main', 'develop') for channel in channels):
+        raise SystemExit('Invalid synchronization channel configuration')
+    for channel in channels:
         try:
             sync_channel(args.repository_root, args.bitbucket_root, profile, configuration, channel,
                          github, args.publish)
