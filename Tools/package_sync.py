@@ -8,6 +8,7 @@ import os
 import re
 import subprocess
 import tempfile
+from datetime import datetime, timezone
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -125,8 +126,31 @@ class GitHub:
 
 
 def commit(root, tree, parent, message, identity):
-    return text_git(root, 'commit-tree', write_tree(root, tree), '-p', parent,
+    return text_git(root, 'commit-tree', write_tree(root, tree), *(['-p', parent] if parent else []),
                     data=(message + '\n').encode(), env=identity)
+
+
+def maintain_schedule_activity(root, configuration, now=None):
+    """Keep quiet public repositories active without touching either release branch."""
+    if not configuration.get('keepScheduleActive', False):
+        return
+    now = now or datetime.now(timezone.utc)
+    branch = 'sync/schedule-activity'
+    try:
+        previous = text_git(root, 'rev-parse', '--verify', 'refs/remotes/origin/' + branch)
+    except RuntimeError:
+        previous = None
+    if previous:
+        updated = datetime.fromtimestamp(int(text_git(root, 'show', '-s', '--format=%ct', previous)), timezone.utc)
+        if (now - updated).total_seconds() < 28 * 24 * 60 * 60:
+            return
+    owner = configuration['committer']
+    identity = {f'GIT_{role}_{field}': value for role in ('AUTHOR', 'COMMITTER')
+                for field, value in (('NAME', owner['name']), ('EMAIL', owner['email']), ('DATE', now.isoformat()))}
+    tree = {'schedule-activity.json': Blob('100644', (json.dumps({'checkedAt': now.isoformat()}, indent=2) + '\n').encode())}
+    revision = commit(root, tree, previous, 'Maintain scheduled package synchronization', identity)
+    git(root, 'push', 'origin', revision + ':refs/heads/' + branch)
+    print('Recorded monthly synchronization activity on its separate bookkeeping branch')
 
 
 def pending_pull(github, channel):
@@ -248,6 +272,8 @@ def main():
     configuration = json.loads((args.repository_root / '.github/package-sync/config.json').read_text())
     profile = json.loads(args.profile.read_text())
     github = GitHub(configuration['githubRepository'], os.environ['GH_TOKEN']) if args.publish else None
+    if args.publish:
+        maintain_schedule_activity(args.repository_root, configuration)
     failures = []
     channels = configuration.get('channels', ['main', 'develop'])
     if not channels or len(set(channels)) != len(channels) or any(channel not in ('main', 'develop') for channel in channels):
