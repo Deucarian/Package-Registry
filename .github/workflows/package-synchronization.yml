@@ -1,0 +1,74 @@
+name: Synchronize shared package
+
+on:
+  workflow_call:
+    inputs:
+      engine-ref:
+        required: true
+        type: string
+    secrets:
+      BITBUCKET_READ_KEY:
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  synchronize:
+    name: Pull shared changes from Bitbucket
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout GitHub package
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          path: package
+
+      - name: Checkout pinned synchronization tools
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: Deucarian/Package-Registry
+          ref: ${{ inputs.engine-ref }}
+          path: registry
+          persist-credentials: false
+
+      - name: Read private Bitbucket package
+        shell: bash
+        env:
+          BITBUCKET_READ_KEY: ${{ secrets.BITBUCKET_READ_KEY }}
+        run: |
+          set -euo pipefail
+          key="$RUNNER_TEMP/package-read-key"
+          trap 'rm -f "$key"' EXIT
+          umask 077
+          printf '%s\n' "$BITBUCKET_READ_KEY" > "$key"
+          unset BITBUCKET_READ_KEY
+          source_repo="$(python - <<'PY'
+          import json, os, pathlib
+          config = json.loads(pathlib.Path('package/.github/package-sync/config.json').read_text())
+          profile = json.loads(pathlib.Path('registry/Tools/package-sync-profile.json').read_text())
+          assert config['githubRepository'] == os.environ['GITHUB_REPOSITORY']
+          owner, name = config['githubRepository'].split('/')
+          assert owner == 'Deucarian'
+          print('simultria/' + profile['repositories'][name])
+          PY
+          )"
+          [[ "$source_repo" =~ ^simultria/[a-z0-9.-]+$ ]]
+          export GIT_TERMINAL_PROMPT=0
+          export GIT_SSH_COMMAND="ssh -F /dev/null -i $key -o IdentityAgent=none -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$GITHUB_WORKSPACE/registry/Tools/bitbucket-known-hosts"
+          git -c core.hooksPath=/dev/null clone --bare "git@bitbucket.org:$source_repo.git" "$RUNNER_TEMP/bitbucket-package"
+
+      - name: Prepare translated pull requests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python registry/Tools/package_sync.py \
+            --repository-root "$GITHUB_WORKSPACE/package" \
+            --bitbucket-root "$RUNNER_TEMP/bitbucket-package" \
+            --profile "$GITHUB_WORKSPACE/registry/Tools/package-sync-profile.json" \
+            --publish
