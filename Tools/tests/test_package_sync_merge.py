@@ -22,6 +22,7 @@ class MergeTests(unittest.TestCase):
         finish_pending(client, pull, config)
         self.assertEqual('/pulls/1/merge', client.request.call_args.args[0])
         self.assertEqual('a' * 40, client.request.call_args.args[2]['sha'])
+        self.assertEqual('rebase', client.request.call_args.args[2]['merge_method'])
 
     def test_failed_validation_cannot_merge(self):
         client, pull, config = self.fixture(conclusion='failure')
