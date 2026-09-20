@@ -25,7 +25,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Bootstrap | com.deucarian.bootstrap | 1.2.19 | 2021.3 | yes | clean | (none) | 2 | 3 |
 | Build-Pipeline | com.deucarian.build-pipeline | 0.6.5 | 6000.0 | yes | clean | com.deucarian.editor, com.deucarian.logging, com.unity.nuget.mono-cecil | 2 | 89 |
 | Camera-Navigation | com.deucarian.camera-navigation | 0.4.0 | 2022.3 | yes | clean | com.deucarian.common, com.deucarian.editor, com.deucarian.diagnostics, com.unity.modules.imgui, com.unity.render-pipelines.universal | 7 | 225 |
-| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 4 | 84 |
+| CameraNavigation-InputSystem-Integration | com.deucarian.camera-navigation.input-system-integration | 0.1.7 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.unity.inputsystem | 4 | 86 |
 | Combat | com.deucarian.combat | 0.2.0 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.editor, com.deucarian.diagnostics | 8 | 305 |
 | Command-Routing | com.deucarian.command-routing | 0.3.0 | 2021.3 | yes | clean | com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 6 | 181 |
 | Command-Routing-UDP-Integration | com.deucarian.command-routing.udp-integration | 0.1.6 | 2021.3 | yes | clean | com.deucarian.command-routing, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.unity.nuget.newtonsoft-json | 4 | 41 |
@@ -73,7 +73,7 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | UI-FLow | com.deucarian.ui-flow | 0.5.0 | 2021.3 | yes | clean | com.deucarian.common, com.unity.ugui, com.deucarian.logging, com.deucarian.editor | 8 | 375 |
 | UIBinding-CoreState-Integration | com.deucarian.ui-binding.core-state-integration | 1.0.4 | 2021.3 | yes | clean | com.deucarian.core-state, com.deucarian.ui-binding | 3 | 15 |
 | Viewer-Authentication | com.deucarian.authentication | 1.1.0 | 2021.3 | yes | clean | com.deucarian.api, com.deucarian.editor, com.deucarian.session, com.deucarian.session.api-integration, com.unity.nuget.newtonsoft-json | 6 | 163 |
-| Viewer-Navigation | com.deucarian.viewer-navigation | 0.6.0 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 192 |
+| Viewer-Navigation | com.deucarian.viewer-navigation | 0.6.0 | 2022.3 | yes | clean | com.deucarian.camera-navigation, com.deucarian.camera-navigation.input-system-integration, com.deucarian.common, com.deucarian.diagnostics, com.deucarian.editor, com.deucarian.logging, com.deucarian.pointer-capture, com.deucarian.theming, com.deucarian.ui, com.unity.ugui, com.unity.modules.uielements, com.unity.render-pipelines.universal | 6 | 193 |
 | Viewer-Rendering | com.deucarian.viewer-rendering | 0.1.1 | 6000.0 | yes | clean | com.deucarian.common, com.deucarian.diagnostics, com.deucarian.logging, com.deucarian.theming, com.unity.render-pipelines.universal | 4 | 179 |
 | Viewer-Shell | com.deucarian.viewer-shell | 0.1.1 | 6000.0 | yes | clean | com.deucarian.theming, com.deucarian.ui, com.deucarian.viewer-rendering, com.unity.modules.uielements | 2 | 90 |
 | Weapon-Systems | com.deucarian.weapon-systems | 0.2.0 | 6000.3 | yes | clean | com.deucarian.gameplay-foundation, com.deucarian.attacks, com.deucarian.editor, com.deucarian.projectiles, com.deucarian.game-content-authoring, com.deucarian.diagnostics, com.deucarian.combat | 8 | 224 |
@@ -89,18 +89,18 @@ This is the hardened organization-wide audit snapshot for `Deucarian` at `develo
 | Metric | Count |
 | --- | --- |
 | Repositories | 66 |
-| Parsed methods/bodies analyzed | 21885 |
+| Parsed methods/bodies analyzed | 21891 |
 | Exact AST clone groups | 96 |
 | Normalized structural clone groups | 167 |
 | Same-symbol semantic candidates | 41 |
-| Runtime public API symbols | 11037 |
+| Runtime public API symbols | 11040 |
 | Editor public API symbols | 3658 |
-| Test public symbols excluded from production API | 7911 |
+| Test public symbols excluded from production API | 7916 |
 | Sample public symbols excluded from production API | 659 |
-| Internal/private production symbols | 19356 |
-| Public API symbols missing XML documentation | 12050 |
+| Internal/private production symbols | 19357 |
+| Public API symbols missing XML documentation | 12052 |
 | Debug invocation records | 17 |
-| Unity object lifetime records | 1296 |
+| Unity object lifetime records | 1299 |
 | Documentation drift findings | 53 |
 | Dependency usage findings | 288 |
 | Dependency cycles | 0 |
