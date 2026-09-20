@@ -205,8 +205,11 @@ def finish_pending(github, pull, configuration):
     if detail['mergeable_state'] != 'clean':
         print('Merge remains blocked or pending: ' + detail['html_url'])
         return
+    merge_method = configuration.get('mergeMethod', 'rebase')
+    if merge_method not in ('rebase', 'squash', 'merge'):
+        raise RuntimeError('Invalid configured merge method')
     result = github.request('/pulls/' + str(pull['number']) + '/merge', 'PUT', {
-        'sha': revision, 'merge_method': 'rebase'})
+        'sha': revision, 'merge_method': merge_method})
     if not result.get('merged'):
         raise RuntimeError('GitHub did not merge the validated synchronization pull request')
     print('Merged validated synchronization: ' + detail['html_url'])
