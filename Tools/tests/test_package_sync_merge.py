@@ -29,6 +29,19 @@ class MergeTests(unittest.TestCase):
         finish_pending(client, pull, config)
         self.assertEqual(2, client.request.call_count)
 
+    def test_squash_only_repository_policy_is_respected(self):
+        client, pull, config = self.fixture()
+        config['mergeMethod'] = 'squash'
+        finish_pending(client, pull, config)
+        self.assertEqual('squash', client.request.call_args.args[2]['merge_method'])
+
+    def test_invalid_merge_method_cannot_publish(self):
+        client, pull, config = self.fixture()
+        config['mergeMethod'] = 'invalid'
+        with self.assertRaisesRegex(RuntimeError, 'merge method'):
+            finish_pending(client, pull, config)
+        self.assertEqual(3, client.request.call_count)
+
     def test_review_objection_blocks_automatic_merge(self):
         client, pull, config = self.fixture(reviews=[{'state': 'CHANGES_REQUESTED', 'user': {'login': 'reviewer'}}])
         finish_pending(client, pull, config)
