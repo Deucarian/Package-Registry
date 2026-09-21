@@ -9,6 +9,9 @@ on:
     secrets:
       BITBUCKET_READ_KEY:
         required: true
+      PACKAGE_REGISTRY_READ_TOKEN:
+        description: Read-only token for Package Registry when its source is private.
+        required: false
 
 permissions:
   contents: write
@@ -31,6 +34,7 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: Deucarian/Package-Registry
+          token: ${{ secrets.PACKAGE_REGISTRY_READ_TOKEN || github.token }}
           ref: ${{ inputs.engine-ref }}
           path: registry
           persist-credentials: false

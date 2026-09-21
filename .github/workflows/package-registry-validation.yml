@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event_name == 'schedule' && 'develop' || github.ref }}
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -62,6 +63,10 @@ jobs:
       - name: Provision organization snapshots and check canonical audit
         shell: bash
         env:
+          GH_TOKEN: ${{ secrets.PACKAGE_REPOSITORIES_READ_TOKEN || github.token }}
+          GIT_CONFIG_COUNT: "1"
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
         run: |
           python Tools/Generate-DeucarianAudit.py \
