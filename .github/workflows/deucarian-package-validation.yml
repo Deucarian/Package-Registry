@@ -2,6 +2,10 @@ name: Deucarian package validation
 
 on:
   workflow_call:
+    secrets:
+      PACKAGE_REGISTRY_READ_TOKEN:
+        description: Read-only token for Package Registry when its source is private.
+        required: false
     inputs:
       package-config:
         description: Path to the package validation config inside the caller repository.
@@ -33,6 +37,8 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: Deucarian/Package-Registry
+          token: ${{ secrets.PACKAGE_REGISTRY_READ_TOKEN || github.token }}
+          persist-credentials: false
           ref: ${{ inputs.registry-ref }}
           path: package-registry
 
