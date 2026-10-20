@@ -9,23 +9,43 @@ on:
     secrets:
       BITBUCKET_READ_KEY:
         required: true
+      PACKAGE_SYNC_APP_PRIVATE_KEY:
+        required: false
 
 permissions:
   contents: write
   pull-requests: write
   actions: write
+  checks: read
 
 jobs:
   synchronize:
     name: Pull shared changes from Bitbucket
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      HAS_SYNC_APP: ${{ vars.PACKAGE_SYNC_APP_ID != '' && secrets.PACKAGE_SYNC_APP_PRIVATE_KEY != '' }}
     steps:
+      - name: Create repository-scoped synchronization token
+        id: sync-token
+        if: env.HAS_SYNC_APP == 'true'
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PACKAGE_SYNC_APP_ID }}
+          private-key: ${{ secrets.PACKAGE_SYNC_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+          permission-actions: write
+          permission-checks: read
+
       - name: Checkout GitHub package
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
           path: package
+          token: ${{ steps.sync-token.outputs.token || github.token }}
 
       - name: Checkout pinned synchronization tools
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -64,7 +84,7 @@ jobs:
       - name: Prepare translated pull requests
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.sync-token.outputs.token || github.token }}
         run: |
           set -euo pipefail
           python registry/Tools/package_sync.py \

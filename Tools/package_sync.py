@@ -15,6 +15,8 @@ import urllib.request
 from pathlib import Path
 
 from package_sync_projection import TranslationNeedsReview
+from package_sync_documentation import align_host_documentation
+from package_sync_pending import dispatch_validation, finish_pending
 from package_sync_tree import Blob, merge_trees, translate_tree, validate_path
 
 STATE = '.github/package-sync/state.json'
@@ -155,64 +157,10 @@ def maintain_schedule_activity(root, configuration, now=None):
 
 def pending_pull(github, channel):
     pulls = github.request('/pulls?state=open&base=' + channel + '&per_page=100')
-    prefix = f'chore/bitbucket-sync-{channel}-'
-    return [pull for pull in pulls if pull['head']['ref'].startswith(prefix)
+    prefixes = (f'feature/bitbucket-sync-{channel}-', f'chore/bitbucket-sync-{channel}-')
+    return [pull for pull in pulls if pull['head']['ref'].startswith(prefixes)
             and pull['head']['repo']['full_name'] == github.repository]
 
-
-def dispatch_validation(github, ref, workflow):
-    github.request('/actions/workflows/' + urllib.parse.quote(workflow, safe='') + '/dispatches',
-                   'POST', {'ref': ref})
-
-
-def finish_pending(github, pull, configuration):
-    detail = github.request('/pulls/' + str(pull['number']))
-    if detail['draft'] or detail.get('requested_reviewers') or detail.get('requested_teams'):
-        print('Awaiting requested review: ' + detail['html_url'])
-        return
-    if not configuration.get('mergeAfterValidation', False):
-        print('Awaiting review: ' + detail['html_url'])
-        return
-    revision = detail['head']['sha']
-    checks = github.request('/commits/' + revision + '/check-runs?per_page=100')['check_runs']
-    if not checks:
-        dispatch_validation(github, detail['head']['ref'], configuration['validationWorkflow'])
-        print('Requested validation for synchronization pull request')
-        return
-    required = set(configuration['requiredChecks'])
-    successful = {check['name'] for check in checks if check['status'] == 'completed'
-                  and check['conclusion'] == 'success'}
-    if not required or not required.issubset(successful):
-        print('Awaiting successful required checks: ' + detail['html_url'])
-        return
-    if any(check['status'] != 'completed' or check['conclusion'] not in ('success', 'neutral', 'skipped')
-           for check in checks):
-        print('Additional checks need attention: ' + detail['html_url'])
-        return
-    reviews = github.request('/pulls/' + str(pull['number']) + '/reviews?per_page=100')
-    latest_reviews = {}
-    for review in reviews:
-        if review['state'] in ('APPROVED', 'CHANGES_REQUESTED', 'DISMISSED'):
-            latest_reviews[review['user']['login']] = review['state']
-    if 'CHANGES_REQUESTED' in latest_reviews.values():
-        print('Changes requested by a reviewer: ' + detail['html_url'])
-        return
-    if detail['mergeable_state'] == 'behind':
-        github.request('/pulls/' + str(pull['number']) + '/update-branch', 'PUT', {'expected_head_sha': revision})
-        dispatch_validation(github, detail['head']['ref'], configuration['validationWorkflow'])
-        print('Updated synchronization branch; fresh validation required')
-        return
-    if detail['mergeable_state'] != 'clean':
-        print('Merge remains blocked or pending: ' + detail['html_url'])
-        return
-    merge_method = configuration.get('mergeMethod', 'rebase')
-    if merge_method not in ('rebase', 'squash', 'merge'):
-        raise RuntimeError('Invalid configured merge method')
-    result = github.request('/pulls/' + str(pull['number']) + '/merge', 'PUT', {
-        'sha': revision, 'merge_method': merge_method})
-    if not result.get('merged'):
-        raise RuntimeError('GitHub did not merge the validated synchronization pull request')
-    print('Merged validated synchronization: ' + detail['html_url'])
 
 
 def sync_channel(root, upstream, profile, configuration, channel, github, publish):
@@ -230,7 +178,10 @@ def sync_channel(root, upstream, profile, configuration, channel, github, publis
     if github:
         pending = pending_pull(github, channel)
         if pending:
-            finish_pending(github, pending[0], configuration)
+            outcome = finish_pending(github, pending[0], configuration)
+            print(f'{channel}: {outcome.message} {outcome.url}')
+            if outcome.needs_attention:
+                raise TranslationNeedsReview(outcome.message + ' ' + outcome.url)
             return
     baseline = read_tree(root, pair['githubBaseline'])
     git(upstream, 'merge-base', '--is-ancestor', pair['bitbucketCommit'], incoming_ref)
@@ -238,6 +189,10 @@ def sync_channel(root, upstream, profile, configuration, channel, github, publis
     new_upstream = read_tree(upstream, incoming_ref)
     canonical, changed = translate_tree(baseline, old_upstream, new_upstream, profile)
     merged = merge_trees(current, baseline, canonical)
+    repository = configuration.get('githubRepository', '').split('/')[-1]
+    slug = profile['repositories'].get(repository)
+    source_url = 'https://bitbucket.org/simultria/' + slug if slug else None
+    merged, documentation = align_host_documentation(merged, incoming_ref, source_url)
     name, email, timestamp = text_git(upstream, 'show', '-s', '--format=%an%n%ae%n%aI', incoming_ref).splitlines()
     identity = {'GIT_AUTHOR_NAME': name, 'GIT_AUTHOR_EMAIL': email, 'GIT_AUTHOR_DATE': timestamp,
                 'GIT_COMMITTER_NAME': configuration['committer']['name'],
@@ -246,7 +201,7 @@ def sync_channel(root, upstream, profile, configuration, channel, github, publis
                               f'Apply shared package changes through {incoming_ref[:12]}', identity)
     state['channels'][channel] = {'bitbucketCommit': incoming_ref, 'githubBaseline': canonical_commit}
     merged[STATE] = Blob('100644', (json.dumps(state, indent=2) + '\n').encode())
-    branch = f'chore/bitbucket-sync-{channel}-{incoming_ref[:12]}'
+    branch = f'feature/bitbucket-sync-{channel}-{incoming_ref[:12]}'
     proposed = commit(root, merged, target, 'Synchronize shared package changes from Bitbucket', identity)
     print(f'{channel}: {len(changed)} shared files prepared; revision {proposed}')
     if not publish:

@@ -18,17 +18,42 @@ class TranslationNeedsReview(ValueError):
 
 
 class Projection:
-    def __init__(self, forward_rules: dict[str, str], reverse_identifier_rules: dict[str, str]):
+    def __init__(self, forward_rules: dict[str, str], reverse_identifier_rules: dict[str, str],
+                 ambiguous_identifiers=(), reverse_exact_rules: dict[str, str] | None = None,
+                 ambiguous_exact_identifiers=()):
         self.rules = forward_rules
         self.pattern = self.compile(forward_rules)
         self.reverse_rules = reverse_identifier_rules
         self.reverse_pattern = self.compile(reverse_identifier_rules)
+        self.ambiguous_pattern = self.compile(dict.fromkeys(ambiguous_identifiers, ''))
+        self.reverse_exact_rules = reverse_exact_rules or {}
+        self.ambiguous_exact_identifiers = set(ambiguous_exact_identifiers)
+        self.compile(self.reverse_exact_rules)
+        self.compile(dict.fromkeys(self.ambiguous_exact_identifiers, ''))
+        self.target_pattern = self.compile({value: '' for value in forward_rules.values() if value})
 
     @staticmethod
     def compile(rules):
         if any(not key for key in rules):
             raise ValueError('Empty translation key')
         return re.compile('|'.join(re.escape(key) for key in sorted(rules, key=len, reverse=True)) or r'(?!)')
+
+    def _exact_tokens(self, text, allow_unquoted=True):
+        identities = self.reverse_exact_rules.keys() | self.ambiguous_exact_identifiers
+        if not identities:
+            return
+        if allow_unquoted and text in identities:
+            yield 0, len(text), text, '', ''
+            return
+        # Consume whole quoted values, including escaped and C# verbatim quotes.
+        # A resource-looking substring inside a longer value is never a load-path identity.
+        quoted = r'''(?<!\\)(?:@"(?:[^"]|"")*"|"(?:\\.|[^"\\\r\n])*"|'(?:\\.|[^'\\\r\n])*')'''
+        for match in re.finditer(quoted, text):
+            token = match.group()
+            prefix = '@"' if token.startswith('@"') else token[0]
+            identity = token[len(prefix):-1]
+            if identity in identities:
+                yield match.start(), match.end(), identity, prefix, token[-1]
 
     def forward(self, source: str):
         return self.pattern.sub(lambda match: self.rules[match.group()], source)
@@ -54,7 +79,21 @@ class Projection:
         assert len(boundaries) == len(text) + 1
         return text, boundaries
 
-    def reverse_insert(self, inserted):
+    def reverse_insert(self, inserted, *, allow_unquoted_exact=True):
+        if self.ambiguous_pattern.search(inserted):
+            raise TranslationNeedsReview('Identifier has multiple source mappings')
+        parts = []
+        cursor = 0
+        for start, end, identity, prefix, suffix in self._exact_tokens(inserted, allow_unquoted_exact):
+            if identity in self.ambiguous_exact_identifiers:
+                raise TranslationNeedsReview('Identifier has multiple source mappings')
+            parts.append(self._reverse_identifiers(inserted[cursor:start]))
+            parts.append(prefix + self.reverse_exact_rules[identity] + suffix)
+            cursor = end
+        parts.append(self._reverse_identifiers(inserted[cursor:]))
+        return ''.join(parts)
+
+    def _reverse_identifiers(self, inserted):
         # Protect only approved, complete identifiers/qualified prefixes. Bare product names
         # are ambiguous: Simultria can be original business terminology or translated branding.
         parts = []
@@ -70,6 +109,43 @@ class Projection:
         parts.append(inserted[cursor:])
         return ''.join(parts)
 
+    def _target_tokens(self, text):
+        """Keep known translated tokens indivisible, with original character offsets."""
+        tokens = []
+        cursor = 0
+        for match in self.target_pattern.finditer(text):
+            tokens.extend(text[cursor:match.start()])
+            tokens.append(match.group())
+            cursor = match.end()
+        tokens.extend(text[cursor:])
+        offsets = [0]
+        for token in tokens:
+            offsets.append(offsets[-1] + len(token))
+        return tokens, offsets
+
+    def _change_opcodes(self, baseline, incoming, boundaries):
+        opcodes = difflib.SequenceMatcher(None, baseline, incoming, autojunk=False).get_opcodes()
+        split_changes = [(start, end) for operation, start, end, _, _ in opcodes
+                         if operation != 'equal' and (boundaries[start] is None or boundaries[end] is None)]
+        if not split_changes:
+            return opcodes
+        before, before_offsets = self._target_tokens(baseline)
+        after, after_offsets = self._target_tokens(incoming)
+        result = []
+        for operation, start, end, new_start, new_end in difflib.SequenceMatcher(
+                None, before, after, autojunk=False).get_opcodes():
+            start, end = before_offsets[start], before_offsets[end]
+            new_start, new_end = after_offsets[new_start], after_offsets[new_end]
+            if (operation not in ('equal', 'delete')
+                    and any(start <= split_start <= split_end <= end for split_start, split_end in split_changes)
+                    and not self.reverse_pattern.search(incoming[new_start:new_end])
+                    and not any(self._exact_tokens(incoming[new_start:new_end]))):
+                # Expanding a partial typo into a whole-token replacement must
+                # not make an unknown renamed identity silently acceptable.
+                raise TranslationNeedsReview('Change overlaps the interior of a renamed identifier')
+            result.append((operation, start, end, new_start, new_end))
+        return result
+
     def reverse_change(self, github_baseline: str, bitbucket_changed: str, bitbucket_baseline: str | None = None):
         translated, boundaries = self.mapped_baseline(github_baseline)
         baseline = translated if bitbucket_baseline is None else bitbucket_baseline
@@ -84,8 +160,12 @@ class Projection:
                     overlay_positions.update(range(new_start, new_end + 1))
             boundaries = mapped
         edits = []
-        for operation, start, end, new_start, new_end in difflib.SequenceMatcher(
-                None, baseline, bitbucket_changed, autojunk=False).get_opcodes():
+        exact_value_spans = {
+            (start + len(prefix), end - len(suffix))
+            for start, end, _, prefix, suffix in self._exact_tokens(bitbucket_changed)
+        }
+        for operation, start, end, new_start, new_end in self._change_opcodes(
+                baseline, bitbucket_changed, boundaries):
             if operation == 'equal':
                 continue
             before, after = boundaries[start], boundaries[end]
@@ -93,7 +173,10 @@ class Projection:
                 raise TranslationNeedsReview('Change overlaps a host-specific baseline difference')
             if before is None or after is None:
                 raise TranslationNeedsReview('Change overlaps the interior of a renamed identifier')
-            replacement = self.reverse_insert(bitbucket_changed[new_start:new_end])
+            replacement = self.reverse_insert(
+                bitbucket_changed[new_start:new_end],
+                allow_unquoted_exact=(new_start, new_end) in exact_value_spans,
+            )
             edits.append((before, after, replacement))
         result = github_baseline
         for start, end, replacement in reversed(edits):
