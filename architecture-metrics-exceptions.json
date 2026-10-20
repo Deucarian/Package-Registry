@@ -1003,6 +1003,15 @@
           "mutableGlobals": 1
         },
         "reason": "SIM-879 palette and scale-origin review: Runtime/Catalog/SimultriaActivityCatalogRuntime.cs is unchanged from d4d17162ecead9ffa48fce17b06c4fe5c95dbe7d. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 viewer quality review: existing owner is unchanged from d9bf1e5034af8848ef97e14130014fc15d4d39fa; verified source diff is empty. SIM-875 Processor contract review: runtime notification and editor subscriber are byte-for-byte unchanged from develop eb2a50d6f5c90241812544067a773080402f75bd. This single static tooling event refreshes the editor command catalog; authoritative catalog state and ordinary subscriptions remain instance-owned. The editor subscriber removes its own handler before adding it. No new global state or increased allowance. Scope is this package version only; replacing the tooling event requires a separate lifecycle change. No metric allowance increase. New contrast/preparation/visibility objects own instance state."
+      },
+      {
+        "assembly": "Deucarian.ActivityVisualization.Simultria",
+        "type": "Deucarian.ActivityVisualization.Simultria.SimultriaActivityCatalogNotifications",
+        "version": "0.9.0",
+        "limits": {
+          "mutableGlobals": 1
+        },
+        "reason": "Callback integration version review: the notification type and Editor/SimultriaActivityCommandCatalogRefresh.cs subscriber are unchanged from the reviewed 0.7.1 channel baselines e95e0f7ef436b59df10b2f9fc7cf12216ede2c48 (develop) and 17e99ede662ff6712d7759069857b78e074b53c3 (main). Renew the existing one-event allowance without increasing it. This tooling signal refreshes the editor command catalog; authoritative catalog state and ordinary subscriptions stay instance-owned, and the editor subscriber removes its own handler before adding it. Replacing the tooling event remains a separate lifecycle change. This allowance is limited to package version 0.9.0."
       }
     ],
     "com.deucarian.tweens": [
@@ -1059,6 +1068,26 @@
           "mutableGlobals": 3
         },
         "reason": "SIM-879 palette and scale-origin review: Runtime/Visibility/TweenVisibilityProfile.cs is unchanged from 5a6fca7868ad4a664cb70ed57ef598dea13d6e05. No allowance increase. New palette/pivot helpers contain immutable values or pure functions; cached per-object bounds stay instance-owned. SIM-879 review of existing Tweens 0.2.0 runtime (3eafe7aa9b42d1c00e6f574216cca68ffae30b9d), unchanged by the inspector lifetime fix. The existing cached project profile, loaded guard and reduced-motion preference provide the package-wide defaults. Subsystem registration resets all three; individual transition and object state is instance-owned. This allowance covers only those existing fields; no global domain state is permitted."
+      }
+    ],
+    "com.deucarian.api": [
+      {
+        "assembly": "Deucarian.API",
+        "type": "Deucarian.API.Core.ApiCallbacks",
+        "version": "2.2.0",
+        "limits": {
+          "mutableGlobals": 2
+        },
+        "reason": "Reviewed callback dispatcher ownership: the two fields hold only Unity synchronization context and main-thread identity. Subsystem registration resets them; player startup and Editor initialization restore the platform context. Request, authentication, connection, and cancellation state remain outside these globals. Existing callback tests cover main-thread dispatch, typed failure/cancellation, exactly one completion, and missing-context rejection. This exact two-field allowance is limited to package version 2.2.0."
+      },
+      {
+        "assembly": "Deucarian.API",
+        "type": "Deucarian.API.Services.ApiServices",
+        "version": "2.2.0",
+        "limits": {
+          "lines": 772
+        },
+        "reason": "Reviewed compatibility facade for mandatory typed success/failure callback parity: 18 callback counterparts delegate to existing request methods and the shared ApiCallbacks dispatcher. The pre-existing facade implementation only gains the partial declaration; no transport, parsing, or lifecycle responsibility is added. The 772-line aggregate spans files of 434, 151, and 232 lines, each below the 500-line production-file limit. Existing budgets for 40 methods, 300 statements, and the single legacy client field are unchanged. Retain the public signatures for source compatibility; this exact aggregate allowance expires after package version 2.2.0."
       }
     ]
   }
