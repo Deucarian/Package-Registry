@@ -2043,7 +2043,13 @@
           "includePlatforms": [],
           "reference": "Deucarian.CameraNavigation",
           "scope": "Runtime production",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_INPUT_SYSTEM_NORMALIZED_SCROLL",
+              "expression": "6000.0.9",
+              "name": "Unity"
+            }
+          ]
         },
         {
           "asmdef": "Tests/EditMode/Deucarian.CameraNavigation.InputSystemIntegration.Tests.EditMode.asmdef",
@@ -2059,7 +2065,13 @@
           ],
           "reference": "Deucarian.CameraNavigation",
           "scope": "Test",
-          "versionDefines": []
+          "versionDefines": [
+            {
+              "define": "DEUCARIAN_INPUT_SYSTEM_NORMALIZED_SCROLL",
+              "expression": "6000.0.9",
+              "name": "Unity"
+            }
+          ]
         }
       ],
       "repository": "CameraNavigation-InputSystem-Integration",

@@ -50,6 +50,12 @@
     "com.deucarian.xr-ui": "com.simultria.xr-ui",
     "com.deucarian.xr-ui.theming-integration": "com.simultria.xr-ui.theming-integration"
   },
+  "nativeBrandPackages": [
+    "com.deucarian.simultria-api",
+    "com.deucarian.activity-visualization.simultria",
+    "com.deucarian.simultria-viewer-integration",
+    "com.deucarian.simultria.rendering"
+  ],
   "namespaceOverrides": {
     "Deucarian.Simultria.API": "Simultria.Backend.API",
     "Deucarian.Simultria.UnityBuildRouting": "Simultria.Backend.UnityBuildRouting",

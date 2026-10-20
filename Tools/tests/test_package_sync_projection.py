@@ -36,6 +36,52 @@ class ProjectionTests(unittest.TestCase):
         with self.assertRaises(TranslationNeedsReview):
             self.projection.reverse_change('Deucarian.Common', 'Simultrio.Common')
 
+    def test_replacing_known_namespaces_does_not_split_translated_identity(self):
+        projection = Projection(
+            {'Deucarian.SimultriaViewerIntegration': 'Simultria.ViewerConnection',
+             'Deucarian.Simultria.API': 'Simultria.Backend.API'},
+            {'Simultria.ViewerConnection': 'Deucarian.SimultriaViewerIntegration',
+             'Simultria.Backend.API': 'Deucarian.Simultria.API'})
+        original = 'using Deucarian.SimultriaViewerIntegration;'
+        incoming = 'using Simultria.Backend.API.Models;'
+        result = projection.reverse_change(original, incoming)
+        self.assertEqual('using Deucarian.Simultria.API.Models;', result)
+        self.assertEqual(incoming, projection.forward(result))
+
+    def test_multiple_import_edits_translate_whole_longest_tokens(self):
+        projection = Projection(
+            {'Deucarian.SimultriaViewerIntegration': 'Simultria.ViewerConnection',
+             'Deucarian.Simultria.API': 'Simultria.Backend.API',
+             'Deucarian': 'Simultria'},
+            {'Simultria.ViewerConnection': 'Deucarian.SimultriaViewerIntegration',
+             'Simultria.Backend.API': 'Deucarian.Simultria.API'})
+        original = ('using Deucarian.Simultria.API.Services;\n'
+                    'using Deucarian.SimultriaViewerIntegration;\n')
+        incoming = ('using Simultria.Backend.API;\nusing Simultria.Backend.API.Generated;\n'
+                    'using Simultria.Backend.API.Models;\n')
+        expected = ('using Deucarian.Simultria.API;\nusing Deucarian.Simultria.API.Generated;\n'
+                    'using Deucarian.Simultria.API.Models;\n')
+        self.assertEqual(expected, projection.reverse_change(original, incoming))
+
+    def test_token_replacement_preserves_separate_host_overlay_and_native_product_name(self):
+        original = ('Deucarian.Common service;\nline2;\nline3;\nline4;\n'
+                    'string host = "github";\nstring product = "Simultria";\n')
+        baseline = self.projection.forward(original).replace('"github"', '"bitbucket"')
+        incoming = baseline.replace('Simultria.Common service', 'SimultriaEasing curve')
+        expected = original.replace('Deucarian.Common service', 'DeucarianEasing curve')
+        self.assertEqual(expected, self.projection.reverse_change(original, incoming, baseline))
+
+    def test_atomic_token_diff_does_not_allow_host_overlay_to_be_replaced(self):
+        original = 'Deucarian.Common service;\n'
+        baseline = self.projection.forward(original).replace('Simultria.Common', 'Simultria.HostOnly')
+        incoming = 'SimultriaEasing service;\n'
+        with self.assertRaises(TranslationNeedsReview):
+            self.projection.reverse_change(original, incoming, baseline)
+
+    def test_unmapped_token_replacement_still_requires_review(self):
+        with self.assertRaises(TranslationNeedsReview):
+            self.projection.reverse_change('Deucarian.Common value;', 'Simultria.Unknown value;')
+
     def test_replay_is_idempotent(self):
         original = 'namespace Deucarian.Common { int value = 1; }'
         self.assertEqual(original, self.projection.reverse_change(original, self.projection.forward(original)))
