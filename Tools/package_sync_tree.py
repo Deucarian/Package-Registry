@@ -1,6 +1,7 @@
 """Translate shared changes without replacing host-specific configuration or history."""
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from pathlib import PurePosixPath
@@ -44,12 +45,20 @@ def projection_for(profile, github_tree):
             rules[source] = destination
     forward = Projection(rules, {})
     identifiers = set(profile['packageIds']) | set(profile['namespaceOverrides'])
+    resource_identifiers = set()
     for name, blob in github_tree.items():
         if host_owned(name):
             continue
         text = blob.data.decode('utf-8', errors='ignore')
         identifiers.update(re.findall(r'\bDeucarian[A-Za-z_0-9.]*(?:[A-Za-z_0-9])', text))
         identifiers.update(re.findall(r'\bDeucarian[A-Za-z_0-9.]*', name))
+        parts = PurePosixPath(name).parts
+        if 'Resources' in parts and not name.endswith('.meta'):
+            resource_parts = parts[parts.index('Resources') + 1:]
+            if resource_parts:
+                # Resources.Load uses the asset path below Resources without
+                # its extension. New callers must retain the host's asset path.
+                resource_identifiers.add(PurePosixPath(*resource_parts).with_suffix('').as_posix())
     inverse = {}
     collisions = set()
     for source in sorted(identifiers):
@@ -66,7 +75,22 @@ def projection_for(profile, github_tree):
             inverse[destination] = source
     for destination in collisions:
         inverse.pop(destination, None)
-    return Projection(rules, inverse)
+    resource_inverse = {}
+    resource_collisions = set()
+    for source in sorted(resource_identifiers):
+        destination = forward.forward(source)
+        if destination in resource_inverse and resource_inverse[destination] != source:
+            resource_collisions.add(destination)
+        resource_inverse[destination] = source
+    for destination in resource_collisions:
+        resource_inverse.pop(destination, None)
+    # These adapters model the Simultria business domain on both hosts. Their
+    # new business names stay Simultria; longer package/namespace mappings and
+    # previously translated infrastructure names still take precedence.
+    package = github_tree.get('package.json')
+    if package and json.loads(package.data).get('name') in profile.get('nativeBrandPackages', []):
+        inverse.update({brand: brand for brand in ('Simultria', 'simultria', 'SIMULTRIA')})
+    return Projection(rules, inverse, collisions, resource_inverse, resource_collisions)
 
 
 def translate_tree(github_baseline, bitbucket_baseline, bitbucket_incoming, profile):
@@ -124,7 +148,10 @@ def translate_tree(github_baseline, bitbucket_baseline, bitbucket_incoming, prof
         elif old is None:
             raise TranslationNeedsReview(f'{name}: upstream addition collides with existing source')
         else:
-            result[source] = translate_blob(original, old, new, projection)
+            try:
+                result[source] = translate_blob(original, old, new, projection)
+            except TranslationNeedsReview as error:
+                raise TranslationNeedsReview(f'{name}: {error}') from error
         changed.append(source)
     return result, changed
 

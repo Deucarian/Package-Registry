@@ -59,38 +59,139 @@ jobs:
             --repository-root . \
             --config deucarian-package.json
 
-      - name: Provision organization snapshots and check canonical audit
+      # Committed reports are reviewed snapshots. Other repositories can advance
+      # independently, so compare repeated generation from one immutable checkout
+      # set, not live branch tips against yesterday's committed report.
+      - name: Prepare isolated live audit reports
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/deucarian-live-audit"
+          git archive HEAD | tar -x -C "$RUNNER_TEMP/deucarian-live-audit"
+          python - <<'PY'
+          import importlib.util
+          import os
+          from pathlib import Path
+          import sys
+          spec = importlib.util.spec_from_file_location("audit", "Tools/Generate-DeucarianAudit.py")
+          audit = importlib.util.module_from_spec(spec)
+          sys.modules[spec.name] = audit
+          spec.loader.exec_module(audit)
+          names = audit.OUTPUT_FILES + [
+              "AOT_SAFETY_AUDIT.json", "AOT_SAFETY_AUDIT.md",
+              "MENU_AUDIT.json", "MENU_AUDIT.md",
+          ]
+          output = Path(os.environ["RUNNER_TEMP"]) / "deucarian-live-audit"
+          for name in names:
+              (output / name).unlink(missing_ok=True)
+          PY
+
+      - name: Provision organization snapshots and validate live audit
         shell: bash
         env:
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
         run: |
           python Tools/Generate-DeucarianAudit.py \
             --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
-            --output-root . \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit" \
             --organization Deucarian \
             --ref "$AUDIT_REF" \
             --authoritative \
             --format all \
             --provision \
+            --write
+          python Tools/Generate-DeucarianAudit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit" \
+            --organization Deucarian \
+            --ref "$AUDIT_REF" \
+            --authoritative \
+            --format all \
             --check
 
       - name: Check organization AOT safety inventory
+        if: ${{ !cancelled() }}
         shell: bash
         env:
           AUDIT_REF: ${{ github.event_name == 'schedule' && 'develop' || ((github.ref_name == 'main' || github.base_ref == 'main') && 'main' || 'develop') }}
         run: |
           python Tools/Generate-DeucarianAotAudit.py \
             --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
-            --output-root . \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit" \
+            --organization Deucarian \
+            --ref "$AUDIT_REF" \
+            --write
+          python Tools/Generate-DeucarianAotAudit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit" \
             --organization Deucarian \
             --ref "$AUDIT_REF" \
             --check
 
       - name: Check compact Deucarian menu governance
+        if: ${{ !cancelled() }}
         shell: bash
         run: |
           python Tools/deucarian_menu_audit.py \
             --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
             --policy menu-policy.json \
-            --output-root . \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit"
+          python Tools/deucarian_menu_audit.py \
+            --audit-root "$RUNNER_TEMP/deucarian-org-audit" \
+            --policy menu-policy.json \
+            --output-root "$RUNNER_TEMP/deucarian-live-audit" \
             --check
+
+      - name: Summarize report changes
+        if: ${{ !cancelled() }}
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, str(Path("Tools").resolve()))
+          import importlib.util
+
+          spec = importlib.util.spec_from_file_location("audit", "Tools/Generate-DeucarianAudit.py")
+          audit = importlib.util.module_from_spec(spec)
+          sys.modules[spec.name] = audit
+          spec.loader.exec_module(audit)
+          names = audit.OUTPUT_FILES + [
+              "AOT_SAFETY_AUDIT.json", "AOT_SAFETY_AUDIT.md",
+              "MENU_AUDIT.json", "MENU_AUDIT.md",
+          ]
+          generated = Path(os.environ["RUNNER_TEMP"]) / "deucarian-live-audit"
+          available = [name for name in names if (generated / name).is_file()]
+          changed = [
+              name for name in available
+              if not Path(name).is_file() or Path(name).read_bytes() != (generated / name).read_bytes()
+          ]
+          summary = [
+              "## Organization audit",
+              f"Generated {len(available)} of {len(names)} reports. Available reports are attached to this run.",
+              "Policy and deterministic-generation failures remain blocking.",
+              "Changes since the committed snapshot are advisory because package branches advance independently.",
+              "",
+          ]
+          if len(available) != len(names):
+              summary.append("Audit generation is incomplete; inspect the failed steps before using partial evidence.")
+          summary.extend(f"- `{name}` changed" for name in changed)
+          if not changed:
+              summary.append("No generated report changes were observed; see step results for audit completion.")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("\n".join(summary) + "\n")
+
+      - name: Upload organization audit reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: organization-audit-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/deucarian-live-audit/*_AUDIT.json
+            ${{ runner.temp }}/deucarian-live-audit/*_AUDIT.md
+            ${{ runner.temp }}/deucarian-live-audit/DUPLICATION_REPORT.json
+            ${{ runner.temp }}/deucarian-live-audit/DOCUMENTATION_DRIFT.*
+            ${{ runner.temp }}/deucarian-live-audit/ARCHITECTURE_COMPLIANCE.*
+            ${{ runner.temp }}/deucarian-live-audit/PACKAGE_CAPABILITY_MATRIX.md
+            ${{ runner.temp }}/deucarian-live-audit/DEPENDENCY_GRAPH.md
+            ${{ runner.temp }}/deucarian-live-audit/EXTRACTION_CANDIDATES.md
