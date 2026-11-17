@@ -79,7 +79,7 @@ jobs:
           [[ "$source_repo" =~ ^simultria/[a-z0-9.-]+$ ]]
           export GIT_TERMINAL_PROMPT=0
           export GIT_SSH_COMMAND="ssh -F /dev/null -i $key -o IdentityAgent=none -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$GITHUB_WORKSPACE/registry/Tools/bitbucket-known-hosts"
-          git -c core.hooksPath=/dev/null clone --bare "git@bitbucket.org:$source_repo.git" "$RUNNER_TEMP/bitbucket-package"
+          git -c core.hooksPath=/dev/null clone --bare "git@ssh.bitbucket.org:$source_repo.git" "$RUNNER_TEMP/bitbucket-package"
 
       - name: Prepare translated pull requests
         shell: bash
